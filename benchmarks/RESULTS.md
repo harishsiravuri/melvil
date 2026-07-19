@@ -1,4 +1,4 @@
-# Benchmark results — labelsmith
+# Benchmark results — melvil
 
 Three clearly separated evidence tiers, in chronological order:
 
@@ -8,14 +8,14 @@ Three clearly separated evidence tiers, in chronological order:
    datasets) — **the headline numbers. Nothing was changed after seeing them.**
 
 **Headline (confirmation): at light budgets with a strong task model, vanilla GEPA over
-labelsmith's deployable rendered prompt is the strongest arm.** It beats both MIPROv2 and
+melvil's deployable rendered prompt is the strongest arm.** It beats both MIPROv2 and
 our own full classification layer:
 
 | arm | banking77 | ag_news | emotion | trec | clinc150 | massive | stance_abortion | sst5 | mean |
 |---|---|---|---|---|---|---|---|---|---|
 | seed prompt | 0.760 | 0.830 | 0.563 | 0.600 | 0.980 | 0.840 | 0.500 | 0.547 | **0.703** |
 | **vanilla GEPA** | 0.821 | 0.867 | 0.562 | 0.871 | 0.980 | 0.879 | 0.650 | 0.619 | **0.781** |
-| labelsmith full (v0.2) | 0.821 | 0.843 | 0.556 | 0.848 | 0.978 | 0.837 | 0.563 | 0.596 | **0.755** |
+| melvil full (v0.2) | 0.821 | 0.843 | 0.556 | 0.848 | 0.978 | 0.837 | 0.563 | 0.596 | **0.755** |
 | MIPROv2 (dspy-native) | 0.763 | 0.863 | 0.540 | 0.860 | 0.982 | 0.867 | 0.635 | 0.587 | **0.762** |
 
 (Test accuracy, mean of 3 fresh seeds; macro-F1 table, per-seed values, and plot in
@@ -60,7 +60,7 @@ MIPROv2; fresh seeds 10, 11, 12; test-only reporting.
    right granularity — but at this budget it never got *ahead*.
 3. **Vanilla GEPA + rendered-prompt runtime > MIPROv2** (0.781 vs 0.762 mean) — with the
    format caveat noted above. The deployable-prompt GEPA loop is a strong, simple baseline,
-   and it is the configuration we now recommend as labelsmith's default story at light
+   and it is the configuration we now recommend as melvil's default story at light
    budgets (`Features.none()`).
 4. **Parse robustness held everywhere** (≤1 unparseable output per 300 across all arms —
    the fixed output contract does its job in both prompt styles).
@@ -80,7 +80,7 @@ Changes made after (and because of) v0.1, before the confirmation freeze:
   runs and 24/24 confirmation runs rejected all exemplars** — every v0.1 "kept" decision
   had been within the noise floor. Hard-example mining at light budgets, honestly measured,
   is a no-op; it remains in the library as a safety-gated feature.
-- `ls.screen()` added (headroom verdict before spending budget) — a user-facing product of
+- `mv.screen()` added (headroom verdict before spending budget) — a user-facing product of
   these experiments: clinc150 and emotion would have been flagged `saturated`/ceilinged
   before costing anything.
 

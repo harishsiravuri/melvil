@@ -1,7 +1,7 @@
 import pytest
 
-from labelsmith import Example, Label, TaskSpec
-from labelsmith.data import canon, load_csv, train_dev_split
+from melvil import Example, Label, TaskSpec
+from melvil.data import canon, load_csv, train_dev_split
 
 
 def make_examples(n_per=4):

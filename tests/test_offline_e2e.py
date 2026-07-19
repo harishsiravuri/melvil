@@ -5,10 +5,10 @@ machinery is exercised for real."""
 
 import pytest
 
-from labelsmith import Config, Features, TaskSpec, evaluate, optimize, report
-from labelsmith.artifact import BLOB_COMPONENT, TASK_COMPONENT, PromptArtifact, label_component
-from labelsmith.data import Example
-from labelsmith.testing import fake_lms_for, patch_lms
+from melvil import Config, Features, TaskSpec, evaluate, optimize, report
+from melvil.artifact import BLOB_COMPONENT, TASK_COMPONENT, PromptArtifact, label_component
+from melvil.data import Example
+from melvil.testing import fake_lms_for, patch_lms
 
 LABELS = ["alpha", "beta", "gamma", "delta"]
 

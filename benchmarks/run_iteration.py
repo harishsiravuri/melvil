@@ -26,7 +26,7 @@ from run_matrix import (  # noqa: E402
     spec_for,
 )
 
-import labelsmith as ls  # noqa: E402
+import melvil as mv  # noqa: E402
 
 logging.basicConfig(level=logging.INFO, format="%(levelname)s %(message)s")
 
@@ -43,7 +43,7 @@ def run_one(task_name: str, arm: str, seed: int) -> dict:
         return json.loads(out_path.read_text())
     task = load_task(task_name)
     spec = spec_for(task_name, task)
-    cfg = ls.Config(
+    cfg = mv.Config(
         task_model=TASK_MODEL,
         reflection_model="openrouter/openai/gpt-4.1",
         budget="light",
@@ -51,8 +51,8 @@ def run_one(task_name: str, arm: str, seed: int) -> dict:
         features=ARM_FEATURES[arm],
         run_dir=str(RUNS_DIR / task_name / f"{arm}-s{seed}"),
     )
-    artifact = ls.optimize(spec, task["train"], task["dev"], cfg, resume=True)
-    rep = ls.evaluate(artifact, task["test"], model=TASK_MODEL)
+    artifact = mv.optimize(spec, task["train"], task["dev"], cfg, resume=True)
+    rep = mv.evaluate(artifact, task["test"], model=TASK_MODEL)
     result = {
         "task": task_name, "arm": arm, "seed": seed, "codebase": "v0.2-iter",
         "test_accuracy": rep.accuracy, "test_macro_f1": rep.macro_f1,

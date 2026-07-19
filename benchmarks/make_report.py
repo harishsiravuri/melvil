@@ -26,7 +26,7 @@ ARM_ORDER = ["seed", "vanilla", "full", "no_codebook", "no_confusion", "no_minin
 ARM_LABELS = {
     "seed": "seed prompt",
     "vanilla": "vanilla GEPA",
-    "full": "labelsmith full",
+    "full": "melvil full",
     "no_codebook": "full − codebook",
     "no_confusion": "full − confusion",
     "no_mining": "full − mining",
@@ -178,7 +178,7 @@ def curve_plot(results: list[dict]) -> Path:
     axes[0][0].set_ylabel("best dev accuracy")
     axes[1][0].set_ylabel("best dev accuracy")
     fig.legend(loc="lower right", fontsize=9, frameon=False)
-    fig.suptitle("Dev accuracy vs budget: vanilla GEPA vs labelsmith full (thin = per seed)")
+    fig.suptitle("Dev accuracy vs budget: vanilla GEPA vs melvil full (thin = per seed)")
     fig.tight_layout()
     out = PLOTS_DIR / "dev_curves.png"
     fig.savefig(out)

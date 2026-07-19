@@ -1,5 +1,5 @@
-from labelsmith import PromptArtifact
-from labelsmith.artifact import (
+from melvil import PromptArtifact
+from melvil.artifact import (
     BLOB_COMPONENT,
     OUTPUT_CONTRACT,
     TASK_COMPONENT,

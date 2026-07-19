@@ -3,13 +3,13 @@ mining (prescreen, LLM screen, quarantined gate), and the screen() API."""
 
 from collections import Counter
 
-from labelsmith import Config, TaskSpec, screen
-from labelsmith.artifact import label_component
-from labelsmith.data import Example
-from labelsmith.features.confusion import ConfusionComponentSelector, ConfusionState
-from labelsmith.features.mining import llm_screen, looks_like_label_noise, select_exemplars
-from labelsmith.program import Prediction
-from labelsmith.testing import fake_lms_for, patch_lms
+from melvil import Config, TaskSpec, screen
+from melvil.artifact import label_component
+from melvil.data import Example
+from melvil.features.confusion import ConfusionComponentSelector, ConfusionState
+from melvil.features.mining import llm_screen, looks_like_label_noise, select_exemplars
+from melvil.program import Prediction
+from melvil.testing import fake_lms_for, patch_lms
 
 LABELS = ["a", "b", "c", "d", "e", "f"]
 

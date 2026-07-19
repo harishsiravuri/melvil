@@ -1,12 +1,12 @@
 """CONFIRMATION PASS — pre-registered protocol, frozen before any results.
 
 Protocol (no changes after seeing numbers; this file is the registration):
-- Code: labelsmith v0.2 (fixed confusion selector, hardened mining). No further
+- Code: melvil v0.2 (fixed confusion selector, hardened mining). No further
   library changes after this file is committed.
 - Datasets (8): the six iteration datasets + two untouched ones
   (tweet_eval/stance_abortion, SetFit/sst5).
 - Arms (4): seed prompt (deterministic, 1 eval), vanilla GEPA
-  (Features.none()), labelsmith full (all features), MIPROv2 (auto="light",
+  (Features.none()), melvil full (all features), MIPROv2 (auto="light",
   dspy-native runtime — comparability caveat documented in RESULTS).
 - Seeds: 10, 11, 12 — FRESH, never used in any prior run.
 - Budget: preset "light" for every optimized arm.
@@ -31,7 +31,7 @@ from miprov2_arm import run_miprov2  # noqa: E402
 from prep_data import CONFIRM_EXTRA_TASKS, TASKS, load_task  # noqa: E402
 from run_matrix import REFLECTION_MODEL, TASK_MODEL, seed_artifact, spec_for  # noqa: E402
 
-import labelsmith as ls  # noqa: E402
+import melvil as mv  # noqa: E402
 
 logging.basicConfig(level=logging.INFO, format="%(levelname)s %(message)s")
 
@@ -40,7 +40,7 @@ CONFIRM_SEEDS = [10, 11, 12]
 RESULTS_DIR = Path(__file__).parent / "results_confirm"
 RUNS_DIR = Path(__file__).parent / "runs_confirm"
 
-ARM_FEATURES = {"vanilla": ls.Features.none(), "full": ls.Features()}
+ARM_FEATURES = {"vanilla": mv.Features.none(), "full": mv.Features()}
 
 
 def run_one(task_name: str, arm: str, seed: int) -> dict:
@@ -56,14 +56,14 @@ def run_one(task_name: str, arm: str, seed: int) -> dict:
     elif arm == "miprov2":
         return run_miprov2(task_name, seed, RESULTS_DIR)
     else:
-        cfg = ls.Config(
+        cfg = mv.Config(
             task_model=TASK_MODEL, reflection_model=REFLECTION_MODEL,
             budget="light", seed=seed, features=ARM_FEATURES[arm],
             run_dir=str(RUNS_DIR / task_name / f"{arm}-s{seed}"),
         )
-        artifact = ls.optimize(spec, task["train"], task["dev"], cfg, resume=True)
+        artifact = mv.optimize(spec, task["train"], task["dev"], cfg, resume=True)
 
-    rep = ls.evaluate(artifact, task["test"], model=TASK_MODEL)  # the single test touch
+    rep = mv.evaluate(artifact, task["test"], model=TASK_MODEL)  # the single test touch
     result = {
         "task": task_name, "arm": arm, "seed": seed, "codebase": "v0.2-confirm",
         "test_accuracy": rep.accuracy, "test_macro_f1": rep.macro_f1,
@@ -92,10 +92,10 @@ def estimate() -> None:
     for task_name in CONFIRM_TASKS:
         task = load_task(task_name)
         spec = spec_for(task_name, task)
-        cfg = ls.Config(task_model=TASK_MODEL, reflection_model=REFLECTION_MODEL,
-                        budget="light", features=ls.Features())
-        e = ls.estimate_optimize_cost(spec, task["train"], task["dev"], cfg)
-        ev = ls.estimate_evaluate_cost(seed_artifact(spec), task["test"], TASK_MODEL)
+        cfg = mv.Config(task_model=TASK_MODEL, reflection_model=REFLECTION_MODEL,
+                        budget="light", features=mv.Features())
+        e = mv.estimate_optimize_cost(spec, task["train"], task["dev"], cfg)
+        ev = mv.estimate_evaluate_cost(seed_artifact(spec), task["test"], TASK_MODEL)
         n_opt = 3 * len(CONFIRM_SEEDS)  # vanilla, full, miprov2
         n_test = n_opt + 1
         task_total = n_opt * e.total_usd + n_test * ev.total_usd

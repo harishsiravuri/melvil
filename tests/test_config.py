@@ -1,6 +1,6 @@
 import pytest
 
-from labelsmith import BUDGET_PRESETS, Config, Features
+from melvil import BUDGET_PRESETS, Config, Features
 
 
 def make_config(**kw):

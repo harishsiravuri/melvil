@@ -1,21 +1,24 @@
-# labelsmith
+# melvil
 
 **Labeled examples + a label taxonomy in → an optimized, versioned classifier prompt out.**
 
-labelsmith wraps the [GEPA](https://github.com/gepa-ai/gepa) reflective prompt-evolution
+melvil wraps the [GEPA](https://github.com/gepa-ai/gepa) reflective prompt-evolution
 engine with a classification-specific layer that generic prompt optimizers lack:
 confusion-driven reflection, a per-label prompt codebook, and hard-example mining.
 It is a pure Python library — the API is the product.
 
-```python
-import labelsmith as ls
+*Named for [Melvil Dewey](https://en.wikipedia.org/wiki/Melvil_Dewey), who gave
+libraries a system for putting things in the right category.*
 
-examples = ls.load_csv("tickets.csv")                  # text,label columns
-train, dev = ls.train_dev_split(examples, dev_size=100, seed=0)
-spec = ls.TaskSpec.from_examples("ticket-intents", examples)
-cfg = ls.Config(task_model="openai/gpt-4.1-mini",
+```python
+import melvil as mv
+
+examples = mv.load_csv("tickets.csv")                  # text,label columns
+train, dev = mv.train_dev_split(examples, dev_size=100, seed=0)
+spec = mv.TaskSpec.from_examples("ticket-intents", examples)
+cfg = mv.Config(task_model="openai/gpt-4.1-mini",
                 reflection_model="openai/gpt-4.1", budget="light")
-artifact = ls.optimize(spec, train, dev, cfg)
+artifact = mv.optimize(spec, train, dev, cfg)
 print(artifact.render())                               # deployable prompt string
 artifact.save("ticket_intents.v1.json")
 ```
@@ -23,8 +26,14 @@ artifact.save("ticket_intents.v1.json")
 ## Install
 
 ```bash
-pip install -e .            # from a checkout
-pip install -e '.[hf,dev]'  # + HuggingFace loaders + test/lint tooling
+pip install pymelvil             # the PyPI distribution is `pymelvil`; you `import melvil`
+pip install 'pymelvil[hf]'       # + HuggingFace dataset loaders
+```
+
+From a checkout:
+
+```bash
+pip install -e '.[hf,dev]'       # + test/lint tooling
 ```
 
 Model names are [LiteLLM](https://docs.litellm.ai) ids (`openai/...`,
@@ -37,9 +46,9 @@ We benchmark honestly, including against ourselves — full protocol and numbers
 [benchmarks/RESULTS.md](benchmarks/RESULTS.md). The pre-registered confirmation pass
 (8 public datasets, fresh seeds, light budget, gpt-4.1-mini) found:
 
-- **Vanilla GEPA over labelsmith's rendered prompt is the strongest configuration**
+- **Vanilla GEPA over melvil's rendered prompt is the strongest configuration**
   (mean test accuracy 0.781 vs 0.755 for the full classification layer and 0.762 for
-  MIPROv2; seed prompt 0.703). At light budgets, prefer `features=ls.Features.none()`.
+  MIPROv2; seed prompt 0.703). At light budgets, prefer `features=mv.Features.none()`.
 - The classification layer's per-component updates trade whole-prompt coverage for
   structure; at ~6–10 accepted proposals per run that trade loses, especially on hard
   small-taxonomy tasks. Whether it wins at medium/heavy budgets is an open question.
@@ -48,7 +57,7 @@ We benchmark honestly, including against ourselves — full protocol and numbers
 
 ## What the classification layer does
 
-Each feature is independently toggleable via `ls.Features` (all on by default;
+Each feature is independently toggleable via `mv.Features` (all on by default;
 `Features.none()` gives you vanilla GEPA):
 
 1. **Per-label codebook** — the prompt is not a free-text blob but named
@@ -84,7 +93,7 @@ contract, so the optimizer can never break parseability.
   `optimize(..., resume=True)` continues an interrupted run.
 - **Progress** — pass `on_round=lambda info: ...` for live dev score / spend
   after every full dev evaluation, or just read the default logging.
-- **Offline testing** — `labelsmith.testing` ships fake LMs with a real
+- **Offline testing** — `melvil.testing` ships fake LMs with a real
   optimization gradient; the whole test suite runs with no API keys.
 
 ## Worked example & docs

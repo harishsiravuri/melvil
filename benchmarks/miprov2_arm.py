@@ -2,7 +2,7 @@
 
 Comparability notes (documented in RESULTS):
 - MIPROv2 optimizes a dspy program under the ChatAdapter message format
-  (structured field markers), not labelsmith's deployable rendered prompt. We
+  (structured field markers), not melvil's deployable rendered prompt. We
   evaluate the compiled dspy program in its native format — this measures
   MIPROv2 fairly on its own terms, but the resulting "prompt" is a dspy
   program, not a portable prompt string.
@@ -23,8 +23,8 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent))
 from prep_data import TASKS, load_task  # noqa: E402
 
-from labelsmith.costs import lm_usage, usage_cost_usd  # noqa: E402
-from labelsmith.data import canon  # noqa: E402
+from melvil.costs import lm_usage, usage_cost_usd  # noqa: E402
+from melvil.data import canon  # noqa: E402
 
 TASK_MODEL = "openrouter/openai/gpt-4.1-mini"
 PROMPT_MODEL = "openrouter/openai/gpt-4.1"

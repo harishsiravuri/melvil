@@ -16,7 +16,7 @@ import random
 from collections import Counter
 from pathlib import Path
 
-from labelsmith.data import Example, load_hf, stratified_sample
+from melvil.data import Example, load_hf, stratified_sample
 
 DATA_DIR = Path(__file__).parent / "data"
 DATA_SEED = 0

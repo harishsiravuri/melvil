@@ -10,3 +10,9 @@ runs/
 .ruff_cache/
 .ipynb_checkpoints/
 .env
+runs_iter/
+runs_confirm/
+benchmarks/runs/
+benchmarks/*.log
+_export/
+_snapshot.tar.gz

@@ -25,7 +25,7 @@ ARM_ORDER = ["seed", "vanilla", "full", "miprov2"]
 ARM_LABELS = {
     "seed": "seed prompt",
     "vanilla": "vanilla GEPA",
-    "full": "labelsmith full (v0.2)",
+    "full": "melvil full (v0.2)",
     "miprov2": "MIPROv2 (dspy-native)",
 }
 ARM_COLORS = {"seed": "#8a8a86", "vanilla": "#2a78d6", "full": "#1baf7a", "miprov2": "#4a3aa7"}

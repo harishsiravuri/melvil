@@ -34,9 +34,9 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent))
 from prep_data import TASKS, load_task  # noqa: E402
 
-import labelsmith as ls  # noqa: E402
-from labelsmith.artifact import PromptArtifact  # noqa: E402
-from labelsmith.optimize import seed_candidate_for  # noqa: E402
+import melvil as mv  # noqa: E402
+from melvil.artifact import PromptArtifact  # noqa: E402
+from melvil.optimize import seed_candidate_for  # noqa: E402
 
 logging.basicConfig(level=logging.INFO, format="%(levelname)s %(message)s")
 
@@ -49,28 +49,28 @@ TRANSFER_MODEL = "openrouter/openai/gpt-4.1-nano"
 BUDGET = "light"
 SEEDS = [0, 1, 2]
 
-ARM_FEATURES: dict[str, ls.Features] = {
-    "vanilla": ls.Features.none(),
-    "full": ls.Features(),
-    "no_codebook": ls.Features(
+ARM_FEATURES: dict[str, mv.Features] = {
+    "vanilla": mv.Features.none(),
+    "full": mv.Features(),
+    "no_codebook": mv.Features(
         codebook=False, confusion_reflection=True, hard_example_mining=True
     ),
-    "no_confusion": ls.Features(
+    "no_confusion": mv.Features(
         codebook=True, confusion_reflection=False, hard_example_mining=True
     ),
-    "no_mining": ls.Features(
+    "no_mining": mv.Features(
         codebook=True, confusion_reflection=True, hard_example_mining=False
     ),
 }
 ARMS = ["seed", *ARM_FEATURES]
 
 
-def spec_for(task_name: str, task: dict) -> ls.TaskSpec:
-    return ls.TaskSpec.from_examples(task_name, task["train"] + task["dev"])
+def spec_for(task_name: str, task: dict) -> mv.TaskSpec:
+    return mv.TaskSpec.from_examples(task_name, task["train"] + task["dev"])
 
 
-def config_for(arm: str, seed: int, task_name: str) -> ls.Config:
-    return ls.Config(
+def config_for(arm: str, seed: int, task_name: str) -> mv.Config:
+    return mv.Config(
         task_model=TASK_MODEL,
         reflection_model=REFLECTION_MODEL,
         budget=BUDGET,
@@ -80,9 +80,9 @@ def config_for(arm: str, seed: int, task_name: str) -> ls.Config:
     )
 
 
-def seed_artifact(spec: ls.TaskSpec) -> PromptArtifact:
+def seed_artifact(spec: mv.TaskSpec) -> PromptArtifact:
     """The unoptimized baseline: the blob-mode seed prompt as an artifact."""
-    components = seed_candidate_for(spec, ls.Features.none())
+    components = seed_candidate_for(spec, mv.Features.none())
     return PromptArtifact(
         task_name=spec.name, components=components, label_names=spec.label_names,
         models={"task": TASK_MODEL}, notes="unoptimized seed prompt (arm: seed)",
@@ -101,12 +101,12 @@ def run_one(task_name: str, arm: str, seed: int) -> dict:
         artifact = seed_artifact(spec)
         dev_acc = None
     else:
-        artifact = ls.optimize(
+        artifact = mv.optimize(
             spec, task["train"], task["dev"], config_for(arm, seed, task_name), resume=True
         )
         dev_acc = artifact.scores.get("dev_accuracy")
 
-    rep = ls.evaluate(artifact, task["test"], model=TASK_MODEL)  # the single test touch
+    rep = mv.evaluate(artifact, task["test"], model=TASK_MODEL)  # the single test touch
     result = {
         "task": task_name, "arm": arm, "seed": seed,
         "test_accuracy": rep.accuracy, "test_macro_f1": rep.macro_f1,
@@ -147,7 +147,7 @@ def run_transfer(task_name: str) -> None:
             print(f"[missing artifact] {art_path} — run the full arm first")
             continue
         artifact = PromptArtifact.load(art_path)
-        rep = ls.evaluate(artifact, task["test"], model=TRANSFER_MODEL)
+        rep = mv.evaluate(artifact, task["test"], model=TRANSFER_MODEL)
         out_path.write_text(json.dumps({
             "task": task_name, "arm": "transfer", "seed": seed,
             "transfer_model": TRANSFER_MODEL,
@@ -163,8 +163,8 @@ def estimate() -> None:
         task = load_task(task_name)
         spec = spec_for(task_name, task)
         cfg = config_for("full", 0, task_name)
-        e = ls.estimate_optimize_cost(spec, task["train"], task["dev"], cfg)
-        ev = ls.estimate_evaluate_cost(seed_artifact(spec), task["test"], TASK_MODEL)
+        e = mv.estimate_optimize_cost(spec, task["train"], task["dev"], cfg)
+        ev = mv.estimate_evaluate_cost(seed_artifact(spec), task["test"], TASK_MODEL)
         n_opt = len(ARM_FEATURES) * len(SEEDS)
         n_test = n_opt + 1 + len(SEEDS)  # + seed arm + transfer evals
         task_total = n_opt * e.total_usd + n_test * ev.total_usd

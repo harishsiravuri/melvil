@@ -1,9 +1,9 @@
 import pytest
 
-from labelsmith import Config, TaskSpec, estimate_optimize_cost
-from labelsmith.costs import lm_usage, price_for, usage_cost_usd
-from labelsmith.data import Example
-from labelsmith.testing import FakeTaskLM
+from melvil import Config, TaskSpec, estimate_optimize_cost
+from melvil.costs import lm_usage, price_for, usage_cost_usd
+from melvil.data import Example
+from melvil.testing import FakeTaskLM
 
 
 def test_price_for_handles_provider_prefixes():

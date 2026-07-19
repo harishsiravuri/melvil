@@ -1,4 +1,4 @@
-# Contributing to labelsmith
+# Contributing to melvil
 
 Thanks for considering a contribution!
 
@@ -14,7 +14,7 @@ ruff check .
 ## Ground rules
 
 - **No API keys in tests.** Anything touching an LLM in tests goes through
-  `labelsmith.testing` fakes. If your feature can't be exercised offline,
+  `melvil.testing` fakes. If your feature can't be exercised offline,
   extend the fakes first.
 - **The artifact is the contract.** Changes to `PromptArtifact` fields bump
   `schema_version` and keep `load()` backwards-compatible.

@@ -1,6 +1,6 @@
-# labelsmith API reference
+# melvil API reference
 
-Everything importable from `labelsmith` directly (`import labelsmith as ls`).
+Everything importable from `melvil` directly (`import melvil as mv`).
 Model names throughout are LiteLLM ids (`openai/gpt-4.1-mini`,
 `openrouter/openai/gpt-4.1`, ...).
 
@@ -13,7 +13,7 @@ Frozen dataclass; one labeled example.
 Load a CSV with header. Raises `ValueError` on missing columns or zero rows.
 
 ### `load_hf(dataset_id, text_field="text", label_field="label", config=None, split="train", limit=None) -> list[Example]`
-Load from HuggingFace (`pip install labelsmith[hf]`). Integer class labels are
+Load from HuggingFace (`pip install melvil[hf]`). Integer class labels are
 mapped to their string names. Script-based hub datasets are retried via their
 `refs/convert/parquet` branch.
 
@@ -107,11 +107,11 @@ Dry-run **upper bound** (ignores caching) — print it before spending.
 
 ### `estimate_evaluate_cost(artifact, data, model, prices=None) -> CostEstimate`
 
-## Offline testing (`labelsmith.testing`)
+## Offline testing (`melvil.testing`)
 
 `fake_lms_for(train, dev, label_names, seed=0)` returns `(FakeTaskLM,
 FakeReflectionLM)` — deterministic fakes where task-LM accuracy rises with
 prompt quality (real optimization gradient, zero cost). Route the library to
 them with `patch_lms(monkeypatch, task_lm, reflection_lm)` (pytest) or
-`patch_lms(labelsmith.lmutil, ...)` (manual). The library's own test suite
+`patch_lms(melvil.lmutil, ...)` (manual). The library's own test suite
 runs entirely on these.

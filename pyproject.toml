@@ -3,13 +3,13 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "labelsmith"
-version = "0.2.0"
+name = "pymelvil"
+version = "0.3.0"
 description = "Optimized, versioned classifier prompts from labeled examples — GEPA prompt evolution with a classification-specific layer."
 readme = "README.md"
 license = { file = "LICENSE" }
 requires-python = ">=3.10"
-authors = [{ name = "labelsmith contributors" }]
+authors = [{ name = "Harish Varma Siravuri", email = "harish.siravuri@gmail.com" }]
 keywords = ["prompt-optimization", "classification", "llm", "gepa", "dspy"]
 classifiers = [
     "Development Status :: 3 - Alpha",
@@ -29,10 +29,11 @@ hf = ["datasets>=3.0"]
 dev = ["pytest>=8.0", "ruff>=0.6", "datasets>=3.0"]
 
 [project.urls]
-Homepage = "https://github.com/labelsmith/labelsmith"
+Homepage = "https://github.com/harishsiravuri/melvil"
+Issues = "https://github.com/harishsiravuri/melvil/issues"
 
 [tool.hatch.build.targets.wheel]
-packages = ["labelsmith"]
+packages = ["melvil"]
 
 [tool.ruff]
 line-length = 100
@@ -45,7 +46,7 @@ ignore = ["SIM108"]  # ternary-vs-if is a style call we make per case
 [tool.ruff.lint.per-file-ignores]
 # the proposal template is natural-language prose; hard-wrapping it would
 # change the prompt
-"labelsmith/proposer.py" = ["E501"]
+"melvil/proposer.py" = ["E501"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
