@@ -35,7 +35,7 @@ sys.path.insert(0, str(Path(__file__).parent))
 from prep_data import TASKS, load_task  # noqa: E402
 
 import labelsmith as ls  # noqa: E402
-from labelsmith.artifact import PromptArtifact, render_prompt  # noqa: E402
+from labelsmith.artifact import PromptArtifact  # noqa: E402
 from labelsmith.optimize import seed_candidate_for  # noqa: E402
 
 logging.basicConfig(level=logging.INFO, format="%(levelname)s %(message)s")
@@ -52,9 +52,15 @@ SEEDS = [0, 1, 2]
 ARM_FEATURES: dict[str, ls.Features] = {
     "vanilla": ls.Features.none(),
     "full": ls.Features(),
-    "no_codebook": ls.Features(codebook=False, confusion_reflection=True, hard_example_mining=True),
-    "no_confusion": ls.Features(codebook=True, confusion_reflection=False, hard_example_mining=True),
-    "no_mining": ls.Features(codebook=True, confusion_reflection=True, hard_example_mining=False),
+    "no_codebook": ls.Features(
+        codebook=False, confusion_reflection=True, hard_example_mining=True
+    ),
+    "no_confusion": ls.Features(
+        codebook=True, confusion_reflection=False, hard_example_mining=True
+    ),
+    "no_mining": ls.Features(
+        codebook=True, confusion_reflection=True, hard_example_mining=False
+    ),
 }
 ARMS = ["seed", *ARM_FEATURES]
 

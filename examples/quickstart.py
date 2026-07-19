@@ -11,9 +11,9 @@ import csv
 import logging
 import pathlib
 
-logging.basicConfig(level=logging.INFO, format="%(levelname)s %(message)s")
-
 import labelsmith as ls
+
+logging.basicConfig(level=logging.INFO, format="%(levelname)s %(message)s")
 
 # --- prepare a small CSV (stand-in for "your labeled data") ------------------
 csv_path = pathlib.Path("agnews_small.csv")

@@ -17,7 +17,6 @@ import matplotlib.pyplot as plt
 
 sys.path.insert(0, str(Path(__file__).parent))
 from prep_data import TASKS  # noqa: E402
-
 from run_matrix import ARMS, SEEDS, TASK_MODEL, TRANSFER_MODEL  # noqa: E402
 
 RESULTS_DIR = Path(__file__).parent / "results"
