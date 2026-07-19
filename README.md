@@ -57,8 +57,8 @@ We benchmark honestly, including against ourselves — full protocol and numbers
 
 ## What the classification layer does
 
-Each feature is independently toggleable via `mv.Features` (all on by default;
-`Features.none()` gives you vanilla GEPA):
+Each feature is independently toggleable via `mv.Features` (**all off by default** — the default is the benchmark-strongest vanilla-GEPA configuration; enable the layer with `mv.Features.all()` or per-flag;
+`Features.none()` is an explicit alias for the default):
 
 1. **Per-label codebook** — the prompt is not a free-text blob but named
    components: a task instruction, one definition per label, and boundary

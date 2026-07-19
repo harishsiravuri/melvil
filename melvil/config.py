@@ -36,14 +36,24 @@ class Features:
       eval, reserved out of the budget).
     """
 
-    codebook: bool = True
-    confusion_reflection: bool = True
-    hard_example_mining: bool = True
+    codebook: bool = False
+    confusion_reflection: bool = False
+    hard_example_mining: bool = False
 
     @classmethod
     def none(cls) -> Features:
-        """Vanilla GEPA: all classification features off."""
+        """Vanilla GEPA: all classification features off. This is the default —
+        the strongest configuration in our pre-registered confirmation benchmarks
+        at light budgets (see benchmarks/RESULTS.md)."""
         return cls(codebook=False, confusion_reflection=False, hard_example_mining=False)
+
+    @classmethod
+    def all(cls) -> Features:
+        """The full classification layer. In confirmation benchmarks it trailed
+        the default at light budgets; consider it for large taxonomies (where the
+        fixed confusion selector was directionally positive) or higher budgets
+        (untested — see benchmarks/RESULTS.md)."""
+        return cls(codebook=True, confusion_reflection=True, hard_example_mining=True)
 
 
 @dataclass

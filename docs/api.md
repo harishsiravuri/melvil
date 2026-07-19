@@ -41,8 +41,8 @@ instruction.
 
 ## Config
 
-### `Features(codebook=True, confusion_reflection=True, hard_example_mining=True)`
-The classification layer; each independently toggleable. `Features.none()` =
+### `Features(codebook=False, confusion_reflection=False, hard_example_mining=False)`
+The classification layer; each independently toggleable. `Features.none()` (alias for the default) and `Features.all()` are shortcuts. Default is
 vanilla GEPA (single free-text instruction, stock proposer).
 
 ### `Config(task_model, reflection_model, budget="light", seed=0, features=Features(), num_threads=8, run_dir=None, ...)`

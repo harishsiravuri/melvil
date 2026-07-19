@@ -40,7 +40,7 @@ CONFIRM_SEEDS = [10, 11, 12]
 RESULTS_DIR = Path(__file__).parent / "results_confirm"
 RUNS_DIR = Path(__file__).parent / "runs_confirm"
 
-ARM_FEATURES = {"vanilla": mv.Features.none(), "full": mv.Features()}
+ARM_FEATURES = {"vanilla": mv.Features.none(), "full": mv.Features.all()}
 
 
 def run_one(task_name: str, arm: str, seed: int) -> dict:
@@ -93,7 +93,7 @@ def estimate() -> None:
         task = load_task(task_name)
         spec = spec_for(task_name, task)
         cfg = mv.Config(task_model=TASK_MODEL, reflection_model=REFLECTION_MODEL,
-                        budget="light", features=mv.Features())
+                        budget="light", features=mv.Features.all())
         e = mv.estimate_optimize_cost(spec, task["train"], task["dev"], cfg)
         ev = mv.estimate_evaluate_cost(seed_artifact(spec), task["test"], TASK_MODEL)
         n_opt = 3 * len(CONFIRM_SEEDS)  # vanilla, full, miprov2

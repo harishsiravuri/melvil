@@ -51,7 +51,7 @@ SEEDS = [0, 1, 2]
 
 ARM_FEATURES: dict[str, mv.Features] = {
     "vanilla": mv.Features.none(),
-    "full": mv.Features(),
+    "full": mv.Features.all(),
     "no_codebook": mv.Features(
         codebook=False, confusion_reflection=True, hard_example_mining=True
     ),

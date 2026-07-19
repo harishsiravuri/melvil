@@ -43,7 +43,7 @@ def make_config(tmp_path=None, **kw):
 
 def test_full_pipeline_all_features(env, tmp_path):
     spec, train, dev, task_lm, refl_lm = env
-    cfg = make_config(run_dir=str(tmp_path / "run1"))
+    cfg = make_config(run_dir=str(tmp_path / "run1"), features=Features.all())
     rounds = []
     artifact = optimize(spec, train, dev, cfg, on_round=lambda info: rounds.append(info))
 
