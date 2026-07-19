@@ -1,0 +1,14 @@
+{
+ "task": "banking77",
+ "arm": "vanilla",
+ "seed": 12,
+ "codebase": "v0.2-confirm",
+ "test_accuracy": 0.77,
+ "test_macro_f1": 0.7448,
+ "unparseable": 0,
+ "optimize_cost_usd": 0.2467,
+ "test_cost_usd": 0.0987,
+ "artifact_id": "2f4d479a1ade",
+ "exemplars": 0,
+ "mining_note": ""
+}

@@ -1,0 +1,14 @@
+{
+ "task": "ag_news",
+ "arm": "vanilla",
+ "seed": 11,
+ "codebase": "v0.2-confirm",
+ "test_accuracy": 0.8633,
+ "test_macro_f1": 0.8619,
+ "unparseable": 0,
+ "optimize_cost_usd": 0.2238,
+ "test_cost_usd": 0.0853,
+ "artifact_id": "ca6e02dece54",
+ "exemplars": 0,
+ "mining_note": ""
+}

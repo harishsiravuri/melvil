@@ -1,0 +1,15 @@
+{
+ "task": "stance_abortion",
+ "arm": "miprov2",
+ "seed": 11,
+ "test_accuracy": 0.6643,
+ "test_macro_f1": 0.6501,
+ "dev_accuracy": null,
+ "optimize_task_calls": 406,
+ "optimize_cost_usd": 0.122,
+ "test_cost_usd": 0.0531,
+ "opt_seconds": 82.6,
+ "instructions": "Carefully read the social media post provided and determine the author\u2019s stance regarding abortion or reproductive rights, choosing from \u201cfavor,\u201d \u201cagainst,\u201d or \u201cnone.\u201d Consider both explicit statements and any implicit cues, including sarcasm, hashtags, rhetorical devices, or indirect argumentation. Respond only with the most appropriate label that best reflects the author\u2019s underlying position in the text.",
+ "n_demos": 4,
+ "notes": "dspy-native ChatAdapter runtime; budget parity by preset (auto=light)"
+}

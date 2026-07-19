@@ -1,0 +1,15 @@
+{
+ "task": "trec",
+ "arm": "miprov2",
+ "seed": 12,
+ "test_accuracy": 0.89,
+ "test_macro_f1": 0.8922,
+ "dev_accuracy": null,
+ "optimize_task_calls": 457,
+ "optimize_cost_usd": 0.1036,
+ "test_cost_usd": 0.0456,
+ "opt_seconds": 95.1,
+ "instructions": "Given a question, determine its expected answer type by assigning one of the following categories: abbreviation, description, entity, human, location, or numeric. Output only the category that best matches the intent of the question.",
+ "n_demos": 4,
+ "notes": "dspy-native ChatAdapter runtime; budget parity by preset (auto=light)"
+}

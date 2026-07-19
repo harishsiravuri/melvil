@@ -1,0 +1,15 @@
+{
+ "task": "clinc150",
+ "arm": "miprov2",
+ "seed": 12,
+ "test_accuracy": 0.98,
+ "test_macro_f1": 0.9798,
+ "dev_accuracy": null,
+ "optimize_task_calls": 469,
+ "optimize_cost_usd": 0.1326,
+ "test_cost_usd": 0.0459,
+ "opt_seconds": 115.6,
+ "instructions": "You will be given a single user query in plain English, often informal or varying in phrasing, and your task is to analyze it and assign it to exactly one of the specified intent categories. Read the query carefully and take into account any keywords, context clues, or implied actions that might indicate the user's underlying intent, even if the query contains minor grammatical errors or unconventional phrasing. Then, output one label corresponding to the user's intent from the following list of categories: alarm, apr, balance, book_flight, book_hotel, calculator, calories, car_rental, cook_time, credit_limit, credit_score, definition, direct_deposit, freeze_account, lost_luggage, meeting_schedule, pay_bill, payday, pto_request, recipe, report_fraud, report_lost_card, restaurant_reservation, restaurant_reviews, rewards_balance, taxes, timer, transfer, travel_suggestion, weather. Output only the appropriate intent label and nothing else.",
+ "n_demos": 0,
+ "notes": "dspy-native ChatAdapter runtime; budget parity by preset (auto=light)"
+}

@@ -1,0 +1,14 @@
+{
+ "task": "ag_news",
+ "arm": "full",
+ "seed": 10,
+ "codebase": "v0.2-confirm",
+ "test_accuracy": 0.84,
+ "test_macro_f1": 0.8355,
+ "unparseable": 0,
+ "optimize_cost_usd": 0.1794,
+ "test_cost_usd": 0.0519,
+ "artifact_id": "f51531f4d8a2",
+ "exemplars": 0,
+ "mining_note": "no persistent hard examples survived screening"
+}

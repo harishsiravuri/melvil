@@ -1,0 +1,196 @@
+{
+ "schema_version": 1,
+ "artifact_id": "4b73df514e1a",
+ "parent_id": null,
+ "task_name": "sst5",
+ "created_at": "2026-07-19T13:33:09-0500",
+ "library": {
+  "name": "labelsmith",
+  "version": "0.2.0.dev0"
+ },
+ "models": {
+  "task": "openrouter/openai/gpt-4.1-mini",
+  "reflection": "openrouter/openai/gpt-4.1"
+ },
+ "budget": {
+  "metric_calls_budget": 800,
+  "metric_calls_spent": 878,
+  "cost_usd": 0.2797,
+  "task_lm_usage": {
+   "model": "openrouter/openai/gpt-4.1-mini",
+   "prompt_tokens": 532531,
+   "completion_tokens": 1680,
+   "calls": 775,
+   "cache_hits": 203,
+   "cost_usd": 0.2157
+  },
+  "reflection_lm_usage": {
+   "model": "openrouter/openai/gpt-4.1",
+   "prompt_tokens": 7492,
+   "completion_tokens": 6126,
+   "calls": 12,
+   "cache_hits": 0,
+   "cost_usd": 0.063992
+  },
+  "opt_seconds": 148.4
+ },
+ "scores": {
+  "dev_accuracy": 0.64,
+  "dev_macro_f1": 0.614,
+  "per_label_dev": {
+   "negative": {
+    "precision": 0.6,
+    "recall": 0.8077,
+    "f1": 0.6885,
+    "support": 26
+   },
+   "neutral": {
+    "precision": 0.7692,
+    "recall": 0.5263,
+    "f1": 0.625,
+    "support": 19
+   },
+   "positive": {
+    "precision": 0.6552,
+    "recall": 0.7037,
+    "f1": 0.6786,
+    "support": 27
+   },
+   "very negative": {
+    "precision": 0.5,
+    "recall": 0.3846,
+    "f1": 0.4348,
+    "support": 13
+   },
+   "very positive": {
+    "precision": 0.6923,
+    "recall": 0.6,
+    "f1": 0.6429,
+    "support": 15
+   }
+  },
+  "seed_dev_accuracy": 0.55,
+  "dev_accuracy_quarantined": null
+ },
+ "config_hash": "035ad27a2078",
+ "config": {
+  "task_model": "openrouter/openai/gpt-4.1-mini",
+  "reflection_model": "openrouter/openai/gpt-4.1",
+  "budget": "light",
+  "seed": 11,
+  "features": {
+   "codebook": false,
+   "confusion_reflection": false,
+   "hard_example_mining": false
+  },
+  "num_threads": 8,
+  "run_dir": "/Users/harish/Documents/Claude/Projects/6s/labelsmith/benchmarks/runs_confirm/sst5/vanilla-s11",
+  "task_temperature": 0.0,
+  "task_max_tokens": 40,
+  "reflection_temperature": 1.0,
+  "reflection_max_tokens": 8000,
+  "reflection_minibatch_size": 3,
+  "max_exemplars": 6,
+  "mining_llm_screen": true,
+  "prices": {},
+  "metric_calls": 800
+ },
+ "label_names": [
+  "negative",
+  "neutral",
+  "positive",
+  "very negative",
+  "very positive"
+ ],
+ "components": {
+  "instruction": "You are given a short text excerpt, typically a sentence or a brief paragraph, drawn from film reviews or similar evaluative writing. Your task is to classify the overall sentiment expressed in each excerpt, choosing from the following five sentiment labels:\n\n- 'very negative'\n- 'negative'\n- 'neutral'\n- 'positive'\n- 'very positive'\n\nApply these category definitions precisely:\n\n- 'Very negative': The text strongly or intensely criticizes, showing clear, emphatic disparagement. Use for excerpts with harsh, overwhelmingly negative tone, e.g., “painfully bad”, “the worst film ever made”, or language that communicates strong dissatisfaction beyond ordinary criticism.\n- 'Negative': The excerpt communicates a clear but less intense negative sentiment. It may include criticism, dissatisfaction, or metaphorical/disparaging language, but lacks the degree of severity or harshness of 'very negative'. “Mildly disappointing”, moderate complaints, or negative comparisons usually fit here.\n- 'Neutral': The text is balanced, factual, or observational with no clear positive or negative evaluation. Use this ONLY if the statement is evenly balanced between positive and negative, or if it is mostly factual or describes both merits and drawbacks without clear evaluative emphasis.\n- 'Positive': The text contains clear, but moderate, praise. It might note satisfaction or approval that is not strongly enthusiastic—words like “solid,” “charming,” or “fine film” with minor reservations qualify.\n- 'Very positive': The text radiates strong, intense praise or enthusiasm. Use this label for overtly effusive approval, excited language, or extremely laudatory evaluations (“brilliant”, “masterpiece”, etc.).\n\nDomain guidance and subtleties:\n\n- This task focuses on critical reviews (especially film), where nuanced and figurative language, humor, indirectness, and carefully modulated praise or criticism are common.\n- When mixed or secondary sentiments are present, identify and label the primary, dominant evaluative stance.\n- Figurative or hyperbolic language (including humor) should be evaluated for degree—colorful phrasing is often 'negative' rather than 'very negative' unless the negativity is truly severe or scathing. Likewise for positive sentiment.\n- Assign 'neutral' only when no noticeable evaluative stance is present, when the text is balanced between pros and cons, or when the language is primarily factual.\n- If positive and negative aspects are both present but one side is notably dominant, use that side's label.\n- Do not factor in plain factual content unless it contributes clearly to the sentiment.\n\nFormatting requirements:\n\n- Respond solely with the sentiment label as a lowercase string. Do not provide explanations or any additional content—single-label answers only.\n\nImplementation notes based on prior feedback:\n\n- For excerpts where the review is clearly and harshly dismissive—intensely negative without redeeming notes (e.g., “providing no real sense of suspense”)—choose 'very negative' rather than just 'negative.'\n- For texts that express general satisfaction/approval but include major reservations or suggest the film is only somewhat redeemable, do not default to 'positive.' If criticism substantially counters the praise (e.g., “a fine film, but it would be better if…” with substantial dissatisfaction), consider whether 'neutral' better captures the evenly balanced sentiment.\n- Always factor in the intensity, not just the direction, of the reviewer’s tone, adjusting up to 'very positive'/'very negative' or down to 'neutral' as the balance and strength of evaluative content dictate.\n\nRead the excerpt, weigh its praise and criticism and their strength, and assign the most appropriate sentiment label according to the above definitions and nuances relevant to film criticism style."
+ },
+ "exemplars": [],
+ "confusion": {
+  "labels": [
+   "negative",
+   "neutral",
+   "positive",
+   "very negative",
+   "very positive"
+  ],
+  "matrix": [
+   [
+    21,
+    1,
+    1,
+    3,
+    0,
+    0
+   ],
+   [
+    3,
+    10,
+    3,
+    2,
+    1,
+    0
+   ],
+   [
+    3,
+    2,
+    19,
+    0,
+    3,
+    0
+   ],
+   [
+    8,
+    0,
+    0,
+    5,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    6,
+    0,
+    9,
+    0
+   ]
+  ],
+  "unparseable_column": true
+ },
+ "curve": [
+  {
+   "metric_calls": 0,
+   "dev_score": 0.55
+  },
+  {
+   "metric_calls": 112,
+   "dev_score": 0.61
+  },
+  {
+   "metric_calls": 233,
+   "dev_score": 0.61
+  },
+  {
+   "metric_calls": 342,
+   "dev_score": 0.62
+  },
+  {
+   "metric_calls": 448,
+   "dev_score": 0.64
+  },
+  {
+   "metric_calls": 566,
+   "dev_score": 0.63
+  },
+  {
+   "metric_calls": 672,
+   "dev_score": 0.58
+  },
+  {
+   "metric_calls": 778,
+   "dev_score": 0.62
+  }
+ ],
+ "notes": ""
+}

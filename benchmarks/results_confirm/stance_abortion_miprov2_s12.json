@@ -1,0 +1,15 @@
+{
+ "task": "stance_abortion",
+ "arm": "miprov2",
+ "seed": 12,
+ "test_accuracy": 0.6393,
+ "test_macro_f1": 0.6291,
+ "dev_accuracy": null,
+ "optimize_task_calls": 453,
+ "optimize_cost_usd": 0.1427,
+ "test_cost_usd": 0.0558,
+ "opt_seconds": 121.1,
+ "instructions": "Read the provided text and determine whether the author is expressing a stance that is \"favor,\" \"against,\" or \"none\" regarding the topic of abortion or reproductive rights. Focus on explicit cues such as hashtags, emotive or persuasive language, and references to campaigns, moral, or religious arguments. Respond with only one label: favor, against, or none.",
+ "n_demos": 4,
+ "notes": "dspy-native ChatAdapter runtime; budget parity by preset (auto=light)"
+}

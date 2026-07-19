@@ -1,0 +1,22 @@
+{
+ "task_model": "openrouter/openai/gpt-4.1-mini",
+ "reflection_model": "openrouter/openai/gpt-4.1",
+ "budget": "light",
+ "seed": 12,
+ "features": {
+  "codebook": true,
+  "confusion_reflection": true,
+  "hard_example_mining": true
+ },
+ "num_threads": 8,
+ "run_dir": "/Users/harish/Documents/Claude/Projects/6s/labelsmith/benchmarks/runs_confirm/clinc150/full-s12",
+ "task_temperature": 0.0,
+ "task_max_tokens": 40,
+ "reflection_temperature": 1.0,
+ "reflection_max_tokens": 8000,
+ "reflection_minibatch_size": 3,
+ "max_exemplars": 6,
+ "mining_llm_screen": true,
+ "prices": {},
+ "metric_calls": 800
+}

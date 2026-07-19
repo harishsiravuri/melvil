@@ -1,0 +1,14 @@
+{
+ "task": "ag_news",
+ "arm": "full",
+ "seed": 11,
+ "codebase": "v0.2-confirm",
+ "test_accuracy": 0.8433,
+ "test_macro_f1": 0.8394,
+ "unparseable": 0,
+ "optimize_cost_usd": 0.2104,
+ "test_cost_usd": 0.035,
+ "artifact_id": "5193fa261e9e",
+ "exemplars": 0,
+ "mining_note": "rejected 2 exemplars (quarantined dev 0.898 <= 0.898 + noise floor 0.031)"
+}

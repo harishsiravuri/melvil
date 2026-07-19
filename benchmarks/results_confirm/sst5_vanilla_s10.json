@@ -1,0 +1,14 @@
+{
+ "task": "sst5",
+ "arm": "vanilla",
+ "seed": 10,
+ "codebase": "v0.2-confirm",
+ "test_accuracy": 0.6367,
+ "test_macro_f1": 0.6042,
+ "unparseable": 0,
+ "optimize_cost_usd": 0.2219,
+ "test_cost_usd": 0.0588,
+ "artifact_id": "09cc62d59c83",
+ "exemplars": 0,
+ "mining_note": ""
+}

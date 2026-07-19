@@ -1,0 +1,14 @@
+{
+ "task": "emotion",
+ "arm": "full",
+ "seed": 10,
+ "codebase": "v0.2-confirm",
+ "test_accuracy": 0.5567,
+ "test_macro_f1": 0.4523,
+ "unparseable": 0,
+ "optimize_cost_usd": 0.1911,
+ "test_cost_usd": 0.0437,
+ "artifact_id": "698b6aa35346",
+ "exemplars": 0,
+ "mining_note": "rejected 3 exemplars (quarantined dev 0.691 <= 0.711 + noise floor 0.046)"
+}

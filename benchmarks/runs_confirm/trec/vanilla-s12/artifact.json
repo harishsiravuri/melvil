@@ -1,0 +1,218 @@
+{
+ "schema_version": 1,
+ "artifact_id": "7b86a7d5834b",
+ "parent_id": null,
+ "task_name": "trec",
+ "created_at": "2026-07-19T13:31:36-0500",
+ "library": {
+  "name": "labelsmith",
+  "version": "0.2.0.dev0"
+ },
+ "models": {
+  "task": "openrouter/openai/gpt-4.1-mini",
+  "reflection": "openrouter/openai/gpt-4.1"
+ },
+ "budget": {
+  "metric_calls_budget": 800,
+  "metric_calls_spent": 851,
+  "cost_usd": 0.2673,
+  "task_lm_usage": {
+   "model": "openrouter/openai/gpt-4.1-mini",
+   "prompt_tokens": 599146,
+   "completion_tokens": 1512,
+   "calls": 748,
+   "cache_hits": 203,
+   "cost_usd": 0.212894
+  },
+  "reflection_lm_usage": {
+   "model": "openrouter/openai/gpt-4.1",
+   "prompt_tokens": 5529,
+   "completion_tokens": 5419,
+   "calls": 7,
+   "cache_hits": 0,
+   "cost_usd": 0.05441
+  },
+  "opt_seconds": 128.0
+ },
+ "scores": {
+  "dev_accuracy": 0.8,
+  "dev_macro_f1": 0.8345,
+  "per_label_dev": {
+   "abbreviation": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "support": 2
+   },
+   "description": {
+    "precision": 0.6452,
+    "recall": 0.9524,
+    "f1": 0.7692,
+    "support": 21
+   },
+   "entity": {
+    "precision": 0.7333,
+    "recall": 0.4783,
+    "f1": 0.5789,
+    "support": 23
+   },
+   "human": {
+    "precision": 0.8077,
+    "recall": 0.9545,
+    "f1": 0.875,
+    "support": 22
+   },
+   "location": {
+    "precision": 1.0,
+    "recall": 0.7333,
+    "f1": 0.8462,
+    "support": 15
+   },
+   "numeric": {
+    "precision": 1.0,
+    "recall": 0.8824,
+    "f1": 0.9375,
+    "support": 17
+   }
+  },
+  "seed_dev_accuracy": 0.5,
+  "dev_accuracy_quarantined": null
+ },
+ "config_hash": "92647ff26691",
+ "config": {
+  "task_model": "openrouter/openai/gpt-4.1-mini",
+  "reflection_model": "openrouter/openai/gpt-4.1",
+  "budget": "light",
+  "seed": 12,
+  "features": {
+   "codebook": false,
+   "confusion_reflection": false,
+   "hard_example_mining": false
+  },
+  "num_threads": 8,
+  "run_dir": "/Users/harish/Documents/Claude/Projects/6s/labelsmith/benchmarks/runs_confirm/trec/vanilla-s12",
+  "task_temperature": 0.0,
+  "task_max_tokens": 40,
+  "reflection_temperature": 1.0,
+  "reflection_max_tokens": 8000,
+  "reflection_minibatch_size": 3,
+  "max_exemplars": 6,
+  "mining_llm_screen": true,
+  "prices": {},
+  "metric_calls": 800
+ },
+ "label_names": [
+  "abbreviation",
+  "description",
+  "entity",
+  "human",
+  "location",
+  "numeric"
+ ],
+ "components": {
+  "instruction": "You are tasked with single-label classification of short texts, focusing specifically on identifying the main subject or referent of a given text or the expected answer type to a question. Each text must be classified into exactly one of six predefined categories based on what the text most fundamentally references or—in the case of a question—what kind of answer it primarily seeks. Use your best judgment to assign the most accurate category, adhering strictly to the definitions and rules below.\n\n## Input Format\n\nYou will receive a dictionary input containing a single key called \"text\" with a short natural-language string as its value. The string can be a question, a phrase, or a fragment, and may reference, describe, or request information about something. For example:\n  - {\"text\": \"What country is the origin of the band the Creeps ?\"}\n  - {\"text\": \"NASA\"}\n  - {\"text\": \"Which magazine featured the first story about Batman?\"}\n  - {\"text\": \"How many moons does Mars have?\"}\n\n## Task Objective\n\nYour goal is to analyze the input text, interpret its underlying subject or referent (not just its surface wording), and map it to one of these six categories—selecting the most appropriate based solely on what is referenced or requested by the text.\n\n## Category Definitions and Domain Rules\n\n1. **abbreviation** – Assign to texts that are themselves abbreviations, initialisms, or acronyms (e.g., \"NASA\", \"UK\", \"mg\"). This includes widely recognized shortened or initialed forms.\n\n2. **description** – Use when the text is a description, explanation, or general properties about a subject, without referring to any specific proper noun (person, organization, product, location, etc.), numeric value, or abbreviation. Suitable for generic definitions or information.\n\n3. **entity** – Select for texts that refer to proper nouns (names of objects, organizations, brands, products, titled works, inventions, or anything treated as a \"named thing\" that is not a person, group, or location). Also, if a question seeks the name of such an object, organization, invention, or product, select this. \n   - **Domain-specific rules:** Inventions, devices, and named objects are always 'entity', even with associated people, e.g., \"What wheel did Blaise Pascal invent?\".\n   - Magazine titles, spacecraft names, brands, and organizations are always 'entity'.\n   - Questions like “Which magazine…”, “What is the name of the spacecraft…” are ‘entity’ unless they seek a person, team, or location.\n\n4. **human** – Use for texts referencing or requesting:\n   - Individual humans, named or otherwise (e.g., \"Michael Jordan\").\n   - Groups of people, collectives, roles (e.g., \"the Beatles\", \"the president of France\", \"Which team…\", \"What Batman character…\").\n   - Fictional or nonfictional characters by name.\n   - Teams or bands are considered 'human' if the main intent is to reference the people/group.\n   - If a question seeks a person, group, or character as the answer, select 'human'.\n\n5. **location** – Assign to any text referencing or seeking geographic places or regions (cities, countries, continents, etc.). Always prefer 'location' for questions seeking the place of origin, location, or geographic area (\"What country…\", \"Which city…\", etc.), even if connected to people or groups. For bands, companies, teams, etc., if the prompt asks for their geographical origin, use 'location'.\n\n6. **numeric** – Select for texts that are:\n   - Numbers, numeric expressions, years, dates, quantities, measures, or currencies.\n   - Questions directly seeking numeric answers (\"How many…\", \"What year…\", \"What is the population…?\").\n\n## Key Instructional Principles\n\n- Always focus on what the text is referencing or (if a question) what kind of answer it is seeking.\n- Ignore grammatical form; consider the core referent.\n- Only one category per input.\n- When the subject is ambiguous, default to the most specific entity that is referenced or requested.\n- Use the provided domain-specific rules to resolve between closely related categories.\n\n## Output\n\nOutput ONLY the name of the selected category in all lowercase: abbreviation, description, entity, human, location, or numeric.\n\nDO NOT include explanations, code, commentary, or anything besides the single category name."
+ },
+ "exemplars": [],
+ "confusion": {
+  "labels": [
+   "abbreviation",
+   "description",
+   "entity",
+   "human",
+   "location",
+   "numeric"
+  ],
+  "matrix": [
+   [
+    2,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    20,
+    0,
+    1,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    9,
+    11,
+    3,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    1,
+    21,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    1,
+    2,
+    1,
+    11,
+    0,
+    0
+   ],
+   [
+    0,
+    1,
+    1,
+    0,
+    0,
+    15,
+    0
+   ]
+  ],
+  "unparseable_column": true
+ },
+ "curve": [
+  {
+   "metric_calls": 0,
+   "dev_score": 0.5
+  },
+  {
+   "metric_calls": 106,
+   "dev_score": 0.55
+  },
+  {
+   "metric_calls": 212,
+   "dev_score": 0.71
+  },
+  {
+   "metric_calls": 321,
+   "dev_score": 0.67
+  },
+  {
+   "metric_calls": 427,
+   "dev_score": 0.75
+  },
+  {
+   "metric_calls": 533,
+   "dev_score": 0.8
+  },
+  {
+   "metric_calls": 645,
+   "dev_score": 0.73
+  },
+  {
+   "metric_calls": 751,
+   "dev_score": 0.76
+  }
+ ],
+ "notes": ""
+}

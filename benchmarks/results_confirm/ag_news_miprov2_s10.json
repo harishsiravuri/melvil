@@ -1,0 +1,15 @@
+{
+ "task": "ag_news",
+ "arm": "miprov2",
+ "seed": 10,
+ "test_accuracy": 0.84,
+ "test_macro_f1": 0.8354,
+ "dev_accuracy": null,
+ "optimize_task_calls": 446,
+ "optimize_cost_usd": 0.1349,
+ "test_cost_usd": 0.0305,
+ "opt_seconds": 96.8,
+ "instructions": "Classify the given text into one of these categories: Business, Sci/Tech, Sports, World. Answer with the category name only.",
+ "n_demos": 0,
+ "notes": "dspy-native ChatAdapter runtime; budget parity by preset (auto=light)"
+}

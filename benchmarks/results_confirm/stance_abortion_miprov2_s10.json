@@ -1,0 +1,15 @@
+{
+ "task": "stance_abortion",
+ "arm": "miprov2",
+ "seed": 10,
+ "test_accuracy": 0.6,
+ "test_macro_f1": 0.5682,
+ "dev_accuracy": null,
+ "optimize_task_calls": 571,
+ "optimize_cost_usd": 0.1607,
+ "test_cost_usd": 0.0565,
+ "opt_seconds": 144.6,
+ "instructions": "Read the provided social media post carefully, understanding any implied, sarcastic, or coded language, and determine the author's stance on the discussed topic. Assign one of the following stance labels based on your analysis: \"favor\" if the post expresses support, \"against\" if it opposes, or \"none\" if no clear stance is presented. Output only the single best-matching category.",
+ "n_demos": 4,
+ "notes": "dspy-native ChatAdapter runtime; budget parity by preset (auto=light)"
+}

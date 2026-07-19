@@ -1,0 +1,14 @@
+{
+ "task": "clinc150",
+ "arm": "vanilla",
+ "seed": 12,
+ "codebase": "v0.2-confirm",
+ "test_accuracy": 0.98,
+ "test_macro_f1": 0.9799,
+ "unparseable": 0,
+ "optimize_cost_usd": 0.0679,
+ "test_cost_usd": 0.0,
+ "artifact_id": "68eed47f7a21",
+ "exemplars": 0,
+ "mining_note": ""
+}

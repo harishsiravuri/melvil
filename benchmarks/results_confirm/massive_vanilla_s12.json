@@ -1,0 +1,14 @@
+{
+ "task": "massive",
+ "arm": "vanilla",
+ "seed": 12,
+ "codebase": "v0.2-confirm",
+ "test_accuracy": 0.8867,
+ "test_macro_f1": 0.9009,
+ "unparseable": 0,
+ "optimize_cost_usd": 0.2247,
+ "test_cost_usd": 0.07,
+ "artifact_id": "b32f2bc12f22",
+ "exemplars": 0,
+ "mining_note": ""
+}

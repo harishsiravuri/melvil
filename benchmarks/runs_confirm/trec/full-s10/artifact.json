@@ -1,0 +1,213 @@
+{
+ "schema_version": 1,
+ "artifact_id": "f9f105aabb7d",
+ "parent_id": null,
+ "task_name": "trec",
+ "created_at": "2026-07-19T13:34:44-0500",
+ "library": {
+  "name": "labelsmith",
+  "version": "0.2.0.dev0"
+ },
+ "models": {
+  "task": "openrouter/openai/gpt-4.1-mini",
+  "reflection": "openrouter/openai/gpt-4.1"
+ },
+ "budget": {
+  "metric_calls_budget": 800,
+  "metric_calls_spent": 798,
+  "cost_usd": 0.1987,
+  "task_lm_usage": {
+   "model": "openrouter/openai/gpt-4.1-mini",
+   "prompt_tokens": 274895,
+   "completion_tokens": 1393,
+   "calls": 689,
+   "cache_hits": 209,
+   "cost_usd": 0.112187
+  },
+  "reflection_lm_usage": {
+   "model": "openrouter/openai/gpt-4.1",
+   "prompt_tokens": 25523,
+   "completion_tokens": 4438,
+   "calls": 25,
+   "cache_hits": 1,
+   "cost_usd": 0.08655
+  },
+  "opt_seconds": 150.7
+ },
+ "scores": {
+  "dev_accuracy": 0.79,
+  "dev_macro_f1": 0.7904,
+  "per_label_dev": {
+   "abbreviation": {
+    "precision": 0.6667,
+    "recall": 1.0,
+    "f1": 0.8,
+    "support": 2
+   },
+   "description": {
+    "precision": 0.6061,
+    "recall": 0.9524,
+    "f1": 0.7407,
+    "support": 21
+   },
+   "entity": {
+    "precision": 0.9167,
+    "recall": 0.4783,
+    "f1": 0.6286,
+    "support": 23
+   },
+   "human": {
+    "precision": 0.8148,
+    "recall": 1.0,
+    "f1": 0.898,
+    "support": 22
+   },
+   "location": {
+    "precision": 1.0,
+    "recall": 0.6667,
+    "f1": 0.8,
+    "support": 15
+   },
+   "numeric": {
+    "precision": 0.9333,
+    "recall": 0.8235,
+    "f1": 0.875,
+    "support": 17
+   }
+  },
+  "seed_dev_accuracy": 0.53,
+  "dev_accuracy_quarantined": null
+ },
+ "config_hash": "959c0769776b",
+ "config": {
+  "task_model": "openrouter/openai/gpt-4.1-mini",
+  "reflection_model": "openrouter/openai/gpt-4.1",
+  "budget": "light",
+  "seed": 10,
+  "features": {
+   "codebook": true,
+   "confusion_reflection": true,
+   "hard_example_mining": true
+  },
+  "num_threads": 8,
+  "run_dir": "/Users/harish/Documents/Claude/Projects/6s/labelsmith/benchmarks/runs_confirm/trec/full-s10",
+  "task_temperature": 0.0,
+  "task_max_tokens": 40,
+  "reflection_temperature": 1.0,
+  "reflection_max_tokens": 8000,
+  "reflection_minibatch_size": 3,
+  "max_exemplars": 6,
+  "mining_llm_screen": true,
+  "prices": {},
+  "metric_calls": 800
+ },
+ "label_names": [
+  "abbreviation",
+  "description",
+  "entity",
+  "human",
+  "location",
+  "numeric"
+ ],
+ "components": {
+  "task_instruction": "You are a precise text classifier. Read the input text and assign it to exactly one of the categories defined below.",
+  "label::abbreviation": "",
+  "label::description": "Choose this if the expected answer is a definition, explanation, or description, rather than a specific name, title, or number. If the question asks for the meaning, nature, or why/how something is the case—seeking an explanatory answer rather than a specific entity or value—assign 'description'. If the question could be answered with either a definition or a concrete term, select 'description' only if the defining explanation (not just a label or name) is being requested.",
+  "label::entity": "Select this category if the answer is a specific non-person thing, object, animal, creative work (such as a book, movie, or team nickname), or concept—it refers to a concrete noun that is NOT a person, group of people, place, or number. If unclear between 'entity' and 'human', choose 'entity' ONLY when the answer is not or could not be a person or group. For questions asking “what/which/name” of a thing (not person, place, or number), use 'entity'. If deciding between 'entity' and 'description', choose 'entity' only if the answer is a specific name, term, or title—NOT an explanation or characteristic.",
+  "label::human": "Select this category if the answer is the name, nickname, or identifier of a specific person or group of people (real or fictional, individual or collective; e.g., athletes, artists, teams, rulers, characters). If the expected answer could be a person or a group with personal agency—rather than an inanimate thing, place, or concept—use 'human' (even if the question asks for a \"name\" or \"who/which\"). If you're deciding between 'human' and 'entity', assign 'human' when a person or group is the intended answer.",
+  "label::location": "",
+  "label::numeric": "",
+  "boundary_rules": ""
+ },
+ "exemplars": [],
+ "confusion": {
+  "labels": [
+   "abbreviation",
+   "description",
+   "entity",
+   "human",
+   "location",
+   "numeric"
+  ],
+  "matrix": [
+   [
+    2,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    1,
+    20,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    7,
+    11,
+    4,
+    0,
+    1,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    22,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    3,
+    1,
+    1,
+    10,
+    0,
+    0
+   ],
+   [
+    0,
+    3,
+    0,
+    0,
+    0,
+    14,
+    0
+   ]
+  ],
+  "unparseable_column": true
+ },
+ "curve": [
+  {
+   "metric_calls": 0,
+   "dev_score": 0.53
+  },
+  {
+   "metric_calls": 106,
+   "dev_score": 0.74
+  },
+  {
+   "metric_calls": 275,
+   "dev_score": 0.79
+  },
+  {
+   "metric_calls": 468,
+   "dev_score": 0.76
+  },
+  {
+   "metric_calls": 574,
+   "dev_score": 0.79
+  }
+ ],
+ "notes": "rejected 6 exemplars (quarantined dev 0.819 <= 0.840 + noise floor 0.038)"
+}

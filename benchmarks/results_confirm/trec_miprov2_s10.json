@@ -1,0 +1,15 @@
+{
+ "task": "trec",
+ "arm": "miprov2",
+ "seed": 10,
+ "test_accuracy": 0.8567,
+ "test_macro_f1": 0.8574,
+ "dev_accuracy": null,
+ "optimize_task_calls": 586,
+ "optimize_cost_usd": 0.1329,
+ "test_cost_usd": 0.0498,
+ "opt_seconds": 122.6,
+ "instructions": "Given an input question or statement, carefully analyze its content and determine which of the following categories best matches the type of information being requested: abbreviation, description, entity, human, location, or numeric. If the text is asking for an explanation, definition, or meaning of a concept, term, or phenomenon, classify it as \"description\". Respond only with the single most appropriate category label.",
+ "n_demos": 4,
+ "notes": "dspy-native ChatAdapter runtime; budget parity by preset (auto=light)"
+}

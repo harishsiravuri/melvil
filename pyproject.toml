@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "labelsmith"
-version = "0.1.0"
+version = "0.2.0"
 description = "Optimized, versioned classifier prompts from labeled examples — GEPA prompt evolution with a classification-specific layer."
 readme = "README.md"
 license = { file = "LICENSE" }

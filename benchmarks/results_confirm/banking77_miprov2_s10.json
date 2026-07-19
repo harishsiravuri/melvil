@@ -1,0 +1,15 @@
+{
+ "task": "banking77",
+ "arm": "miprov2",
+ "seed": 10,
+ "test_accuracy": 0.7633,
+ "test_macro_f1": 0.7403,
+ "dev_accuracy": null,
+ "optimize_task_calls": 547,
+ "optimize_cost_usd": 0.1484,
+ "test_cost_usd": 0.0407,
+ "opt_seconds": 116.5,
+ "instructions": "Classify the given text into one of these categories: automatic_top_up, balance_not_updated_after_bank_transfer, beneficiary_not_allowed, cancel_transfer, card_payment_fee_charged, card_payment_not_recognised, declined_cash_withdrawal, exchange_rate, exchange_via_app, failed_transfer, get_disposable_virtual_card, get_physical_card, passcode_forgotten, pending_top_up, pending_transfer, receiving_money, reverted_card_payment?, top_up_by_cash_or_cheque, top_up_reverted, topping_up_by_card, transfer_fee_charged, transfer_into_account, transfer_timing, verify_my_identity, verify_source_of_funds. Answer with the category name only.",
+ "n_demos": 0,
+ "notes": "dspy-native ChatAdapter runtime; budget parity by preset (auto=light)"
+}

@@ -1,0 +1,15 @@
+{
+ "task": "massive",
+ "arm": "miprov2",
+ "seed": 10,
+ "test_accuracy": 0.8667,
+ "test_macro_f1": 0.8753,
+ "dev_accuracy": null,
+ "optimize_task_calls": 551,
+ "optimize_cost_usd": 0.1341,
+ "test_cost_usd": 0.0374,
+ "opt_seconds": 124.6,
+ "instructions": "Classify the given text into one of these categories: alarm_query, alarm_set, calendar_query, calendar_remove, calendar_set, cooking_recipe, datetime_query, email_query, email_sendemail, general_quirky, iot_hue_lightoff, lists_createoradd, lists_query, lists_remove, music_query, news_query, play_audiobook, play_music, play_podcasts, play_radio, qa_currency, qa_definition, qa_factoid, qa_stock, recommendation_events, recommendation_locations, social_post, takeaway_order, transport_query, weather_query. Answer with the category name only.",
+ "n_demos": 0,
+ "notes": "dspy-native ChatAdapter runtime; budget parity by preset (auto=light)"
+}

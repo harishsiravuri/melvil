@@ -1,0 +1,14 @@
+{
+ "task": "emotion",
+ "arm": "vanilla",
+ "seed": 10,
+ "codebase": "v0.2-confirm",
+ "test_accuracy": 0.56,
+ "test_macro_f1": 0.4638,
+ "unparseable": 0,
+ "optimize_cost_usd": 0.1992,
+ "test_cost_usd": 0.0482,
+ "artifact_id": "0da06a24e4a1",
+ "exemplars": 0,
+ "mining_note": ""
+}

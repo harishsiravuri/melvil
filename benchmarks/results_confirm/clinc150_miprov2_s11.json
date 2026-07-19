@@ -1,0 +1,15 @@
+{
+ "task": "clinc150",
+ "arm": "miprov2",
+ "seed": 11,
+ "test_accuracy": 0.9867,
+ "test_macro_f1": 0.9866,
+ "dev_accuracy": null,
+ "optimize_task_calls": 304,
+ "optimize_cost_usd": 0.0823,
+ "test_cost_usd": 0.0537,
+ "opt_seconds": 73.5,
+ "instructions": "Read the user input and assign it to the single best-matching category from the following list: alarm, apr, balance, book_flight, book_hotel, calculator, calories, car_rental, cook_time, credit_limit, credit_score, definition, direct_deposit, freeze_account, lost_luggage, meeting_schedule, pay_bill, payday, pto_request, recipe, report_fraud, report_lost_card, restaurant_reservation, restaurant_reviews, rewards_balance, taxes, timer, transfer, travel_suggestion, weather. Respond with only the category label that best captures the user's intent.",
+ "n_demos": 4,
+ "notes": "dspy-native ChatAdapter runtime; budget parity by preset (auto=light)"
+}

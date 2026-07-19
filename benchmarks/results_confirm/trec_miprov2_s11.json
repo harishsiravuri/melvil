@@ -1,0 +1,15 @@
+{
+ "task": "trec",
+ "arm": "miprov2",
+ "seed": 11,
+ "test_accuracy": 0.8333,
+ "test_macro_f1": 0.8346,
+ "dev_accuracy": null,
+ "optimize_task_calls": 345,
+ "optimize_cost_usd": 0.0756,
+ "test_cost_usd": 0.0465,
+ "opt_seconds": 75.1,
+ "instructions": "Read the input text and determine which of the following categories best fits the type of information being requested: abbreviation, description, entity, human, location, or numeric. Provide only the single most appropriate category as your answer, based on the nature and structure of the question.",
+ "n_demos": 4,
+ "notes": "dspy-native ChatAdapter runtime; budget parity by preset (auto=light)"
+}

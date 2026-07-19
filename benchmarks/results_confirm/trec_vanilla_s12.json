@@ -1,0 +1,14 @@
+{
+ "task": "trec",
+ "arm": "vanilla",
+ "seed": 12,
+ "codebase": "v0.2-confirm",
+ "test_accuracy": 0.8167,
+ "test_macro_f1": 0.8034,
+ "unparseable": 0,
+ "optimize_cost_usd": 0.2673,
+ "test_cost_usd": 0.114,
+ "artifact_id": "7b86a7d5834b",
+ "exemplars": 0,
+ "mining_note": ""
+}

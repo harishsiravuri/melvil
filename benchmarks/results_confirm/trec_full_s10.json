@@ -1,0 +1,14 @@
+{
+ "task": "trec",
+ "arm": "full",
+ "seed": 10,
+ "codebase": "v0.2-confirm",
+ "test_accuracy": 0.8567,
+ "test_macro_f1": 0.8531,
+ "unparseable": 0,
+ "optimize_cost_usd": 0.1987,
+ "test_cost_usd": 0.0528,
+ "artifact_id": "f9f105aabb7d",
+ "exemplars": 0,
+ "mining_note": "rejected 6 exemplars (quarantined dev 0.819 <= 0.840 + noise floor 0.038)"
+}

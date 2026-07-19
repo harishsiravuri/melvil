@@ -1,0 +1,14 @@
+{
+ "task": "sst5",
+ "arm": "full",
+ "seed": 12,
+ "codebase": "v0.2-confirm",
+ "test_accuracy": 0.62,
+ "test_macro_f1": 0.5944,
+ "unparseable": 0,
+ "optimize_cost_usd": 0.157,
+ "test_cost_usd": 0.0426,
+ "artifact_id": "b18793561464",
+ "exemplars": 0,
+ "mining_note": "rejected 5 exemplars (quarantined dev 0.632 <= 0.653 + noise floor 0.049)"
+}

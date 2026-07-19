@@ -1,0 +1,14 @@
+{
+ "task": "massive",
+ "arm": "full",
+ "seed": 10,
+ "codebase": "v0.2-confirm",
+ "test_accuracy": 0.8467,
+ "test_macro_f1": 0.8593,
+ "unparseable": 1,
+ "optimize_cost_usd": 0.2015,
+ "test_cost_usd": 0.0459,
+ "artifact_id": "7c6d31b983ca",
+ "exemplars": 0,
+ "mining_note": "rejected 4 exemplars (quarantined dev 0.875 <= 0.906 + noise floor 0.030)"
+}

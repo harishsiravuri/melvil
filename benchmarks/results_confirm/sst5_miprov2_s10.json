@@ -1,0 +1,15 @@
+{
+ "task": "sst5",
+ "arm": "miprov2",
+ "seed": 10,
+ "test_accuracy": 0.5967,
+ "test_macro_f1": 0.5911,
+ "dev_accuracy": null,
+ "optimize_task_calls": 578,
+ "optimize_cost_usd": 0.1439,
+ "test_cost_usd": 0.0503,
+ "opt_seconds": 135.8,
+ "instructions": "Classify the given text into one of these categories: negative, neutral, positive, very negative, very positive. Answer with the category name only.",
+ "n_demos": 4,
+ "notes": "dspy-native ChatAdapter runtime; budget parity by preset (auto=light)"
+}

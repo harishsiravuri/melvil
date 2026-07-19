@@ -1,0 +1,165 @@
+{
+ "schema_version": 1,
+ "artifact_id": "4f40b5fd9787",
+ "parent_id": null,
+ "task_name": "ag_news",
+ "created_at": "2026-07-19T13:41:52-0500",
+ "library": {
+  "name": "labelsmith",
+  "version": "0.2.0.dev0"
+ },
+ "models": {
+  "task": "openrouter/openai/gpt-4.1-mini",
+  "reflection": "openrouter/openai/gpt-4.1"
+ },
+ "budget": {
+  "metric_calls_budget": 800,
+  "metric_calls_spent": 700,
+  "cost_usd": 0.145,
+  "task_lm_usage": {
+   "model": "openrouter/openai/gpt-4.1-mini",
+   "prompt_tokens": 140966,
+   "completion_tokens": 1172,
+   "calls": 517,
+   "cache_hits": 283,
+   "cost_usd": 0.058262
+  },
+  "reflection_lm_usage": {
+   "model": "openrouter/openai/gpt-4.1",
+   "prompt_tokens": 27116,
+   "completion_tokens": 4060,
+   "calls": 24,
+   "cache_hits": 1,
+   "cost_usd": 0.086712
+  },
+  "opt_seconds": 141.1
+ },
+ "scores": {
+  "dev_accuracy": 0.89,
+  "dev_macro_f1": 0.8855,
+  "per_label_dev": {
+   "Business": {
+    "precision": 0.7812,
+    "recall": 1.0,
+    "f1": 0.8772,
+    "support": 25
+   },
+   "Sci/Tech": {
+    "precision": 1.0,
+    "recall": 0.64,
+    "f1": 0.7805,
+    "support": 25
+   },
+   "Sports": {
+    "precision": 1.0,
+    "recall": 0.92,
+    "f1": 0.9583,
+    "support": 25
+   },
+   "World": {
+    "precision": 0.8621,
+    "recall": 1.0,
+    "f1": 0.9259,
+    "support": 25
+   }
+  },
+  "seed_dev_accuracy": 0.86,
+  "dev_accuracy_quarantined": null
+ },
+ "config_hash": "83707a7a913d",
+ "config": {
+  "task_model": "openrouter/openai/gpt-4.1-mini",
+  "reflection_model": "openrouter/openai/gpt-4.1",
+  "budget": "light",
+  "seed": 12,
+  "features": {
+   "codebook": true,
+   "confusion_reflection": true,
+   "hard_example_mining": true
+  },
+  "num_threads": 8,
+  "run_dir": "/Users/harish/Documents/Claude/Projects/6s/labelsmith/benchmarks/runs_confirm/ag_news/full-s12",
+  "task_temperature": 0.0,
+  "task_max_tokens": 40,
+  "reflection_temperature": 1.0,
+  "reflection_max_tokens": 8000,
+  "reflection_minibatch_size": 3,
+  "max_exemplars": 6,
+  "mining_llm_screen": true,
+  "prices": {},
+  "metric_calls": 800
+ },
+ "label_names": [
+  "Business",
+  "Sci/Tech",
+  "Sports",
+  "World"
+ ],
+ "components": {
+  "task_instruction": "You are a precise text classifier. Read the input text and assign it to exactly one of the categories defined below.",
+  "label::Business": "Articles mainly about companies, the economy, markets, finance, or business strategy. Business covers financial results, industry trends, business deals, company operations, and economic policy. For stories mentioning technology, select Business only if the article's main focus is business performance, financial transactions, or market impacts—not the technological product or technical development itself, which belongs to Sci/Tech.",
+  "label::Sci/Tech": "Articles primarily about science, technology, computers, gadgets, discoveries, engineering, or scientific research. Reports mainly focused on technological products, scientific findings, tech business platforms (like payment or shopping services as products or technologies), or developments in the natural or applied sciences should be labeled here. If an article’s main topic is a technology/science product, research, or innovation—even if it has economic consequences—label as Sci/Tech rather than Business.",
+  "label::Sports": "",
+  "label::World": "",
+  "boundary_rules": ""
+ },
+ "exemplars": [],
+ "confusion": {
+  "labels": [
+   "Business",
+   "Sci/Tech",
+   "Sports",
+   "World"
+  ],
+  "matrix": [
+   [
+    25,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    6,
+    16,
+    0,
+    3,
+    0
+   ],
+   [
+    1,
+    0,
+    23,
+    1,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    25,
+    0
+   ]
+  ],
+  "unparseable_column": true
+ },
+ "curve": [
+  {
+   "metric_calls": 0,
+   "dev_score": 0.86
+  },
+  {
+   "metric_calls": 115,
+   "dev_score": 0.82
+  },
+  {
+   "metric_calls": 275,
+   "dev_score": 0.84
+  },
+  {
+   "metric_calls": 450,
+   "dev_score": 0.89
+  }
+ ],
+ "notes": "no persistent hard examples survived screening"
+}

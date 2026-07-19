@@ -1,93 +1,112 @@
-# Benchmark results — labelsmith v0.1.0
+# Benchmark results — labelsmith
 
-**Headline (honest version): the per-label codebook is the feature that matters.**
-Averaged over six public classification tasks (3 seeds each, matched "light" budgets),
-labelsmith's full classification layer reaches **0.829** mean test accuracy vs **0.817**
-for vanilla GEPA and **0.762** for the unoptimized seed prompt. The ablations attribute
-essentially all of that margin to the per-label codebook (removing it: **0.811**, the
-largest single drop, −1.8 points); confusion-driven reflection is *neutral-to-slightly-
-negative on average* in this v0.1 implementation (removing it: **0.832**), and
-hard-example mining is roughly neutral (removing it: **0.826**). We report this as
-measured — see "What we'd change" below.
+Three clearly separated evidence tiers, in chronological order:
 
-Setup: task model `gpt-4.1-mini`, reflection `gpt-4.1` (via OpenRouter); budget preset
-"light" (800 metric calls) everywhere; splits train 150 / dev 100 / test 300, stratified,
-data seed 0; dev drives all optimization decisions; each task's test split touched exactly
-once per (arm, seed), at the end. Arms and metrics were fixed before any results (see
-`run_matrix.py`, committed before the launch). MIPROv2 (optional arm e) was not run in
-v0.1 — it optimizes under dspy's chat-adapter format rather than our deployable rendered
-prompt, so a clean comparison needs dedicated wiring; recorded here as future work.
+1. **v0.1 exploration** (post-hoc analysis; seeds 0–2) — kept for the record.
+2. **v0.2 iteration round** (targeted fixes + re-runs; seeds 0–2; exploratory).
+3. **CONFIRMATION PASS** (pre-registered, frozen config, fresh seeds 10–12, two untouched
+   datasets) — **the headline numbers. Nothing was changed after seeing them.**
 
-## Overall (mean of per-task means, test accuracy)
+**Headline (confirmation): at light budgets with a strong task model, vanilla GEPA over
+labelsmith's deployable rendered prompt is the strongest arm.** It beats both MIPROv2 and
+our own full classification layer:
 
-| arm | banking77 | ag_news | emotion | trec | clinc150 | massive | mean |
-|---|---|---|---|---|---|---|---|
-| seed prompt | 0.760 | 0.830 | 0.563 | 0.600 | 0.980 | 0.840 | **0.762** |
-| vanilla GEPA | 0.806 | 0.859 | 0.544 | 0.862 | 0.980 | 0.849 | **0.817** |
-| labelsmith full | 0.824 | 0.844 | 0.562 | 0.881 | 0.982 | 0.881 | **0.829** |
-| full − codebook | 0.773 | 0.837 | 0.560 | 0.840 | 0.987 | 0.870 | **0.811** |
-| full − confusion | 0.827 | 0.886 | 0.564 | 0.860 | 0.983 | 0.871 | **0.832** |
-| full − mining | 0.808 | 0.850 | 0.564 | 0.890 | 0.979 | 0.863 | **0.826** |
+| arm | banking77 | ag_news | emotion | trec | clinc150 | massive | stance_abortion | sst5 | mean |
+|---|---|---|---|---|---|---|---|---|---|
+| seed prompt | 0.760 | 0.830 | 0.563 | 0.600 | 0.980 | 0.840 | 0.500 | 0.547 | **0.703** |
+| **vanilla GEPA** | 0.821 | 0.867 | 0.562 | 0.871 | 0.980 | 0.879 | 0.650 | 0.619 | **0.781** |
+| labelsmith full (v0.2) | 0.821 | 0.843 | 0.556 | 0.848 | 0.978 | 0.837 | 0.563 | 0.596 | **0.755** |
+| MIPROv2 (dspy-native) | 0.763 | 0.863 | 0.540 | 0.860 | 0.982 | 0.867 | 0.635 | 0.587 | **0.762** |
 
-![test accuracy by task and arm](plots/test_accuracy_by_arm.png)
+(Test accuracy, mean of 3 fresh seeds; macro-F1 table, per-seed values, and plot in
+[confirmation_tables.md](confirmation_tables.md). Spend: $15.61.)
 
-![dev curves](plots/dev_curves.png)
+![confirmation](plots/confirmation_test_accuracy.png)
 
-Full per-task tables (per-seed ranges, macro-F1, dev accuracy, per-run cost) are in
-[results_tables.md](results_tables.md); raw per-run JSON in `results/`; every artifact and
-its reflection traces in `runs/`.
+Setup for all tiers: task model `gpt-4.1-mini`, reflection/prompt model `gpt-4.1`
+(OpenRouter); budget preset "light" per optimized arm; splits train 150 / dev 100 /
+test ≤300 stratified (data seed 0); dev drives all optimization; test touched exactly once
+per (task, arm, seed). MIPROv2 runs `auto="light"` in its native dspy ChatAdapter runtime
+(its output is a dspy program, not a portable prompt string; measured task-model calls
+~545–800 per run, comparable to our 800 cap).
 
-## Reading the results
+---
 
-1. **Where optimization has headroom, the full layer wins on test.** On the three tasks
-   with both headroom and label structure — banking77 (+1.9 over vanilla), trec (+1.9),
-   MASSIVE (+3.2) — the full layer beats vanilla GEPA on test accuracy in every case. The
-   dev-vs-budget curves (plot above) are comparable between the two arms (vanilla slightly
-   ahead on banking77/ag_news dev, full ahead on massive/clinc150): the layer's edge shows
-   up at test time, not as faster dev climbing.
-2. **The codebook is the load-bearing feature.** `full − codebook` is the worst optimized
-   arm on 4/6 tasks and costs −5.1 points on banking77 (25 labels) vs full. Structured
-   per-label definitions are also what transfers (see 5): the prompt carries explicit
-   label semantics rather than model-idiosyncratic phrasing.
-3. **Confusion-driven reflection did not earn its keep (yet).** Removing it is +0.3 on
-   average and +4.2 on ag_news. The traces show why: the confusion-driven component
-   selector concentrates updates on the two most-confused labels and starves the rest —
-   in the ag_news full run (seed 0), 36 of 42 component updates went to `Sci/Tech` and
-   `Business` while `World` and `Sports` received zero. Focused boundary-sharpening is the
-   right instinct with 25–30 labels, but on small taxonomies it over-commits. An honest
-   negative for our headline feature as currently implemented.
-4. **Mining is neutral on average and its dev gate is too permissive.** 53/54
-   mining-enabled runs kept their exemplars, and on the headroom tasks the full arm's dev
-   accuracy overstates test by +2.6 points on average (vanilla: −0.4; `full − mining`:
-   −1.1) — dev-drawn exemplars inflate the dev score exactly as the documented caveat
-   predicts, and persistently-missed dev examples select for label noise (clearest on AG
-   News). trec is the one task where dropping mining *helped* (+0.9). Judge artifacts on
-   test.
-5. **Transfer to `gpt-4.1-nano` mostly holds up** — clinc 0.972, ag_news 0.821, massive
-   0.811, banking77 0.742 (all within ~3–8 points of the 4.1-mini scores) — but collapses
-   on trec (0.562 vs 0.881): the evolved trec prompts lean on fine-grained boundary rules
-   the weaker model can't execute. Artifacts are model-portable in form, not always in
-   performance.
-6. **Two tasks are saturation-limited** and dilute all averages: clinc150 (~0.98
-   everywhere) and emotion (~0.56 everywhere, where no arm beats the seed prompt
-   meaningfully — consistent with the pre-library pilot on the same split). They are kept
-   in the matrix for honesty, but they measure the ceiling, not the optimizer. Parse
-   robustness held: ≤0.2 unparseable outputs per 300 test examples in every arm.
+## Confirmation pass — protocol and reading
 
-## Cost
+**Protocol** (pre-registered in [run_confirmation.py](run_confirmation.py), committed before
+any run): v0.2 code frozen after the iteration round; 8 datasets = the six iteration
+datasets + two untouched ones (tweet_eval/stance_abortion, SetFit/sst5; trec-fine was
+considered and rejected because its texts overlap trec-coarse); arms seed / vanilla / full /
+MIPROv2; fresh seeds 10, 11, 12; test-only reporting.
 
-Total measured spend for the entire matrix, including transfer evals: **$13.94**
-(estimate upper bound was $29.41; temp-0 disk caching accounts for the difference).
-A single full-layer run at light budget averaged **$0.21** optimize cost.
+**Reading the table, honestly:**
 
-## What we'd change next (v0.2 candidates, in priority order)
+1. **The v0.1 result did not replicate.** In v0.1 exploration the full layer led vanilla by
+   +1.2 mean points; under fresh seeds, new datasets, and leak-free mining it trails by
+   −2.6. The v0.1 edge decomposes into (a) mining's leaky `>=` dev gate (fixed in v0.2 —
+   after which exemplars were kept in **0/24** confirmation runs), (b) seed-level variance
+   (per-seed spreads up to ±0.05 on the same arm/task), and (c) task selection — v0.1's
+   headroom tasks had no hard small-taxonomy task.
+2. **Why the codebook loses at light budgets: update coverage, not generalization.** On
+   stance_abortion, full's *dev* accuracy only reached 0.590 vs vanilla's 0.793 — the
+   structured prompt failed to optimize, with 2 of 3 seeds stuck near the seed prompt.
+   A light budget accepts ~6–10 proposals; vanilla revises the entire prompt with each one,
+   while the codebook spends each proposal on one or two components. Whole-prompt rewrites
+   can discover global strategies (e.g. how to treat neutral reporting in stance detection)
+   that per-definition edits cannot assemble in so few updates. The one task where full
+   matched vanilla (banking77, 25 labels, 0.821 = 0.821, and the best macro-F1 of any arm at
+   0.813) is consistent with this: with many labels, per-label structure is closer to the
+   right granularity — but at this budget it never got *ahead*.
+3. **Vanilla GEPA + rendered-prompt runtime > MIPROv2** (0.781 vs 0.762 mean) — with the
+   format caveat noted above. The deployable-prompt GEPA loop is a strong, simple baseline,
+   and it is the configuration we now recommend as labelsmith's default story at light
+   budgets (`Features.none()`).
+4. **Parse robustness held everywhere** (≤1 unparseable output per 300 across all arms —
+   the fixed output contract does its job in both prompt styles).
 
-1. Rework confusion-driven reflection: use the confusion matrix to *schedule* which
-   boundary to fix but keep the reflective-example evidence primary; widen the component
-   selector so non-confused labels still get periodic updates on large taxonomies.
-2. Make the mining gate strict (`>` instead of `>=`, or require a margin) and screen
-   candidate exemplars for label-noise (e.g., drop examples the taxonomy's own definitions
-   contradict).
-3. Headroom pre-screening in the harness: flag tasks where the seed prompt is within noise
-   of the best arm (clinc150, emotion here) before spending the full matrix on them.
-4. A properly-wired MIPROv2 arm for the paper.
+## v0.2 iteration round (exploratory; seeds 0–2)
+
+Changes made after (and because of) v0.1, before the confirmation freeze:
+
+- **Confusion selector fixed**: deficit-weighted round-robin over the top-5 confused pairs
+  replaced greedy worst-pair selection (v0.1 had sent 36/42 updates to 2 of 4 labels).
+  Re-running full vs no_confusion on the three headroom tasks: banking77 +2.1,
+  massive +1.0, ag_news −1.4 → mean **+0.6 for confusion-reflection, up from −1.1** under
+  the v0.1 selector. Directionally vindicated (large taxonomies), still not decisive.
+- **Mining hardened**: label-noise consistency prescreen + optional LLM screen against the
+  taxonomy's own definitions + quarantined accept gate (exemplars excluded from the gating
+  eval; must beat base by more than the binomial noise floor). Result: **18/18 iteration
+  runs and 24/24 confirmation runs rejected all exemplars** — every v0.1 "kept" decision
+  had been within the noise floor. Hard-example mining at light budgets, honestly measured,
+  is a no-op; it remains in the library as a safety-gated feature.
+- `ls.screen()` added (headroom verdict before spending budget) — a user-facing product of
+  these experiments: clinc150 and emotion would have been flagged `saturated`/ceilinged
+  before costing anything.
+
+## v0.1 exploration (superseded; kept for the record)
+
+Mean test accuracy over 6 datasets (seeds 0–2): seed 0.762, vanilla 0.817, full 0.829,
+ablations attributing the margin to the codebook. Superseded by the confirmation pass; the
+detailed v0.1 tables and plots remain in [results_tables.md](results_tables.md) and
+`results/`. Total v0.1 matrix spend $13.94.
+
+## What we take away (paper framing)
+
+- **Positive result**: GEPA-style reflective evolution over a *deployable rendered prompt*
+  (not a framework-native program) is a strong classification optimizer: +7.8 points over
+  the seed prompt on average, ahead of MIPROv2, with a portable prompt artifact as output.
+- **Negative result, cleanly established**: our classification-specific layer (per-label
+  codebook + confusion-driven reflection + hard-example mining) does not pay for itself at
+  light budgets on 3–30-label tasks, and the appearance that it did in exploration was a
+  reproducibility lesson (gate leakage + seed variance). The confirmation-pass discipline
+  caught it before publication.
+- **Open question worth one more study**: budget scaling. The coverage argument (point 2
+  above) predicts the codebook should catch up and pass vanilla as accepted-proposal counts
+  grow, and banking77's macro-F1 hints the crossover is nearest on large taxonomies. That
+  is a hypothesis for medium/heavy budgets, not a claim.
+
+## Spend
+
+v0.1 matrix $13.94 · iteration round $2.04 · MIPROv2 validation $0.18 · confirmation
+$15.61 · **total benchmarks ≈ $31.8** (plus ~$0.35 smoke tests).

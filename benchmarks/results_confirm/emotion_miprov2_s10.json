@@ -1,0 +1,15 @@
+{
+ "task": "emotion",
+ "arm": "miprov2",
+ "seed": 10,
+ "test_accuracy": 0.54,
+ "test_macro_f1": 0.4473,
+ "dev_accuracy": null,
+ "optimize_task_calls": 580,
+ "optimize_cost_usd": 0.1456,
+ "test_cost_usd": 0.0274,
+ "opt_seconds": 127.2,
+ "instructions": "Classify the given text into one of these categories: anger, fear, joy, love, sadness, surprise. Answer with the category name only.",
+ "n_demos": 0,
+ "notes": "dspy-native ChatAdapter runtime; budget parity by preset (auto=light)"
+}

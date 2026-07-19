@@ -1,0 +1,15 @@
+{
+ "task": "clinc150",
+ "arm": "miprov2",
+ "seed": 10,
+ "test_accuracy": 0.98,
+ "test_macro_f1": 0.9801,
+ "dev_accuracy": null,
+ "optimize_task_calls": 545,
+ "optimize_cost_usd": 0.1316,
+ "test_cost_usd": 0.0582,
+ "opt_seconds": 114.7,
+ "instructions": "You are an intelligent digital assistant experienced in understanding user requests. Your task is to read the input text and determine which of the following intent categories\u2014alarm, apr, balance, book_flight, book_hotel, calculator, calories, car_rental, cook_time, credit_limit, credit_score, definition, direct_deposit, freeze_account, lost_luggage, meeting_schedule, pay_bill, payday, pto_request, recipe, report_fraud, report_lost_card, restaurant_reservation, restaurant_reviews, rewards_balance, taxes, timer, transfer, travel_suggestion, or weather\u2014best describes the user's intent. Respond with only the most appropriate category label for the input; do not provide explanations or additional text.",
+ "n_demos": 4,
+ "notes": "dspy-native ChatAdapter runtime; budget parity by preset (auto=light)"
+}

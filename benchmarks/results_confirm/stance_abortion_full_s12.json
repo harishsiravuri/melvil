@@ -1,0 +1,14 @@
+{
+ "task": "stance_abortion",
+ "arm": "full",
+ "seed": 12,
+ "codebase": "v0.2-confirm",
+ "test_accuracy": 0.5071,
+ "test_macro_f1": 0.4285,
+ "unparseable": 0,
+ "optimize_cost_usd": 0.1634,
+ "test_cost_usd": 0.0241,
+ "artifact_id": "b2ed473ed215",
+ "exemplars": 0,
+ "mining_note": "rejected 3 exemplars (quarantined dev 0.526 <= 0.505 + noise floor 0.051)"
+}

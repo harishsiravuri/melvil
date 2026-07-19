@@ -1,0 +1,169 @@
+{
+ "schema_version": 1,
+ "artifact_id": "f51531f4d8a2",
+ "parent_id": null,
+ "task_name": "ag_news",
+ "created_at": "2026-07-19T13:35:38-0500",
+ "library": {
+  "name": "labelsmith",
+  "version": "0.2.0.dev0"
+ },
+ "models": {
+  "task": "openrouter/openai/gpt-4.1-mini",
+  "reflection": "openrouter/openai/gpt-4.1"
+ },
+ "budget": {
+  "metric_calls_budget": 800,
+  "metric_calls_spent": 800,
+  "cost_usd": 0.1794,
+  "task_lm_usage": {
+   "model": "openrouter/openai/gpt-4.1-mini",
+   "prompt_tokens": 221442,
+   "completion_tokens": 1398,
+   "calls": 608,
+   "cache_hits": 292,
+   "cost_usd": 0.090814
+  },
+  "reflection_lm_usage": {
+   "model": "openrouter/openai/gpt-4.1",
+   "prompt_tokens": 27925,
+   "completion_tokens": 4092,
+   "calls": 26,
+   "cache_hits": 0,
+   "cost_usd": 0.088586
+  },
+  "opt_seconds": 147.4
+ },
+ "scores": {
+  "dev_accuracy": 0.9,
+  "dev_macro_f1": 0.8971,
+  "per_label_dev": {
+   "Business": {
+    "precision": 0.7812,
+    "recall": 1.0,
+    "f1": 0.8772,
+    "support": 25
+   },
+   "Sci/Tech": {
+    "precision": 1.0,
+    "recall": 0.68,
+    "f1": 0.8095,
+    "support": 25
+   },
+   "Sports": {
+    "precision": 1.0,
+    "recall": 0.92,
+    "f1": 0.9583,
+    "support": 25
+   },
+   "World": {
+    "precision": 0.8929,
+    "recall": 1.0,
+    "f1": 0.9434,
+    "support": 25
+   }
+  },
+  "seed_dev_accuracy": 0.86,
+  "dev_accuracy_quarantined": null
+ },
+ "config_hash": "959c0769776b",
+ "config": {
+  "task_model": "openrouter/openai/gpt-4.1-mini",
+  "reflection_model": "openrouter/openai/gpt-4.1",
+  "budget": "light",
+  "seed": 10,
+  "features": {
+   "codebook": true,
+   "confusion_reflection": true,
+   "hard_example_mining": true
+  },
+  "num_threads": 8,
+  "run_dir": "/Users/harish/Documents/Claude/Projects/6s/labelsmith/benchmarks/runs_confirm/ag_news/full-s10",
+  "task_temperature": 0.0,
+  "task_max_tokens": 40,
+  "reflection_temperature": 1.0,
+  "reflection_max_tokens": 8000,
+  "reflection_minibatch_size": 3,
+  "max_exemplars": 6,
+  "mining_llm_screen": true,
+  "prices": {},
+  "metric_calls": 800
+ },
+ "label_names": [
+  "Business",
+  "Sci/Tech",
+  "Sports",
+  "World"
+ ],
+ "components": {
+  "task_instruction": "You are a precise text classifier. Read the input text and assign it to exactly one of the categories defined below.",
+  "label::Business": "Includes news about companies, markets, finance, economics, and commercial matters. Assign here only if the main focus is on business strategy, transactions, profits, or commercial activity, rather than the workings or effects of technology or science itself—even when technology is mentioned. If the article is about tech or science but emphasizes their market or business impact, classify as Sci/Tech instead.",
+  "label::Sci/Tech": "Includes news about scientific discoveries, research, technology, gadgets, or environmental issues. Assign here if the main focus is on technological or scientific aspects, including problems or advancements in tech or science—even if linked to business, markets, or government. Use this if the core topic is “how” something in science or technology works, malfunctions, develops, or impacts the world, rather than who profits or governs it.",
+  "label::Sports": "",
+  "label::World": "",
+  "boundary_rules": "- If the text is about technology, scientific developments, research, or gadgets even when discussed in the context of the economy or society, assign to Sci/Tech; if it is mainly about companies, markets, finance, or commercial activities, assign to Business.\n- If the text discusses an event or issue concerning the state, government, or international affairs, but its primary focus is on a scientific, technological, or environmental topic, assign to Sci/Tech; otherwise, assign to World.\n- If the text is about a sports team, athlete, event, or competition, assign to Sports even if a business entity is mentioned (e.g., companies owning or sponsoring teams); otherwise, use Business only if the focus is on commercial aspects."
+ },
+ "exemplars": [],
+ "confusion": {
+  "labels": [
+   "Business",
+   "Sci/Tech",
+   "Sports",
+   "World"
+  ],
+  "matrix": [
+   [
+    25,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    6,
+    17,
+    0,
+    2,
+    0
+   ],
+   [
+    1,
+    0,
+    23,
+    1,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    25,
+    0
+   ]
+  ],
+  "unparseable_column": true
+ },
+ "curve": [
+  {
+   "metric_calls": 0,
+   "dev_score": 0.86
+  },
+  {
+   "metric_calls": 199,
+   "dev_score": 0.89
+  },
+  {
+   "metric_calls": 377,
+   "dev_score": 0.9
+  },
+  {
+   "metric_calls": 570,
+   "dev_score": 0.89
+  },
+  {
+   "metric_calls": 700,
+   "dev_score": 0.82
+  }
+ ],
+ "notes": "no persistent hard examples survived screening"
+}

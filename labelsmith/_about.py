@@ -3,4 +3,4 @@ this constant plus the package directory and the `[project]` table in
 pyproject.toml (one commit)."""
 
 LIBRARY_NAME = "labelsmith"
-__version__ = "0.2.0.dev0"
+__version__ = "0.2.0"

@@ -1,0 +1,14 @@
+{
+ "task": "massive",
+ "arm": "seed",
+ "seed": 10,
+ "codebase": "v0.2-confirm",
+ "test_accuracy": 0.84,
+ "test_macro_f1": 0.8473,
+ "unparseable": 0,
+ "optimize_cost_usd": 0.0,
+ "test_cost_usd": 0.0,
+ "artifact_id": "abe9a7da9ee9",
+ "exemplars": 0,
+ "mining_note": "unoptimized seed prompt (arm: seed)"
+}

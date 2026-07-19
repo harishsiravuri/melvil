@@ -1,0 +1,14 @@
+{
+ "task": "banking77",
+ "arm": "seed",
+ "seed": 10,
+ "codebase": "v0.2-confirm",
+ "test_accuracy": 0.76,
+ "test_macro_f1": 0.7366,
+ "unparseable": 1,
+ "optimize_cost_usd": 0.0,
+ "test_cost_usd": 0.0,
+ "artifact_id": "c9db7024f15a",
+ "exemplars": 0,
+ "mining_note": "unoptimized seed prompt (arm: seed)"
+}

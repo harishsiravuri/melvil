@@ -31,6 +31,21 @@ Model names are [LiteLLM](https://docs.litellm.ai) ids (`openai/...`,
 `anthropic/...`, `openrouter/...`); set the matching API key env var
 (`OPENAI_API_KEY`, `OPENROUTER_API_KEY`, ...).
 
+## What the benchmarks say (read this before choosing features)
+
+We benchmark honestly, including against ourselves — full protocol and numbers in
+[benchmarks/RESULTS.md](benchmarks/RESULTS.md). The pre-registered confirmation pass
+(8 public datasets, fresh seeds, light budget, gpt-4.1-mini) found:
+
+- **Vanilla GEPA over labelsmith's rendered prompt is the strongest configuration**
+  (mean test accuracy 0.781 vs 0.755 for the full classification layer and 0.762 for
+  MIPROv2; seed prompt 0.703). At light budgets, prefer `features=ls.Features.none()`.
+- The classification layer's per-component updates trade whole-prompt coverage for
+  structure; at ~6–10 accepted proposals per run that trade loses, especially on hard
+  small-taxonomy tasks. Whether it wins at medium/heavy budgets is an open question.
+- Hard-example mining, behind its (strict, quarantined) accept gate, kept exemplars in
+  0/24 confirmation runs — treat it as a safety-gated no-op at light budgets.
+
 ## What the classification layer does
 
 Each feature is independently toggleable via `ls.Features` (all on by default;

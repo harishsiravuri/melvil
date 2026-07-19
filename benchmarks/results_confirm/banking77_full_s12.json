@@ -1,0 +1,14 @@
+{
+ "task": "banking77",
+ "arm": "full",
+ "seed": 12,
+ "codebase": "v0.2-confirm",
+ "test_accuracy": 0.82,
+ "test_macro_f1": 0.8172,
+ "unparseable": 0,
+ "optimize_cost_usd": 0.2146,
+ "test_cost_usd": 0.0679,
+ "artifact_id": "4a5b5e9a292c",
+ "exemplars": 0,
+ "mining_note": "rejected 6 exemplars (quarantined dev 0.819 <= 0.872 + noise floor 0.034)"
+}

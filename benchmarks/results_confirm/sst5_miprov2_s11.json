@@ -1,0 +1,15 @@
+{
+ "task": "sst5",
+ "arm": "miprov2",
+ "seed": 11,
+ "test_accuracy": 0.61,
+ "test_macro_f1": 0.5928,
+ "dev_accuracy": null,
+ "optimize_task_calls": 404,
+ "optimize_cost_usd": 0.1278,
+ "test_cost_usd": 0.0606,
+ "opt_seconds": 89.8,
+ "instructions": "Analyze the sentiment expressed in the provided movie review snippet, considering both explicit statements and subtle linguistic cues such as irony, degree modifiers, or figurative language. Assign one of the following fine-grained sentiment labels\u2014very negative, negative, neutral, positive, or very positive\u2014that best reflects the overall attitude of the reviewer. Respond with the label only.",
+ "n_demos": 4,
+ "notes": "dspy-native ChatAdapter runtime; budget parity by preset (auto=light)"
+}

@@ -1,0 +1,14 @@
+{
+ "task": "trec",
+ "arm": "seed",
+ "seed": 10,
+ "codebase": "v0.2-confirm",
+ "test_accuracy": 0.6,
+ "test_macro_f1": 0.6235,
+ "unparseable": 0,
+ "optimize_cost_usd": 0.0,
+ "test_cost_usd": 0.0,
+ "artifact_id": "fd2622ee3a55",
+ "exemplars": 0,
+ "mining_note": "unoptimized seed prompt (arm: seed)"
+}

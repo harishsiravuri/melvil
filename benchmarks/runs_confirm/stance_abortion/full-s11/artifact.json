@@ -1,0 +1,158 @@
+{
+ "schema_version": 1,
+ "artifact_id": "29abfb1e4001",
+ "parent_id": null,
+ "task_name": "stance_abortion",
+ "created_at": "2026-07-19T13:16:16-0500",
+ "library": {
+  "name": "labelsmith",
+  "version": "0.2.0.dev0"
+ },
+ "models": {
+  "task": "openrouter/openai/gpt-4.1-mini",
+  "reflection": "openrouter/openai/gpt-4.1"
+ },
+ "budget": {
+  "metric_calls_budget": 800,
+  "metric_calls_spent": 898,
+  "cost_usd": 0.1292,
+  "task_lm_usage": {
+   "model": "openrouter/openai/gpt-4.1-mini",
+   "prompt_tokens": 207420,
+   "completion_tokens": 1592,
+   "calls": 796,
+   "cache_hits": 202,
+   "cost_usd": 0.085515
+  },
+  "reflection_lm_usage": {
+   "model": "openrouter/openai/gpt-4.1",
+   "prompt_tokens": 13898,
+   "completion_tokens": 1990,
+   "calls": 15,
+   "cache_hits": 0,
+   "cost_usd": 0.043716
+  },
+  "opt_seconds": 110.6
+ },
+ "scores": {
+  "dev_accuracy": 0.79,
+  "dev_macro_f1": 0.7785,
+  "per_label_dev": {
+   "against": {
+    "precision": 0.9302,
+    "recall": 0.7407,
+    "f1": 0.8247,
+    "support": 54
+   },
+   "favor": {
+    "precision": 0.6667,
+    "recall": 0.8421,
+    "f1": 0.7442,
+    "support": 19
+   },
+   "none": {
+    "precision": 0.697,
+    "recall": 0.8519,
+    "f1": 0.7667,
+    "support": 27
+   }
+  },
+  "seed_dev_accuracy": 0.42,
+  "dev_accuracy_quarantined": null
+ },
+ "config_hash": "80a48c6b80b8",
+ "config": {
+  "task_model": "openrouter/openai/gpt-4.1-mini",
+  "reflection_model": "openrouter/openai/gpt-4.1",
+  "budget": "light",
+  "seed": 11,
+  "features": {
+   "codebook": true,
+   "confusion_reflection": true,
+   "hard_example_mining": true
+  },
+  "num_threads": 8,
+  "run_dir": "/Users/harish/Documents/Claude/Projects/6s/labelsmith/benchmarks/runs_confirm/stance_abortion/full-s11",
+  "task_temperature": 0.0,
+  "task_max_tokens": 40,
+  "reflection_temperature": 1.0,
+  "reflection_max_tokens": 8000,
+  "reflection_minibatch_size": 3,
+  "max_exemplars": 6,
+  "mining_llm_screen": true,
+  "prices": {},
+  "metric_calls": 800
+ },
+ "label_names": [
+  "against",
+  "favor",
+  "none"
+ ],
+ "components": {
+  "task_instruction": "You are a precise text classifier. Read the input text and assign it to exactly one of the categories defined below.",
+  "label::against": "Label as 'against' if the text expresses opposition to abortion rights or promotes restricting access to abortion, including indirectly through values (e.g., focusing on the sanctity of life, criticizing pro-choice individuals or organizations, defending fetal personhood). Distinguish from 'none': 'against' implies a clear stance against abortion or abortion rights, not just related discussion.",
+  "label::favor": "",
+  "label::none": "Label as 'none' if the text does not clearly express support for or opposition to abortion rights. This includes neutral statements, tangential issues, or ambiguous/unclear cases. Distinguish from 'against': 'none' applies only if the stance towards abortion is not evident or not about abortion rights.",
+  "boundary_rules": "If the text explicitly supports or advocates for abortion rights, label as 'favor'; if it explicitly opposes abortion rights or supports restricting abortion, label as 'against'. If the text only discusses related issues (e.g., government, health, gender, politics) without clearly expressing support or opposition to abortion rights, or if it's ambiguous or off-topic, label as 'none'."
+ },
+ "exemplars": [],
+ "confusion": {
+  "labels": [
+   "against",
+   "favor",
+   "none"
+  ],
+  "matrix": [
+   [
+    40,
+    6,
+    8,
+    0
+   ],
+   [
+    1,
+    16,
+    2,
+    0
+   ],
+   [
+    2,
+    2,
+    23,
+    0
+   ]
+  ],
+  "unparseable_column": true
+ },
+ "curve": [
+  {
+   "metric_calls": 0,
+   "dev_score": 0.42
+  },
+  {
+   "metric_calls": 106,
+   "dev_score": 0.54
+  },
+  {
+   "metric_calls": 248,
+   "dev_score": 0.77
+  },
+  {
+   "metric_calls": 354,
+   "dev_score": 0.44
+  },
+  {
+   "metric_calls": 463,
+   "dev_score": 0.77
+  },
+  {
+   "metric_calls": 572,
+   "dev_score": 0.79
+  },
+  {
+   "metric_calls": 702,
+   "dev_score": 0.36
+  }
+ ],
+ "notes": "rejected 4 exemplars (quarantined dev 0.823 <= 0.823 + noise floor 0.039)"
+}

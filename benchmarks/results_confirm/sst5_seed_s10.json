@@ -1,0 +1,14 @@
+{
+ "task": "sst5",
+ "arm": "seed",
+ "seed": 10,
+ "codebase": "v0.2-confirm",
+ "test_accuracy": 0.5467,
+ "test_macro_f1": 0.4536,
+ "unparseable": 0,
+ "optimize_cost_usd": 0.0,
+ "test_cost_usd": 0.0094,
+ "artifact_id": "c543bb24f905",
+ "exemplars": 0,
+ "mining_note": "unoptimized seed prompt (arm: seed)"
+}

@@ -1,0 +1,154 @@
+{
+ "schema_version": 1,
+ "artifact_id": "6d6699ba98cf",
+ "parent_id": null,
+ "task_name": "stance_abortion",
+ "created_at": "2026-07-19T13:13:48-0500",
+ "library": {
+  "name": "labelsmith",
+  "version": "0.2.0.dev0"
+ },
+ "models": {
+  "task": "openrouter/openai/gpt-4.1-mini",
+  "reflection": "openrouter/openai/gpt-4.1"
+ },
+ "budget": {
+  "metric_calls_budget": 800,
+  "metric_calls_spent": 898,
+  "cost_usd": 0.1872,
+  "task_lm_usage": {
+   "model": "openrouter/openai/gpt-4.1-mini",
+   "prompt_tokens": 206053,
+   "completion_tokens": 1796,
+   "calls": 898,
+   "cache_hits": 100,
+   "cost_usd": 0.085295
+  },
+  "reflection_lm_usage": {
+   "model": "openrouter/openai/gpt-4.1",
+   "prompt_tokens": 32310,
+   "completion_tokens": 4660,
+   "calls": 31,
+   "cache_hits": 0,
+   "cost_usd": 0.1019
+  },
+  "opt_seconds": 182.2
+ },
+ "scores": {
+  "dev_accuracy": 0.49,
+  "dev_macro_f1": 0.4804,
+  "per_label_dev": {
+   "against": {
+    "precision": 0.6136,
+    "recall": 0.5,
+    "f1": 0.551,
+    "support": 54
+   },
+   "favor": {
+    "precision": 0.2564,
+    "recall": 0.5263,
+    "f1": 0.3448,
+    "support": 19
+   },
+   "none": {
+    "precision": 0.7059,
+    "recall": 0.4444,
+    "f1": 0.5455,
+    "support": 27
+   }
+  },
+  "seed_dev_accuracy": 0.42,
+  "dev_accuracy_quarantined": null
+ },
+ "config_hash": "959c0769776b",
+ "config": {
+  "task_model": "openrouter/openai/gpt-4.1-mini",
+  "reflection_model": "openrouter/openai/gpt-4.1",
+  "budget": "light",
+  "seed": 10,
+  "features": {
+   "codebook": true,
+   "confusion_reflection": true,
+   "hard_example_mining": true
+  },
+  "num_threads": 8,
+  "run_dir": "/Users/harish/Documents/Claude/Projects/6s/labelsmith/benchmarks/runs_confirm/stance_abortion/full-s10",
+  "task_temperature": 0.0,
+  "task_max_tokens": 40,
+  "reflection_temperature": 1.0,
+  "reflection_max_tokens": 8000,
+  "reflection_minibatch_size": 3,
+  "max_exemplars": 6,
+  "mining_llm_screen": true,
+  "prices": {},
+  "metric_calls": 800
+ },
+ "label_names": [
+  "against",
+  "favor",
+  "none"
+ ],
+ "components": {
+  "task_instruction": "You are a precise text classifier. Read the input text and assign it to exactly one of the categories defined below.",
+  "label::against": "",
+  "label::favor": "Assign \"favor\" if the text explicitly expresses support for, or a positive stance toward, the issue in question. The deciding feature is a clear endorsement or justification, not just mentioning the topic or neutrally discussing it.",
+  "label::none": "Assign \"none\" if the text expresses no clear stance for or against the issue, is neutral, or merely provides information or commentary unrelated to a viewpoint. The key feature is absence of an explicit position in favor or against.",
+  "boundary_rules": ""
+ },
+ "exemplars": [],
+ "confusion": {
+  "labels": [
+   "against",
+   "favor",
+   "none"
+  ],
+  "matrix": [
+   [
+    27,
+    23,
+    4,
+    0
+   ],
+   [
+    8,
+    10,
+    1,
+    0
+   ],
+   [
+    9,
+    6,
+    12,
+    0
+   ]
+  ],
+  "unparseable_column": true
+ },
+ "curve": [
+  {
+   "metric_calls": 0,
+   "dev_score": 0.42
+  },
+  {
+   "metric_calls": 115,
+   "dev_score": 0.42
+  },
+  {
+   "metric_calls": 236,
+   "dev_score": 0.4
+  },
+  {
+   "metric_calls": 342,
+   "dev_score": 0.49
+  },
+  {
+   "metric_calls": 517,
+   "dev_score": 0.47
+  },
+  {
+   "metric_calls": 701,
+   "dev_score": 0.45
+  }
+ ],
+ "notes": "rejected 3 exemplars (quarantined dev 0.515 <= 0.505 + noise floor 0.051)"
+}
