@@ -1,0 +1,267 @@
+2026/07/19 12:44:07 INFO dspy.teleprompt.mipro_optimizer_v2: 
+RUNNING WITH THE FOLLOWING LIGHT AUTO RUN SETTINGS:
+num_trials: 10
+minibatch: True
+num_fewshot_candidates: 6
+num_instruct_candidates: 3
+valset size: 100
+
+2026/07/19 12:44:07 INFO dspy.teleprompt.mipro_optimizer_v2: 
+==> STEP 1: BOOTSTRAP FEWSHOT EXAMPLES <==
+2026/07/19 12:44:07 INFO dspy.teleprompt.mipro_optimizer_v2: These will be used as few-shot example candidates for our program and for creating instructions.
+
+2026/07/19 12:44:07 INFO dspy.teleprompt.mipro_optimizer_v2: Bootstrapping N=6 sets of demonstrations...
+Bootstrapping set 1/6
+Bootstrapping set 2/6
+Bootstrapping set 3/6
+  0%|          | 0/150 [00:00<?, ?it/s]  1%|          | 1/150 [00:01<03:55,  1.58s/it]  1%|▏         | 2/150 [00:02<02:59,  1.22s/it]  2%|▏         | 3/150 [00:03<02:42,  1.10s/it]  3%|▎         | 4/150 [00:04<02:43,  1.12s/it]  3%|▎         | 5/150 [00:06<03:19,  1.38s/it]  3%|▎         | 5/150 [00:06<03:08,  1.30s/it]
+Bootstrapped 4 full traces after 5 examples for up to 1 rounds, amounting to 5 attempts.
+Bootstrapping set 4/6
+  0%|          | 0/150 [00:00<?, ?it/s]  1%|          | 1/150 [00:01<02:38,  1.06s/it]  1%|▏         | 2/150 [00:02<02:47,  1.13s/it]  2%|▏         | 3/150 [00:03<03:11,  1.30s/it]  2%|▏         | 3/150 [00:03<03:03,  1.25s/it]
+Bootstrapped 3 full traces after 3 examples for up to 1 rounds, amounting to 3 attempts.
+Bootstrapping set 5/6
+  0%|          | 0/150 [00:00<?, ?it/s]  1%|          | 1/150 [00:01<03:14,  1.31s/it]  1%|▏         | 2/150 [00:02<02:48,  1.14s/it]  2%|▏         | 3/150 [00:03<02:41,  1.10s/it]  2%|▏         | 3/150 [00:03<02:45,  1.13s/it]
+Bootstrapped 2 full traces after 3 examples for up to 1 rounds, amounting to 3 attempts.
+Bootstrapping set 6/6
+  0%|          | 0/150 [00:00<?, ?it/s]  1%|          | 1/150 [00:01<03:55,  1.58s/it]  1%|          | 1/150 [00:01<03:55,  1.58s/it]
+2026/07/19 12:44:22 INFO dspy.teleprompt.mipro_optimizer_v2: 
+==> STEP 2: PROPOSE INSTRUCTION CANDIDATES <==
+2026/07/19 12:44:22 INFO dspy.teleprompt.mipro_optimizer_v2: We will use the few-shot examples from the previous step, a generated dataset summary, a summary of the program code, and a randomly selected prompting tip to propose instructions.
+2026/07/19 12:44:34 WARNING dspy.adapters.json_adapter: Failed to use structured output format, falling back to JSON mode.
+2026/07/19 12:44:46 WARNING dspy.adapters.json_adapter: Failed to use structured output format, falling back to JSON mode.
+2026/07/19 12:44:49 INFO dspy.teleprompt.mipro_optimizer_v2: 
+Proposing N=3 instructions...
+
+2026/07/19 12:44:56 WARNING dspy.adapters.json_adapter: Failed to use structured output format, falling back to JSON mode.
+2026/07/19 12:44:59 WARNING dspy.predict.predict: Input contains fields not in signature. These fields will be ignored: ['dataset_description', 'tip', 'previous_instructions']. Expected fields: ['program_code', 'program_description', 'module', 'module_description', 'task_demos', 'basic_instruction'].
+2026/07/19 12:45:07 WARNING dspy.adapters.json_adapter: Failed to use structured output format, falling back to JSON mode.
+Bootstrapped 1 full traces after 1 examples for up to 1 rounds, amounting to 1 attempts.
+Error getting data summary: litellm.APIError: APIError: OpenrouterException - {"error":{"message":"This request requires more credits, or fewer max_tokens. You requested up to 8000 tokens, but can only afford 4798. To increase, visit https://openrouter.ai/settings/credits and add more credits","code":402,"metadata":{"provider_name":null,"previous_errors":[{"code":402,"message":"This request requires more credits, or fewer max_tokens. You requested up to 8000 tokens, but can only afford 4798. To increase, visit https://openrouter.ai/settings/credits and add more credits"}]}},"user_id":"user_2kU4SR00XQC8bKWIqzgP03QIxjk"}.
+
+Running without data aware proposer.
+
+Traceback (most recent call last):
+  File "/Users/harish/Documents/Claude/Projects/6s/.venv/lib/python3.13/site-packages/litellm/llms/custom_httpx/llm_http_handler.py", line 304, in _make_common_sync_call
+    response = sync_httpx_client.post(
+        url=api_base,
+    ...<4 lines>...
+        logging_obj=logging_obj,
+    )
+  File "/Users/harish/Documents/Claude/Projects/6s/.venv/lib/python3.13/site-packages/litellm/llms/custom_httpx/http_handler.py", line 1195, in post
+    _raise_masked_sync_error(e, stream)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/Users/harish/Documents/Claude/Projects/6s/.venv/lib/python3.13/site-packages/litellm/llms/custom_httpx/http_handler.py", line 434, in _raise_masked_sync_error
+    raise MaskedHTTPStatusError(e, message=_text, text=_text) from None
+litellm.llms.custom_httpx.http_handler.MaskedHTTPStatusError: Client error '402 Payment Required' for url 'https://openrouter.ai/api/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/harish/Documents/Claude/Projects/6s/.venv/lib/python3.13/site-packages/litellm/main.py", line 5565, in completion
+    response = _complete_openrouter(_dispatch_ctx)
+  File "/Users/harish/Documents/Claude/Projects/6s/.venv/lib/python3.13/site-packages/litellm/main.py", line 3240, in _complete_openrouter
+    response = base_llm_http_handler.completion(
+        model=model,
+    ...<14 lines>...
+        client=client,
+    )
+  File "/Users/harish/Documents/Claude/Projects/6s/.venv/lib/python3.13/site-packages/litellm/llms/custom_httpx/llm_http_handler.py", line 599, in completion
+    response = self._make_common_sync_call(
+        sync_httpx_client=sync_httpx_client,
+    ...<7 lines>...
+        logging_obj=logging_obj,
+    )
+  File "/Users/harish/Documents/Claude/Projects/6s/.venv/lib/python3.13/site-packages/litellm/llms/custom_httpx/llm_http_handler.py", line 321, in _make_common_sync_call
+    raise self._handle_error(e=e, provider_config=provider_config)
+          ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/harish/Documents/Claude/Projects/6s/.venv/lib/python3.13/site-packages/litellm/llms/custom_httpx/llm_http_handler.py", line 5573, in _handle_error
+    raise provider_config.get_error_class(
+    ...<3 lines>...
+    )
+litellm.llms.openrouter.common_utils.OpenRouterException: {"error":{"message":"This request requires more credits, or fewer max_tokens. You requested up to 8000 tokens, but can only afford 4126. To increase, visit https://openrouter.ai/settings/credits and add more credits","code":402,"metadata":{"provider_name":null,"previous_errors":[{"code":402,"message":"This request requires more credits, or fewer max_tokens. You requested up to 8000 tokens, but can only afford 4126. To increase, visit https://openrouter.ai/settings/credits and add more credits"}]}},"user_id":"user_2kU4SR00XQC8bKWIqzgP03QIxjk"}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/harish/Documents/Claude/Projects/6s/.venv/lib/python3.13/site-packages/litellm/utils.py", line 1425, in wrapper
+    result = original_function(*args, **kwargs)
+  File "/Users/harish/Documents/Claude/Projects/6s/.venv/lib/python3.13/site-packages/litellm/main.py", line 5657, in completion
+    raise exception_type(
+          ~~~~~~~~~~~~~~^
+        model=model,
+        ^^^^^^^^^^^^
+    ...<3 lines>...
+        extra_kwargs=kwargs,
+        ^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/harish/Documents/Claude/Projects/6s/.venv/lib/python3.13/site-packages/litellm/litellm_core_utils/exception_mapping_utils.py", line 2510, in exception_type
+    raise e  # it's already mapped
+    ^^^^^^^
+  File "/Users/harish/Documents/Claude/Projects/6s/.venv/lib/python3.13/site-packages/litellm/litellm_core_utils/exception_mapping_utils.py", line 2450, in exception_type
+    _map_openrouter_exception(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^
+        model=model,
+        ^^^^^^^^^^^^
+    ...<5 lines>...
+        extra_information=extra_information,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/harish/Documents/Claude/Projects/6s/.venv/lib/python3.13/site-packages/litellm/litellm_core_utils/exception_mapping_utils.py", line 2142, in _map_openrouter_exception
+    raise APIError(
+    ...<6 lines>...
+    )
+litellm.exceptions.APIError: litellm.APIError: APIError: OpenrouterException - {"error":{"message":"This request requires more credits, or fewer max_tokens. You requested up to 8000 tokens, but can only afford 4126. To increase, visit https://openrouter.ai/settings/credits and add more credits","code":402,"metadata":{"provider_name":null,"previous_errors":[{"code":402,"message":"This request requires more credits, or fewer max_tokens. You requested up to 8000 tokens, but can only afford 4126. To increase, visit https://openrouter.ai/settings/credits and add more credits"}]}},"user_id":"user_2kU4SR00XQC8bKWIqzgP03QIxjk"}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/harish/Documents/Claude/Projects/6s/labelsmith/benchmarks/miprov2_arm.py", line 129, in <module>
+    run_miprov2(args.task, args.seed, Path(args.out_dir))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/harish/Documents/Claude/Projects/6s/labelsmith/benchmarks/miprov2_arm.py", line 70, in run_miprov2
+    compiled = tele.compile(student, trainset=trainset, valset=devset)
+  File "/Users/harish/Documents/Claude/Projects/6s/.venv/lib/python3.13/site-packages/dspy/teleprompt/mipro_optimizer_v2.py", line 245, in compile
+    instruction_candidates = self._propose_instructions(
+        program,
+    ...<7 lines>...
+        num_instruct_candidates=num_instruct_candidates,
+    )
+  File "/Users/harish/Documents/Claude/Projects/6s/.venv/lib/python3.13/site-packages/dspy/teleprompt/mipro_optimizer_v2.py", line 492, in _propose_instructions
+    instruction_candidates = proposer.propose_instructions_for_program(
+        trainset=trainset,
+    ...<3 lines>...
+        trial_logs={},
+    )
+  File "/Users/harish/Documents/Claude/Projects/6s/.venv/lib/python3.13/site-packages/dspy/propose/grounded_proposer.py", line 353, in propose_instructions_for_program
+    self.propose_instruction_for_predictor(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        program=program,
+        ^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+        tip=selected_tip,
+        ^^^^^^^^^^^^^^^^^
+    ),
+    ^
+  File "/Users/harish/Documents/Claude/Projects/6s/.venv/lib/python3.13/site-packages/dspy/propose/grounded_proposer.py", line 401, in propose_instruction_for_predictor
+    proposed_instruction = instruction_generator(
+                           ~~~~~~~~~~~~~~~~~~~~~^
+        demo_candidates=demo_candidates,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+        tip=tip,
+        ^^^^^^^^
+    ).proposed_instruction
+    ^
+  File "/Users/harish/Documents/Claude/Projects/6s/.venv/lib/python3.13/site-packages/dspy/utils/callback.py", line 326, in sync_wrapper
+    return fn(instance, *args, **kwargs)
+  File "/Users/harish/Documents/Claude/Projects/6s/.venv/lib/python3.13/site-packages/dspy/primitives/module.py", line 110, in __call__
+    return self.forward(*args, **kwargs)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/Users/harish/Documents/Claude/Projects/6s/.venv/lib/python3.13/site-packages/dspy/propose/grounded_proposer.py", line 231, in forward
+    instruct = self.generate_module_instruction(
+        dataset_description=data_summary,
+    ...<7 lines>...
+        previous_instructions=previous_instructions,
+    )
+  File "/Users/harish/Documents/Claude/Projects/6s/.venv/lib/python3.13/site-packages/dspy/predict/predict.py", line 130, in __call__
+    return super().__call__(**kwargs)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/harish/Documents/Claude/Projects/6s/.venv/lib/python3.13/site-packages/dspy/utils/callback.py", line 326, in sync_wrapper
+    return fn(instance, *args, **kwargs)
+  File "/Users/harish/Documents/Claude/Projects/6s/.venv/lib/python3.13/site-packages/dspy/primitives/module.py", line 110, in __call__
+    return self.forward(*args, **kwargs)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/Users/harish/Documents/Claude/Projects/6s/.venv/lib/python3.13/site-packages/dspy/predict/predict.py", line 253, in forward
+    completions = adapter(lm, lm_kwargs=config, signature=signature, demos=demos, inputs=kwargs)
+  File "/Users/harish/Documents/Claude/Projects/6s/.venv/lib/python3.13/site-packages/dspy/adapters/chat_adapter.py", line 85, in __call__
+    return JSONAdapter()(lm, lm_kwargs, signature, demos, inputs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/harish/Documents/Claude/Projects/6s/.venv/lib/python3.13/site-packages/dspy/adapters/json_adapter.py", line 79, in __call__
+    return super().__call__(lm, lm_kwargs, signature, demos, inputs)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/harish/Documents/Claude/Projects/6s/.venv/lib/python3.13/site-packages/dspy/adapters/chat_adapter.py", line 84, in __call__
+    raise e
+  File "/Users/harish/Documents/Claude/Projects/6s/.venv/lib/python3.13/site-packages/dspy/adapters/chat_adapter.py", line 72, in __call__
+    return super().__call__(lm, lm_kwargs, signature, demos, inputs)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/harish/Documents/Claude/Projects/6s/.venv/lib/python3.13/site-packages/dspy/adapters/base.py", line 205, in __call__
+    outputs = lm(messages=inputs, **lm_kwargs)
+  File "/Users/harish/Documents/Claude/Projects/6s/.venv/lib/python3.13/site-packages/dspy/utils/callback.py", line 326, in sync_wrapper
+    return fn(instance, *args, **kwargs)
+  File "/Users/harish/Documents/Claude/Projects/6s/.venv/lib/python3.13/site-packages/dspy/clients/base_lm.py", line 129, in __call__
+    response = self.forward(prompt=prompt, messages=messages, **kwargs)
+  File "/Users/harish/Documents/Claude/Projects/6s/.venv/lib/python3.13/site-packages/dspy/clients/lm.py", line 186, in forward
+    results = completion(
+        request=dict(model=self.model, messages=messages, **kwargs),
+        num_retries=self.num_retries,
+        cache=litellm_cache_args,
+    )
+  File "/Users/harish/Documents/Claude/Projects/6s/.venv/lib/python3.13/site-packages/dspy/clients/cache.py", line 279, in sync_wrapper
+    result = fn(*args, **kwargs)
+  File "/Users/harish/Documents/Claude/Projects/6s/.venv/lib/python3.13/site-packages/dspy/clients/lm.py", line 392, in litellm_completion
+    return litellm.completion(
+           ~~~~~~~~~~~~~~~~~~^
+        cache=cache,
+        ^^^^^^^^^^^^
+    ...<3 lines>...
+        **request,
+        ^^^^^^^^^^
+    )
+    ^
+  File "/Users/harish/Documents/Claude/Projects/6s/.venv/lib/python3.13/site-packages/litellm/utils.py", line 1530, in wrapper
+    return litellm.completion_with_retries(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/Users/harish/Documents/Claude/Projects/6s/.venv/lib/python3.13/site-packages/litellm/main.py", line 5691, in completion_with_retries
+    return retryer(original_function, *args, **kwargs)
+  File "/Users/harish/Documents/Claude/Projects/6s/.venv/lib/python3.13/site-packages/tenacity/__init__.py", line 470, in __call__
+    do = self.iter(retry_state=retry_state)
+  File "/Users/harish/Documents/Claude/Projects/6s/.venv/lib/python3.13/site-packages/tenacity/__init__.py", line 371, in iter
+    result = action(retry_state)
+  File "/Users/harish/Documents/Claude/Projects/6s/.venv/lib/python3.13/site-packages/tenacity/__init__.py", line 413, in exc_check
+    raise retry_exc.reraise()
+          ~~~~~~~~~~~~~~~~~^^
+  File "/Users/harish/Documents/Claude/Projects/6s/.venv/lib/python3.13/site-packages/tenacity/__init__.py", line 184, in reraise
+    raise self.last_attempt.result()
+          ~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.13_1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.13_1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/Users/harish/Documents/Claude/Projects/6s/.venv/lib/python3.13/site-packages/tenacity/__init__.py", line 473, in __call__
+    result = fn(*args, **kwargs)
+  File "/Users/harish/Documents/Claude/Projects/6s/.venv/lib/python3.13/site-packages/litellm/utils.py", line 1577, in wrapper
+    raise e
+  File "/Users/harish/Documents/Claude/Projects/6s/.venv/lib/python3.13/site-packages/litellm/utils.py", line 1425, in wrapper
+    result = original_function(*args, **kwargs)
+  File "/Users/harish/Documents/Claude/Projects/6s/.venv/lib/python3.13/site-packages/litellm/main.py", line 5657, in completion
+    raise exception_type(
+          ~~~~~~~~~~~~~~^
+        model=model,
+        ^^^^^^^^^^^^
+    ...<3 lines>...
+        extra_kwargs=kwargs,
+        ^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/harish/Documents/Claude/Projects/6s/.venv/lib/python3.13/site-packages/litellm/litellm_core_utils/exception_mapping_utils.py", line 2510, in exception_type
+    raise e  # it's already mapped
+    ^^^^^^^
+  File "/Users/harish/Documents/Claude/Projects/6s/.venv/lib/python3.13/site-packages/litellm/litellm_core_utils/exception_mapping_utils.py", line 2450, in exception_type
+    _map_openrouter_exception(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^
+        model=model,
+        ^^^^^^^^^^^^
+    ...<5 lines>...
+        extra_information=extra_information,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/harish/Documents/Claude/Projects/6s/.venv/lib/python3.13/site-packages/litellm/litellm_core_utils/exception_mapping_utils.py", line 2142, in _map_openrouter_exception
+    raise APIError(
+    ...<6 lines>...
+    )
+litellm.exceptions.APIError: litellm.APIError: APIError: OpenrouterException - {"error":{"message":"This request requires more credits, or fewer max_tokens. You requested up to 8000 tokens, but can only afford 4126. To increase, visit https://openrouter.ai/settings/credits and add more credits","code":402,"metadata":{"provider_name":null,"previous_errors":[{"code":402,"message":"This request requires more credits, or fewer max_tokens. You requested up to 8000 tokens, but can only afford 4126. To increase, visit https://openrouter.ai/settings/credits and add more credits"}]}},"user_id":"user_2kU4SR00XQC8bKWIqzgP03QIxjk"}

@@ -162,16 +162,13 @@ def patch_lms(monkeypatch_or_module, task_lm: FakeTaskLM, reflection_lm: FakeRef
 
     # NOTE: `labelsmith.optimize`/`labelsmith.evaluate` as *attributes* of the
     # package are the re-exported functions; go through importlib for modules.
-    lmutil = importlib.import_module("labelsmith.lmutil")
-    optimize_mod = importlib.import_module("labelsmith.optimize")
-    evaluate_mod = importlib.import_module("labelsmith.evaluate")
-
-    if hasattr(monkeypatch_or_module, "setattr"):
-        monkeypatch_or_module.setattr(lmutil, "make_lm", fake_make_lm)
-        monkeypatch_or_module.setattr(optimize_mod, "make_lm", fake_make_lm)
-        monkeypatch_or_module.setattr(evaluate_mod, "make_lm", fake_make_lm)
-    else:
-        lmutil.make_lm = fake_make_lm
-        optimize_mod.make_lm = fake_make_lm
-        evaluate_mod.make_lm = fake_make_lm
+    modules = [
+        importlib.import_module(f"labelsmith.{m}")
+        for m in ("lmutil", "optimize", "evaluate", "screen")
+    ]
+    for mod in modules:
+        if hasattr(monkeypatch_or_module, "setattr"):
+            monkeypatch_or_module.setattr(mod, "make_lm", fake_make_lm)
+        else:
+            mod.make_lm = fake_make_lm
     return fake_make_lm

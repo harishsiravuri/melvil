@@ -22,6 +22,7 @@ from labelsmith.costs import CostEstimate, estimate_evaluate_cost, estimate_opti
 from labelsmith.data import Example, load_csv, load_hf, train_dev_split
 from labelsmith.evaluate import Report, evaluate, report
 from labelsmith.optimize import optimize
+from labelsmith.screen import ScreenResult, screen
 from labelsmith.taskspec import Label, TaskSpec
 
 __all__ = [
@@ -45,5 +46,7 @@ __all__ = [
     "optimize",
     "render_prompt",
     "report",
+    "screen",
+    "ScreenResult",
     "train_dev_split",
 ]

@@ -64,6 +64,7 @@ class Config:
     reflection_max_tokens: int = 8000
     reflection_minibatch_size: int = 3
     max_exemplars: int = 6
+    mining_llm_screen: bool = True
     prices: dict[str, tuple[float, float]] = field(default_factory=dict)  # $/M in, $/M out
 
     @property

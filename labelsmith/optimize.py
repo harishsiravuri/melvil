@@ -25,7 +25,7 @@ from labelsmith.costs import lm_usage, usage_cost_usd
 from labelsmith.data import Example, canon
 from labelsmith.evaluate import accuracy, macro_f1, per_label_stats
 from labelsmith.features.confusion import ConfusionComponentSelector, confusion_matrix
-from labelsmith.features.mining import select_exemplars
+from labelsmith.features.mining import llm_screen, select_exemplars
 from labelsmith.lmutil import make_lm, reflection_callable
 from labelsmith.program import classify_batch
 from labelsmith.taskspec import TaskSpec
@@ -211,29 +211,55 @@ def optimize(
     exemplars: list[dict[str, str]] = []
     mining_note = ""
     mining_calls = 0
+    quarantined_acc: float | None = None
     if feats.hard_example_mining:
         adapter.confusion.update(final_preds)  # ensure state reflects best candidate
         picked = select_exemplars(adapter.confusion, final_preds, max_total=config.max_exemplars)
+        if picked and config.mining_llm_screen:
+            defs = {lb.name: best_candidate.get(label_component(lb.name), lb.description)
+                    for lb in spec.labels}
+            n_before = len(picked)
+            picked = llm_screen(picked, defs, reflection_callable(reflection_lm))
+            if len(picked) < n_before:
+                logger.info("mining LLM screen dropped %d/%d candidate exemplars",
+                            n_before - len(picked), n_before)
         if picked:
+            # quarantined gate (v0.2): judge on dev examples excluding the
+            # exemplars themselves, and require improvement above the binomial
+            # noise floor — dev-drawn exemplars otherwise inflate dev scores
+            # (+2.6 points measured in the v0.1 benchmarks).
+            ex_texts = {e["text"] for e in picked}
+            q_dev = [e for e in dev if e.text not in ex_texts]
+            base_q_acc = accuracy([p for p in final_preds if p.text not in ex_texts])
             aug_rendered = render_prompt(best_candidate, spec.label_names, picked)
-            aug_preds = classify_batch(
-                task_lm, aug_rendered, dev, spec.label_names, config.num_threads
+            aug_q_preds = classify_batch(
+                task_lm, aug_rendered, q_dev, spec.label_names, config.num_threads
             )
-            mining_calls = len(dev)
-            aug_acc = accuracy(aug_preds)
-            if aug_acc >= dev_acc:
-                mining_note = f"kept {len(picked)} exemplars (dev {aug_acc:.3f} >= {dev_acc:.3f})"
+            mining_calls = len(q_dev)
+            aug_q_acc = accuracy(aug_q_preds)
+            floor = (base_q_acc * (1 - base_q_acc) / max(1, len(q_dev))) ** 0.5
+            if aug_q_acc > base_q_acc + floor:
+                mining_note = (
+                    f"kept {len(picked)} exemplars (quarantined dev {aug_q_acc:.3f} > "
+                    f"{base_q_acc:.3f} + noise floor {floor:.3f})"
+                )
                 exemplars = picked
-                final_preds = aug_preds
-                dev_acc = aug_acc
-                stats = per_label_stats(aug_preds, spec.label_names)
+                quarantined_acc = aug_q_acc
+                # full-dev numbers for the artifact (the quarantined part of
+                # this eval is cache-served; only the exemplar texts are new)
+                final_preds = classify_batch(
+                    task_lm, aug_rendered, dev, spec.label_names, config.num_threads
+                )
+                dev_acc = accuracy(final_preds)
+                stats = per_label_stats(final_preds, spec.label_names)
             else:
                 mining_note = (
-                    f"rejected {len(picked)} exemplars (dev {aug_acc:.3f} < {dev_acc:.3f})"
+                    f"rejected {len(picked)} exemplars (quarantined dev {aug_q_acc:.3f} <= "
+                    f"{base_q_acc:.3f} + noise floor {floor:.3f})"
                 )
             logger.info("hard-example mining: %s", mining_note)
         else:
-            mining_note = "no persistent hard examples found"
+            mining_note = "no persistent hard examples survived screening"
 
     task_usage = lm_usage(task_lm, task_since)
     refl_usage = lm_usage(reflection_lm, refl_since)
@@ -256,6 +282,7 @@ def optimize(
             "dev_macro_f1": macro_f1(stats),
             "per_label_dev": stats,
             "seed_dev_accuracy": round(scores[0], 4) if scores else None,
+            "dev_accuracy_quarantined": quarantined_acc,
         },
         confusion=confusion_matrix(final_preds, spec.label_names),
         curve=curve,

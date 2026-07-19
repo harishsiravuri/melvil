@@ -36,11 +36,12 @@ TREC_NAMES = {"ABBR": "abbreviation", "ENTY": "entity", "DESC": "description",
               "HUM": "human", "LOC": "location", "NUM": "numeric"}
 
 
-def build(name: str, train_pool: list[Example], test_pool: list[Example]) -> None:
+def build(name: str, train_pool: list[Example], test_pool: list[Example],
+          n_test: int = N_TEST) -> None:
     rng = random.Random(DATA_SEED)
     train_idx = stratified_sample(train_pool, N_TRAIN, rng)
     dev_idx = stratified_sample(train_pool, N_DEV, rng, exclude=set(train_idx))
-    test_idx = stratified_sample(test_pool, N_TEST, rng)
+    test_idx = stratified_sample(test_pool, min(n_test, len(test_pool)), rng)
     payload = {
         "labels": sorted({e.label for e in train_pool}),
         "train": [train_pool[i].__dict__ for i in train_idx],
@@ -131,7 +132,27 @@ def load_task(name: str) -> dict:
     return d
 
 
+# Confirmation-pass additions: two datasets untouched during all iteration.
+# (trec-fine was considered and rejected: its texts overlap trec-coarse, which
+# the iteration rounds already used.)
+def prep_stance_abortion() -> None:
+    build(
+        "stance_abortion",
+        load_hf("cardiffnlp/tweet_eval", config="stance_abortion"),
+        load_hf("cardiffnlp/tweet_eval", config="stance_abortion", split="test"),
+    )
+
+
+def prep_sst5() -> None:
+    build(
+        "sst5",
+        load_hf("SetFit/sst5", label_field="label_text"),
+        load_hf("SetFit/sst5", label_field="label_text", split="test"),
+    )
+
+
 TASKS = ["banking77", "ag_news", "emotion", "trec", "clinc150", "massive"]
+CONFIRM_EXTRA_TASKS = ["stance_abortion", "sst5"]
 
 if __name__ == "__main__":
     prep_banking77()
@@ -140,3 +161,5 @@ if __name__ == "__main__":
     prep_trec()
     prep_clinc150()
     prep_massive()
+    prep_stance_abortion()
+    prep_sst5()

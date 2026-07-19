@@ -73,18 +73,36 @@ class ConfusionState:
 
 
 class ConfusionComponentSelector:
-    """gepa `module_selector`: target the label components on both sides of the
-    currently worst confused boundary; periodically revisit the task
-    instruction / boundary rules so they aren't starved. Falls back to
-    round-robin over all components until confusion data exists."""
+    """gepa `module_selector`: schedule reflection rounds across the confused
+    label boundaries with deficit-weighted round-robin (stride scheduling), so
+    heavily-confused pairs get proportionally more updates but no confused pair
+    starves. (v0.1 greedily picked the single worst pair every round, which in
+    practice sent nearly all updates to two labels — trace-verified in the v0.1
+    benchmarks.) Every SHARED_EVERY-th call goes to the shared components
+    (boundary rules / task instruction); falls back to round-robin over all
+    components until confusion data exists."""
 
     #: every Nth reflection round goes to the shared components
     SHARED_EVERY = 4
+    #: how many of the most confused pairs participate in the rotation
+    TOP_K = 5
 
     def __init__(self, state: ConfusionState, all_components: list[str]):
         self.state = state
         self.all_components = all_components
         self.calls = 0
+        self._credits: dict[tuple[str, str], float] = {}
+
+    def _current_pairs(self, trajectories) -> list[tuple[str, str, int]]:
+        combined: Counter[tuple[str, str]] = Counter(
+            {(g, pr): c for g, pr, c in self.state.last_pairs}
+        )
+        if trajectories:  # fresh minibatch signal
+            for t in trajectories:
+                p = t.get("prediction") if isinstance(t, dict) else None
+                if p is not None and not p.correct:
+                    combined[(p.gold, p.predicted)] += 1
+        return [(g, pr, c) for (g, pr), c in combined.most_common(self.TOP_K)]
 
     def __call__(
         self, gepa_state, trajectories, subsample_scores, candidate_idx, candidate
@@ -94,25 +112,27 @@ class ConfusionComponentSelector:
             shared = [c for c in (BOUNDARY_COMPONENT, TASK_COMPONENT) if c in candidate]
             if shared:
                 return [shared[(self.calls // self.SHARED_EVERY) % len(shared)]]
-        pairs = self.state.last_pairs
-        # also look at the current minibatch trajectories for fresh signal
-        if trajectories:
-            local: Counter[tuple[str, str]] = Counter()
-            for t in trajectories:
-                p = t.get("prediction") if isinstance(t, dict) else None
-                if p is not None and not p.correct:
-                    local[(p.gold, p.predicted)] += 1
-            combined = local + Counter({(g, pr): c for g, pr, c in pairs})
-            pairs = [(g, pr, c) for (g, pr), c in combined.most_common(5)]
-        for gold, predicted, _ in pairs:
-            comps = [
-                c for c in (label_component(gold), label_component(predicted))
-                if c in candidate
-            ]
-            if comps:
-                return comps
-        # no confusion data yet -> round-robin
-        return [self.all_components[self.calls % len(self.all_components)]]
+
+        eligible = [
+            (g, pr, c) for g, pr, c in self._current_pairs(trajectories)
+            if label_component(g) in candidate or label_component(pr) in candidate
+        ]
+        if not eligible:  # no confusion data yet -> round-robin over everything
+            return [self.all_components[self.calls % len(self.all_components)]]
+
+        # stride scheduling: each pair accrues credit proportional to its error
+        # count; the pair with the most accumulated credit is served and pays
+        # the full round's weight. Guarantees proportional, starvation-free
+        # rotation among the TOP_K pairs.
+        keys = {(g, pr) for g, pr, _ in eligible}
+        self._credits = {k: v for k, v in self._credits.items() if k in keys}
+        total = sum(c for *_, c in eligible)
+        for g, pr, c in eligible:
+            self._credits[(g, pr)] = self._credits.get((g, pr), 0.0) + c
+        best = max(self._credits, key=lambda k: self._credits[k])
+        self._credits[best] -= total
+        comps = [c for c in (label_component(best[0]), label_component(best[1])) if c in candidate]
+        return comps or [self.all_components[self.calls % len(self.all_components)]]
 
 
 def render_confusion_block(state: ConfusionState, max_pairs: int = 3) -> str:
