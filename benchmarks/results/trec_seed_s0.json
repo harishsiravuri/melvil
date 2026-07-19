@@ -1,0 +1,42 @@
+{
+ "task": "trec",
+ "arm": "seed",
+ "seed": 0,
+ "test_accuracy": 0.6,
+ "test_macro_f1": 0.6235,
+ "unparseable": 0,
+ "dev_accuracy": null,
+ "optimize_cost_usd": 0.0,
+ "test_cost_usd": 0.0077,
+ "metric_calls_spent": 0,
+ "artifact_id": "66e8d639f64f",
+ "exemplars": 0,
+ "curve": [],
+ "top_confusions": [
+  [
+   "entity",
+   "description",
+   48
+  ],
+  [
+   "numeric",
+   "description",
+   27
+  ],
+  [
+   "location",
+   "description",
+   18
+  ],
+  [
+   "numeric",
+   "human",
+   9
+  ],
+  [
+   "human",
+   "description",
+   7
+  ]
+ ]
+}

@@ -1,0 +1,2240 @@
+{
+"labels": [
+"alarm",
+"apr",
+"balance",
+"book_flight",
+"book_hotel",
+"calculator",
+"calories",
+"car_rental",
+"cook_time",
+"credit_limit",
+"credit_score",
+"definition",
+"direct_deposit",
+"freeze_account",
+"lost_luggage",
+"meeting_schedule",
+"pay_bill",
+"payday",
+"pto_request",
+"recipe",
+"report_fraud",
+"report_lost_card",
+"restaurant_reservation",
+"restaurant_reviews",
+"rewards_balance",
+"taxes",
+"timer",
+"transfer",
+"travel_suggestion",
+"weather"
+],
+"train": [
+{
+"text": "what is the value of my bank accounts",
+"label": "balance"
+},
+{
+"text": "i want to find a roundtrip flight from philadelphia to sioux falls from august 3rd through august 25th",
+"label": "book_flight"
+},
+{
+"text": "what is the square root of 10500",
+"label": "calculator"
+},
+{
+"text": "what will the temperature be tomorrow",
+"label": "weather"
+},
+{
+"text": "tell me my current credit rating",
+"label": "credit_score"
+},
+{
+"text": "can you find me a recipe for coffee cakes",
+"label": "recipe"
+},
+{
+"text": "i may have had fraud committed on my account",
+"label": "report_fraud"
+},
+{
+"text": "what is the credit card's apr",
+"label": "apr"
+},
+{
+"text": "when am i due for my next paycheck",
+"label": "payday"
+},
+{
+"text": "put in a pto request for me i want it for the ninth and the tenth of august",
+"label": "pto_request"
+},
+{
+"text": "my luggage was lost on the flight",
+"label": "lost_luggage"
+},
+{
+"text": "can you help me pay a bill",
+"label": "pay_bill"
+},
+{
+"text": "how many rewards do i now have on my hy-vee card",
+"label": "rewards_balance"
+},
+{
+"text": "can you help me book a car rental in paris",
+"label": "car_rental"
+},
+{
+"text": "what are some roundtrip flights from dallas to los angeles from march 2 to march 10",
+"label": "book_flight"
+},
+{
+"text": "find something fun for me to do in dallas",
+"label": "travel_suggestion"
+},
+{
+"text": "create an alarm for 6am",
+"label": "alarm"
+},
+{
+"text": "i'd like to know the balance of my bank of american account",
+"label": "balance"
+},
+{
+"text": "how do i find lost luggage in an airport",
+"label": "lost_luggage"
+},
+{
+"text": "how many delta miles are on my card right now",
+"label": "rewards_balance"
+},
+{
+"text": "what's the current apr for my mastercard",
+"label": "apr"
+},
+{
+"text": "find what the word diaphanous mean please",
+"label": "definition"
+},
+{
+"text": "how many calories should i plan to be in a donut",
+"label": "calories"
+},
+{
+"text": "make a new alarm",
+"label": "alarm"
+},
+{
+"text": "please freeze my bank account",
+"label": "freeze_account"
+},
+{
+"text": "someone stole my card",
+"label": "report_lost_card"
+},
+{
+"text": "tell me when my next paycheck will be here",
+"label": "payday"
+},
+{
+"text": "how do i make a taco that's worth eating",
+"label": "recipe"
+},
+{
+"text": "is there anyway, i can report my card being stolen",
+"label": "report_lost_card"
+},
+{
+"text": "what do i owe the government on my taxes",
+"label": "taxes"
+},
+{
+"text": "what time is my next paycheck coming",
+"label": "payday"
+},
+{
+"text": "i wanna know my credit score",
+"label": "credit_score"
+},
+{
+"text": "tell me the reviews for bjs",
+"label": "restaurant_reviews"
+},
+{
+"text": "set up an alarm",
+"label": "alarm"
+},
+{
+"text": "i have a fraudulent transaction from red robin on my account",
+"label": "report_fraud"
+},
+{
+"text": "please freeze my account",
+"label": "freeze_account"
+},
+{
+"text": "move 57 dollars from saving into mom",
+"label": "transfer"
+},
+{
+"text": "i got to vegas airport but my bags didn't",
+"label": "lost_luggage"
+},
+{
+"text": "i'd like to report my card as stolen, please",
+"label": "report_lost_card"
+},
+{
+"text": "schedule a pto request for me on march 1-2",
+"label": "pto_request"
+},
+{
+"text": "can i have a table held at the outback steakhouse for johnson at 5",
+"label": "restaurant_reservation"
+},
+{
+"text": "is it possible to pay my bill",
+"label": "pay_bill"
+},
+{
+"text": "am i scheduled to meet with heather today",
+"label": "meeting_schedule"
+},
+{
+"text": "book a flight from tampa, fl to baltimore, md on 11 february 2019 and returning on 19 march 2019",
+"label": "book_flight"
+},
+{
+"text": "can you calculate 18 divided by 45",
+"label": "calculator"
+},
+{
+"text": "will car rentals be available in boston from march 2 to march 4",
+"label": "car_rental"
+},
+{
+"text": "i wanna know the limit on my credit card",
+"label": "credit_limit"
+},
+{
+"text": "where can i rent a car soon",
+"label": "car_rental"
+},
+{
+"text": "i need a flight from nyc to paris with delta",
+"label": "book_flight"
+},
+{
+"text": "what is the max on my credit limit",
+"label": "credit_limit"
+},
+{
+"text": "when is my next paycheck",
+"label": "payday"
+},
+{
+"text": "book me a hotel in st louis near the arch from march 2nd to 5th",
+"label": "book_hotel"
+},
+{
+"text": "send 1200 dollars between usaa and navy federal accounts",
+"label": "transfer"
+},
+{
+"text": "what is the apr on my aaa visa card",
+"label": "apr"
+},
+{
+"text": "i need you to set alarm for me",
+"label": "alarm"
+},
+{
+"text": "what's the funnest thing for a tourist to do in iceland",
+"label": "travel_suggestion"
+},
+{
+"text": "my card has purchases i don't recognize",
+"label": "report_fraud"
+},
+{
+"text": "what is the definition of altruism",
+"label": "definition"
+},
+{
+"text": "send 2000 dollars between chase and rabobank accounts",
+"label": "transfer"
+},
+{
+"text": "what is break a leg mean",
+"label": "definition"
+},
+{
+"text": "what is the process to move money from one account to another",
+"label": "transfer"
+},
+{
+"text": "can i make a reservation for 2 at state bird for 6:30, please",
+"label": "restaurant_reservation"
+},
+{
+"text": "provide me with ideas of things we can do in charlotte",
+"label": "travel_suggestion"
+},
+{
+"text": "i would like to know how to make a vacation request",
+"label": "pto_request"
+},
+{
+"text": "how do i find out my credit rating",
+"label": "credit_score"
+},
+{
+"text": "i'd like to know about setting up direct deposit",
+"label": "direct_deposit"
+},
+{
+"text": "i really need to set a timer",
+"label": "timer"
+},
+{
+"text": "how can i set up direct deposit",
+"label": "direct_deposit"
+},
+{
+"text": "can you help me with some fraudulent charges on my card",
+"label": "report_fraud"
+},
+{
+"text": "what is remaining in my bank acccounts",
+"label": "balance"
+},
+{
+"text": "tell me how good ihop's ratings are",
+"label": "restaurant_reviews"
+},
+{
+"text": "get me a hotel room for 3 people from march 12th to 14th in chicago",
+"label": "book_hotel"
+},
+{
+"text": "can i make a reservation for 2 at state bird for 7:30, please",
+"label": "restaurant_reservation"
+},
+{
+"text": "can you book me a place to stay in pittsburgh from monday to friday",
+"label": "book_hotel"
+},
+{
+"text": "what is the apr for the credit card",
+"label": "apr"
+},
+{
+"text": "set my alarm for 5pm",
+"label": "alarm"
+},
+{
+"text": "how long does it take to boil an egg",
+"label": "cook_time"
+},
+{
+"text": "where can i check my credit score",
+"label": "credit_score"
+},
+{
+"text": "how do you make blackberry pie",
+"label": "recipe"
+},
+{
+"text": "how much is 50 plus 756",
+"label": "calculator"
+},
+{
+"text": "can you please freeze my bank account",
+"label": "freeze_account"
+},
+{
+"text": "how many calories are in a cookie",
+"label": "calories"
+},
+{
+"text": "what is the credit limit for my chase card",
+"label": "credit_limit"
+},
+{
+"text": "how much am i going to have to pay in federal taxes this year",
+"label": "taxes"
+},
+{
+"text": "what can i expect to pay in taxes",
+"label": "taxes"
+},
+{
+"text": "can you help me set up a direct depost",
+"label": "direct_deposit"
+},
+{
+"text": "block my citibank account right away",
+"label": "freeze_account"
+},
+{
+"text": "how many of inches of snow did my hometown get last year",
+"label": "weather"
+},
+{
+"text": "i have to report a lost visa card",
+"label": "report_lost_card"
+},
+{
+"text": "what kind of meetings do i have today",
+"label": "meeting_schedule"
+},
+{
+"text": "credit limit info",
+"label": "credit_limit"
+},
+{
+"text": "where should i book my next trip",
+"label": "travel_suggestion"
+},
+{
+"text": "i'm inquiring about the availability of a room that fits 10 people from monday to tuesday in manhattan",
+"label": "book_hotel"
+},
+{
+"text": "did i receive my paycheck this week",
+"label": "payday"
+},
+{
+"text": "what is 10 + 20",
+"label": "calculator"
+},
+{
+"text": "what is needed for setting up direct deposit",
+"label": "direct_deposit"
+},
+{
+"text": "can you tell me the definition of sucrose",
+"label": "definition"
+},
+{
+"text": "do i have enough in my sears account to buy a new dishwasher",
+"label": "balance"
+},
+{
+"text": "what do the ratings say for black bear diner",
+"label": "restaurant_reviews"
+},
+{
+"text": "start a timer for me",
+"label": "timer"
+},
+{
+"text": "i need to take some time off, can i have the next week off",
+"label": "pto_request"
+},
+{
+"text": "what's my rewards balance on my discover",
+"label": "rewards_balance"
+},
+{
+"text": "i will be in lakewood from monday to wednesday and i need a hotel room for 4 people",
+"label": "book_hotel"
+},
+{
+"text": "how do i find lost luggage",
+"label": "lost_luggage"
+},
+{
+"text": "what kinds of fun things are there in boston for tourists",
+"label": "travel_suggestion"
+},
+{
+"text": "how much tax do i owe",
+"label": "taxes"
+},
+{
+"text": "can you set a timer for me",
+"label": "timer"
+},
+{
+"text": "what are the calories in a cookie",
+"label": "calories"
+},
+{
+"text": "what's today's weather going to be",
+"label": "weather"
+},
+{
+"text": "i need to book a roundtrip flight from dallas to los angeles from march 2 to march 10",
+"label": "book_flight"
+},
+{
+"text": "i want to pay my gas bill",
+"label": "pay_bill"
+},
+{
+"text": "give me a run down of my meeting schedules for the day",
+"label": "meeting_schedule"
+},
+{
+"text": "how long will it take to make the wings",
+"label": "cook_time"
+},
+{
+"text": "are there meetings schedules today between noon and one",
+"label": "meeting_schedule"
+},
+{
+"text": "is it going to be sunny today",
+"label": "weather"
+},
+{
+"text": "i want to know what the word discomfit means",
+"label": "definition"
+},
+{
+"text": "what's the credit limit on my discovery card",
+"label": "credit_limit"
+},
+{
+"text": "transfer $40 from account a to b",
+"label": "transfer"
+},
+{
+"text": "how are the burgers at carl jr's",
+"label": "restaurant_reviews"
+},
+{
+"text": "what's the highest chance of rain for today",
+"label": "weather"
+},
+{
+"text": "am i scheduled for any meetings between noon and one",
+"label": "meeting_schedule"
+},
+{
+"text": "freeze my bank account",
+"label": "freeze_account"
+},
+{
+"text": "how much do i pay in my taxes",
+"label": "taxes"
+},
+{
+"text": "how many calories are in cookies",
+"label": "calories"
+},
+{
+"text": "can you tell me what 30% off 235 is",
+"label": "calculator"
+},
+{
+"text": "i need to know the number of calories on average in a handful of pistachios",
+"label": "calories"
+},
+{
+"text": "can you show me how to book a car rental in manitowoc",
+"label": "car_rental"
+},
+{
+"text": "i need a recipe for beef",
+"label": "recipe"
+},
+{
+"text": "i need to submit a request for pto for june 12th to june 14th",
+"label": "pto_request"
+},
+{
+"text": "how do i get my check directly deposited",
+"label": "direct_deposit"
+},
+{
+"text": "i see a suspicious transaction in my account history",
+"label": "report_fraud"
+},
+{
+"text": "someone stole my discover card",
+"label": "report_lost_card"
+},
+{
+"text": "please start counting down from 10 minutes",
+"label": "timer"
+},
+{
+"text": "can you help me with a rental car",
+"label": "car_rental"
+},
+{
+"text": "can you get me a table for 8 at mastro's at 8:30pm",
+"label": "restaurant_reservation"
+},
+{
+"text": "i need help paying my tuition bill",
+"label": "pay_bill"
+},
+{
+"text": "i must pay my cable bill from my checking account",
+"label": "pay_bill"
+},
+{
+"text": "please make a reservation for 2 at olive garden for 5 pm today",
+"label": "restaurant_reservation"
+},
+{
+"text": "how long should i cook the asparagus for",
+"label": "cook_time"
+},
+{
+"text": "are the chili's reviews any good",
+"label": "restaurant_reviews"
+},
+{
+"text": "what's the apr on my amex card, please",
+"label": "apr"
+},
+{
+"text": "inform me of my credit score",
+"label": "credit_score"
+},
+{
+"text": "how many reward points does my discover card have",
+"label": "rewards_balance"
+},
+{
+"text": "i believe it looks like my luggage has disappeared",
+"label": "lost_luggage"
+},
+{
+"text": "please show me a recipe for chili",
+"label": "recipe"
+},
+{
+"text": "what's the cooking time for chicken alfredo",
+"label": "cook_time"
+},
+{
+"text": "set a timer for me",
+"label": "timer"
+},
+{
+"text": "what rewards does my gold card get",
+"label": "rewards_balance"
+},
+{
+"text": "what what kind money is available in my bank accounts",
+"label": "balance"
+},
+{
+"text": "how long should i cook the ham for",
+"label": "cook_time"
+}
+],
+"dev": [
+{
+"text": "how long should i spend preparing roast beef",
+"label": "cook_time"
+},
+{
+"text": "my luggage is lost, i was on american airlines ab123 out of los angeles",
+"label": "lost_luggage"
+},
+{
+"text": "how much money do i have in my account",
+"label": "balance"
+},
+{
+"text": "i'd like to put a freeze on my bank account",
+"label": "freeze_account"
+},
+{
+"text": "use my capital one account to pay for my gas bill",
+"label": "pay_bill"
+},
+{
+"text": "what must i do to report my card lost",
+"label": "report_lost_card"
+},
+{
+"text": "can you make a reservation for me at the restaurant",
+"label": "restaurant_reservation"
+},
+{
+"text": "can you tell me my spending limit",
+"label": "credit_limit"
+},
+{
+"text": "what does the word ataraxy mean",
+"label": "definition"
+},
+{
+"text": "what's my current spending limit",
+"label": "credit_limit"
+},
+{
+"text": "i'd like to rent a limo in las vegas from may 01, 2019 to may 03, 2019",
+"label": "car_rental"
+},
+{
+"text": "i'd like to go on vacation",
+"label": "pto_request"
+},
+{
+"text": "how can i have my paycheck directly deposited",
+"label": "direct_deposit"
+},
+{
+"text": "are there instructions on how to make buttermilk pancakes",
+"label": "recipe"
+},
+{
+"text": "make sure my alarm is set for three thirty in the morning",
+"label": "alarm"
+},
+{
+"text": "i will need a rental car for travel",
+"label": "car_rental"
+},
+{
+"text": "book a flight from key west, fl to san antonio, tx on 18 february 2019 and returning on 5 march 2019",
+"label": "book_flight"
+},
+{
+"text": "put a hold on my bank of america account right away please",
+"label": "freeze_account"
+},
+{
+"text": "i'm reporting fraudelent activity on my card",
+"label": "report_fraud"
+},
+{
+"text": "i really want my account frozen",
+"label": "freeze_account"
+},
+{
+"text": "when did i get paid the last time",
+"label": "payday"
+},
+{
+"text": "please book me a place in pittsburgh to stay from monday to friday",
+"label": "book_hotel"
+},
+{
+"text": "help me to book a car rental in sacremento",
+"label": "car_rental"
+},
+{
+"text": "is my credit report low",
+"label": "credit_score"
+},
+{
+"text": "how many points did my visa earn",
+"label": "rewards_balance"
+},
+{
+"text": "what is the definition of flange",
+"label": "definition"
+},
+{
+"text": "do i have any meetings scheduled between 3 and 5 pm today",
+"label": "meeting_schedule"
+},
+{
+"text": "how much as my taxes by the way",
+"label": "taxes"
+},
+{
+"text": "set alarm for 6am",
+"label": "alarm"
+},
+{
+"text": "subtract 85 from 997",
+"label": "calculator"
+},
+{
+"text": "where can i see my credit score",
+"label": "credit_score"
+},
+{
+"text": "what is 78 times 81 minus 5",
+"label": "calculator"
+},
+{
+"text": "i would like to report my card as stolen, please",
+"label": "report_lost_card"
+},
+{
+"text": "what is in my bank accounts",
+"label": "balance"
+},
+{
+"text": "could you tell me what 30% off 235 is, please",
+"label": "calculator"
+},
+{
+"text": "when will my next paycheck be",
+"label": "payday"
+},
+{
+"text": "i need instructions on how to make shepherd's pie please",
+"label": "recipe"
+},
+{
+"text": "how are the reviews for cracker barrel",
+"label": "restaurant_reviews"
+},
+{
+"text": "what's the cheapest fares from lax to sfo for round trip flights leaving april 1st and returning april 7th",
+"label": "book_flight"
+},
+{
+"text": "how do i ask to have a vacation",
+"label": "pto_request"
+},
+{
+"text": "when did they deposit my last salary",
+"label": "payday"
+},
+{
+"text": "could you tell me what is the apr for the credit card",
+"label": "apr"
+},
+{
+"text": "how many points do i have on my mlife card",
+"label": "rewards_balance"
+},
+{
+"text": "make a transfer of $200 from my savings account to my checking account",
+"label": "transfer"
+},
+{
+"text": "what do i currently pay in taxes",
+"label": "taxes"
+},
+{
+"text": "i want to pay my insurance bill",
+"label": "pay_bill"
+},
+{
+"text": "what's a big bowl of ice cream contain in calories",
+"label": "calories"
+},
+{
+"text": "how many total meetings will i have between 2 and 5",
+"label": "meeting_schedule"
+},
+{
+"text": "can you set alarm for me",
+"label": "alarm"
+},
+{
+"text": "what's there to do in seattle",
+"label": "travel_suggestion"
+},
+{
+"text": "my card is stolen, i need to report it",
+"label": "report_lost_card"
+},
+{
+"text": "book a flight from la to madrid with southwest",
+"label": "book_flight"
+},
+{
+"text": "i want a hotel room for 6 from the 1st through the 3rd in seattle",
+"label": "book_hotel"
+},
+{
+"text": "what is my credit limit at",
+"label": "credit_limit"
+},
+{
+"text": "what does the forecast look like",
+"label": "weather"
+},
+{
+"text": "tomorrow i need the alarm to go off at 5",
+"label": "alarm"
+},
+{
+"text": "will the amount in my chase bank account right now cover the cost of a new dryer",
+"label": "balance"
+},
+{
+"text": "i need you to book a reservation for 8 pm at red robin under the name kevin",
+"label": "restaurant_reservation"
+},
+{
+"text": "how many points do i have on my mastercard",
+"label": "rewards_balance"
+},
+{
+"text": "i want my paycheck to go directly to my bank account",
+"label": "direct_deposit"
+},
+{
+"text": "can you set a timer for me for fifteen minutes starting now",
+"label": "timer"
+},
+{
+"text": "what's the weekend forecast",
+"label": "weather"
+},
+{
+"text": "how long do noodles need to cook",
+"label": "cook_time"
+},
+{
+"text": "what is the apr rate on my bank of america card",
+"label": "apr"
+},
+{
+"text": "how long is it acceptable to carmelize onions",
+"label": "cook_time"
+},
+{
+"text": "what's the calorie count for tuna casserole",
+"label": "calories"
+},
+{
+"text": "i need to know how much tax i pay from my earnings",
+"label": "taxes"
+},
+{
+"text": "how many calories are in waffles",
+"label": "calories"
+},
+{
+"text": "get a 3 minute timer",
+"label": "timer"
+},
+{
+"text": "i'd like to find a hotel in tampa that people liked enough to leave good reviews about",
+"label": "book_hotel"
+},
+{
+"text": "send over a hundred dollars from huntington into saving",
+"label": "transfer"
+},
+{
+"text": "create a pto request for march 21st to march 26th",
+"label": "pto_request"
+},
+{
+"text": "is it snowing right now in richmond, va",
+"label": "weather"
+},
+{
+"text": "i would like some help getting a rental car reserved in los angeles",
+"label": "car_rental"
+},
+{
+"text": "what is the credit card apr exactly",
+"label": "apr"
+},
+{
+"text": "set a timer for 35 minutes",
+"label": "timer"
+},
+{
+"text": "how many calories are in an apple",
+"label": "calories"
+},
+{
+"text": "i gotta make a reservation for 8 pm at red robin for 3",
+"label": "restaurant_reservation"
+},
+{
+"text": "what is my credit score",
+"label": "credit_score"
+},
+{
+"text": "can you find me a recipe for sugar cookies",
+"label": "recipe"
+},
+{
+"text": "do i have any meetings with mark today",
+"label": "meeting_schedule"
+},
+{
+"text": "send information about suspicious credit card activity",
+"label": "report_fraud"
+},
+{
+"text": "are the reviews for applebee's good",
+"label": "restaurant_reviews"
+},
+{
+"text": "how much total cash do i have in the bank",
+"label": "balance"
+},
+{
+"text": "could you tell me what fun tourist things i could do in tokyo",
+"label": "travel_suggestion"
+},
+{
+"text": "how high is my credit limit for my american express card",
+"label": "credit_limit"
+},
+{
+"text": "how long does it take to make roast chicken",
+"label": "cook_time"
+},
+{
+"text": "help me find my luggage",
+"label": "lost_luggage"
+},
+{
+"text": "whats the definition of poor",
+"label": "definition"
+},
+{
+"text": "is the apr on my credit card good",
+"label": "apr"
+},
+{
+"text": "looks like someone made an unauthorized charge to nike on my account",
+"label": "report_fraud"
+},
+{
+"text": "what if i lost my luggage",
+"label": "lost_luggage"
+},
+{
+"text": "what does 2 + 2 equal",
+"label": "calculator"
+},
+{
+"text": "onpay gives you two convenient ways to pay your employees",
+"label": "direct_deposit"
+},
+{
+"text": "i need a hotel in new orleans from may 2 - 5 near the french quarter",
+"label": "book_hotel"
+},
+{
+"text": "do people like chipotle",
+"label": "restaurant_reviews"
+},
+{
+"text": "pay my internet bill with my discover account",
+"label": "pay_bill"
+},
+{
+"text": "money transfer request",
+"label": "transfer"
+},
+{
+"text": "i need a flight booked from dallas to miami on american airlines",
+"label": "book_flight"
+},
+{
+"text": "what do you suggest for entertainment in tampa, florida",
+"label": "travel_suggestion"
+}
+],
+"test": [
+{
+"text": "i'd like to transfer $400 from household to savings account",
+"label": "transfer"
+},
+{
+"text": "i need to request a vacation",
+"label": "pto_request"
+},
+{
+"text": "tell me my credit limit",
+"label": "credit_limit"
+},
+{
+"text": "book me a hotel in jacksonville near the stadium from january 1st to 3rd",
+"label": "book_hotel"
+},
+{
+"text": "i'm afraid my luggage has gone missing",
+"label": "lost_luggage"
+},
+{
+"text": "use my navy federal account and pay this month's verizon bill, please",
+"label": "pay_bill"
+},
+{
+"text": "do i have enough in my wells fargo account to get some nike's",
+"label": "balance"
+},
+{
+"text": "set an alarm for 6 am tomorrow",
+"label": "alarm"
+},
+{
+"text": "tell me my credit raing",
+"label": "credit_score"
+},
+{
+"text": "what is my credit max",
+"label": "credit_limit"
+},
+{
+"text": "find me a flight from seattle to detroit for less than 200 dollars",
+"label": "book_flight"
+},
+{
+"text": "i spent 34 dollars for 12 gallons of paint what is the average price for each gallon",
+"label": "calculator"
+},
+{
+"text": "i would like to check my rewards for my debit card",
+"label": "rewards_balance"
+},
+{
+"text": "what do my state taxes look like",
+"label": "taxes"
+},
+{
+"text": "whats the total of taxes from my income",
+"label": "taxes"
+},
+{
+"text": "\"i'm going on a flight from lax and going to phl, which is only $120 on june 15th",
+"label": "book_flight"
+},
+{
+"text": "freeze my account for me",
+"label": "freeze_account"
+},
+{
+"text": "how long does it take to bake a cake",
+"label": "cook_time"
+},
+{
+"text": "schedule a flight from pittsburgh to arizona on delta",
+"label": "book_flight"
+},
+{
+"text": "what is my apr rate",
+"label": "apr"
+},
+{
+"text": "i'd like to pay $4735 to my water bill",
+"label": "pay_bill"
+},
+{
+"text": "how do i make lasagna",
+"label": "recipe"
+},
+{
+"text": "oliver garden reviews",
+"label": "restaurant_reviews"
+},
+{
+"text": "i need my bank account frozen",
+"label": "freeze_account"
+},
+{
+"text": "how are the reviews for the supreme pizza at papa john's",
+"label": "restaurant_reviews"
+},
+{
+"text": "is there a substantial credit limit on my visa",
+"label": "credit_limit"
+},
+{
+"text": "i need to know what the current apr is for my chase sapphire, please",
+"label": "apr"
+},
+{
+"text": "give weather update now",
+"label": "weather"
+},
+{
+"text": "i seem to have a purchase that i didn't make from olive garden on my account",
+"label": "report_fraud"
+},
+{
+"text": "can i purchase a vacation using this",
+"label": "pto_request"
+},
+{
+"text": "the intake of calories it it bad",
+"label": "calories"
+},
+{
+"text": "how long should i cook my turkey",
+"label": "cook_time"
+},
+{
+"text": "tell me what my wells fargo credit card apr is",
+"label": "apr"
+},
+{
+"text": "look for me a table at carl's cabin for twelve at eight",
+"label": "restaurant_reservation"
+},
+{
+"text": "repeat what the weather will be like",
+"label": "transfer"
+},
+{
+"text": "give me my credit rating",
+"label": "credit_score"
+},
+{
+"text": "i need some assistance paying my utilities bill",
+"label": "pay_bill"
+},
+{
+"text": "get reservations at olive garden for two at 7:00pm under michael",
+"label": "restaurant_reservation"
+},
+{
+"text": "where would i find my luggage",
+"label": "lost_luggage"
+},
+{
+"text": "how many calories are in a burger",
+"label": "calories"
+},
+{
+"text": "can you please help me move $100 from my checking to saving account",
+"label": "transfer"
+},
+{
+"text": "how do i go about cooking a 10lb turkey",
+"label": "recipe"
+},
+{
+"text": "transfer ninety dollars between glacier checking and farmers accounts, please",
+"label": "transfer"
+},
+{
+"text": "please explain the word catastrophic to me",
+"label": "definition"
+},
+{
+"text": "block my bank of america immdediately",
+"label": "freeze_account"
+},
+{
+"text": "find a decent rental care for next week at the philadelphia airport",
+"label": "car_rental"
+},
+{
+"text": "i want to reserve table for 5 at red robin under the name sara at 5",
+"label": "restaurant_reservation"
+},
+{
+"text": "need to know the weather now",
+"label": "weather"
+},
+{
+"text": "transer $800 from my checking to savings account",
+"label": "transfer"
+},
+{
+"text": "pay my electric bill for me",
+"label": "pay_bill"
+},
+{
+"text": "set a 1 minute timer",
+"label": "timer"
+},
+{
+"text": "what is the process of making a vacation request",
+"label": "pto_request"
+},
+{
+"text": "pull up my electric bill, i want to pay it",
+"label": "pay_bill"
+},
+{
+"text": "a table for two needs to be reserved for 7:00pm at olive garden using the name michael",
+"label": "restaurant_reservation"
+},
+{
+"text": "i'm pretty sure i have a fraudulent transaction on my account",
+"label": "report_fraud"
+},
+{
+"text": "what is my visa credit limit",
+"label": "credit_limit"
+},
+{
+"text": "how much of a credit limit does visa allow",
+"label": "credit_limit"
+},
+{
+"text": "please begin a timer",
+"label": "timer"
+},
+{
+"text": "i want some suggestions for tourist activities in dublin",
+"label": "travel_suggestion"
+},
+{
+"text": "i need a timer to be set",
+"label": "timer"
+},
+{
+"text": "how do i freeze my bank account",
+"label": "freeze_account"
+},
+{
+"text": "tell me the weather",
+"label": "weather"
+},
+{
+"text": "do you know the total for taxes for my income",
+"label": "taxes"
+},
+{
+"text": "how long do i cook this for",
+"label": "cook_time"
+},
+{
+"text": "i saw suspicious activity on my bank account",
+"label": "report_fraud"
+},
+{
+"text": "what's my credit card's annual percentage rate",
+"label": "apr"
+},
+{
+"text": "i am a bit panicked because my luggage seems to have gone missing",
+"label": "lost_luggage"
+},
+{
+"text": "i need a hotel room for 4 people from may 3 to may 5 in boston",
+"label": "book_hotel"
+},
+{
+"text": "can we get a direct deposit",
+"label": "direct_deposit"
+},
+{
+"text": "the table should be reserved at 8pm at tropicana using martins name and it should be for 5 people",
+"label": "restaurant_reservation"
+},
+{
+"text": "i wanna know how many points have i earned with my credit card",
+"label": "rewards_balance"
+},
+{
+"text": "my luggage appears to be lost",
+"label": "lost_luggage"
+},
+{
+"text": "i need to know the answer to 10000 multiplied by 44",
+"label": "calculator"
+},
+{
+"text": "tell me what my credit score is",
+"label": "credit_score"
+},
+{
+"text": "what kind of credit card apr do i get",
+"label": "apr"
+},
+{
+"text": "how is that weather",
+"label": "weather"
+},
+{
+"text": "set an alarm for 11 tomorrow",
+"label": "alarm"
+},
+{
+"text": "how's my credit score",
+"label": "credit_score"
+},
+{
+"text": "reverse a table for 5 at burger king under the name sara at 6",
+"label": "restaurant_reservation"
+},
+{
+"text": "i need to know the calorie content of spaghetti",
+"label": "calories"
+},
+{
+"text": "please help me report my lost card",
+"label": "report_lost_card"
+},
+{
+"text": "\"i'll be travelling from lax and headed to phl for 120 on the 10th of may",
+"label": "book_flight"
+},
+{
+"text": "please put my account on hold",
+"label": "freeze_account"
+},
+{
+"text": "what does epicurean mean",
+"label": "definition"
+},
+{
+"text": "i need to rent a car for may 10th to may 15th in lizton and i'd like a bmw",
+"label": "car_rental"
+},
+{
+"text": "i would like to have an alarm set for me",
+"label": "alarm"
+},
+{
+"text": "i would like to report my american express card stolen",
+"label": "report_lost_card"
+},
+{
+"text": "do i have any meetings scheduled today",
+"label": "meeting_schedule"
+},
+{
+"text": "set an alarm for 5am",
+"label": "alarm"
+},
+{
+"text": "will you tell me my bank balance",
+"label": "balance"
+},
+{
+"text": "can you please provide me with assistance in moving money from one account to another",
+"label": "transfer"
+},
+{
+"text": "i want to know my credit rating",
+"label": "credit_score"
+},
+{
+"text": "i need to get a hotel room that is big enough for eleven people from march 10th to the 15th in phoenix",
+"label": "book_hotel"
+},
+{
+"text": "i need to put a stop on my bank account",
+"label": "freeze_account"
+},
+{
+"text": "what rating do the critics give the french laundry",
+"label": "restaurant_reviews"
+},
+{
+"text": "i bought 6 shirts at $499 each what was my total expenditure for them",
+"label": "calculator"
+},
+{
+"text": "i need to pay my electric bill",
+"label": "pay_bill"
+},
+{
+"text": "lets talk about what my federal taxes look like",
+"label": "taxes"
+},
+{
+"text": "i'd like to set up direct deposit",
+"label": "direct_deposit"
+},
+{
+"text": "set an alarm for 8 tomorrow",
+"label": "alarm"
+},
+{
+"text": "how long should i bake a cake",
+"label": "cook_time"
+},
+{
+"text": "i want my account locked out",
+"label": "freeze_account"
+},
+{
+"text": "when is the next time i'll receive a paycheck",
+"label": "payday"
+},
+{
+"text": "i've lost my luggage what should i do now",
+"label": "lost_luggage"
+},
+{
+"text": "id like a room in jacksonville near the stadium between january 1st to 3rd",
+"label": "book_hotel"
+},
+{
+"text": "can you find me a brisket recipe",
+"label": "recipe"
+},
+{
+"text": "as my visa got a high enough limit on it",
+"label": "credit_limit"
+},
+{
+"text": "what do my federal taxes look like",
+"label": "taxes"
+},
+{
+"text": "add funds to the retirement account from the pnc account only",
+"label": "transfer"
+},
+{
+"text": "who set up the numbers for it",
+"label": "timer"
+},
+{
+"text": "i have a car payment that needs to be paid",
+"label": "pay_bill"
+},
+{
+"text": "what do i do to set up a vacation",
+"label": "pto_request"
+},
+{
+"text": "my favorite, beef tacos at the buffet",
+"label": "restaurant_reviews"
+},
+{
+"text": "how long does it take to make mashed potatoes",
+"label": "cook_time"
+},
+{
+"text": "can you tell me what obsolescence means",
+"label": "definition"
+},
+{
+"text": "can i put in a pto request for december 3rd to december 10th",
+"label": "pto_request"
+},
+{
+"text": "march 2nd through march 18th, i'm going to need a jeep in frankfort",
+"label": "car_rental"
+},
+{
+"text": "what does ferrari mean",
+"label": "definition"
+},
+{
+"text": "tell me my chase credit card's apr",
+"label": "apr"
+},
+{
+"text": "i really need to check my rewards for my credit card",
+"label": "rewards_balance"
+},
+{
+"text": "find me a rental car for next week , from friday the 5th thru monday the 8th, any kind",
+"label": "car_rental"
+},
+{
+"text": "give me some recommendations of good tourist attractions in montreal",
+"label": "travel_suggestion"
+},
+{
+"text": "what is the weather",
+"label": "weather"
+},
+{
+"text": "tell me when today's meeting is supposed to happen",
+"label": "meeting_schedule"
+},
+{
+"text": "i want an alarm set",
+"label": "alarm"
+},
+{
+"text": "it it possible to take pto from the 8th to the 11th",
+"label": "pto_request"
+},
+{
+"text": "when can i expect to be paid",
+"label": "payday"
+},
+{
+"text": "what credit score number do i have",
+"label": "credit_score"
+},
+{
+"text": "can you assist me in moving money from one account to another",
+"label": "transfer"
+},
+{
+"text": "i need a recipe for chili",
+"label": "recipe"
+},
+{
+"text": "activate direct deposit to chase account",
+"label": "direct_deposit"
+},
+{
+"text": "if i lost my luggage, what should i do next",
+"label": "lost_luggage"
+},
+{
+"text": "i wanna check my rewards for my credit card",
+"label": "rewards_balance"
+},
+{
+"text": "what kind of reviews does the olive garden have",
+"label": "restaurant_reviews"
+},
+{
+"text": "i'm looking for flights that depart on the 3rd and return on z from monday to friday",
+"label": "book_flight"
+},
+{
+"text": "tell me the weather for today",
+"label": "weather"
+},
+{
+"text": "how much is alorie intake",
+"label": "calories"
+},
+{
+"text": "how do i get started making homemade pizza dough",
+"label": "recipe"
+},
+{
+"text": "when did i last collect my salary",
+"label": "payday"
+},
+{
+"text": "how much money is there in my bank accounts",
+"label": "balance"
+},
+{
+"text": "what are my coffers at",
+"label": "balance"
+},
+{
+"text": "how long until my paycheck shows up",
+"label": "payday"
+},
+{
+"text": "what is the calorie count for this milkshake",
+"label": "calories"
+},
+{
+"text": "chase account direct deposit options",
+"label": "direct_deposit"
+},
+{
+"text": "please put a stop on my bank account",
+"label": "freeze_account"
+},
+{
+"text": "i need a flight for under 300 from pittsburgh to atlanta",
+"label": "book_flight"
+},
+{
+"text": "check my schedule for meetings today",
+"label": "meeting_schedule"
+},
+{
+"text": "can i put in a pto request for january 4th to january 9th",
+"label": "pto_request"
+},
+{
+"text": "my online bill has some items that i didn't purchase from penneys",
+"label": "report_fraud"
+},
+{
+"text": "i'm going to need a coupe car in sedona from 5/1 until 5/4",
+"label": "car_rental"
+},
+{
+"text": "please tell me a recipe for this meal",
+"label": "recipe"
+},
+{
+"text": "can you get me recipes for eggs please",
+"label": "recipe"
+},
+{
+"text": "look up when my payday is supposed to be",
+"label": "payday"
+},
+{
+"text": "book a flight to los angeles from las vegas on american airlines",
+"label": "book_flight"
+},
+{
+"text": "find square root of 453",
+"label": "calculator"
+},
+{
+"text": "alexa, book a rental car to los angeles county in 2 hours",
+"label": "car_rental"
+},
+{
+"text": "what is the meaning of the word girn",
+"label": "definition"
+},
+{
+"text": "could you set a timer",
+"label": "timer"
+},
+{
+"text": "i need to know the apr on my wells fargo credit card",
+"label": "apr"
+},
+{
+"text": "will you reserve a table at olive garden for 3 people at 7",
+"label": "restaurant_reservation"
+},
+{
+"text": "i lost all my stuff that i had packed",
+"label": "lost_luggage"
+},
+{
+"text": "how long do i need to cook chicken",
+"label": "cook_time"
+},
+{
+"text": "are there any roundtrip flights from shanghai to seatac that depart on wednesday and return on the thirty first",
+"label": "book_flight"
+},
+{
+"text": "i must get a hotel in phoenix near chase field from january 4th to the 8th",
+"label": "book_hotel"
+},
+{
+"text": "is my luggage lost",
+"label": "lost_luggage"
+},
+{
+"text": "i need to report fraudulent activity on my usaa card",
+"label": "report_fraud"
+},
+{
+"text": "how much does my bank account have",
+"label": "balance"
+},
+{
+"text": "las vegas weather today",
+"label": "weather"
+},
+{
+"text": "how is a vacation request done",
+"label": "pto_request"
+},
+{
+"text": "what's the definition of remunerative",
+"label": "definition"
+},
+{
+"text": "are ned's reviews good",
+"label": "restaurant_reviews"
+},
+{
+"text": "how do i report that i lost the card",
+"label": "report_lost_card"
+},
+{
+"text": "i really need you to find me a hotel with good reviews in phoenix",
+"label": "book_hotel"
+},
+{
+"text": "can you calculate the square root of 172",
+"label": "calculator"
+},
+{
+"text": "i want to pay my bill through the app",
+"label": "pay_bill"
+},
+{
+"text": "what number of calories are in a pizza",
+"label": "calories"
+},
+{
+"text": "look up how much my state taxes are",
+"label": "taxes"
+},
+{
+"text": "i need my account frozen!",
+"label": "freeze_account"
+},
+{
+"text": "check my checking balance",
+"label": "balance"
+},
+{
+"text": "what steps do i need to take to report a card lost",
+"label": "report_lost_card"
+},
+{
+"text": "reserve a table for 3 at 7 for olive garden",
+"label": "restaurant_reservation"
+},
+{
+"text": "suggest some things for me to do while i am in los angeles",
+"label": "travel_suggestion"
+},
+{
+"text": "how much moola is in my bank accounts",
+"label": "balance"
+},
+{
+"text": "i wish to know my debit card's rewards balance",
+"label": "rewards_balance"
+},
+{
+"text": "will you let me know my bank balance",
+"label": "balance"
+},
+{
+"text": "are there any open reservations at outback tonight",
+"label": "restaurant_reservation"
+},
+{
+"text": "when is my meeting with invoicing scheduled",
+"label": "meeting_schedule"
+},
+{
+"text": "i lost my card, what do i do next",
+"label": "report_lost_card"
+},
+{
+"text": "i think someone jacked my bank account",
+"label": "report_fraud"
+},
+{
+"text": "i want a hotel in phoenix near chase field from january 4th to the 8th",
+"label": "book_hotel"
+},
+{
+"text": "i have a fraudulent buy from dave's video on my account",
+"label": "report_fraud"
+},
+{
+"text": "does acero have good or bad ratings",
+"label": "restaurant_reviews"
+},
+{
+"text": "there has been unauthorized use of my visa",
+"label": "report_fraud"
+},
+{
+"text": "talk to me about the total of my state taxes",
+"label": "taxes"
+},
+{
+"text": "i need to find my credit score",
+"label": "credit_score"
+},
+{
+"text": "where do i report that my card was lost",
+"label": "report_lost_card"
+},
+{
+"text": "do you know my state tax total",
+"label": "taxes"
+},
+{
+"text": "i need a table for two at the havana at nine",
+"label": "restaurant_reservation"
+},
+{
+"text": "direct deposit",
+"label": "direct_deposit"
+},
+{
+"text": "walk me through on how to make a vacation request",
+"label": "pto_request"
+},
+{
+"text": "how many minutes are involved in the preparation of curry",
+"label": "cook_time"
+},
+{
+"text": "how do you make fried rice",
+"label": "recipe"
+},
+{
+"text": "tell me what 1875 plus 3459 equals",
+"label": "calculator"
+},
+{
+"text": "what kind of weather can i expect now",
+"label": "weather"
+},
+{
+"text": "how many calories are in a cheeseburger",
+"label": "calories"
+},
+{
+"text": "let me know when it's been 5 minutes",
+"label": "timer"
+},
+{
+"text": "set an alarm for 9 tomorrow",
+"label": "alarm"
+},
+{
+"text": "how do i set up a direct deposit for my paycheck",
+"label": "direct_deposit"
+},
+{
+"text": "set a 2 minute timer",
+"label": "timer"
+},
+{
+"text": "when's my next pay day",
+"label": "payday"
+},
+{
+"text": "how do i ask the ai to help me with math problem",
+"label": "calculator"
+},
+{
+"text": "what does confrontation mean",
+"label": "definition"
+},
+{
+"text": "i need to know how to do direct deposit with my paycheck at nations bank",
+"label": "direct_deposit"
+},
+{
+"text": "give me a summary of today's meetings",
+"label": "meeting_schedule"
+},
+{
+"text": "for what time is my meeting with marketing scheduled",
+"label": "meeting_schedule"
+},
+{
+"text": "tell me the current balance of my bank accounts",
+"label": "balance"
+},
+{
+"text": "how many points do i have on my visa",
+"label": "rewards_balance"
+},
+{
+"text": "set a timer to go off in 1 hour",
+"label": "timer"
+},
+{
+"text": "whats the total of my taxes",
+"label": "taxes"
+},
+{
+"text": "search steps for how to report a card lost",
+"label": "report_lost_card"
+},
+{
+"text": "do i have a meeting with paul today",
+"label": "meeting_schedule"
+},
+{
+"text": "how long will it take to make an omelet",
+"label": "cook_time"
+},
+{
+"text": "can you pull up how many points i've earned with travel card",
+"label": "rewards_balance"
+},
+{
+"text": "how to activate direct deposit to chase account",
+"label": "direct_deposit"
+},
+{
+"text": "how much can i use on my visa",
+"label": "credit_limit"
+},
+{
+"text": "vacation request information",
+"label": "pto_request"
+},
+{
+"text": "i need to know my credit card's rewards balance",
+"label": "rewards_balance"
+},
+{
+"text": "what date do i get paid",
+"label": "payday"
+},
+{
+"text": "do you know when my next check is coming",
+"label": "payday"
+},
+{
+"text": "can you book a car rental today to new york city to philadelphia",
+"label": "car_rental"
+},
+{
+"text": "tell me some fun activities to do in oklahoma city",
+"label": "travel_suggestion"
+},
+{
+"text": "set my paycheck to direct deposit to chase account",
+"label": "direct_deposit"
+},
+{
+"text": "show me the reviews for the new jalapeno fries at taco bell",
+"label": "restaurant_reviews"
+},
+{
+"text": "what is the definiton of auspicious",
+"label": "definition"
+},
+{
+"text": "show me what the weather is like",
+"label": "weather"
+},
+{
+"text": "what are some fun local experiences in canada",
+"label": "travel_suggestion"
+},
+{
+"text": "i can't find my luggage",
+"label": "lost_luggage"
+},
+{
+"text": "i need an alarm",
+"label": "alarm"
+},
+{
+"text": "please book me a place to stay in phoenix from the 5th to the 9th of march",
+"label": "book_hotel"
+},
+{
+"text": "when is my paycheck arriving",
+"label": "payday"
+},
+{
+"text": "what's the apr on my capital one venture card",
+"label": "apr"
+},
+{
+"text": "what is the phone number of the car rental place",
+"label": "car_rental"
+},
+{
+"text": "i would like to know how many points have i earned with my credit card",
+"label": "rewards_balance"
+},
+{
+"text": "does olive garden have good customer reviews",
+"label": "restaurant_reviews"
+},
+{
+"text": "what is 25% of $54,788",
+"label": "calculator"
+},
+{
+"text": "i need to book a flight on jet blue to boston from new york",
+"label": "book_flight"
+},
+{
+"text": "can you set the alarm for noon",
+"label": "alarm"
+},
+{
+"text": "is my credit score over 700 yet",
+"label": "credit_score"
+},
+{
+"text": "what's the annual percentage rate for my credit card",
+"label": "apr"
+},
+{
+"text": "what is the process for reporting my card as lost",
+"label": "report_lost_card"
+},
+{
+"text": "how much cash do i have in my bank accounts",
+"label": "balance"
+},
+{
+"text": "book a rental car to rhode island for friday, tomorrow",
+"label": "car_rental"
+},
+{
+"text": "please move $100 from my checking to saving account",
+"label": "transfer"
+},
+{
+"text": "who do i contact to report fraud on my visa",
+"label": "report_fraud"
+},
+{
+"text": "what time is my meeting with design team scheduled for",
+"label": "meeting_schedule"
+},
+{
+"text": "what's the most i can charge on my card",
+"label": "credit_limit"
+},
+{
+"text": "what are some local attractions in portland",
+"label": "travel_suggestion"
+},
+{
+"text": "show me how to make tuna casserole please",
+"label": "recipe"
+},
+{
+"text": "tell me my debit card's rewards balance",
+"label": "rewards_balance"
+},
+{
+"text": "someone else used my account to buy stuff from mcdonald's",
+"label": "report_fraud"
+},
+{
+"text": "what's the calorie content of french fries",
+"label": "calories"
+},
+{
+"text": "can you tell me how to set up direct deposit",
+"label": "direct_deposit"
+},
+{
+"text": "please give me my current credit score",
+"label": "credit_score"
+},
+{
+"text": "i know i should pay my electric bill",
+"label": "pay_bill"
+},
+{
+"text": "lasagna takes how long to cook",
+"label": "cook_time"
+},
+{
+"text": "do you know the price for my taxes in income",
+"label": "taxes"
+},
+{
+"text": "what is the calorie content in peanut butter",
+"label": "calories"
+},
+{
+"text": "what should i do about losing my luggage",
+"label": "lost_luggage"
+},
+{
+"text": "can you help me pay my electricity bill",
+"label": "pay_bill"
+},
+{
+"text": "can you tell me the meaning of fluctuate",
+"label": "definition"
+},
+{
+"text": "when is my meeting with infrastructure",
+"label": "meeting_schedule"
+},
+{
+"text": "is the meeting with lisa today",
+"label": "meeting_schedule"
+},
+{
+"text": "book me a car rental in wichita",
+"label": "car_rental"
+},
+{
+"text": "let me know some things i can do in dallas",
+"label": "travel_suggestion"
+},
+{
+"text": "what are some fun tourist things to do in mumbai",
+"label": "travel_suggestion"
+},
+{
+"text": "please force my account to freeze",
+"label": "freeze_account"
+},
+{
+"text": "what's the limit on my discover card",
+"label": "credit_limit"
+},
+{
+"text": "set the alarm now",
+"label": "alarm"
+},
+{
+"text": "can you find me a reputable hotel in honolulu",
+"label": "book_hotel"
+},
+{
+"text": "go ahead and find me a hotel with good reviews in phoenix",
+"label": "book_hotel"
+},
+{
+"text": "help me plan my traveling itinerary for my trip to madrid, i want to see lots of sights!",
+"label": "travel_suggestion"
+},
+{
+"text": "what is 1000 plus 745",
+"label": "calculator"
+},
+{
+"text": "can you set the timer to 20 minutes",
+"label": "timer"
+},
+{
+"text": "could you share my credit score",
+"label": "credit_score"
+},
+{
+"text": "can you throw out some suggestions to me of places to travel to",
+"label": "travel_suggestion"
+},
+{
+"text": "what is 1243 times 45",
+"label": "calculator"
+},
+{
+"text": "\"i'm fly out from lax to phl this weekend for around $120",
+"label": "book_flight"
+},
+{
+"text": "are the reviews ned get's good",
+"label": "restaurant_reviews"
+},
+{
+"text": "what does mature mean",
+"label": "definition"
+},
+{
+"text": "set a timer",
+"label": "timer"
+},
+{
+"text": "what day's my pay coming next",
+"label": "payday"
+},
+{
+"text": "can you tell me how to report a card lost",
+"label": "report_lost_card"
+},
+{
+"text": "what is the calorie content in spaghetti",
+"label": "calories"
+},
+{
+"text": "current weather",
+"label": "weather"
+},
+{
+"text": "how do you cooked eggs",
+"label": "recipe"
+},
+{
+"text": "how long does it take to prepare a lasagna",
+"label": "cook_time"
+},
+{
+"text": "what's the apr on my credit card",
+"label": "apr"
+},
+{
+"text": "can i move some money between my two accounts",
+"label": "transfer"
+},
+{
+"text": "what is my credit card spending limit",
+"label": "credit_limit"
+},
+{
+"text": "who do i call to report my card as lost",
+"label": "report_lost_card"
+}
+]
+}

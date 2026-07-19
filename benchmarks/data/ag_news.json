@@ -1,0 +1,2214 @@
+{
+"labels": [
+"Business",
+"Sci/Tech",
+"Sports",
+"World"
+],
+"train": [
+{
+"text": "EMC debuts e-mail consolidation The product is designed to let companies manage years of e-mail messages on a single networked storage system.",
+"label": "Sci/Tech"
+},
+{
+"text": "Enter your e-mail: Windows may be (almost) everywhere in the US, but for many folks in much of the world, spending \\$100 or more on an operating system is simply impossible--which means that Windows either gets pirated or it doesn #39;t get used at all.",
+"label": "Sci/Tech"
+},
+{
+"text": "Junior jumps to lead Earnhardt #39;s third-place finish in the Sylvania 300 yesterday at New Hampshire International Speedway, the best showing of his career at the 1.058-mile flat track, was good enough ",
+"label": "Sports"
+},
+{
+"text": "Fastest man in world has great company ATHENS -- They are the most important 10 seconds, or thereabouts, the Olympic Games have to offer.",
+"label": "Sports"
+},
+{
+"text": "Real world space exploration Lost in the pre-election noise and the hoopla over the Red Sox march to the World Series title was perhaps the most remarkable event of all -- the visit to the atmosphere of the Saturnian moon Titan last week by the space probe Cassini, which negotiated ",
+"label": "Sci/Tech"
+},
+{
+"text": "Rough weather hampers bid to rescue disabled Canadian submarine British ships battled through rough weather on Wednesday to reach a Canadian navy submarine with 57 crewmembers on board that was drifting in the Atlantic after an electrical fire that officials said was more severe than originally thought.",
+"label": "World"
+},
+{
+"text": "Credit cards may cause trouble for issuers Credit cards issuers may face penalty from the regulators as credit cards solicitation is not as reliable as they are said. Consumers sometimes are not given the whole information about the possibly imposed ",
+"label": "Business"
+},
+{
+"text": "Mood Mixed Among Darfur Rebels Ahead of Talks (Reuters) Reuters - A Sudanese rebel commander\\in a camp in Darfur tells his troops he is hoping for peace.\\But just a few hours march away, young men say they are\\convinced Sudan wants to drive them off the land.",
+"label": "World"
+},
+{
+"text": "US Airways Mechanics Not Hopeful The head of the mechanics union at US Airways said yesterday the group is not optimistic about reaching an agreement with the airline before a critical hearing Thursday and raised the prospect that the unit could walk off the job if a court allows the current labor contract to be voided.",
+"label": "Business"
+},
+{
+"text": "India win a weekly lottery, Aussies take away the jackpot Undated: Like the physicists #39; search for the Higgs Bosun, the God particle, India #39;s ambition to be the world #39;s best Test side may seem an endlessly futile task.",
+"label": "Sports"
+},
+{
+"text": "More mobile anti-virus appears Trend Micro will become the latest major anti-virus software company to provide protection against mobile phone viruses with the release today of Trend Micro Mobile Security 1.0.",
+"label": "Sci/Tech"
+},
+{
+"text": "Yahoo! Nipping at Google #39;s Heels on Email As part of its ongoing battle with Google (GOOG:Nasdaq - news - research) for the loyalty of Internet users, Yahoo! said it had implemented new antispam technology for its Web-based email service.",
+"label": "Sci/Tech"
+},
+{
+"text": "ESPN.com news services HATTIESBURG, Miss. -- Hurricane Ivan forced the postponement of Thursday #39;s football game between Southern Mississippi and California.",
+"label": "Sports"
+},
+{
+"text": "Questions, answers on oil prices Q: Why has the price of crude oil ranged from \\$10 a barrel five years ago to almost \\$50 this year? Surely the supply-and-demand equation hasn #39;t changed that much.",
+"label": "Business"
+},
+{
+"text": "Stocks End Higher, Lifted by Data  NEW YORK (Reuters) - U.S. stocks ended higher on Tuesday,  even as oil prices hit another record, as investors  were  encouraged by data showing an easing of inflationary pressure  and a sharp rebound in the housing market.",
+"label": "Business"
+},
+{
+"text": "Azeri goes for Breeders #39; Classic Punters and bookmakers alike have been caught on the hop after star American trainer D. Wayne Lukas revealed that Azeri is to tackle the \\$4m Breeders #39; Cup Classic in Texas this Saturday.",
+"label": "Sports"
+},
+{
+"text": "Clashes in al-Ramadi, 15 Iraqis killed in Tikrit, new bombardment &lt;b&gt;...&lt;/b&gt; The American forces continued their air bombardment of Falluja yesterday at dawn resulting in several being killed and injured. Witnesses said that one of the killed is the driver of a rental car whose car ",
+"label": "World"
+},
+{
+"text": "No New Closures of Japan Nuclear Reactors Needed (Reuters) Reuters - No more Japanese nuclear reactors need to\\be closed for inspections, electric power companies said on\\Wednesday after submitting reports ordered by the government\\following a reactor accident that killed four workers last\\week.",
+"label": "World"
+},
+{
+"text": "Palestinian Prisoners End Hunger Strike  GAZA (Reuters) - Palestinian prisoners in Israeli jails  Thursday have effectively ended an 18-day-old hunger strike  after most of their demands for better conditions were met, a  Palestinian cabinet minister said.",
+"label": "World"
+},
+{
+"text": "TOMMY TUNES UP Embattled Tommy Hilfiger Corp., desperate to acquire an upscale brand to help re-ignite its growth engine, will buy designer Karl Lagerfeld #39;s small business and roll ",
+"label": "Business"
+},
+{
+"text": "Target soars, but misses estimates MINNEAPOLIS -- Target reported a 78 percent jump in third-quarter earnings on Thursday on strong revenue growth and the sale of its Mervyn #39;s discount chain, but it just missed analyst estimates.",
+"label": "Business"
+},
+{
+"text": "Stocks are little-changed in the early going NEW YORK Wall Street is sorting through the latest earnings news and stocks are narrowly mixed. The Dow Jones Industrial Average is up three points in today #39;s early going.",
+"label": "Business"
+},
+{
+"text": "AL Wrap: Guerrero Shines as Angels Heap Pressure on A #39;s Vladimir Guerrero hit a pair of homers and drove in five runs to lead the Anaheim Angels to an 8-2 win over the Texas Rangers in American League play in Arlington on Tuesday.",
+"label": "Sports"
+},
+{
+"text": "Hollinger International's Suit  Against Black Is Dismissed A federal judge Friday tossed out Hollinger International Inc.'s \\$1.25 billion suit against embattled press tycoon Conrad M. Black and other top corporate officials, ruling that the company could not use racketeering laws to recover money it claims Black and the others stole.",
+"label": "Business"
+},
+{
+"text": "Preview: South Africa Bids to Underline Strength  SEVILLE, Spain (Reuters) - South Africa will underline  their strength in depth if Trevor Immelman and Rory Sabbatini  can retain their title at the WGC-World Cup of Golf starting on  Thursday at Seville's Real Golf Club.",
+"label": "Sports"
+},
+{
+"text": "Unidentified submarine detected in Japanese waters TOKYO - An unidentified submarine was detected moving in Japanese waters near Okinawa on Wednesday, prompting Japan #39;s Defense Agency chief Yoshinori Ono to dispatch a Maritime Self-Defense Force team to step up security in the area.",
+"label": "World"
+},
+{
+"text": "High hopes to salvage Genesis science Wreckage from the Genesis space capsule yielded good news on Friday when NASA scientists announced the solar payload may still fulfill its scientific promise.",
+"label": "Sci/Tech"
+},
+{
+"text": "Ratan Tata, Kumarmangalam may head revamped Board of Trade New Delhi, Aug. 31 (PTI): The revamped Board of Trade could be headed by renowned industrialist Ratan Tata, or former CII Secretary General Tarun Das.",
+"label": "Business"
+},
+{
+"text": "Turkey Pushes Ahead With Improvements (AP) AP - Turkey will push to improve its democracy and human rights record regardless of whether European Union leaders decide in December to begin membership talks with Ankara, the government said Monday.",
+"label": "World"
+},
+{
+"text": "Fannie Mae execs set their defense Managers of mortgage finance company Fannie Mae will defend themselves before Congress Wednesday amid government findings that they broke accounting rules to deliver steady earnings growth quarter after quarter.",
+"label": "Business"
+},
+{
+"text": "Studios launch legal offensive against online movie swappers Hollywood studios said yesterday they will file lawsuits this month against hundreds of people who swap pirated copies of movies over the Internet.",
+"label": "Sci/Tech"
+},
+{
+"text": "Kremlin Move Could Open Up Gas Industry Russian energy giant Gazprom said Tuesday it would acquire state-owned oil company Rosneft in a stock swap expected to ultimately ease restrictions on foreign investment in the world's biggest natural gas producer.",
+"label": "Business"
+},
+{
+"text": "Retirees Return to the Grind, but This Time It's on Their Own Terms Some companies are trying to rework policies in order to rehire retired professionals who want to return to work on a limited basis.",
+"label": "Business"
+},
+{
+"text": "BUZZ: Google your hard drive Google brought the simplicity of its popular Internet search engine to the computer desktop last week, releasing software that allows people to use its home page to search their hard drives for documents, e-mail messages and other hard-to-find files.",
+"label": "Sci/Tech"
+},
+{
+"text": "Verizon to Buy NextWave Licenses for \\$3 Billion Verizon Wireless said on Thursday that it had signed an agreement with NextWave Telecom Inc. to purchase all of its airwave licenses for \\$3 billion.",
+"label": "Business"
+},
+{
+"text": "SportsNetwork Game Preview (Sports Network) - With losses in four of their last five games to non-playoff teams, the Chicago Cubs know they can #39;t falter over their final four games of the season, or they will miss the playoffs.",
+"label": "Sports"
+},
+{
+"text": "Closing bell sounds Louis Rukeyser, for 33 years the beloved host of a Wall Street talk show for the masses, is going off the air. The 71-year old Rukeyser hasn #39;t been on the show since Oct. 31 of last year because he #39;s battling cancer.",
+"label": "Business"
+},
+{
+"text": "Oracle, PeopleSoft prepared for midnight offer deadline NOVEMBER 19, 2004 (IDG NEWS SERVICE) - The midnight expiration of Oracle Corp. #39;s tender offer to PeopleSoft Inc. #39;s shareholders for control of the company will either end the software rivals #39; bitter, 17-month battle tonight -- or increase its ferocity.",
+"label": "Business"
+},
+{
+"text": "Invitation for Pope to visit Serbia-Montenegro in the works, president says (Canadian Press) Canadian Press - BELGRADE, Serbia-Montenegro (AP) - Serbia-Montenegro's president said Wednesday he is preparing an invitation for Pope John Paul to visit the Balkan country.",
+"label": "World"
+},
+{
+"text": "Rocket Wins  #36;10M Prize for Trip to Space (AP) AP - A stout, star-spangled rocket plane broke through the Earth's atmosphere to the edge of space Monday for the second time in five days, capturing a  #36;10 million prize aimed at opening the final frontier to tourists.",
+"label": "Sci/Tech"
+},
+{
+"text": "Waltrip washed out of truck race by rain Rain washed out qualifying for the NASCAR Craftsman Truck Series race on Friday, causing the field to be set by owner points and leaving Darrell Waltrip out of the field.",
+"label": "Sports"
+},
+{
+"text": "BearingPoint Leader Plans Shake-Up Analysts speculate that company is a possible target to be acquired and that big operational changes are in store for the 16,557-person technology consulting firm.&lt;br&gt;&lt;FONT face=\"verdana,MS Sans Serif,arial,helvetica\" size=\"-2\" color=\"#666666\"&gt;&lt;B&gt;-Ellen McCarthy&lt;/b&gt;&lt;/font&gt;",
+"label": "Sci/Tech"
+},
+{
+"text": "Ex-Citigroup Executives May Face S.E.C. Charges Citigroup said that federal regulators had warned the bank that an investigation of its asset management unit could result in an enforcement action.",
+"label": "Business"
+},
+{
+"text": "China #39;s worst floods in a century kill at least 172, injure &lt;b&gt;...&lt;/b&gt; China #39;s Sichuan province faced the threat of epidemics yesterday after the worst flooding in a century killed at least 172 people and ",
+"label": "World"
+},
+{
+"text": "Rugby-Bulloch to captain Scotland in November internationals Hooker Gordon Bulloch was named on Monday as Scotland captain for the November internationals against Australia, Japan and South Africa.",
+"label": "Sports"
+},
+{
+"text": "Siebel Raises Forecast, Stock Up 16 Pct. (Reuters) Reuters - Business software maker Siebel\\Systems Inc.  on Monday said third-quarter revenue\\would beat Wall Street estimates, driven by a rebound in\\licensing revenue, sending its shares up almost 16 percent.",
+"label": "Sci/Tech"
+},
+{
+"text": "MGM to co-produce with Sony after takeover MGM, the beleaguered Hollywood studio currently being acquired by a consortium of buyers led by Sony Pictures, will continue to co-produce movies as a private company once the takeover is complete.",
+"label": "Business"
+},
+{
+"text": "Bank of America to cut more jobs The decision comes on top of 12,500 job cuts that the bank initially said it would eliminate during the merger. The bank #39;s move drew fire from two Massachusetts ",
+"label": "Business"
+},
+{
+"text": "Homer Sinks Indians Corey Koskie hit a two-run homer in the 10th inning as the Twins overcame a two-run deficit for a 4-2 win Sunday, giving them a two-game lead over the second-place Indians.",
+"label": "Sports"
+},
+{
+"text": "Punch pays 335m for InnSpired Punch Taverns, the acquisitive tenanted pubs owner, has swallowed a further 1,064 pubs, taking its estate to more than 8,000 sites.",
+"label": "Business"
+},
+{
+"text": "Peace Prize a well-deserved honour Sometimes what at first seems like a minor change can actually signal major shift in understanding. Last week, Kenyan deputy environment minister Wangari Maathai won the Nobel Peace Prize - a wonderful achievement for two reasons.",
+"label": "World"
+},
+{
+"text": "Microsoft Issues First Patch for Windows XP Service Pack 2 (NewsFactor) NewsFactor - Microsoft (Nasdaq: MSFT) has issued its first patch for Service Pack 2, which has been on the market for just a month and a half. The patch fixes a flaw in the VPN, or virtual private \\network.",
+"label": "Sci/Tech"
+},
+{
+"text": "U.S. Troops Reinforce After Falluja Air Strike  BAGHDAD (Reuters) - U.S. troops stepped up pressure on the  rebel-held Iraqi city of Falluja on Tuesday, cutting roads and  reinforcing positions around the town as jets criss-crossed the  sky ahead of an expected assault.",
+"label": "World"
+},
+{
+"text": "Former N.Korea Inmates Tell of Suffering in Camps  SEOUL (Reuters) - Three former North Korean inmates gave  harrowing accounts on Monday of alleged suffering at political  camps, part of an event organized by activists aimed at  prodding Seoul to tackle Pyongyang on human rights.",
+"label": "World"
+},
+{
+"text": "India lifts 20-year ban on night viewing of Taj Mahal (AFP) AFP - India's Supreme Court lifted a 20-year ban on night viewing of the Taj Mahal, the 17th century white-marble monument to love in the northern city of Agra.",
+"label": "World"
+},
+{
+"text": "Brown calls it a career Hubie Brown retired as coach of the Memphis Grizzlies yesterday due to health reasons.  quot;Unexpected health-related issues will not allow me to continue coaching the Memphis Grizzlies, quot; the 71-year-old Brown said in a statement from Memphis.  quot;This situation was unforeseen and absolutely nonexistent at the beginning of the season. quot;",
+"label": "Sports"
+},
+{
+"text": "ISS positive on Harmony and Gold Fields merger Harmony Gold Mining Co. (HMY.N: Quote, Profile, Research) (HARJ.J: Quote, Profile, Research) on Friday said Institutional Shareholder Services, Inc.",
+"label": "Business"
+},
+{
+"text": "US Agent Sparks Afghan False Alarm A US agent hidden under a head-to-toe veil on Sunday sparked fear of a suicide attack in the Afghan capital by fleeing from police who tried to search her, officials said.",
+"label": "World"
+},
+{
+"text": "Linking remote SME workers to their office networks KUALA LUMPUR: Juniper Networks Inc has introduced solutions that it claimed would provide small and medium enterprises (SMEs) with a secure, cost-effective and easy-to-deploy method for remote employees to access corporate networks. ",
+"label": "Sci/Tech"
+},
+{
+"text": "Earlier blooming lilacs another harbinger of global warming &lt;b&gt;...&lt;/b&gt; As the first signs of winter push into the US Northeast, American researchers have some good news for fair weather fans - spring is coming earlier than it used to.",
+"label": "Sci/Tech"
+},
+{
+"text": "Update 1: Judge Won #39;t Approve PeopleSoft Settlement A proposal to settle a lawsuit brought last year by shareholders of PeopleSoft Inc. failed to clear court Wednesday after a judge found it unfairly cut off their right to sue over the company #39;s resistance to a takeover by Oracle Corp.",
+"label": "Business"
+},
+{
+"text": "Rugby-Super 12, Tri-nations to be expanded in 2006 The southern hemisphere #39;s Tri-nations and Super 12 rugby union competitions will be expanded from 2006, it was announced on Monday.",
+"label": "Sports"
+},
+{
+"text": "Iraq car bomb kills seven just one short of the figure in April which was the highest monthly toll so far. The US military says it expects violence to escalate before elections scheduled for January 30.",
+"label": "World"
+},
+{
+"text": "Professional Economists: The Economy is Safer in Kerry's Hands The Economist is currently reporting the results of a survey of professional economists. When asked the majority seemed to feel that the economy was safer in Kerry's hands than in Bush's. The Bush tax cuts seem to have gone down particularly poorly with this group.     On the more positive side for Bush, a significant number of the economists say they don't think the problems of the US economy are entirely his fault.",
+"label": "Sci/Tech"
+},
+{
+"text": "Chief of Army to investigate KKK scandal THE image of soldiers dressed as the Ku Klux Klan betrayed the Australian Army #39;s commitment to a  quot;fair go quot; and destroyed the memory of black and white soldiers who fought together in war, the Department of Defence said yesterday.",
+"label": "World"
+},
+{
+"text": "Indonesia frees mining officials in pollution case Five officials of a unit of US-based gold miner Newmont Mining Corp accused of dumping toxic waste in Indonesia are to be released from jail after being held for more than a month.",
+"label": "Business"
+},
+{
+"text": "GM Deal: Hitch Included General Motors offers consumers chance to lock in today's rates, but there's this five-year clause.",
+"label": "Business"
+},
+{
+"text": "Hawks rout Pack Kansas had one primary goal defensively Monday night and that was to limit the touches of Nevada sharpshooter Nick Fazekas. Before the first half even ended, the Jayhawks knew if ",
+"label": "Sports"
+},
+{
+"text": "MSN Music Store Adds to iTunes Competition MSN Music Store Adds to iTunes Competition \\\\Microsoft plas to release Windows Media Player 10 on Thursday alongside the highly anticipated MSN Music Store. WMP10 will be included in Windows XP Media Center Edition 2005 which finalized some time after SP2. According to Neowin,  Media Center 2005 is due ...",
+"label": "Sci/Tech"
+},
+{
+"text": "Padres acquire Gonzalez from Expos The San Diego Padres quickly found a replacement for injured shortstop Khalil Greene, acquiring Alex Gonzalez from the Montreal Expos on Thursday night for a player to be named or cash.",
+"label": "Sports"
+},
+{
+"text": "Russia: Estonia WWII Monument Disgraceful (AP) AP - Russia on Monday called the unveiling of a monument commemorating Estonians who fought in the German army during World War II a \"disgraceful act\" and urged NATO and the European Union to take notice.",
+"label": "World"
+},
+{
+"text": "IPod Rivals Square Off Against Apple (Reuters) Reuters - The next wave of iPod competitors is\\coming.",
+"label": "Sci/Tech"
+},
+{
+"text": "Stocks lower on worries oil prices will start to weigh heavily on &lt;b&gt;...&lt;/b&gt; TORONTO (CP) - Stock markets were lower Monday morning on a mixed series of earnings reports and oil prices that continued to hover around the \\$55 US a barrel level.",
+"label": "Business"
+},
+{
+"text": "A tiny critter #39;s day in the sun They produce as much organic carbon as all the rainforests on Earth, but they #39;re not plants. They live in hard shells and can survive for months in the dark, but they #39;re not animals.",
+"label": "Sci/Tech"
+},
+{
+"text": "Suzuki on Rs 860 cr expansion drive Suzuki Motor Corporation has lined up investments of \\$191 million (Rs 860 crore) to ramp up capacity in its Indian subsidiary Maruti Udyog Ltd.",
+"label": "Business"
+},
+{
+"text": "The Rundown     1 Southern California at Stanford  &lt;em&gt;7 p.m., TBS &lt;/em&gt;&lt;br&gt;Not that long ago -- 1999 to 2001 -- Stanford won three straight in this series, but times have changed. All the preseason hype was for USC quarterback Matt Leinart, but he may not even be the best player on his team. Tailback Reggie Bush can, and will, line up just about anywhere. Something must give: USC is averaging 38 points per game; Stanford is allowing just 6.5.",
+"label": "Sports"
+},
+{
+"text": "Expect a Classic shootout The \\$14 million Breeders #39; Cup at Lone Star Park today shapes up like a  quot;Texas shootout, quot; according to the Daily Racing Form.",
+"label": "Sports"
+},
+{
+"text": "High speed data network just for research A high-speed data network being built by the Government to link academic and research institutions is unlikely to take traffic away from Telecom and the other mainstream telcos because of tough rules that will govern its use.",
+"label": "Sci/Tech"
+},
+{
+"text": "Hyatt to buy AmeriSuites Hyatt Corporation, the hotel operator owned by the Pritzker family, yesterday said it would buy the AmeriSuites chain from Blackstone, the private equity group, in a deal believed to be worth about \\$600m.",
+"label": "Business"
+},
+{
+"text": "Eurozone growth slows slightly in second quarter Growth in the eurozone economy slowed slightly to 0.5 percent in the second quarter and is set to maintain roughly that pace for the rest of the year, the European Commission said Tuesday.",
+"label": "Business"
+},
+{
+"text": "News: Climate Change Could Doom Alaska's Tundra In the next 100 years, Alaska will experience a massive loss of its historic tundra, as global warming allows these vast regions of cold, dry, lands to support forests and other vegetation that will dramatically alter native ecosystems. (Oregon State University press release)",
+"label": "Sci/Tech"
+},
+{
+"text": "Ex-Spain PM Urges Release of Cubans (AP) AP - Former Spanish Prime Minister Jose Maria Aznar on Friday called for the release of dozens of inmates in Cuba, charging they're political prisoners held \"simply because they have a different opinion from the official line.\"",
+"label": "World"
+},
+{
+"text": "Munoz recovering from a concussion KNOXVILLE - Tennessee senior offensive tackle Michael Munoz has been plagued by lingering effects from a concussion suffered last week in the Alabama game.",
+"label": "Sports"
+},
+{
+"text": "US Global's Holmes Mines Commodity Stocks  NEW YORK (Reuters) - Frank Holmes would have loved to  become a boxer, but he hung up his gloves at an early age and  took a jab at money management instead.",
+"label": "Business"
+},
+{
+"text": "US, Russia secretly remove uranium from Uzbekistan (AFP) AFP - The United States and Russia carried out a secret operation last week to remove weapons-grade uranium from the former Soviet republic of Uzbekistan, whose government is facing growing Islamist unrest, the Energy Department announced.",
+"label": "World"
+},
+{
+"text": "Several killed in ethnic clashes in Henan Beijing (AsiaNews/Agencies) - Thousands of police on Monday were guarding a country road outside a village in central China where eyewitnesses said rioting between hundreds of members of the Han ethnic majority and Hui Muslims killed at least seven ",
+"label": "World"
+},
+{
+"text": "Miller, Maier play down talk of rivalry LAKE LOUISE, Alberta - Ken Read says the battle between Bode Miller and Hermann Maier for Alpine skiing World Cup supremacy represents one of the sporting worlds great rivalries.",
+"label": "Sports"
+},
+{
+"text": "Randy Johnson headed to Yankees? He #39;s part of a proposed three-team trade that also includes the Diamondbacks and Dodgers -- a deal reportedly close to being finalized.",
+"label": "Sports"
+},
+{
+"text": "Jazz retiring Stockton #39;s number John Stockton #39;s No. 12 will be retired by the Utah Jazz in November, honoring a point guard who spent his entire 19-year career with the team.",
+"label": "Sports"
+},
+{
+"text": "Solberg Turns Up Heat Petter Solberg turned up the heat on world championship rival Sebastien Loeb with a blistering display on stage six to close in on the Wales Rally GB leader.",
+"label": "Sports"
+},
+{
+"text": "Tennis: Russian starlet Sharapova wows Asia with double title win TOKYO : Asia has fallen in love with Wimbledon champion Maria Sharapova -- and the feeling is mutual. The 17-year-old Russian starlet left here Sunday with two more WTA titles safely packed away in her luggage ",
+"label": "Sports"
+},
+{
+"text": "GDP growth slows in third quarter Economic growth slowed sharply in the third quarter of 2004 to its weakest since the run-up to the Iraq war early last year, reinforcing expectations ",
+"label": "Business"
+},
+{
+"text": "Inside the Mac Revolution Twenty years on, one of the engineers who helped create the Mac writes his memoirs. But programmer Andy Hertzfeld's account is no dry paean to code: It's funny, engaging and deeply human. Wired News interview by Leander Kahney.",
+"label": "Sci/Tech"
+},
+{
+"text": "Microsoft aims to end Apple #39;s sprint on music SAN JOSE, California Steve Jobs has promised that Apple Computer #39;s iPod will become  quot;the Walkman of the 21st century, quot; but for that to happen, Jobs must do what he failed to do in the 1980s: prevail over his old nemesis, Bill Gates, who sees entertainment ",
+"label": "Sci/Tech"
+},
+{
+"text": "Motorola Turns Cell Phone into Credit Card Motorola plans to carry out a trial of cell phones incorporating MasterCard #39;s PayPass contactless payment technology. The cell phones will enable customers to make payments by positioning ",
+"label": "Sci/Tech"
+},
+{
+"text": "Sharon Orders Redeployment of Israeli Troops In Gaza Israeli Prime Minister Ariel Sharon has ordered a redeployment of Israeli troops, away from densely populated areas of the northern Gaza Strip.",
+"label": "World"
+},
+{
+"text": "Army bulldozers flatten refugee homes close to Jewish settlement GAZA CITY, Gaza Strip Witnesses in the Gaza Strip say the Israeli army bulldozed 35 homes in a Palestinian refugee camp today even as the two sides exchanged heavy fire.",
+"label": "World"
+},
+{
+"text": "Jaguar's Coventry plant to close Jaguar's historic Brown's Lane factory in Coventry is to close, Ford has confirmed, with 400 jobs expected to be lost.",
+"label": "World"
+},
+{
+"text": "Medical Records May Go Online Health industry, tech firms, government agencies might collaborate to build a secure database of patient records.",
+"label": "Sci/Tech"
+},
+{
+"text": "Yahoo! plays catch-up as it buys music download service LONDON - Yahoo! is joining the music-download arena with the \\$160m acquistion of Musicmatch, which sees it playing catch-up with established competitors such as Apple #39;s iTunes, Coca-Cola #39;s MyCokeMusic and MSN Music.",
+"label": "Sci/Tech"
+},
+{
+"text": "Gold Medalist Phelps Faces DWI Charges (AP) AP - Six-time Olympic champion Michael Phelps was arrested last week and charged with drunken driving.",
+"label": "Sports"
+},
+{
+"text": "Intel Firms Up Dual-Core Plans Intel Corp. updated its 2005 product plans at its analyst meeting in New York Tuesday, including a timetable for its so-called  quot;Ts, quot; the processor technologies that are beginning to take precedence over clock-speed increases.",
+"label": "Business"
+},
+{
+"text": "St. Louis Cardinals Team Report - September 3 (Sports Network) - A possible National League Division Series preview will take center stage this evening in St. Louis, as the MLB-best Cardinals host the Los Angeles Dodgers for the opener of a their three-game set at Busch Stadium.",
+"label": "Sports"
+},
+{
+"text": "Software maker #39;s chief out PLEASANTON, Calif. - Business software maker PeopleSoft Inc. unexpectedly fired CEO Craig Conway, dumping the feisty leader who engineered the company #39;s dogged resistance to Oracle Corp.",
+"label": "Business"
+},
+{
+"text": "Corruption costs 200bn a year Corruption costs businesses and governments more than 220 billion a year, with a number of oil producing states among the worst offenders, according to an international anti-graft watchdog.",
+"label": "World"
+},
+{
+"text": "Television deal is  #39;irresponsible of the ECB #39; MIKE GATTING has slammed the decision to award live TV rights for all of England #39;s home Test matches to BSkyB as  quot;irresponsible.",
+"label": "Sports"
+},
+{
+"text": "Fratello: No Deal Yet to Coach Grizzlies (AP) AP - Mike Fratello had \"a nice conversation\" with the Memphis Grizzlies about the team's vacant coaching position, but said no deal was in place for him to take over the club Sunday.",
+"label": "Sports"
+},
+{
+"text": "New York Firms Call on VoIP Net phones--and their portable phone numbers--help business avoid RNC crowds.",
+"label": "Sci/Tech"
+},
+{
+"text": "EU urged to  #39;get back to work #39; after three-week limbo Incoming European Commission chief Jose Manuel Barroso on Wednesday urged the EU to  quot;get back to work quot;, ahead of a vote expected to end an unprecedented limbo and let him take office three weeks late.",
+"label": "World"
+},
+{
+"text": "UPDATE 1-Birmingham #39;s Savage banned for three games by FA Birmingham City midfielder Robbie Savage has accepted a three-match ban after being charged by the Football Association (FA) on Monday with violent conduct for an alleged elbowing incident in a match at the weekend.",
+"label": "Sports"
+},
+{
+"text": "Friends site  #39;helps swell divorce rate #39; The popularity of Friends Reunited and other internet websites was today blamed for helping to fuel a rise in divorces. Leading counselling group Relate said the growing number of cases in which people met ",
+"label": "Sci/Tech"
+},
+{
+"text": "Cisco Buys Network Design Firm For \\$34 Million BCN Systems #39; routing architecture will be used to to speed development of converged networks for data, voice, and video. By Networking Pipeline News.",
+"label": "Sci/Tech"
+},
+{
+"text": "Microsoft Desktop Search To Compete with Google Microsoft Desktop Search To Compete with Google\\\\Google is doing a heck of a job! It led to market leaders (MSN Hotmail, Yahoo! Mail) increase the web space on webmail with GMail even before it is launched. Now, they have forced Microsoft to step into the desktop searching market sooner than ...",
+"label": "Sci/Tech"
+},
+{
+"text": "Update 2: FedEx Earnings More Than Triple in Quarter The FedEx Corp., the huge package delivery courier, reported Thursday its second quarter earnings soared due to a strengthening economy and continued growth in overseas and ground shipping.",
+"label": "Business"
+},
+{
+"text": "Q amp;A with Metros GM Nick Sakiewicz com Staff. Following Friday #39;s trade involving the MetroStars and San Jose Earthquakes for defender Jeff Agoos, Metros general maanger Nick Sakiewicz took time to answer questions regarding his newest acquisition.",
+"label": "Sports"
+},
+{
+"text": "Mourinho unhappy with Porto loss Chelsea boss Jose Mourinho was left disappointed after his side were defeated 2-1 by his former club Porto. Mourinho blamed a lack of motivation as Chelsea sunk to their first Champions League defeat of the season.",
+"label": "Sports"
+},
+{
+"text": "Former champs Lleyton Hewitt and Serena Williams move on at US &lt;b&gt;...&lt;/b&gt; Wearing what she described as her  quot;micro-mini quot; outfit, third-seeded Serena Williams advanced to the third round of the US Open on Wednesday with a 6-4, 6-3 victory over fellow American Lindsay Lee-Waters.",
+"label": "Sports"
+},
+{
+"text": "Ailing Serena Crashes Out  VIENNA (Reuters) - Serena Williams looked so ill she could  barley lift her racket at times as she suffered a 7-6, 6-2  defeat to Russian qualifier Alina Jidkova in the second round  of the Linz Open WTA tournament Wednesday.",
+"label": "Sports"
+},
+{
+"text": "Stockholders want more value than its deal with Coors offers Some of the fizz is gone from the proposed merger between Molson and Golden, Colo.-based Adolph Coors Co. Molson has had trouble convincing institutional shareholders the Coors deal ",
+"label": "Business"
+},
+{
+"text": "Blue Jays announcer Cerutti found dead in hotel room John Cerutti, a former Toronto pitcher and current Blue Jays television announcer, was found dead in his hotel room Sunday morning, the team said.",
+"label": "Sports"
+},
+{
+"text": "Apple #39;s Superfast Supercomputer NEW YORK - Apple Computer #39;s machines are known for being great for composing music, editing video and, of course, downloading music.",
+"label": "Sci/Tech"
+},
+{
+"text": "Marsh general counsel to resign amid probe NEW YORK - The general counsel for broker Marsh  amp; McLennan Cos. will step down next week as the embattled firm seeks to clean house and reform its business practices, the Wall Street Journal reported on Friday.",
+"label": "Business"
+},
+{
+"text": "Three Palestinians die in Gaza clashes GAZA CITY: Three Palestinians, one a local Hamas leader, were killed yesterday as Israel pressed a major offensive in the Gaza Strip and imposed a watertight closure on the Palestinian territories ahead of the Jewish New Year.",
+"label": "World"
+},
+{
+"text": "Stocks Move Lower As Oil Prices Rise NEW YORK - Oil prices climbed close to \\$51 per barrel and pushed stocks slightly lower Tuesday as investors worried that rising energy costs would dampen a widely expected fourth quarter rally.    Wall Street was uneasy but not panicky as a barrel of light crude was quoted at a record high \\$50.80, up 89 cents, on the New York Mercantile Exchange...",
+"label": "World"
+},
+{
+"text": "Purdue suffers first loss of season to Wisconsin, 20-17  quot;Everybody on the sideline was saying,Dont get complacent, the game is not over, quot; sophomore linebacker George Hall said.",
+"label": "Sports"
+},
+{
+"text": "China air show to begin Thirty-two countries and regions are scheduled to participate in the Fifth China International Aviation and Aerospace Exhibition Monday in Zhuhai, China.",
+"label": "Sci/Tech"
+},
+{
+"text": "Wanted: Simple home security How much data can fit through broadband pipes? The next big broadband battle is going to turn on that very question. With data speeds increasing and monthly charges now within range of most family budgets, you ",
+"label": "Sci/Tech"
+},
+{
+"text": "Alt-School Gives Students Second Chance (AP) AP - This chemistry lesson takes a strong stomach: It starts with grinding up fish in a big blender.",
+"label": "Sci/Tech"
+},
+{
+"text": "Arroyo mulls declaring  #39;state of fiscal crisis #39; MANILA -- President Arroyo ordered Monday a study into the proposal of Albay Rep. Jose Maria Salceda to declare the Philippines in a  quot;state of fiscal crisis quot;.",
+"label": "Business"
+},
+{
+"text": "Afghan Given Death in Reporters' Murders (AP) AP - An Afghan court sentenced a man to death Saturday for the 2001 killing of three foreign journalists and an Afghan colleague who were pulled from their cars, robbed and shot as they rushed to cover the collapse of the Taliban.",
+"label": "World"
+},
+{
+"text": "Iraqi Minister Says Polls Doable Despite Violence  LONDON (Reuters) - Iraqi Foreign Minister Hoshiyar Zebari  said Monday the interim government is not underestimating the  security threat to planned national elections on Jan. 30 and  believes the poll can take place.",
+"label": "World"
+},
+{
+"text": "List of Foreigners Taken Hostage in Iraq (AP) AP - Insurgents in Iraq have kidnapped dozens of people in their campaign to drive out coalition forces and hamper reconstruction:",
+"label": "World"
+},
+{
+"text": "Bloody Sunday inquiry nearing end The Bloody Sunday inquiry enters its final phase as  the counsel to the inquiry begins his closing speech.",
+"label": "World"
+},
+{
+"text": "MIT Aims to Make Computing Easy Professor wants to redesign chip software and hardware for the mobile age, creating chips that can power chameleon devices.&lt;br&gt;&lt;FONT face=\"verdana,MS Sans Serif,arial,helvetica\" size=\"-2\" color=\"#666666\"&gt;&lt;B&gt;-Leslie Walker&lt;/b&gt;&lt;/font&gt;",
+"label": "Sci/Tech"
+},
+{
+"text": "Panel Wants People, Not Robots, To Fix Hubble That #39;s the recommendation from a panel from the National Academy of Sciences concerning a mission to the Hubble Space Telescope.",
+"label": "Sci/Tech"
+},
+{
+"text": "Blue Jays Snap Streak Toronto ends its five-game losing streak with a 6-4 win over the Yankees after a power outage delays the start for an hour Sunday.",
+"label": "Sports"
+},
+{
+"text": "Co-Op Puts A New Twist On Open Source (TechWeb) TechWeb - Eight companies hope to cut costs and improve quality by sharing software code.",
+"label": "Sci/Tech"
+},
+{
+"text": "Woods beset by ifs and maybes Tiger Woods may not play in the American Express World Golf Championship, which starts at Mount Juliet, near Kilkenny, today and he may get married next week in Barbados.",
+"label": "Sports"
+},
+{
+"text": "Apple Reports Fourth Quarter Results For its fiscal 2004 fourth quarter, Apple posted a net profit of \\$106 million, or \\$.26 per diluted share. These results compare to a profit of \\$44 million, or \\$.12 per share, a year ago. Revenue for the quarter was \\$2.35 billion, up 37 from a year ago. Gross margin was 27, up from 26.6 last year. International sales accounted for 37 of revenue. Oct 13",
+"label": "Sci/Tech"
+},
+{
+"text": "Italians Oppose Marriage, Adoption for Gays (Reuters) Reuters - Italians largely oppose gay marriage with\\61 percent rejecting homosexual wedlock and even more opposed\\to adoption for same-sex couples, a poll on Sunday showed.",
+"label": "World"
+},
+{
+"text": "CORRECTED: Symantec to Buy Veritas for \\$13.5 Billion Symantec Corp. (SYMC), the top global security software maker, on Thursday said it will buy Veritas Software Corp. (VRTS) for \\$13.5 billion, expanding ",
+"label": "Business"
+},
+{
+"text": "Europe leverage seems limited in Mideast As the Palestinians #39; main donor and Israel #39;s top commercial partner, Europe could be a major player in pushing to restart the stalled Middle East peace process in the post-Yasser Arafat era.",
+"label": "World"
+},
+{
+"text": "Kathmandu Under Curfew After Violent Protests Against Killing of &lt;b&gt;...&lt;/b&gt; The Nepalese capital Kathmandu is under a curfew, which the government imposed after the city erupted in violent protests against the killing of 12 Nepalese workers in Iraq.",
+"label": "World"
+},
+{
+"text": "Iran agrees to a freeze on nuke programs Dropping a last-minute demand to keep using centrifuges, Iran agreed yesterday to suspend its nuclear programs and won some additional concessions from Europe for a resolution ",
+"label": "World"
+},
+{
+"text": "After Wait, Google Set for Market Debut NEW YORK (Reuters) - Shares of Google Inc. will make their Nasdaq stock market debut on Thursday after the year #39;s most anticipated initial public offering priced far below initial estimates, raising \\$1.67 billion. ",
+"label": "Business"
+},
+{
+"text": "The start of something big? CNET News.com's Michael Kanellos says start-ups and their innovative ideas are the lifeblood of Silicon Valley.",
+"label": "Sci/Tech"
+},
+{
+"text": "EU braces for revolution if Turkey joins club Admitting mainly Muslim Turkey into the European Union would mark nothing short of a cultural, economic and political revolution for Europe, analysts say.",
+"label": "World"
+},
+{
+"text": "No. 2 Internet service provider buying Classmates Online Classmates Online, the Renton company that built a business around uniting high-school alumni, is being acquired by Internet service provider United Online for \\$100 million in cash.",
+"label": "Business"
+},
+{
+"text": "Clinton Gets Hearty Campaign 'Welcome Back' (Reuters) Reuters - Former U.S. President Bill\\Clinton, just seven weeks after heart surgery, received a\\rousing welcome back to the campaign trail on Monday at a rally\\to rev up core Democratic support before next week's election.",
+"label": "World"
+},
+{
+"text": "A premier performance by Ware in Georgia debut ATHENS, Ga. -- Danny Ware rushed for 135 yards and three touchdown in his college debut, leading No. 3 Georgia to a 48-28 victory over Division 1-AA Georgia Southern yesterday.",
+"label": "Sports"
+}
+],
+"dev": [
+{
+"text": "Shopping Cart Abandonment Shopping Cart Abandonment\\\\A thread at Search Engine Watch forums named Let's talk about shopping cart conversion discusses real people's experience with shopping cart abandonment rates. As mentioned in the thread, on average, the \"75 of online shoppers abandon their shopping carts\". What is even more shocking is that \"47 of ...",
+"label": "Sci/Tech"
+},
+{
+"text": "Arrested Qaida terrorist an India-born WASHINGTON: Abu Musa al-Hindi, one of the principle terror suspects charged with plotting to attack US financial institutions, has been identified as India-born Dhiren Barot. British police on Tuesday charged Barot, 32, of gathering surveillance plans of ...",
+"label": "World"
+},
+{
+"text": "A Biotech Company's Aggressive Move Backfires The suspension of Chiron's flu vaccine has not only cost it three-quarters in expected profits, but also some credibility.",
+"label": "Business"
+},
+{
+"text": "Economy builds steam in KC Fed district The economy continued to strengthen in September and early October in the Great Plains and Rocky Mountain regions covered by the Tenth Federal Reserve District, the Federal Reserve Bank of Kansas City said Wednesday.",
+"label": "Business"
+},
+{
+"text": "Spitzer: Marsh may face more than \\$500 million penalty NEW YORK New York Attorney General Eliot Spitzer says the price for settling state charges of collusion and bid rigging by the nation #39;s largest insurance broker could be  quot;far higher quot; than 500 (m) million dollars.",
+"label": "Business"
+},
+{
+"text": "Terrified neighbours see dog kill owner A 39-year-old woman was savaged to death by her pet bull mastiff dog yesterday. Terrified elderly neighbours could only look on as the fatal attack, which started inside Carol Leeanne Taylor #39;s home in the Dunedin suburb of Caversham, spilled on to the ...",
+"label": "World"
+},
+{
+"text": "Arafat #39;s condition deteriorating Senior Palestinian officials, after consulting with doctors treating Yasser Arafat and visiting his hospital, said Tuesday his condition had deteriorated dramatically ",
+"label": "World"
+},
+{
+"text": "Thursday #39;s previews Points: With no hurricanes approaching Hattiesburg, Southern Miss finally gets to play at home. Traveling, however, hasn #39;t bothered the Golden Eagles, who lead the nation in turnover margin (3.",
+"label": "Sports"
+},
+{
+"text": "Chip sales boost Samsung by 46 SAMSUNG Electronicss quarterly profit jumped 46 per cent from a year ago on strong memory chip sales, but fell 14 per cent from the previous quarter as prices of flat screens for TV and computers fell.",
+"label": "Business"
+},
+{
+"text": "Aussies spy for Jakarta: ex-agent Australian spies are revealing secrets to Indonesia, according to one former spy, amid revelations that Indonesian agents bugged politicians, the military and Australia #39;s embassy in Jakarta.",
+"label": "World"
+},
+{
+"text": "McNair inactive; Volek starts against Colts Billy Volek made his fourth start of the season for the Titans and threw for 269 yards with three scores on 21-of-35 passing in a 51-24 loss to the Colts.",
+"label": "Sports"
+},
+{
+"text": "Pope Visit Leaves Lourdes with Hefty Deficit  PARIS (Reuters) - Pope John Paul's visit to Lourdes last  weekend left the Roman Catholic shrine with a 1.2 million euro  (\\$1.47 million) deficit because pilgrims keen to get good seats  at his mass rushed past collection boxes.",
+"label": "World"
+},
+{
+"text": "Nigeria 3rd Most Corrupt Country - TI It may take 146 years for Nigeria to wipe out corruption from its system going by the latest report by Transparency International (TI) which gave the country the third position among the most corrupt countries of the world.",
+"label": "World"
+},
+{
+"text": "CONFUSION OVER BUTCHER AIDE #39;S  #39;CAPTURE #39; Iraqi government forces carried out a series of assaults in Saddam Hussein #39;s home region yesterday that were followed by conflicting reports that his former right-hand man was captured.",
+"label": "World"
+},
+{
+"text": "Malaysia #39;s Sea Turtles Are in Trouble KUALA LUMPUR, Malaysia - Several species of sea turtles in Malaysia could vanish in a few years, largely due to illegal poaching of the creatures and their eggs, scientists warned on Wednesday. ",
+"label": "Sci/Tech"
+},
+{
+"text": "Plasma TVs Lead Gadget Price Declines  NEW YORK (Reuters) - Falling prices in September for plasma  televisions and digital cameras sparked the biggest monthly  decline in U.S. consumer electronics prices in five months,  according to an industry study prepared for Reuters.",
+"label": "Sci/Tech"
+},
+{
+"text": "PayPal Says Business Nearly Back To Normal PayPal, the popular payment method on auction site eBay Inc., said Wednesday the technical problems that left many users unable to access their accounts or conduct business appear to over.",
+"label": "Sci/Tech"
+},
+{
+"text": "Alaska Brown Bears Gather for Annual Salmon Feast Each summer, the falls at McNeil River turn into a mosh pit of bears. Instead of thumping music, it's the sound of salmon slapping their way up the falls at the McNeil River State Game Sanctuary that sends the bears into a fishing frenzy.",
+"label": "Sci/Tech"
+},
+{
+"text": "Microcell shares hit new high as Rogers seeks federal OK for &lt;b&gt;...&lt;/b&gt; TORONTO (CP) - Microcell Telecommunications #39; buoyant shares hit a new high Thursday amid heightened expectations of a bidding war between Telus Corp.",
+"label": "Business"
+},
+{
+"text": "Iran Wants Syria Cooperation in Face of U.S. Pressure  DAMASCUS (Reuters) - Iranian President Mohammad Khatami  said on Thursday Syria and Iran had to cooperate for the sake  of peace in the Middle East and in the face of pressure from  the United States.",
+"label": "World"
+},
+{
+"text": "UPDATE 2-Ferdinand, Rooney and Campbell back for England Rio Ferdinand, Wayne Rooney and Sol Campbell returned to the England fold as coach Sven-Goran Eriksson named his squad on Sunday for World Cup qualifiers against Wales and Azerbaijan.",
+"label": "Sports"
+},
+{
+"text": "The New iMac: simpler, more user-friendly THE LATEST version of Apple #39;s iMac wowed Paris , but it takes its cues from the 1980s. Apple looked to the past to find the future of its iconic iMac desktop computer, the latest version of which was unveiled recently in Paris.",
+"label": "Sci/Tech"
+},
+{
+"text": "worm has turned for teen virus king Sven Jaschan, 18, from Germany, faces up to five years in prison for writing and spreading the Sasser and Netsky worms, said to have cost businesses around the world millions of pounds.",
+"label": "Sci/Tech"
+},
+{
+"text": "Pirates Hotwire  #39;Grand Theft Auto: San Andreas #39; Both Rockstar Games and Microsoft are in pursuit of the gaming robbers. While Microsoft has made it clear that it is  quot;aggressively pursuing the source of the illegal act, quot; Rockstar has ",
+"label": "Sci/Tech"
+},
+{
+"text": "Manufacturing Growth Slowing This has been another month of growth for manufacturing and the economy in general, although the latest monthly report on business from the Institute for Supply Management (ISM) indicates that the rate of manufacturing growth is slowing down.",
+"label": "Business"
+},
+{
+"text": "Family Crisis in Divided Sudan His gut was twisted into a knot, his head pounding, his leg searing in pain from a gunshot wound. Ibrahim Mohamed Doud, a village elder in an African tribe, remembers the day an ",
+"label": "World"
+},
+{
+"text": "JBoss unveils workflow engine This fourth priority #39;s main focus has been enterprise directories as organizations spawn projects around identity infrastructure.",
+"label": "Sci/Tech"
+},
+{
+"text": "Brazilian ace dies Brazilian defender Serginho today died in hospital after collapsing during a match between his team Sao Caetano and Sao Paulo. Serginho fell to the ground in the 60th minute with the ball at the other end of the pitch.",
+"label": "Sports"
+},
+{
+"text": "Eisner rules out taking job on Disney board LOS ANGELES Michael Eisner, the chief executive of Walt Disney, has said that he does not plan to remain on the board or become chairman when he retires in two years.",
+"label": "Business"
+},
+{
+"text": "Sign on to a new Microsoft standard? Why certainly, we #39;d love ... &lt;b&gt;...&lt;/b&gt; So much for Microsoft #39;s Can-Spam proposal. Now you can add America Online to the growing list of ventures who #39;ve rejected a Microsoft-patent-encumbered and lawsuit-challenged anti-spam standard, Sender ID.",
+"label": "Sci/Tech"
+},
+{
+"text": "Nocioni, Deng Lead Bulls Over Celtics (AP) AP - Andres Nocioni had 20 points and 12 rebounds, and Luol Deng added 18 points to lead the Chicago Bulls to a 95-92 preseason victory over the Boston Celtics on Tuesday night.",
+"label": "Sports"
+},
+{
+"text": "Secretary of State Powell in China for Talks on North Korea Secretary of State Colin Powell is in China as part of a three-nation Asian tour to try to restart multi-party talks on North Korea #39;s nuclear program.",
+"label": "World"
+},
+{
+"text": "Ailing Arafat Heads to Paris for Treatment Description: A French plane departs Amman, Jordan, carrying Palestinian President Yasser Arafat to Paris for urgent medical treatment.",
+"label": "World"
+},
+{
+"text": "Canadian Tire #39;s third-quarter profit jumps 17.2 per cent to \\$69.4 &lt;b&gt;...&lt;/b&gt; TORONTO (CP) - Canadian Tire reported a 17 per cent jump in quarterly earnings on Thursday, boosted by higher sales and improved business at the financial services business.",
+"label": "Business"
+},
+{
+"text": "Rooney apologises for Madrid display MADRID, Nov19 (SW) - A display categorised as Thuggish by some pundits led to England star Wayne Rooney apologising to head coach Sven-Goran Eriksson after Wednesdays 1-0 defeat in Madrid.",
+"label": "Sports"
+},
+{
+"text": "Version 2.0 of Linux Standard Base specs now available The latest Linux Standard Base specifications are now out, allowing open-source vendors and developers to maintain easy portability and compatibility among applications for Linux.",
+"label": "Sci/Tech"
+},
+{
+"text": "NatFoods looks at opportunities in new products National Foods is using a strategy of new product releases to reinvigorate a stagnating dairy sector. Picture:Michele Mossop. National Foods, fresh from posting a 14 per cent rise in profit ",
+"label": "Business"
+},
+{
+"text": "KPMG reveals US critiques of itself One of the biggest US accounting firms has disclosed voluntarily a possible violation of conflict-of-interest rules. KPMG, one of the four largest US accounting firms, said ",
+"label": "Business"
+},
+{
+"text": "Time Warner unit unveils  quot;Pinpoint Shopping quot; NEW YORK (CBS.MW) - America Online on Monday unveiled a new service under its inStore brand that offers shoppers the ability to quickly compare features and prices of rival products.",
+"label": "Business"
+},
+{
+"text": "Hewitt Survives Saulnier; Agassi Rolls Past Mathieu After sweeping through his first two opponents, Lleyton Hewitt finally found a challenge at the Legg Mason Tennis Classic. And it almost took the No.",
+"label": "Sports"
+},
+{
+"text": "Trinidad returns for another bonanza There is no title on the line for the meeting of the former world champions Felix  quot;Tito quot; Trinidad and Ricardo Mayorga at New York #39;s Madison Square Garden tonight, but there seems to be genuine enmity between the fighters and a near sell-out crowd is ",
+"label": "Sports"
+},
+{
+"text": "Artest Testifies About Basketball Brawl (AP) AP - Ron Artest took the witness stand and described, in his words, one of the worst brawls in NBA history. Teammates Stephen Jackson, Jermaine O'Neal and Anthony Johnson did the same, and a union attorney and one of O'Neal's bodyguards also testified.",
+"label": "Sports"
+},
+{
+"text": "NHL, Union to Resume Talks Next Week The NHL and the players #39; association will resume talks next week in an effort to end the 78-day lockout and save the season. After nearly three months of silence on and off the ice ",
+"label": "Sports"
+},
+{
+"text": "Blogger father resigns from Google Search company Google Inc. has lost the services of Evan Williams, father of the Blogger Web logging service.",
+"label": "Sci/Tech"
+},
+{
+"text": "Oates: Favre delivers on hype GREEN BAY - It was clear from the non-stop Brett Favre hype that aired on ABC and its little brother, ESPN, all weekend the television network had pulled some strings with the NFL to get Favre #39;s 200th consecutive start on  quot;ABC #39;s Monday Night Football.",
+"label": "Sports"
+},
+{
+"text": "Red Bull buys Jaguar Austrian energy drink makers Red Bull said on Monday they had bought the Jaguar Formula 1 motor racing team from Ford who withdrew the team after this year #39;s world championship.",
+"label": "Sports"
+},
+{
+"text": "Dollar Edges Higher as Greenspan Awaited (Reuters) Reuters - The dollar posted modest gains on\\Wednesday as investors awaited comments from the Federal\\Reserve chief that are expected to point to further rises in\\U.S. interest rates this year.",
+"label": "Business"
+},
+{
+"text": "Colombia Blows Up Stockpiled Land Mines (AP) AP - Colombia's armed forces blew up 6,800 stockpiled land mines Sunday as President Alvaro Uribe, Queen Noor of Jordan and dozens of mine blast victims watched on large screens, launching an effort to eventually rid the country of the weapons.",
+"label": "World"
+},
+{
+"text": "Three UN Hostages Freed in Afghanistan Three foreign UN workers held hostage in Afghanistan were freed unharmed Tuesday, almost four weeks after they were abducted at gunpoint on the streets of the capital Kabul, the United Nations said.",
+"label": "World"
+},
+{
+"text": "English Premiership round-up London - Manchester City held fierce crosstown rivals Manchester United to a 0-0 draw on Sunday, keeping the Red Devils eleven points behind leaders Chelsea.",
+"label": "Sports"
+},
+{
+"text": "Pakistan #39;s Musharraf says bin Laden alive, but hide-out unknown ISLAMABAD : Pakistan President Pervez Musharraf said he believed Al-Qaeda leader Osama bin Laden was alive but that he was unsure where he was hiding.",
+"label": "World"
+},
+{
+"text": "Ex-chairman cashes in as Martha Stewart shares recover Jeffrey Ubben, former chairman and the largest outside shareholder of Martha Stewart Living Omnimedia Inc., sold more than half his stake in the company this month as shares reached their highest price in more than two years.",
+"label": "Business"
+},
+{
+"text": "He's running with it When NBC first called Bob Neumeier, he was asked if he'd be willing to work on Olympics wrestling and rowing coverage in Athens.  quot;I was flattered and grateful for the opportunity, quot; he said. He was willing to learn the nuances of those sports at the Olympic level and start mastering the pronunciation of hundreds of new names.",
+"label": "Sports"
+},
+{
+"text": "Syrian, Algerian arrested over Madrid train bombings A Syrian and an Algerian have been arrested in Spain in connection with the March 11 Madrid train bombings, the Spanish interior ministry said. ",
+"label": "World"
+},
+{
+"text": "Oil Up on Worries of Output Shut by Ivan World oil prices rose on Thursday on worries about oil production shut by Hurricane Ivan and a new storm that could delay imports from entering the Gulf of Mexico.",
+"label": "Business"
+},
+{
+"text": "Concept virus works on AMD64 Virus writers have created a proof-of-concept file infector specifically for machines that run Advanced Micro Devices Inc. #39;s AMD64 64-bit processors, antivirus companies said yesterday.",
+"label": "Sci/Tech"
+},
+{
+"text": "Fans  #39;disgusted #39; by Tigers #39; fate ATLANTA -- After watching Auburn University #39;s football team finish a perfect regular season yet remain on the outside of the national championship picture, Doyle King is experiencing a familiar and not-so-welcome feeling these days.",
+"label": "Sports"
+},
+{
+"text": "United Missing Key Duo Manchester United will be without key duo Rio Ferdinand and Roy Keane for their Champions League tie away to Sparta Prague. Sir Alex Ferguson #39;s side travel to the Czech capital looking to put their inconsistent ",
+"label": "Sports"
+},
+{
+"text": "Discipline of writing helped Dallaire beat Rwanda demons that haunted him (Canadian Press) Canadian Press - OTTAWA (CP) - Romeo Dallaire has stepped back from the edge of the abyss.",
+"label": "World"
+},
+{
+"text": "October retail sales predicted to show strength A Merrill Lynch report out Friday is optimistic about stronger retail sales in October compared to a weak September. The report also singles out as a strong performer Kohl #39;s Department Stores, which entered ",
+"label": "Business"
+},
+{
+"text": "Nortel to lay off 10 of staff Nortel plans to cut about 3,500 jobs, most of them affecting middle managers, in a move to save \\$450 million to \\$500 million per year.",
+"label": "Sci/Tech"
+},
+{
+"text": "UN Security Council adopts watered-down Sudan resolution UNITED NATIONS -- The UN Security Council on Saturday adopted a resolution threatening to  quot;consider quot; sanctions against Sudan and establishing a UN commission of inquiry to investigate atrocities in Darfur, Sudan, and to determine whether Sudanese ",
+"label": "World"
+},
+{
+"text": "New Home Sales Surge, Durable Goods Up Orders to US factories for big-ticket durable goods edged up 0.2 percent in September while sales of new homes surged to the third highest monthly level on record.",
+"label": "Business"
+},
+{
+"text": "Microsoft to Offer Cheaper, Limited Windows in Russia It #39;s part of the company #39;s effort to beat back Linux and piracy efforts in developing technology markets. Microsoft says it will offer a simplified and lower-priced version of Windows XP in Russia, matching ",
+"label": "Sci/Tech"
+},
+{
+"text": "Tiny memory card for mobiles launched Samsung has developed a cut-down version of the multimedia memory card (MMC) that it hopes to see deployed in future mobile phones.",
+"label": "Sci/Tech"
+},
+{
+"text": "Russia #39;s Putin Calls US Policy  #39;Dictatorial #39; Russian President Vladimir Putin accused the United States on Friday of pursuing a dictatorial foreign policy and said mounting violence could derail progress toward bringing peace and democracy to Iraq.",
+"label": "World"
+},
+{
+"text": "China: United Nations  quot;not a board of directors quot; BEIJING, Sept. 23 (Xinhuaent) -- Foreign Ministry spokesman Kong Quan said in Beijing on Tuesday that the UN Security Council was not a board of directors and its composition should not be decided ",
+"label": "World"
+},
+{
+"text": "St. John's holds off Xaverian An exciting Thanksgiving Day game between St. John's Prep and Xaverian is something that never changes.",
+"label": "Sports"
+},
+{
+"text": "Nikkei Poised to Fall for 8th Day Tokyo #39;s Nikkei average fell 0.46 percent by late Tuesday, setting the stage for an eighth straight day of losses after oil prices topped \\$50 a barrel, fanning concerns about Japan Inc #39;s prospects.",
+"label": "Business"
+},
+{
+"text": "Extinction May Have Trickle-Down Effect WASHINGTON (AP) -- Conservationists concerned about the extinction of plants and animals may be overlooking the danger to thousands of other species that depend on the threatened ones.    A team of researchers led by Lian Pin Koh of the National University of Singapore studied some 12,200 plants and animals considered threatened or endangered, and calculated that an additional 6,300 dependent insects, mites, fungi and other species could be considered endangered...",
+"label": "Sci/Tech"
+},
+{
+"text": "Office Depot ousts chairman Office Depot Inc., the world #39;s No. 2 office-supplies retailer, ousted Chairman and Chief Executive Officer Bruce Nelson after sales declined at its older stores in 14 of 16 quarters.",
+"label": "Business"
+},
+{
+"text": "Beyond the bag This summer, the grower-owners of Ocean Spray voted to remain independent. Now, the cooperative is pushing a plan of attack to survive against much bigger rivals.",
+"label": "Business"
+},
+{
+"text": "US Senate OK #39;s bill that allows Florida taxpayers to deduct sales &lt;b&gt;...&lt;/b&gt; An estimated 2.5 million Floridians may save an average of \\$300 annually by deducting the sales taxes they pay from their federal income tax returns.",
+"label": "Business"
+},
+{
+"text": "Geiberger Holds On For First Victory Since 1999 GREENSBORO, NC -- Golfer Brent Geiberger today cruised to a two-shot victory in the Chrysler Classic of Greensboro, five years after his only victory on the PGA Tour.",
+"label": "Sports"
+},
+{
+"text": "Five players among 10 men facing assault charges in NBA brawl (AFP) AFP - Prosecutors issued assault and battery charges against five National Basketball Association players and five spectators who fought in a November 19 brawl.",
+"label": "Sports"
+},
+{
+"text": "ATTACKS IN IRAQ: 2 bombs kill 5 in Baghdad On the eve of the Muslim holy month of Ramadan, Iraq #39;s most-feared terrorist group claimed credit for setting off two bombs in the heavily fortified ",
+"label": "World"
+},
+{
+"text": "Panthers Defeat 49ers 37-27 (AP) AP - With their punter kicking field goals and their defense kicking Tim Rattay all over the field, the Carolina Panthers doubled their win total.",
+"label": "Sports"
+},
+{
+"text": "Humans May Have Fewer Genes Than Thought A new and perhaps final report from the international consortium of laboratories that decoded the human genome has revised the number of expected human genes sharply downward.",
+"label": "Sci/Tech"
+},
+{
+"text": "COE PLANS SCOTS VISIT London 2012 Olympic bid chairman Sebastian Coe will visit Scotland next month to discuss the benefits of helping to stage the Games with the Scottish Executive.",
+"label": "Sports"
+},
+{
+"text": "Microsoft #39;s Xbox sequel  #39;Halo 2 #39; goes on sale at midnight The company says thousands of retailers across the country are planning  quot;midnight madness quot; sales for eager gamers. Microsoft says it has 1.5 million pre-orders for the sequel to the popular  quot;Halo quot; game, which sells for \\$50.",
+"label": "Sci/Tech"
+},
+{
+"text": "Cable break interrupts Internet in Guyana (AFP) AFP - Thousands of Guyanese were without Internet service for most of Thursday because the Americas II submarine fiber-optic cable broke in French Guiana, authorities said.",
+"label": "Sci/Tech"
+},
+{
+"text": "Hungry world 'must eat less meat' People will need to eat more vegetables and less meat because of dwindling water supplies, scientists say.",
+"label": "Sci/Tech"
+},
+{
+"text": "A Daily Look at U.S. Military Iraq Deaths (AP) AP - As of Wednesday, Oct. 20, 2004, at least 1,103 members of the U.S. military have died since the beginning of the Iraq war in March 2003, according to an Associated Press count. At least 846 died as a result of hostile action, according to the Defense Department. The figures include three military civilians.",
+"label": "World"
+},
+{
+"text": "Falling Bond Yields: Not To Worry What #39;s up with the bond market? As the Federal Reserve has steadily increased short-term interest rates over the past few months, investors in the bond-trading pits have pushed long-term yields down.",
+"label": "Business"
+},
+{
+"text": "PBHG Funds, Founders Settle Charges (Reuters) Reuters - The founders of the PBHG mutual funds\\agreed to pay  #36;160 million in restitution and civil fines, and\\to accept a lifetime ban from the securities industry to\\resolve allegations they facilitated improper trading in the\\funds, regulators said on Wednesday.",
+"label": "Business"
+},
+{
+"text": "The Hitman is Back November 04, 2004 - The Hitman franchise is alive and growing, as Eidos announced today the fourth game in the series, Hitman: Blood Money, is in development at Io-Interactive.",
+"label": "Sci/Tech"
+},
+{
+"text": "Food supply running low for space station crew CAPE CANAVERAL, Fla. - Food is running so low aboard the international space station the two crewmen have been instructed to cut back on calories, at least until a Russian supply ship arrives in a little over two weeks, NASA said Thursday.",
+"label": "Sci/Tech"
+},
+{
+"text": "Wireless tech gets workout at RNC Protesters and federal agents are using new tools to communicate with cohorts during the Republican National Convention.",
+"label": "Sci/Tech"
+},
+{
+"text": "Running battles on Athens streets POLICE used tear gas today to disperse hundreds of demonstrators who lit fires, smashed windows and beat up journalists as they marched through Athens to protest a visit by US Secretary of State Colin Powell.",
+"label": "Sports"
+},
+{
+"text": "Safeway Sets Outlook Below Estimates (Reuters) Reuters - Grocery chain operator Safeway Inc.\\ on Wednesday set a 2005 earnings per share goal that\\was below analysts' expectations, with added marketing expenses\\and lingering impact from a strike at its Vons stores weighing\\on profits.",
+"label": "Business"
+},
+{
+"text": "RELAXED MOOD HELPS HENMAN French Masters Series defending champion Tim Henman believes the lack of pressure will allow him to go far again in the Paris event this year.",
+"label": "Sports"
+},
+{
+"text": "Pfizer Says Bextra, Heart Problems Linked Pfizer Inc. on Friday said two small clinical trials showed heart bypass surgery patients taking Bextra, an anti-inflammatory in the same class as the recently withdrawn ",
+"label": "Business"
+},
+{
+"text": "Hall and de Bruyn grind down India KANPUR, India -- Opener Andrew Hall and debutant Zander de Bruyn defied India #39;s spin attack on Sunday to put South Africa in command of the first Test match in Kanpur.",
+"label": "Sports"
+},
+{
+"text": "Palestinians say US destroys hope over settlements RAMALLAH: Palestinians yesterday accused the United States of destroying hopes of negotiations with Israel for a Palestinian state, after the US signalled it could accept some growth of settlements in the West Bank.",
+"label": "World"
+},
+{
+"text": "Baghdad Green Zone targeted by car bombers At least three people have been killed and more than 40 wounded after twin suicide car bombs blew up outside a police station near Baghdad #39;s Green Zone.",
+"label": "World"
+},
+{
+"text": "Russia ties France 1-1 in Fed Cup final Anastasia Myskina helped Russia tiedefending champion France 1-1 in their Fed Cup final, beating Moscow-born Tatiana Golovin 6-4 and 7-6 in the second singles on Saturday.",
+"label": "Sports"
+},
+{
+"text": "Chen cautious over China change Taiwan's President Chen Shui-bian says China's leadership changes are  unlikely to signal a big policy shift.",
+"label": "World"
+},
+{
+"text": "CA to acquire Netegrity for \\$430M The acquisition will allow CA to consolidate its position in the market for user authentication, access control and administration products, CEO Kenneth Cron said this morning.",
+"label": "Sci/Tech"
+},
+{
+"text": "Honour memory of Rabin, Arafat - Mbeki The leaders and people of Israel and Palestine should honour the memories of Yasser Arafat and slain Israeli Prime Minister Yitzhak Rabin by acting practically to achieve the  quot;peace of the brave quot;, President Thabo Mbeki said on Friday.",
+"label": "World"
+},
+{
+"text": "U.S. Begins Criminal Probe on Riggs-Paper  WASHINGTON (Reuters) - The U.S. Justice Department has  begun a criminal investigation into possible wrongdoing at  Riggs Bank, The Washington Post reported on Saturday, citing a  letter from the U.S. attorney for the District of Columbia to  federal bank regulators.",
+"label": "Business"
+}
+],
+"test": [
+{
+"text": "New Overtime Rules Take Effect New Bush administration rules that scale back overtime eligibility for white-collar workers took effect on Monday over protests that they would slash paychecks at a time of economic uncertainty.",
+"label": "Business"
+},
+{
+"text": "New Grand Theft Auto Video Game Heads to Xbox (Reuters) Reuters - Video game hit \"Grand Theft Auto:\\San Andreas\" is coming to the Xbox and personal computer\\platforms next June, publisher Take-Two Interactive Software\\Inc. said on Thursday.",
+"label": "Sci/Tech"
+},
+{
+"text": "Putin Heads for Turkey in Landmark Visit Between Former Foes Russian President Vladimir Putin is making a two-day official visit to Turkey, the first by any Russian leader in 32 years. Mr. Putin is expected to sign several economic cooperation agreements ",
+"label": "World"
+},
+{
+"text": "Exeter uni cans chemistry department In a move that has been dubbed as  #39;disastrous #39; by the Royal Society of Chemistry, Exeter University is to drop the teaching of chemistry as a subject.",
+"label": "Sci/Tech"
+},
+{
+"text": "Financial planning an option for Coles COLES Myer Ltd chief executive Mr John Fletcher yesterday said he was interested in branching out from the retail business into financial planning services for the groups customers.",
+"label": "Business"
+},
+{
+"text": "Owen tastes Real joy ENGLAND striker Michael Owen could not have been a happier man after finally finding the net for Real Madrid today. The former Liverpool man had fallen short for his new club and had suffered the brickbats ",
+"label": "Sports"
+},
+{
+"text": "Italian taken hostage in Iraq: report (AFP) AFP - An Italian national working for a British non-governmental organisation has been taken hostage in Iraq, the Italian news agency ANSA reported, quoting Italian intelligence sources.",
+"label": "World"
+},
+{
+"text": "Israel's Sharon Survives Two No-Confidence Votes (Reuters) Reuters - Prime Minister Ariel Sharon survived\\two no-confidence votes in Israel's parliament on Monday,\\clinging to power as he seeks to push through a disputed plan\\for withdrawal from some occupied territory.",
+"label": "World"
+},
+{
+"text": "US confirms commitment to defend Taiwan Mr Powell says that while the US recognises the one-China policy, it will offer to assist Taiwan if it is threatened. A US State Department spokesman says the issue came up during talks with China #39;s visiting military chief, General Liang Guanglie.",
+"label": "World"
+},
+{
+"text": "Israeli Tanks Surge Into Gaza Refugee Camp -Witnesses  GAZA (Reuters) - A column of Israeli tanks surged into the  heart of the Jabalya refugee camp in the northern Gaza Strip on  Thursday as the army broadened its sweep for militants behind a  deadly rocket attack on an Israeli town.",
+"label": "World"
+},
+{
+"text": "Parliament passes no-confidence bid NAIROBI, Kenya -- Somalia's parliament passed a motion of no-confidence against the new prime minister and his Cabinet yesterday, an official said, effectively sacking a government that had been expected to restore order to the country after 13 years of anarchy and war. The deputy speaker of the 275-member transitional parliament, Dalhar Omar, said 153 members voted against Prime Minister ...",
+"label": "World"
+},
+{
+"text": "Eritreans deported by Libya hijack a plane KHARTOUM, Sudan -- Armed with knives, Eritrean deportees hijacked a plane that left Libya carrying about 80 fellow Eritreans and forced it to land yesterday in the Sudanese capital before surrendering to security forces, officials said.",
+"label": "World"
+},
+{
+"text": "Warped Satellites Prove Einstein Theory -Scientists Einstein was right -- again. Satellites that have been pulled slightly off their orbits show that the Earth is indeed twisting the fabric ",
+"label": "Sci/Tech"
+},
+{
+"text": "Not quite high Tech Virginia Tech just couldn't seem to get going. There were turnovers. There were botched plays. There were missed opportunities. Then, in the last 5 1/2 minutes, Bryan Randall and the Hokies turned it all around.",
+"label": "Sports"
+},
+{
+"text": "The Brains Behind AI Daphne Koller is pushing the limits of building computer programs that learn efficiently and reason intelligently. Third in a series profiling this year's MacArthur 'genius award' winners. By Kari Lynn Dean.",
+"label": "Sci/Tech"
+},
+{
+"text": "Gluecode delivers open source BPM engine (InfoWorld) InfoWorld - Hoping to put in place the last missing piece of the Java stack, Gluecode Software and the Apache Software Foundation this week unwrapped Project Agila, which the companies claim is the first embeddable open source BPM engine.",
+"label": "Sci/Tech"
+},
+{
+"text": "Yudhoyono's Apparent Win Boosts Markets (AP) AP - Former General Susilo Bambang Yudhoyono took a seemingly unassailable lead Wednesday in Indonesia's presidential election, cheering investors amid hopes he will introduce much-needed economic reforms and provide firm leadership in the war on terror.",
+"label": "World"
+},
+{
+"text": "All rosy at which bank PRODUCTIVITY gains should keep Commonwealth Bank in a sweet spot for years to come, departing chairman John Ralph claimed yesterday.",
+"label": "Business"
+},
+{
+"text": "Ex-envoys: Mideast peace breakthrough possible JERUSALEM -- Former US envoys say that the passing of Yasser Arafat would open up new opportunities for Mideast peace, especially if new, pragmatic Palestinian leaders emerge.",
+"label": "World"
+},
+{
+"text": "Men, Women More Different Than Thought CHICAGO - Beyond the tired cliches and sperm-and-egg basics taught in grade school science class, researchers are discovering that men and women are even more different than anyone realized.    It turns out that major illnesses like heart disease and lung cancer are influenced by gender and that perhaps treatments for women ought to be slightly different from the approach used for men...",
+"label": "World"
+},
+{
+"text": "House Passes Second Anti-Spyware Bill  WASHINGTON (Reuters) - The U.S. House of Representatives on  Thursday unanimously passed a second bill targeting  perpetrators of computer \"spyware\" that hides in users'  computers and monitors their activities.",
+"label": "Sci/Tech"
+},
+{
+"text": "Accord on restoring rail link reached: Khokhrapar-Monabao route ISLAMABAD, Dec 3: Pakistan and India have agreed to an early resumption of rail link between Khokhrapar and Monabao suspended since the 1965 war.",
+"label": "World"
+},
+{
+"text": "Return of Relics to Rekindle Catholic-Orthodox Dialogue VATICAN CITY, NOV. 25, 2004 (Zenit.org).- Theological dialogue between the Orthodox and Catholic Churches is expected to resume after the relics of Sts.",
+"label": "World"
+},
+{
+"text": "Start-up OQO to launch hand-size PC Want a full-fledged Windows XP computer that's about the size of a Pocket PC? Tiny machine debuts after two years of delay.",
+"label": "Sci/Tech"
+},
+{
+"text": "Genesis Spacecraft Prepares to Return to Earth with a Piece of the Sun In a dramatic ending that marks a beginning in scientific research, NASA's Genesis spacecraft is set to swing by Earth and jettison a sample return capsule filled with particles of the Sun that may ultimately tell us more about the genesis of our solar system.",
+"label": "Sci/Tech"
+},
+{
+"text": "Apple iPod holds sway in Japan Juliana Sasaki did not bother checking out Sony #39;s digital music player in Tokyo before buying her iPod mini.  quot;I knew Sony and other companies had MP3 players, but they can #39;t beat the mini, quot; says Sasaki, 23, a language teacher.",
+"label": "Sci/Tech"
+},
+{
+"text": "NASCAR gives liquor a shot Beginning next season, NASCAR will uncork its long-standing ban on hard-liquor sponsorships, which will tap a new source of funding for at least two high-profile race teams.",
+"label": "Sports"
+},
+{
+"text": "US ends Jamaica #39;s Cup hopes Eddie Johnson scored his fifth goal in three games Wednesday and the US national soccer team eliminated Jamaica from 2006 World Cup contention with a 1-1 tie at Columbus, Ohio.",
+"label": "Sports"
+},
+{
+"text": "Informed and Awaiting a St. Helens Eruption The people who remember the eruption of Mount St. Helens in 1980 are not as fearful as they were then, with scientists predicting a less powerful eruption.",
+"label": "Sci/Tech"
+},
+{
+"text": "Cisco Unveils SAN Products Targeted At Disaster Recovery Cisco Systems unveiled two SAN products that it says will help companies evade or recover quickly from disasters affecting corporate data.",
+"label": "Sci/Tech"
+},
+{
+"text": "Injured Heskey to miss England friendly NEWCASTLE, England (AP) - Striker Emile Heskey has pulled out of the England squad ahead of Wednesday #39;s friendly against Ukraine because of a tight hamstring, the Football Association said Tuesday. ",
+"label": "Sports"
+},
+{
+"text": "Cubs brushed back Chicago loses wild-card lead after ninth-inning &lt;b&gt;...&lt;/b&gt; Austin Kearns knows he #39;ll be back home in Louisville, Ky., once the regular season ends on Sunday. The Cincinnati Reds outfielder did his best Wednesday to keep the Chicago Cubs ",
+"label": "Sports"
+},
+{
+"text": "Four former El Paso natural gas traders charged HOUSTON Four former El Paso Corporation natural gas traders have been charged with making false reports used to calculate the index price of natural gas.",
+"label": "Business"
+},
+{
+"text": "HEAP OF TROUBLE FOR RAVENS The Baltimore Ravens could be without one of their main offensive weapons for up to a month. Ravens coach Brian Billick said on Monday that two-time Pro Bowl tight end Todd Heap could miss two to four weeks with a severely sprained right ankle.",
+"label": "Sports"
+},
+{
+"text": "Shell to invest in major shake-up OIL group Shell has pledged to invest \\$45bn (25bn) and make major disposals in a shake-up of the business, following its reserves crisis earlier this year.",
+"label": "Business"
+},
+{
+"text": "Mexican columnist murdered A prominent Mexican journalist known for his reports on organised  crime is killed on the US border.",
+"label": "World"
+},
+{
+"text": "Lonely men targeted by cell-phone based relationship HONG KONG - There #39;s a new service for men seeking true love. A software company has created an artificial girlfriend that lonely men can download to a mobile phone.",
+"label": "Sci/Tech"
+},
+{
+"text": "Celtic captain McNamara out for a month Celtic captain Jackie McNamara will be sidelined for at least a month after sustaining ankle ligament damage in Tuesday #39;s 3-1 Champions League defeat to Barcelona.",
+"label": "Sports"
+},
+{
+"text": "Kobe talks, Malone walks There #39;s a new feud taking place in Lakerland this week, only this time the verbal war of words is between Newport Beach neighbors Karl Malone and Kobe Bryant and the exchanges are ",
+"label": "Sports"
+},
+{
+"text": "Injured Toomer might be able to play tomorrow Although Giants wide receiver Amani Toomer took limited work yesterday after missing the previous two days of practice, coach Tom Coughlin won #39;t decide on his availability ",
+"label": "Sports"
+},
+{
+"text": "Eras blend together perfectly As the final seconds ticked down on the last home game of his high school career, Larry Abare glanced up the hill at the far end of Edward M. Leary Field and watched all the little boys in blue jeans and Acton-Boxboro jerseys, one of them scrambling through the leaves with a football tucked carefully under his arm. ...",
+"label": "Sports"
+},
+{
+"text": "Bush, Kerry brace for key presidential debate (AFP) AFP - The US presidential candidates were set to go head to head in a bruising, high-stakes televised debate, with Republican incumbent George W. Bush aiming to lock in his lead in the race and Democratic challenger John Kerry banking on a comeback.",
+"label": "World"
+},
+{
+"text": "TV aims for prime time in digital home New standard uses Web-based protocols to let televisions control other devices in a home.",
+"label": "Sci/Tech"
+},
+{
+"text": "James May Play The man in the mask on Monday night may be Cleveland's LeBron James, who was fitted with a mask to protect his broken left cheek and might play in Charlotte.",
+"label": "Sports"
+},
+{
+"text": "Copper Prices Rally to 16-Year Highs Copper prices surged to 16-year highs on Friday as a strike at the world #39;s largest copper producer threatened to tighten world supplies.",
+"label": "Business"
+},
+{
+"text": "NY School Bus Driver Fired Over Stem Cell Talk (Reuters) Reuters - A school bus driver who chatted about\\stem cell research with her pupils was fired for inappropriate\\behavior, a local newspaper said on Thursday.",
+"label": "Sci/Tech"
+},
+{
+"text": "No. 15 West Virginia, Syracuse battle it out for control of first MORGANTOWN, W.Va. (U-WIRE) -- Syracuse may enter Morgantown, W.Va., for Wednesday #39;s game under different circumstances than Mountaineer fans are used to from the former Big East powerhouse.",
+"label": "Sports"
+},
+{
+"text": "Flu Shot Shortage Highlights U.S. Crisis  WASHINGTON (Reuters) - Concerned health officials began  investigating on Friday what went wrong at a British vaccine  plant where half the U.S. flu shots were made, and called on  more companies to get into the vaccine business.",
+"label": "Business"
+},
+{
+"text": " #39;SICKOS #39; HUNTING FOR DEER WITH A MOUSE SAN ANTONIO - Forget about PlayStation 2 - Texas entrepreneur wants to kick computer gaming up to the next level by offering players a chance at some real-live killing via mouse and modem.",
+"label": "Sci/Tech"
+},
+{
+"text": "ATA Files for Bankruptcy Protection ATA Holdings Corp. (ATAH), parent of struggling low-cost carrier ATA Airlines, on Tuesday filed for Chapter 11 bankruptcy protection as falling fares and soaring fuel prices drained it of cash.",
+"label": "Business"
+},
+{
+"text": "Boeing, Airbus competition escalates into trade war A decades-long struggle between the world's two largest aircraft makers escalated into a trade war between the United States and Europe, just as France-based Airbus stepped up plans to challenge Boeing for lucrative US defense contracts.",
+"label": "Business"
+},
+{
+"text": "Munro, Morris Face Off in NLCS Game 2 ST. LOUIS - The Houston Astros put their hopes in a pitcher untested in the postseason when they give Pete Munro the ball to start Game 2 of the NL Championship series on Thursday, one night after dropping the opener to the St...",
+"label": "World"
+},
+{
+"text": "Serial HIV Assault Verdict Expected Mon. (AP) AP - A verdict will be announced Monday in the trial of a man charged with intentionally exposing 17 women to HIV, a county judge said.",
+"label": "Sci/Tech"
+},
+{
+"text": "GLOBAL MARKETS-Shares and dollar turn south after US data European shares turned negative and government bonds were struggling for direction on Thursday after US data showed subdued inflation numbers, flat spending and a rise in unemployment.",
+"label": "Business"
+},
+{
+"text": "Success For Spaceship One MOJAVE -- Burt Rutan #39;s space ship one made its first trip into sub-orbital outer space in pursuit of the \\$10 million Ansari X Prize.",
+"label": "Sci/Tech"
+},
+{
+"text": "Sharon, Under Pressure, Snubs Gaza Referendum Call  JERUSALEM (Reuters) - Israeli leader Ariel Sharon rejected  calls from within his divided cabinet on Wednesday for a  referendum on leaving Gaza after winning parliament's support  to uproot settlements from land claimed by Palestinians.",
+"label": "World"
+},
+{
+"text": "Seahawks Looking at Acquiring Jerry Rice (AP) AP - Jerry Rice could be headed north to reunite with Seattle Seahawks coach Mike Holmgren.",
+"label": "Sports"
+},
+{
+"text": "Goss Gets Senate Panel's OK for CIA Post (AP) AP - A Senate panel on Tuesday approved the nomination of Rep. Porter Goss, R-Fla., to head the CIA, overcoming Democrats' objections that Goss was too political for the job.",
+"label": "World"
+},
+{
+"text": "A man with a plan ATHENS -- Four years ago in Sydney, after the US gymnasts had gone medal-free at the Olympics for the first time in 28 years, federation president Bob Colarossi was sitting at a table, explaining that the turnaround already had begun. The women had moved from sixth to fourth in the world in one year, the men from sixth to fifth. ...",
+"label": "Sports"
+},
+{
+"text": "Hamilton Keeps Gold but One Test Confirms Doping The American cyclist Tyler Hamilton will keep his gold medal from the Athens Olympics after a testing lab mishandled his blood sample.",
+"label": "Sports"
+},
+{
+"text": "Next gen games prove a challenge Making games for the future consoles is going to take a lot of time and money, a games conference is told.",
+"label": "Sci/Tech"
+},
+{
+"text": "Austrian warning on Turkey #39;s EU hopes MEISE, Belgium, Dec 16 (AFP) - The EU must be sure it has the  quot;capacity to absorb quot; Turkey before it gives a green light to the vast Muslim country #39;s hopes of joining the bloc, Austrian Chancellor Wolfgang Schuessel warned Thursday.",
+"label": "World"
+},
+{
+"text": "Experts Push for More Computer Security Efforts  WASHINGTON (Reuters) - Computer-security experts, including  former government officials, urged the Bush administration on  Tuesday to devote more effort to strengthening defenses against  viruses, hackers and other online threats.",
+"label": "Sci/Tech"
+},
+{
+"text": "Electronic Jihad Internet Attack Rumored For Today Electronic Jihad Internet Attack Rumored For Today\\\\Is the Electronic Jihad attack happening today or is it just stirred up rumors? Yevgeny Kaspersky has raised concerns of a major attack on the internet today. Kaspersky has been widely quoted as saying that there would be a major online attack against Israeli ...",
+"label": "Sci/Tech"
+},
+{
+"text": "Making Windows More Secure HEY labor long hours to write their software, testing and perfecting it. They toil in obscurity, fully aware that they #39;ll never get credit for their work.",
+"label": "Sci/Tech"
+},
+{
+"text": "Danger - falling dollars The sharp fall in the dollar on the foreign exchange markets - and the consequent rise in the value of the euro - may seem like problems that are of little direct concern to the UK, which never signed up to the euro in the first place.",
+"label": "Business"
+},
+{
+"text": "Button defends F1 decision Britain #39;s Jenson Button has justified his decision to leave BAR for Williams as the dispute over his future moves towards a conclusion.",
+"label": "Sports"
+},
+{
+"text": "United to seek more cuts from labor, elsewhere United Airlines says it #39;ll need even more labor cuts than anticipated to get out of bankruptcy. United told a bankruptcy court judge in Chicago today that it intends to start talks with unions next month on a new round of cost savings.",
+"label": "Business"
+},
+{
+"text": "O2 to roll out i-mode The deal, which was leaked to the press last week, will see the UK-based mobile operator deliver data services -- such as games, ringtones and entertainment -- through a platform that has been credited with making NTT DoCoMo the force that it is in ",
+"label": "Sci/Tech"
+},
+{
+"text": "Spammers strike back at Lycos In launching Make Love Not Spam Lycos this week started a controversial bid to battle unsolicited messages through a custom-designed website.",
+"label": "Sci/Tech"
+},
+{
+"text": "FACTBOX-US Fed policymakers #39; recent comments The Federal Reserve is widely expected to raise the federal funds rate at its policy meeting on Tuesday, Sept. 21, despite recent mixed economic news.",
+"label": "Business"
+},
+{
+"text": "Wall Street: Will the rally continue through December? So far, Wall Street #39;s hoped-for fourth-quarter rally has met investors #39; expectations. But there #39;s been enough bad news lately to make you wonder if the buying will sputter.",
+"label": "Business"
+},
+{
+"text": "Afghan Militants Hold Talks on Hostages, but No Deal Yet Militants holding three foreign United Nations workers in Afghanistan said that they had held negotiations with officials from the Afghan government and the United ",
+"label": "World"
+},
+{
+"text": "Sony Shows Smaller PlayStation 2 (AP) AP - Sony Corp. on Tuesday showed a smaller book-size PlayStation 2 going on sale worldwide next month that will help the Japanese electronics and entertainment giant cut costs as video-game consoles continue to drop in price.",
+"label": "Sci/Tech"
+},
+{
+"text": "Big day for New England Pete Kendall #39;s New England accent is as thick as his 6-5, 292-pound frame. So there #39;s no hiding his roots or his allegiance to Red Sox Nation.",
+"label": "Sports"
+},
+{
+"text": "Coalition holds off efforts to take rebel-run cities US surgical strikes continue in Fallujah, Samarra, and Tal Afar. But US says Iraqi forces are not ready to launch major attacks. By Howard LaFranchi.",
+"label": "World"
+},
+{
+"text": "US August Inflation Mild, Job Claims Rise US consumer prices inched up just 0.1 percent last month as gasoline and car prices tumbled, the government said on Thursday in a report suggesting an inflation spike earlier this year was an aberration.",
+"label": "Business"
+},
+{
+"text": "Najeh to the rescue for Packers No Ahman Green, no problem. At least that #39;s what it looked like on Monday night, as the Green Bay Packers ran roughshod over the St.",
+"label": "Sports"
+},
+{
+"text": "Christmas clash over gift choices Children would like expensive hi-tech gifts for Christmas, but few parents are happy to buy these, research suggests.",
+"label": "Sci/Tech"
+},
+{
+"text": "NASA Cancels Hypersonic Flight NASA scrubbed its mission Monday to launch a pilotless plane that is capable of flying at 10 times the speed of sound. The launch of the X-43A was canceled due to technical problems.",
+"label": "Sci/Tech"
+},
+{
+"text": "Davydenko tops Davis Cup  #39;mate Youzhny MOSCOW -- Nikolay Davydenko overcame leg cramps to beat Russian Davis Cup teammate Mikhail Youzhny in a tough Kremlin Cup semifinal, 7-5, 6-7, 7-5 on Saturday.",
+"label": "Sports"
+},
+{
+"text": "Ivan devastates Grenada ST. GEORGE #39;S, Grenada - Hurricane Ivan took aim yesterday at Jamaica after killing 23 people in five countries and devastating Grenada.",
+"label": "World"
+},
+{
+"text": "Microsoft Targets Solo Programmers with New Visual Studio Version ORLANDO, Fla.Microsoft Corp. announced another edition of its upcoming development tools family, releasing information on Visual Studio 2005 Standard Edition at the VSLive!",
+"label": "Sci/Tech"
+},
+{
+"text": "Jags Turnaround Gives Them AFC South Lead (AP) AP - There are several reasons the Jacksonville Jaguars have gone from 1-6 at this time a year ago to their current 5-2 record. The answer given by most players is just one word: confidence.",
+"label": "Sports"
+},
+{
+"text": "New Trojan Targets Adware New Trojan Targets Adware\\\\Antivirus maker Symantec has reported the arrival of a spooky Trojan Horse online, which does something unique. Codenamed Downloader.Lunii, it attacks and even removes advertisement enabled softwares, which are generally considered harmful for the system. On execution of the code, it tries to kill the processes associated ...",
+"label": "Sci/Tech"
+},
+{
+"text": "Genome mapped of CO2-absorbing algae US scientists have charted the genetic map of a microscopic algae that absorbs huge amounts of greenhouse gases.  quot;These organisms are incredibly important in the global carbon cycle, quot; said Virginia Armbrust ",
+"label": "Sci/Tech"
+},
+{
+"text": "GM Plans to Use Woods More Creatively (AP) AP - General Motors Corp. is thrilled that Tiger Woods will promote Buick for the next five years, but GM chairman Rick Wagoner says the automaker could make better use of the world's best-known golfer.",
+"label": "Sports"
+},
+{
+"text": "Expanding West Major League Soccer's two expansion teams, Real Salt Lake and Club Deportivo Chivas USA, will join the Western Conference for the 2005 season.",
+"label": "Sports"
+},
+{
+"text": "Fannie Mae agrees to accounting changes Fannie Mae, facing questions about its accounting similar to those that shook up Freddie Mac last year, has agreed to changes that will bring it in compliance with accounting standards.",
+"label": "Business"
+},
+{
+"text": "Is Apple Photogenic? With competitors avidly trying to nibble at the iPod #39;s market share, Apple (Nasdaq: AAPL) has released its ostensibly new and improved version.",
+"label": "Sci/Tech"
+},
+{
+"text": "Singapore Air plans \\$7.35B Boeing order Singapore Airlines plans to buy up to 31 Boeing long-range 777-300ER planes worth about \\$7.35 billion, the carrier said Wednesday.",
+"label": "Business"
+},
+{
+"text": "Microsoft #39;s quest for Google-like gold falls short, for now Microsoft Corp. last week released a preview version of its new Internet search engine. It will be available in its final form early next year.",
+"label": "Sci/Tech"
+},
+{
+"text": "AL Wrap: Ortiz Fuels Red Sox Fire as Blue Jays Go Down (Reuters) Reuters - David Ortiz thumped two homers and\\drove in four runs to fire the Boston Red Sox to an 11-5 win\\over the Toronto Blue Jays in the American League Wednesday.",
+"label": "Sports"
+},
+{
+"text": "Wakefield goes deep this time When it comes to giving up long balls, Red Sox pitcher Tim Wakefield has a short memory. Just three weeks after he surrendered a club-record six home ",
+"label": "Sports"
+},
+{
+"text": "Former Executive Testifies, Offering Insider #39;s Look at Enron #39;s &lt;b&gt;...&lt;/b&gt; A former executive who was a participant in the wrongdoing that helped cripple Enron testified on Monday, providing the first glimpse through the eyes of a principal of ",
+"label": "Business"
+},
+{
+"text": "WWW KOTV.com _ Nearly 800 British forces left their base in southern Iraq on Wednesday, heading north toward Baghdad to replace US troops who are expected to take part in an offensive against insurgent strongholds.",
+"label": "World"
+},
+{
+"text": "Schilling will not start Game 5 of ALCS That #39;s the state of the Boston Red Sox pitching rotation after Schilling was scratched from his scheduled Game 5 start because of a sore ankle.",
+"label": "Sports"
+},
+{
+"text": "US Airways Watch: 11/18/04 US Bankruptcy Court Judge Stephen Mitchell will hear arguments today asking him to reconsider a four-month, 21 percent pay cut he imposed on many unionized workers last month.",
+"label": "Business"
+},
+{
+"text": "Hispanic rights groups unite to fight voter discrimination (AFP) AFP - US civil rights groups expressed concern over alleged intimidation of Hispanic voters and said they will work to ensure their ballots are counted in the November 2 presidential election.",
+"label": "World"
+},
+{
+"text": "Study raises stent doubts Heart patients aren #39;t more likely to live long term after getting the artery-opening tubes called stents, according to a study released yesterday by researchers at Duke University.",
+"label": "Business"
+},
+{
+"text": "Els still has Major ambitions Ernie Els has another 1.4m and a World Match Play record all to himself. But he wants more. And top of the South Africans agenda for 2005 is to try to win the Masters and US PGA titles.",
+"label": "Sports"
+},
+{
+"text": "Could Newer Browsers Dethrone IE? Every time a new IE security flaw is announced, or whenever someone gets fed up with hackers manipulating their Web browser, Firefox and other Mozilla-based browsers get a bump in the marketplace.",
+"label": "Sci/Tech"
+},
+{
+"text": "How to take the perfect penalty A sports psychologist says how footballers should prepare themselves for the high-pressure penalties.",
+"label": "Sci/Tech"
+},
+{
+"text": "Nevadans to benefit from sales tax deduction #39;s return WASHINGTON -- Gaylyn Spriggs can remember two decades back when she would keep every grocery and department store receipt in a shoebox on a closet shelf.",
+"label": "Business"
+},
+{
+"text": "Explosive Remnants Found in Russian Jet Wreckage One of two Russian airliners that crashed nearly simultaneously was brought down by a terrorist act, officials said Friday, after finding traces of explosives in the plane's wreckage. A Web site connected to Islamic militants claimed the action was connected to Russia's fight against Chechen separatists.",
+"label": "World"
+},
+{
+"text": "West Japan on Guard for Aftershocks After Quakes  TOKYO (Reuters) - Residents of western Japan were warned of  possible aftershocks on Monday after two strong earthquakes the  previous day but authorities said the tremors were not directly  linked to a cycle of major seismic activity that hits the  region every century or so.",
+"label": "World"
+},
+{
+"text": "CBOE to sell stake in National exchange, buy CBOT rights The Chicago Board Options Exchange said Tuesday its directors approved steps to reduce its financial ties to two other exchanges in town.",
+"label": "Business"
+},
+{
+"text": "Eurozone recovery struggles as monetary union fails to yield results: OECD (AFP) AFP - Recovery in the eurozone is battling higher oil prices and a rising euro as monetary union has so far failed to spur sustained economic dynamism in the 12 nations using the single European currency, the OECD revealed.",
+"label": "Business"
+},
+{
+"text": "Pickup in US insurance sector sends stocks surging despite higher &lt;b&gt;...&lt;/b&gt; TORONTO (CP) - A rally in the insurance sector helped take stock markets up sharply - and drove New York #39;s blue chip index to a triple-digit runup - despite higher oil prices and a further slowdown in US consumer confidence.",
+"label": "Business"
+},
+{
+"text": "U.S. Urges China to Push for More N.Korea Talks  BEIJING (Reuters) - Secretary of State Colin Powell urged  China on Monday to exert its influence over North Korea to  resume stalled talks on scrapping its nuclear weapons programs  and pressed Beijing to accept a Taiwan offer of talks.",
+"label": "World"
+},
+{
+"text": "Econ Edge: The Economic Week Fed Governor Speaks (12:45 pm ET) Federal Reserve Governor Mark Olson speaks about his economic outlook at a roundtable lunch in Toronto.",
+"label": "Business"
+},
+{
+"text": "US Marines Die In Fallujah Car Bombing BAGHDAD, Iraq -- A US military official in Iraq said seven American marines have been killed Monday in a car-bomb explosion. Several other Marines have been wounded in the attack.",
+"label": "World"
+},
+{
+"text": "Captors threaten to hand hostage to Zarqawi An unknown militant group holding Iraqi-British hostage Margaret Hassan in Iraq has threatened to turn her over to a group led by al Qaeda ally Abu Musab al-Zarqawi if its demands are not met, Al Jazeera television says.",
+"label": "World"
+},
+{
+"text": "Aether Declines Higher Bid for Unit (washingtonpost.com) washingtonpost.com - Aether Systems Inc., a Maryland wireless data company that is selling off its operating units, said yesterday it received a  #36;30 million offer for a division it had already agreed to sell to another buyer for  #36;25 million.",
+"label": "Sci/Tech"
+},
+{
+"text": "Hewitt, Davenport Top US Open Standings (AP) AP - Lleyton Hewitt and Lindsay Davenport could earn up to  #36;500,000 extra at the U.S. Open because they finished atop the inaugural US Open Series standings.",
+"label": "Sports"
+},
+{
+"text": "Buckeyes have lots to replace but are brimming with optimism There are remarkable similarities between the 2004 Ohio State Buckeyes and those that won the national championship just two years ago. ",
+"label": "Sports"
+},
+{
+"text": "FTSE dips as insurers fall Blue-chip shares have retreated from 28-month highs, with insurer Royal  amp; Sun Alliance leading the losers as investors baulk at the potential for further adverse claims from its US business and a rating downgrade.",
+"label": "Business"
+},
+{
+"text": "A target for terrorists An election campaign parades the political divide in the community. Yesterday, amid the extraordinary uncertainty about whether Australians had been taken hostage in Iraq, we saw the glue that unites the two sides of politics.",
+"label": "World"
+},
+{
+"text": "Timing Of Indian Move In Kashmir Vital: Pak Paper Islamabad, Nov. 16 (NNN): Pakistans leading newspaper, Dawn, finds the timing of the Indian announcement on reduction of troops in Kashmir as significance.",
+"label": "World"
+},
+{
+"text": "The Rundown Unquestionably the showcase game of the day. Auburn already has sewn up the Southeastern Conference West, and Georgia would need Tennessee to lose to have a chance in the East.",
+"label": "Sports"
+},
+{
+"text": "SABMiller #39;s China JV in \\$154m deal SABMiller, the world #39;s second largest brewer #39;s Chinese joint-venture, China Resources Breweries Limited (CRB) has acquired the Chinese brewing interests of Lion Nathan for an equity value of \\$71-million and estimated assumed debt of \\$83-million, CRM ",
+"label": "Business"
+},
+{
+"text": "Baxter Ends Flu Vaccine Trial; Cites Side Effects Baxter International Inc. on Thursday said it halted a late-stage European trial of a flu vaccine because of higher-than-expected rates of fever and other symptoms.",
+"label": "Business"
+},
+{
+"text": "Tigers Clip Indians 6-4 (AP) AP - Eric Munson and Omar Infante each hit two-run homers and Detroit's bullpen stayed busy all night Thursday, leading the Tigers to a 6-4 win over the Cleveland Indians.",
+"label": "Sports"
+},
+{
+"text": "Poland to Reduce Force In Iraq Poland will significantly reduce its number of troops in Iraq by the end of 2005, the country #39;s defense minister said on Monday.",
+"label": "World"
+},
+{
+"text": "Dollar Steady Ahead of Jobs Report  LONDON (Reuters) - The dollar held firm above this week's  record low against the euro on Friday, with dealers reluctant  to take positions ahead of key U.S. jobs figures.",
+"label": "Business"
+},
+{
+"text": "Treos to sync to MS Exchange palmOne has licensed Microsoft #39;s Exchange Server ActiveSync protocol for use on future Treo devices, allowing for wireless server synchronization.",
+"label": "Sci/Tech"
+},
+{
+"text": "Will your phone become your credit card? Motorola is working with MasterCard to introduce a \"lifestyle changing\" credit card phone by year's end.",
+"label": "Sci/Tech"
+},
+{
+"text": "Utah Caps Unbeaten Season With Rout of BYU (AP) AP - Utah beat rival Brigham Young 52-21 Saturday, completing its first unbeaten season since 1930 and putting the Utes one step closer to the first appearance in the Bowl Championship Series for a team from a mid-major conference.",
+"label": "Sports"
+},
+{
+"text": "Saudi setback hurts BAE Systems BAE Systems shares slid more than 4 per dcent in early trade after the company, while announcing  quot;good progress quot; on its Eurofighter contracts, admitted further troubles in the controversial al-Yamamah programme.",
+"label": "Business"
+},
+{
+"text": "UPDATE 3-Clarke cracks debut 151 as India collapse Michael Clarke hit a sparkling 151 on his debut and a revitalised Glenn McGrath then ripped the heart out of India #39;s batting as Australia took command of the first test on Thursday.",
+"label": "Sports"
+},
+{
+"text": "Not exactly an idiotic idea This should give pause to anyone who thought the Red Sox might be interested in toning down their image as idiots: They've made a serious contract offer to David Wells.",
+"label": "Sports"
+},
+{
+"text": "4 US soldiers killed in roadside bomb attack; coalition steps up &lt;b&gt;...&lt;/b&gt; Roadside bombings killed four American soldiers in Baghdad, the US command said Wednesday, as US and Iraqi troops stepped up pressure on Sunni insurgents before this week #39;s start of the Islamic holy month of Ramadan.",
+"label": "World"
+},
+{
+"text": "EBay gets into rentals EBay plans to buy the apartment and home rental service Rent.com for \\$415 million, adding to its already exhaustive breadth of offerings.",
+"label": "Business"
+},
+{
+"text": "Spaceport Mum on Frances Shuttle Delays (AP) AP - The director of the hurricane-ravaged Kennedy Space Center refused to speculate Tuesday whether the damage will thwart plans to resume shuttle flights next spring, but his words offered little hope of an on-time launch.",
+"label": "Sci/Tech"
+},
+{
+"text": "Report finds handheld device market in continued decline The worldwide market for handheld devices saw its third successive quarter of year-over-year decline in the third quarter of 2004, according to a new report released by IDC.",
+"label": "Business"
+},
+{
+"text": "PayPal and Apple iTunes link-up Online auction house eBay #39;s payment system PayPal can now be used for purchases by US customers of Apple #39;s iTunes music store.",
+"label": "Sci/Tech"
+},
+{
+"text": "Patriots #39; game: New England beats Jets for 21st win in a row While not pleased, the Jets were neither surprised at the outcome of their showdown against the Patriots, nor downcast about their future.",
+"label": "Sports"
+},
+{
+"text": "Bush shields shrimp industry The Bush administration yesterday said Chinese and Vietnamese shrimp are sold at unfairly low prices in the United States, siding with US fishermen as they try to fend off overseas competition.",
+"label": "Business"
+},
+{
+"text": "UPDATE 1-UPS buys CNF #39;s Menlo Worldwide United Parcel Service Inc. (UPS.N: Quote, Profile, Research) agreed to buy Menlo Worldwide Forwarding, a unit of CNF Inc. (CNF.N: Quote, Profile, Research) , for \\$150 million in ",
+"label": "Business"
+},
+{
+"text": "Business News for Technology Leaders Microsoft Makes Deal with &lt;b&gt;...&lt;/b&gt; A  quot;landmark agreement quot; between Microsoft and England #39;s Department of Health to renew the agency #39;s license for desktop products could save it an estimated \\$608 million.",
+"label": "Sci/Tech"
+},
+{
+"text": "An Old Church's New Tilt Inspires Tourists and T-Shirts A humble church has something Germany's glorious Cologne Cathedral cannot match: a leaning tower.",
+"label": "World"
+},
+{
+"text": "Diebold Cuts Forecast  NEW YORK (Reuters) - Diebold Inc. &lt;A HREF=\"http://www.investor.reuters.com/FullQuote.aspx?ticker=DBD.N target=/stocks/quickinfo/fullquote\"&gt;DBD.N&lt;/A&gt;, the leading  maker of automated teller machines, on Monday reduced its  third-quarter and full-year earnings forecasts as it absorbs  costs for recertifying its electronic voting machines in  California and for expenses related to a pending civil action  in that state.",
+"label": "Business"
+},
+{
+"text": "Communist Party seeks to win back people #39;s support THE Chinese Communist Party (CCP) has read the writing on the wall and is out to shore up its moral right to keep ruling the country.",
+"label": "World"
+},
+{
+"text": "Patriots Down Cardinals 23 - 12 Game Stats The New England Patriots Struggled to put the pesky Arizona Cardinals away in what should have been an easy victory of mismatched teams.",
+"label": "Sports"
+},
+{
+"text": "Constellation Brands Offers \\$1.3 Billion for Mondavi (Update1) Constellation Brands Inc., the world #39;s largest winemaker, offered \\$1.3 billion in cash to acquire Robert Mondavi Corp., maker of lower-price Woodbridge wines.",
+"label": "Business"
+},
+{
+"text": "Lloyds TSB to Move More Than 1,000 UK Jobs to Asia (Update1) Lloyds TSB Group Plc, the UK #39;s No. 5 bank by assets, plans to move at least another 1,000 employees from Britain to Asia, where labor costs are lower.",
+"label": "Business"
+},
+{
+"text": "RESEARCH ALERT-First Albany ups SuperGen to  quot;buy quot; on drug deal First Albany Capital on Wednesday raised SuperGen Inc. #39;s (SUPG.O: Quote, Profile, Research) stock rating to  quot;buy quot; from  quot;neutral, quot; following its cancer-drug deal with MGI Pharma Inc.",
+"label": "Business"
+},
+{
+"text": "Automakers sue California over emissions FRESNO, Calif. -- Automobile manufacturers sued on Tuesday to block the world #39;s toughest vehicle emissions standards, adopted by California regulators in September to cut greenhouse gases.",
+"label": "Business"
+},
+{
+"text": "Coal Mine Blast in China Kills 33 (AP) AP - A coal mine explosion in northern China killed 33 people in the latest disaster to strike the country's accident-prone mining industry, the official Xinhua News Agency reported Friday.",
+"label": "World"
+},
+{
+"text": "Four pay price for India defeats India have dropped wicket-keeper Parthiv Patel and batsman Yuvraj Singh for the final Test against Australia. Opening batsman Aakash Chopra and seamer Ajit Agarkar were also left out after India conceded the ",
+"label": "Sports"
+},
+{
+"text": "OPEC Seen Wary on Increase in Oil Quotas  VIENNA (Reuters) - OPEC may resist calls to raise oil  output quotas much, if at all, when it meets this week for fear  of turning a decline from record prices into a rout.",
+"label": "Business"
+},
+{
+"text": "Nigerian Islamist rebels attack police, take officers hostage (AFP) AFP - Islamist rebels have attacked a major police patrol and taken a number of hostages in a remote area of northeastern Nigeria near the Cameroon border, the missing officers' commander told AFP.",
+"label": "World"
+},
+{
+"text": "India's Tata expands regional footprint via NatSteel buyout (AFP) AFP - India's Tata Iron and Steel Company Ltd. took a strategic step to expand its Asian footprint with the announcement it will buy the Asia-Pacific steel operations of Singapore's NatSteel Ltd.",
+"label": "World"
+},
+{
+"text": "Wal-Mart Brightens Dec. Sales Forecast  NEW YORK (Reuters) - Wal-Mart Stores Inc. &lt;A HREF=\"http://www.investor.reuters.com/FullQuote.aspx?ticker=WMT.N target=/stocks/quickinfo/fullquote\"&gt;WMT.N&lt;/A&gt;, the  world's biggest retailer, on Monday brightened its outlook for  December sales at U.S. stores open at least a year, seeing  sales up 3 percent bolstered by post-Christmas spending.",
+"label": "Business"
+},
+{
+"text": "Ford Sales Fall, Chrysler Posts Gain  DETROIT (Reuters) - Ford Motor Co. &lt;A HREF=\"http://www.investor.reuters.com/FullQuote.aspx?ticker=F.N target=/stocks/quickinfo/fullquote\"&gt;F.N&lt;/A&gt; on Wednesday  reported its sixth straight month of weaker vehicle sales,  prompting the second-largest U.S. automaker to further cut  production of cars and trucks, while Chrysler posted another  sales gain.",
+"label": "Business"
+},
+{
+"text": "Ivorian unrest poses new test for France Two years after French forces arrived to restore order in turmoil-torn Ivory Coast, a peace agreement between Ivorian rebels and the government of President Laurent Gbagbo is in ",
+"label": "World"
+},
+{
+"text": "Loeb forced out of rally ESTONIA #39;s Markko Martin took the Rally of Catalonia lead today after newly-crowned world champion Sebastien Loeb, the overnight leader, was forced out of the race with a severe oil leak.",
+"label": "Sports"
+},
+{
+"text": "Kroger Profit Falls, Warns on Sales  NEW YORK (Reuters) - Kroger Co. on Tuesday posted a 25  percent drop in quarterly profit and warned it may not reach  its sales target for the year, sending shares of the top U.S.  grocer down as it grapples with lingering fallout from a strike  in Southern California.",
+"label": "Business"
+},
+{
+"text": "AP Poll: Bush, Kerry in Dead Heat (AP) AP - President Bush and Sen. John Kerry are locked in a tie for the popular vote, according to an Associated Press poll. Voters seem open to change in the White House  #151; most disapprove of the president's performance at home and in Iraq  #151; but still harbor doubts about making the switch.",
+"label": "World"
+},
+{
+"text": "Tennessee Loses McNair Again in Loss MINNEAPOLIS -- With Randy Moss relegated to two snaps of decoy duty, Daunte Culpepper and the Minnesota Vikings shifted gears and grinded one out against the Tennessee Titans.",
+"label": "Sports"
+},
+{
+"text": "Karzai's Big Poll Lead Shows Afghan Ethnic Divide (Reuters) Reuters - Hamid Karzai was cruising to victory in\\Afghanistan's first direct presidential elections, but by\\Wednesday the returns so far have underscored the ethnic fault\\lines that have often divided the country.",
+"label": "World"
+},
+{
+"text": "Ready to Bet on Alternative Energy? Well, Think Again When oil prices rise, public interest in alternative energy often does, too. But the logic is evidently escaping Wall Street.",
+"label": "Business"
+},
+{
+"text": "Wreckage of Navy helicopter found The wreckage of a Royal Navy helicopter, which disappeared with four crew members on board, has been found off the coast of Cornwall, the Ministry of Defence says.",
+"label": "World"
+},
+{
+"text": "Wiggins Siblings Honor Dad by Playing (AP) AP - Candice Wiggins is a walking advertisement for the anti-drug effort. A star freshman for Stanford's basketball team, she showed up for a recent practice wearing a T-shirt reading: \"No doubt about it. My health. My sport. My victory. I compete clean.\"",
+"label": "Sports"
+},
+{
+"text": "Studios to sue pirates Hollywood studios plan to file hundreds of lawsuits this month against people who illegally share movies online, industry representatives said Thursday.",
+"label": "Sci/Tech"
+},
+{
+"text": "Lazarus-like virus hits computers A new computer virus is catching people out by coming back from the dead.",
+"label": "Business"
+},
+{
+"text": "Islamic Scholar, Visa Withheld, Gives Up U.S. Post  GENEVA (Reuters) - A prominent Swiss-based Islamic scholar  on Tuesday gave up plans to teach at a leading U.S. university  after waiting in vain for a visa and accused the Bush  administration of trying to silence him.",
+"label": "World"
+},
+{
+"text": "Mining concern names outside managers SYDNEY Sons of Gwalia, the world #39;s leading supplier of tantalum, appointed outside managers on Monday after failing to reach agreement with creditors.",
+"label": "Business"
+},
+{
+"text": "SAN FRANCISCO Mission District cyclist blew whistle on flawed lock The triumph last week of the Bic pen over expensive, state-of-the-art steel locks has panicked the bicycling community, and churned Internet rumor mills about how much the lock manufacturer knew and when the company knew it.",
+"label": "Business"
+},
+{
+"text": "Iraq to widen arms amnesty success, could point to the government #39;s ability to organise nationwide polls by the end of January. The interim government has vowed to crack down on insurgents and pacify Iraq before the January election.",
+"label": "World"
+},
+{
+"text": "Whats New With Google News What's New With Google News\\\\Google News has added a whole bunch of features while we weren't lookin'. First off there's a new pull-down menu at the top of the page which easily allows you access to the top stories across all the Google News properties. If you look at that ...",
+"label": "Sci/Tech"
+},
+{
+"text": "Off-day would have been welcomed by Sox After another disappointing road trip - the White Sox were 3-4 on a swing through Detroit and Cleveland - a day off sure would look enticing.",
+"label": "Sports"
+},
+{
+"text": "This year #39;s Panthers could learn a thing or two from Michael Vick CHARLOTTE - Michael Vick head-butting an opposing linebacker may not have been the smartest thing for a National Football League quarterback to do.",
+"label": "Sports"
+},
+{
+"text": "Plane of NASCAR Team Hendrick Missing (AP) AP - A plane carrying members of the Hendrick Motorsports organization was missing Sunday after losing contact with the Federal Aviation Administration on its way to a NASCAR race, and a search was underway for the aircraft.",
+"label": "Sports"
+},
+{
+"text": "France Mulls Hostage Crisis, Confusion Over Ransom  DUBAI/PARIS (Reuters) - The French government held crisis  talks on the fate of two French journalists held hostage in  Iraq Wednesday amid growing uncertainty over whether their  kidnappers had demanded a ransom and two-day deadline.",
+"label": "World"
+},
+{
+"text": "Lewis University Put on Probation (AP) AP - Lewis University of Division II was put on four years' probation for an array of infractions that included its men's volleyball team, which won a national title last year the school has since forfeited.",
+"label": "Sports"
+},
+{
+"text": "Washington admits failure to get Iran to UN Security Council VIENNA (MNA) - A United States official confirmed to AFP news agency on Friday that Washington fails to take Irans nuclear issue to the United Nations Security Council for possible sanctions against Tehran.",
+"label": "World"
+},
+{
+"text": "New home ice looks slick If playing for one of college hockey's most storied programs wasn't enticing enough for potential recruits, Boston University's new \\$97 million Harry Agganis Arena should do the trick.",
+"label": "Sports"
+},
+{
+"text": "Internet Ad Revenues Jump 40 Percent Internet advertising revenues jumped 40 percent in the first half of this year, driven largely by the growing popularity of keyword ads tied to search results.",
+"label": "Sci/Tech"
+},
+{
+"text": "Langer leads the Australian charge Justin Langer #39;s coruscating unbeaten 181 shone through on an enthralling day of Test cricket when Australia demonstrated, once again, why they are by far the best side in the world.",
+"label": "Sports"
+},
+{
+"text": "Freescale Unveils Dual-Core PowerPC Freescale Semiconductor Inc. took some of the wraps off of its dual-core microprocessor design, which the company said would be tailored to embedded applications.",
+"label": "Sci/Tech"
+},
+{
+"text": "More Newcastle United Stories Legendary Real Madrid defender Goyo Benito believes the arrival of Jonathan Woodgate at the Santiago Bernabeu will help bring an avalanche of titles to Real Madrid.",
+"label": "Sports"
+},
+{
+"text": "Nortel to file restated results next year Nortel Networks said today that after months of trying to untangle faulty financial results, it won't file its 2003 and first-half 2004 results until early next year.",
+"label": "Sci/Tech"
+},
+{
+"text": "Darfur Rebels Urge Nigeria To Intervene, Kickstart Sudan Peace &lt;b&gt;...&lt;/b&gt; Rebel leaders from Sudan #39;s Darfur region called on Thursday on Nigeria to intervene and kickstart African Union-sponsored talks on the crisis in the west of Sudan ",
+"label": "World"
+},
+{
+"text": "Finley is new Angel in outfield The Angels rounded out their starting outfield yesterday, signing center fielder Steve Finley to a \\$14 million, two-year contract as baseball's winter meetings in Anaheim, Calif., began to percolate.",
+"label": "Sports"
+},
+{
+"text": "IPod Rivals Square Off Against Apple A new generation of smaller, sleeker and cheaper MP3 players from the likes of Sony, Rio, Creative and Rave MP are hitting the market this fall, and they all have Apple Computer #39;s white-hot digital music player in their sights.",
+"label": "Sci/Tech"
+},
+{
+"text": "Casino owners team up in Macao MACAO Publishing  amp; Broadcasting said Tuesday that it had bought a stake in Stanley Ho #39;s latest gambling project in Macao as Asia #39;s two leading casino operators team up to expand in the region.",
+"label": "Business"
+},
+{
+"text": "Briefly: Sun expands pay-as-you go supercomputing roundup Plus: SGI works on Linux performance software...Good Technology supported by HP, Samsung...RealNetworks loss widens on litigation.",
+"label": "Sci/Tech"
+},
+{
+"text": "Energy Dept. funds open-source InfiniBand work Three-year project will back programmers' effort to build Linux software support for the high-speed networking technology.",
+"label": "Sci/Tech"
+},
+{
+"text": "Citigroup to Close Unit in Japan Citigroup Inc. said Monday it will close its trust banking unit in Japan within a year, after Japanese authorities ordered the US financial services giant to suspend its private banking business there.",
+"label": "Business"
+},
+{
+"text": "Els Looks Ahead with Promise After Major Woes  LONDON (Reuters) - After being a frustrated 'nearly man' at  this year's majors, Ernie Els plans to make the most of a  near-perfect finish to the 2004 season.",
+"label": "Sports"
+},
+{
+"text": "iTunes now selling Band Aid song IPod owners can download the Band Aid single after Apple reaches agreement with the charity.",
+"label": "Sci/Tech"
+},
+{
+"text": "Sinn Fein Says N.Irish Deal Nears; No Bush Call (Reuters) Reuters - The leader of Sinn Fein, Northern\\Ireland's main Catholic party and the political ally of the\\Irish Republican Army (IRA), said Sunday he believed his\\Protestant rivals were ready to agree to a peace deal.",
+"label": "World"
+},
+{
+"text": "MLB: NY Yankees 7, Minnesota 6 (12 inn.) Hideki Matsui drove in Derek Jeter with a 12th-inning sacrifice fly Wednesday night, giving the New York Yankees a dramatic, 7-6 win over Minnesota.",
+"label": "Sports"
+},
+{
+"text": "Cassini-Huygens Fly-By at Titan / ESA TV Live / 27-10-2004 Since it arrived at Saturn in mid-2004, Cassini has already sent us back fascinating images of Titan, Saturn #39;s largest satellite.",
+"label": "Sci/Tech"
+},
+{
+"text": "Embattled Mortgage Giant Agrees to Meet New Standards Fannie Mae agreed to keep more cash on hand while it corrects accounting problems, a U.S. regulator said.",
+"label": "World"
+},
+{
+"text": "Serbia, Bosnian Serbs Fail to Help War Crimes Tribunal, UN Says The governments of Serbia and the Bosnian Serb enclave of Bosnia-Herzegovina have failed to bring war crimes suspects to the United Nations tribunal, Chief Prosecutor Carla Del Ponte told the Security Council.",
+"label": "World"
+},
+{
+"text": "Keep It in the Family The IRS is gunning for your inherited IRA. Follow these steps to avoid costly penalties.",
+"label": "Business"
+},
+{
+"text": "Expansion may lead to division The Asia-Europe Meeting, ASEM, will hold its fifth summit in Hanoi in October amidst a recent crisis over the inclusion of Myanmar.",
+"label": "World"
+},
+{
+"text": "Behaviour control by smartphone The Massachusetts Institute of Technology is developing mobile phones designed to learn users #39; daily habits so that they can predict what users will do, reports The Register.",
+"label": "Sci/Tech"
+},
+{
+"text": "Cabrera's Homer Leads Red Sox Past Orioles (AP) AP - Orlando Cabrera flung off his helmet, stepped on home plate and was mobbed by his teammates after leading the Boston Red Sox to another dramatic victory.",
+"label": "Sports"
+},
+{
+"text": "Homeless families total 100,000 The figure for homeless families in England has topped 100,000 for the first time.",
+"label": "World"
+},
+{
+"text": "New Technology Powers Fuel Cells A new fuel cell for notebook PCs, more compact and powerful than competing technologies, could be on the market in early 2006 at a price of around \\$90, its Japanese inventors claim.",
+"label": "Sci/Tech"
+},
+{
+"text": "West Mulls Boundries for African Fighting (AP) AP - As the month-end deadline nears for Sudan to disarm the mostly Arab pro-government militias in Darfur, the United Nations and Western powers are in a dilemma over how far to go to stop the killing in an African country.",
+"label": "World"
+},
+{
+"text": "Attacks disrupt some credit card transactions Flood of data interrupts Authorize.net's credit card processing for Internet merchants, leaving the company scrambling.",
+"label": "Sci/Tech"
+},
+{
+"text": "Industrials lift stocks THE stock market opened higher today as industrials stocks mitigated the effects of a weaker resources sector.  quot;Commodity prices are generally weaker on renewed speculation of weaker demand in China, quot; Wilson HTM senior client adviser Angus Bligh said.",
+"label": "Business"
+},
+{
+"text": "Oil firms above \\$50 as Bush nears win Oil prices jumped above \\$50 a barrel this morning, supported by US election tallies projecting a slim lead for President George W Bush.",
+"label": "Business"
+},
+{
+"text": "Royal Wedding Lures International Media To Brunei Bandar Seri Begawan - Bruneis Royal Wedding between His Royal Highness the Crown Prince Haji Al-Mutahdee Billah and Yang Mulia Dayangku Sarah binti Pengiran Salleh Ab Rahaman has attracted some 170 foreign journalists to the Sultanate.",
+"label": "World"
+},
+{
+"text": "Nikkei Opens Higher Led by Tech Stocks  TOKYO (Reuters) - Tokyo's Nikkei share average was up 0.56  percent in early morning trade on Tuesday as another jump in  U.S. technology shares encouraged investors to step up buying  in local counterparts such as Advantest Corp.",
+"label": "Business"
+},
+{
+"text": "230m claim against FT struck out The High Court in London has struck out the bulk of a record 240m libel damages claim brought against the Financial Times by investment bank Collins Stewart Tullet.",
+"label": "Business"
+},
+{
+"text": "Kodak accepts \\$92 million from Sun SUN MICROSYSTEMS will pay Kodak \\$92 million to settle a patents infringement case after a jury found it guilty of using Java patents.",
+"label": "Sci/Tech"
+},
+{
+"text": "Pierce hunts down Sharapova Maria Sharapova, the 17-year-old Wimbledon champion, was eliminated in the third round at the US Open yesterday by the 27th seed, Mary Pierce, who used to be known as  quot;The ",
+"label": "Sports"
+},
+{
+"text": "Iraq's Neighbors to Get Little for Environment Loss (Reuters) Reuters - Iraq's neighbors want tens of billions\\of dollars for environmental damage done in the 1990-1 Gulf\\conflict, but are set to get only paltry funds from the United",
+"label": "Sci/Tech"
+},
+{
+"text": "Cablevision Narrows Loss on Revenue Surge Cablevision Systems Corp. on Tuesday said it narrowed its third-quarter loss as revenue jumped 20 percent, buoyed by subscriber growth.",
+"label": "Business"
+},
+{
+"text": "US,  #39;EU-three #39; agree on demand The Bush administration reached a tentative deal yesterday with three European nations at the UN nuclear watchdog agency on the next step in confronting Iran over its suspected nuclear weapons program.",
+"label": "World"
+},
+{
+"text": "Alleged U.S. Deserter Set to Surrender TOKYO - Accused U.S. Army deserter Charles Jenkins left his Tokyo hospital for an American military base to surrender to military authorities Saturday, nearly 40 years after he allegedly defected to North Korea...",
+"label": "World"
+},
+{
+"text": "ANOTHER VOICE Sugary drinks bad for you Many studies have linked the consumption of nondiet soda and fruit juices with added sugars to obesity and attendant risks of diabetes.",
+"label": "Sci/Tech"
+},
+{
+"text": "North Korea Seen as Tying Nuclear Talks to US Election North Korea is waiting out the American presidential election in order to bargain with the winner over its nuclear weapons program, according to analysts here and a British diplomat who left Pyongyang today.",
+"label": "World"
+},
+{
+"text": "Bellhorn Makes Big Noise for Red Sox  BOSTON (Reuters) - With a power-packed lineup that features  sluggers like Manny Ramirez and David Ortiz, it was Mark  Bellhorn who was the unlikely hero of Game One of the 100th  World Series with a two-run homer for the Boston Red Sox  Saturday.",
+"label": "Sports"
+},
+{
+"text": "Marlins righthander Burnett to miss Friday #39;s start Miami, FL (Sports Network) - Florida Marlins starting pitcher AJ Burnett is hampered with inflammation in his right elbow and will miss his scheduled start on Friday against the Atlanta Braves.",
+"label": "Sports"
+},
+{
+"text": "MOJAVE, CALIFORNIA: SPACEPORT Monday was a big day in Mojave. Tens of thousands of spectators showed up to see Burt Rutans SpaceShipOne make its second flight from below sea level to the edge of space, and in doing so ",
+"label": "Sci/Tech"
+},
+{
+"text": "Black Watch troops move into position The first units of a Black Watch battlegroup are due to arrive today in their new positions south of Baghdad as Tony Blair indicated that more British troops may replace them in the American-controlled zone before the end of the year.",
+"label": "World"
+},
+{
+"text": "Taking Advantage of the Terminally Stupid Would you pay \\$4 for something that, at best, is worth a dime? Concord Communications shareholders would.",
+"label": "Business"
+},
+{
+"text": "Moscow Rail Station Evacuated on Bomb Threat, Interfax Says Moscow police are conducting a partial evacuation at the Kursk railway station in central Moscow as they search for explosives after receiving an anonymous phone call from a man threatening ",
+"label": "World"
+},
+{
+"text": "Badgers ride early surge MADISON, Wis. -- Anthony Davis ran for 124 yards and two touchdowns, and quarterback John Stocco threw for a career-high 297 yards and a touchdown as No. 5 Wisconsin remained unbeaten with a 38-14 rout of archrival Minnesota. Stocco also ran for two touchdowns as the Badgers, 9-0 for the third time in school history, moved into a first-place tie ...",
+"label": "Sports"
+},
+{
+"text": "Biography of a Worm Can anything stop the next global virus outbreak? We follow the trail of one recent worm to see how the security system works--and whether it can be fixed.",
+"label": "Sci/Tech"
+},
+{
+"text": "Nikkei hits 5-week closing high on upbeat capital spending data TOKYO - Japan #39;s benchmark Nikkei stock index hit a five-week closing high Monday on upbeat capital spending figures for the April-June quarter by Japanese companies.",
+"label": "Business"
+},
+{
+"text": "Real eager to silence doubting supporters NO SPECTATORS will be watching in the ground, but the eyes of Europe will be trained on Romes Olympic Stadium tonight as Real Madrid seek the win they probably need to avoid a humiliating, early exit from the Champions League.",
+"label": "Sports"
+},
+{
+"text": "Howe won #39;t be back in 2005 According to a report on the MSG Network website, New York Mets manager Art Howe will not return as the team #39;s manager for the 2005 season.",
+"label": "Sports"
+},
+{
+"text": "UPDATE 2-Spaniards Garcia and Lara share Volvo Masters lead Sergio Garcia showed the consistency that has lifted his game this year with a four-under-par 67 in difficult conditions to share the Volvo Masters lead with Spanish compatriot Jose Manuel Lara.",
+"label": "Sports"
+},
+{
+"text": "IMF, World Bank look to keep global recovery strong (AFP) AFP - Facing a global economy on the mend but threatened by surging oil prices and other factors, IMF and World Bank policymakers opened two days of meetings Saturday to discuss ways to keep the recovery on track.",
+"label": "Business"
+},
+{
+"text": "China #39;s economy still sizzling, with GDP up 9.1 in Q3, but prices &lt;b&gt;...&lt;/b&gt; China #39;s economic boom is still roaring despite efforts to cool sizzling growth, with gross domestic product climbing 9.5 per cent in the first three quarters of this year, the government reported Friday.",
+"label": "Business"
+},
+{
+"text": "Credit Suisse to merge CSFB unit into parent Credit Suisse Group announced plans to merge its Credit Suisse First Boston Securities unit with the rest of the company #39;s operations and cut as many as 300 jobs.",
+"label": "Business"
+},
+{
+"text": "Thailand Tackles Bird Flu Epidemic BANGKOK, Thailand Sept. 30, 2004 - Millions of volunteers led by emergency teams fanned out across Thailand on Thursday in a new drive to fight bird flu after the prime minister gave officials 30 days to eradicate the epidemic.",
+"label": "World"
+},
+{
+"text": "McKinnon briefed on democracy: Meeting with PM ISLAMABAD, Oct 23: Prime Minister Shaukat Aziz briefed Commonwealth Secretary-General Donald C. McKinnon on full restoration of democracy in the country and Pakistan #39;s role in promoting regional and global peace.",
+"label": "World"
+},
+{
+"text": "Top Zarqawi Aide Captured in Iraq A lieutenant of Iraq's most feared insurgent leader, Abu Musab Zarqawi, was captured this week, the country's national security minister said Thursday.",
+"label": "World"
+},
+{
+"text": "Delta Pilots Ratify Concession Package  CHICAGO (Reuters) - Pilots at Delta Air Lines Inc. on  Thursday ratified a concession package that will save the  carrier \\$1 billion a year, in a move the company hopes will buy  it time to restructure outside of bankruptcy.",
+"label": "Business"
+},
+{
+"text": "Patterson gets silver on balance beam Athens, Greece (Sports Network) - American Carly Patterson, the women #39;s all- around champion at the Summer Games, added another medal on Monday night with a silver in the balance beam competition.",
+"label": "Sports"
+},
+{
+"text": "EasyGroup close to launching low-cost mobile phone service (AFP) AFP - EasyGroup, the holding company of no-frills British airline easyJet, is close to striking a deal to launch a low-cost mobile telephone service in Britain, the Financial Times reported.",
+"label": "World"
+},
+{
+"text": "So Long XMLHack! \\\\\"It's been a lot of fun writing XMLhack since 1999, but it's time for us to take\\a rest.\"\\\\\"XMLhack has always been run by volunteers writing in their spare time, and now\\most of us have so little of that precious commodity it's infeasible to keep the\\site going at anything like the rate we want it to be.\"\\\\\"As editor, I'd like to extend my grateful thanks to all the contributors over\\time, a list of whom you can see on the contributors page. My special thanks go\\to Simon St.Laurent, my co-conspirator from the start.\"\\\\So long guys!\\\\I've been a subscriber to XMLHack for probably &gt; 3 years now.  They were one of\\the earlier blog-like sites to have RSS in what I'd call a 'modern' and rich\\f ...\\\\",
+"label": "Sci/Tech"
+},
+{
+"text": "Ken Caminiti, Former NL MVP, Dies of Heart Attack at Age 41 Ken Caminiti, the 1996 National League Most Valuable Player who admitted to using steroids during his Major League Baseball career, died yesterday of a heart attack, his agent said.",
+"label": "Sports"
+},
+{
+"text": "Olympic 2012 : Madrid unveils bid dossier Madrid, one of five cities bidding to host the 2012 Olympics and Paralympics, unveiled its dossier on Wednesday (17 November), just two days after submitting it to the International Olympic Committee (IOC).",
+"label": "Sports"
+},
+{
+"text": "Natalie Coughlin Wins 100M Backstroke (AP) AP - American Natalie Coughlin won Olympic gold in the 100-meter backstroke Monday night. Coughlin, the only woman ever to swim under 1 minute in the event, finished first in 1 minute, 0.37 seconds. Kirsty Coventry of Zimbabwe, who swims at Auburn University in Alabama, earned the silver in 1:00.50. Laure Manaudou of France took bronze in 1:00.88.",
+"label": "Sports"
+},
+{
+"text": "Oil Eases Again as Fuel Costs Hit Economy (Reuters) Reuters - Oil prices ended lower on Tuesday on\\signs that high energy costs are slowing the economic growth\\that has fueled this year's sharp increase in world oil\\consumption.",
+"label": "Business"
+},
+{
+"text": "Diouf Charged After Spitting Row Bolton #39;s El-Hadji Diouf has been charged by the Football Association for spitting at Portsmouth #39;s Arjan de Zeeuw in Saturday #39;s 1-0 win for Pompey.",
+"label": "Sports"
+},
+{
+"text": "Qualcomm Raises Earnings Forecast Qualcomm Inc. on Friday raised its quarterly profit forecast due to strong demand for its mobile phone technology. The San Diego company said it expects earnings per ",
+"label": "Business"
+},
+{
+"text": "Judge orders inspector to look at Hollinger dealings A Canadian judge has ordered that a court-appointed inspector be assigned to take a close look at the business dealings of Hollinger Inc, the Conrad Black-controlled company said on Friday.",
+"label": "Business"
+},
+{
+"text": "Gatlin sprints from unknown to 100m gold Reuters Athens Aug 23: American Justin Gatlin roared from virtual unknown to win the blue ribband Olympic mens 100 metres race yesterday, upstaging defending champion Maurice Greene and other more illustrious rivals.",
+"label": "Sports"
+},
+{
+"text": "This could be the week for a Patriots loss The New England Patriots might be like no other powerhouse in NFL history. They almost never dominate, they just always win -- a record 21 victories in a row including the postseason, 18 straight in the regular season.",
+"label": "Sports"
+},
+{
+"text": "Black Watch troops move near Baghdad British troops have rolled north from Basra to take over a deadly area near Baghdad and free up US troops for a widely expected attack on the rebel-held city of Falluja.",
+"label": "World"
+},
+{
+"text": "Skybox updates risk management wares BOSTON - New software from Skybox Security will help companies monitor their networks and comply with U.S. federal and state data security regulations, and even help them prepare networks for dangerous new Internet worms, according to the company.",
+"label": "Sci/Tech"
+},
+{
+"text": "GE pledges to meet rules of disclosure in SEC pact General Electric Co. yesterday agreed to a settlement with the Securities and Exchange Commission, which accused the company of failing to provide shareholders ",
+"label": "Business"
+},
+{
+"text": "BlackBerry, Beloved Gadget, Continues to Thrive BOUT a year ago, PalmOne was poised to challenge the dominance of the BlackBerry, the wireless e-mail device made by Research in Motion that has become the gadget of choice among celebrities and politicians.",
+"label": "Sci/Tech"
+},
+{
+"text": "Coming to Project Managers: Multiscreen Microsoft PC Microsoft Corp. has launched a new entry in its ongoing effort to bring more innovative PC form factors to marketin the somewhat quirky form of a high-end system specialized for project managers.",
+"label": "Sci/Tech"
+},
+{
+"text": "NBA Wrap: O'Neal and Wade Help Heat Beat Raptors  NEW YORK (Reuters) - Shaquille O'Neal and Dwyane Wade each  scored 20 points and added nine rebounds as the Miami Heat  notched their fourth consecutive win dumping the struggling  Toronto Raptors 106-98 Sunday.",
+"label": "Sports"
+},
+{
+"text": "Dell Takes Another Cut at Blade Market  quot;The biggest danger to HP and IBM is a price war, quot; said John Enck of Gartner.  quot;Blades are still premium-priced products from IBM and HP.",
+"label": "Sci/Tech"
+},
+{
+"text": "Iran agrees to nuclear enrichment freeze -diplomats Iran has agreed to suspend its uranium enrichment programme in an attempt to ease concerns that its nuclear programme is aimed at developing weapons, a Western diplomat close to the United Nations said today.",
+"label": "World"
+},
+{
+"text": "Coca-Cola Makes Very Good #39; Bid to End Probe, EU Says (Update2) Coca-Cola Co. moved closer to settling a five-year European Commission antitrust probe after regulators said an offer from the world #39;s biggest soft-drink maker to revamp its sales practices is very good.",
+"label": "Business"
+},
+{
+"text": "British Music Fans Decry ITunes Pricing Consumer group complains of higher prices in U.K. than elsewhere in Europe.",
+"label": "Sci/Tech"
+},
+{
+"text": "Ken Caminiti, 1996 NL MVP, Dies at Age 41 NEW YORK - Ken Caminiti, the 1996 National League MVP who later admitted using steroids during his major league career, died Sunday. He was 41...",
+"label": "World"
+},
+{
+"text": "London Times goes strictly tabloid After more than two centuries as a broadsheet newspaper, The Times of London has gone strictly tabloid. On Monday, The Times moved to a totally compact format after almost a year of dual publication.",
+"label": "Sci/Tech"
+},
+{
+"text": "Serie A Preview: Inter-Juventus The Derby of Italy is back on Sunday night as Inter host arch-rivals Juventus in a do-or-die encounter for the Nerazzurri. Inter-Juventus is never an ordinary match, even when both teams are not fighting for any major honours.",
+"label": "Sports"
+},
+{
+"text": "China Sighs in Relief as Yao Scores High BEIJING (Reuters) - China breathed a measured sigh of relief after the skills of its basketball giant Yao Ming dwarfed New Zealand to sweep his team nearer to their goal of reaching the Athens Olympics semi-finals. ",
+"label": "Sports"
+},
+{
+"text": "Nursery rhymes more violent than TV (Reuters) Reuters - Children's nursery rhymes contain 10 times more violence than television shows broadcast before the\\9 p.m. \"watershed\" after which more adult content can be shown, research has said.",
+"label": "World"
+},
+{
+"text": "Minaya Shakes Up Mets Coaching Staff NEW YORK Oct. 13, 2004 - Mets general manager Omar Minaya shook up New York #39;s coaching staff Wednesday while continuing to search for a manager to replace Art Howe.",
+"label": "Sports"
+},
+{
+"text": "Man held for slashing teens Beijing - Chinese police have detained a man who they say murdered eight teenagers and injured four others in a school dormitory overnight, state press said late on Friday.",
+"label": "World"
+},
+{
+"text": "Former Enron employee testifies about cover-up to Merrill Lynch &lt;b&gt;...&lt;/b&gt; NEW YORK, September 22 (newratings.com) - A witness in the first Enron criminal trial, and a former executive at the company, testified today that she believed that the Enron executives now on trial were involved in an effort to hide an illicit deal ",
+"label": "Business"
+},
+{
+"text": "Lexmark recalls 40,000 printers Lexmark International Inc. recalled 39,431 printers from the market on Tuesday, according to a statement by Consumer Product Safety Commission.",
+"label": "Sci/Tech"
+},
+{
+"text": "US-Israel ties hang on Palestinian Vote In a pace-setting adventure next January that could herald a new beginning in the Middle East or spell disaster for all is the election of a Palestinian successor to the charismatic Yasser Arafat and a new Baghdad regime that could bring to an end the ",
+"label": "World"
+},
+{
+"text": "Israeli Officer Arrested Over Killing of Gaza Girl (Reuters) Reuters - Israeli military police on Tuesday\\arrested a commander accused by comrades of riddling the body\\of a Palestinian schoolgirl with bullets after fellow soldiers\\killed her.",
+"label": "World"
+},
+{
+"text": "Jakarta bombing blamed on Malaysian fugitives The Indonesian police asserted Friday it would intensify the hunt of two Malaysian fugitives Azahari and Noordin Moh Top believed to be responsible for the Thursday #39;s bombing at the Australian embassy.",
+"label": "World"
+},
+{
+"text": "Georgia Evolution Dispute Embarrasses Some Atlanta, Nov. 11 - First, Georgia #39;s education chief tried to take the word  quot;evolution quot; out of the state #39;s science curriculum.",
+"label": "Sci/Tech"
+},
+{
+"text": "Wizards' Kwame Brown Suspended One Game (AP) AP - The Washington Wizards suspended Kwame Brown for one game Thursday for his actions during the previous night's game against Denver.",
+"label": "Sports"
+},
+{
+"text": "NetManage Looks to SOAs with Librados Buy NetManage (Quote, Chart) agreed to acquire privately held Librados for an undisclosed sum. The deal would give NetManage application adapters to help its Host Services Platform server applications via service ",
+"label": "Sci/Tech"
+},
+{
+"text": "Cray promotes two execs Ly-Huong Pham becomes the supercomputer maker's senior vice president of operations, and Peter Ungaro is made senior vice president for sales, marketing and services.",
+"label": "Sci/Tech"
+},
+{
+"text": "Drink-drive swimmer  #39;very sorry #39; AN apologetic Michael Phelps today said he made a dangerous mistake when he was arrested for drink-driving last week. The Olympic swimming champion was arrested and charged with drink driving after a trooper ",
+"label": "Sports"
+},
+{
+"text": "New Crew Prepares For Space Station Duty CAPE CANAVERAL, Fla. -- A new crew is aboard the International Space Station Wednesday preparing to take over command of the orbiting outpost.",
+"label": "Sci/Tech"
+},
+{
+"text": "Bush Signs Into Law Debt Ceiling Increase &lt;p&gt;&lt;/p&gt;&lt;p&gt; WASHINGTON (Reuters) - President Bush on Friday signed intolaw a measure authorizing an \\$800 billion increase in thecredit limit of the United States, the White House said.&lt;/p&gt;",
+"label": "World"
+},
+{
+"text": "European spacecraft prepares to orbit Moon Europes first lunar spacecraft is set to go into orbit around the Moon on Monday. SMART-1 has already reached the gateway to the Moon, the region where its gravity starts to dominate that of the Earth.",
+"label": "Sci/Tech"
+},
+{
+"text": "EU transport chief hails Alitalia accord (AFP) AFP - EU transport and energy commissioner Loyola de Palacio hailed the accord reached between Alitalia management and staff on a major restructuring plan aimed at keeping the struggling airline in the air.",
+"label": "World"
+},
+{
+"text": "War crimes hearings to begin for 4 at Guantanamo US NAVAL BASE GUANTANAMO BAY, Cuba -- Four suspected Al Qaeda fighters will be formally charged with war crimes this week as the US military opens the first legal hearings for foreign prisoners captured during the war in Afghanistan and held at a remote US Navy base in Cuba.",
+"label": "World"
+},
+{
+"text": "Complex Brings Work, Shops Close to Home Tucked on a side street, just a block from the cars and trucks that whiz along Rockville Pike, sits a new complex of 404 luxury apartments, renovated restaurants and stores that some planners and developers are calling the optimum in compact urban redevelopment.",
+"label": "Business"
+},
+{
+"text": "UPDATE 1-Nalbandian suffers Beijing shock Finn Jarkko Nieminen overpowered David Nalbandian 6-2 2-6 6-2 at the China Open on Friday as the seeds continued to tumble in Beijing.",
+"label": "Sports"
+},
+{
+"text": "UN Council Poised to Vote on Darfur Resolution  UNITED NATIONS (Reuters) - The United States and China held  last-minute talks on Saturday before the U.N. Security Council  was to vote on a resolution that would consider oil sanctions  against Sudan if it did not stop atrocities in the Darfur  region.",
+"label": "World"
+},
+{
+"text": "Sluman shoots course-mark 62 Consistency was the key to Jeff Sluman #39;s record-breaking round on Thursday on the difficult Copperhead Course at the Westin Innisbrook Resort.",
+"label": "Sports"
+},
+{
+"text": "Yukos under the hammer at \\$8.6bn Russia pressed ahead yesterday with controversial plans to break up the country #39;s biggest oil company Yukos, setting a date of December 19 for an auction of its main production unit at a bargain basement starting price of \\$8.65bn (4.88bn).",
+"label": "Business"
+},
+{
+"text": "Trade Gap Swells More Than Expected The US trade deficit widened nearly 9 percent in October to a record \\$55.5 billion as sky-high oil prices helped propel imports into uncharted territory, the government said on Tuesday.",
+"label": "Business"
+},
+{
+"text": "TheStreet.com May Be Up for Sale -- Report (Reuters) Reuters - TheStreet.com Inc. , the\\financial news and commentary Web site, may be up for sale,\\according to a report in Business Week, sparking a 7 percent\\rise in its shares.",
+"label": "Sci/Tech"
+},
+{
+"text": "ST Tele-TM Intl to buy 47.7 in Idea Mumbai: Singapore Technologies Telemedia and TM International have announced that their consortium has signed definitive agreements for the acquisition of 47.7 per cent stake in Idea Cellular.",
+"label": "Business"
+},
+{
+"text": "Pornsters face life in China smut crackdown China is stepping up its hard line against internet pornography by threatening life imprisonment for anyoner caught peddling porn.",
+"label": "Sci/Tech"
+},
+{
+"text": "FaceTime, IMlogic Back Live Communications Server 2005 Hard on the heels of Microsoft announcing that it #39;s taken Live Communications Server 2005 gold, instant messaging management software vendors IMlogic and FaceTime on Tuesday both touted their support for the communication product.",
+"label": "Business"
+},
+{
+"text": "Pfizer: Celebrex Safe After News Report  NEW YORK/OTTAWA (Reuters) - Pfizer Inc. &lt;A HREF=\"http://www.investor.reuters.com/FullQuote.aspx?ticker=PFE.N target=/stocks/quickinfo/fullquote\"&gt;PFE.N&lt;/A&gt; said on  Thursday its arthritis drug Celebrex was safe after a report in  a Canadian newspaper linked it to 14 deaths,",
+"label": "Business"
+},
+{
+"text": "Pittsburgh: Where the Unbeaten Go to Die The body blows came in staccato fashion, from the arm of a rookie quarterback and the legs of an old pro. Ben Roethlisberger would give the ball to Jerome Bettis, and Bettis ",
+"label": "Sports"
+},
+{
+"text": "New Siebel Chief Outlines Chapter 2 For CRM Vendor After 10 years of focusing on product development and delivery, CEO Michael Lawrie says Siebel had to recognize that technology is only one part of the CRM equation.",
+"label": "Business"
+},
+{
+"text": "China rebuffs Powell over Taiwan recommendation China has rebuffed suggestions by US Secretary of State Colin Powell that it consider accepting the Taiwanese President #39;s offer of talks to reduce cross-strait tension.",
+"label": "World"
+},
+{
+"text": "Is Google the new devil? Looks like Microsoft may have been biding its time to get back at search giant Google. Missing Links",
+"label": "Sci/Tech"
+},
+{
+"text": "For Neglected Video, a Hollywood Touch A growing cottage industry is taking customers' raw home video and putting it on DVD, in some cases producing short movies with sophisticated cinematic effects and a musical soundtrack.",
+"label": "Sci/Tech"
+},
+{
+"text": "Veterans face quandary with Pistons Antonio McDyess and Derrick Coleman understood that coming to the defending NBA champion Detroit Pistons offered the best and worst scenarios for a veteran player.",
+"label": "Sports"
+},
+{
+"text": "Google Results Revive 'Dot-Com' Fervor  NEW YORK/SAN FRANCISCO (Reuters) - Shares of Google Inc.  rose as much as 20 percent on Friday, to trade at more than  twice the level of its cut-price IPO, after the Web search  leader posted strong quarterly results in its first reported  quarter as a public company.",
+"label": "Business"
+},
+{
+"text": "Attack prompts Bush website block The re-election website of President Bush is blocking overseas visitors because of \"security reasons\".",
+"label": "Sci/Tech"
+}
+]
+}
