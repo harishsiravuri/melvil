@@ -1,0 +1,75 @@
+{
+ "task": "massive",
+ "arm": "vanilla",
+ "seed": 1,
+ "test_accuracy": 0.8733,
+ "test_macro_f1": 0.8877,
+ "unparseable": 0,
+ "dev_accuracy": 0.87,
+ "optimize_cost_usd": 0.2332,
+ "test_cost_usd": 0.0795,
+ "metric_calls_spent": 869,
+ "artifact_id": "89e670b38ff0",
+ "exemplars": 0,
+ "curve": [
+  {
+   "metric_calls": 0,
+   "dev_score": 0.81
+  },
+  {
+   "metric_calls": 106,
+   "dev_score": 0.85
+  },
+  {
+   "metric_calls": 212,
+   "dev_score": 0.82
+  },
+  {
+   "metric_calls": 324,
+   "dev_score": 0.84
+  },
+  {
+   "metric_calls": 430,
+   "dev_score": 0.84
+  },
+  {
+   "metric_calls": 542,
+   "dev_score": 0.87
+  },
+  {
+   "metric_calls": 663,
+   "dev_score": 0.86
+  },
+  {
+   "metric_calls": 769,
+   "dev_score": 0.86
+  }
+ ],
+ "top_confusions": [
+  [
+   "calendar_set",
+   "calendar_query",
+   4
+  ],
+  [
+   "qa_factoid",
+   "general_quirky",
+   3
+  ],
+  [
+   "qa_definition",
+   "general_quirky",
+   2
+  ],
+  [
+   "general_quirky",
+   "qa_factoid",
+   2
+  ],
+  [
+   "play_music",
+   "general_quirky",
+   2
+  ]
+ ]
+}

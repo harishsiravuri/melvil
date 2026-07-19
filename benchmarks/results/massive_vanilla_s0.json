@@ -1,0 +1,75 @@
+{
+ "task": "massive",
+ "arm": "vanilla",
+ "seed": 0,
+ "test_accuracy": 0.8367,
+ "test_macro_f1": 0.8529,
+ "unparseable": 0,
+ "dev_accuracy": 0.86,
+ "optimize_cost_usd": 0.2452,
+ "test_cost_usd": 0.0465,
+ "metric_calls_spent": 875,
+ "artifact_id": "bfeb39379257",
+ "exemplars": 0,
+ "curve": [
+  {
+   "metric_calls": 0,
+   "dev_score": 0.81
+  },
+  {
+   "metric_calls": 115,
+   "dev_score": 0.81
+  },
+  {
+   "metric_calls": 230,
+   "dev_score": 0.84
+  },
+  {
+   "metric_calls": 339,
+   "dev_score": 0.83
+  },
+  {
+   "metric_calls": 451,
+   "dev_score": 0.86
+  },
+  {
+   "metric_calls": 557,
+   "dev_score": 0.85
+  },
+  {
+   "metric_calls": 666,
+   "dev_score": 0.86
+  },
+  {
+   "metric_calls": 775,
+   "dev_score": 0.86
+  }
+ ],
+ "top_confusions": [
+  [
+   "general_quirky",
+   "qa_factoid",
+   7
+  ],
+  [
+   "news_query",
+   "qa_factoid",
+   4
+  ],
+  [
+   "calendar_set",
+   "calendar_query",
+   4
+  ],
+  [
+   "calendar_set",
+   "alarm_set",
+   2
+  ],
+  [
+   "calendar_query",
+   "lists_query",
+   2
+  ]
+ ]
+}

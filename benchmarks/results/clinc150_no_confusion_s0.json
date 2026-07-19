@@ -1,0 +1,51 @@
+{
+ "task": "clinc150",
+ "arm": "no_confusion",
+ "seed": 0,
+ "test_accuracy": 0.9833,
+ "test_macro_f1": 0.9833,
+ "unparseable": 0,
+ "dev_accuracy": 0.99,
+ "optimize_cost_usd": 0.025,
+ "test_cost_usd": 0.0,
+ "metric_calls_spent": 894,
+ "artifact_id": "5388fdbf5754",
+ "exemplars": 2,
+ "curve": [
+  {
+   "metric_calls": 0,
+   "dev_score": 0.98
+  },
+  {
+   "metric_calls": 694,
+   "dev_score": 0.97
+  }
+ ],
+ "top_confusions": [
+  [
+   "pto_request",
+   "rewards_balance",
+   1
+  ],
+  [
+   "transfer",
+   "weather",
+   1
+  ],
+  [
+   "recipe",
+   "cook_time",
+   1
+  ],
+  [
+   "timer",
+   "definition",
+   1
+  ],
+  [
+   "restaurant_reviews",
+   "recipe",
+   1
+  ]
+ ]
+}

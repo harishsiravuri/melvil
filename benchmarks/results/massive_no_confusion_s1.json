@@ -1,0 +1,59 @@
+{
+ "task": "massive",
+ "arm": "no_confusion",
+ "seed": 1,
+ "test_accuracy": 0.8733,
+ "test_macro_f1": 0.8785,
+ "unparseable": 0,
+ "dev_accuracy": 0.91,
+ "optimize_cost_usd": 0.1271,
+ "test_cost_usd": 0.0524,
+ "metric_calls_spent": 800,
+ "artifact_id": "72dd446be85a",
+ "exemplars": 6,
+ "curve": [
+  {
+   "metric_calls": 0,
+   "dev_score": 0.84
+  },
+  {
+   "metric_calls": 163,
+   "dev_score": 0.86
+  },
+  {
+   "metric_calls": 395,
+   "dev_score": 0.83
+  },
+  {
+   "metric_calls": 576,
+   "dev_score": 0.86
+  }
+ ],
+ "top_confusions": [
+  [
+   "qa_factoid",
+   "general_quirky",
+   3
+  ],
+  [
+   "news_query",
+   "qa_factoid",
+   3
+  ],
+  [
+   "calendar_set",
+   "calendar_query",
+   3
+  ],
+  [
+   "play_podcasts",
+   "play_music",
+   2
+  ],
+  [
+   "play_music",
+   "general_quirky",
+   2
+  ]
+ ]
+}

@@ -1,0 +1,10 @@
+{
+ "task": "clinc150",
+ "arm": "transfer",
+ "seed": 0,
+ "transfer_model": "openrouter/openai/gpt-4.1-nano",
+ "test_accuracy": 0.9767,
+ "test_macro_f1": 0.9766,
+ "test_cost_usd": 0.0099,
+ "artifact_id": "67ae7b527823"
+}

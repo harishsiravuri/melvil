@@ -1,0 +1,42 @@
+{
+ "task": "massive",
+ "arm": "seed",
+ "seed": 0,
+ "test_accuracy": 0.84,
+ "test_macro_f1": 0.8473,
+ "unparseable": 0,
+ "dev_accuracy": null,
+ "optimize_cost_usd": 0.0,
+ "test_cost_usd": 0.0194,
+ "metric_calls_spent": 0,
+ "artifact_id": "22d0472ba47d",
+ "exemplars": 0,
+ "curve": [],
+ "top_confusions": [
+  [
+   "calendar_set",
+   "alarm_set",
+   7
+  ],
+  [
+   "calendar_set",
+   "calendar_query",
+   4
+  ],
+  [
+   "qa_factoid",
+   "general_quirky",
+   2
+  ],
+  [
+   "general_quirky",
+   "recommendation_locations",
+   2
+  ],
+  [
+   "calendar_query",
+   "lists_query",
+   2
+  ]
+ ]
+}

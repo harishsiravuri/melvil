@@ -1,0 +1,67 @@
+{
+ "task": "massive",
+ "arm": "full",
+ "seed": 0,
+ "test_accuracy": 0.88,
+ "test_macro_f1": 0.8923,
+ "unparseable": 1,
+ "dev_accuracy": 0.92,
+ "optimize_cost_usd": 0.1915,
+ "test_cost_usd": 0.0914,
+ "metric_calls_spent": 820,
+ "artifact_id": "303b7ebe4c29",
+ "exemplars": 5,
+ "curve": [
+  {
+   "metric_calls": 0,
+   "dev_score": 0.84
+  },
+  {
+   "metric_calls": 136,
+   "dev_score": 0.82
+  },
+  {
+   "metric_calls": 263,
+   "dev_score": 0.85
+  },
+  {
+   "metric_calls": 375,
+   "dev_score": 0.86
+  },
+  {
+   "metric_calls": 487,
+   "dev_score": 0.86
+  },
+  {
+   "metric_calls": 620,
+   "dev_score": 0.88
+  }
+ ],
+ "top_confusions": [
+  [
+   "qa_factoid",
+   "general_quirky",
+   4
+  ],
+  [
+   "play_podcasts",
+   "play_music",
+   2
+  ],
+  [
+   "calendar_set",
+   "calendar_query",
+   2
+  ],
+  [
+   "recommendation_events",
+   "calendar_query",
+   1
+  ],
+  [
+   "qa_definition",
+   "general_quirky",
+   1
+  ]
+ ]
+}

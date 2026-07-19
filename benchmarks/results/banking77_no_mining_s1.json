@@ -1,0 +1,67 @@
+{
+ "task": "banking77",
+ "arm": "no_mining",
+ "seed": 1,
+ "test_accuracy": 0.8067,
+ "test_macro_f1": 0.7936,
+ "unparseable": 0,
+ "dev_accuracy": 0.83,
+ "optimize_cost_usd": 0.0614,
+ "test_cost_usd": 0.0729,
+ "metric_calls_spent": 867,
+ "artifact_id": "de545847c97d",
+ "exemplars": 0,
+ "curve": [
+  {
+   "metric_calls": 0,
+   "dev_score": 0.79
+  },
+  {
+   "metric_calls": 199,
+   "dev_score": 0.82
+  },
+  {
+   "metric_calls": 362,
+   "dev_score": 0.8
+  },
+  {
+   "metric_calls": 486,
+   "dev_score": 0.79
+  },
+  {
+   "metric_calls": 634,
+   "dev_score": 0.83
+  },
+  {
+   "metric_calls": 767,
+   "dev_score": 0.82
+  }
+ ],
+ "top_confusions": [
+  [
+   "balance_not_updated_after_bank_transfer",
+   "pending_transfer",
+   6
+  ],
+  [
+   "pending_transfer",
+   "transfer_timing",
+   5
+  ],
+  [
+   "topping_up_by_card",
+   "balance_not_updated_after_bank_transfer",
+   4
+  ],
+  [
+   "balance_not_updated_after_bank_transfer",
+   "transfer_timing",
+   3
+  ],
+  [
+   "beneficiary_not_allowed",
+   "failed_transfer",
+   3
+  ]
+ ]
+}

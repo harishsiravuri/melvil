@@ -1,0 +1,10 @@
+{
+ "task": "banking77",
+ "arm": "transfer",
+ "seed": 2,
+ "transfer_model": "openrouter/openai/gpt-4.1-nano",
+ "test_accuracy": 0.73,
+ "test_macro_f1": 0.701,
+ "test_cost_usd": 0.0282,
+ "artifact_id": "76ae94a7196d"
+}

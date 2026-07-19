@@ -1,0 +1,67 @@
+{
+ "task": "trec",
+ "arm": "full",
+ "seed": 1,
+ "test_accuracy": 0.9,
+ "test_macro_f1": 0.8911,
+ "unparseable": 0,
+ "dev_accuracy": 0.9,
+ "optimize_cost_usd": 0.1024,
+ "test_cost_usd": 0.0443,
+ "metric_calls_spent": 802,
+ "artifact_id": "289edd4dd88f",
+ "exemplars": 6,
+ "curve": [
+  {
+   "metric_calls": 0,
+   "dev_score": 0.53
+  },
+  {
+   "metric_calls": 112,
+   "dev_score": 0.76
+  },
+  {
+   "metric_calls": 221,
+   "dev_score": 0.64
+  },
+  {
+   "metric_calls": 327,
+   "dev_score": 0.74
+  },
+  {
+   "metric_calls": 454,
+   "dev_score": 0.77
+  },
+  {
+   "metric_calls": 578,
+   "dev_score": 0.82
+  }
+ ],
+ "top_confusions": [
+  [
+   "entity",
+   "description",
+   12
+  ],
+  [
+   "entity",
+   "human",
+   5
+  ],
+  [
+   "human",
+   "entity",
+   3
+  ],
+  [
+   "location",
+   "entity",
+   3
+  ],
+  [
+   "numeric",
+   "description",
+   2
+  ]
+ ]
+}

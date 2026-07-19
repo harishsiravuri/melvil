@@ -1,0 +1,63 @@
+{
+ "task": "banking77",
+ "arm": "no_confusion",
+ "seed": 0,
+ "test_accuracy": 0.83,
+ "test_macro_f1": 0.8164,
+ "unparseable": 0,
+ "dev_accuracy": 0.85,
+ "optimize_cost_usd": 0.1174,
+ "test_cost_usd": 0.0393,
+ "metric_calls_spent": 804,
+ "artifact_id": "a24686d67310",
+ "exemplars": 6,
+ "curve": [
+  {
+   "metric_calls": 0,
+   "dev_score": 0.79
+  },
+  {
+   "metric_calls": 112,
+   "dev_score": 0.78
+  },
+  {
+   "metric_calls": 272,
+   "dev_score": 0.78
+  },
+  {
+   "metric_calls": 456,
+   "dev_score": 0.79
+  },
+  {
+   "metric_calls": 574,
+   "dev_score": 0.79
+  }
+ ],
+ "top_confusions": [
+  [
+   "card_payment_not_recognised",
+   "reverted_card_payment?",
+   4
+  ],
+  [
+   "pending_transfer",
+   "transfer_timing",
+   4
+  ],
+  [
+   "balance_not_updated_after_bank_transfer",
+   "pending_transfer",
+   4
+  ],
+  [
+   "balance_not_updated_after_bank_transfer",
+   "transfer_timing",
+   3
+  ],
+  [
+   "transfer_into_account",
+   "top_up_by_cash_or_cheque",
+   3
+  ]
+ ]
+}

@@ -1,0 +1,105 @@
+INFO round 1: dev 0.840 (best 0.840) | 100 metric calls | $0.00
+INFO round 2: dev 0.870 (best 0.870) | 221 metric calls | $0.02
+INFO round 3: dev 0.800 (best 0.870) | 333 metric calls | $0.04
+INFO round 4: dev 0.830 (best 0.870) | 439 metric calls | $0.07
+INFO round 5: dev 0.880 (best 0.880) | 551 metric calls | $0.10
+INFO round 6: dev 0.880 (best 0.880) | 693 metric calls | $0.14
+INFO round 7: dev 0.900 (best 0.900) | 814 metric calls | $0.17
+INFO done: dev 0.900 (seed 0.840) | 7 candidates | $0.17 | artifact 069d84906355
+INFO round 1: dev 0.840 (best 0.840) | 100 metric calls | $0.00
+INFO round 2: dev 0.860 (best 0.860) | 230 metric calls | $0.02
+INFO round 3: dev 0.900 (best 0.900) | 342 metric calls | $0.04
+INFO round 4: dev 0.850 (best 0.900) | 448 metric calls | $0.07
+INFO round 5: dev 0.860 (best 0.900) | 557 metric calls | $0.11
+INFO round 6: dev 0.870 (best 0.900) | 672 metric calls | $0.15
+INFO round 7: dev 0.890 (best 0.900) | 778 metric calls | $0.18
+INFO round 8: dev 0.810 (best 0.900) | 884 metric calls | $0.22
+INFO done: dev 0.900 (seed 0.840) | 8 candidates | $0.22 | artifact d0aafe1581e8
+INFO round 1: dev 0.840 (best 0.840) | 100 metric calls | $0.00
+INFO round 2: dev 0.870 (best 0.870) | 233 metric calls | $0.02
+INFO round 3: dev 0.880 (best 0.880) | 339 metric calls | $0.04
+INFO round 4: dev 0.870 (best 0.880) | 463 metric calls | $0.07
+INFO round 5: dev 0.870 (best 0.880) | 629 metric calls | $0.15
+INFO round 6: dev 0.860 (best 0.880) | 735 metric calls | $0.19
+INFO round 7: dev 0.800 (best 0.880) | 841 metric calls | $0.23
+INFO done: dev 0.880 (seed 0.840) | 7 candidates | $0.23 | artifact 85e630f23df8
+INFO round 1: dev 0.860 (best 0.860) | 100 metric calls | $0.00
+INFO round 2: dev 0.820 (best 0.860) | 233 metric calls | $0.03
+INFO round 3: dev 0.850 (best 0.860) | 363 metric calls | $0.05
+INFO round 4: dev 0.860 (best 0.860) | 697 metric calls | $0.14
+INFO hard-example mining: kept 6 exemplars (dev 0.920 >= 0.860)
+INFO done: dev 0.920 (seed 0.860) | 4 candidates | $0.15 | artifact 63e9dfc7c90e
+INFO round 1: dev 0.860 (best 0.860) | 100 metric calls | $0.00
+INFO round 2: dev 0.830 (best 0.860) | 236 metric calls | $0.02
+INFO round 3: dev 0.820 (best 0.860) | 387 metric calls | $0.06
+INFO round 4: dev 0.850 (best 0.860) | 583 metric calls | $0.11
+INFO hard-example mining: kept 6 exemplars (dev 0.920 >= 0.860)
+INFO done: dev 0.920 (seed 0.860) | 4 candidates | $0.16 | artifact 74966280cdb5
+INFO round 1: dev 0.860 (best 0.860) | 100 metric calls | $0.00
+INFO round 2: dev 0.890 (best 0.890) | 302 metric calls | $0.04
+INFO round 3: dev 0.820 (best 0.890) | 441 metric calls | $0.07
+INFO hard-example mining: kept 6 exemplars (dev 0.920 >= 0.890)
+INFO done: dev 0.920 (seed 0.860) | 3 candidates | $0.18 | artifact 3f645436d91d
+INFO round 1: dev 0.840 (best 0.840) | 100 metric calls | $0.00
+INFO hard-example mining: kept 6 exemplars (dev 0.900 >= 0.840)
+INFO done: dev 0.900 (seed 0.840) | 1 candidates | $0.08 | artifact 88eb2d24d197
+INFO round 1: dev 0.840 (best 0.840) | 100 metric calls | $0.00
+INFO hard-example mining: kept 6 exemplars (dev 0.900 >= 0.840)
+INFO done: dev 0.900 (seed 0.840) | 1 candidates | $0.05 | artifact 91ba5390108d
+INFO round 1: dev 0.840 (best 0.840) | 100 metric calls | $0.00
+INFO hard-example mining: kept 6 exemplars (dev 0.900 >= 0.840)
+INFO done: dev 0.900 (seed 0.840) | 1 candidates | $0.05 | artifact 539f6c72dec2
+INFO round 1: dev 0.860 (best 0.860) | 100 metric calls | $0.00
+INFO round 2: dev 0.810 (best 0.860) | 260 metric calls | $0.02
+INFO round 3: dev 0.800 (best 0.860) | 399 metric calls | $0.03
+INFO round 4: dev 0.890 (best 0.890) | 526 metric calls | $0.04
+INFO round 5: dev 0.870 (best 0.890) | 647 metric calls | $0.06
+INFO hard-example mining: kept 6 exemplars (dev 0.920 >= 0.890)
+INFO done: dev 0.920 (seed 0.860) | 5 candidates | $0.09 | artifact 813e1212ff8e
+INFO round 1: dev 0.860 (best 0.860) | 100 metric calls | $0.00
+INFO round 2: dev 0.870 (best 0.870) | 245 metric calls | $0.01
+INFO round 3: dev 0.880 (best 0.880) | 417 metric calls | $0.04
+INFO round 4: dev 0.870 (best 0.880) | 574 metric calls | $0.06
+INFO round 5: dev 0.880 (best 0.880) | 713 metric calls | $0.08
+INFO hard-example mining: kept 6 exemplars (dev 0.930 >= 0.880)
+INFO done: dev 0.930 (seed 0.860) | 5 candidates | $0.10 | artifact f0f70ad6c72a
+INFO round 1: dev 0.860 (best 0.860) | 100 metric calls | $0.00
+INFO round 2: dev 0.890 (best 0.890) | 239 metric calls | $0.01
+INFO round 3: dev 0.860 (best 0.890) | 405 metric calls | $0.03
+INFO round 4: dev 0.800 (best 0.890) | 538 metric calls | $0.04
+INFO round 5: dev 0.820 (best 0.890) | 650 metric calls | $0.05
+INFO round 6: dev 0.920 (best 0.920) | 786 metric calls | $0.07
+INFO hard-example mining: kept 6 exemplars (dev 0.950 >= 0.920)
+INFO done: dev 0.950 (seed 0.860) | 6 candidates | $0.09 | artifact f933c5a70b32
+INFO round 1: dev 0.860 (best 0.860) | 100 metric calls | $0.00
+INFO round 2: dev 0.820 (best 0.860) | 233 metric calls | $0.00
+INFO round 3: dev 0.850 (best 0.860) | 363 metric calls | $0.00
+INFO round 4: dev 0.860 (best 0.860) | 697 metric calls | $0.00
+INFO done: dev 0.860 (seed 0.860) | 4 candidates | $0.04 | artifact 8ecf43197976
+INFO round 1: dev 0.860 (best 0.860) | 100 metric calls | $0.00
+INFO round 2: dev 0.830 (best 0.860) | 236 metric calls | $0.00
+INFO round 3: dev 0.820 (best 0.860) | 387 metric calls | $0.00
+INFO round 4: dev 0.850 (best 0.860) | 583 metric calls | $0.00
+INFO round 5: dev 0.900 (best 0.900) | 842 metric calls | $0.03
+INFO done: dev 0.900 (seed 0.860) | 5 candidates | $0.03 | artifact 1e268191dcc3
+INFO round 1: dev 0.860 (best 0.860) | 100 metric calls | $0.00
+INFO round 2: dev 0.890 (best 0.890) | 302 metric calls | $0.00
+INFO round 3: dev 0.820 (best 0.890) | 441 metric calls | $0.00
+INFO round 4: dev 0.830 (best 0.890) | 823 metric calls | $0.02
+INFO done: dev 0.890 (seed 0.860) | 4 candidates | $0.02 | artifact a32ceaabf520
+[done] ag_news_seed_s0.json: test acc 0.830 f1 0.823 ($0.01)
+[done] ag_news_vanilla_s0.json: test acc 0.880 f1 0.879 ($0.23)
+[done] ag_news_vanilla_s1.json: test acc 0.847 f1 0.842 ($0.28)
+[done] ag_news_vanilla_s2.json: test acc 0.850 f1 0.847 ($0.27)
+[done] ag_news_full_s0.json: test acc 0.833 f1 0.828 ($0.21)
+[done] ag_news_full_s1.json: test acc 0.833 f1 0.828 ($0.16)
+[done] ag_news_full_s2.json: test acc 0.867 f1 0.866 ($0.25)
+[done] ag_news_no_codebook_s0.json: test acc 0.837 f1 0.833 ($0.13)
+[done] ag_news_no_codebook_s1.json: test acc 0.837 f1 0.833 ($0.05)
+[done] ag_news_no_codebook_s2.json: test acc 0.837 f1 0.833 ($0.05)
+[done] ag_news_no_confusion_s0.json: test acc 0.870 f1 0.869 ($0.16)
+[done] ag_news_no_confusion_s1.json: test acc 0.890 f1 0.890 ($0.17)
+[done] ag_news_no_confusion_s2.json: test acc 0.897 f1 0.897 ($0.16)
+[done] ag_news_no_mining_s0.json: test acc 0.823 f1 0.815 ($0.05)
+[done] ag_news_no_mining_s1.json: test acc 0.873 f1 0.873 ($0.06)
+[done] ag_news_no_mining_s2.json: test acc 0.853 f1 0.849 ($0.05)

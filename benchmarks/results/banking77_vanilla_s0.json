@@ -1,0 +1,75 @@
+{
+ "task": "banking77",
+ "arm": "vanilla",
+ "seed": 0,
+ "test_accuracy": 0.79,
+ "test_macro_f1": 0.7712,
+ "unparseable": 0,
+ "dev_accuracy": 0.84,
+ "optimize_cost_usd": 0.2735,
+ "test_cost_usd": 0.057,
+ "metric_calls_spent": 875,
+ "artifact_id": "a3e26c9b2a9f",
+ "exemplars": 0,
+ "curve": [
+  {
+   "metric_calls": 0,
+   "dev_score": 0.8
+  },
+  {
+   "metric_calls": 115,
+   "dev_score": 0.82
+  },
+  {
+   "metric_calls": 236,
+   "dev_score": 0.79
+  },
+  {
+   "metric_calls": 342,
+   "dev_score": 0.81
+  },
+  {
+   "metric_calls": 457,
+   "dev_score": 0.84
+  },
+  {
+   "metric_calls": 563,
+   "dev_score": 0.77
+  },
+  {
+   "metric_calls": 669,
+   "dev_score": 0.83
+  },
+  {
+   "metric_calls": 775,
+   "dev_score": 0.82
+  }
+ ],
+ "top_confusions": [
+  [
+   "get_physical_card",
+   "passcode_forgotten",
+   10
+  ],
+  [
+   "balance_not_updated_after_bank_transfer",
+   "pending_transfer",
+   8
+  ],
+  [
+   "receiving_money",
+   "transfer_into_account",
+   7
+  ],
+  [
+   "topping_up_by_card",
+   "pending_top_up",
+   4
+  ],
+  [
+   "pending_transfer",
+   "transfer_timing",
+   4
+  ]
+ ]
+}

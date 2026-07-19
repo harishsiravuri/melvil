@@ -1,0 +1,10 @@
+{
+ "task": "emotion",
+ "arm": "transfer",
+ "seed": 1,
+ "transfer_model": "openrouter/openai/gpt-4.1-nano",
+ "test_accuracy": 0.55,
+ "test_macro_f1": 0.4707,
+ "test_cost_usd": 0.0091,
+ "artifact_id": "887d75c7a394"
+}

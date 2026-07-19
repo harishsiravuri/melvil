@@ -1,0 +1,63 @@
+{
+ "task": "emotion",
+ "arm": "no_codebook",
+ "seed": 1,
+ "test_accuracy": 0.56,
+ "test_macro_f1": 0.4465,
+ "unparseable": 0,
+ "dev_accuracy": 0.74,
+ "optimize_cost_usd": 0.1206,
+ "test_cost_usd": 0.0364,
+ "metric_calls_spent": 858,
+ "artifact_id": "859a890ffda9",
+ "exemplars": 6,
+ "curve": [
+  {
+   "metric_calls": 0,
+   "dev_score": 0.68
+  },
+  {
+   "metric_calls": 172,
+   "dev_score": 0.3
+  },
+  {
+   "metric_calls": 374,
+   "dev_score": 0.61
+  },
+  {
+   "metric_calls": 504,
+   "dev_score": 0.41
+  },
+  {
+   "metric_calls": 658,
+   "dev_score": 0.58
+  }
+ ],
+ "top_confusions": [
+  [
+   "joy",
+   "sadness",
+   15
+  ],
+  [
+   "sadness",
+   "fear",
+   11
+  ],
+  [
+   "anger",
+   "sadness",
+   11
+  ],
+  [
+   "love",
+   "joy",
+   10
+  ],
+  [
+   "joy",
+   "love",
+   10
+  ]
+ ]
+}

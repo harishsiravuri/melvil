@@ -1,0 +1,47 @@
+{
+ "task": "banking77",
+ "arm": "no_codebook",
+ "seed": 2,
+ "test_accuracy": 0.7733,
+ "test_macro_f1": 0.7506,
+ "unparseable": 0,
+ "dev_accuracy": 0.85,
+ "optimize_cost_usd": 0.097,
+ "test_cost_usd": 0.0,
+ "metric_calls_spent": 800,
+ "artifact_id": "c81193fc6c96",
+ "exemplars": 6,
+ "curve": [
+  {
+   "metric_calls": 0,
+   "dev_score": 0.8
+  }
+ ],
+ "top_confusions": [
+  [
+   "get_physical_card",
+   "passcode_forgotten",
+   9
+  ],
+  [
+   "card_payment_not_recognised",
+   "reverted_card_payment?",
+   7
+  ],
+  [
+   "exchange_via_app",
+   "exchange_rate",
+   4
+  ],
+  [
+   "balance_not_updated_after_bank_transfer",
+   "pending_transfer",
+   4
+  ],
+  [
+   "beneficiary_not_allowed",
+   "failed_transfer",
+   3
+  ]
+ ]
+}

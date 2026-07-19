@@ -1,0 +1,42 @@
+{
+ "task": "clinc150",
+ "arm": "no_codebook",
+ "seed": 1,
+ "test_accuracy": 0.9867,
+ "test_macro_f1": 0.9866,
+ "unparseable": 0,
+ "dev_accuracy": 0.99,
+ "optimize_cost_usd": 0.0035,
+ "test_cost_usd": 0.0,
+ "metric_calls_spent": 800,
+ "artifact_id": "ba4ee4e9bd44",
+ "exemplars": 2,
+ "curve": [
+  {
+   "metric_calls": 0,
+   "dev_score": 0.98
+  }
+ ],
+ "top_confusions": [
+  [
+   "pto_request",
+   "credit_limit",
+   1
+  ],
+  [
+   "transfer",
+   "weather",
+   1
+  ],
+  [
+   "recipe",
+   "cook_time",
+   1
+  ],
+  [
+   "timer",
+   "definition",
+   1
+  ]
+ ]
+}

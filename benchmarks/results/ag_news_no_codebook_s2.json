@@ -1,0 +1,47 @@
+{
+ "task": "ag_news",
+ "arm": "no_codebook",
+ "seed": 2,
+ "test_accuracy": 0.8367,
+ "test_macro_f1": 0.8327,
+ "unparseable": 0,
+ "dev_accuracy": 0.9,
+ "optimize_cost_usd": 0.0497,
+ "test_cost_usd": 0.0,
+ "metric_calls_spent": 803,
+ "artifact_id": "539f6c72dec2",
+ "exemplars": 6,
+ "curve": [
+  {
+   "metric_calls": 0,
+   "dev_score": 0.84
+  }
+ ],
+ "top_confusions": [
+  [
+   "Sci/Tech",
+   "Business",
+   23
+  ],
+  [
+   "World",
+   "Business",
+   6
+  ],
+  [
+   "Sci/Tech",
+   "World",
+   6
+  ],
+  [
+   "Business",
+   "Sci/Tech",
+   6
+  ],
+  [
+   "Business",
+   "World",
+   2
+  ]
+ ]
+}

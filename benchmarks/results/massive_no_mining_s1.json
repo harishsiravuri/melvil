@@ -1,0 +1,67 @@
+{
+ "task": "massive",
+ "arm": "no_mining",
+ "seed": 1,
+ "test_accuracy": 0.8667,
+ "test_macro_f1": 0.8712,
+ "unparseable": 0,
+ "dev_accuracy": 0.87,
+ "optimize_cost_usd": 0.0,
+ "test_cost_usd": 0.0547,
+ "metric_calls_spent": 804,
+ "artifact_id": "e5b1c8f3130d",
+ "exemplars": 0,
+ "curve": [
+  {
+   "metric_calls": 0,
+   "dev_score": 0.84
+  },
+  {
+   "metric_calls": 106,
+   "dev_score": 0.82
+  },
+  {
+   "metric_calls": 227,
+   "dev_score": 0.87
+  },
+  {
+   "metric_calls": 363,
+   "dev_score": 0.83
+  },
+  {
+   "metric_calls": 541,
+   "dev_score": 0.86
+  },
+  {
+   "metric_calls": 704,
+   "dev_score": 0.84
+  }
+ ],
+ "top_confusions": [
+  [
+   "news_query",
+   "qa_factoid",
+   4
+  ],
+  [
+   "general_quirky",
+   "qa_factoid",
+   3
+  ],
+  [
+   "qa_definition",
+   "qa_factoid",
+   2
+  ],
+  [
+   "general_quirky",
+   "recommendation_events",
+   2
+  ],
+  [
+   "calendar_set",
+   "calendar_query",
+   2
+  ]
+ ]
+}

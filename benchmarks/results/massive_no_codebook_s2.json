@@ -1,0 +1,59 @@
+{
+ "task": "massive",
+ "arm": "no_codebook",
+ "seed": 2,
+ "test_accuracy": 0.87,
+ "test_macro_f1": 0.8752,
+ "unparseable": 0,
+ "dev_accuracy": 0.89,
+ "optimize_cost_usd": 0.1592,
+ "test_cost_usd": 0.0,
+ "metric_calls_spent": 803,
+ "artifact_id": "602acb4fba58",
+ "exemplars": 6,
+ "curve": [
+  {
+   "metric_calls": 0,
+   "dev_score": 0.81
+  },
+  {
+   "metric_calls": 271,
+   "dev_score": 0.42
+  },
+  {
+   "metric_calls": 410,
+   "dev_score": 0.55
+  },
+  {
+   "metric_calls": 543,
+   "dev_score": 0.45
+  }
+ ],
+ "top_confusions": [
+  [
+   "qa_factoid",
+   "general_quirky",
+   4
+  ],
+  [
+   "calendar_set",
+   "calendar_query",
+   4
+  ],
+  [
+   "qa_definition",
+   "general_quirky",
+   2
+  ],
+  [
+   "play_podcasts",
+   "play_music",
+   2
+  ],
+  [
+   "play_music",
+   "general_quirky",
+   2
+  ]
+ ]
+}

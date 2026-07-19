@@ -1,0 +1,10 @@
+{
+ "task": "ag_news",
+ "arm": "transfer",
+ "seed": 1,
+ "transfer_model": "openrouter/openai/gpt-4.1-nano",
+ "test_accuracy": 0.8167,
+ "test_macro_f1": 0.8156,
+ "test_cost_usd": 0.0,
+ "artifact_id": "74966280cdb5"
+}

@@ -1,0 +1,10 @@
+{
+ "task": "trec",
+ "arm": "transfer",
+ "seed": 2,
+ "transfer_model": "openrouter/openai/gpt-4.1-nano",
+ "test_accuracy": 0.6033,
+ "test_macro_f1": 0.6036,
+ "test_cost_usd": 0.016,
+ "artifact_id": "b298c3508acb"
+}

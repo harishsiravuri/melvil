@@ -1,0 +1,63 @@
+{
+ "task": "clinc150",
+ "arm": "vanilla",
+ "seed": 0,
+ "test_accuracy": 0.98,
+ "test_macro_f1": 0.9799,
+ "unparseable": 0,
+ "dev_accuracy": 0.98,
+ "optimize_cost_usd": 0.0666,
+ "test_cost_usd": 0.0,
+ "metric_calls_spent": 800,
+ "artifact_id": "59804d499d44",
+ "exemplars": 0,
+ "curve": [
+  {
+   "metric_calls": 0,
+   "dev_score": 0.98
+  },
+  {
+   "metric_calls": 232,
+   "dev_score": 0.98
+  },
+  {
+   "metric_calls": 338,
+   "dev_score": 0.98
+  },
+  {
+   "metric_calls": 522,
+   "dev_score": 0.98
+  },
+  {
+   "metric_calls": 661,
+   "dev_score": 0.98
+  }
+ ],
+ "top_confusions": [
+  [
+   "pto_request",
+   "travel_suggestion",
+   2
+  ],
+  [
+   "transfer",
+   "weather",
+   1
+  ],
+  [
+   "recipe",
+   "cook_time",
+   1
+  ],
+  [
+   "timer",
+   "definition",
+   1
+  ],
+  [
+   "restaurant_reviews",
+   "recipe",
+   1
+  ]
+ ]
+}

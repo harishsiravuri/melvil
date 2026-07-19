@@ -1,0 +1,75 @@
+{
+ "task": "trec",
+ "arm": "no_mining",
+ "seed": 2,
+ "test_accuracy": 0.88,
+ "test_macro_f1": 0.8776,
+ "unparseable": 0,
+ "dev_accuracy": 0.8,
+ "optimize_cost_usd": 0.02,
+ "test_cost_usd": 0.0494,
+ "metric_calls_spent": 887,
+ "artifact_id": "989c7ec997b4",
+ "exemplars": 0,
+ "curve": [
+  {
+   "metric_calls": 0,
+   "dev_score": 0.53
+  },
+  {
+   "metric_calls": 106,
+   "dev_score": 0.66
+  },
+  {
+   "metric_calls": 224,
+   "dev_score": 0.71
+  },
+  {
+   "metric_calls": 357,
+   "dev_score": 0.78
+  },
+  {
+   "metric_calls": 469,
+   "dev_score": 0.75
+  },
+  {
+   "metric_calls": 575,
+   "dev_score": 0.72
+  },
+  {
+   "metric_calls": 681,
+   "dev_score": 0.8
+  },
+  {
+   "metric_calls": 787,
+   "dev_score": 0.76
+  }
+ ],
+ "top_confusions": [
+  [
+   "entity",
+   "description",
+   15
+  ],
+  [
+   "location",
+   "entity",
+   6
+  ],
+  [
+   "human",
+   "entity",
+   4
+  ],
+  [
+   "numeric",
+   "description",
+   3
+  ],
+  [
+   "entity",
+   "human",
+   2
+  ]
+ ]
+}

@@ -1,0 +1,51 @@
+{
+ "task": "clinc150",
+ "arm": "no_mining",
+ "seed": 0,
+ "test_accuracy": 0.9767,
+ "test_macro_f1": 0.9764,
+ "unparseable": 0,
+ "dev_accuracy": 0.99,
+ "optimize_cost_usd": 0.0,
+ "test_cost_usd": 0.0375,
+ "metric_calls_spent": 800,
+ "artifact_id": "dd57dd42f0a5",
+ "exemplars": 0,
+ "curve": [
+  {
+   "metric_calls": 0,
+   "dev_score": 0.98
+  },
+  {
+   "metric_calls": 232,
+   "dev_score": 0.99
+  }
+ ],
+ "top_confusions": [
+  [
+   "pto_request",
+   "book_flight",
+   1
+  ],
+  [
+   "transfer",
+   "weather",
+   1
+  ],
+  [
+   "recipe",
+   "cook_time",
+   1
+  ],
+  [
+   "timer",
+   "definition",
+   1
+  ],
+  [
+   "pto_request",
+   "travel_suggestion",
+   1
+  ]
+ ]
+}

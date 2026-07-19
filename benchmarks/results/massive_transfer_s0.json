@@ -1,0 +1,10 @@
+{
+ "task": "massive",
+ "arm": "transfer",
+ "seed": 0,
+ "transfer_model": "openrouter/openai/gpt-4.1-nano",
+ "test_accuracy": 0.7867,
+ "test_macro_f1": 0.783,
+ "test_cost_usd": 0.0229,
+ "artifact_id": "303b7ebe4c29"
+}

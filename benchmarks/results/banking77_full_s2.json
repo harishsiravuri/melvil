@@ -1,0 +1,63 @@
+{
+ "task": "banking77",
+ "arm": "full",
+ "seed": 2,
+ "test_accuracy": 0.8033,
+ "test_macro_f1": 0.7864,
+ "unparseable": 0,
+ "dev_accuracy": 0.88,
+ "optimize_cost_usd": 0.1889,
+ "test_cost_usd": 0.1129,
+ "metric_calls_spent": 804,
+ "artifact_id": "76ae94a7196d",
+ "exemplars": 6,
+ "curve": [
+  {
+   "metric_calls": 0,
+   "dev_score": 0.79
+  },
+  {
+   "metric_calls": 169,
+   "dev_score": 0.74
+  },
+  {
+   "metric_calls": 320,
+   "dev_score": 0.79
+  },
+  {
+   "metric_calls": 441,
+   "dev_score": 0.84
+  },
+  {
+   "metric_calls": 586,
+   "dev_score": 0.77
+  }
+ ],
+ "top_confusions": [
+  [
+   "transfer_timing",
+   "pending_transfer",
+   7
+  ],
+  [
+   "balance_not_updated_after_bank_transfer",
+   "pending_transfer",
+   6
+  ],
+  [
+   "get_physical_card",
+   "passcode_forgotten",
+   6
+  ],
+  [
+   "receiving_money",
+   "transfer_into_account",
+   5
+  ],
+  [
+   "beneficiary_not_allowed",
+   "failed_transfer",
+   4
+  ]
+ ]
+}

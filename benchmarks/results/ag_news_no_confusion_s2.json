@@ -1,0 +1,67 @@
+{
+ "task": "ag_news",
+ "arm": "no_confusion",
+ "seed": 2,
+ "test_accuracy": 0.8967,
+ "test_macro_f1": 0.8968,
+ "unparseable": 0,
+ "dev_accuracy": 0.95,
+ "optimize_cost_usd": 0.0902,
+ "test_cost_usd": 0.0659,
+ "metric_calls_spent": 886,
+ "artifact_id": "f933c5a70b32",
+ "exemplars": 6,
+ "curve": [
+  {
+   "metric_calls": 0,
+   "dev_score": 0.86
+  },
+  {
+   "metric_calls": 139,
+   "dev_score": 0.89
+  },
+  {
+   "metric_calls": 305,
+   "dev_score": 0.86
+  },
+  {
+   "metric_calls": 438,
+   "dev_score": 0.8
+  },
+  {
+   "metric_calls": 550,
+   "dev_score": 0.82
+  },
+  {
+   "metric_calls": 686,
+   "dev_score": 0.92
+  }
+ ],
+ "top_confusions": [
+  [
+   "Sci/Tech",
+   "Business",
+   10
+  ],
+  [
+   "World",
+   "Business",
+   6
+  ],
+  [
+   "Business",
+   "Sci/Tech",
+   6
+  ],
+  [
+   "Sci/Tech",
+   "World",
+   3
+  ],
+  [
+   "World",
+   "Sports",
+   2
+  ]
+ ]
+}

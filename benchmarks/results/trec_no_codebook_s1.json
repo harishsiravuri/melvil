@@ -1,0 +1,51 @@
+{
+ "task": "trec",
+ "arm": "no_codebook",
+ "seed": 1,
+ "test_accuracy": 0.8233,
+ "test_macro_f1": 0.8336,
+ "unparseable": 0,
+ "dev_accuracy": 0.8,
+ "optimize_cost_usd": 0.134,
+ "test_cost_usd": 0.0197,
+ "metric_calls_spent": 834,
+ "artifact_id": "7840b713340f",
+ "exemplars": 6,
+ "curve": [
+  {
+   "metric_calls": 0,
+   "dev_score": 0.5
+  },
+  {
+   "metric_calls": 634,
+   "dev_score": 0.28
+  }
+ ],
+ "top_confusions": [
+  [
+   "entity",
+   "description",
+   15
+  ],
+  [
+   "description",
+   "entity",
+   12
+  ],
+  [
+   "entity",
+   "location",
+   5
+  ],
+  [
+   "numeric",
+   "human",
+   4
+  ],
+  [
+   "location",
+   "entity",
+   4
+  ]
+ ]
+}

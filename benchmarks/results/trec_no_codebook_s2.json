@@ -1,0 +1,59 @@
+{
+ "task": "trec",
+ "arm": "no_codebook",
+ "seed": 2,
+ "test_accuracy": 0.8433,
+ "test_macro_f1": 0.845,
+ "unparseable": 0,
+ "dev_accuracy": 0.75,
+ "optimize_cost_usd": 0.1242,
+ "test_cost_usd": 0.0117,
+ "metric_calls_spent": 803,
+ "artifact_id": "e08e5fdcf2e7",
+ "exemplars": 0,
+ "curve": [
+  {
+   "metric_calls": 0,
+   "dev_score": 0.5
+  },
+  {
+   "metric_calls": 124,
+   "dev_score": 0.75
+  },
+  {
+   "metric_calls": 359,
+   "dev_score": 0.33
+  },
+  {
+   "metric_calls": 507,
+   "dev_score": 0.16
+  }
+ ],
+ "top_confusions": [
+  [
+   "entity",
+   "description",
+   22
+  ],
+  [
+   "entity",
+   "human",
+   10
+  ],
+  [
+   "location",
+   "entity",
+   7
+  ],
+  [
+   "entity",
+   "location",
+   2
+  ],
+  [
+   "entity",
+   "numeric",
+   2
+  ]
+ ]
+}
