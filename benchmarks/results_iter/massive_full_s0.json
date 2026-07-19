@@ -1,0 +1,34 @@
+{
+ "task": "massive",
+ "arm": "full",
+ "seed": 0,
+ "codebase": "v0.2-iter",
+ "test_accuracy": 0.84,
+ "test_macro_f1": 0.8635,
+ "dev_accuracy": 0.87,
+ "dev_accuracy_quarantined": null,
+ "exemplars": 0,
+ "mining_note": "rejected 3 exemplars (quarantined dev 0.887 <= 0.897 + noise floor 0.031)",
+ "optimize_cost_usd": 0.0908,
+ "test_cost_usd": 0.0444,
+ "metric_calls_spent": 797,
+ "artifact_id": "431edea40eea",
+ "curve": [
+  {
+   "metric_calls": 0,
+   "dev_score": 0.84
+  },
+  {
+   "metric_calls": 271,
+   "dev_score": 0.87
+  },
+  {
+   "metric_calls": 419,
+   "dev_score": 0.85
+  },
+  {
+   "metric_calls": 570,
+   "dev_score": 0.87
+  }
+ ]
+}

@@ -1,0 +1,169 @@
+{
+ "schema_version": 1,
+ "artifact_id": "1a8842a10dfd",
+ "parent_id": null,
+ "task_name": "ag_news",
+ "created_at": "2026-07-19T12:54:53-0500",
+ "library": {
+  "name": "labelsmith",
+  "version": "0.2.0.dev0"
+ },
+ "models": {
+  "task": "openrouter/openai/gpt-4.1-mini",
+  "reflection": "openrouter/openai/gpt-4.1"
+ },
+ "budget": {
+  "metric_calls_budget": 800,
+  "metric_calls_spent": 704,
+  "cost_usd": 0.0004,
+  "task_lm_usage": {
+   "model": "openrouter/openai/gpt-4.1-mini",
+   "prompt_tokens": 0,
+   "completion_tokens": 0,
+   "calls": 0,
+   "cache_hits": 804,
+   "cost_usd": 0.0
+  },
+  "reflection_lm_usage": {
+   "model": "openrouter/openai/gpt-4.1",
+   "prompt_tokens": 195,
+   "completion_tokens": 2,
+   "calls": 1,
+   "cache_hits": 18,
+   "cost_usd": 0.000406
+  },
+  "opt_seconds": 0.4
+ },
+ "scores": {
+  "dev_accuracy": 0.89,
+  "dev_macro_f1": 0.8861,
+  "per_label_dev": {
+   "Business": {
+    "precision": 0.7576,
+    "recall": 1.0,
+    "f1": 0.8621,
+    "support": 25
+   },
+   "Sci/Tech": {
+    "precision": 1.0,
+    "recall": 0.64,
+    "f1": 0.7805,
+    "support": 25
+   },
+   "Sports": {
+    "precision": 1.0,
+    "recall": 0.92,
+    "f1": 0.9583,
+    "support": 25
+   },
+   "World": {
+    "precision": 0.8929,
+    "recall": 1.0,
+    "f1": 0.9434,
+    "support": 25
+   }
+  },
+  "seed_dev_accuracy": 0.86,
+  "dev_accuracy_quarantined": null
+ },
+ "config_hash": "f17c4afedcff",
+ "config": {
+  "task_model": "openrouter/openai/gpt-4.1-mini",
+  "reflection_model": "openrouter/openai/gpt-4.1",
+  "budget": "light",
+  "seed": 0,
+  "features": {
+   "codebook": true,
+   "confusion_reflection": false,
+   "hard_example_mining": true
+  },
+  "num_threads": 8,
+  "run_dir": "/Users/harish/Documents/Claude/Projects/6s/labelsmith/benchmarks/runs_iter/ag_news/no_confusion-s0",
+  "task_temperature": 0.0,
+  "task_max_tokens": 40,
+  "reflection_temperature": 1.0,
+  "reflection_max_tokens": 8000,
+  "reflection_minibatch_size": 3,
+  "max_exemplars": 6,
+  "mining_llm_screen": true,
+  "prices": {},
+  "metric_calls": 800
+ },
+ "label_names": [
+  "Business",
+  "Sci/Tech",
+  "Sports",
+  "World"
+ ],
+ "components": {
+  "task_instruction": "You are a precise text classifier. Read the input text and assign it to exactly one of the categories defined below.",
+  "label::Business": "",
+  "label::Sci/Tech": "Sci/Tech: News focused on scientific discoveries, technological developments, computers, the internet, or innovations in software and hardware. If a story is about online platforms, digital piracy, or the legal and social impacts of technology, choose Sci/Tech over Business.",
+  "label::Sports": "",
+  "label::World": "",
+  "boundary_rules": ""
+ },
+ "exemplars": [],
+ "confusion": {
+  "labels": [
+   "Business",
+   "Sci/Tech",
+   "Sports",
+   "World"
+  ],
+  "matrix": [
+   [
+    25,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    7,
+    16,
+    0,
+    2,
+    0
+   ],
+   [
+    1,
+    0,
+    23,
+    1,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    25,
+    0
+   ]
+  ],
+  "unparseable_column": true
+ },
+ "curve": [
+  {
+   "metric_calls": 0,
+   "dev_score": 0.86
+  },
+  {
+   "metric_calls": 160,
+   "dev_score": 0.81
+  },
+  {
+   "metric_calls": 299,
+   "dev_score": 0.8
+  },
+  {
+   "metric_calls": 426,
+   "dev_score": 0.89
+  },
+  {
+   "metric_calls": 547,
+   "dev_score": 0.87
+  }
+ ],
+ "notes": "no persistent hard examples survived screening"
+}

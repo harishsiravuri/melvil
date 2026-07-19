@@ -1,0 +1,15 @@
+{
+ "task": "ag_news",
+ "arm": "miprov2",
+ "seed": 0,
+ "test_accuracy": 0.8633,
+ "test_macro_f1": 0.8607,
+ "dev_accuracy": null,
+ "optimize_task_calls": 545,
+ "optimize_cost_usd": 0.1105,
+ "test_cost_usd": 0.0743,
+ "opt_seconds": 80.5,
+ "instructions": "Carefully read the following news text and assign it to the most appropriate category from the following options: Business, Sci/Tech, Sports, or World. Base your decision solely on the factual content, domain-specific terminology, and context of the passage. Respond with only one category label\u2014the single best fit for the main topic of the text.",
+ "n_demos": 4,
+ "notes": "dspy-native ChatAdapter runtime; budget parity by preset (auto=light)"
+}

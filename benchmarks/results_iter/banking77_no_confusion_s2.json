@@ -1,0 +1,38 @@
+{
+ "task": "banking77",
+ "arm": "no_confusion",
+ "seed": 2,
+ "codebase": "v0.2-iter",
+ "test_accuracy": 0.8033,
+ "test_macro_f1": 0.7884,
+ "dev_accuracy": 0.84,
+ "dev_accuracy_quarantined": null,
+ "exemplars": 0,
+ "mining_note": "no persistent hard examples survived screening",
+ "optimize_cost_usd": 0.0003,
+ "test_cost_usd": 0.0352,
+ "metric_calls_spent": 704,
+ "artifact_id": "a678b48d66a4",
+ "curve": [
+  {
+   "metric_calls": 0,
+   "dev_score": 0.79
+  },
+  {
+   "metric_calls": 169,
+   "dev_score": 0.77
+  },
+  {
+   "metric_calls": 332,
+   "dev_score": 0.78
+  },
+  {
+   "metric_calls": 462,
+   "dev_score": 0.81
+  },
+  {
+   "metric_calls": 583,
+   "dev_score": 0.84
+  }
+ ]
+}

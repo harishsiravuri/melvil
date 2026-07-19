@@ -1,3 +1,50 @@
 INFO round 1: dev 0.860 (best 0.860) | 100 metric calls | $0.00
 INFO round 2: dev 0.820 (best 0.860) | 233 metric calls | $0.00
 INFO round 3: dev 0.880 (best 0.880) | 363 metric calls | $0.02
+INFO round 1: dev 0.880 (best 0.880) | 205 metric calls | $0.04
+INFO mining LLM screen dropped 2/6 candidate exemplars
+INFO hard-example mining: rejected 4 exemplars (quarantined dev 0.917 <= 0.917 + noise floor 0.028)
+INFO done: dev 0.880 (seed 0.860) | 4 candidates | $0.08 | artifact 81864e071e55
+INFO round 1: dev 0.860 (best 0.860) | 100 metric calls | $0.00
+INFO round 2: dev 0.860 (best 0.860) | 236 metric calls | $0.01
+INFO round 3: dev 0.880 (best 0.880) | 387 metric calls | $0.05
+INFO round 4: dev 0.890 (best 0.890) | 586 metric calls | $0.09
+INFO hard-example mining: rejected 2 exemplars (quarantined dev 0.918 <= 0.908 + noise floor 0.029)
+INFO done: dev 0.890 (seed 0.860) | 4 candidates | $0.16 | artifact 081210daa480
+INFO round 1: dev 0.860 (best 0.860) | 100 metric calls | $0.00
+INFO round 2: dev 0.890 (best 0.890) | 302 metric calls | $0.01
+INFO round 3: dev 0.820 (best 0.890) | 441 metric calls | $0.02
+INFO done: dev 0.890 (seed 0.860) | 3 candidates | $0.05 | artifact 02dec29ea812
+INFO round 1: dev 0.860 (best 0.860) | 100 metric calls | $0.00
+INFO round 2: dev 0.810 (best 0.860) | 260 metric calls | $0.00
+INFO round 3: dev 0.800 (best 0.860) | 399 metric calls | $0.00
+INFO round 4: dev 0.890 (best 0.890) | 526 metric calls | $0.00
+INFO round 5: dev 0.870 (best 0.890) | 647 metric calls | $0.00
+INFO mining LLM screen dropped 1/1 candidate exemplars
+INFO done: dev 0.890 (seed 0.860) | 5 candidates | $0.00 | artifact 1a8842a10dfd
+INFO round 1: dev 0.860 (best 0.860) | 100 metric calls | $0.00
+INFO round 2: dev 0.870 (best 0.870) | 245 metric calls | $0.00
+INFO round 3: dev 0.880 (best 0.880) | 417 metric calls | $0.00
+INFO round 4: dev 0.870 (best 0.880) | 574 metric calls | $0.00
+INFO round 5: dev 0.880 (best 0.880) | 713 metric calls | $0.00
+INFO mining LLM screen dropped 1/3 candidate exemplars
+INFO hard-example mining: rejected 2 exemplars (quarantined dev 0.898 <= 0.898 + noise floor 0.031)
+INFO done: dev 0.880 (seed 0.860) | 5 candidates | $0.01 | artifact 765cafa8f307
+INFO round 1: dev 0.860 (best 0.860) | 100 metric calls | $0.00
+INFO round 2: dev 0.890 (best 0.890) | 239 metric calls | $0.00
+INFO round 3: dev 0.860 (best 0.890) | 405 metric calls | $0.00
+INFO round 4: dev 0.800 (best 0.890) | 538 metric calls | $0.00
+INFO round 5: dev 0.820 (best 0.890) | 650 metric calls | $0.00
+INFO round 6: dev 0.920 (best 0.920) | 786 metric calls | $0.00
+INFO done: dev 0.920 (seed 0.860) | 6 candidates | $0.00 | artifact 7f8da732a930
+[done] ag_news_full_s0.json: test 0.837 ($0.11) | rejected 4 exemplars (quarantined dev 0.917 <= 0.917 + noise floor 0.028)
+[done] ag_news_full_s1.json: test 0.837 ($0.20) | rejected 2 exemplars (quarantined dev 0.918 <= 0.908 + noise floor 0.029)
+[done] ag_news_full_s2.json: test 0.853 ($0.05) | no persistent hard examples survived screening
+[done] ag_news_no_confusion_s0.json: test 0.850 ($0.02) | no persistent hard examples survived screening
+[done] ag_news_no_confusion_s1.json: test 0.853 ($0.04) | rejected 2 exemplars (quarantined dev 0.898 <= 0.898 + noise floor 0.031)
+[done] ag_news_no_confusion_s2.json: test 0.863 ($0.02) | no persistent hard examples survived screening
+
+=== iteration summary (v0.2 selector/mining) vs v0.1 matrix ===
+banking77 | full: v0.2 0.798 (v0.1 0.824)
+ag_news | full: v0.2 0.842 (v0.1 0.844) | no_confusion: v0.2 0.856 (v0.1 0.886)
+massive | full: v0.2 0.857 (v0.1 0.881) | no_confusion: v0.2 0.847 (v0.1 0.871)

@@ -1,0 +1,30 @@
+{
+ "task": "ag_news",
+ "arm": "full",
+ "seed": 2,
+ "codebase": "v0.2-iter",
+ "test_accuracy": 0.8533,
+ "test_macro_f1": 0.849,
+ "dev_accuracy": 0.89,
+ "dev_accuracy_quarantined": null,
+ "exemplars": 0,
+ "mining_note": "no persistent hard examples survived screening",
+ "optimize_cost_usd": 0.0454,
+ "test_cost_usd": 0.0,
+ "metric_calls_spent": 702,
+ "artifact_id": "02dec29ea812",
+ "curve": [
+  {
+   "metric_calls": 0,
+   "dev_score": 0.86
+  },
+  {
+   "metric_calls": 202,
+   "dev_score": 0.89
+  },
+  {
+   "metric_calls": 341,
+   "dev_score": 0.82
+  }
+ ]
+}
