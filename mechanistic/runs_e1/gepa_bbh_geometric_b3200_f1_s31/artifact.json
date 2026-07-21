@@ -1,0 +1,441 @@
+{
+ "schema_version": 1,
+ "artifact_id": "331d784e88ec",
+ "parent_id": null,
+ "task_name": "bbh_geometric",
+ "created_at": "2026-07-21T05:41:51-0500",
+ "library": {
+  "name": "melvil",
+  "version": "0.3.0"
+ },
+ "models": {
+  "task": "openrouter/openai/gpt-4.1-mini",
+  "reflection": "openrouter/openai/gpt-4.1"
+ },
+ "budget": {
+  "metric_calls_budget": 3200,
+  "metric_calls_spent": 3223,
+  "cost_usd": 1.6815,
+  "task_lm_usage": {
+   "model": "openrouter/openai/gpt-4.1-mini",
+   "prompt_tokens": 2138663,
+   "completion_tokens": 3135,
+   "calls": 1500,
+   "cache_hits": 1773,
+   "cost_usd": 0.657
+  },
+  "reflection_lm_usage": {
+   "model": "openrouter/openai/gpt-4.1",
+   "prompt_tokens": 133826,
+   "completion_tokens": 96720,
+   "calls": 78,
+   "cache_hits": 81,
+   "cost_usd": 1.024516
+  },
+  "opt_seconds": 1508.3
+ },
+ "scores": {
+  "dev_accuracy": 0.62,
+  "dev_macro_f1": 0.5725,
+  "per_label_dev": {
+   "B": {
+    "precision": 0.5,
+    "recall": 0.8,
+    "f1": 0.6154,
+    "support": 5
+   },
+   "C": {
+    "precision": 1.0,
+    "recall": 0.1429,
+    "f1": 0.25,
+    "support": 7
+   },
+   "D": {
+    "precision": 0.2,
+    "recall": 0.25,
+    "f1": 0.2222,
+    "support": 4
+   },
+   "E": {
+    "precision": 0.7143,
+    "recall": 1.0,
+    "f1": 0.8333,
+    "support": 5
+   },
+   "F": {
+    "precision": 1.0,
+    "recall": 0.6,
+    "f1": 0.75,
+    "support": 5
+   },
+   "G": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "support": 4
+   },
+   "I": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "support": 5
+   },
+   "J": {
+    "precision": 1.0,
+    "recall": 0.8,
+    "f1": 0.8889,
+    "support": 5
+   },
+   "K": {
+    "precision": 0.4706,
+    "recall": 0.8,
+    "f1": 0.5926,
+    "support": 10
+   }
+  },
+  "seed_dev_accuracy": 0.36,
+  "dev_accuracy_quarantined": null
+ },
+ "config_hash": "dd3f71e7fada",
+ "config": {
+  "task_model": "openrouter/openai/gpt-4.1-mini",
+  "reflection_model": "openrouter/openai/gpt-4.1",
+  "budget": 3200,
+  "seed": 31,
+  "features": {
+   "codebook": false,
+   "confusion_reflection": false,
+   "hard_example_mining": false
+  },
+  "num_threads": 8,
+  "run_dir": "/Users/harish/Documents/Claude/Projects/6s/labelsmith/mechanistic/runs_e1/gepa_bbh_geometric_b3200_f1_s31",
+  "task_temperature": 0.0,
+  "task_max_tokens": 40,
+  "reflection_temperature": 1.0,
+  "reflection_max_tokens": 8000,
+  "reflection_minibatch_size": 3,
+  "max_exemplars": 6,
+  "mining_llm_screen": true,
+  "log_proposals": true,
+  "prices": {},
+  "metric_calls": 3200
+ },
+ "label_names": [
+  "B",
+  "C",
+  "D",
+  "E",
+  "F",
+  "G",
+  "I",
+  "J",
+  "K"
+ ],
+ "components": {
+  "instruction": "You are given a text input containing an SVG <path> element with a 'd' attribute, followed by a list of multiple-choice options. Your task is to analyze *only* the path data from the \"d\" attribute in the SVG path element and classify the geometric figure it forms, using a precise letter code according to the specified rules below.\n\n## Step-by-Step Instructions:\n\n**1. Extract the Path Data:**\n   - Locate the `d=\"...\"` segment in the input.\n   - Extract only the content between the first `d=\"` and subsequent `\"`. Ignore all other text, context, or option names/choices.\n\n**2. Parse Path Commands:**\n   - Parse the sequence of commands and points in the extracted path data.\n   - Pay attention to standard SVG commands: 'M' for move to, 'L' for line to, and potentially curves like 'C', 'A' (arc), etc.\n   - Track the order of all coordinate pairs (x, y) as they appear.\n   - If there are multiple 'M' commands, treat each as the start of a new subpath, but accumulate all unique coordinates from all subpaths for vertex counting and closure logic.\n\n**3. Handle Shape Closure:**\n   - A path/subpath is \"closed\" if its last point exactly matches its first point (coordinates must be identical), or if the SVG path ends with a 'Z' (close path) command.\n   - For polygons, closure is required; otherwise, treat as an open path.\n\n**4. Count Unique Vertices:**\n   - Gather all distinct (x, y) coordinate pairs that occur in the path, from all subpaths.\n   - If the path doubles back over a coordinate, count it only once for vertex enumeration.\n\n**5. Classify the Shape according to these rules and mapping:**\n   - Use *only* these output codes: B (heptagon), C (hexagon), D (kite), E (line), F (octagon), G (pentagon), I (sector), J (triangle), K (other/unlisted/ambiguous).\n   - **(E) line:** If there are exactly two unique points, the path is unclosed, and all commands draw a straight segment between them.\n   - **(J) triangle:** If there are three unique points, and the path is closed (first and last points match).\n   - **(D) kite:** Four unique points, closed path, and vertex order or arrangement suggests a kite (adjacent pairs of points match typical kite geometry). If *not clearly a kite*, default to K for quadrilaterals.\n   - **(G) pentagon:** Five unique points, path is closed.\n   - **(C) hexagon:** Six unique points, path is closed.\n   - **(B) heptagon:** Seven unique points, path is closed.\n   - **(F) octagon:** Eight unique points, path is closed.\n   - **(I) sector:** Path uses SVG arc or curve commands (\"A\", \"C\", \"Q\", \"S\"), and forms a pie-slice (sector) shape—NOT a closed polygon made from straight lines. *If the path simply traces a closed curve, do NOT use I unless it's clearly a sector, regardless of arcs.\n   - **(K) other/unlisted/ambiguous:** Use this if:\n        - The figure does not perfectly fit any above category.\n        - The shape is a rectangle (ALWAYS choose K for rectangles, per domain rule).\n        - The shape is a circle or ellipse, regardless of how indicated.\n        - The path is open with more than two distinct points.\n        - The shape contains curves or arcs but does NOT clearly draw a sector.\n        - The path contains more than eight unique points.\n        - There are multiple disjoint open subpaths or ambiguous structure.\n\n**6. Additional Restrictions and Domain-Specific Knowledge:**\n   - NEVER select a label that is not given in the permitted output codes (B, C, D, E, F, G, I, J, K).\n   - Never select circle, rectangle, or ellipse—even if they are options—always convert those cases to (K).\n   - \"Closed\" means the path connects back to the starting vertex.\n   - For ambiguous cases, always default to (K).\n\n**7. Output:**\n   - Respond with a SINGLE UPPERCASE LETTER from the code list above (for example, 'C' for hexagon), and NOTHING ELSE.\n   - Do not include explanation, extraneous text, or formatting.\n\n## Special Handling for Arcs, Circles, and Ellipses:\n- If the path uses curve or arc commands (such as 'A' or 'C') to make a full or partial circle or ellipse, but NOT a definite sector, always use (K).\n- Only if the arc(s) and lines correspond exactly to a sector (pie slice shape) should you select (I).\n\n## Example of Handling Ambiguity:\n- If the path consists of only two unique points and is not closed, label as (E).\n- If the path contains an arc ('A') forming a closed oval or circle, label as (K).\n- If there are four unique points forming a closed rectangle, still label as (K) and NEVER as D or other shape.\n- If the path is a sector (has an arc and lines forming a sector), then (I).\n- For polygons, select the code that matches the exact count of closed, unique vertices (3 to 8 only) and matches the shape.\n\nApply these rules *precisely* for every input."
+ },
+ "exemplars": [],
+ "confusion": {
+  "labels": [
+   "B",
+   "C",
+   "D",
+   "E",
+   "F",
+   "G",
+   "I",
+   "J",
+   "K"
+  ],
+  "matrix": [
+   [
+    4,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0
+   ],
+   [
+    2,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    4,
+    0
+   ],
+   [
+    0,
+    0,
+    1,
+    1,
+    0,
+    0,
+    0,
+    0,
+    2,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    5,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    2,
+    0,
+    0,
+    0,
+    3,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    2,
+    0,
+    0,
+    0,
+    0,
+    0,
+    2,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    5,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    4,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    2,
+    0,
+    0,
+    0,
+    0,
+    0,
+    8,
+    0
+   ]
+  ],
+  "unparseable_column": true
+ },
+ "curve": [
+  {
+   "metric_calls": 0,
+   "dev_score": 0.36
+  },
+  {
+   "metric_calls": 68,
+   "dev_score": 0.42
+  },
+  {
+   "metric_calls": 130,
+   "dev_score": 0.54
+  },
+  {
+   "metric_calls": 198,
+   "dev_score": 0.44
+  },
+  {
+   "metric_calls": 254,
+   "dev_score": 0.48
+  },
+  {
+   "metric_calls": 316,
+   "dev_score": 0.48
+  },
+  {
+   "metric_calls": 390,
+   "dev_score": 0.44
+  },
+  {
+   "metric_calls": 464,
+   "dev_score": 0.48
+  },
+  {
+   "metric_calls": 535,
+   "dev_score": 0.5
+  },
+  {
+   "metric_calls": 600,
+   "dev_score": 0.5
+  },
+  {
+   "metric_calls": 707,
+   "dev_score": 0.46
+  },
+  {
+   "metric_calls": 781,
+   "dev_score": 0.52
+  },
+  {
+   "metric_calls": 855,
+   "dev_score": 0.54
+  },
+  {
+   "metric_calls": 980,
+   "dev_score": 0.5
+  },
+  {
+   "metric_calls": 1063,
+   "dev_score": 0.5
+  },
+  {
+   "metric_calls": 1131,
+   "dev_score": 0.44
+  },
+  {
+   "metric_calls": 1199,
+   "dev_score": 0.48
+  },
+  {
+   "metric_calls": 1261,
+   "dev_score": 0.5
+  },
+  {
+   "metric_calls": 1323,
+   "dev_score": 0.52
+  },
+  {
+   "metric_calls": 1418,
+   "dev_score": 0.48
+  },
+  {
+   "metric_calls": 1486,
+   "dev_score": 0.44
+  },
+  {
+   "metric_calls": 1548,
+   "dev_score": 0.58
+  },
+  {
+   "metric_calls": 1607,
+   "dev_score": 0.62
+  },
+  {
+   "metric_calls": 1663,
+   "dev_score": 0.48
+  },
+  {
+   "metric_calls": 1725,
+   "dev_score": 0.46
+  },
+  {
+   "metric_calls": 1787,
+   "dev_score": 0.54
+  },
+  {
+   "metric_calls": 1867,
+   "dev_score": 0.52
+  },
+  {
+   "metric_calls": 1956,
+   "dev_score": 0.52
+  },
+  {
+   "metric_calls": 2018,
+   "dev_score": 0.56
+  },
+  {
+   "metric_calls": 2080,
+   "dev_score": 0.4
+  },
+  {
+   "metric_calls": 2157,
+   "dev_score": 0.5
+  },
+  {
+   "metric_calls": 2213,
+   "dev_score": 0.48
+  },
+  {
+   "metric_calls": 2284,
+   "dev_score": 0.56
+  },
+  {
+   "metric_calls": 2415,
+   "dev_score": 0.54
+  },
+  {
+   "metric_calls": 2471,
+   "dev_score": 0.5
+  },
+  {
+   "metric_calls": 2545,
+   "dev_score": 0.56
+  },
+  {
+   "metric_calls": 2619,
+   "dev_score": 0.42
+  },
+  {
+   "metric_calls": 2699,
+   "dev_score": 0.46
+  },
+  {
+   "metric_calls": 2761,
+   "dev_score": 0.54
+  },
+  {
+   "metric_calls": 2859,
+   "dev_score": 0.46
+  },
+  {
+   "metric_calls": 2936,
+   "dev_score": 0.52
+  },
+  {
+   "metric_calls": 3034,
+   "dev_score": 0.52
+  },
+  {
+   "metric_calls": 3105,
+   "dev_score": 0.46
+  },
+  {
+   "metric_calls": 3173,
+   "dev_score": 0.46
+  }
+ ],
+ "notes": ""
+}

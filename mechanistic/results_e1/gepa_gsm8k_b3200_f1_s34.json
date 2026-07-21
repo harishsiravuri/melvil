@@ -1,0 +1,102 @@
+{
+ "curve": [
+  {
+   "metric_calls": 0,
+   "dev": 0.93
+  },
+  {
+   "metric_calls": 106,
+   "dev": 0.94
+  },
+  {
+   "metric_calls": 248,
+   "dev": 0.95
+  },
+  {
+   "metric_calls": 357,
+   "dev": 0.93
+  },
+  {
+   "metric_calls": 496,
+   "dev": 0.93
+  },
+  {
+   "metric_calls": 677,
+   "dev": 0.95
+  },
+  {
+   "metric_calls": 858,
+   "dev": 0.95
+  },
+  {
+   "metric_calls": 979,
+   "dev": 0.95
+  },
+  {
+   "metric_calls": 1094,
+   "dev": 0.94
+  },
+  {
+   "metric_calls": 1266,
+   "dev": 0.95
+  },
+  {
+   "metric_calls": 1453,
+   "dev": 0.97
+  },
+  {
+   "metric_calls": 1562,
+   "dev": 0.93
+  },
+  {
+   "metric_calls": 1704,
+   "dev": 0.94
+  },
+  {
+   "metric_calls": 1924,
+   "dev": 0.95
+  },
+  {
+   "metric_calls": 2033,
+   "dev": 0.94
+  },
+  {
+   "metric_calls": 2229,
+   "dev": 0.94
+  },
+  {
+   "metric_calls": 2431,
+   "dev": 0.94
+  },
+  {
+   "metric_calls": 2570,
+   "dev": 0.94
+  },
+  {
+   "metric_calls": 2685,
+   "dev": 0.93
+  },
+  {
+   "metric_calls": 2875,
+   "dev": 0.94
+  },
+  {
+   "metric_calls": 2981,
+   "dev": 0.94
+  },
+  {
+   "metric_calls": 3180,
+   "dev": 0.96
+  }
+ ],
+ "test_accuracy": 0.9533,
+ "best_prompt": "You will be given a math word problem as input. Your task is to analyze the problem, extract all relevant quantities and relationships, then solve the problem in a careful, step-by-step manner. Your process must ensure clear reasoning and that the sequence of calculations reflects the wording and requirements of the original problem, with logical steps shown explicitly and all intermediate values calculated visibly. Pay particular attention to multi-part, rate-based, and average-type problems and adhere to these specific expectations:\n\n1. Carefully identify and list every quantity, time period, rate, and event described in the problem.\n2. For each segment or period mentioned (such as 'first 20 days', 'next month', or 'per group'), calculate totals or effects separately before combining for the overall total or required answer.\n3. When a task involves entities leaving or entering at different rates or due to different causes (e.g., 'pollywogs maturing' versus 'Melvin catching'), apply those rates during their specified intervals independently and sum their effects when appropriate. Do NOT combine them unless the problem structure requires it per interval.\n4. For averages, sum all given values and divide by the count of values; show both the summing and dividing steps. Present the final answer as an integer if the average is a whole number (omit unnecessary decimals), or as a decimal if not.\n5. For percentage changes, explicitly show the computation steps using the correct base value, compute the change or new value, and note all intermediary quantities.\n6. Do not skip steps\u2014write out each calculation explicitly, with at least one line per non-trivial computation, so that a reader can easily follow each logical deduction.\n7. Provide the final numeric answer ONLY on a new line at the end, in exactly this format:\n   #### <number>\n   where \"<number>\" is only the numeric answer (no units or extra text), using only necessary decimal places (e.g., show '6', not '6.00').\n\nDo not include any summary, explanation, or units alongside the final boxed answer. Your response sequence should be: (1) detailed itemized calculations, then (2) the formatted final numeric answer line exactly as above.",
+ "cost_usd": 0.7944,
+ "total_metric_calls": 3280,
+ "n_proposals": 72,
+ "optimizer": "gepa",
+ "task": "gsm8k",
+ "budget": 3200,
+ "seed": 34,
+ "family": "f1"
+}
