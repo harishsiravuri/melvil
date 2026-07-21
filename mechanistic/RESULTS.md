@@ -74,7 +74,36 @@ channel to overcome a negative matched-budget baseline). This negative is
 itself paper material alongside C1's weakening: both say the early signal is
 noisier than the front-loading story implied.
 
-## E8 — diagnose-then-write (C8) · iteration done; FROZEN protocol below
+## E8 — diagnose-then-write (C8) · **FROZEN RESULTS** (no changes after these numbers)
+
+Frozen pass complete (8 tasks × 2 families × seeds 20–24 + GEPA-F2 references;
+$42.62). Mean test accuracy across the 8 tasks:
+
+| family | seed | ×1 | ×2 | GEPA B1 | ×2 recovery of GEPA gain | ×2 optimize cost |
+|---|---|---|---|---|---|---|
+| F1 gpt-4.1-mini/4.1 | 0.703 | 0.740 | 0.747 | 0.776 | **60%** | ~10–15% of GEPA's |
+| F2 haiku-4.5/sonnet-4.5 | 0.742 | 0.761 | 0.771 | 0.774 | **91%** | ~10–15% of GEPA's |
+
+Per-task recovery is strongly heterogeneous (F1: banking77 155%, massive 112%,
+trec 94% — but stance_abortion **−18%**, ag_news 24%, sst5 30%; F2: stance 86%,
+massive 82%, trec 47%, with banking77/emotion exceeding GEPA outright).
+clinc150 flat/saturated both families, sst5 flat on F2. GEPA-F1 reference =
+existing vanilla pool (seeds 0–2, 10–12); GEPA-F2 = fresh runs (seeds 20–24).
+
+**Verdict: C8 NARROWED to a strong cost result, not a replacement claim.**
+The ≥80–90%-recovery-at-≤15%-cost bar is met on F2 (91%) but not on F1's mean
+(60%) — and F1's failures cluster exactly where whole-prompt iteration
+discovers global strategies a one-shot diagnosis can't (stance_abortion, the
+same task that broke the per-label codebook). Paper sentence: *"A single
+error-grounded rewrite recovers 60–91% of GEPA's gain (family-dependent) at
+about a tenth of its cost — supporting a screen → diagnose-then-write →
+evolve-if-headroom pipeline — but on tasks requiring globally restructured
+prompts, iterative evolution remains necessary."* Iteration-pass numbers held
+under fresh seeds (banking77 0.849→0.843, trec 0.856→0.852). Pending for the
+final tables: paired bootstrap CIs (per-example scores recomputable from saved
+prompts via the temp-0 cache at ~zero cost).
+
+### Iteration-phase record (pre-freeze)
 
 Iteration (banking77 + trec, F1, seeds 0–1, ~$0.91): seed→×1→×2 test accuracy
 0.760→0.811→**0.849** on banking77 (GEPA reference 0.821 — exceeded) and

@@ -1,0 +1,36 @@
+{
+ "experiment": "e8",
+ "phase": "frozen",
+ "task": "trec",
+ "family": "f1",
+ "seed": 21,
+ "arms": {
+  "seed": {
+   "test_accuracy": 0.6,
+   "test_macro_f1": 0.6235,
+   "unparseable": 0
+  },
+  "x1": {
+   "test_accuracy": 0.8233,
+   "test_macro_f1": 0.8022,
+   "unparseable": 0
+  },
+  "x2": {
+   "test_accuracy": 0.88,
+   "test_macro_f1": 0.8873,
+   "unparseable": 0
+  }
+ },
+ "dev_accs": {
+  "input_of_x1": 0.5,
+  "input_of_x2": 0.72
+ },
+ "prompts": {
+  "seed": "Classify the given text into one of these categories: abbreviation, description, entity, human, location, numeric.\n\nRespond with exactly one category name from the list above and nothing else.",
+  "x1": "Classify the given text into exactly one of these categories: abbreviation, description, entity, human, location, numeric.\n\nUse these definitions and decision rules:\n- abbreviation: The text refers to a shortened or acronym form of a word or phrase.\n- description: The text asks for an explanation, definition, reason, manner, function, process, or general information about something. Choose this ONLY if no other category fits.\n- entity: The text seeks the name of a thing, group, concept, object, organization, brand, work (e.g., book, song, law), event, product, or item that is not a location or human. Prefer this for names or identifiers of non-people, non-locations. DO NOT select 'description' if a specific thing or title is the answer.\n- human: The text seeks a specific person or group made up of people (including organizations of people, teams, or professions, but NOT brands, companies, or places). Use this for names of individuals, groups, or professions.\n- location: The text asks for a geographical place or area (city, country, river, region, etc.). Use if the answer is a geographical name, including physical sites.\n- numeric: The text requests a number, date, amount, measurement, age, quantity, or anything whose answer is primarily numeric.\n\nTie-breakers:\n- If the answer could be either an entity or a description, choose entity.\n- If the answer could be location or entity, choose location.\n- If the answer could be human or entity, choose human.\n- If numeric and another category both plausibly fit, choose numeric.\n\nRespond with exactly one category name from the list above and nothing else.",
+  "x2": "Classify the given text into exactly one of these categories: abbreviation, description, entity, human, location, numeric.\n\nDefinitions and rules:\n- abbreviation: The text refers to a shortened, acronym, or initialism form of a word or phrase.\n- numeric: The text requests a number, date, age, measurement, probability, quantity, or any answer that is primarily numeric, including time spans and seasons if the answer is numeric or time-based.\n- location: The text seeks the name of a city, country, region, river, physical site, or any specific geographical place or area. If the answer is a website, venue, or other place (online or physical), prefer location. If asking \"where\" something occurs, classify as location if the expected answer is a place.\n- human: The text seeks the name of a specific person, a group of people (including professions, teams, collectives, or social groups), or a position/title associated with a person. Do NOT include organizations, brands, or companies here.\n- entity: The text seeks the name or identifier of a thing, object, group, concept, product, brand, organization, work (book, law, event, etc.), or item that is not a person/human, location, or abbreviation. If the answer is a title, term, or name of something non-human and non-location, choose entity.\n- description: The text asks for an explanation, definition, reason, manner, function, process, or general information. Choose this ONLY if no other specific category fits, or if the expected answer is an open-ended explanatory statement.\n\nDecision rules and tie-breakers:\n- If the answer could be numeric and another category, choose numeric.\n- If the answer could be location or entity, choose location.\n- If the answer could be human or entity, choose human.\n- If the answer is a name or specific identifier of a non-human/non-location (including terms/phrases for fears, bets, diseases, works, groups, products, objects, etc.), choose entity.\n- If the question asks for a list of proper names that fit a category (e.g., names of books, terms, titles), prefer entity.\n- When in doubt between entity and description, choose entity.\n- When the answer is a place/site (including online sites) or where something occurs, prefer location.\n\nRespond with exactly one category name from the list above and nothing else."
+ },
+ "cost_usd": 0.1321,
+ "task_lm_calls": 700,
+ "reflection_calls": 2
+}

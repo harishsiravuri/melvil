@@ -1,0 +1,36 @@
+{
+ "experiment": "e8",
+ "phase": "frozen",
+ "task": "emotion",
+ "family": "f1",
+ "seed": 24,
+ "arms": {
+  "seed": {
+   "test_accuracy": 0.5633,
+   "test_macro_f1": 0.4551,
+   "unparseable": 0
+  },
+  "x1": {
+   "test_accuracy": 0.54,
+   "test_macro_f1": 0.4394,
+   "unparseable": 0
+  },
+  "x2": {
+   "test_accuracy": 0.54,
+   "test_macro_f1": 0.427,
+   "unparseable": 0
+  }
+ },
+ "dev_accs": {
+  "input_of_x1": 0.68,
+  "input_of_x2": 0.68
+ },
+ "prompts": {
+  "seed": "Classify the given text into one of these categories: anger, fear, joy, love, sadness, surprise.\n\nRespond with exactly one category name from the list above and nothing else.",
+  "x1": "Classify the given text into one of these categories: anger, fear, joy, love, sadness, surprise.\n\nDefinitions:\n- anger: strong feelings of displeasure, frustration, irritation, annoyance, or hostility, often directed toward someone or something.\n- fear: feelings of anxiety, worry, apprehension, dread, or concern about threat, harm, or negative outcomes.\n- joy: positive feelings such as happiness, satisfaction, contentment, delight, or pleasure; focus on personal achievement, well-being, or enjoyment, but not necessarily involving others.\n- love: deep affection, caring, warmth, attachment, compassion, appreciation, or close connection directed towards another person, group, pet, or object.\n- sadness: feelings of loss, disappointment, regret, grief, discouragement, longing, or low spirits; focus on negative emotion that is not fear or anger.\n- surprise: feelings of astonishment, shock, unexpectedness, or being caught off guard, whether positive or negative.\n\nDecision rules:\n- If the text expresses positive emotion about achievement, satisfaction, gratitude, or happiness related to oneself, choose joy unless a strong focus is on affection or emotional connection to others (then choose love).\n- If the text is about yearning for affection, missing connection, or emotional pain from love or its lack, classify as sadness\u2014unless the emotion is clearly affectionate or appreciative, then prefer love.\n- If both joy and love could apply, pick love only if affection or bond is clearly central; otherwise, pick joy.\n- If positive and negative emotions are mixed (e.g., gratitude but also regret or loss), choose the dominant emotion.\n- If emotion is not clear, choose the most specific relevant category, with joy considered only for distinctly positive, self-focused emotions.\n- For ambiguous cases between joy and sadness, prefer sadness if there is any mention of loss, regret, pain, or longing.\n\nRespond with exactly one category name from the list above and nothing else.",
+  "x2": "Classify the given text into one of these categories: anger, fear, joy, love, sadness, surprise.\n\nCategory definitions:\n- anger: strong feelings of displeasure, frustration, irritation, annoyance, or hostility, often directed toward someone or something.\n- fear: feelings of anxiety, worry, apprehension, dread, or concern about threat, harm, or negative outcomes.\n- joy: positive feelings such as happiness, satisfaction, pride, relief, contentment, or pleasure, especially about achievement, personal well-being, or enjoyment, even if mixed with past challenges or obstacles but focused on positive change or outcome.\n- love: deep affection, care, warmth, attachment, compassion, gratitude, appreciation, or close emotional bond directed toward another person, group, pet, or object. Central theme must be connection, closeness, or affection\u2014even if this includes gratitude or admiration for others.\n- sadness: feelings of loss, disappointment, regret, grief, discouragement, longing, or low spirits; includes emotional pain from missing connection or unfulfilled affection. Use for negative states even when coping or positive intent is mentioned.\n- surprise: feelings of astonishment, shock, unexpectedness, or being caught off guard, whether positive or negative.\n\nDecision rules:\n- When the emotion is mostly about connection, affection, deep appreciation, or relationships (not just positivity), choose love\u2014even if the text includes gratitude, admiration, or emotional healing centered on others.\n- Choose joy only for distinctly positive self-focused emotions (achievement, contentment, pride, happiness about one\u2019s own progress); do not use joy if the main focus is on others or relationships\u2014prefer love in those cases.\n- If the text mixes positive emotion with mention of past or residual pain, loss, regret, or self-doubt, prefer sadness if any negative emotion is still present, unless the current emotion is clearly resolution, relief, or a turn toward the positive.\n- For coping statements, distraction, or seeking relief from a negative emotion, classify as sadness if distress, trouble, or defeat is mentioned, even if the action is positive (e.g., enjoying a walk to feel better).\n- If both joy and love could apply, pick love only when an emotional bond or human connection is clearly central; otherwise, pick joy.\n- For ambiguous cases between joy and sadness, prefer sadness if any loss, regret, longing, unresolved pain, or negative state remains prominent; prefer joy if the text clearly expresses overcoming or resolution.\n- For gratitude, appreciation, or admiration: choose love if directed at others and connection or warmth is the main theme; choose joy if it is self-focused or general happiness.\n- If the emotion is unclear, select the most specific and relevant category.\n\nRespond with exactly one category name from the list above and nothing else."
+ },
+ "cost_usd": 0.1535,
+ "task_lm_calls": 700,
+ "reflection_calls": 2
+}

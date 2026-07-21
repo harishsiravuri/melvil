@@ -1,0 +1,197 @@
+{
+ "schema_version": 1,
+ "artifact_id": "325d41a389c6",
+ "parent_id": null,
+ "task_name": "sst5",
+ "created_at": "2026-07-21T02:59:50-0500",
+ "library": {
+  "name": "melvil",
+  "version": "0.3.0"
+ },
+ "models": {
+  "task": "openrouter/anthropic/claude-haiku-4.5",
+  "reflection": "openrouter/anthropic/claude-sonnet-4.5"
+ },
+ "budget": {
+  "metric_calls_budget": 800,
+  "metric_calls_spent": 863,
+  "cost_usd": 0.6337,
+  "task_lm_usage": {
+   "model": "openrouter/anthropic/claude-haiku-4.5",
+   "prompt_tokens": 530438,
+   "completion_tokens": 3241,
+   "calls": 762,
+   "cache_hits": 201,
+   "cost_usd": 0.546643
+  },
+  "reflection_lm_usage": {
+   "model": "openrouter/anthropic/claude-sonnet-4.5",
+   "prompt_tokens": 5232,
+   "completion_tokens": 4755,
+   "calls": 7,
+   "cache_hits": 0,
+   "cost_usd": 0.087021
+  },
+  "opt_seconds": 221.3
+ },
+ "scores": {
+  "dev_accuracy": 0.65,
+  "dev_macro_f1": 0.6087,
+  "per_label_dev": {
+   "negative": {
+    "precision": 0.6452,
+    "recall": 0.7692,
+    "f1": 0.7018,
+    "support": 26
+   },
+   "neutral": {
+    "precision": 0.5882,
+    "recall": 0.5263,
+    "f1": 0.5556,
+    "support": 19
+   },
+   "positive": {
+    "precision": 0.6316,
+    "recall": 0.8889,
+    "f1": 0.7385,
+    "support": 27
+   },
+   "very negative": {
+    "precision": 0.625,
+    "recall": 0.3846,
+    "f1": 0.4762,
+    "support": 13
+   },
+   "very positive": {
+    "precision": 1.0,
+    "recall": 0.4,
+    "f1": 0.5714,
+    "support": 15
+   }
+  },
+  "seed_dev_accuracy": 0.61,
+  "dev_accuracy_quarantined": null
+ },
+ "config_hash": "56bd103b46db",
+ "config": {
+  "task_model": "openrouter/anthropic/claude-haiku-4.5",
+  "reflection_model": "openrouter/anthropic/claude-sonnet-4.5",
+  "budget": "light",
+  "seed": 24,
+  "features": {
+   "codebook": false,
+   "confusion_reflection": false,
+   "hard_example_mining": false
+  },
+  "num_threads": 8,
+  "run_dir": "/Users/harish/Documents/Claude/Projects/6s/labelsmith/mechanistic/runs_e8_gepa_f2/sst5/s24",
+  "task_temperature": 0.0,
+  "task_max_tokens": 40,
+  "reflection_temperature": 1.0,
+  "reflection_max_tokens": 8000,
+  "reflection_minibatch_size": 3,
+  "max_exemplars": 6,
+  "mining_llm_screen": true,
+  "log_proposals": false,
+  "prices": {},
+  "metric_calls": 800
+ },
+ "label_names": [
+  "negative",
+  "neutral",
+  "positive",
+  "very negative",
+  "very positive"
+ ],
+ "components": {
+  "instruction": "Classify the given text into one of these categories: negative, neutral, positive, very negative, very positive.\n\nImportant guidelines:\n\n1. Pay close attention to the intensity of sentiment expressed in the text to distinguish between regular and \"very\" categories (e.g., positive vs very positive, negative vs very negative).\n\n2. VERY NEGATIVE indicators - Use this category when you see:\n   - Strong negative adjectives: \"terrible\", \"awful\", \"disaster\", \"abysmal\", \"loony\"\n   - Structural criticism: \"poorly structured\", \"incoherence\", \"redundancy\"\n   - Competence attacks: \"doesn't have the necessary self-control\", \"lacks ability\"\n   - Multiple serious flaws mentioned together\n   - Fundamental failures in craft or execution\n   - Words like \"irreparably\", \"completely\", \"utterly\" intensifying negative sentiment\n   - Example: Criticism of a director's lack of control combined with structural problems = very negative\n\n3. NEGATIVE indicators - Use this category for:\n   - Mild negative words: \"disappointing\", \"lacking\", \"mediocre\", \"underwhelming\"\n   - Moderate criticism without intensifiers\n   - Single negative point without compound criticism\n\n4. NEUTRAL indicators - Use this category when:\n   - Text is primarily descriptive or observational without strong evaluative terms\n   - Comparisons are made without clear positive or negative judgment\n   - Language describes what happens (e.g., \"goes overboard with a loony melodramatic denouement\") in a way that's more observational than condemnatory\n   - The tone is analytical or matter-of-fact rather than praising or condemning\n   - Phrases like \"eventually goes overboard\" suggest description rather than harsh criticism\n   - Important: Even phrases with words like \"loony\" can be neutral if the overall tone is observational/descriptive rather than evaluative\n\n5. POSITIVE indicators - Use this category for:\n   - Single positive descriptors or qualities mentioned\n   - Phrases like \"gem of a movie\" combined with thoughtful qualities\n   - Texts that praise multiple aspects but without emphatic or strong intensifiers\n   - Words like \"thought-provoking\", \"funny\", \"defies classification\" when combined suggest appreciation\n   - Important: Multiple mild positive qualities together (thought-provoking, funny, scary, sad) still equals \"positive\" not \"very positive\" - only escalate to very positive if there are strong intensifiers or emphatic praise\n\n6. VERY POSITIVE indicators - Use this category when you see:\n   - Strong positive adjectives: \"dazzling\", \"excellent\", \"amazing\", \"brilliant\", \"outstanding\"\n   - Emphatic phrases: \"certainly delivers\", \"truly remarkable\", \"absolutely brilliant\"\n   - Sophisticated praise with intensifiers: \"intelligent, realistic portrayal\" + emphatic language\n   - Strong endorsements or recommendations\n   - Important: Multiple positive qualities without strong intensifiers or emphatic language = positive, not very positive\n\n7. Key calibration rules:\n   - Compound serious criticisms (structural + competence issues) = very negative\n   - Descriptive/observational language about flaws = neutral\n   - Multiple mild positive qualities = positive (not very positive)\n   - Reserve \"very\" categories for truly intense sentiment with clear intensifiers or emphatic language"
+ },
+ "exemplars": [],
+ "confusion": {
+  "labels": [
+   "negative",
+   "neutral",
+   "positive",
+   "very negative",
+   "very positive"
+  ],
+  "matrix": [
+   [
+    20,
+    4,
+    0,
+    2,
+    0,
+    0
+   ],
+   [
+    3,
+    10,
+    5,
+    1,
+    0,
+    0
+   ],
+   [
+    0,
+    3,
+    24,
+    0,
+    0,
+    0
+   ],
+   [
+    8,
+    0,
+    0,
+    5,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    9,
+    0,
+    6,
+    0
+   ]
+  ],
+  "unparseable_column": true
+ },
+ "curve": [
+  {
+   "metric_calls": 0,
+   "dev_score": 0.61
+  },
+  {
+   "metric_calls": 106,
+   "dev_score": 0.6
+  },
+  {
+   "metric_calls": 215,
+   "dev_score": 0.6
+  },
+  {
+   "metric_calls": 327,
+   "dev_score": 0.57
+  },
+  {
+   "metric_calls": 445,
+   "dev_score": 0.59
+  },
+  {
+   "metric_calls": 551,
+   "dev_score": 0.55
+  },
+  {
+   "metric_calls": 657,
+   "dev_score": 0.53
+  },
+  {
+   "metric_calls": 763,
+   "dev_score": 0.65
+  }
+ ],
+ "notes": ""
+}

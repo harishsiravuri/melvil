@@ -1,0 +1,42 @@
+{
+ "curve": [
+  {
+   "metric_calls": 0,
+   "dev": 0.93
+  },
+  {
+   "metric_calls": 151,
+   "dev": 0.93
+  },
+  {
+   "metric_calls": 269,
+   "dev": 0.94
+  },
+  {
+   "metric_calls": 384,
+   "dev": 0.96
+  },
+  {
+   "metric_calls": 505,
+   "dev": 0.9
+  },
+  {
+   "metric_calls": 626,
+   "dev": 0.94
+  },
+  {
+   "metric_calls": 741,
+   "dev": 0.94
+  }
+ ],
+ "test_accuracy": 0.95,
+ "best_prompt": "You are tasked with solving math word problems that involve interpreting real-world scenarios and performing step-by-step calculations. Your goal is to provide clear, detailed, and logically structured solutions that show all your reasoning, include every necessary calculation, and ensure alignment with the specific requirements in the problem statement.\n\nThe input will always be a math word problem, often involving multiple entities (such as people or teams), different quantities, percentages, fractions, and potentially multi-step actions occurring in sequence or in accumulation.\n\nTo fulfill this task, strictly follow these guidelines:\n\n1. **Extract All Facts and Initial Quantities**: Carefully read the word problem and explicitly identify all given quantities and relevant relationships, including totals, numbers of entities, per-person or per-group requirements, extra or fewer amounts, and any sequential or cumulative actions.\n\n2. **Decompose the Problem**: Break the problem into clear, labeled steps. Each step should correspond to a logical part of the work needed (e.g., finding the total for a group, adjusting for \"more\" or \"less,\" or subtracting from a total). Label each step at the start (e.g., \"Step 1: ...\").\n\n3. **Explicit Calculations and Interpretations**:\n    - For phrases like \"20% fewer,\" multiply by 0.8; for \"12 more,\" add 12; for \"each person,\" multiply per-person number by the number of people.\n    - Always write an explicit calculation for every adjustment, subtotal, or value derived.\n    - If multiple groups or individuals are involved, calculate their contributions separately, then sum or compare as required.\n    - For coaches, helpers, or special cases, make sure to count them only where implied or explicitly stated in the problem.\n\n4. **Maintain Cumulative vs. Sequential Logic**: Where the scenario involves phases (like one team after another) or accumulation (total across several groups), be explicit about this in your calculations.\n\n5. **Double-Check Final Requirement**: At the end, check exactly what is being asked (e.g., \"How many...for the rugby team?\" \"How many are left?\") and be certain you are reporting the correct specific quantity.\n\n6. **Final Answer Formatting**: Present the final numeric answer\u2014without any explanation\u2014on its own line in the form:\n   #### <number>\n   Ensure this number exactly matches what is asked for.\n\n7. **General Best Practices**:\n   - Clearly show all calculations, not only results.\n   - Avoid skipping steps, no matter how simple.\n   - Do not add extraneous explanations or text around the final answer.\n\nRemember to use this strategy even for non-standard or niche domains encountered in problems (such as specific sports teams, roles, event types). Pay particular attention to subtleties (e.g. whether coaches are included in totals, or whether a group needing \"12 more than\" another means addition after computing the first group's total).\n\nExample format:\nStep 1: [State and process the first detail]\nStep 2: [Compute the next required subtotal]\n...\n#### <final numeric answer>",
+ "cost_usd": 0.6116,
+ "total_metric_calls": 841,
+ "n_proposals": 12,
+ "optimizer": "gepa",
+ "task": "gsm8k",
+ "budget": 800,
+ "seed": 33,
+ "family": "f1"
+}

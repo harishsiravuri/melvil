@@ -1,0 +1,36 @@
+{
+ "experiment": "e8",
+ "phase": "frozen",
+ "task": "sst5",
+ "family": "f1",
+ "seed": 24,
+ "arms": {
+  "seed": {
+   "test_accuracy": 0.5467,
+   "test_macro_f1": 0.4536,
+   "unparseable": 0
+  },
+  "x1": {
+   "test_accuracy": 0.59,
+   "test_macro_f1": 0.5627,
+   "unparseable": 0
+  },
+  "x2": {
+   "test_accuracy": 0.58,
+   "test_macro_f1": 0.5253,
+   "unparseable": 0
+  }
+ },
+ "dev_accs": {
+  "input_of_x1": 0.55,
+  "input_of_x2": 0.56
+ },
+ "prompts": {
+  "seed": "Classify the given text into one of these categories: negative, neutral, positive, very negative, very positive.\n\nRespond with exactly one category name from the list above and nothing else.",
+  "x1": "Classify the given text into one of these categories: negative, neutral, positive, very negative, very positive.\n\nCategory definitions and decision rules:\n- very positive: Use only if the text shows clear, strong enthusiasm, high praise, or exceptionally positive sentiment\u2014language is highly favorable, emphatic, or emotionally strong.\n- positive: Use if the text expresses good feelings, approval, or moderate praise, but with less intensity than \"very positive.\" Positive, but not extreme.\n- neutral: Use if the text is balanced, matter-of-fact, lacks clear positive or negative judgment, or gives mixed impressions\u2014neither clearly supportive nor overtly critical.\n- negative: Use if the text shows clear disapproval, criticism, or negative sentiment, but not in a strongly emphatic or harsh way.\n- very negative: Use only if the text demonstrates clear, strong, or emphatic negativity, harsh criticism, or highly unfavorable sentiment\u2014emotionally forceful or extremely unfavorable.\n\nDecision rules:\n- If sentiment is at the boundary between two categories, assign the stronger (more intense) category.\n- Only select \"neutral\" if positive and negative signals are absent or equally balanced.\n- If unsure between \"very positive\" vs \"positive\" or \"very negative\" vs \"negative,\" look for language intensity, emotion, or emphatic wording as the deciding factor.\n\nRespond with exactly one category name from the list above and nothing else.",
+  "x2": "Classify the given text into one of these categories: negative, neutral, positive, very negative, very positive.\n\nCategory definitions:\n- very positive: Use only if the text displays strong enthusiasm, highly emphatic praise, or intensely favorable, exuberant, or emotionally charged positive language. Look for superlatives, strong emotional expressions, or passionate endorsement.\n- positive: Use if the text expresses clear approval, good feelings, or praise, but without strong or intensified language. The sentiment should be more than mildly favorable, but less intense or emotional than \"very positive.\"\n- neutral: Use if the text is balanced, descriptive, matter-of-fact, or contains no clear positive or negative judgment. Also use when positive and negative cues are equally present or ambiguous, resulting in an overall absence of sentiment.\n- negative: Use if the text shows clear disapproval, unfavorable opinion, or critical remarks, but not with strong emphasis, harsh language, or intense negativity.\n- very negative: Use only if the text demonstrates strong, emphatic negativity, severe criticism, or emotionally charged harshness\u2014look for words or tone that are particularly biting, extreme, or intensely unfavorable.\n\nDecision rules and tie-breakers:\n- If sentiment could plausibly fit both a regular and \"very\" category (positive/very positive or negative/very negative), assign the \"very\" category if the language is emotionally strong, highly emphatic, or uses superlatives or unusually forceful phrasing.\n- Do NOT assign \"neutral\" if there is any overall positive or negative sentiment, even if mild; only use \"neutral\" for sentiment-free, truly balanced, or ambiguous texts.\n- When positive and negative cues are mixed but one clearly outweighs the other, assign the prevailing sentiment and appropriate intensity.\n- If a text seems at the borderline between categories, err toward the more intense (very positive/very negative) if justified by language intensity, emotional force, or strong subjective wording; otherwise, choose the regular (positive/negative) category.\n- Avoid defaulting to \"neutral\" in the presence of clear, even if subtle, sentiment.\n\nRespond with exactly one category name from the list above and nothing else."
+ },
+ "cost_usd": 0.1197,
+ "task_lm_calls": 700,
+ "reflection_calls": 2
+}

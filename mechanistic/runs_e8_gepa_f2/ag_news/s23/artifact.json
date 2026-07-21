@@ -1,0 +1,177 @@
+{
+ "schema_version": 1,
+ "artifact_id": "023f3da5430d",
+ "parent_id": null,
+ "task_name": "ag_news",
+ "created_at": "2026-07-21T02:56:13-0500",
+ "library": {
+  "name": "melvil",
+  "version": "0.3.0"
+ },
+ "models": {
+  "task": "openrouter/anthropic/claude-haiku-4.5",
+  "reflection": "openrouter/anthropic/claude-sonnet-4.5"
+ },
+ "budget": {
+  "metric_calls_budget": 800,
+  "metric_calls_spent": 899,
+  "cost_usd": 0.5257,
+  "task_lm_usage": {
+   "model": "openrouter/anthropic/claude-haiku-4.5",
+   "prompt_tokens": 425788,
+   "completion_tokens": 3538,
+   "calls": 781,
+   "cache_hits": 218,
+   "cost_usd": 0.443478
+  },
+  "reflection_lm_usage": {
+   "model": "openrouter/anthropic/claude-sonnet-4.5",
+   "prompt_tokens": 4800,
+   "completion_tokens": 4520,
+   "calls": 8,
+   "cache_hits": 0,
+   "cost_usd": 0.0822
+  },
+  "opt_seconds": 250.6
+ },
+ "scores": {
+  "dev_accuracy": 0.89,
+  "dev_macro_f1": 0.8868,
+  "per_label_dev": {
+   "Business": {
+    "precision": 0.8214,
+    "recall": 0.92,
+    "f1": 0.8679,
+    "support": 25
+   },
+   "Sci/Tech": {
+    "precision": 0.9444,
+    "recall": 0.68,
+    "f1": 0.7907,
+    "support": 25
+   },
+   "Sports": {
+    "precision": 1.0,
+    "recall": 0.96,
+    "f1": 0.9796,
+    "support": 25
+   },
+   "World": {
+    "precision": 0.8333,
+    "recall": 1.0,
+    "f1": 0.9091,
+    "support": 25
+   }
+  },
+  "seed_dev_accuracy": 0.89,
+  "dev_accuracy_quarantined": null
+ },
+ "config_hash": "b659cf8f8da9",
+ "config": {
+  "task_model": "openrouter/anthropic/claude-haiku-4.5",
+  "reflection_model": "openrouter/anthropic/claude-sonnet-4.5",
+  "budget": "light",
+  "seed": 23,
+  "features": {
+   "codebook": false,
+   "confusion_reflection": false,
+   "hard_example_mining": false
+  },
+  "num_threads": 8,
+  "run_dir": "/Users/harish/Documents/Claude/Projects/6s/labelsmith/mechanistic/runs_e8_gepa_f2/ag_news/s23",
+  "task_temperature": 0.0,
+  "task_max_tokens": 40,
+  "reflection_temperature": 1.0,
+  "reflection_max_tokens": 8000,
+  "reflection_minibatch_size": 3,
+  "max_exemplars": 6,
+  "mining_llm_screen": true,
+  "log_proposals": false,
+  "prices": {},
+  "metric_calls": 800
+ },
+ "label_names": [
+  "Business",
+  "Sci/Tech",
+  "Sports",
+  "World"
+ ],
+ "components": {
+  "instruction": "Classify the given text into one of these categories: Business, Sci/Tech, Sports, World."
+ },
+ "exemplars": [],
+ "confusion": {
+  "labels": [
+   "Business",
+   "Sci/Tech",
+   "Sports",
+   "World"
+  ],
+  "matrix": [
+   [
+    23,
+    1,
+    0,
+    1,
+    0
+   ],
+   [
+    5,
+    17,
+    0,
+    3,
+    0
+   ],
+   [
+    0,
+    0,
+    24,
+    1,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    25,
+    0
+   ]
+  ],
+  "unparseable_column": true
+ },
+ "curve": [
+  {
+   "metric_calls": 0,
+   "dev_score": 0.89
+  },
+  {
+   "metric_calls": 106,
+   "dev_score": 0.87
+  },
+  {
+   "metric_calls": 212,
+   "dev_score": 0.87
+  },
+  {
+   "metric_calls": 333,
+   "dev_score": 0.85
+  },
+  {
+   "metric_calls": 442,
+   "dev_score": 0.83
+  },
+  {
+   "metric_calls": 563,
+   "dev_score": 0.87
+  },
+  {
+   "metric_calls": 687,
+   "dev_score": 0.89
+  },
+  {
+   "metric_calls": 799,
+   "dev_score": 0.87
+  }
+ ],
+ "notes": ""
+}

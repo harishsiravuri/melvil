@@ -1,0 +1,36 @@
+{
+ "experiment": "e8",
+ "phase": "frozen",
+ "task": "emotion",
+ "family": "f1",
+ "seed": 22,
+ "arms": {
+  "seed": {
+   "test_accuracy": 0.5633,
+   "test_macro_f1": 0.4551,
+   "unparseable": 0
+  },
+  "x1": {
+   "test_accuracy": 0.5333,
+   "test_macro_f1": 0.4378,
+   "unparseable": 0
+  },
+  "x2": {
+   "test_accuracy": 0.54,
+   "test_macro_f1": 0.4423,
+   "unparseable": 0
+  }
+ },
+ "dev_accs": {
+  "input_of_x1": 0.68,
+  "input_of_x2": 0.67
+ },
+ "prompts": {
+  "seed": "Classify the given text into one of these categories: anger, fear, joy, love, sadness, surprise.\n\nRespond with exactly one category name from the list above and nothing else.",
+  "x1": "Classify the given text into one of these categories: anger, fear, joy, love, sadness, surprise.\n\nDefinitions:\n- anger: Responses showing strong annoyance, frustration, resentment, or rage.\n- fear: Responses expressing anxiety, worry, insecurity, or anticipation of threat or harm.\n- joy: A feeling of happiness, contentment, satisfaction, achievement, or pleasure, even during moments of reflection or after hardship.\n- love: Expressions of deep affection, appreciation, attachment, caring, or warmth towards others (people, animals, things, or experiences).\n- sadness: Feelings of loss, disappointment, loneliness, defeat, or sorrow; dwelling on troubles or negatives even if something positive is present.\n- surprise: Reactions to something unexpected, startling, or suddenly realized, regardless of whether it is positive or negative.\n\nDecision rules:\n- If the text shows warmth, attachment, care, or appreciation for someone or something, choose love\u2014even if there are undertones of sadness, gratitude, or joy.\n- If the tone is primarily satisfied, happy, or positive about oneself or events, choose joy unless affectionate attachment is the main focus (then choose love).\n- If the text mainly conveys loss, trouble, or disappointment\u2014especially if positivity is presented as a coping strategy\u2014choose sadness.\n- For ambiguous texts where joy and sadness seem mixed, consider which emotion dominates: use joy if positivity or accomplishment is highlighted, sadness if struggle, loss, or negative feelings dominate.\n- If two categories are equally present, prioritize in this order: love > sadness > joy > anger > fear > surprise.\n\nRespond with exactly one category name from the list above and nothing else.",
+  "x2": "Classify the given text into one of these categories: anger, fear, joy, love, sadness, surprise.\n\nDefinitions:\n- anger: Text showing annoyance, frustration, resentment, irritation, or rage.\n- fear: Text expressing anxiety, worry, insecurity, uncertainty, dread, or concern about possible harm or threat.\n- joy: Text describing happiness, pleasure, satisfaction, accomplishment, or contentment, even if difficulties are acknowledged but not emphasized.\n- love: Text expressing deep affection, warmth, appreciation, fondness, attachment, care, or gratitude towards others (people, animals, things, or experiences); includes strong appreciation or connection.\n- sadness: Text focusing on loss, disappointment, loneliness, sorrow, defeat, trouble, grief, grief-coping, or negative feelings\u2014even if accompanied by minor positivity or coping statements.\n- surprise: Text reacting to something unexpected, astonishing, or suddenly realized, regardless of emotional valence.\n\nDecision rules:\n- If the main focus is on warmth, attachment, affection, care, appreciation, or gratitude toward someone or something, choose love\u2014even if there are undertones of sadness, joy, or other emotions.\n- If the text clearly emphasizes loss, struggle, stress, disappointment, defeat, or inability to resolve negative feelings (even if positive coping is mentioned), choose sadness over joy.\n- If the text highlights happiness, satisfaction, or achievement as the central theme, and negative aspects are minor, choose joy; do not choose joy when negativity or loss is the main focus.\n- If the main content is concern, apprehension, or worry about the future or consequences, choose fear\u2014even if other emotions are present.\n- For expressions of amazement, shock, or realizing something unexpected, choose surprise\u2014even if other feelings coexist.\n- If multiple emotions are equally present, use this priority: love > sadness > joy > anger > fear > surprise.\n\nClarifications:\n- Do not assign joy when the text centers on coping with struggle, stress, or loss; prefer sadness in those cases.\n- Do not assign love unless strong affection or appreciation for others is prominent.\n- Do not assign fear or surprise unless the anticipation of threat or the element of unexpectedness is the clear focus.\n\nRespond with exactly one category name from the list above and nothing else."
+ },
+ "cost_usd": 0.1298,
+ "task_lm_calls": 700,
+ "reflection_calls": 2
+}

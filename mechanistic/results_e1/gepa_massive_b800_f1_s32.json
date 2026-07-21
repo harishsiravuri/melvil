@@ -1,0 +1,45 @@
+{
+ "curve": [
+  {
+   "metric_calls": 0,
+   "dev": 0.81
+  },
+  {
+   "metric_calls": 106,
+   "dev": 0.84
+  },
+  {
+   "metric_calls": 218,
+   "dev": 0.84
+  },
+  {
+   "metric_calls": 330,
+   "dev": 0.84
+  },
+  {
+   "metric_calls": 442,
+   "dev": 0.81
+  },
+  {
+   "metric_calls": 548,
+   "dev": 0.85
+  },
+  {
+   "metric_calls": 654,
+   "dev": 0.83
+  },
+  {
+   "metric_calls": 787,
+   "dev": 0.81
+  }
+ ],
+ "test_accuracy": 0.8733,
+ "cost_usd": 0.3197,
+ "total_metric_calls": 887,
+ "n_proposals": 8,
+ "optimizer": "gepa",
+ "task": "massive",
+ "budget": 800,
+ "seed": 32,
+ "family": "f1"
+}

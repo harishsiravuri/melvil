@@ -1,0 +1,36 @@
+{
+ "experiment": "e8",
+ "phase": "frozen",
+ "task": "trec",
+ "family": "f2",
+ "seed": 22,
+ "arms": {
+  "seed": {
+   "test_accuracy": 0.8267,
+   "test_macro_f1": 0.8307,
+   "unparseable": 0
+  },
+  "x1": {
+   "test_accuracy": 0.8167,
+   "test_macro_f1": 0.8089,
+   "unparseable": 0
+  },
+  "x2": {
+   "test_accuracy": 0.8467,
+   "test_macro_f1": 0.8497,
+   "unparseable": 0
+  }
+ },
+ "dev_accs": {
+  "input_of_x1": 0.69,
+  "input_of_x2": 0.74
+ },
+ "prompts": {
+  "seed": "Classify the given text into one of these categories: abbreviation, description, entity, human, location, numeric.\n\nRespond with exactly one category name from the list above and nothing else.",
+  "x1": "Classify the given text into one of these categories: abbreviation, description, entity, human, location, numeric.\n\nCategory definitions:\n- abbreviation: Questions asking what an abbreviation or acronym stands for\n- description: Questions asking for definitions, explanations, reasons, or descriptions of concepts, processes, or qualities\n- entity: Questions asking for names of specific things (objects, organizations, products, films, documents, events, etc.)\n- human: Questions asking for names, identities, or information about specific people or groups of people\n- location: Questions asking for names or information about specific places (cities, countries, buildings, geographical features, etc.)\n- numeric: Questions asking for numbers, dates, quantities, or amounts\n\nDecision rules:\n- If a question asks for names of people (including nicknames, family members, or roles filled by specific individuals), classify as 'human', not 'entity'\n- If a question asks about a specific place or location (even when described with modifiers), classify as 'location', not 'entity'\n- If a question asks \"what is X\" where X is a concrete thing/object/product/film/organization, classify as 'entity', not 'description'\n- If a question asks \"what is X\" where X is a concept/fear/process requiring explanation, classify as 'description', not 'entity'\n- Questions about \"what to do\" or \"how to\" classify as 'description'\n- Questions about \"which/what film\" or similar media products classify as 'entity'\n\nRespond with exactly one category name from the list above and nothing else.",
+  "x2": "Classify the given text into one of these categories: abbreviation, description, entity, human, location, numeric.\n\nCategory definitions:\n- abbreviation: Questions asking ONLY what an abbreviation, acronym, or initialism stands for (e.g., \"What does NASA stand for?\")\n- description: Questions asking for definitions, explanations, reasons, descriptions, meanings, or \"how to\" / \"what to do\" instructions\n- entity: Questions asking for names of specific concrete things: objects, organizations, products, films, books, documents, events, tools, scales, instruments, terms, or terminology\n- human: Questions asking for names or identities of specific people, groups of people, martyrs, historical figures, or roles filled by named individuals\n- location: Questions asking for names or information about specific places: cities, countries, buildings, geographical features, or locations\n- numeric: Questions asking for numbers, dates, quantities, amounts, counts, or measurements\n\nCritical decision rules:\n1. \"What is X\" questions: If X is a concrete noun (fear, phobia, thing, requirement, element, scale, term, bet) -> 'entity'. If X asks for explanation of a process or abstract concept -> 'description'\n2. Questions asking \"what does X mean\" or \"what is the meaning of X\" -> 'description', NOT 'abbreviation' (even if X looks like an acronym)\n3. Questions asking what something \"stands for\" in the sense of meaning/symbolism -> 'description', NOT 'abbreviation'\n4. Questions about \"what scale\", \"what term\", \"what is called\" -> 'entity' (asking for a name/label)\n5. Questions listing or naming people (martyrs, famous individuals, group members) -> 'human', NOT 'entity'\n6. Questions about which company/person did/said something -> 'human' if asking for the person, 'entity' if asking for the organization\n7. \"Usenet groups\" or similar collectives are 'entity', unless asking about the people in them\n8. Only classify as 'abbreviation' if literally asking what letters stand for (expansion of acronym)\n\nRespond with exactly one category name from the list above and nothing else."
+ },
+ "cost_usd": 0.332,
+ "task_lm_calls": 700,
+ "reflection_calls": 2
+}

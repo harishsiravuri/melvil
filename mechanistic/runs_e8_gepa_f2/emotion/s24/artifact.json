@@ -1,0 +1,218 @@
+{
+ "schema_version": 1,
+ "artifact_id": "32b9e9d8f31b",
+ "parent_id": null,
+ "task_name": "emotion",
+ "created_at": "2026-07-21T01:51:43-0500",
+ "library": {
+  "name": "melvil",
+  "version": "0.3.0"
+ },
+ "models": {
+  "task": "openrouter/anthropic/claude-haiku-4.5",
+  "reflection": "openrouter/anthropic/claude-sonnet-4.5"
+ },
+ "budget": {
+  "metric_calls_budget": 800,
+  "metric_calls_spent": 860,
+  "cost_usd": 0.266,
+  "task_lm_usage": {
+   "model": "openrouter/anthropic/claude-haiku-4.5",
+   "prompt_tokens": 202988,
+   "completion_tokens": 3383,
+   "calls": 753,
+   "cache_hits": 207,
+   "cost_usd": 0.219903
+  },
+  "reflection_lm_usage": {
+   "model": "openrouter/anthropic/claude-sonnet-4.5",
+   "prompt_tokens": 2878,
+   "completion_tokens": 2499,
+   "calls": 8,
+   "cache_hits": 0,
+   "cost_usd": 0.046119
+  },
+  "opt_seconds": 187.9
+ },
+ "scores": {
+  "dev_accuracy": 0.63,
+  "dev_macro_f1": 0.5493,
+  "per_label_dev": {
+   "anger": {
+    "precision": 0.875,
+    "recall": 0.5385,
+    "f1": 0.6667,
+    "support": 13
+   },
+   "fear": {
+    "precision": 0.7,
+    "recall": 0.5833,
+    "f1": 0.6364,
+    "support": 12
+   },
+   "joy": {
+    "precision": 0.6585,
+    "recall": 0.7941,
+    "f1": 0.72,
+    "support": 34
+   },
+   "love": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "support": 8
+   },
+   "sadness": {
+    "precision": 0.5405,
+    "recall": 0.6897,
+    "f1": 0.6061,
+    "support": 29
+   },
+   "surprise": {
+    "precision": 1.0,
+    "recall": 0.5,
+    "f1": 0.6667,
+    "support": 4
+   }
+  },
+  "seed_dev_accuracy": 0.6,
+  "dev_accuracy_quarantined": null
+ },
+ "config_hash": "6796c198421f",
+ "config": {
+  "task_model": "openrouter/anthropic/claude-haiku-4.5",
+  "reflection_model": "openrouter/anthropic/claude-sonnet-4.5",
+  "budget": "light",
+  "seed": 24,
+  "features": {
+   "codebook": false,
+   "confusion_reflection": false,
+   "hard_example_mining": false
+  },
+  "num_threads": 8,
+  "run_dir": "/Users/harish/Documents/Claude/Projects/6s/labelsmith/mechanistic/runs_e8_gepa_f2/emotion/s24",
+  "task_temperature": 0.0,
+  "task_max_tokens": 40,
+  "reflection_temperature": 1.0,
+  "reflection_max_tokens": 8000,
+  "reflection_minibatch_size": 3,
+  "max_exemplars": 6,
+  "mining_llm_screen": true,
+  "prices": {},
+  "metric_calls": 800
+ },
+ "label_names": [
+  "anger",
+  "fear",
+  "joy",
+  "love",
+  "sadness",
+  "surprise"
+ ],
+ "components": {
+  "instruction": "Classify the given text into one of these categories: anger, fear, joy, love, sadness, surprise.\n\nImportant guidelines:\n- Focus on the overall sentiment and emotional tone of the text, not just isolated negative phrases\n- \"Complacent\" in the context of being satisfied or content should be interpreted positively (joy), not negatively (sadness)\n- Even when text contains some negative elements (like \"big drags\" or \"no room for scrutiny\"), if the overall message expresses contentment, satisfaction, or positive feelings, classify it as \"joy\"\n- Pay attention to phrases like \"I feel very complacent with my experiences\" which indicate satisfaction and contentment, which align with the \"joy\" category\n- Consider the dominant emotion across the entire text rather than focusing on individual negative words or phrases"
+ },
+ "exemplars": [],
+ "confusion": {
+  "labels": [
+   "anger",
+   "fear",
+   "joy",
+   "love",
+   "sadness",
+   "surprise"
+  ],
+  "matrix": [
+   [
+    7,
+    1,
+    1,
+    0,
+    3,
+    0,
+    1
+   ],
+   [
+    0,
+    7,
+    2,
+    0,
+    3,
+    0,
+    0
+   ],
+   [
+    1,
+    0,
+    27,
+    0,
+    6,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    5,
+    0,
+    3,
+    0,
+    0
+   ],
+   [
+    0,
+    2,
+    6,
+    1,
+    20,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    2,
+    2,
+    0
+   ]
+  ],
+  "unparseable_column": true
+ },
+ "curve": [
+  {
+   "metric_calls": 0,
+   "dev_score": 0.6
+  },
+  {
+   "metric_calls": 106,
+   "dev_score": 0.63
+  },
+  {
+   "metric_calls": 212,
+   "dev_score": 0.57
+  },
+  {
+   "metric_calls": 336,
+   "dev_score": 0.62
+  },
+  {
+   "metric_calls": 442,
+   "dev_score": 0.5
+  },
+  {
+   "metric_calls": 548,
+   "dev_score": 0.58
+  },
+  {
+   "metric_calls": 654,
+   "dev_score": 0.62
+  },
+  {
+   "metric_calls": 760,
+   "dev_score": 0.57
+  }
+ ],
+ "notes": ""
+}

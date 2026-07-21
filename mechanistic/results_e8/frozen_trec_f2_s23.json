@@ -1,0 +1,36 @@
+{
+ "experiment": "e8",
+ "phase": "frozen",
+ "task": "trec",
+ "family": "f2",
+ "seed": 23,
+ "arms": {
+  "seed": {
+   "test_accuracy": 0.8267,
+   "test_macro_f1": 0.8307,
+   "unparseable": 0
+  },
+  "x1": {
+   "test_accuracy": 0.8233,
+   "test_macro_f1": 0.8187,
+   "unparseable": 0
+  },
+  "x2": {
+   "test_accuracy": 0.8333,
+   "test_macro_f1": 0.8387,
+   "unparseable": 0
+  }
+ },
+ "dev_accs": {
+  "input_of_x1": 0.69,
+  "input_of_x2": 0.77
+ },
+ "prompts": {
+  "seed": "Classify the given text into one of these categories: abbreviation, description, entity, human, location, numeric.\n\nRespond with exactly one category name from the list above and nothing else.",
+  "x1": "Classify the given text into one of these categories: abbreviation, description, entity, human, location, numeric.\n\nCategory definitions:\n- human: Questions asking for names, identities, or information about specific people (e.g., \"Who is...\", \"What person...\", \"Name the individual...\"). If the question asks about people's names, nicknames, or biographical details, choose human.\n- location: Questions asking for places, geographic locations, cities, countries, buildings, or venues (e.g., \"Where is...\", \"What city...\", \"What country...\"). If asking which place/location, choose location.\n- entity: Questions asking for specific things, objects, products, organizations, works (films, books, songs), concepts, or items that are NOT people or places. This includes movies, insurance products, traditions, ceremonies, and tangible objects.\n- description: Questions asking for explanations, definitions, reasons, processes, or general characteristics (e.g., \"What is...\", \"How does...\", \"Why...\"). If the answer would be an explanation rather than a named thing, choose description.\n- numeric: Questions asking for numbers, quantities, dates, times, percentages, or amounts.\n- abbreviation: Questions asking what an acronym or abbreviation stands for.\n\nDecision rules:\n- If a question asks about people (names, nicknames, biographical info), always choose human over entity.\n- If a question asks about a place/location (museums, countries, cities), always choose location over entity.\n- If a question asks \"What is X?\" where X is a specific named thing (film, product, tradition), choose entity. If asking for a definition or explanation, choose description.\n- Prioritize the question focus: what type of answer is being requested, not just the subject mentioned.\n\nRespond with exactly one category name from the list above and nothing else.",
+  "x2": "Classify the given text into one of these categories: abbreviation, description, entity, human, location, numeric.\n\nCategory definitions:\n- abbreviation: Questions explicitly asking what an acronym, abbreviation, or initialism stands for (e.g., \"What does NASA stand for?\"). Does NOT include questions asking about the meaning or significance of codes/symbols.\n- human: Questions asking for names or information about specific people, including biographical details, identities, or \"who\" questions about individuals.\n- location: Questions asking for places, geographic locations, cities, countries, regions, buildings, or venues.\n- numeric: Questions asking for numbers, quantities, counts, dates, times, percentages, amounts, or rankings. Includes questions about \"how many\" or requesting numerical answers like team records.\n- entity: Questions asking for specific named things: objects, products, organizations, works (films, books, songs), animals (pets, species), groups, concepts, or items that are NOT people or places. Includes proper names of things.\n- description: Questions asking for explanations, definitions, reasons, processes, characteristics, qualities, or general information about categories/concepts. These expect descriptive answers, not just names.\n\nDecision rules:\n1. If asking \"how many\", \"what team won most\", or expecting a number/count as the answer, choose numeric over entity or human.\n2. If asking for the name of a specific thing (pet's name, film title, product name, animal species), choose entity, NOT description.\n3. \"What is X?\" where X is a common noun or concept (e.g., \"What is a fear of...\") \u2192 entity if it's asking to name/identify a specific thing (like a phobia name), otherwise description.\n4. \"What is/are [common noun phrase]?\" (e.g., \"What are the elements in...\") \u2192 if expecting a list of specific named items, choose entity; if expecting explanation, choose description. Lean toward entity for concrete things.\n5. \"What does X mean/indicate?\" \u2192 description (about meaning/significance), NOT abbreviation unless explicitly asking what letters stand for.\n6. Questions about pets, films, or other proper-named non-human things \u2192 entity.\n7. Questions asking which/what specific organization, team, or group \u2192 entity.\n\nRespond with exactly one category name from the list above and nothing else."
+ },
+ "cost_usd": 0.3631,
+ "task_lm_calls": 700,
+ "reflection_calls": 2
+}

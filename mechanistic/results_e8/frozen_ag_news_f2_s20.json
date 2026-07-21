@@ -1,0 +1,36 @@
+{
+ "experiment": "e8",
+ "phase": "frozen",
+ "task": "ag_news",
+ "family": "f2",
+ "seed": 20,
+ "arms": {
+  "seed": {
+   "test_accuracy": 0.8667,
+   "test_macro_f1": 0.8682,
+   "unparseable": 1
+  },
+  "x1": {
+   "test_accuracy": 0.8233,
+   "test_macro_f1": 0.8177,
+   "unparseable": 0
+  },
+  "x2": {
+   "test_accuracy": 0.8567,
+   "test_macro_f1": 0.8544,
+   "unparseable": 0
+  }
+ },
+ "dev_accs": {
+  "input_of_x1": 0.89,
+  "input_of_x2": 0.86
+ },
+ "prompts": {
+  "seed": "Classify the given text into one of these categories: Business, Sci/Tech, Sports, World.\n\nRespond with exactly one category name from the list above and nothing else.",
+  "x1": "Classify the given text into one of these categories: Business, Sci/Tech, Sports, World.\n\nCategory definitions:\n- Business: Corporate news, financial markets, company earnings, economic indicators, business strategy, retail sales, stock performance, and commerce\n- Sci/Tech: Technology products, scientific research, software/hardware developments, IT companies, internet services, computing innovations, and pure science topics\n- Sports: Athletic competitions, games, players, teams, sporting events, and sports industry news\n- World: International affairs, geopolitics, diplomacy, regional conflicts, natural disasters, environmental issues, wildlife/nature stories, and general interest news with geographic focus\n\nDecision rules:\n- If a tech/internet company is discussed primarily for its business performance (earnings, sales, market activity), classify as Business\n- If the main focus is scientific/environmental issues or wildlife rather than business or technology, classify as World\n- Prioritize the article's primary focus over secondary mentions\n- When a company in tech/business is mentioned, ask: Is this about their business results/strategy (Business) or their technology/product (Sci/Tech)?\n\nRespond with exactly one category name from the list above and nothing else.",
+  "x2": "Classify the given text into one of these categories: Business, Sci/Tech, Sports, World.\n\nCategory definitions:\n- Business: Corporate news, financial markets, company earnings, economic indicators, business strategy, retail sales, stock performance, mergers/acquisitions, and commerce\n- Sci/Tech: Technology products, scientific research, software/hardware developments, IT companies, internet services, computing innovations, pure science topics, web services (blogging platforms, online tools), and e-commerce technology platforms\n- Sports: Athletic competitions, games, players, teams, sporting events, sports industry news, and Olympic-related sports news\n- World: International affairs, geopolitics, diplomacy, regional conflicts, natural disasters, environmental issues, wildlife/nature/conservation stories, and general interest news with geographic focus\n\nDecision rules:\n1. E-commerce platforms, online payment services, web logging/blogging services, and internet-based tools are Sci/Tech, NOT Business\n2. Wildlife, conservation, endangered species, and animal/nature stories are World, even if they involve science\n3. Sports events in international settings or involving protests/social issues are still Sports if the primary focus is athletic competition or sporting events\n4. For tech/internet companies: Default to Sci/Tech unless the article is explicitly about financial results (earnings reports, stock prices, market performance)\n5. Shopping cart technology, online payment systems, and web platform features are Sci/Tech topics\n6. Olympic news is Sports when discussing the games, athletes, or sporting aspects\n7. Prioritize the article's primary subject matter over the geographic setting\n\nRespond with exactly one category name from the list above and nothing else."
+ },
+ "cost_usd": 0.3347,
+ "task_lm_calls": 1100,
+ "reflection_calls": 2
+}

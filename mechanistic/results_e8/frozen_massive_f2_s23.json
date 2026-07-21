@@ -1,0 +1,36 @@
+{
+ "experiment": "e8",
+ "phase": "frozen",
+ "task": "massive",
+ "family": "f2",
+ "seed": 23,
+ "arms": {
+  "seed": {
+   "test_accuracy": 0.8333,
+   "test_macro_f1": 0.8564,
+   "unparseable": 1
+  },
+  "x1": {
+   "test_accuracy": 0.8433,
+   "test_macro_f1": 0.8669,
+   "unparseable": 1
+  },
+  "x2": {
+   "test_accuracy": 0.8567,
+   "test_macro_f1": 0.8764,
+   "unparseable": 0
+  }
+ },
+ "dev_accs": {
+  "input_of_x1": 0.8,
+  "input_of_x2": 0.85
+ },
+ "prompts": {
+  "seed": "Classify the given text into one of these categories: alarm_query, alarm_set, calendar_query, calendar_remove, calendar_set, cooking_recipe, datetime_query, email_query, email_sendemail, general_quirky, iot_hue_lightoff, lists_createoradd, lists_query, lists_remove, music_query, news_query, play_audiobook, play_music, play_podcasts, play_radio, qa_currency, qa_definition, qa_factoid, qa_stock, recommendation_events, recommendation_locations, social_post, takeaway_order, transport_query, weather_query.\n\nRespond with exactly one category name from the list above and nothing else.",
+  "x1": "Classify the given text into one of these categories: alarm_query, alarm_set, calendar_query, calendar_remove, calendar_set, cooking_recipe, datetime_query, email_query, email_sendemail, general_quirky, iot_hue_lightoff, lists_createoradd, lists_query, lists_remove, music_query, news_query, play_audiobook, play_music, play_podcasts, play_radio, qa_currency, qa_definition, qa_factoid, qa_stock, recommendation_events, recommendation_locations, social_post, takeaway_order, transport_query, weather_query.\n\nKey distinctions:\n\ncalendar_set vs alarm_set: Use calendar_set for reminders about events, meetings, appointments, or tasks with context (e.g., \"meeting\", \"shopping trip\", \"take off coffee\"). Use alarm_set only for generic time-based alerts without specific event context.\n\nemail_sendemail vs email_query: Use email_sendemail for composing, sending, replying to, or editing emails. Use email_query for checking, reading, or searching existing emails.\n\ngeneral_quirky vs qa_factoid: Use general_quirky for conversational requests about people, open-ended questions, or personalized queries. Use qa_factoid only for direct factual questions with specific answers.\n\ngeneral_quirky vs recommendation_locations: Use recommendation_locations only when explicitly asking for place/location recommendations. Personal opinion questions default to general_quirky.\n\nsocial_post: Posting or sharing content on social media platforms.\n\nplay_audiobook vs play_podcasts vs play_music: Audiobook for books, podcasts for podcast episodes/shows, music for songs/artists/albums.\n\nRespond with exactly one category name from the list above and nothing else.",
+  "x2": "Classify the given text into one of these categories: alarm_query, alarm_set, calendar_query, calendar_remove, calendar_set, cooking_recipe, datetime_query, email_query, email_sendemail, general_quirky, iot_hue_lightoff, lists_createoradd, lists_query, lists_remove, music_query, news_query, play_audiobook, play_music, play_podcasts, play_radio, qa_currency, qa_definition, qa_factoid, qa_stock, recommendation_events, recommendation_locations, social_post, takeaway_order, transport_query, weather_query.\n\nKey definitions and distinctions:\n\nqa_factoid: Questions asking about specific factual information, including questions about people (who someone is, who they're married to, biographical facts). Use this for \"who is X\", \"what is X\", \"where is X\", \"when did X happen\", etc.\n\nqa_definition: Specifically asking for the meaning or definition of a word or term.\n\ngeneral_quirky: Conversational, opinion-based, or open-ended questions WITHOUT factual answers. Not for factual queries about people or events.\n\ncalendar_query: Checking calendar events, appointments, or asking about scheduled items. Includes questions like \"what's on my calendar\", \"whose birthday is in [month]\", \"should I go [somewhere] on [date]\" (checking if calendar allows).\n\ncalendar_set: Creating reminders, appointments, events, or scheduling tasks with specific context.\n\ncalendar_remove: Deleting or canceling calendar events.\n\nalarm_set: Setting generic time-based alerts without specific event context.\n\nalarm_query: Checking existing alarms.\n\nemail_query: Checking, reading, searching, or asking about existing emails. Includes short references like \"[sender] [subject] email\" which implies checking for that email.\n\nemail_sendemail: Composing, sending, replying to, or editing emails. Must indicate action to send/write/reply.\n\nsocial_post: Posting, sharing, or updating content on social media platforms (Facebook, Twitter, Instagram, etc.).\n\nrecommendation_locations: Explicitly requesting recommendations for places, locations, venues, or destinations. Use this even when phrased as opinion questions if asking for location/place recommendations.\n\nrecommendation_events: Requesting recommendations for events, activities, or things to do.\n\nplay_audiobook: Playing books in audio format.\n\nplay_podcasts: Playing podcast episodes or shows.\n\nplay_music: Playing songs, artists, albums, or music.\n\nplay_radio: Playing radio stations.\n\nmusic_query: Asking about music information (song details, artist info, etc.).\n\ncooking_recipe: Requesting recipes or cooking instructions.\n\ndatetime_query: Asking for current time, date, or day.\n\niot_hue_lightoff: Turning off smart lights.\n\nlists_createoradd: Creating lists or adding items to lists.\n\nlists_query: Checking or viewing lists.\n\nlists_remove: Removing items from lists.\n\nnews_query: Requesting news updates or articles.\n\nqa_currency: Currency conversion questions.\n\nqa_stock: Stock market or stock price queries.\n\ntakeaway_order: Ordering food for delivery or takeout.\n\ntransport_query: Asking about transportation, directions, or travel routes.\n\nweather_query: Asking about weather conditions or forecasts.\n\nRespond with exactly one category name from the list above and nothing else."
+ },
+ "cost_usd": 0.4544,
+ "task_lm_calls": 700,
+ "reflection_calls": 2
+}

@@ -1,0 +1,9 @@
+{
+ "experiment": "e8_gepa_baseline",
+ "task": "sst5",
+ "family": "f2",
+ "seed": 24,
+ "test_accuracy": 0.5767,
+ "test_macro_f1": 0.5613,
+ "cost_usd": 0.8742
+}

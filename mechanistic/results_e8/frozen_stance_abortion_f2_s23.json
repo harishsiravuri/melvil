@@ -1,0 +1,36 @@
+{
+ "experiment": "e8",
+ "phase": "frozen",
+ "task": "stance_abortion",
+ "family": "f2",
+ "seed": 23,
+ "arms": {
+  "seed": {
+   "test_accuracy": 0.5286,
+   "test_macro_f1": 0.4689,
+   "unparseable": 0
+  },
+  "x1": {
+   "test_accuracy": 0.6643,
+   "test_macro_f1": 0.6529,
+   "unparseable": 0
+  },
+  "x2": {
+   "test_accuracy": 0.6714,
+   "test_macro_f1": 0.6582,
+   "unparseable": 0
+  }
+ },
+ "dev_accs": {
+  "input_of_x1": 0.52,
+  "input_of_x2": 0.79
+ },
+ "prompts": {
+  "seed": "Classify the given text into one of these categories: against, favor, none.\n\nRespond with exactly one category name from the list above and nothing else.",
+  "x1": "Classify the given text into one of these categories: against, favor, none.\n\nCategory definitions:\n- against: The text opposes abortion rights, supports restricting abortion access, or expresses pro-life views (including religious/moral arguments against abortion, defending fetal rights, or promoting life from conception).\n- favor: The text supports abortion rights, opposes abortion restrictions, or expresses pro-choice views (including defending bodily autonomy, criticizing abortion opponents, or advocating for reproductive freedom).\n- none: The text does not take a clear stance on abortion, is neutral, discusses unrelated political topics, or is ambiguous about abortion policy.\n\nDecision rules:\n- Religious or moral appeals FOR protecting life/fetal rights \u2192 against\n- Statements about being \"pro-life\" or opposing abortion \u2192 against\n- Criticism of pro-choice positions or abortion access \u2192 against\n- Advocacy for women's bodily autonomy or reproductive choice \u2192 favor\n- Criticism of abortion restrictions or pro-life positions \u2192 favor\n- Sarcastic/rhetorical questions criticizing pro-choice views \u2192 against\n- If the text mentions abortion only tangentially without clear advocacy \u2192 none\n- Hashtags like #prolife, #prolifegen indicate against; #prochoice indicates favor\n\nRespond with exactly one category name from the list above and nothing else.",
+  "x2": "Classify the given text into one of these categories: against, favor, none.\n\nCategory definitions:\n- against: The text opposes abortion rights, supports restricting abortion access, or expresses pro-life views (including religious/moral arguments against abortion, defending fetal rights, or promoting life from conception).\n- favor: The text supports abortion rights, opposes abortion restrictions, or expresses pro-choice views (including defending bodily autonomy, criticizing abortion opponents, or advocating for reproductive freedom).\n- none: The text does not take a clear stance on abortion, is neutral, discusses unrelated political topics, or is ambiguous about abortion policy.\n\nDecision rules:\n- Religious or moral appeals FOR protecting life/fetal rights \u2192 against\n- Statements about being \"pro-life\" or opposing abortion \u2192 against\n- Criticism of pro-choice positions or abortion access \u2192 against\n- Advocacy for women's bodily autonomy or reproductive choice \u2192 favor\n- Criticism of abortion restrictions or pro-life positions \u2192 favor\n- Sarcastic/rhetorical questions criticizing pro-choice views \u2192 against\n- If the text mentions abortion only tangentially without clear advocacy \u2192 none\n- Hashtags like #prolife, #prolifegen indicate against; #prochoice, #prochoice indicate favor\n\nCritical disambiguation rules:\n- Philosophical statements about human dignity, human family membership, or moral principles (even without explicit abortion mention) in abortion-related contexts \u2192 against\n- ANY advocacy for \"choice\" or bodily autonomy in pregnancy/abortion context \u2192 favor (even if stated respectfully or briefly)\n- Sarcasm praising abortion or mocking anti-abortion positions \u2192 favor\n- Rhetorical questions challenging anti-abortion consistency (e.g., death penalty comparisons) \u2192 favor\n- Phrases like \"wonderful gift of choice\" or celebrating abortion access \u2192 favor\n- \"#smartlady\" or similar tags praising pro-choice statements \u2192 favor\n- Feminist arguments (#feminism, #YesAllWomen) paired with pro-life language \u2192 against\n- References to Supreme Court rulings celebrating reproductive rights \u2192 favor\n- \"It's not your body/choice\" used to DENY abortion rights \u2192 against\n- \"It's not your body/choice\" used to support personal autonomy \u2192 favor (check context carefully)\n- When unclear, look for: Who is being criticized? If criticizing restrictions/pro-life \u2192 favor. If criticizing abortion/pro-choice \u2192 against.\n\nRespond with exactly one category name from the list above and nothing else."
+ },
+ "cost_usd": 0.3217,
+ "task_lm_calls": 660,
+ "reflection_calls": 2
+}

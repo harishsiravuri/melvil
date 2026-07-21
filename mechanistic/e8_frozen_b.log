@@ -1,0 +1,38 @@
+2026/07/21 01:33:26 WARNING dspy.clients.lm: LM response was truncated due to exceeding max_tokens=40. You can inspect the latest LM interactions with `dspy.inspect_history()`. To avoid truncation, consider passing a larger max_tokens when setting up dspy.LM. You may also consider increasing the temperature (currently 0.0)  if the reason for truncation is repetition.
+2026/07/21 01:35:37 WARNING dspy.clients.lm: LM response was truncated due to exceeding max_tokens=40. You can inspect the latest LM interactions with `dspy.inspect_history()`. To avoid truncation, consider passing a larger max_tokens when setting up dspy.LM. You may also consider increasing the temperature (currently 0.0)  if the reason for truncation is repetition.
+2026/07/21 01:36:49 WARNING dspy.clients.lm: LM response was truncated due to exceeding max_tokens=40. You can inspect the latest LM interactions with `dspy.inspect_history()`. To avoid truncation, consider passing a larger max_tokens when setting up dspy.LM. You may also consider increasing the temperature (currently 0.0)  if the reason for truncation is repetition.
+2026/07/21 01:37:53 WARNING dspy.clients.lm: LM response was truncated due to exceeding max_tokens=40. You can inspect the latest LM interactions with `dspy.inspect_history()`. To avoid truncation, consider passing a larger max_tokens when setting up dspy.LM. You may also consider increasing the temperature (currently 0.0)  if the reason for truncation is repetition.
+2026/07/21 01:45:49 WARNING dspy.clients.lm: LM response was truncated due to exceeding max_tokens=40. You can inspect the latest LM interactions with `dspy.inspect_history()`. To avoid truncation, consider passing a larger max_tokens when setting up dspy.LM. You may also consider increasing the temperature (currently 0.0)  if the reason for truncation is repetition.
+2026/07/21 01:49:10 WARNING dspy.clients.lm: LM response was truncated due to exceeding max_tokens=40. You can inspect the latest LM interactions with `dspy.inspect_history()`. To avoid truncation, consider passing a larger max_tokens when setting up dspy.LM. You may also consider increasing the temperature (currently 0.0)  if the reason for truncation is repetition.
+2026/07/21 01:51:03 WARNING dspy.clients.lm: LM response was truncated due to exceeding max_tokens=40. You can inspect the latest LM interactions with `dspy.inspect_history()`. To avoid truncation, consider passing a larger max_tokens when setting up dspy.LM. You may also consider increasing the temperature (currently 0.0)  if the reason for truncation is repetition.
+[done] frozen_emotion_f1_s20.json: seed: 0.563 | x1: 0.527 | x2: 0.547 ($0.13)
+[done] frozen_emotion_f1_s21.json: seed: 0.563 | x1: 0.517 | x2: 0.553 ($0.11)
+[done] frozen_emotion_f1_s22.json: seed: 0.563 | x1: 0.533 | x2: 0.540 ($0.13)
+[done] frozen_emotion_f1_s23.json: seed: 0.563 | x1: 0.497 | x2: 0.553 ($0.12)
+[done] frozen_emotion_f1_s24.json: seed: 0.563 | x1: 0.540 | x2: 0.540 ($0.15)
+[done] frozen_emotion_f2_s20.json: seed: 0.553 | x1: 0.533 | x2: 0.557 ($0.33)
+[done] frozen_emotion_f2_s21.json: seed: 0.553 | x1: 0.543 | x2: 0.583 ($0.28)
+[done] frozen_emotion_f2_s22.json: seed: 0.553 | x1: 0.550 | x2: 0.573 ($0.30)
+[done] frozen_emotion_f2_s23.json: seed: 0.553 | x1: 0.507 | x2: 0.570 ($0.31)
+[done] frozen_emotion_f2_s24.json: seed: 0.553 | x1: 0.527 | x2: 0.557 ($0.29)
+[done] gepa_emotion_f2_s20.json: 0.543
+[done] gepa_emotion_f2_s21.json: 0.553
+[done] gepa_emotion_f2_s22.json: 0.530
+[done] gepa_emotion_f2_s23.json: 0.520
+[done] gepa_emotion_f2_s24.json: 0.573
+2026/07/21 02:44:02 WARNING dspy.clients.lm: LM response was truncated due to exceeding max_tokens=40. You can inspect the latest LM interactions with `dspy.inspect_history()`. To avoid truncation, consider passing a larger max_tokens when setting up dspy.LM. You may also consider increasing the temperature (currently 0.0)  if the reason for truncation is repetition.
+[done] frozen_trec_f1_s20.json: seed: 0.600 | x1: 0.823 | x2: 0.813 ($0.14)
+[done] frozen_trec_f1_s21.json: seed: 0.600 | x1: 0.823 | x2: 0.880 ($0.13)
+[done] frozen_trec_f1_s22.json: seed: 0.600 | x1: 0.817 | x2: 0.890 ($0.16)
+[done] frozen_trec_f1_s23.json: seed: 0.600 | x1: 0.883 | x2: 0.863 ($0.15)
+[done] frozen_trec_f1_s24.json: seed: 0.600 | x1: 0.770 | x2: 0.813 ($0.15)
+[done] frozen_trec_f2_s20.json: seed: 0.827 | x1: 0.823 | x2: 0.860 ($0.36)
+[done] frozen_trec_f2_s21.json: seed: 0.827 | x1: 0.840 | x2: 0.850 ($0.34)
+[done] frozen_trec_f2_s22.json: seed: 0.827 | x1: 0.817 | x2: 0.847 ($0.33)
+[done] frozen_trec_f2_s23.json: seed: 0.827 | x1: 0.823 | x2: 0.833 ($0.36)
+[done] frozen_trec_f2_s24.json: seed: 0.827 | x1: 0.833 | x2: 0.870 ($0.37)
+[done] gepa_trec_f2_s20.json: 0.883
+[done] gepa_trec_f2_s21.json: 0.843
+[done] gepa_trec_f2_s22.json: 0.910
+[done] gepa_trec_f2_s23.json: 0.883
+[done] gepa_trec_f2_s24.json: 0.883

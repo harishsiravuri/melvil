@@ -1,0 +1,36 @@
+{
+ "experiment": "e8",
+ "phase": "frozen",
+ "task": "emotion",
+ "family": "f2",
+ "seed": 22,
+ "arms": {
+  "seed": {
+   "test_accuracy": 0.5533,
+   "test_macro_f1": 0.4674,
+   "unparseable": 2
+  },
+  "x1": {
+   "test_accuracy": 0.55,
+   "test_macro_f1": 0.4905,
+   "unparseable": 1
+  },
+  "x2": {
+   "test_accuracy": 0.5733,
+   "test_macro_f1": 0.4514,
+   "unparseable": 0
+  }
+ },
+ "dev_accs": {
+  "input_of_x1": 0.6,
+  "input_of_x2": 0.65
+ },
+ "prompts": {
+  "seed": "Classify the given text into one of these categories: anger, fear, joy, love, sadness, surprise.\n\nRespond with exactly one category name from the list above and nothing else.",
+  "x1": "Classify the given text into one of these categories: anger, fear, joy, love, sadness, surprise.\n\nCategory definitions:\n- anger: Frustration, irritation, disgust, jealousy, or hostile feelings toward self or others\n- fear: Anxiety, worry, restlessness, feeling ungrounded, reluctance, or apprehension about future events\n- joy: Happiness, contentment, satisfaction, or positive feelings about present circumstances\n- love: Affection, caring for others, warmth, nostalgia for loved ones, or romantic feelings\n- sadness: Grief, disappointment, loss, or wishing things were different than they are\n- surprise: Shock, unexpectedness, or astonishment\n\nDecision rules:\n- Distinguish fear (anxious, restless, ungrounded, worried) from sadness (disappointed, grieving, wishing for change)\n- Distinguish joy (happy about current state) from sadness (unhappy, wishing circumstances were different)\n- Distinguish love (caring, affection, warmth toward others) from joy (general happiness)\n- Disgust with self, jealousy, and self-directed hostility indicate anger, not sadness\n- Nostalgia or warmth about loved ones indicates love, not joy\n- Romantic context with caring/warmth indicates love, not joy\n\nRespond with exactly one category name from the list above and nothing else.",
+  "x2": "Classify the given text into one of these categories: anger, fear, joy, love, sadness, surprise.\n\nCategory definitions:\n- anger: Frustration, irritation, disgust, jealousy, or hostile feelings toward self or others\n- fear: Anxiety, worry, restlessness, feeling ungrounded, reluctance, or apprehension about future events\n- joy: Happiness, contentment, satisfaction, or positive feelings about present circumstances\n- love: Affection, caring for others, warmth, nostalgia for loved ones, or romantic feelings\n- sadness: Grief, disappointment, loss, loneliness, feeling defeated, worthless, ashamed, or wishing things were different than they are\n- surprise: Shock, unexpectedness, or astonishment at new information or events\n\nDecision rules:\n- Negative feelings about hypothetical/future social situations (awkwardness, anticipated shame) are sadness, not fear\n- Fear is about future threats or danger; sadness is about current negative self-perception or circumstances\n- Mixed emotions with \"despite\" or \"but\" should focus on the primary negative emotion expressed\n- Feeling \"troubled\", \"defeated\", \"worthless\", \"dumb\", \"whiney\", or \"ashamed\" indicates sadness\n- Statements about what someone \"supposed to feel\" or wishes they felt indicate sadness about unmet expectations\n- Exhaustion from emotional distress indicates sadness, not fear\n- Negated positive words (e.g., \"don't feel gloomy\") still indicate the underlying negative emotion (sadness)\n- Romantic rejection or unfulfilled love indicates sadness, not joy or love\n- If multiple emotions present, classify based on the dominant or concluding sentiment\n- Surprise requires explicit indication of unexpectedness or shock, not just negative feelings\n\nRespond with exactly one category name from the list above and nothing else."
+ },
+ "cost_usd": 0.3033,
+ "task_lm_calls": 700,
+ "reflection_calls": 2
+}

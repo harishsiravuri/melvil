@@ -1,0 +1,158 @@
+{
+ "schema_version": 1,
+ "artifact_id": "0ef8f066fa51",
+ "parent_id": null,
+ "task_name": "stance_abortion",
+ "created_at": "2026-07-21T01:42:04-0500",
+ "library": {
+  "name": "melvil",
+  "version": "0.3.0"
+ },
+ "models": {
+  "task": "openrouter/anthropic/claude-haiku-4.5",
+  "reflection": "openrouter/anthropic/claude-sonnet-4.5"
+ },
+ "budget": {
+  "metric_calls_budget": 800,
+  "metric_calls_spent": 887,
+  "cost_usd": 0.532,
+  "task_lm_usage": {
+   "model": "openrouter/anthropic/claude-haiku-4.5",
+   "prompt_tokens": 425495,
+   "completion_tokens": 3128,
+   "calls": 782,
+   "cache_hits": 205,
+   "cost_usd": 0.441135
+  },
+  "reflection_lm_usage": {
+   "model": "openrouter/anthropic/claude-sonnet-4.5",
+   "prompt_tokens": 5293,
+   "completion_tokens": 4999,
+   "calls": 11,
+   "cache_hits": 0,
+   "cost_usd": 0.090864
+  },
+  "opt_seconds": 224.9
+ },
+ "scores": {
+  "dev_accuracy": 0.84,
+  "dev_macro_f1": 0.8302,
+  "per_label_dev": {
+   "against": {
+    "precision": 0.9149,
+    "recall": 0.7963,
+    "f1": 0.8515,
+    "support": 54
+   },
+   "favor": {
+    "precision": 0.6957,
+    "recall": 0.8421,
+    "f1": 0.7619,
+    "support": 19
+   },
+   "none": {
+    "precision": 0.8333,
+    "recall": 0.9259,
+    "f1": 0.8772,
+    "support": 27
+   }
+  },
+  "seed_dev_accuracy": 0.52,
+  "dev_accuracy_quarantined": null
+ },
+ "config_hash": "9f89a7f45744",
+ "config": {
+  "task_model": "openrouter/anthropic/claude-haiku-4.5",
+  "reflection_model": "openrouter/anthropic/claude-sonnet-4.5",
+  "budget": "light",
+  "seed": 21,
+  "features": {
+   "codebook": false,
+   "confusion_reflection": false,
+   "hard_example_mining": false
+  },
+  "num_threads": 8,
+  "run_dir": "/Users/harish/Documents/Claude/Projects/6s/labelsmith/mechanistic/runs_e8_gepa_f2/stance_abortion/s21",
+  "task_temperature": 0.0,
+  "task_max_tokens": 40,
+  "reflection_temperature": 1.0,
+  "reflection_max_tokens": 8000,
+  "reflection_minibatch_size": 3,
+  "max_exemplars": 6,
+  "mining_llm_screen": true,
+  "prices": {},
+  "metric_calls": 800
+ },
+ "label_names": [
+  "against",
+  "favor",
+  "none"
+ ],
+ "components": {
+  "instruction": "Classify the given text into one of these categories: against, favor, none.\n\nThe task is to classify texts related to abortion and reproductive rights positions.\n\nInstructions:\n- \"favor\" means the text explicitly supports pro-choice positions, abortion rights, or organizations like Planned Parenthood\n- \"against\" means the text explicitly opposes abortion, supports pro-life positions, or criticizes pro-choice advocates/organizations\n- \"none\" means the text does not clearly take a position on abortion or reproductive rights\n\nImportant distinctions:\n- Texts that discuss the \"evolution of killing the defenseless\" are anti-abortion statements (classify as \"against\")\n- Texts that frame abortion or contraception as \"forcing women to change their body's normal function\" or as \"controlling women\" from an anti-abortion perspective should be classified as \"against\"\n- Texts that describe historical pro-choice figures like Margaret Sanger as \"Evil\" or criticize abortion even conditionally (e.g., \"Even if you're pro-#Abortion\") should be classified as \"against\"\n- The #SemST hashtag appears to be associated with a semantic evaluation dataset and does not indicate stance by itself\n- Look for implicit anti-abortion framing such as:\n  - References to \"killing\" or \"the defenseless\" in relation to abortion\n  - Criticism of bodily autonomy arguments from a pro-life perspective\n  - Negative characterizations of pro-choice historical figures or advocates\n- Even subtle or indirect expressions of anti-abortion sentiment should be classified as \"against\" if the opposition is clear from context\n\nCritical: Pay special attention to sarcasm and irony in pro-choice arguments:\n- Texts that use SARCASM or IRONY to highlight perceived inconsistencies in pro-life positions should be classified as \"favor\"\n- Example: \"Govt cannot force you to get chemo but if you're a fetus, you must live!\" is a PRO-CHOICE statement that sarcastically criticizes the inconsistency of opposing government mandates for medical treatment while supporting forced pregnancy. This should be classified as \"favor\"\n- Hashtags like #reproductiverights are typically associated with pro-choice advocacy and can help identify the stance\n- When a text appears to criticize government forcing medical decisions in one context but forcing pregnancy in another, it is likely a pro-choice argument pointing out hypocrisy (classify as \"favor\")\n- Look for rhetorical devices that point out contradictions in pro-life logic as indicators of pro-choice stance\n\nCritical: Recognize coded anti-abortion language and religious signaling:\n- The hashtag #Christian when combined with confrontational language (e.g., \"We are strong\", \"We will overcome\") in the context of abortion debates is a strong indicator of pro-life/anti-abortion stance\n- Phrases like \"We are strong\" and \"#WeWillOvercome\" used by Christians in abortion-related discussions typically signal anti-abortion activism and opposition to abortion rights\n- Religious identity markers (#Christian) combined with militant or victory-oriented language should be interpreted as anti-abortion signals (classify as \"against\")\n- Even when abortion is not explicitly mentioned, if the text uses religious hashtags with confrontational language in a dataset about abortion (#SemST), it should be classified as \"against\"\n- Anti-abortion advocates often frame their position as a moral/religious battle, using language of strength, overcoming, and Christian identity\n\nCritical: Recognize religious pro-natalist and pro-life coded language:\n- Statements about children being a \"blessing from God\" or similar religious pro-natalist language should be classified as \"against\" when appearing in abortion-related contexts (#SemST dataset)\n- Quotes from religious authorities (Pope, religious leaders) emphasizing children as blessings, gifts from God, or divine bestowments are implicit anti-abortion statements\n- Example: \"Children are the greatest blessing which God has bestowed on man and woman\" - Pope Francis is an anti-abortion statement (classify as \"against\")\n- Religious pro-natalist rhetoric serves to frame childbearing as a divine mandate and implicitly opposes abortion by emphasizing the sacred nature of children\n- These statements may not mention abortion directly but function as coded anti-abortion messaging by promoting religious values that oppose reproductive choice\n\nContext matters:\n- If a text appears in an abortion-related dataset (#SemST) and contains religious or ideological signals without explicit mention of abortion, consider the implicit stance based on common rhetorical patterns in the abortion debate\n- Christian identity combined with battle/victory language in abortion contexts = anti-abortion stance\n- Religious pro-natalist statements (children as divine blessings) in abortion contexts = anti-abortion stance\n- Religious authority figures quoted on the sanctity of children/childbearing = anti-abortion stance"
+ },
+ "exemplars": [],
+ "confusion": {
+  "labels": [
+   "against",
+   "favor",
+   "none"
+  ],
+  "matrix": [
+   [
+    43,
+    7,
+    4,
+    0
+   ],
+   [
+    2,
+    16,
+    1,
+    0
+   ],
+   [
+    2,
+    0,
+    25,
+    0
+   ]
+  ],
+  "unparseable_column": true
+ },
+ "curve": [
+  {
+   "metric_calls": 0,
+   "dev_score": 0.52
+  },
+  {
+   "metric_calls": 106,
+   "dev_score": 0.27
+  },
+  {
+   "metric_calls": 224,
+   "dev_score": 0.78
+  },
+  {
+   "metric_calls": 336,
+   "dev_score": 0.78
+  },
+  {
+   "metric_calls": 442,
+   "dev_score": 0.48
+  },
+  {
+   "metric_calls": 548,
+   "dev_score": 0.82
+  },
+  {
+   "metric_calls": 657,
+   "dev_score": 0.81
+  },
+  {
+   "metric_calls": 787,
+   "dev_score": 0.84
+  }
+ ],
+ "notes": ""
+}

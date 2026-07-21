@@ -1,0 +1,36 @@
+{
+ "experiment": "e8",
+ "phase": "frozen",
+ "task": "massive",
+ "family": "f2",
+ "seed": 21,
+ "arms": {
+  "seed": {
+   "test_accuracy": 0.8333,
+   "test_macro_f1": 0.8564,
+   "unparseable": 1
+  },
+  "x1": {
+   "test_accuracy": 0.84,
+   "test_macro_f1": 0.8398,
+   "unparseable": 0
+  },
+  "x2": {
+   "test_accuracy": 0.8333,
+   "test_macro_f1": 0.8399,
+   "unparseable": 1
+  }
+ },
+ "dev_accs": {
+  "input_of_x1": 0.8,
+  "input_of_x2": 0.88
+ },
+ "prompts": {
+  "seed": "Classify the given text into one of these categories: alarm_query, alarm_set, calendar_query, calendar_remove, calendar_set, cooking_recipe, datetime_query, email_query, email_sendemail, general_quirky, iot_hue_lightoff, lists_createoradd, lists_query, lists_remove, music_query, news_query, play_audiobook, play_music, play_podcasts, play_radio, qa_currency, qa_definition, qa_factoid, qa_stock, recommendation_events, recommendation_locations, social_post, takeaway_order, transport_query, weather_query.\n\nRespond with exactly one category name from the list above and nothing else.",
+  "x1": "Classify the given text into one of these categories: alarm_query, alarm_set, calendar_query, calendar_remove, calendar_set, cooking_recipe, datetime_query, email_query, email_sendemail, general_quirky, iot_hue_lightoff, lists_createoradd, lists_query, lists_remove, music_query, news_query, play_audiobook, play_music, play_podcasts, play_radio, qa_currency, qa_definition, qa_factoid, qa_stock, recommendation_events, recommendation_locations, social_post, takeaway_order, transport_query, weather_query.\n\nKey distinctions:\n- calendar_set: setting reminders or scheduling events (meetings, appointments, activities). Use this for \"remind me\" phrases about future events or tasks.\n- alarm_set: setting alarms or timers for waking up, time-based alerts, or short-duration countdowns without specific event context.\n- social_post: posting, tweeting, or sharing content on social media platforms.\n- general_quirky: conversational queries about people, entertainment, opinions, or open-ended questions that don't fit other categories. Includes celebrity information requests.\n- email_sendemail: composing, sending, replying to, or editing emails. Actions that create or modify outgoing email content.\n- email_query: checking, reading, or searching for received emails.\n- play_audiobook: specifically requesting audiobooks.\n- play_podcasts: specifically requesting podcasts.\n- play_music: playing songs, artists, albums, playlists, or music genres.\n- qa_factoid: factual questions with specific answers (who, what, when, where questions about facts).\n- recommendation_locations: asking for recommendations about places to visit or activities at locations.\n- recommendation_events: asking for recommendations about events, shows, or things to do/attend.\n\nDecision rules:\n- \"Remind me\" about meetings, events, or scheduled activities \u2192 calendar_set (not alarm_set)\n- Questions about celebrities, people, or entertainment \u2192 general_quirky (not qa_factoid)\n- \"Reply to\" or \"edit\" email \u2192 email_sendemail (not email_query)\n- Requests for place/location recommendations \u2192 recommendation_locations (not general_quirky)\n\nRespond with exactly one category name from the list above and nothing else.",
+  "x2": "Classify the given text into one of these categories: alarm_query, alarm_set, calendar_query, calendar_remove, calendar_set, cooking_recipe, datetime_query, email_query, email_sendemail, general_quirky, iot_hue_lightoff, lists_createoradd, lists_query, lists_remove, music_query, news_query, play_audiobook, play_music, play_podcasts, play_radio, qa_currency, qa_definition, qa_factoid, qa_stock, recommendation_events, recommendation_locations, social_post, takeaway_order, transport_query, weather_query.\n\nKey distinctions:\n- alarm_set: setting alarms or timers for waking up, time-based alerts, or short-duration countdowns without specific event context.\n- calendar_set: setting reminders or scheduling events (meetings, appointments, activities). Use this for \"remind me\" phrases about future events or tasks.\n- calendar_query: checking or asking about scheduled events, appointments, or calendar entries.\n- social_post: posting, tweeting, sharing content on social media, or describing content/issues for public platforms (e.g., \"consumer desk\", \"mixed or fake products in market\").\n- email_sendemail: composing, sending, replying to, or editing emails. Actions that create or modify outgoing email content.\n- email_query: checking, reading, or searching for received emails.\n- play_audiobook: specifically requesting audiobooks.\n- play_podcasts: specifically requesting podcasts.\n- play_music: playing songs, artists, albums, playlists, or music genres.\n- qa_factoid: factual questions with specific, verifiable answers. Includes questions about people (who someone is married to, biographical facts about actors/celebrities), events, historical facts.\n- qa_definition: asking what something is, how something looks, what something means, or requesting explanations/descriptions of concepts, objects, animals, or places.\n- qa_currency: currency conversion questions.\n- qa_stock: stock price or market information queries.\n- general_quirky: conversational queries, opinions, entertainment preferences, open-ended questions without specific factual answers.\n- recommendation_locations: asking for recommendations about specific places to visit, businesses, or venues.\n- recommendation_events: asking for recommendations about events, shows, concerts, or things to do/attend.\n\nDecision rules:\n- Questions about who people are, who they're married to, biographical facts about actors/celebrities \u2192 qa_factoid (not general_quirky)\n- Questions asking \"how does X look\" or \"what is X\" (definitions/descriptions) \u2192 qa_definition (not general_quirky)\n- Social media content or public issue descriptions (even brief phrases) \u2192 social_post (not general_quirky)\n- Questions asking for the best/nicest specific location or trail \u2192 recommendation_locations (not general_quirky)\n- \"Remind me\" about meetings, events, or scheduled activities \u2192 calendar_set (not alarm_set)\n- \"Reply to\" or \"edit\" email \u2192 email_sendemail (not email_query)\n\nRespond with exactly one category name from the list above and nothing else."
+ },
+ "cost_usd": 0.4922,
+ "task_lm_calls": 700,
+ "reflection_calls": 2
+}

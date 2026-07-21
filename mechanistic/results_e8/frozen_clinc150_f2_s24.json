@@ -1,0 +1,36 @@
+{
+ "experiment": "e8",
+ "phase": "frozen",
+ "task": "clinc150",
+ "family": "f2",
+ "seed": 24,
+ "arms": {
+  "seed": {
+   "test_accuracy": 0.98,
+   "test_macro_f1": 0.9814,
+   "unparseable": 1
+  },
+  "x1": {
+   "test_accuracy": 0.9833,
+   "test_macro_f1": 0.9848,
+   "unparseable": 1
+  },
+  "x2": {
+   "test_accuracy": 0.98,
+   "test_macro_f1": 0.9814,
+   "unparseable": 1
+  }
+ },
+ "dev_accs": {
+  "input_of_x1": 0.96,
+  "input_of_x2": 1.0
+ },
+ "prompts": {
+  "seed": "Classify the given text into one of these categories: alarm, apr, balance, book_flight, book_hotel, calculator, calories, car_rental, cook_time, credit_limit, credit_score, definition, direct_deposit, freeze_account, lost_luggage, meeting_schedule, pay_bill, payday, pto_request, recipe, report_fraud, report_lost_card, restaurant_reservation, restaurant_reviews, rewards_balance, taxes, timer, transfer, travel_suggestion, weather.\n\nRespond with exactly one category name from the list above and nothing else.",
+  "x1": "Classify the given text into one of these categories: alarm, apr, balance, book_flight, book_hotel, calculator, calories, car_rental, cook_time, credit_limit, credit_score, definition, direct_deposit, freeze_account, lost_luggage, meeting_schedule, pay_bill, payday, pto_request, recipe, report_fraud, report_lost_card, restaurant_reservation, restaurant_reviews, rewards_balance, taxes, timer, transfer, travel_suggestion, weather.\n\nKey distinctions:\n- pto_request: requesting time off from work (vacation requests, leave requests)\n- travel_suggestion: asking for travel destination ideas or recommendations (NOT requesting time off)\n- payday: asking when the user gets paid or about their pay schedule\n- direct_deposit: setting up or managing automatic salary deposits (employer paying employees)\n- book_hotel: searching for or booking a hotel room (focus on accommodation booking)\n- restaurant_reviews: reading reviews about restaurants (NOT hotels)\n- pay_bill: paying bills or debts owed by the user\n- direct_deposit: receiving salary payments from an employer\n\nWhen text mentions \"vacation\" in the context of requesting time off work, classify as pto_request.\nWhen text mentions salary deposits or when paychecks arrive, classify as payday (unless it's about employer systems paying employees, which is direct_deposit).\nWhen text is about finding hotels with reviews, focus on the primary intent (booking) and classify as book_hotel.\nWhen text is about employer payment systems or paying employees, classify as direct_deposit.\n\nRespond with exactly one category name from the list above and nothing else.",
+  "x2": "Classify the given text into one of these categories: alarm, apr, balance, book_flight, book_hotel, calculator, calories, car_rental, cook_time, credit_limit, credit_score, definition, direct_deposit, freeze_account, lost_luggage, meeting_schedule, pay_bill, payday, pto_request, recipe, report_fraud, report_lost_card, restaurant_reservation, restaurant_reviews, rewards_balance, taxes, timer, transfer, travel_suggestion, weather.\n\nRespond with exactly one category name from the list above and nothing else."
+ },
+ "cost_usd": 0.1796,
+ "task_lm_calls": 400,
+ "reflection_calls": 2
+}

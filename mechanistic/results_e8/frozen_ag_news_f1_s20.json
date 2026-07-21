@@ -1,0 +1,36 @@
+{
+ "experiment": "e8",
+ "phase": "frozen",
+ "task": "ag_news",
+ "family": "f1",
+ "seed": 20,
+ "arms": {
+  "seed": {
+   "test_accuracy": 0.83,
+   "test_macro_f1": 0.8233,
+   "unparseable": 0
+  },
+  "x1": {
+   "test_accuracy": 0.8367,
+   "test_macro_f1": 0.8315,
+   "unparseable": 0
+  },
+  "x2": {
+   "test_accuracy": 0.84,
+   "test_macro_f1": 0.835,
+   "unparseable": 0
+  }
+ },
+ "dev_accs": {
+  "input_of_x1": 0.84,
+  "input_of_x2": 0.9
+ },
+ "prompts": {
+  "seed": "Classify the given text into one of these categories: Business, Sci/Tech, Sports, World.\n\nRespond with exactly one category name from the list above and nothing else.",
+  "x1": "Classify the given text into one of these categories: Business, Sci/Tech, Sports, World.\n\nDefinitions and decision rules:\n- Business: News about companies, markets, finance, trade, the economy, or business operations. Includes e-commerce, financial services, and business strategies.\n- Sci/Tech: News primarily focused on scientific discoveries, research, technology products or services, internet disruptions, gadgets, electronic advancements, health/medicine research, the environment, or space. If technology or science is central to the topic\u2014even in a business context\u2014prefer Sci/Tech over Business.\n- Sports: News about athletic events, teams, competitions, results, sports figures, or sports business (e.g., team purchases). If an activity centers around sporting competition or organizations, choose Sports even if there are business aspects.\n- World: News about international affairs, countries, wars, disasters, environment as a geopolitical or societal issue (not scientific), politics, global conflicts, or general world events not specific to business, science/tech, or sports.\n\nTie-breakers:\n- If the text is ambiguous between Sci/Tech and Business, and scientific/technological aspects are central, choose Sci/Tech.\n- For environmental topics: if scientific research or species are the focus, choose Sci/Tech. If it's about national/global impact or policy, choose World.\n- If coverage overlaps World and another category (e.g., Sci/Tech or Business), prefer the specific non-World category if it fits.\n\nRespond with exactly one category name from the list above and nothing else.",
+  "x2": "Classify the given text into one of these categories: Business, Sci/Tech, Sports, World.\n\nCategory definitions and decision rules:\n\n- Business: News about companies, markets, finance, commerce, business operations, business strategies, and the economy. Includes e-commerce, financial services, and any story focused on industry practices or business impacts, unless science or technology is the primary focus.\n\n- Sci/Tech: News primarily about scientific research, discoveries, health/medicine research, technology products or services, software, internet/infrastructure disruptions, gadgets, electronic advancements, or the environment as a scientific or research topic (such as species, habitats, or climate findings). Choose Sci/Tech when the article is centrally about technical problems, technical solutions, new technology deployment, or scientific work\u2014even if it affects businesses or consumers. \n  - For technology malfunctions, outages, or technical company updates (e.g., payment platform outages, launch of technical products/services), prefer Sci/Tech unless the story only concerns financial/business impact.\n  - For topics about animals or the environment: pick Sci/Tech if the emphasis is on biological, ecological, or scientific detail.\n\n- Sports: News about athletic events, competitions, results, teams, athletes, sports business deals (team purchases, sponsorships), or organizational issues directly related to sporting activity. If the core is sporting competition/organization\u2014even if there is business/political conflict\u2014choose Sports.\n\n- World: News focused primarily on international affairs, wars, disasters, national/international politics, policy, environment as a social or geopolitical issue, global incidents, or broad world events not specifically about business, science/tech, or sports. \n  - For protests or conflict at sporting events, or political implications surrounding sports, choose Sports if the story is fundamentally about sporting organizations or competition.\n\nTie-breakers and clarifications:\n- If a news item plausibly fits both Business and Sci/Tech and technical/scientific aspects are central (e.g., discussing new technical features, outages, or scientific research), choose Sci/Tech.\n- For internet outages, platform disruptions, or technical failures affecting business functions, prefer Sci/Tech unless the focus is entirely on business/financial loss.\n- If coverage plausibly fits both World and another category (Business, Sci/Tech, or Sports), pick the specific non-World category if it applies.\n- For animal/environment stories: pick Sci/Tech for research, species, or scientific description; pick World for societal, political, or disaster coverage.\n- For cases involving public disorder or violence tied to a sports event, choose Sports if rooted in the sporting context.\n\nRespond with exactly one category name from the list above and nothing else."
+ },
+ "cost_usd": 0.1451,
+ "task_lm_calls": 700,
+ "reflection_calls": 2
+}

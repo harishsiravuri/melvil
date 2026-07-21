@@ -1,0 +1,36 @@
+{
+ "experiment": "e8",
+ "phase": "frozen",
+ "task": "ag_news",
+ "family": "f1",
+ "seed": 22,
+ "arms": {
+  "seed": {
+   "test_accuracy": 0.83,
+   "test_macro_f1": 0.8233,
+   "unparseable": 0
+  },
+  "x1": {
+   "test_accuracy": 0.8267,
+   "test_macro_f1": 0.8191,
+   "unparseable": 0
+  },
+  "x2": {
+   "test_accuracy": 0.83,
+   "test_macro_f1": 0.8219,
+   "unparseable": 0
+  }
+ },
+ "dev_accs": {
+  "input_of_x1": 0.84,
+  "input_of_x2": 0.85
+ },
+ "prompts": {
+  "seed": "Classify the given text into one of these categories: Business, Sci/Tech, Sports, World.\n\nRespond with exactly one category name from the list above and nothing else.",
+  "x1": "Classify the given text into one of these categories: Business, Sci/Tech, Sports, World.\n\nDefinitions and rules:\n- Business: News primarily about the economy, finance, companies, markets, commerce, corporate actions, or business operations. Technology is Business only if the main emphasis is on commerce, sales, or company news (e.g., mergers, profits, business strategies), not the technical features or impacts.\n- Sci/Tech: News primarily about science, technology, research, electronics, discoveries, the environment, or scientific/technical events. Technology company news belongs here ONLY if focused on technical issues, products, innovations, or scientific impacts; otherwise, classify as Business. Classify major topics involving the internet, devices, nature, species, or environmental science as Sci/Tech if not focused on commerce or politics.\n- Sports: News focused on sporting events, competitions, athletes, teams, leagues, or sporting business when directly tied to outcomes, matches, or competitions. Sports industry news, if not about gameplay or competitions, should default to Business.\n- World: News about international affairs, global issues, politics (unless strictly sports/business/science related), diplomacy, disasters, crime, society, or events in countries/regions. Environmental crises, crime, or protests are World unless the main focus is scientific/technical.\n\nIf a text could fit multiple categories, choose the most specific applicable: Sci/Tech > Sports > Business > World.\n\nRespond with exactly one category name from the list above and nothing else.",
+  "x2": "Classify the given text into one of these categories: Business, Sci/Tech, Sports, World.\n\nDefinitions and rules:\n- Business: News primarily about the economy, finance, companies, markets, commerce, corporate actions, or business operations. Product sales, consumer behavior, and technical problems impacting financial or commercial outcomes (shopping, e-commerce, sales trends, tech outages with business impact) are Business unless the main focus is scientific or technical innovation.\n- Sci/Tech: News mainly about science, scientific research, technology, the environment, new discoveries, inventions, or technical features. This includes technology or internet news focused on products, new features, technical matters, or scientific/environmental impacts\u2014even if companies or commerce are incidentally involved. Environmental or species news is Sci/Tech UNLESS the main focus is illegal activity, societal impact, or disaster (then World). Prefer Sci/Tech whenever the main emphasis is technical, innovative, or scientific (including device prices, technical malfunctions, or infrastructure disruptions like cable breaks), even if related to companies or commercial platforms.\n- Sports: News focused on sporting events, teams, athletes, competitions, matches, or direct consequences of sport competitions. If the news is about sports business (team sales, deals, sponsorships), classify as Sports if directly about teams, league structures, or competitions; otherwise, use Business.\n- World: News about international affairs, global issues, crime, politics, protests, diplomacy, disasters, societal trends, or events in countries/regions. Environmental crises, crimes against species, or major technical/communication disruptions should be World ONLY if the main emphasis is on the societal, criminal, or disaster aspect\u2014not the technical or scientific. Protests or political events about sports, science, or tech belong here unless the reporting focuses primarily on sport or scientific/technical issues.\n\nDECISION RULE: If there is ambiguity between Business and Sci/Tech, or between World and Sci/Tech, prefer Sci/Tech if technical or scientific aspects are prominent. Between Sports and Business, prefer Sports if concerning a team, athlete, league, or sporting event.\n\nRespond with exactly one category name from the list above and nothing else."
+ },
+ "cost_usd": 0.1303,
+ "task_lm_calls": 700,
+ "reflection_calls": 2
+}

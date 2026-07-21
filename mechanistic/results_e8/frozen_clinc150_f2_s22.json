@@ -1,0 +1,36 @@
+{
+ "experiment": "e8",
+ "phase": "frozen",
+ "task": "clinc150",
+ "family": "f2",
+ "seed": 22,
+ "arms": {
+  "seed": {
+   "test_accuracy": 0.98,
+   "test_macro_f1": 0.9814,
+   "unparseable": 1
+  },
+  "x1": {
+   "test_accuracy": 0.9867,
+   "test_macro_f1": 0.9882,
+   "unparseable": 1
+  },
+  "x2": {
+   "test_accuracy": 0.9867,
+   "test_macro_f1": 0.9882,
+   "unparseable": 1
+  }
+ },
+ "dev_accs": {
+  "input_of_x1": 0.96,
+  "input_of_x2": 0.98
+ },
+ "prompts": {
+  "seed": "Classify the given text into one of these categories: alarm, apr, balance, book_flight, book_hotel, calculator, calories, car_rental, cook_time, credit_limit, credit_score, definition, direct_deposit, freeze_account, lost_luggage, meeting_schedule, pay_bill, payday, pto_request, recipe, report_fraud, report_lost_card, restaurant_reservation, restaurant_reviews, rewards_balance, taxes, timer, transfer, travel_suggestion, weather.\n\nRespond with exactly one category name from the list above and nothing else.",
+  "x1": "Classify the given text into one of these categories: alarm, apr, balance, book_flight, book_hotel, calculator, calories, car_rental, cook_time, credit_limit, credit_score, definition, direct_deposit, freeze_account, lost_luggage, meeting_schedule, pay_bill, payday, pto_request, recipe, report_fraud, report_lost_card, restaurant_reservation, restaurant_reviews, rewards_balance, taxes, timer, transfer, travel_suggestion, weather.\n\nKey distinctions:\n- pto_request: requesting time off from work or vacation days (not travel planning itself)\n- travel_suggestion: seeking travel destination ideas or recommendations (not requesting time off)\n- direct_deposit: setting up or managing automated salary/payment deposits into accounts\n- payday: asking about salary payment timing, dates, or when payment was/will be received\n- pay_bill: paying bills or managing bill payments owed to others\n- book_hotel: searching for or booking hotel accommodations (even if reviews are mentioned as criteria)\n- restaurant_reviews: specifically seeking opinions or ratings about restaurants\n\nDecision rules:\n- If text is about requesting vacation/leave from work, classify as pto_request (not travel_suggestion)\n- If text asks when salary was/will be paid or deposited, classify as payday (not direct_deposit)\n- If text mentions setting up payment to employees or deposit automation, classify as direct_deposit\n- If text mentions finding/booking hotels even with review criteria, classify as book_hotel (not restaurant_reviews)\n\nRespond with exactly one category name from the list above and nothing else.",
+  "x2": "Classify the given text into one of these categories: alarm, apr, balance, book_flight, book_hotel, calculator, calories, car_rental, cook_time, credit_limit, credit_score, definition, direct_deposit, freeze_account, lost_luggage, meeting_schedule, pay_bill, payday, pto_request, recipe, report_fraud, report_lost_card, restaurant_reservation, restaurant_reviews, rewards_balance, taxes, timer, transfer, travel_suggestion, weather.\n\nKey distinctions:\n- pto_request: requesting time off from work, vacation days, or leave (including expressing desire to take vacation)\n- travel_suggestion: seeking travel destination ideas or recommendations for where to go\n- direct_deposit: setting up or managing automated salary/payment deposits into accounts\n- payday: asking about salary payment timing, dates, or when payment was/will be received\n- pay_bill: paying bills or managing bill payments owed to others\n- book_hotel: searching for or booking hotel accommodations (even if reviews are mentioned as criteria)\n- restaurant_reviews: specifically seeking opinions or ratings about restaurants\n- lost_luggage: reporting missing or lost baggage from flights or travel\n- report_lost_card: reporting a lost, stolen, or missing credit/debit card\n\nDecision rules:\n- If text is about wanting/requesting vacation or time off work (even just expressing the desire), classify as pto_request (not travel_suggestion)\n- If text asks when salary was/will be paid or deposited, classify as payday (not direct_deposit)\n- If text mentions setting up payment to employees or deposit automation, classify as direct_deposit\n- If text mentions finding/booking hotels even with review criteria, classify as book_hotel (not restaurant_reviews)\n- If text is about missing/lost luggage or baggage from travel, classify as lost_luggage (not report_lost_card)\n- If text is about a lost/stolen/missing credit or debit card, classify as report_lost_card (not lost_luggage)\n\nRespond with exactly one category name from the list above and nothing else."
+ },
+ "cost_usd": 0.3375,
+ "task_lm_calls": 700,
+ "reflection_calls": 2
+}

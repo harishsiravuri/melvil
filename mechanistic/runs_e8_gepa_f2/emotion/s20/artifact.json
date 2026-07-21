@@ -1,0 +1,218 @@
+{
+ "schema_version": 1,
+ "artifact_id": "3d46f9473579",
+ "parent_id": null,
+ "task_name": "emotion",
+ "created_at": "2026-07-21T01:37:26-0500",
+ "library": {
+  "name": "melvil",
+  "version": "0.3.0"
+ },
+ "models": {
+  "task": "openrouter/anthropic/claude-haiku-4.5",
+  "reflection": "openrouter/anthropic/claude-sonnet-4.5"
+ },
+ "budget": {
+  "metric_calls_budget": 800,
+  "metric_calls_spent": 851,
+  "cost_usd": 0.4022,
+  "task_lm_usage": {
+   "model": "openrouter/anthropic/claude-haiku-4.5",
+   "prompt_tokens": 323097,
+   "completion_tokens": 3339,
+   "calls": 751,
+   "cache_hits": 200,
+   "cost_usd": 0.339792
+  },
+  "reflection_lm_usage": {
+   "model": "openrouter/anthropic/claude-sonnet-4.5",
+   "prompt_tokens": 3824,
+   "completion_tokens": 3398,
+   "calls": 8,
+   "cache_hits": 0,
+   "cost_usd": 0.062442
+  },
+  "opt_seconds": 187.2
+ },
+ "scores": {
+  "dev_accuracy": 0.64,
+  "dev_macro_f1": 0.5654,
+  "per_label_dev": {
+   "anger": {
+    "precision": 0.6,
+    "recall": 0.6923,
+    "f1": 0.6429,
+    "support": 13
+   },
+   "fear": {
+    "precision": 0.6667,
+    "recall": 0.6667,
+    "f1": 0.6667,
+    "support": 12
+   },
+   "joy": {
+    "precision": 0.7273,
+    "recall": 0.7059,
+    "f1": 0.7164,
+    "support": 34
+   },
+   "love": {
+    "precision": 0.4286,
+    "recall": 0.375,
+    "f1": 0.4,
+    "support": 8
+   },
+   "sadness": {
+    "precision": 0.6129,
+    "recall": 0.6552,
+    "f1": 0.6333,
+    "support": 29
+   },
+   "surprise": {
+    "precision": 0.5,
+    "recall": 0.25,
+    "f1": 0.3333,
+    "support": 4
+   }
+  },
+  "seed_dev_accuracy": 0.6,
+  "dev_accuracy_quarantined": null
+ },
+ "config_hash": "89b14e97dd19",
+ "config": {
+  "task_model": "openrouter/anthropic/claude-haiku-4.5",
+  "reflection_model": "openrouter/anthropic/claude-sonnet-4.5",
+  "budget": "light",
+  "seed": 20,
+  "features": {
+   "codebook": false,
+   "confusion_reflection": false,
+   "hard_example_mining": false
+  },
+  "num_threads": 8,
+  "run_dir": "/Users/harish/Documents/Claude/Projects/6s/labelsmith/mechanistic/runs_e8_gepa_f2/emotion/s20",
+  "task_temperature": 0.0,
+  "task_max_tokens": 40,
+  "reflection_temperature": 1.0,
+  "reflection_max_tokens": 8000,
+  "reflection_minibatch_size": 3,
+  "max_exemplars": 6,
+  "mining_llm_screen": true,
+  "prices": {},
+  "metric_calls": 800
+ },
+ "label_names": [
+  "anger",
+  "fear",
+  "joy",
+  "love",
+  "sadness",
+  "surprise"
+ ],
+ "components": {
+  "instruction": "Classify the given text into one of these categories: anger, fear, joy, love, sadness, surprise.\n\nCRITICAL: Your response must ONLY contain one of these six category labels. Do not provide explanations, analysis, or commentary. Even if the text appears corrupted, fragmented, or difficult to parse, you must still output exactly one category label.\n\nImportant guidelines:\n- Do not default to 'sadness' for all negative or vulnerable emotions\n- 'Love' can include expressions of care, tenderness, or vulnerability in relational contexts (e.g., feeling the need to be delicate with someone)\n- 'Anger' includes frustration, resentment, envy, and conflict - even when expressed in subdued or self-deprecating language\n- Look beyond the surface tone: a text that sounds sad may actually express anger if it contains themes of resentment, envy, injustice, or frustration\n- Consider the underlying emotion driving the statement, not just the melancholic tone\n- Pay attention to context clues like relationship dynamics, expressions of wanting what others have (envy), or descriptions of conflict\n\nCritical distinction - Love vs Fear:\n- Do not confuse empathy or emotional resonance with love\n- When someone describes feeling distressed, anxious, or affected by another person's distress (especially at night or in vulnerable moments), this typically indicates 'fear' or anxiety, NOT 'love'\n- 'Fear' includes: worry, anxiety, being affected by others' distress, feeling overwhelmed by empathetic responses, concern that goes beyond simple care\n- 'Love' should be reserved for expressions of affection, tenderness, care, romantic feelings, or warm relational bonds - not anxious responses to others' suffering\n- If the text describes being emotionally impacted by someone's negative state (distress, pain, suffering), lean toward 'fear' rather than 'love'\n\nHandling corrupted or fragmented text:\n- Text may contain HTML elements, code fragments, social media sharing buttons, URLs, or other technical artifacts\n- Text may be poorly formatted or contain incomplete sentences\n- Even when text is fragmented or difficult to parse, extract whatever emotional signal you can from the readable portions\n- Look for key emotional words like \"horrible,\" \"feel,\" \"want,\" etc. that indicate the underlying emotion\n- If a text says \"i feel horrible about wanting\" something, this typically indicates 'sadness' (feeling bad about desires) rather than anger\n\nOutput format: Respond with ONLY one word - the category label (anger, fear, joy, love, sadness, or surprise). Nothing else."
+ },
+ "exemplars": [],
+ "confusion": {
+  "labels": [
+   "anger",
+   "fear",
+   "joy",
+   "love",
+   "sadness",
+   "surprise"
+  ],
+  "matrix": [
+   [
+    9,
+    1,
+    1,
+    0,
+    2,
+    0,
+    0
+   ],
+   [
+    0,
+    8,
+    1,
+    0,
+    3,
+    0,
+    0
+   ],
+   [
+    3,
+    0,
+    24,
+    2,
+    4,
+    1,
+    0
+   ],
+   [
+    1,
+    0,
+    2,
+    3,
+    2,
+    0,
+    0
+   ],
+   [
+    1,
+    3,
+    4,
+    2,
+    19,
+    0,
+    0
+   ],
+   [
+    1,
+    0,
+    1,
+    0,
+    1,
+    1,
+    0
+   ]
+  ],
+  "unparseable_column": true
+ },
+ "curve": [
+  {
+   "metric_calls": 0,
+   "dev_score": 0.6
+  },
+  {
+   "metric_calls": 106,
+   "dev_score": 0.52
+  },
+  {
+   "metric_calls": 215,
+   "dev_score": 0.6
+  },
+  {
+   "metric_calls": 321,
+   "dev_score": 0.56
+  },
+  {
+   "metric_calls": 427,
+   "dev_score": 0.64
+  },
+  {
+   "metric_calls": 533,
+   "dev_score": 0.6
+  },
+  {
+   "metric_calls": 639,
+   "dev_score": 0.62
+  },
+  {
+   "metric_calls": 751,
+   "dev_score": 0.54
+  }
+ ],
+ "notes": ""
+}

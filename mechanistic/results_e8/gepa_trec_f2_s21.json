@@ -1,0 +1,9 @@
+{
+ "experiment": "e8_gepa_baseline",
+ "task": "trec",
+ "family": "f2",
+ "seed": 21,
+ "test_accuracy": 0.8433,
+ "test_macro_f1": 0.8408,
+ "cost_usd": 0.4115
+}

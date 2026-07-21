@@ -1,0 +1,36 @@
+{
+ "experiment": "e8",
+ "phase": "frozen",
+ "task": "emotion",
+ "family": "f2",
+ "seed": 24,
+ "arms": {
+  "seed": {
+   "test_accuracy": 0.5533,
+   "test_macro_f1": 0.4674,
+   "unparseable": 2
+  },
+  "x1": {
+   "test_accuracy": 0.5267,
+   "test_macro_f1": 0.4604,
+   "unparseable": 1
+  },
+  "x2": {
+   "test_accuracy": 0.5567,
+   "test_macro_f1": 0.469,
+   "unparseable": 0
+  }
+ },
+ "dev_accs": {
+  "input_of_x1": 0.6,
+  "input_of_x2": 0.6
+ },
+ "prompts": {
+  "seed": "Classify the given text into one of these categories: anger, fear, joy, love, sadness, surprise.\n\nRespond with exactly one category name from the list above and nothing else.",
+  "x1": "Classify the given text into one of these categories: anger, fear, joy, love, sadness, surprise.\n\nCategory definitions:\n- anger: irritation, frustration, disgust, jealousy, feeling wronged or hostile\n- fear: anxiety, worry, restlessness, feeling unsettled, unfocused, uncertain, or threatened about future events\n- joy: happiness, contentment, satisfaction, excitement, feeling good about present circumstances\n- love: affection, warmth, caring for others, tenderness, nostalgia for loved ones, romantic feelings\n- sadness: grief, disappointment, loss, emptiness, regret, loneliness, melancholy\n- surprise: shock, astonishment, unexpectedness\n\nDecision rules:\n- Restlessness, feeling ungrounded, or unfocused without clear present threat \u2192 fear (not sadness)\n- Disgust with self or jealousy \u2192 anger (not sadness)\n- Caring for others, nostalgia for family, romantic atmosphere \u2192 love (not joy)\n- Mixed emotions or ambivalence \u2192 choose the primary emotion driving the statement\n- Self-criticism about behavior \u2192 anger if disgusted/frustrated, sadness if defeated/regretful\n\nRespond with exactly one category name from the list above and nothing else.",
+  "x2": "Classify the given text into one of these categories: anger, fear, joy, love, sadness, surprise.\n\nCategory definitions:\n- anger: irritation, frustration, disgust, jealousy, feeling wronged or hostile\n- fear: anxiety, worry, threat or danger concerns, feeling unsafe or uncertain about negative outcomes\n- joy: happiness, contentment, satisfaction, excitement, feeling good, optimism, relief\n- love: affection, warmth, caring for others, tenderness, nostalgia for loved ones, romantic feelings\n- sadness: grief, disappointment, loss, emptiness, regret, loneliness, melancholy, feeling defeated, shame, inadequacy\n- surprise: shock, astonishment, unexpectedness, disbelief\n\nCritical decision rules:\n- Awkwardness, grogginess, messiness, stress, feeling defeated, shame, or lack of direction \u2192 sadness (not fear)\n- Fear requires anticipation of specific negative outcomes or threats; general discomfort is sadness\n- Negations (e.g., \"don't feel gloomy\", \"not sad\") \u2192 evaluate the overall sentiment, often joy if expressing relief or acceptance\n- Uncertainty or \"just guessing\" about neutral/positive topics \u2192 joy (not fear)\n- Complex scenarios with relationship loss or unfulfilled longing \u2192 sadness (not joy)\n- Worry about time, priorities, or unresolved stress \u2192 sadness (not joy or fear)\n- Self-critical feelings (ashamed, messy, failing) \u2192 sadness unless expressing hostile frustration (anger)\n- Disgust with self or jealousy \u2192 anger (not sadness)\n- Caring for others, nostalgia for family, romantic atmosphere \u2192 love (not joy)\n- Mixed emotions \u2192 choose the dominant negative emotion (sadness, anger, fear) over any positive framing\n\nRespond with exactly one category name from the list above and nothing else."
+ },
+ "cost_usd": 0.2937,
+ "task_lm_calls": 700,
+ "reflection_calls": 2
+}

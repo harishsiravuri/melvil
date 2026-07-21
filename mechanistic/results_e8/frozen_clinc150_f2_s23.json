@@ -1,0 +1,36 @@
+{
+ "experiment": "e8",
+ "phase": "frozen",
+ "task": "clinc150",
+ "family": "f2",
+ "seed": 23,
+ "arms": {
+  "seed": {
+   "test_accuracy": 0.98,
+   "test_macro_f1": 0.9814,
+   "unparseable": 1
+  },
+  "x1": {
+   "test_accuracy": 0.98,
+   "test_macro_f1": 0.9815,
+   "unparseable": 1
+  },
+  "x2": {
+   "test_accuracy": 0.98,
+   "test_macro_f1": 0.9815,
+   "unparseable": 1
+  }
+ },
+ "dev_accs": {
+  "input_of_x1": 0.96,
+  "input_of_x2": 0.99
+ },
+ "prompts": {
+  "seed": "Classify the given text into one of these categories: alarm, apr, balance, book_flight, book_hotel, calculator, calories, car_rental, cook_time, credit_limit, credit_score, definition, direct_deposit, freeze_account, lost_luggage, meeting_schedule, pay_bill, payday, pto_request, recipe, report_fraud, report_lost_card, restaurant_reservation, restaurant_reviews, rewards_balance, taxes, timer, transfer, travel_suggestion, weather.\n\nRespond with exactly one category name from the list above and nothing else.",
+  "x1": "Classify the given text into one of these categories: alarm, apr, balance, book_flight, book_hotel, calculator, calories, car_rental, cook_time, credit_limit, credit_score, definition, direct_deposit, freeze_account, lost_luggage, meeting_schedule, pay_bill, payday, pto_request, recipe, report_fraud, report_lost_card, restaurant_reservation, restaurant_reviews, rewards_balance, taxes, timer, transfer, travel_suggestion, weather.\n\nKey distinctions:\n- pto_request: requesting time off from work (vacation requests, PTO, leave). Use this for \"I want to take vacation\" or \"request time off\".\n- travel_suggestion: asking for travel recommendations or ideas about where to go (not requesting time off work).\n- payday: asking when salary/paycheck arrives or is scheduled.\n- direct_deposit: setting up, managing, or employer paying via direct deposit (focus on the payment method/system).\n- book_hotel: booking, reserving, or finding a hotel to stay at (even if reviews are mentioned as criteria).\n- restaurant_reviews: reading or asking about restaurant ratings/reviews specifically.\n- pay_bill: paying bills or invoices owed by the user.\n\nWhen text could fit multiple categories, prioritize the primary intent: if someone wants to book a hotel and mentions reviews as criteria, it's still book_hotel; if discussing employee payment systems, it's direct_deposit not pay_bill; if requesting vacation time off, it's pto_request not travel_suggestion.\n\nRespond with exactly one category name from the list above and nothing else.",
+  "x2": "Classify the given text into one of these categories: alarm, apr, balance, book_flight, book_hotel, calculator, calories, car_rental, cook_time, credit_limit, credit_score, definition, direct_deposit, freeze_account, lost_luggage, meeting_schedule, pay_bill, payday, pto_request, recipe, report_fraud, report_lost_card, restaurant_reservation, restaurant_reviews, rewards_balance, taxes, timer, transfer, travel_suggestion, weather.\n\nKey distinctions:\n- lost_luggage: reporting missing or lost luggage/baggage from travel (airline, train, etc.). Look for keywords like \"luggage\", \"baggage\", \"suitcase\" being lost or missing during travel.\n- report_lost_card: reporting a lost or stolen credit/debit/bank card. Look for \"card\" being lost or stolen.\n- pto_request: requesting time off from work (vacation requests, PTO, leave). Use this for \"I want to take vacation\" or \"request time off\".\n- travel_suggestion: asking for travel recommendations or ideas about where to go (not requesting time off work).\n- payday: asking when salary/paycheck arrives or is scheduled.\n- direct_deposit: setting up, managing, or employer paying via direct deposit (focus on the payment method/system).\n- book_hotel: booking, reserving, or finding a hotel to stay at (even if reviews are mentioned as criteria).\n- restaurant_reviews: reading or asking about restaurant ratings/reviews specifically.\n- pay_bill: paying bills or invoices owed by the user.\n\nWhen text could fit multiple categories, prioritize the primary intent: if someone wants to book a hotel and mentions reviews as criteria, it's still book_hotel; if discussing employee payment systems, it's direct_deposit not pay_bill; if requesting vacation time off, it's pto_request not travel_suggestion. If luggage/baggage is mentioned as lost during travel, it's lost_luggage not report_lost_card.\n\nRespond with exactly one category name from the list above and nothing else."
+ },
+ "cost_usd": 0.3369,
+ "task_lm_calls": 700,
+ "reflection_calls": 2
+}

@@ -1,0 +1,36 @@
+{
+ "experiment": "e8",
+ "phase": "frozen",
+ "task": "stance_abortion",
+ "family": "f2",
+ "seed": 20,
+ "arms": {
+  "seed": {
+   "test_accuracy": 0.5286,
+   "test_macro_f1": 0.4689,
+   "unparseable": 0
+  },
+  "x1": {
+   "test_accuracy": 0.6429,
+   "test_macro_f1": 0.6364,
+   "unparseable": 0
+  },
+  "x2": {
+   "test_accuracy": 0.7214,
+   "test_macro_f1": 0.6944,
+   "unparseable": 0
+  }
+ },
+ "dev_accs": {
+  "input_of_x1": 0.52,
+  "input_of_x2": 0.79
+ },
+ "prompts": {
+  "seed": "Classify the given text into one of these categories: against, favor, none.\n\nRespond with exactly one category name from the list above and nothing else.",
+  "x1": "Classify the given text into one of these categories: against, favor, none.\n\nCategory definitions:\n- against: Text opposes abortion rights, supports restricting abortion access, or expresses pro-life views (e.g., defending life of fetuses/embryos, opposing Planned Parenthood, religious arguments against abortion)\n- favor: Text supports abortion rights, opposes abortion restrictions, or expresses pro-choice views (e.g., defending bodily autonomy, criticizing abortion opponents, supporting access to abortion services)\n- none: Text does not take a clear stance on abortion, is off-topic, or discusses tangentially related political issues without addressing abortion directly\n\nDecision rules:\n- Religious or moral arguments defending fetal/embryo life are \"against\", not \"favor\"\n- Statements claiming to be pro-life, defending life/human dignity, or opposing abortion procedures are \"against\" even if they mention feminism or women\n- Criticisms of abortion restrictions, forced birth, or controlling women's bodies are \"favor\", not \"against\"\n- Dismissing concerns about embryos/fetuses or defending abortion as acceptable are \"favor\", not \"against\"\n- Generic political complaints without abortion stance are \"none\", not \"against\"\n- Hashtags like #prolife, #chooselfe, youth movements defending life indicate \"against\"\n- When unclear, prefer \"none\" over guessing between \"against\" and \"favor\"\n\nRespond with exactly one category name from the list above and nothing else.",
+  "x2": "Classify the given text into one of these categories: against, favor, none.\n\nCategory definitions:\n- against: Text opposes abortion rights, supports restricting abortion access, or expresses pro-life views (e.g., defending life of fetuses/embryos, opposing Planned Parenthood, religious arguments against abortion)\n- favor: Text supports abortion rights, opposes abortion restrictions, or expresses pro-choice views (e.g., defending bodily autonomy, criticizing abortion opponents, supporting access to abortion services)\n- none: Text does not take a clear stance on abortion, is off-topic, or discusses tangentially related political issues without addressing abortion directly\n\nDecision rules:\n- Religious quotes, Bible verses, or references to \"little children,\" \"human dignity,\" \"human family,\" or \"what is wrong/right\" in abortion context are \"against\"\n- Abstract moral statements by historical figures (e.g., Lincoln quotes about right/wrong) in abortion discussions are \"against\"\n- Generic statements about human dignity, tiny/powerless beings, or protecting life are \"against\" when tagged with #SemST or abortion-related hashtags\n- Texts stating \"bodily autonomy\" while also using pro-life hashtags (#SemST with \"Be\" suggests pro-life framing) require careful reading: if they emphasize the pregnant person's autonomy continuing throughout pregnancy, they are \"favor\"\n- Statements dismissing embryos as \"nothing but skin + blood\" or saying \"abortion was fine\" are \"favor\"\n- Texts with #proChoice hashtag or defending choice explicitly are \"favor\"\n- Criticism of \"antichoice\" guilt-tripping or defending abortion decisions as non-difficult are \"favor\"\n- \"It's not your body, so it's not your choice\" is \"favor\" (criticizes interference in others' abortion decisions)\n- Celebratory statements about Supreme Court decisions (#SCOTUS) or political victories are \"none\" unless they explicitly mention abortion\n- Comparisons questioning consistency on abortion vs. death penalty without taking abortion stance are \"none\"\n- When a text only contains religious/moral content without explicit abortion terminology, check for abortion-context hashtags before classifying as \"against\"\n\nRespond with exactly one category name from the list above and nothing else."
+ },
+ "cost_usd": 0.3561,
+ "task_lm_calls": 1040,
+ "reflection_calls": 2
+}

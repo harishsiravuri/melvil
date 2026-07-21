@@ -1,0 +1,36 @@
+{
+ "experiment": "e8",
+ "phase": "frozen",
+ "task": "sst5",
+ "family": "f1",
+ "seed": 22,
+ "arms": {
+  "seed": {
+   "test_accuracy": 0.5467,
+   "test_macro_f1": 0.4536,
+   "unparseable": 0
+  },
+  "x1": {
+   "test_accuracy": 0.6067,
+   "test_macro_f1": 0.5587,
+   "unparseable": 0
+  },
+  "x2": {
+   "test_accuracy": 0.6,
+   "test_macro_f1": 0.5592,
+   "unparseable": 0
+  }
+ },
+ "dev_accs": {
+  "input_of_x1": 0.55,
+  "input_of_x2": 0.53
+ },
+ "prompts": {
+  "seed": "Classify the given text into one of these categories: negative, neutral, positive, very negative, very positive.\n\nRespond with exactly one category name from the list above and nothing else.",
+  "x1": "Classify the given text into one of these categories: negative, neutral, positive, very negative, very positive.\n\nUse these definitions and rules to decide:\n- very positive: The text is strongly enthusiastic, uplifting, or clearly celebrates the subject with superlatives, strong praise, or emotionally charged positive wording.\n- positive: The text expresses clear approval, praise, or satisfaction, but not with strong enthusiasm or superlatives.\n- neutral: The text is factual, descriptive, ambiguous, or mixed without clear positive or negative sentiment. Assign neutral if neither praise nor criticism outweighs the other.\n- negative: The text expresses clear criticism, disapproval, or mild dislike, but not strongly or emotionally.\n- very negative: The text is strongly critical, harsh, or expresses intense dislike, disappointment, or contempt with strong or emotionally charged negative wording.\n\nIf the choice is between neutral and a sentiment (positive or negative), choose the sentiment if any praise or criticism is present, even if mild.  \nIf in doubt between \u201cvery positive\u201d/\u201cpositive\u201d or \u201cvery negative\u201d/\u201cnegative\u201d, pick the stronger category if the language uses intensifiers or superlatives, or shows strong emotional tone.\n\nRespond with exactly one category name from the list above and nothing else.",
+  "x2": "Classify the given text into one of these categories: negative, neutral, positive, very negative, very positive.\n\nUse these guidelines and definitions:\n\n- very positive: Strong, emotionally charged praise or delight; clearly enthusiastic or celebratory, often with superlatives (e.g., \"brilliant,\" \"hugely enjoyable,\" \"exceptional,\" \"unabashedly romantic\").\n- positive: Clear approval, praise, or satisfaction, but without strong emotion or superlative wording. Tone is warm, pleased, or favorable, but not exuberant.\n- neutral: Factual, descriptive, ambiguous, or mixed without clear praise or criticism. Choose neutral only if positive/negative wording or sentiment is absent, extremely mild, or perfectly balanced.\n- negative: Clear criticism, disapproval, disappointment, or dislike, but not strongly worded or emotional. The text may signal flaws, mild negativity, or lack of enthusiasm.\n- very negative: Strongly critical, intensely negative, or harsh in tone; uses strong or emotionally charged language (e.g., \"awful,\" \"disaster,\" \"no redeeming value,\" \"utterly disappointing\").\n\nInstructions for ambiguous or borderline cases:\n- Only assign neutral if there is no clear sentiment present or both positive and negative phrases directly balance each other.\n- If any praise or criticism appears (even mild), prefer positive or negative over neutral.\n- Assign very positive or very negative if there is any sign of strong emotion/intensifiers, high enthusiasm, disdain, or superlatives.\n- For mixed or subtle cases with a slight positive/negative tone, select positive or negative rather than neutral.\n- Prioritize the strongest applicable category if the text contains both moderate and strongly emotional wording.\n\nRespond with exactly one category name from the list above and nothing else."
+ },
+ "cost_usd": 0.1041,
+ "task_lm_calls": 700,
+ "reflection_calls": 2
+}

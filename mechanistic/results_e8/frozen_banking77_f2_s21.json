@@ -1,0 +1,36 @@
+{
+ "experiment": "e8",
+ "phase": "frozen",
+ "task": "banking77",
+ "family": "f2",
+ "seed": 21,
+ "arms": {
+  "seed": {
+   "test_accuracy": 0.7667,
+   "test_macro_f1": 0.7377,
+   "unparseable": 4
+  },
+  "x1": {
+   "test_accuracy": 0.8267,
+   "test_macro_f1": 0.8256,
+   "unparseable": 2
+  },
+  "x2": {
+   "test_accuracy": 0.82,
+   "test_macro_f1": 0.8162,
+   "unparseable": 1
+  }
+ },
+ "dev_accs": {
+  "input_of_x1": 0.77,
+  "input_of_x2": 0.78
+ },
+ "prompts": {
+  "seed": "Classify the given text into one of these categories: automatic_top_up, balance_not_updated_after_bank_transfer, beneficiary_not_allowed, cancel_transfer, card_payment_fee_charged, card_payment_not_recognised, declined_cash_withdrawal, exchange_rate, exchange_via_app, failed_transfer, get_disposable_virtual_card, get_physical_card, passcode_forgotten, pending_top_up, pending_transfer, receiving_money, reverted_card_payment?, top_up_by_cash_or_cheque, top_up_reverted, topping_up_by_card, transfer_fee_charged, transfer_into_account, transfer_timing, verify_my_identity, verify_source_of_funds.\n\nRespond with exactly one category name from the list above and nothing else.",
+  "x1": "Classify the given text into one of these categories: automatic_top_up, balance_not_updated_after_bank_transfer, beneficiary_not_allowed, cancel_transfer, card_payment_fee_charged, card_payment_not_recognised, declined_cash_withdrawal, exchange_rate, exchange_via_app, failed_transfer, get_disposable_virtual_card, get_physical_card, passcode_forgotten, pending_top_up, pending_transfer, receiving_money, reverted_card_payment?, top_up_by_cash_or_cheque, top_up_reverted, topping_up_by_card, transfer_fee_charged, transfer_into_account, transfer_timing, verify_my_identity, verify_source_of_funds.\n\nCategory definitions and decision rules:\n- reverted_card_payment?: Payment was refunded, reversed, cancelled, or reverted after initially being processed\n- get_physical_card: Requesting a new physical card OR asking about card PIN location/number (not forgotten passcode for app login)\n- passcode_forgotten: Forgotten passcode/password for APP or ACCOUNT login (not card PIN)\n- balance_not_updated_after_bank_transfer: Balance has not updated/reflected after making a bank transfer (not asking about timing in general)\n- transfer_timing: General questions about how long transfers take or processing times\n- beneficiary_not_allowed: Unable to add beneficiary or transfer to a specific account/person (not general transfer failures)\n- failed_transfer: Transfer failed due to technical issues (not beneficiary restrictions)\n- receiving_money: About receiving/getting money into your account from someone else\n- pending_transfer: Transfer is stuck in pending status\n- pending_top_up: Top-up is stuck in pending status\n- top_up_reverted: Top-up was reversed or refunded\n- topping_up_by_card: How to add money using a card\n\nRespond with exactly one category name from the list above and nothing else.",
+  "x2": "Classify the given text into one of these categories: automatic_top_up, balance_not_updated_after_bank_transfer, beneficiary_not_allowed, cancel_transfer, card_payment_fee_charged, card_payment_not_recognised, declined_cash_withdrawal, exchange_rate, exchange_via_app, failed_transfer, get_disposable_virtual_card, get_physical_card, passcode_forgotten, pending_top_up, pending_transfer, receiving_money, reverted_card_payment?, top_up_by_cash_or_cheque, top_up_reverted, topping_up_by_card, transfer_fee_charged, transfer_into_account, transfer_timing, verify_my_identity, verify_source_of_funds.\n\nCategory definitions and decision rules:\n\n- beneficiary_not_allowed: User CANNOT transfer to a specific account/person due to restrictions or errors when attempting. Includes \"unable to transfer\", \"can't transfer\", \"won't let me transfer\", \"error when transferring\". This takes priority over failed_transfer when the issue involves inability to complete a transfer action.\n\n- failed_transfer: Transfer failed due to technical/system issues but NOT because of beneficiary restrictions.\n\n- pending_transfer: A specific transfer the user already initiated is stuck in pending/processing status and hasn't completed yet. If they mention waiting for a transfer they sent, it's pending_transfer not transfer_timing.\n\n- transfer_timing: General questions about how long transfers take, asked BEFORE or WITHOUT reference to a specific pending transfer. If asking about an already-sent transfer that hasn't arrived, classify as pending_transfer instead.\n\n- balance_not_updated_after_bank_transfer: User's balance has not reflected/updated after they made a bank transfer. The transfer was completed but balance is wrong. Questions asking IF transfers are immediate or about general processing times are transfer_timing, not this category.\n\n- receiving_money: About receiving money FROM another person into your account. The user is the recipient, not the sender.\n\n- topping_up_by_card: How to add money to YOUR OWN account using a card. If asking about someone ELSE (friend, family) topping up the user's account, this is receiving_money instead.\n\n- pending_top_up: Top-up is stuck in pending status.\n\n- top_up_reverted: Top-up was reversed or refunded.\n\n- reverted_card_payment?: Card payment was refunded, reversed, cancelled, or reverted after initially being processed.\n\n- get_physical_card: Requesting a new physical card OR asking about card PIN location/number (not forgotten passcode for app login).\n\n- passcode_forgotten: Forgotten passcode/password for APP or ACCOUNT login (not card PIN).\n\n- cancel_transfer: Wanting to cancel or stop a transfer.\n\n- transfer_into_account: Questions about transferring money into the user's account.\n\n- card_payment_not_recognised: Card payment not recognized or unfamiliar charge.\n\n- card_payment_fee_charged: Fees charged on card payments.\n\n- transfer_fee_charged: Fees charged on transfers.\n\n- exchange_rate: Questions about currency exchange rates.\n\n- exchange_via_app: How to exchange currency using the app.\n\n- automatic_top_up: Setting up or managing automatic top-ups.\n\n- declined_cash_withdrawal: Cash withdrawal was declined or rejected.\n\n- get_disposable_virtual_card: Getting a disposable or virtual card.\n\n- top_up_by_cash_or_cheque: Topping up using cash or cheque.\n\n- verify_my_identity: Identity verification requests.\n\n- verify_source_of_funds: Source of funds verification requests.\n\nRespond with exactly one category name from the list above and nothing else."
+ },
+ "cost_usd": 0.5101,
+ "task_lm_calls": 700,
+ "reflection_calls": 2
+}

@@ -1,0 +1,36 @@
+{
+ "experiment": "e8",
+ "phase": "frozen",
+ "task": "trec",
+ "family": "f1",
+ "seed": 22,
+ "arms": {
+  "seed": {
+   "test_accuracy": 0.6,
+   "test_macro_f1": 0.6235,
+   "unparseable": 0
+  },
+  "x1": {
+   "test_accuracy": 0.8167,
+   "test_macro_f1": 0.8155,
+   "unparseable": 0
+  },
+  "x2": {
+   "test_accuracy": 0.89,
+   "test_macro_f1": 0.9009,
+   "unparseable": 0
+  }
+ },
+ "dev_accs": {
+  "input_of_x1": 0.5,
+  "input_of_x2": 0.78
+ },
+ "prompts": {
+  "seed": "Classify the given text into one of these categories: abbreviation, description, entity, human, location, numeric.\n\nRespond with exactly one category name from the list above and nothing else.",
+  "x1": "Classify the given text into one of these categories: abbreviation, description, entity, human, location, numeric.\n\nCategory definitions and decision rules:\n\n- abbreviation: The text refers to a shortened or acronymic form of a word or phrase.\n- numeric: The expected answer is a specific number, quantity, measurement, date, time, age, amount, or anything directly expressed in digits.\n- location: The expected answer is a geographical place or region (city, country, river, continent, body of water, landmark, etc.). If a specific place is sought, choose location.\n- human: The expected answer is a person, group of people, title, or a role uniquely associated with humans (such as author, athlete, or group name). Also use this for organizations or groups directly named after people, unless a more specific category applies.\n- entity: The expected answer is a specific thing (not a person or place), such as an object, company, organization (not named after a single person), product, work (book, film, etc.), concept, animal, species, event, or term. If the answer is a specific noun other than a person or place, choose entity.\n- description: The expected answer is an explanation, definition, or description rather than a specific name, number, person, or place.\n\nDecision rules:\n- If the answer form is likely a proper name (other than a person or location), use entity.\n- If the answer is a \"what is X?\" type or asks for a general explanation, prefer description.\n- If the answer could plausibly be a number, date, or other numerical value, select numeric.\n- If the answer, by form or clue words, is a human or group of humans, select human.\n- If the answer is a location or geographical term, select location.\n- If more than one category seems possible, favor: numeric > location > human > entity > abbreviation > description.\nRespond with exactly one category name from the list above and nothing else.",
+  "x2": "Classify the given text into exactly one of these categories: abbreviation, description, entity, human, location, numeric.\n\nCategory definitions:\n\n- abbreviation: The text refers to a shortened or acronymic form of a word or phrase.\n- numeric: The expected answer is a specific numerical value, quantity, measurement, date, time, age, score, percentage, rank, or anything directly expressed in digits or as a quantifiable number. Also select numeric for probabilities, seasons, or ranks when the answer is a quantifiable or selectable value (e.g., \"spring\", \"first\", \"high\").\n- location: The expected answer is a specific place, geographical location (city, country, region, ocean, continent, landmark, river, building, area, etc.), or asks \"where\" something occurs or is found (even if the answer is a site, a venue, or a physical area rather than a purely geographical unit).\n- human: The expected answer is an individual person, group of people, fictional or historical human figure, team, professional or social group, or title/role specific to humans. Use this for sports teams, clubs, organizations or works primarily associated with humans, including teams and groups (e.g., \"baseball team\"), unless a place or number is clearly requested.\n- entity: The expected answer is a named, specific thing (other than person or place): animal, species, object, company, organization, group (not uniquely human), product, brand, creative work (book, film, game, etc.), concept, type, species, event, or term\u2014especially when the question asks for the name or type of a thing or non-human group.\n- description: The answer is a definition, general explanation, manner, process, or qualitative description. Choose description only if the answer is not expected to be a specific name, number, person, place, group, or term, but rather an explanation, process, reason, or description.\n\nDecision rules:\n- If the expected answer is a specific number, date, probability, rank, ordinal term (first, last), percentage, or season, select numeric.\n- If the expected answer is a physical or virtual place, venue, or region, select location.\n- If the expected answer is a person, group of people, or human role/title/group (team, author, club, group name), select human.\n- If the expected answer is a specific named thing\u2014an object, animal, company, organization (not a team or club), product, event, term, species, or non-human group\u2014select entity.\n- If the answer is a specific abbreviation or acronym, select abbreviation.\n- If the answer is an explanation, definition, or process (\"how\", \"why\", \"what is/are X\"\u2014but NOT \"what is/are the name(s)/term(s)/type(s)/group(s) of X?\"), select description.\n- When a list of names or terms (elements, species, groups, sites, teams) is required, select entity unless the expected answer is clearly human, location, or numeric.\n- For ambiguous cases, use this order of preference: numeric > location > human > entity > abbreviation > description.\n\nRespond with exactly one category name from the list above and nothing else."
+ },
+ "cost_usd": 0.1647,
+ "task_lm_calls": 700,
+ "reflection_calls": 2
+}

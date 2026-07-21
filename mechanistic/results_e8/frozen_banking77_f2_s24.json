@@ -1,0 +1,36 @@
+{
+ "experiment": "e8",
+ "phase": "frozen",
+ "task": "banking77",
+ "family": "f2",
+ "seed": 24,
+ "arms": {
+  "seed": {
+   "test_accuracy": 0.7667,
+   "test_macro_f1": 0.7377,
+   "unparseable": 4
+  },
+  "x1": {
+   "test_accuracy": 0.8133,
+   "test_macro_f1": 0.8096,
+   "unparseable": 1
+  },
+  "x2": {
+   "test_accuracy": 0.8167,
+   "test_macro_f1": 0.8126,
+   "unparseable": 0
+  }
+ },
+ "dev_accs": {
+  "input_of_x1": 0.77,
+  "input_of_x2": 0.76
+ },
+ "prompts": {
+  "seed": "Classify the given text into one of these categories: automatic_top_up, balance_not_updated_after_bank_transfer, beneficiary_not_allowed, cancel_transfer, card_payment_fee_charged, card_payment_not_recognised, declined_cash_withdrawal, exchange_rate, exchange_via_app, failed_transfer, get_disposable_virtual_card, get_physical_card, passcode_forgotten, pending_top_up, pending_transfer, receiving_money, reverted_card_payment?, top_up_by_cash_or_cheque, top_up_reverted, topping_up_by_card, transfer_fee_charged, transfer_into_account, transfer_timing, verify_my_identity, verify_source_of_funds.\n\nRespond with exactly one category name from the list above and nothing else.",
+  "x1": "Classify the given text into one of these categories: automatic_top_up, balance_not_updated_after_bank_transfer, beneficiary_not_allowed, cancel_transfer, card_payment_fee_charged, card_payment_not_recognised, declined_cash_withdrawal, exchange_rate, exchange_via_app, failed_transfer, get_disposable_virtual_card, get_physical_card, passcode_forgotten, pending_top_up, pending_transfer, receiving_money, reverted_card_payment?, top_up_by_cash_or_cheque, top_up_reverted, topping_up_by_card, transfer_fee_charged, transfer_into_account, transfer_timing, verify_my_identity, verify_source_of_funds.\n\nCategory definitions:\n- reverted_card_payment?: A card payment was refunded, cancelled, or reversed after being made\n- get_physical_card: Requesting a physical card OR asking where to find the card PIN number\n- passcode_forgotten: Forgotten passcode/password for app login (NOT card PIN)\n- beneficiary_not_allowed: Unable to add or transfer to a specific beneficiary/recipient account\n- failed_transfer: A transfer failed for technical/system reasons (NOT beneficiary restrictions)\n- balance_not_updated_after_bank_transfer: Balance hasn't reflected a completed bank transfer yet\n- transfer_timing: General questions about how long transfers take\n- receiving_money: How to receive money from others into your account\n- pending_transfer: A transfer is stuck in pending status\n- topping_up_by_card: How to top up or issues topping up using a card\n- top_up_reverted: A top-up was reversed or cancelled\n\nDecision rules:\n- PIN location questions \u2192 get_physical_card (not passcode_forgotten)\n- Beneficiary/recipient restrictions \u2192 beneficiary_not_allowed (not failed_transfer)\n- Payment refunded/cancelled/reversed \u2192 reverted_card_payment?\n- Transfer speed questions \u2192 transfer_timing (not balance_not_updated_after_bank_transfer)\n- Balance not updating after transfer \u2192 balance_not_updated_after_bank_transfer\n\nRespond with exactly one category name from the list above and nothing else.",
+  "x2": "Classify the given text into one of these categories: automatic_top_up, balance_not_updated_after_bank_transfer, beneficiary_not_allowed, cancel_transfer, card_payment_fee_charged, card_payment_not_recognised, declined_cash_withdrawal, exchange_rate, exchange_via_app, failed_transfer, get_disposable_virtual_card, get_physical_card, passcode_forgotten, pending_top_up, pending_transfer, receiving_money, reverted_card_payment?, top_up_by_cash_or_cheque, top_up_reverted, topping_up_by_card, transfer_fee_charged, transfer_into_account, transfer_timing, verify_my_identity, verify_source_of_funds.\n\nCategory definitions:\n- transfer_into_account: User wants to transfer money INTO their own account from external sources (bank transfer, topping up account via bank transfer)\n- receiving_money: How to receive money FROM OTHER PEOPLE into your account (sharing account details, receiving payments)\n- pending_transfer: A specific transfer that user already initiated is stuck in pending/processing status\n- transfer_timing: General questions about transfer speed/duration, OR pending transfer where timing is the main concern\n- balance_not_updated_after_bank_transfer: Balance hasn't updated after a bank transfer that should be complete\n- beneficiary_not_allowed: Cannot add a beneficiary OR transfer fails due to beneficiary/recipient restrictions or errors\n- failed_transfer: Transfer failed for technical/system reasons unrelated to beneficiary issues\n- reverted_card_payment?: A card payment was refunded, cancelled, or reversed\n- topping_up_by_card: How to top up or issues topping up using a debit/credit card\n- top_up_reverted: A top-up was reversed or cancelled\n- get_physical_card: Requesting a physical card OR asking where to find card PIN\n- passcode_forgotten: Forgotten passcode/password for app login (NOT card PIN)\n- exchange_via_app: How to exchange currency in the app\n- exchange_rate: Questions about exchange rates or rate charges\n\nCritical decision rules:\n1. User wants to transfer money INTO their own account \u2192 transfer_into_account (NOT receiving_money)\n2. Receiving money FROM others \u2192 receiving_money (NOT transfer_into_account)\n3. Transfer attempt shows error or mentions beneficiary/recipient problem \u2192 beneficiary_not_allowed (NOT failed_transfer)\n4. Pending transfer where user asks \"how long\" or \"when will it arrive\" \u2192 pending_transfer (NOT transfer_timing)\n5. General \"how long do transfers take\" without specific pending transfer \u2192 transfer_timing\n6. Balance didn't update after transfer (especially bank transfer) \u2192 balance_not_updated_after_bank_transfer\n7. Generic timing questions about bank transfers \u2192 transfer_timing (NOT balance_not_updated_after_bank_transfer)\n8. \"Unable to transfer\" or \"beneficiary didn't receive\" or \"transfer error message\" \u2192 beneficiary_not_allowed\n\nRespond with exactly one category name from the list above and nothing else."
+ },
+ "cost_usd": 0.4875,
+ "task_lm_calls": 700,
+ "reflection_calls": 2
+}

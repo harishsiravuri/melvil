@@ -1,0 +1,36 @@
+{
+ "experiment": "e8",
+ "phase": "frozen",
+ "task": "ag_news",
+ "family": "f1",
+ "seed": 23,
+ "arms": {
+  "seed": {
+   "test_accuracy": 0.83,
+   "test_macro_f1": 0.8233,
+   "unparseable": 0
+  },
+  "x1": {
+   "test_accuracy": 0.8467,
+   "test_macro_f1": 0.8417,
+   "unparseable": 0
+  },
+  "x2": {
+   "test_accuracy": 0.8367,
+   "test_macro_f1": 0.8308,
+   "unparseable": 0
+  }
+ },
+ "dev_accs": {
+  "input_of_x1": 0.84,
+  "input_of_x2": 0.89
+ },
+ "prompts": {
+  "seed": "Classify the given text into one of these categories: Business, Sci/Tech, Sports, World.\n\nRespond with exactly one category name from the list above and nothing else.",
+  "x1": "Classify the given text into exactly one of these categories: Business, Sci/Tech, Sports, World.\n\nDefinitions and decision rules:\n- Business: Economic activity, finance, markets, companies, commerce, management, or business technology strictly in a commercial context. If the main focus is shopping, business models, transactions, or company news, assign Business.\n- Sci/Tech: Science, technology, engineering, innovation, research, discoveries, the natural environment, biology, interface of tech with society, or technical problems and breakthroughs. If the content mainly describes products, devices, scientific matters, environmental issues, or technical disruptions (even in a business or world context), assign Sci/Tech.\n- Sports: Athletics, games, teams, players, scores, tournaments, or the sporting industry. Only use if sports competition or related events/organizations are the primary focus.\n- World: International news, politics, society, natural disasters, social change, or global affairs not mainly covered by the other categories. If about world events without a clear focus on business, sci/tech, or sports, assign World.\n\nTie-breaker: If text relates to more than one category, choose the category most specifically matching the main subject matter based on facts described, prioritizing Sci/Tech for scientific/technical content, even if described in a business or world context.\n\nRespond with exactly one category name from the list above and nothing else.",
+  "x2": "Classify the given text into exactly one of these categories: Business, Sci/Tech, Sports, World.\n\nCategory definitions and decision rules:\n\n- Business: Content primarily about companies, commerce, finance, markets, economic activity, business technology ONLY in clear commercial/operational context, shopping, business models, transactions, or company news. If tech or science is only mentioned as it directly impacts a company's business, assign Business.\n\n- Sci/Tech: Content mainly about science, technology, engineering, innovation, research, environmental issues, discoveries, technical problems/disruptions, devices, scientific matters, biology, or technology\u2019s interface with society. If technical, scientific, or environmental mechanisms, threats, reports, discoveries, or incidents are discussed\u2014even if in business, world, or commercial settings\u2014assign Sci/Tech. Prioritize Sci/Tech over Business or World if the technical or scientific substance is central to the story, even when involving companies, commerce, international issues, or environmental threats (e.g., animal extinction, climate events, or tech outages).\n\n- Sports: Content where athletics, sports competitions, games, players, teams, scores, tournaments, or the sporting industry are the primary subject. Business, world, or social context must take a clear backseat to actual sporting activity or industry news to assign Sports.\n\n- World: Content about international news, politics, society, global affairs, natural disasters, or social change, except when the main focus matches another category above. If about world/regional events\u2014such as protests or disasters\u2014only assign World if the text does not focus on science/technology, commerce/business, or sports as defined.\n\nTie-breaker: If text could fit more than one category, always assign the most *specifically focused* category. If science, technology, or environment are described in detail or are central\u2014regardless of business or world context\u2014prefer Sci/Tech. Do NOT assign Business or World simply because an organization is involved or an event is global; assign Sci/Tech if technical or scientific content is substantive.\n\nRespond with exactly one category name from the list above and nothing else."
+ },
+ "cost_usd": 0.1255,
+ "task_lm_calls": 700,
+ "reflection_calls": 2
+}

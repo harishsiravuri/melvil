@@ -1,0 +1,36 @@
+{
+ "experiment": "e8",
+ "phase": "frozen",
+ "task": "sst5",
+ "family": "f1",
+ "seed": 20,
+ "arms": {
+  "seed": {
+   "test_accuracy": 0.5467,
+   "test_macro_f1": 0.4536,
+   "unparseable": 0
+  },
+  "x1": {
+   "test_accuracy": 0.59,
+   "test_macro_f1": 0.5683,
+   "unparseable": 0
+  },
+  "x2": {
+   "test_accuracy": 0.5667,
+   "test_macro_f1": 0.5363,
+   "unparseable": 0
+  }
+ },
+ "dev_accs": {
+  "input_of_x1": 0.55,
+  "input_of_x2": 0.59
+ },
+ "prompts": {
+  "seed": "Classify the given text into one of these categories: negative, neutral, positive, very negative, very positive.\n\nRespond with exactly one category name from the list above and nothing else.",
+  "x1": "Classify the given text into one of these categories: negative, neutral, positive, very negative, very positive.\n\nCategory definitions:\n- very positive: The text expresses exceptionally strong praise, enthusiasm, delight, or deep positive emotion. Use when sentiment is intense, highly favorable, or emphatic.\n- positive: The text expresses clear approval, enjoyment, or mild to moderate praise. Use when sentiment is distinctly positive but not extreme.\n- neutral: The text is primarily factual, balanced, ambiguous, or does not show clear approval or disapproval. Use when sentiment is mixed, unemotional, or only implied.\n- negative: The text expresses clear criticism, disappointment, or mild to moderate dislike. Use when sentiment is distinctly negative but not extreme.\n- very negative: The text expresses exceptionally strong dislike, harsh criticism, disappointment, or deep negative emotion. Use when sentiment is intense, emphatic, or scathing.\n\nDecision rules:\n- If the text shows extremely strong or emotional positive or negative language, favor \"very positive\" or \"very negative\" rather than \"positive\" or \"negative\".\n- If the text has both positive and negative elements, select \"neutral\" only if no single sentiment clearly outweighs the other.\n- If unsure between \"neutral\" and \"positive\" or \"negative\", only select \"neutral\" if sentiment is ambiguous, unemotional, or balanced.\n- When torn between \"positive\"/\"very positive\" or \"negative\"/\"very negative\", choose \"very positive\" or \"very negative\" if the sentiment is forceful, emotional, or uses superlative language.\n\nRespond with exactly one category name from the list above and nothing else.",
+  "x2": "Classify the given text into one of these categories: negative, neutral, positive, very negative, very positive.\n\nCategory definitions:\n- very positive: The text conveys exceptionally strong, vivid, or emphatic praise, excitement, delight, or deep positive emotion. Look for superlative, enthusiastic, or passionate language that intensifies the positive sentiment.\n- positive: The text expresses clear and noticeable approval, enjoyment, or praise. The sentiment is distinctly favorable and more than mildly appreciative, but not intensely emotional or extreme.\n- neutral: The text neither clearly approves nor disapproves, is mainly factual, balanced, or ambiguous, or expresses both positive and negative elements with no clear bias. If the main emotion is unclear, weak, or absent, choose neutral.\n- negative: The text shows explicit but moderate criticism, disappointment, or dislike. The sentiment is clearly critical, but not forceful, highly emotional, or intense.\n- very negative: The text expresses harsh criticism, scorn, deep disappointment, or intense negative emotion. Look for forceful, scathing, or dramatically negative language showing strong disapproval or emotional impact.\n\nDecision rules:\n- If the text uses particularly emotional, intense, or superlative positive or negative language (e.g., extremely, deeply, brilliantly, abysmal), prefer \"very positive\" or \"very negative.\"\n- If positive or negative sentiment is strong but lacks intensifiers or depth, choose \"positive\" or \"negative.\"\n- Do NOT assign \"neutral\" just because the sentiment statement is understated\u2014assign \"positive\" or \"negative\" if a leaning is present, even if mild.\n- If both positive and negative aspects are present, select \"neutral\" ONLY if neither side is dominant or the sentiment is evenly mixed and unemotional.\n- For texts mixing faint praise or criticism with strong emotional cues, assign the stronger sentiment (upgrade to \"very positive\" or \"very negative\" if emphatic language or tone is present).\n- Avoid under-classifying strong opinions as merely \"positive\" or \"negative\" when emotional intensity is clear.\n- When in doubt between two adjacent categories, select the more intense one if the language is passionate or superlative; otherwise, select the milder one.\n\nRespond with exactly one category name from the list above and nothing else."
+ },
+ "cost_usd": 0.1309,
+ "task_lm_calls": 700,
+ "reflection_calls": 2
+}

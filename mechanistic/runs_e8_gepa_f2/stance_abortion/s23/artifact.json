@@ -1,0 +1,158 @@
+{
+ "schema_version": 1,
+ "artifact_id": "f8884fc3d183",
+ "parent_id": null,
+ "task_name": "stance_abortion",
+ "created_at": "2026-07-21T01:50:06-0500",
+ "library": {
+  "name": "melvil",
+  "version": "0.3.0"
+ },
+ "models": {
+  "task": "openrouter/anthropic/claude-haiku-4.5",
+  "reflection": "openrouter/anthropic/claude-sonnet-4.5"
+ },
+ "budget": {
+  "metric_calls_budget": 800,
+  "metric_calls_spent": 884,
+  "cost_usd": 0.3987,
+  "task_lm_usage": {
+   "model": "openrouter/anthropic/claude-haiku-4.5",
+   "prompt_tokens": 312358,
+   "completion_tokens": 3096,
+   "calls": 774,
+   "cache_hits": 210,
+   "cost_usd": 0.327838
+  },
+  "reflection_lm_usage": {
+   "model": "openrouter/anthropic/claude-sonnet-4.5",
+   "prompt_tokens": 4177,
+   "completion_tokens": 3886,
+   "calls": 10,
+   "cache_hits": 0,
+   "cost_usd": 0.070821
+  },
+  "opt_seconds": 205.9
+ },
+ "scores": {
+  "dev_accuracy": 0.85,
+  "dev_macro_f1": 0.8306,
+  "per_label_dev": {
+   "against": {
+    "precision": 0.9375,
+    "recall": 0.8333,
+    "f1": 0.8824,
+    "support": 54
+   },
+   "favor": {
+    "precision": 0.7778,
+    "recall": 0.7368,
+    "f1": 0.7568,
+    "support": 19
+   },
+   "none": {
+    "precision": 0.7647,
+    "recall": 0.963,
+    "f1": 0.8525,
+    "support": 27
+   }
+  },
+  "seed_dev_accuracy": 0.52,
+  "dev_accuracy_quarantined": null
+ },
+ "config_hash": "81d9724cc975",
+ "config": {
+  "task_model": "openrouter/anthropic/claude-haiku-4.5",
+  "reflection_model": "openrouter/anthropic/claude-sonnet-4.5",
+  "budget": "light",
+  "seed": 23,
+  "features": {
+   "codebook": false,
+   "confusion_reflection": false,
+   "hard_example_mining": false
+  },
+  "num_threads": 8,
+  "run_dir": "/Users/harish/Documents/Claude/Projects/6s/labelsmith/mechanistic/runs_e8_gepa_f2/stance_abortion/s23",
+  "task_temperature": 0.0,
+  "task_max_tokens": 40,
+  "reflection_temperature": 1.0,
+  "reflection_max_tokens": 8000,
+  "reflection_minibatch_size": 3,
+  "max_exemplars": 6,
+  "mining_llm_screen": true,
+  "prices": {},
+  "metric_calls": 800
+ },
+ "label_names": [
+  "against",
+  "favor",
+  "none"
+ ],
+ "components": {
+  "instruction": "Classify the given text into one of these categories: against, favor, none.\n\nThis task involves classifying social media posts (particularly tweets with hashtags like #ProLifeYouth, #SemST) about abortion-related topics.\n\nClassification guidelines:\n- \"against\": Text expressing opposition to abortion (pro-life stance)\n- \"favor\": Text expressing support for abortion rights (pro-choice stance)\n- \"none\": Text that is neutral or unrelated to abortion stance\n\nImportant context:\n- Religious or biblical quotes (such as Matthew 25:40 about caring for \"the least brothers\") that emphasize the sanctity of life or caring for the vulnerable are typically associated with pro-life (anti-abortion) positions\n- Hashtags like #ProLifeYouth indicate a pro-life stance, which means the text should be classified as \"against\" (against abortion)\n- Do not confuse being \"in favor of life\" with the \"favor\" category - \"favor\" means favoring abortion rights, while pro-life positions should be classified as \"against\"\n\nPay careful attention to religious and moral arguments that emphasize protecting life, as these typically represent opposition to abortion rather than support for it."
+ },
+ "exemplars": [],
+ "confusion": {
+  "labels": [
+   "against",
+   "favor",
+   "none"
+  ],
+  "matrix": [
+   [
+    45,
+    4,
+    5,
+    0
+   ],
+   [
+    2,
+    14,
+    3,
+    0
+   ],
+   [
+    1,
+    0,
+    26,
+    0
+   ]
+  ],
+  "unparseable_column": true
+ },
+ "curve": [
+  {
+   "metric_calls": 0,
+   "dev_score": 0.52
+  },
+  {
+   "metric_calls": 109,
+   "dev_score": 0.85
+  },
+  {
+   "metric_calls": 230,
+   "dev_score": 0.83
+  },
+  {
+   "metric_calls": 339,
+   "dev_score": 0.46
+  },
+  {
+   "metric_calls": 445,
+   "dev_score": 0.75
+  },
+  {
+   "metric_calls": 554,
+   "dev_score": 0.8
+  },
+  {
+   "metric_calls": 672,
+   "dev_score": 0.8
+  },
+  {
+   "metric_calls": 784,
+   "dev_score": 0.8
+  }
+ ],
+ "notes": ""
+}

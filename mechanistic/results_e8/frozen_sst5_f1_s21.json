@@ -1,0 +1,36 @@
+{
+ "experiment": "e8",
+ "phase": "frozen",
+ "task": "sst5",
+ "family": "f1",
+ "seed": 21,
+ "arms": {
+  "seed": {
+   "test_accuracy": 0.5467,
+   "test_macro_f1": 0.4536,
+   "unparseable": 0
+  },
+  "x1": {
+   "test_accuracy": 0.6133,
+   "test_macro_f1": 0.5777,
+   "unparseable": 0
+  },
+  "x2": {
+   "test_accuracy": 0.5633,
+   "test_macro_f1": 0.4992,
+   "unparseable": 0
+  }
+ },
+ "dev_accs": {
+  "input_of_x1": 0.55,
+  "input_of_x2": 0.6
+ },
+ "prompts": {
+  "seed": "Classify the given text into one of these categories: negative, neutral, positive, very negative, very positive.\n\nRespond with exactly one category name from the list above and nothing else.",
+  "x1": "Classify the given text into one of these categories: negative, neutral, positive, very negative, very positive.\n\nDefinitions and decision rules:\n- very negative: The text expresses a strong, intense, or deeply unfavorable opinion, harsh criticism, or severe disappointment. Use if the tone or language is emphatically or clearly negative, or communicates strong dislike or condemnation.\n- negative: The text expresses a generally unfavorable or critical opinion but without strong emotional force. Use if the negatives are moderate, matter-of-fact, or mildly disappointing.\n- neutral: The text does not express a clear opinion, is balanced, ambiguous, descriptive, or lacks sentiment. Use if the text simply describes, summarizes, or is non-committal about positive or negative aspects.\n- positive: The text expresses a generally favorable or appreciative opinion but with moderate enthusiasm. Use if the positives are present but not expressed with great emphasis or excitement.\n- very positive: The text expresses a strong, enthusiastic, or clearly glowing opinion, high praise, or strong admiration. Use if the tone or language shows clear excitement, strong recommendation, or emphatic approval.\n\nTie-breakers:\n- If a text might fit both a regular and a \"very\" sentiment category, choose the \"very\" category if the language is clearly intensified, contains superlatives, or strong emotional terms; otherwise, use the regular category.\n- When uncertain between two neighboring categories (e.g., neutral vs negative, or positive vs very positive), rely on the overall strength and explicitness of sentiment rather than subtle hints.\n- If a text combines both positive and negative elements but without a dominant sentiment, classify as neutral.\n\nRespond with exactly one category name from the list above and nothing else.",
+  "x2": "Classify the given text into one of these categories: negative, neutral, positive, very negative, very positive.\n\nDefinitions:\n- very negative: The text expresses strong or forceful dislike, intense criticism, or deep disappointment. Look for severe, emotionally charged, or superlative negative language (e.g., \"completely fails,\" \"utterly disappointing,\" \"the worst,\" \"no redeeming qualities,\" \"unbearable,\" \"painfully bad\"). Use for harsh condemnation or when negatives are emphatic or repeatedly stressed.\n- negative: The text offers an unfavorable or critical opinion, but the language is moderate, restrained, or matter-of-fact. Use for mild disappointment, criticism, or clearly negative descriptions without strong emotional force.\n- neutral: The text lacks clear sentiment, is descriptive, ambiguous, balanced, simply factual, or lists both positives and negatives without a clear winner. Assign neutral if no overall sentiment stands out, if praise or criticism is only implied or weak, or if the emotional tone is minimal. Favor neutral for objective description or unclear intent.\n- positive: The text provides a favorable or appreciative view with moderate enthusiasm, praise, or clear approval. Use for positive language that is not strongly elevated, or when the praise is single, brief, or understated.\n- very positive: The text gives strong, enthusiastic, or glowing admiration, emphatic recommendation, or high praise. Look for superlatives, intense enthusiasm (\"best I've seen,\" \"loved every moment\"), emotional excitement, or repeated strong positives.\n\nDecision rules:\n- Focus on the explicit strength and intensity of opinion and language. Prioritize explicit strong language, not subtle cues.\n- To distinguish \"very\" categories, require clear superlatives, repeated emphasis, or strong emotional intensity. Do not use \"very negative\" or \"very positive\" unless the sentiment is explicitly passionate, forceful, or contains clear intensifiers.\n- If a text presents both strongly negative and positive elements, but with one dominating, choose the strongest sentiment. If positive and negative elements are balanced or unclear in strength, classify as neutral.\n- When choosing between neutral and a mild sentiment, select neutral unless the opinion is clearly implied or overt.\n\nRespond with exactly one category name from the list above and nothing else."
+ },
+ "cost_usd": 0.1317,
+ "task_lm_calls": 700,
+ "reflection_calls": 2
+}

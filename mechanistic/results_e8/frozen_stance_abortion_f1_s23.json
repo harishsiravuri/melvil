@@ -1,0 +1,36 @@
+{
+ "experiment": "e8",
+ "phase": "frozen",
+ "task": "stance_abortion",
+ "family": "f1",
+ "seed": 23,
+ "arms": {
+  "seed": {
+   "test_accuracy": 0.5,
+   "test_macro_f1": 0.4335,
+   "unparseable": 0
+  },
+  "x1": {
+   "test_accuracy": 0.5036,
+   "test_macro_f1": 0.4396,
+   "unparseable": 0
+  },
+  "x2": {
+   "test_accuracy": 0.475,
+   "test_macro_f1": 0.4319,
+   "unparseable": 0
+  }
+ },
+ "dev_accs": {
+  "input_of_x1": 0.43,
+  "input_of_x2": 0.39
+ },
+ "prompts": {
+  "seed": "Classify the given text into one of these categories: against, favor, none.\n\nRespond with exactly one category name from the list above and nothing else.",
+  "x1": "Classify the given text into one of these categories: against, favor, none.\n\nDefinitions:\n- \"against\": The text expresses or implies clear disagreement, opposition, criticism, or negative sentiment toward the topic under discussion.\n- \"favor\": The text expresses or implies clear agreement, support, advocacy, or positive sentiment toward the topic under discussion.\n- \"none\": The text has no clear stance, is ambiguous, neutral, off-topic, or only indirectly related without explicit support or opposition.\n\nDecision rules:\n- Assign \"against\" only if the main message is negative or oppositional about the topic; do not use \"against\" for unrelated or neutral statements.\n- Assign \"favor\" only if the main message is positive or supportive about the topic; do not use \"favor\" for ambiguous, ironic, or neutral statements.\n- Assign \"none\" if the stance is unclear, mixed, neutral, sarcastic/ironic without clear intent, or if the topic is not directly addressed.\n\nTie-breakers:\n- If a stance is implied but not explicit, prefer \"none\" unless positive/negative sentiment is clearly targeted at the topic.\n- If unsure between \"favor\" and \"against,\" base the decision on whether the overall sentiment is clearly positive or negative regarding the topic; otherwise, choose \"none.\"\n\nRespond with exactly one category name from the list above and nothing else.",
+  "x2": "Classify the given text into one of these categories: against, favor, none.\n\nDefinitions:\n- \"against\": The text\u2019s main message expresses or strongly implies disagreement, opposition, criticism, or negative sentiment toward the topic under discussion.\n- \"favor\": The text\u2019s main message expresses or strongly implies agreement, support, advocacy, or positive sentiment toward the topic under discussion.\n- \"none\": The text does not clearly express support or opposition; it is neutral, ambiguous, unrelated, lacks a discernible stance, or only mentions the topic without expressing a view.\n\nDecision rules:\n- Always classify based on the stance toward the main topic under discussion. Ignore unrelated sentiment or off-topic remarks.\n- Assign \"against\" only when there is explicit or clear negative/oppositional stance toward the topic. Do not use \"against\" for neutral, ambiguous, or only generally negative but unrelated content.\n- Assign \"favor\" only when there is explicit or clear positive/supportive stance toward the topic. Do not use \"favor\" for sarcasm, jokes, ambiguous praise, or positivity unrelated to the main topic.\n- Assign \"none\" when: \n    - The stance is mixed or unclear;\n    - There is sarcasm, irony, or rhetorical language without unambiguous intent;\n    - The topic is not directly addressed (e.g., sentiment is about something else);\n    - The text is neutral, fact-only, or lacks any explicit or clear implied stance.\n\nTie-breakers:\n- If the stance is only weakly implied or indirect, choose \"none\" unless positive or negative sentiment clearly targets the topic itself.\n- If the text can be plausibly read as either \"favor\" or \"against,\" but intent is not absolutely clear, choose \"none.\"\n- Ignore positive or negative sentiment or hashtags that are unrelated or not directly targeting the topic; do not infer stance from them.\n\nRespond with exactly one category name from the list above and nothing else."
+ },
+ "cost_usd": 0.1068,
+ "task_lm_calls": 660,
+ "reflection_calls": 2
+}

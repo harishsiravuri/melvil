@@ -1,0 +1,36 @@
+{
+ "experiment": "e8",
+ "phase": "frozen",
+ "task": "ag_news",
+ "family": "f2",
+ "seed": 22,
+ "arms": {
+  "seed": {
+   "test_accuracy": 0.8667,
+   "test_macro_f1": 0.8682,
+   "unparseable": 1
+  },
+  "x1": {
+   "test_accuracy": 0.88,
+   "test_macro_f1": 0.8795,
+   "unparseable": 0
+  },
+  "x2": {
+   "test_accuracy": 0.8667,
+   "test_macro_f1": 0.865,
+   "unparseable": 0
+  }
+ },
+ "dev_accs": {
+  "input_of_x1": 0.89,
+  "input_of_x2": 0.9
+ },
+ "prompts": {
+  "seed": "Classify the given text into one of these categories: Business, Sci/Tech, Sports, World.\n\nRespond with exactly one category name from the list above and nothing else.",
+  "x1": "Classify the given text into one of these categories: Business, Sci/Tech, Sports, World.\n\nCategory definitions:\n- Sci/Tech: Technology products, software, scientific research, digital services, tech companies, IT systems, gadgets, computing, internet platforms, and engineering. E-commerce platforms, online payment systems, blogging tools, and tech company news belong here even when mentioned in a business context.\n- Business: Corporate earnings, financial markets, business strategy, retail sales, economic indicators, trade, and company financial performance. Focus on monetary/financial aspects rather than the technology itself.\n- Sports: Athletic competitions, games, teams, players, sporting events, and sports-related news.\n- World: International affairs, geopolitics, natural disasters, environmental issues, regional news, diplomacy, and general interest stories about places, wildlife, or global issues. Articles primarily about animals, nature, environmental concerns, or regional/cultural topics belong here regardless of any tangential tech or business mentions.\n\nDecision rules:\n- If an article discusses a tech product or platform (e-commerce, payment systems, blogging, web services), classify as Sci/Tech even if business aspects are mentioned.\n- If an article is primarily about nature, wildlife, environment, or regional/geographical issues, classify as World even if technology or business is referenced.\n- Only classify as Business if the primary focus is financial performance, markets, or economic activity without a dominant technology product focus.\n\nRespond with exactly one category name from the list above and nothing else.",
+  "x2": "Classify the given text into one of these categories: Business, Sci/Tech, Sports, World.\n\nCategory definitions:\n- Business: Corporate earnings, financial markets, business strategy, retail sales, economic indicators, trade, mergers and acquisitions, company financial performance, and layoffs/workforce changes. Focus on monetary/financial aspects and business operations.\n- Sci/Tech: Technology products, software, scientific research, digital services, tech companies, IT systems, gadgets, computing, internet platforms, and engineering innovations. Includes e-commerce platforms, online payment systems, and technical infrastructure.\n- Sports: Athletic competitions, games, teams, players, sporting events, sports-related news, and Olympic Games activities.\n- World: International affairs, geopolitics, natural disasters, diplomacy, regional news, protests and civil unrest, wildlife, animals, nature conservation, environmental issues, and ecology. Any article primarily about living creatures in their natural habitat belongs here.\n\nDecision rules:\n1. Articles about animals, wildlife, nature, conservation, or environmental issues are ALWAYS World, regardless of any technology mentioned.\n2. Articles about payment systems or e-commerce platforms with technical problems or service issues are Sci/Tech.\n3. Articles about protests, civil unrest, or street demonstrations are World, even if related to sporting events.\n4. Articles about Olympic bids, Olympic planning, or Olympic-related visits are Sports.\n5. Articles about corporate layoffs or workforce reductions are Business, not Sci/Tech, even if the company is a tech company.\n6. When both business and technology aspects are present, classify as Sci/Tech only if the focus is on the technical product/service itself; classify as Business if the focus is on financial performance, cost-cutting, or business operations.\n\nRespond with exactly one category name from the list above and nothing else."
+ },
+ "cost_usd": 0.327,
+ "task_lm_calls": 700,
+ "reflection_calls": 2
+}

@@ -1,0 +1,219 @@
+{
+ "schema_version": 1,
+ "artifact_id": "cc8dd5ec74e2",
+ "parent_id": null,
+ "task_name": "trec",
+ "created_at": "2026-07-21T02:55:37-0500",
+ "library": {
+  "name": "melvil",
+  "version": "0.3.0"
+ },
+ "models": {
+  "task": "openrouter/anthropic/claude-haiku-4.5",
+  "reflection": "openrouter/anthropic/claude-sonnet-4.5"
+ },
+ "budget": {
+  "metric_calls_budget": 800,
+  "metric_calls_spent": 875,
+  "cost_usd": 0.4684,
+  "task_lm_usage": {
+   "model": "openrouter/anthropic/claude-haiku-4.5",
+   "prompt_tokens": 381307,
+   "completion_tokens": 3219,
+   "calls": 771,
+   "cache_hits": 204,
+   "cost_usd": 0.397402
+  },
+  "reflection_lm_usage": {
+   "model": "openrouter/anthropic/claude-sonnet-4.5",
+   "prompt_tokens": 4396,
+   "completion_tokens": 3853,
+   "calls": 8,
+   "cache_hits": 0,
+   "cost_usd": 0.070983
+  },
+  "opt_seconds": 217.7
+ },
+ "scores": {
+  "dev_accuracy": 0.84,
+  "dev_macro_f1": 0.803,
+  "per_label_dev": {
+   "abbreviation": {
+    "precision": 0.3333,
+    "recall": 1.0,
+    "f1": 0.5,
+    "support": 2
+   },
+   "description": {
+    "precision": 0.9474,
+    "recall": 0.8571,
+    "f1": 0.9,
+    "support": 21
+   },
+   "entity": {
+    "precision": 0.6923,
+    "recall": 0.7826,
+    "f1": 0.7347,
+    "support": 23
+   },
+   "human": {
+    "precision": 1.0,
+    "recall": 0.7273,
+    "f1": 0.8421,
+    "support": 22
+   },
+   "location": {
+    "precision": 0.9286,
+    "recall": 0.8667,
+    "f1": 0.8966,
+    "support": 15
+   },
+   "numeric": {
+    "precision": 0.8947,
+    "recall": 1.0,
+    "f1": 0.9444,
+    "support": 17
+   }
+  },
+  "seed_dev_accuracy": 0.69,
+  "dev_accuracy_quarantined": null
+ },
+ "config_hash": "56bd103b46db",
+ "config": {
+  "task_model": "openrouter/anthropic/claude-haiku-4.5",
+  "reflection_model": "openrouter/anthropic/claude-sonnet-4.5",
+  "budget": "light",
+  "seed": 24,
+  "features": {
+   "codebook": false,
+   "confusion_reflection": false,
+   "hard_example_mining": false
+  },
+  "num_threads": 8,
+  "run_dir": "/Users/harish/Documents/Claude/Projects/6s/labelsmith/mechanistic/runs_e8_gepa_f2/trec/s24",
+  "task_temperature": 0.0,
+  "task_max_tokens": 40,
+  "reflection_temperature": 1.0,
+  "reflection_max_tokens": 8000,
+  "reflection_minibatch_size": 3,
+  "max_exemplars": 6,
+  "mining_llm_screen": true,
+  "log_proposals": false,
+  "prices": {},
+  "metric_calls": 800
+ },
+ "label_names": [
+  "abbreviation",
+  "description",
+  "entity",
+  "human",
+  "location",
+  "numeric"
+ ],
+ "components": {
+  "instruction": "Classify the given text into one of these categories: abbreviation, description, entity, human, location, numeric.\n\nImportant: The classification should be based on what type of answer the question is seeking, NOT what type of entity is mentioned in the question.\n\nGeneral guidelines:\n- If a question asks \"What nationality is [person name]?\" - this is asking for a LOCATION (country/nationality), not a human\n- If a question asks \"Who is [something]?\" - this is asking for a HUMAN\n- If a question asks \"What does [acronym] stand for?\" - this is asking for a DESCRIPTION or ABBREVIATION\n- If a question asks \"Where is [something]?\" - this is asking for a LOCATION\n- If a question asks \"How many/much [something]?\" - this is asking for a NUMERIC answer\n- If a question asks \"What is [thing]?\" - this could be asking for an ENTITY or DESCRIPTION depending on context\n\nDistinguishing between ENTITY and DESCRIPTION:\n- ENTITY: When the question asks for a specific named thing, concrete object, or item (e.g., \"What instrument does X play?\", \"What food do people eat?\", \"What do people refrain from?\")\n- DESCRIPTION: When the question asks for an explanation, definition, process, reason, or abstract concept (e.g., \"What is the meaning of X?\", \"What does X stand for?\", \"How does X work?\")\n\nKey distinction: Questions like \"What do [people] refrain from/eat/use/wear?\" are asking for concrete ENTITIES (things, objects, practices), not descriptions or explanations. The answer would be a specific item or practice, making it an ENTITY.\n\nFocus on the expected answer type, not the subjects mentioned within the question text itself."
+ },
+ "exemplars": [],
+ "confusion": {
+  "labels": [
+   "abbreviation",
+   "description",
+   "entity",
+   "human",
+   "location",
+   "numeric"
+  ],
+  "matrix": [
+   [
+    2,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    1,
+    18,
+    1,
+    0,
+    1,
+    0,
+    0
+   ],
+   [
+    2,
+    1,
+    18,
+    0,
+    0,
+    2,
+    0
+   ],
+   [
+    1,
+    0,
+    5,
+    16,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    2,
+    0,
+    13,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0,
+    17,
+    0
+   ]
+  ],
+  "unparseable_column": true
+ },
+ "curve": [
+  {
+   "metric_calls": 0,
+   "dev_score": 0.69
+  },
+  {
+   "metric_calls": 109,
+   "dev_score": 0.78
+  },
+  {
+   "metric_calls": 215,
+   "dev_score": 0.77
+  },
+  {
+   "metric_calls": 321,
+   "dev_score": 0.75
+  },
+  {
+   "metric_calls": 430,
+   "dev_score": 0.84
+  },
+  {
+   "metric_calls": 554,
+   "dev_score": 0.84
+  },
+  {
+   "metric_calls": 666,
+   "dev_score": 0.77
+  },
+  {
+   "metric_calls": 775,
+   "dev_score": 0.84
+  }
+ ],
+ "notes": ""
+}

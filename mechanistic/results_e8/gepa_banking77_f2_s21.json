@@ -1,0 +1,9 @@
+{
+ "experiment": "e8_gepa_baseline",
+ "task": "banking77",
+ "family": "f2",
+ "seed": 21,
+ "test_accuracy": 0.7767,
+ "test_macro_f1": 0.7686,
+ "cost_usd": 0.6335
+}

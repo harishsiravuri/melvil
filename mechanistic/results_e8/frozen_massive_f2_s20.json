@@ -1,0 +1,36 @@
+{
+ "experiment": "e8",
+ "phase": "frozen",
+ "task": "massive",
+ "family": "f2",
+ "seed": 20,
+ "arms": {
+  "seed": {
+   "test_accuracy": 0.8333,
+   "test_macro_f1": 0.8564,
+   "unparseable": 1
+  },
+  "x1": {
+   "test_accuracy": 0.85,
+   "test_macro_f1": 0.8751,
+   "unparseable": 1
+  },
+  "x2": {
+   "test_accuracy": 0.8667,
+   "test_macro_f1": 0.8905,
+   "unparseable": 1
+  }
+ },
+ "dev_accs": {
+  "input_of_x1": 0.8,
+  "input_of_x2": 0.85
+ },
+ "prompts": {
+  "seed": "Classify the given text into one of these categories: alarm_query, alarm_set, calendar_query, calendar_remove, calendar_set, cooking_recipe, datetime_query, email_query, email_sendemail, general_quirky, iot_hue_lightoff, lists_createoradd, lists_query, lists_remove, music_query, news_query, play_audiobook, play_music, play_podcasts, play_radio, qa_currency, qa_definition, qa_factoid, qa_stock, recommendation_events, recommendation_locations, social_post, takeaway_order, transport_query, weather_query.\n\nRespond with exactly one category name from the list above and nothing else.",
+  "x1": "Classify the given text into one of these categories: alarm_query, alarm_set, calendar_query, calendar_remove, calendar_set, cooking_recipe, datetime_query, email_query, email_sendemail, general_quirky, iot_hue_lightoff, lists_createoradd, lists_query, lists_remove, music_query, news_query, play_audiobook, play_music, play_podcasts, play_radio, qa_currency, qa_definition, qa_factoid, qa_stock, recommendation_events, recommendation_locations, social_post, takeaway_order, transport_query, weather_query.\n\nKey distinctions:\n\ncalendar_set vs alarm_set: Use calendar_set for reminders about events, meetings, appointments, or activities (especially with context like \"meeting\", \"trip\", \"shopping\"). Use alarm_set only for wake-up alarms or simple time-based alerts without event context.\n\nemail_sendemail vs email_query: Use email_sendemail for composing, sending, replying to, or editing emails. Use email_query for checking, reading, or searching existing emails.\n\ngeneral_quirky vs qa_factoid: Use general_quirky for subjective questions, opinions, recommendations, personal queries about celebrities/people, or conversational requests. Use qa_factoid only for objective factual questions with definitive answers.\n\ngeneral_quirky vs recommendation_locations: Use recommendation_locations only for requests explicitly asking for place/location suggestions (restaurants, venues, stores). Use general_quirky for activity recommendations like hiking trails or experiences.\n\nsocial_post: Use for posting, sharing, or updating content on social media platforms.\n\nplay_audiobook vs play_podcasts vs play_music: Audiobook for books, podcasts for podcast episodes/shows, music for songs/albums/artists.\n\nRespond with exactly one category name from the list above and nothing else.",
+  "x2": "Classify the given text into one of these categories: alarm_query, alarm_set, calendar_query, calendar_remove, calendar_set, cooking_recipe, datetime_query, email_query, email_sendemail, general_quirky, iot_hue_lightoff, lists_createoradd, lists_query, lists_remove, music_query, news_query, play_audiobook, play_music, play_podcasts, play_radio, qa_currency, qa_definition, qa_factoid, qa_stock, recommendation_events, recommendation_locations, social_post, takeaway_order, transport_query, weather_query.\n\nKey distinctions:\n\nqa_factoid vs general_quirky: Use qa_factoid for questions about specific people (celebrities, actors, public figures) including their relationships, biographical facts, or identity. Use qa_factoid for objective factual questions with definitive answers. Use general_quirky only for subjective opinions, recommendations, conversational requests, or questions without factual answers.\n\nqa_definition: Use specifically for requests asking for the meaning, definition, or explanation of a word, term, or concept (e.g., \"what does X mean\", \"define X\", \"what is X\" when X is a term/concept).\n\nsocial_post: Use for posting, sharing, or updating content on social media platforms, including brief phrases that appear to be social media post content or commands to post about topics (complaints, observations, reviews for social sharing).\n\nemail_query vs email_sendemail: Use email_query for checking, reading, searching, or retrieving existing emails (keywords: \"check\", \"read\", \"show\", \"find\", email subject/sender references). Use email_sendemail only for composing, sending, replying to, forwarding, or editing/drafting new email content.\n\nplay_music vs music_query: Use play_music for requests to play, start, or listen to music including requests for \"top hits\", charts, or playlists (any action to start playback). Use music_query only for asking about music information without playback intent (artist details, song information, music facts).\n\ncalendar_set vs alarm_set: Use calendar_set for reminders about events, meetings, appointments, activities with context. Use alarm_set only for wake-up alarms or simple time-based alerts without event context.\n\ngeneral_quirky vs recommendation_locations: Use recommendation_locations only for explicit requests for place/location suggestions (restaurants, venues, stores). Use general_quirky for activity recommendations or experiences.\n\nrecommendation_events: Use for requests about events to attend (concerts, shows, festivals, happenings).\n\nplay_audiobook: Use specifically for audiobooks or book narrations.\n\nplay_podcasts: Use specifically for podcast episodes or shows.\n\nRespond with exactly one category name from the list above and nothing else."
+ },
+ "cost_usd": 0.5016,
+ "task_lm_calls": 1100,
+ "reflection_calls": 2
+}

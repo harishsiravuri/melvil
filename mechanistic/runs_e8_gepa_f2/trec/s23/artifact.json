@@ -1,0 +1,219 @@
+{
+ "schema_version": 1,
+ "artifact_id": "6ac57444f37f",
+ "parent_id": null,
+ "task_name": "trec",
+ "created_at": "2026-07-21T02:51:11-0500",
+ "library": {
+  "name": "melvil",
+  "version": "0.3.0"
+ },
+ "models": {
+  "task": "openrouter/anthropic/claude-haiku-4.5",
+  "reflection": "openrouter/anthropic/claude-sonnet-4.5"
+ },
+ "budget": {
+  "metric_calls_budget": 800,
+  "metric_calls_spent": 878,
+  "cost_usd": 0.4157,
+  "task_lm_usage": {
+   "model": "openrouter/anthropic/claude-haiku-4.5",
+   "prompt_tokens": 342931,
+   "completion_tokens": 3143,
+   "calls": 774,
+   "cache_hits": 204,
+   "cost_usd": 0.358646
+  },
+  "reflection_lm_usage": {
+   "model": "openrouter/anthropic/claude-sonnet-4.5",
+   "prompt_tokens": 3412,
+   "completion_tokens": 3124,
+   "calls": 7,
+   "cache_hits": 0,
+   "cost_usd": 0.057096
+  },
+  "opt_seconds": 198.6
+ },
+ "scores": {
+  "dev_accuracy": 0.82,
+  "dev_macro_f1": 0.7693,
+  "per_label_dev": {
+   "abbreviation": {
+    "precision": 0.2222,
+    "recall": 1.0,
+    "f1": 0.3636,
+    "support": 2
+   },
+   "description": {
+    "precision": 0.9412,
+    "recall": 0.7619,
+    "f1": 0.8421,
+    "support": 21
+   },
+   "entity": {
+    "precision": 0.8095,
+    "recall": 0.7391,
+    "f1": 0.7727,
+    "support": 23
+   },
+   "human": {
+    "precision": 0.9048,
+    "recall": 0.8636,
+    "f1": 0.8837,
+    "support": 22
+   },
+   "location": {
+    "precision": 1.0,
+    "recall": 0.8,
+    "f1": 0.8889,
+    "support": 15
+   },
+   "numeric": {
+    "precision": 0.8,
+    "recall": 0.9412,
+    "f1": 0.8649,
+    "support": 17
+   }
+  },
+  "seed_dev_accuracy": 0.69,
+  "dev_accuracy_quarantined": null
+ },
+ "config_hash": "b659cf8f8da9",
+ "config": {
+  "task_model": "openrouter/anthropic/claude-haiku-4.5",
+  "reflection_model": "openrouter/anthropic/claude-sonnet-4.5",
+  "budget": "light",
+  "seed": 23,
+  "features": {
+   "codebook": false,
+   "confusion_reflection": false,
+   "hard_example_mining": false
+  },
+  "num_threads": 8,
+  "run_dir": "/Users/harish/Documents/Claude/Projects/6s/labelsmith/mechanistic/runs_e8_gepa_f2/trec/s23",
+  "task_temperature": 0.0,
+  "task_max_tokens": 40,
+  "reflection_temperature": 1.0,
+  "reflection_max_tokens": 8000,
+  "reflection_minibatch_size": 3,
+  "max_exemplars": 6,
+  "mining_llm_screen": true,
+  "log_proposals": false,
+  "prices": {},
+  "metric_calls": 800
+ },
+ "label_names": [
+  "abbreviation",
+  "description",
+  "entity",
+  "human",
+  "location",
+  "numeric"
+ ],
+ "components": {
+  "instruction": "Classify the given text into one of these categories: abbreviation, description, entity, human, location, numeric.\n\nUse the following guidelines for classification:\n\n- **location**: Questions asking about places, countries, cities, or geographic locations (e.g., \"What countries have the best math students?\")\n\n- **entity**: Questions asking about non-human things, objects, concepts, or attributes. This includes:\n  - Physical objects (musical instruments, items, etc.)\n  - Abstract concepts or characteristics (gender-related attributes like \"thighs\")\n  - Things that belong to or are associated with humans but are not human themselves\n  - Forces, phenomena, or agents responsible for something (e.g., \"What keeps X in the air?\" is asking for the entity/force, not a description)\n  \n- **human**: Questions specifically about people, individuals, or groups of humans as the main subject (not their attributes or possessions)\n\n- **description**: Questions asking for explanations, definitions, or how/why something works\n  - Use 'description' for questions like \"How does X work?\" or \"Why does X happen?\"\n  - Do NOT use 'description' for \"What [noun] does X?\" - these are asking for an entity\n\n- **abbreviation**: Questions asking what an acronym or abbreviation stands for\n\n- **numeric**: Questions asking for numerical values, quantities, dates, or counts\n\nImportant distinctions:\n- When a question asks \"what countries,\" classify as 'location' (the answer is a place/country), not 'description'\n- When a question asks about objects or characteristics (even if related to humans), classify as 'entity', not 'human'\n- Questions starting with \"What keeps,\" \"What holds,\" \"What causes,\" \"What makes\" are typically asking for an 'entity' (the thing responsible), not a 'description' (how it works)\n- Focus on what type of answer is being requested, not just the subject mentioned in the question\n- If the expected answer is a noun (thing, force, concept), it's likely 'entity'; if it's an explanation or process, it's 'description'"
+ },
+ "exemplars": [],
+ "confusion": {
+  "labels": [
+   "abbreviation",
+   "description",
+   "entity",
+   "human",
+   "location",
+   "numeric"
+  ],
+  "matrix": [
+   [
+    2,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    3,
+    16,
+    2,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    3,
+    0,
+    17,
+    1,
+    0,
+    2,
+    0
+   ],
+   [
+    1,
+    0,
+    0,
+    19,
+    0,
+    2,
+    0
+   ],
+   [
+    0,
+    0,
+    2,
+    1,
+    12,
+    0,
+    0
+   ],
+   [
+    0,
+    1,
+    0,
+    0,
+    0,
+    16,
+    0
+   ]
+  ],
+  "unparseable_column": true
+ },
+ "curve": [
+  {
+   "metric_calls": 0,
+   "dev_score": 0.69
+  },
+  {
+   "metric_calls": 112,
+   "dev_score": 0.79
+  },
+  {
+   "metric_calls": 218,
+   "dev_score": 0.79
+  },
+  {
+   "metric_calls": 330,
+   "dev_score": 0.78
+  },
+  {
+   "metric_calls": 451,
+   "dev_score": 0.8
+  },
+  {
+   "metric_calls": 557,
+   "dev_score": 0.77
+  },
+  {
+   "metric_calls": 663,
+   "dev_score": 0.76
+  },
+  {
+   "metric_calls": 778,
+   "dev_score": 0.82
+  }
+ ],
+ "notes": ""
+}

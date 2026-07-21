@@ -1,0 +1,45 @@
+{
+ "curve": [
+  {
+   "metric_calls": 0,
+   "dev": 0.8
+  },
+  {
+   "metric_calls": 106,
+   "dev": 0.78
+  },
+  {
+   "metric_calls": 212,
+   "dev": 0.8
+  },
+  {
+   "metric_calls": 327,
+   "dev": 0.8
+  },
+  {
+   "metric_calls": 442,
+   "dev": 0.79
+  },
+  {
+   "metric_calls": 554,
+   "dev": 0.85
+  },
+  {
+   "metric_calls": 660,
+   "dev": 0.8
+  },
+  {
+   "metric_calls": 772,
+   "dev": 0.81
+  }
+ ],
+ "test_accuracy": 0.8467,
+ "cost_usd": 0.3321,
+ "total_metric_calls": 872,
+ "n_proposals": 7,
+ "optimizer": "gepa",
+ "task": "banking77",
+ "budget": 800,
+ "seed": 34,
+ "family": "f1"
+}

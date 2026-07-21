@@ -1,0 +1,133 @@
+{
+ "curve": [
+  {
+   "metric_calls": 0,
+   "dev": 0.81
+  },
+  {
+   "metric_calls": 106,
+   "dev": 0.83
+  },
+  {
+   "metric_calls": 212,
+   "dev": 0.84
+  },
+  {
+   "metric_calls": 324,
+   "dev": 0.86
+  },
+  {
+   "metric_calls": 433,
+   "dev": 0.85
+  },
+  {
+   "metric_calls": 545,
+   "dev": 0.85
+  },
+  {
+   "metric_calls": 666,
+   "dev": 0.87
+  },
+  {
+   "metric_calls": 775,
+   "dev": 0.84
+  },
+  {
+   "metric_calls": 884,
+   "dev": 0.82
+  },
+  {
+   "metric_calls": 999,
+   "dev": 0.86
+  },
+  {
+   "metric_calls": 1105,
+   "dev": 0.82
+  },
+  {
+   "metric_calls": 1211,
+   "dev": 0.83
+  },
+  {
+   "metric_calls": 1320,
+   "dev": 0.86
+  },
+  {
+   "metric_calls": 1426,
+   "dev": 0.86
+  },
+  {
+   "metric_calls": 1532,
+   "dev": 0.85
+  },
+  {
+   "metric_calls": 1641,
+   "dev": 0.84
+  },
+  {
+   "metric_calls": 1756,
+   "dev": 0.84
+  },
+  {
+   "metric_calls": 1862,
+   "dev": 0.83
+  },
+  {
+   "metric_calls": 1971,
+   "dev": 0.86
+  },
+  {
+   "metric_calls": 2107,
+   "dev": 0.84
+  },
+  {
+   "metric_calls": 2213,
+   "dev": 0.85
+  },
+  {
+   "metric_calls": 2322,
+   "dev": 0.87
+  },
+  {
+   "metric_calls": 2431,
+   "dev": 0.83
+  },
+  {
+   "metric_calls": 2537,
+   "dev": 0.83
+  },
+  {
+   "metric_calls": 2643,
+   "dev": 0.85
+  },
+  {
+   "metric_calls": 2749,
+   "dev": 0.86
+  },
+  {
+   "metric_calls": 2858,
+   "dev": 0.85
+  },
+  {
+   "metric_calls": 2967,
+   "dev": 0.84
+  },
+  {
+   "metric_calls": 3085,
+   "dev": 0.87
+  },
+  {
+   "metric_calls": 3191,
+   "dev": 0.88
+  }
+ ],
+ "test_accuracy": 0.8767,
+ "cost_usd": 0.8915,
+ "total_metric_calls": 3291,
+ "n_proposals": 31,
+ "optimizer": "gepa",
+ "task": "massive",
+ "budget": 3200,
+ "seed": 30,
+ "family": "f1"
+}

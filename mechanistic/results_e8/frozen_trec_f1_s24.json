@@ -1,0 +1,36 @@
+{
+ "experiment": "e8",
+ "phase": "frozen",
+ "task": "trec",
+ "family": "f1",
+ "seed": 24,
+ "arms": {
+  "seed": {
+   "test_accuracy": 0.6,
+   "test_macro_f1": 0.6235,
+   "unparseable": 0
+  },
+  "x1": {
+   "test_accuracy": 0.77,
+   "test_macro_f1": 0.6616,
+   "unparseable": 0
+  },
+  "x2": {
+   "test_accuracy": 0.8133,
+   "test_macro_f1": 0.7787,
+   "unparseable": 0
+  }
+ },
+ "dev_accs": {
+  "input_of_x1": 0.5,
+  "input_of_x2": 0.71
+ },
+ "prompts": {
+  "seed": "Classify the given text into one of these categories: abbreviation, description, entity, human, location, numeric.\n\nRespond with exactly one category name from the list above and nothing else.",
+  "x1": "Classify the given text into one of these categories: abbreviation, description, entity, human, location, numeric.\n\nDefinitions:\n- abbreviation: A short form or acronym representing a word or phrase (e.g., \"USA\", \"FBI\").\n- description: A question or phrase asking for an explanation, definition, or characteristic, not seeking a proper noun, place, person, quantity, or acronym.\n- entity: A specific, named thing that is not a person or location (e.g., objects, organizations, products, animals, book/movie/song titles, concepts, groups).\n- human: A specific person, group of people, profession, or character (real or fictional).\n- location: A question seeking the name of a place, country, city, river, mountain, region, etc.\n- numeric: A request for a number, date, or measurable amount (including counts, ranks, ages, times, monetary values, and quantities).\n\nDecision Rules:\n1. If the answer is likely a number, date, or measurable value, choose numeric.\n2. If the answer is the name of a place or geographic location, choose location.\n3. If the answer is a person's name, group of people, or human-related role/profession, choose human.\n4. If the answer is a specific titled thing, organization, animal, event, or concept (not fitting human or location), choose entity.\n5. If the answer is an abbreviation, acronym, or initialism, choose abbreviation.\n6. If the answer does not fit any above and primarily asks for a definition, explanation, physical property, or descriptive information, choose description.\n\nTie-breaker: When unsure between \"entity\", \"location\", \"human\", or \"description\", prefer \"location\" for places, \"human\" for people or groups, \"entity\" for named things/concepts/organizations, and \"description\" as a last resort.\n\nRespond with exactly one category name from the list above and nothing else.",
+  "x2": "Classify the given text into one of these categories: abbreviation, description, entity, human, location, numeric.\n\nDefinitions:\n- abbreviation: A short form, acronym, or initialism representing a longer word or phrase (e.g., \"USA\", \"FBI\").\n- description: A phrase or question seeking an explanation, definition, characteristic, procedure, reason, or descriptive information, when the expected answer is not a specific thing, person, group, place, or quantifiable value.\n- entity: A specific, named thing that is not a person or location (e.g., organizations, products, animals, book/movie/song titles, events, objects, concepts, groups excluding humans).\n- human: A specific person, group of people, profession, character (real or fictional), team, organization made up of people, or other explicit 'who' answers involving humans.\n- location: A request for the name of a place, country, city, river, building, landmark, region, or other location.\n- numeric: A request where the answer is expected to be a number, date, amount, quantity, rank, measurement, or other measurable value.\n\nDecision Rules:\n1. If the expected answer is a number, date, amount, rank, or measurable value, choose numeric.\n2. If asking for the name of a geographic place, location, or landmark, choose location.\n3. If seeking the name of a specific person, group of people, team, profession, or human-related organization, choose human.\n4. If seeking the name/title of a specific thing (including works, products, animals, organizations not primarily human, concepts, or events), choose entity.\n   - If asking for books, movies, songs, organizations, or any named thing (not a person/group/location/number), choose entity\u2014even if phrased like \"What...\".\n5. If the answer is expected to be an acronym, abbreviation, or initialism, choose abbreviation.\n6. Choose description only if the expected answer is general information, explanation, reason, description, or property\u2014not a specific name, title, location, person, or number.\n\nTie-breakers:\n- If uncertain between entity and description (e.g., \"What films has X appeared in?\"), choose entity if the expected answer is a list or name of things.\n- If uncertain between human and entity (e.g., organizations/teams), choose human if it primarily refers to humans.\n- If uncertain between location and other categories, prefer location if a place could be the answer.\n- Use description only as a last resort.\n\nRespond with exactly one category name from the list above and nothing else."
+ },
+ "cost_usd": 0.1467,
+ "task_lm_calls": 700,
+ "reflection_calls": 2
+}

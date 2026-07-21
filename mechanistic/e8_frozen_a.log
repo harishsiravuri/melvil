@@ -1,0 +1,49 @@
+2026/07/21 01:27:49 WARNING dspy.clients.lm: LM response was truncated due to exceeding max_tokens=40. You can inspect the latest LM interactions with `dspy.inspect_history()`. To avoid truncation, consider passing a larger max_tokens when setting up dspy.LM. You may also consider increasing the temperature (currently 0.0)  if the reason for truncation is repetition.
+2026/07/21 01:28:21 WARNING dspy.clients.lm: LM response was truncated due to exceeding max_tokens=40. You can inspect the latest LM interactions with `dspy.inspect_history()`. To avoid truncation, consider passing a larger max_tokens when setting up dspy.LM. You may also consider increasing the temperature (currently 0.0)  if the reason for truncation is repetition.
+2026/07/21 01:28:30 WARNING dspy.clients.lm: LM response was truncated due to exceeding max_tokens=40. You can inspect the latest LM interactions with `dspy.inspect_history()`. To avoid truncation, consider passing a larger max_tokens when setting up dspy.LM. You may also consider increasing the temperature (currently 0.0)  if the reason for truncation is repetition.
+2026/07/21 01:29:36 WARNING dspy.clients.lm: LM response was truncated due to exceeding max_tokens=40. You can inspect the latest LM interactions with `dspy.inspect_history()`. To avoid truncation, consider passing a larger max_tokens when setting up dspy.LM. You may also consider increasing the temperature (currently 0.0)  if the reason for truncation is repetition.
+2026/07/21 01:30:19 WARNING dspy.clients.lm: LM response was truncated due to exceeding max_tokens=40. You can inspect the latest LM interactions with `dspy.inspect_history()`. To avoid truncation, consider passing a larger max_tokens when setting up dspy.LM. You may also consider increasing the temperature (currently 0.0)  if the reason for truncation is repetition.
+2026/07/21 01:30:57 WARNING dspy.clients.lm: LM response was truncated due to exceeding max_tokens=40. You can inspect the latest LM interactions with `dspy.inspect_history()`. To avoid truncation, consider passing a larger max_tokens when setting up dspy.LM. You may also consider increasing the temperature (currently 0.0)  if the reason for truncation is repetition.
+2026/07/21 01:31:54 WARNING dspy.clients.lm: LM response was truncated due to exceeding max_tokens=40. You can inspect the latest LM interactions with `dspy.inspect_history()`. To avoid truncation, consider passing a larger max_tokens when setting up dspy.LM. You may also consider increasing the temperature (currently 0.0)  if the reason for truncation is repetition.
+2026/07/21 01:32:58 WARNING dspy.clients.lm: LM response was truncated due to exceeding max_tokens=40. You can inspect the latest LM interactions with `dspy.inspect_history()`. To avoid truncation, consider passing a larger max_tokens when setting up dspy.LM. You may also consider increasing the temperature (currently 0.0)  if the reason for truncation is repetition.
+2026/07/21 01:33:55 WARNING dspy.clients.lm: LM response was truncated due to exceeding max_tokens=40. You can inspect the latest LM interactions with `dspy.inspect_history()`. To avoid truncation, consider passing a larger max_tokens when setting up dspy.LM. You may also consider increasing the temperature (currently 0.0)  if the reason for truncation is repetition.
+2026/07/21 01:34:04 WARNING dspy.clients.lm: LM response was truncated due to exceeding max_tokens=40. You can inspect the latest LM interactions with `dspy.inspect_history()`. To avoid truncation, consider passing a larger max_tokens when setting up dspy.LM. You may also consider increasing the temperature (currently 0.0)  if the reason for truncation is repetition.
+2026/07/21 01:43:56 WARNING dspy.clients.lm: LM response was truncated due to exceeding max_tokens=40. You can inspect the latest LM interactions with `dspy.inspect_history()`. To avoid truncation, consider passing a larger max_tokens when setting up dspy.LM. You may also consider increasing the temperature (currently 0.0)  if the reason for truncation is repetition.
+2026/07/21 01:45:34 WARNING dspy.clients.lm: LM response was truncated due to exceeding max_tokens=40. You can inspect the latest LM interactions with `dspy.inspect_history()`. To avoid truncation, consider passing a larger max_tokens when setting up dspy.LM. You may also consider increasing the temperature (currently 0.0)  if the reason for truncation is repetition.
+2026/07/21 01:48:03 WARNING dspy.clients.lm: LM response was truncated due to exceeding max_tokens=40. You can inspect the latest LM interactions with `dspy.inspect_history()`. To avoid truncation, consider passing a larger max_tokens when setting up dspy.LM. You may also consider increasing the temperature (currently 0.0)  if the reason for truncation is repetition.
+2026/07/21 01:52:08 WARNING dspy.clients.lm: LM response was truncated due to exceeding max_tokens=40. You can inspect the latest LM interactions with `dspy.inspect_history()`. To avoid truncation, consider passing a larger max_tokens when setting up dspy.LM. You may also consider increasing the temperature (currently 0.0)  if the reason for truncation is repetition.
+2026/07/21 01:52:16 WARNING dspy.clients.lm: LM response was truncated due to exceeding max_tokens=40. You can inspect the latest LM interactions with `dspy.inspect_history()`. To avoid truncation, consider passing a larger max_tokens when setting up dspy.LM. You may also consider increasing the temperature (currently 0.0)  if the reason for truncation is repetition.
+2026/07/21 01:52:38 WARNING dspy.clients.lm: LM response was truncated due to exceeding max_tokens=40. You can inspect the latest LM interactions with `dspy.inspect_history()`. To avoid truncation, consider passing a larger max_tokens when setting up dspy.LM. You may also consider increasing the temperature (currently 0.0)  if the reason for truncation is repetition.
+2026/07/21 01:52:40 WARNING dspy.clients.lm: LM response was truncated due to exceeding max_tokens=40. You can inspect the latest LM interactions with `dspy.inspect_history()`. To avoid truncation, consider passing a larger max_tokens when setting up dspy.LM. You may also consider increasing the temperature (currently 0.0)  if the reason for truncation is repetition.
+2026/07/21 01:56:08 WARNING dspy.clients.lm: LM response was truncated due to exceeding max_tokens=40. You can inspect the latest LM interactions with `dspy.inspect_history()`. To avoid truncation, consider passing a larger max_tokens when setting up dspy.LM. You may also consider increasing the temperature (currently 0.0)  if the reason for truncation is repetition.
+2026/07/21 01:56:17 WARNING dspy.clients.lm: LM response was truncated due to exceeding max_tokens=40. You can inspect the latest LM interactions with `dspy.inspect_history()`. To avoid truncation, consider passing a larger max_tokens when setting up dspy.LM. You may also consider increasing the temperature (currently 0.0)  if the reason for truncation is repetition.
+[done] frozen_banking77_f1_s20.json: seed: 0.760 | x1: 0.810 | x2: 0.830 ($0.25)
+[done] frozen_banking77_f1_s21.json: seed: 0.760 | x1: 0.817 | x2: 0.860 ($0.23)
+[done] frozen_banking77_f1_s22.json: seed: 0.760 | x1: 0.830 | x2: 0.840 ($0.23)
+[done] frozen_banking77_f1_s23.json: seed: 0.760 | x1: 0.817 | x2: 0.857 ($0.29)
+[done] frozen_banking77_f1_s24.json: seed: 0.760 | x1: 0.793 | x2: 0.827 ($0.28)
+[done] frozen_banking77_f2_s20.json: seed: 0.767 | x1: 0.833 | x2: 0.847 ($0.66)
+[done] frozen_banking77_f2_s21.json: seed: 0.767 | x1: 0.827 | x2: 0.820 ($0.51)
+[done] frozen_banking77_f2_s22.json: seed: 0.767 | x1: 0.810 | x2: 0.790 ($0.50)
+[done] frozen_banking77_f2_s23.json: seed: 0.767 | x1: 0.807 | x2: 0.777 ($0.53)
+[done] frozen_banking77_f2_s24.json: seed: 0.767 | x1: 0.813 | x2: 0.817 ($0.49)
+[done] gepa_banking77_f2_s20.json: 0.770
+[done] gepa_banking77_f2_s21.json: 0.777
+[done] gepa_banking77_f2_s22.json: 0.747
+[done] gepa_banking77_f2_s23.json: 0.793
+[done] gepa_banking77_f2_s24.json: 0.793
+[done] frozen_ag_news_f1_s20.json: seed: 0.830 | x1: 0.837 | x2: 0.840 ($0.15)
+[done] frozen_ag_news_f1_s21.json: seed: 0.830 | x1: 0.847 | x2: 0.853 ($0.14)
+[done] frozen_ag_news_f1_s22.json: seed: 0.830 | x1: 0.827 | x2: 0.830 ($0.13)
+[done] frozen_ag_news_f1_s23.json: seed: 0.830 | x1: 0.847 | x2: 0.837 ($0.13)
+[done] frozen_ag_news_f1_s24.json: seed: 0.830 | x1: 0.827 | x2: 0.830 ($0.12)
+[done] frozen_ag_news_f2_s20.json: seed: 0.867 | x1: 0.823 | x2: 0.857 ($0.33)
+[done] frozen_ag_news_f2_s21.json: seed: 0.867 | x1: 0.820 | x2: 0.823 ($0.28)
+[done] frozen_ag_news_f2_s22.json: seed: 0.867 | x1: 0.880 | x2: 0.867 ($0.33)
+[done] frozen_ag_news_f2_s23.json: seed: 0.867 | x1: 0.833 | x2: 0.860 ($0.32)
+[done] frozen_ag_news_f2_s24.json: seed: 0.867 | x1: 0.803 | x2: 0.857 ($0.28)
+[done] gepa_ag_news_f2_s20.json: 0.897
+[done] gepa_ag_news_f2_s21.json: 0.890
+[done] gepa_ag_news_f2_s22.json: 0.877
+[done] gepa_ag_news_f2_s23.json: 0.867
+[done] gepa_ag_news_f2_s24.json: 0.870

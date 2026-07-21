@@ -1,0 +1,36 @@
+{
+ "experiment": "e8",
+ "phase": "frozen",
+ "task": "banking77",
+ "family": "f2",
+ "seed": 22,
+ "arms": {
+  "seed": {
+   "test_accuracy": 0.7667,
+   "test_macro_f1": 0.7377,
+   "unparseable": 4
+  },
+  "x1": {
+   "test_accuracy": 0.81,
+   "test_macro_f1": 0.8019,
+   "unparseable": 1
+  },
+  "x2": {
+   "test_accuracy": 0.79,
+   "test_macro_f1": 0.7917,
+   "unparseable": 1
+  }
+ },
+ "dev_accs": {
+  "input_of_x1": 0.77,
+  "input_of_x2": 0.75
+ },
+ "prompts": {
+  "seed": "Classify the given text into one of these categories: automatic_top_up, balance_not_updated_after_bank_transfer, beneficiary_not_allowed, cancel_transfer, card_payment_fee_charged, card_payment_not_recognised, declined_cash_withdrawal, exchange_rate, exchange_via_app, failed_transfer, get_disposable_virtual_card, get_physical_card, passcode_forgotten, pending_top_up, pending_transfer, receiving_money, reverted_card_payment?, top_up_by_cash_or_cheque, top_up_reverted, topping_up_by_card, transfer_fee_charged, transfer_into_account, transfer_timing, verify_my_identity, verify_source_of_funds.\n\nRespond with exactly one category name from the list above and nothing else.",
+  "x1": "Classify the given text into one of these categories: automatic_top_up, balance_not_updated_after_bank_transfer, beneficiary_not_allowed, cancel_transfer, card_payment_fee_charged, card_payment_not_recognised, declined_cash_withdrawal, exchange_rate, exchange_via_app, failed_transfer, get_disposable_virtual_card, get_physical_card, passcode_forgotten, pending_top_up, pending_transfer, receiving_money, reverted_card_payment?, top_up_by_cash_or_cheque, top_up_reverted, topping_up_by_card, transfer_fee_charged, transfer_into_account, transfer_timing, verify_my_identity, verify_source_of_funds.\n\nCategory definitions:\n- reverted_card_payment?: card payment was refunded, reversed, cancelled, or did not go through due to reversion\n- get_physical_card: requesting a new physical card or asking where/how to get one (NOT about PIN location)\n- passcode_forgotten: forgotten password/passcode for app login or card PIN that user cannot remember\n- beneficiary_not_allowed: unable to add/transfer to a specific beneficiary or account due to restrictions\n- failed_transfer: transfer attempt failed or did not complete (use if beneficiary restriction is unclear)\n- balance_not_updated_after_bank_transfer: balance has not updated/reflected after completing a bank transfer\n- transfer_timing: questions about how long transfers take or processing times\n- receiving_money: about receiving or expecting incoming money from others\n- pending_transfer: existing transfer is stuck in pending status\n- card_payment_not_recognised: card payment on statement is unrecognized or fraudulent\n\nDecision rules:\n- If text mentions \"PIN\" or \"passcode\" location/finding it \u2192 get_physical_card (PIN comes with physical card)\n- If text mentions \"forgot\" or \"can't remember\" PIN/passcode \u2192 passcode_forgotten\n- If text is about payment being refunded/reversed/cancelled/reverted \u2192 reverted_card_payment?\n- If text asks about transfer speed or processing time \u2192 transfer_timing\n- If text says balance not updated AFTER transfer \u2192 balance_not_updated_after_bank_transfer\n- If transfer blocked due to beneficiary \u2192 beneficiary_not_allowed, otherwise \u2192 failed_transfer\n\nRespond with exactly one category name from the list above and nothing else.",
+  "x2": "Classify the given text into one of these categories: automatic_top_up, balance_not_updated_after_bank_transfer, beneficiary_not_allowed, cancel_transfer, card_payment_fee_charged, card_payment_not_recognised, declined_cash_withdrawal, exchange_rate, exchange_via_app, failed_transfer, get_disposable_virtual_card, get_physical_card, passcode_forgotten, pending_top_up, pending_transfer, receiving_money, reverted_card_payment?, top_up_by_cash_or_cheque, top_up_reverted, topping_up_by_card, transfer_fee_charged, transfer_into_account, transfer_timing, verify_my_identity, verify_source_of_funds.\n\nCategory definitions:\n- balance_not_updated_after_bank_transfer: balance hasn't updated/reflected after completing a bank transfer (NOT just asking about speed)\n- beneficiary_not_allowed: unable to add/transfer to a specific beneficiary or account due to restrictions\n- pending_transfer: an existing/initiated transfer is stuck in pending status (NOT just asking how long transfers take)\n- transfer_timing: general questions about how long transfers take or processing times (NOT about a specific pending transfer)\n- failed_transfer: transfer attempt failed or did not complete\n- receiving_money: about receiving or expecting incoming money from others (NOT about friends topping up user's own account)\n- topping_up_by_card: adding money to own account by card, including when friends/others top up the user's account\n- reverted_card_payment?: card payment was refunded, reversed, cancelled, or did not go through due to reversion\n- get_physical_card: requesting a new physical card or asking where/how to get one (NOT about PIN location)\n- passcode_forgotten: forgotten password/passcode for app login or card PIN that user cannot remember\n- card_payment_not_recognised: card payment on statement is unrecognized or fraudulent\n\nDecision rules (apply in order):\n1. If text mentions someone else topping up the user's account \u2192 topping_up_by_card (NOT receiving_money)\n2. If text describes a SPECIFIC transfer already sent that is pending/not arrived \u2192 pending_transfer\n3. If text asks GENERAL question about transfer speed/time without specific pending transfer \u2192 transfer_timing\n4. If text mentions balance not updating AFTER completing a transfer (not just asking about timing) \u2192 balance_not_updated_after_bank_transfer\n5. If text says \"can't transfer to my account\" or \"unable to transfer to another account\" or mentions transfer errors/restrictions \u2192 beneficiary_not_allowed\n6. If transfer failed but no clear beneficiary restriction \u2192 failed_transfer\n7. If text mentions \"forgot\" or \"can't remember\" PIN/passcode \u2192 passcode_forgotten\n8. If text asks where PIN is located \u2192 get_physical_card\n9. If text is about payment being refunded/reversed/cancelled/reverted \u2192 reverted_card_payment?\n\nRespond with exactly one category name from the list above and nothing else."
+ },
+ "cost_usd": 0.5028,
+ "task_lm_calls": 700,
+ "reflection_calls": 2
+}

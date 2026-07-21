@@ -1,0 +1,73 @@
+{
+ "curve": [
+  {
+   "metric_calls": 0,
+   "dev": 0.8
+  },
+  {
+   "metric_calls": 109,
+   "dev": 0.8
+  },
+  {
+   "metric_calls": 227,
+   "dev": 0.8
+  },
+  {
+   "metric_calls": 336,
+   "dev": 0.8
+  },
+  {
+   "metric_calls": 442,
+   "dev": 0.77
+  },
+  {
+   "metric_calls": 548,
+   "dev": 0.79
+  },
+  {
+   "metric_calls": 654,
+   "dev": 0.83
+  },
+  {
+   "metric_calls": 760,
+   "dev": 0.8
+  },
+  {
+   "metric_calls": 866,
+   "dev": 0.85
+  },
+  {
+   "metric_calls": 981,
+   "dev": 0.83
+  },
+  {
+   "metric_calls": 1099,
+   "dev": 0.82
+  },
+  {
+   "metric_calls": 1211,
+   "dev": 0.8
+  },
+  {
+   "metric_calls": 1320,
+   "dev": 0.82
+  },
+  {
+   "metric_calls": 1426,
+   "dev": 0.83
+  },
+  {
+   "metric_calls": 1541,
+   "dev": 0.84
+  }
+ ],
+ "test_accuracy": 0.8067,
+ "cost_usd": 0.3856,
+ "total_metric_calls": 1641,
+ "n_proposals": 17,
+ "optimizer": "gepa",
+ "task": "banking77",
+ "budget": 1600,
+ "seed": 32,
+ "family": "f1"
+}

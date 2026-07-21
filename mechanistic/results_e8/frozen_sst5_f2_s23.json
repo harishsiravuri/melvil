@@ -1,0 +1,36 @@
+{
+ "experiment": "e8",
+ "phase": "frozen",
+ "task": "sst5",
+ "family": "f2",
+ "seed": 23,
+ "arms": {
+  "seed": {
+   "test_accuracy": 0.58,
+   "test_macro_f1": 0.5574,
+   "unparseable": 0
+  },
+  "x1": {
+   "test_accuracy": 0.5867,
+   "test_macro_f1": 0.5754,
+   "unparseable": 0
+  },
+  "x2": {
+   "test_accuracy": 0.59,
+   "test_macro_f1": 0.5718,
+   "unparseable": 0
+  }
+ },
+ "dev_accs": {
+  "input_of_x1": 0.61,
+  "input_of_x2": 0.56
+ },
+ "prompts": {
+  "seed": "Classify the given text into one of these categories: negative, neutral, positive, very negative, very positive.\n\nRespond with exactly one category name from the list above and nothing else.",
+  "x1": "Classify the given text into one of these categories: negative, neutral, positive, very negative, very positive.\n\nCategory definitions:\n- very negative: Extremely harsh criticism, scathing reviews, or expressions of strong disgust/disappointment with little to no redeeming qualities mentioned\n- negative: Clearly unfavorable but not extremely harsh; criticism with moderate language or mixed content that leans unfavorable\n- neutral: Balanced mix of positive and negative elements, purely factual descriptions without clear sentiment, or statements that are boring/unremarkable without strong praise or criticism\n- positive: Clearly favorable opinions with praise, but not effusive; appreciative language that stops short of enthusiasm\n- very positive: Highly enthusiastic praise, exceptional acclaim, or strong expressions of delight with superlative language\n\nDecision rules:\n- Words like \"disappointment,\" \"misfortune,\" \"lacks,\" combined with harsh criticism indicate very negative, not just negative\n- Descriptions that are merely boring, factual, or acknowledge both strengths and weaknesses are neutral, not negative\n- \"Winning,\" \"insightful,\" \"enjoyable\" with clear enthusiasm signal very positive, not merely positive\n- Phrases like \"hard not to be a sucker for\" or \"only intermittently entertaining\" indicate ambivalence, suggesting neutral\n- Default to the more extreme category when sentiment is strong and unambiguous\n\nRespond with exactly one category name from the list above and nothing else.",
+  "x2": "Classify the given text into one of these categories: negative, neutral, positive, very negative, very positive.\n\nCategory definitions:\n- very negative: Extremely harsh criticism with strong negative language (e.g., \"no palpable chemistry,\" \"lacks,\" \"workmanlike in the extreme\"); systematic failures across multiple dimensions; expressions of disgust or severe disappointment\n- negative: Unfavorable opinions with moderate criticism; boring or uninteresting content without redeeming qualities; repetitive or derivative work described negatively\n- neutral: Purely factual observations; descriptions of mixed or ambivalent qualities where positives balance negatives; lukewarm recommendations (\"may prove diverting\"); qualified praise with reservations\n- positive: Clear appreciation and favorable opinions; enjoyable experiences described with warm language; recognition of quality with words like \"deft,\" \"vivid,\" \"understand\"; competent execution praised\n- very positive: Enthusiastic praise with multiple strong positive descriptors; exceptional quality highlighted (e.g., \"lovely,\" \"elegant,\" \"witty,\" \"hugely enjoyable\"); effusive recommendations\n\nDecision rules:\n- Multiple negative attributes or failures in combination indicate very negative, not just negative\n- \"Boring,\" \"plain boring,\" or \"no getting around\" negative facts are negative, not neutral\n- Phrases like \"lovely,\" \"hugely enjoyable,\" \"vivid,\" \"deft,\" or stacked compliments signal very positive\n- Qualified positives like \"may prove diverting\" or \"pleasantly delivered\" are neutral, not positive\n- Words like \"enjoyable,\" \"understand,\" \"pulls off\" with clear approval are positive, not neutral\n- Clever or sarcastic criticism (e.g., \"sales tool,\" \"revenge of the nerds revisited\") is neutral when observational, negative when dismissive\n- When in doubt between adjacent categories, favor the more extreme when language is strong, favor the moderate when language is restrained\n\nRespond with exactly one category name from the list above and nothing else."
+ },
+ "cost_usd": 0.3091,
+ "task_lm_calls": 700,
+ "reflection_calls": 2
+}

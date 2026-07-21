@@ -1,0 +1,31 @@
+[done] frozen_stance_abortion_f1_s20.json: seed: 0.500 | x1: 0.500 | x2: 0.432 ($0.09)
+[done] frozen_stance_abortion_f1_s21.json: seed: 0.500 | x1: 0.464 | x2: 0.471 ($0.09)
+[done] frozen_stance_abortion_f1_s22.json: seed: 0.500 | x1: 0.507 | x2: 0.464 ($0.11)
+[done] frozen_stance_abortion_f1_s23.json: seed: 0.500 | x1: 0.504 | x2: 0.475 ($0.11)
+[done] frozen_stance_abortion_f1_s24.json: seed: 0.500 | x1: 0.507 | x2: 0.521 ($0.12)
+[done] frozen_stance_abortion_f2_s20.json: seed: 0.529 | x1: 0.643 | x2: 0.721 ($0.36)
+[done] frozen_stance_abortion_f2_s21.json: seed: 0.529 | x1: 0.654 | x2: 0.604 ($0.27)
+[done] frozen_stance_abortion_f2_s22.json: seed: 0.529 | x1: 0.679 | x2: 0.696 ($0.30)
+[done] frozen_stance_abortion_f2_s23.json: seed: 0.529 | x1: 0.664 | x2: 0.671 ($0.32)
+[done] frozen_stance_abortion_f2_s24.json: seed: 0.529 | x1: 0.661 | x2: 0.639 ($0.28)
+[done] gepa_stance_abortion_f2_s20.json: 0.654
+[done] gepa_stance_abortion_f2_s21.json: 0.700
+[done] gepa_stance_abortion_f2_s22.json: 0.636
+[done] gepa_stance_abortion_f2_s23.json: 0.725
+[done] gepa_stance_abortion_f2_s24.json: 0.729
+2026/07/21 02:37:02 WARNING dspy.clients.lm: LM response was truncated due to exceeding max_tokens=40. You can inspect the latest LM interactions with `dspy.inspect_history()`. To avoid truncation, consider passing a larger max_tokens when setting up dspy.LM. You may also consider increasing the temperature (currently 0.0)  if the reason for truncation is repetition.
+[done] frozen_sst5_f1_s20.json: seed: 0.547 | x1: 0.590 | x2: 0.567 ($0.13)
+[done] frozen_sst5_f1_s21.json: seed: 0.547 | x1: 0.613 | x2: 0.563 ($0.13)
+[done] frozen_sst5_f1_s22.json: seed: 0.547 | x1: 0.607 | x2: 0.600 ($0.10)
+[done] frozen_sst5_f1_s23.json: seed: 0.547 | x1: 0.537 | x2: 0.533 ($0.13)
+[done] frozen_sst5_f1_s24.json: seed: 0.547 | x1: 0.590 | x2: 0.580 ($0.12)
+[done] frozen_sst5_f2_s20.json: seed: 0.580 | x1: 0.570 | x2: 0.577 ($0.34)
+[done] frozen_sst5_f2_s21.json: seed: 0.580 | x1: 0.593 | x2: 0.583 ($0.32)
+[done] frozen_sst5_f2_s22.json: seed: 0.580 | x1: 0.573 | x2: 0.547 ($0.32)
+[done] frozen_sst5_f2_s23.json: seed: 0.580 | x1: 0.587 | x2: 0.590 ($0.31)
+[done] frozen_sst5_f2_s24.json: seed: 0.580 | x1: 0.590 | x2: 0.577 ($0.33)
+[done] gepa_sst5_f2_s20.json: 0.580
+[done] gepa_sst5_f2_s21.json: 0.580
+[done] gepa_sst5_f2_s22.json: 0.580
+[done] gepa_sst5_f2_s23.json: 0.580
+[done] gepa_sst5_f2_s24.json: 0.577

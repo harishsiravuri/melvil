@@ -1,0 +1,9 @@
+{
+ "experiment": "e8_gepa_baseline",
+ "task": "ag_news",
+ "family": "f2",
+ "seed": 23,
+ "test_accuracy": 0.8667,
+ "test_macro_f1": 0.8682,
+ "cost_usd": 0.5257
+}

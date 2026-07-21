@@ -1,0 +1,36 @@
+{
+ "experiment": "e8",
+ "phase": "frozen",
+ "task": "trec",
+ "family": "f1",
+ "seed": 20,
+ "arms": {
+  "seed": {
+   "test_accuracy": 0.6,
+   "test_macro_f1": 0.6235,
+   "unparseable": 0
+  },
+  "x1": {
+   "test_accuracy": 0.8233,
+   "test_macro_f1": 0.8422,
+   "unparseable": 0
+  },
+  "x2": {
+   "test_accuracy": 0.8133,
+   "test_macro_f1": 0.8018,
+   "unparseable": 0
+  }
+ },
+ "dev_accs": {
+  "input_of_x1": 0.5,
+  "input_of_x2": 0.74
+ },
+ "prompts": {
+  "seed": "Classify the given text into one of these categories: abbreviation, description, entity, human, location, numeric.\n\nRespond with exactly one category name from the list above and nothing else.",
+  "x1": "Classify the given text into one of these categories: abbreviation, description, entity, human, location, numeric.\n\nDefinitions and decision rules:\n- abbreviation: The answer is a shortened form of a word or phrase (e.g., acronym, initialism).\n- numeric: The answer is a specific number, date, measurement, amount, or unit; the expected response is quantitative.\n- location: The answer is a specific place, region, country, city, river, geographical feature, or site\u2014whether physical or political.\n- human: The answer is a person or group of people (e.g., individual, group, organization, team, profession, nationality, or title for a person).\n- entity: The answer is a non-human, non-location object, item, concept, or named thing (e.g., animal, product, book, event, language, brand, company, object). Use this for specific non-human, non-location proper nouns and named concepts.\n- description: The answer is an explanation, definition, manner, reason, process, or other descriptive text, and does not qualify for any of the more specific categories above.\n\nDecision rules:\n- If the answer is a specific person or group (human), always choose 'human' even if it's an organization or group with a name.\n- If the answer is a specific place (location), choose 'location' even if it's part of a description.\n- If the answer is a specific number, date, amount, or quantity, choose 'numeric'.\n- If the answer is a named object, concept, or non-human, non-location entity, choose 'entity'.\n- Only use 'description' if the answer does not fit any other category and is explanatory or definitional in nature.\n- For unclear cases between 'entity' and 'description', favor 'entity' if a specific named thing or concept is sought.\n\nRespond with exactly one category name from the list above and nothing else.",
+  "x2": "Classify the given text as exactly one of: abbreviation, description, entity, human, location, numeric.\n\nCategory definitions:\n- abbreviation: A short form of a word or phrase (acronym, initialism).\n- numeric: A specific number, date, measurement, quantity, or unit; if the answer requires or produces a quantitative value, use this.\n- location: A specific physical or political place, region, country, city, site, or geographical feature; if the answer is a named or definite place, use this.\n- human: A person, group of people, profession, nationality, title, organization, team, or any collective or named group made of humans.\n- entity: A specific non-human, non-location thing, object, animal, product, event, work (e.g. book, film), language, named concept, brand, or company; use this for named things that are not humans or locations.\n- description: An explanation, reason, process, definition, or list; use only if the answer is a general explanation or verbal information that isn\u2019t one of the more precise categories.\n\nDecision Rules:\n- If the answer is a name of a living being that is not a human (e.g., an animal, pet), use 'entity', not 'human'.\n- If the answer is a list of named items, elements, or works (e.g., books, films, products, events), use 'entity' unless all answers are humans (then use 'human'), or all are locations (then use 'location').\n- If the answer requires providing a number, date, probability, measurement, or value, use 'numeric' even when embedded in explanation.\n- If the answer is a named organization or group of people, use 'human'.\n- If the answer is a named place, use 'location', even for specific sites, habitats, or locations within another object.\n- Use 'description' only if the expected answer is an explanation, process, definition, or descriptive text, and not a specific named thing, group, place, number, or abbreviation.\n- When in doubt between 'entity' and 'description', use 'entity' if any specific non-human, non-location named thing or set of named things is sought.\n\nRespond with exactly one category name from the list above and nothing else."
+ },
+ "cost_usd": 0.1369,
+ "task_lm_calls": 700,
+ "reflection_calls": 2
+}

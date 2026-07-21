@@ -1,0 +1,36 @@
+{
+ "experiment": "e8",
+ "phase": "frozen",
+ "task": "sst5",
+ "family": "f1",
+ "seed": 23,
+ "arms": {
+  "seed": {
+   "test_accuracy": 0.5467,
+   "test_macro_f1": 0.4536,
+   "unparseable": 0
+  },
+  "x1": {
+   "test_accuracy": 0.5367,
+   "test_macro_f1": 0.4882,
+   "unparseable": 0
+  },
+  "x2": {
+   "test_accuracy": 0.5333,
+   "test_macro_f1": 0.5009,
+   "unparseable": 0
+  }
+ },
+ "dev_accs": {
+  "input_of_x1": 0.55,
+  "input_of_x2": 0.56
+ },
+ "prompts": {
+  "seed": "Classify the given text into one of these categories: negative, neutral, positive, very negative, very positive.\n\nRespond with exactly one category name from the list above and nothing else.",
+  "x1": "Classify the given text into one of these categories: negative, neutral, positive, very negative, very positive.\n\nDefinitions and decision rules:\n- \"very positive\": The text expresses extremely strong, enthusiastic, or unreserved praise, delight, or positive emotion. Use this only for unambiguously glowing or highly emphatic positivity.\n- \"positive\": The text expresses clear approval, enjoyment, or praise, but with less intensity than \"very positive\". Use for moderate to strong, but not extreme, positivity.\n- \"neutral\": The text is balanced, factual, unemotional, ambivalent, or lacks clear positive or negative judgment. If both positive and negative aspects are mentioned without clear emphasis, or if the tone is noncommittal, choose neutral.\n- \"negative\": The text expresses clear disapproval, criticism, or negative sentiment without strong intensity. Use for moderate to strong, but not extreme, negativity.\n- \"very negative\": The text expresses extremely strong, emphatic negative sentiment, intense criticism, or severe disappointment. Reserve for texts that convey deep dislike or harsh condemnation.\n\nDecision rules:\n- If torn between \"positive\" and \"very positive\" (or between \"negative\" and \"very negative\"), only choose the \"very\" category if the language is clearly extreme, emphatic, or emotionally charged.\n- If a mild positive or negative assessment is counterbalanced by qualifying language, sarcasm, or mixed signals, prefer \"neutral.\"\n- Always select the most intensely valenced category supported by the text; avoid defaulting to neutral or moderate categories if strong sentiment is present.\n\nRespond with exactly one category name from the list above and nothing else.",
+  "x2": "Classify the given text into one of these categories: negative, neutral, positive, very negative, very positive.\n\nDefinitions and rules:\n\n- \"very positive\": The text conveys extremely strong enthusiasm, joy, or passionate praise\u2014look for superlative expressions, highly charged positive language, or emotional intensity that goes beyond simple approval. Use \"very positive\" if positivity is unmistakable and emphatic, even if brief.\n- \"positive\": The text shows clear approval, praise, enjoyment, or liking, but with moderate or reserved tone. Use \"positive\" for texts that are unambiguously favorable but not intense or emotionally heightened.\n- \"neutral\": The text is balanced, noncommittal, descriptive, factual, or includes both positive and negative elements without clear lean. If a positive or negative assessment is qualified, muted, understated, downplayed, or mixed with other viewpoints, choose \"neutral.\"\n- \"negative\": The text communicates clear criticism, disappointment, or dislike with moderate force. Use it for texts that are plainly unfavorable but not extreme, vitriolic, or emotionally charged.\n- \"very negative\": The text expresses intense disapproval, anger, harshness, strong disappointment, or scathing criticism\u2014identify highly emotional negative language, strong condemnation, or extreme dissatisfaction. Use \"very negative\" if the negative sentiment is powerful or emphatically worded.\n\nDecision rules:\n- Always prioritize emotional intensity: When text contains unmistakably strong or passionate sentiment, select the corresponding \"very\" category\u2014even if the statement is concise or hyperbolic.\n- If deciding between \"positive\"/\"very positive\" or \"negative\"/\"very negative,\" look specifically for heightened emotional language (e.g., superlatives, exclamations, intensity markers) before choosing a \"very\" category; do not base this solely on the number of positive/negative words.\n- Do not default to \"neutral\" if there is clear positive or negative sentiment, unless the sentiment is ambiguous, weak, mixed, or heavily qualified. Mild praise or faint criticism, especially with hedges, sarcasm, or ambiguity, should be classified as \"neutral.\"\n- For texts that simply state facts, describe, or lack discernible sentiment, choose \"neutral.\"\n- When the text is ambiguous or borderline, prefer the less extreme (non-\"very\") category unless strong emotional intensity or emphasis is clearly present.\n\nRespond with exactly one category name from the list above and nothing else."
+ },
+ "cost_usd": 0.134,
+ "task_lm_calls": 700,
+ "reflection_calls": 2
+}

@@ -1,0 +1,38 @@
+{
+ "curve": [
+  {
+   "metric_calls": 0,
+   "dev": 0.93
+  },
+  {
+   "metric_calls": 109,
+   "dev": 0.93
+  },
+  {
+   "metric_calls": 233,
+   "dev": 0.95
+  },
+  {
+   "metric_calls": 369,
+   "dev": 0.93
+  },
+  {
+   "metric_calls": 511,
+   "dev": 0.94
+  },
+  {
+   "metric_calls": 701,
+   "dev": 0.95
+  }
+ ],
+ "test_accuracy": 0.96,
+ "best_prompt": "You are given math word problems to solve. Your task is to solve each problem in a detailed, step-by-step manner, showing all reasoning and calculations. Pay careful attention to the quantitative aspects of the problem and ensure all information is used appropriately.\n\nSpecifically, follow these guidelines:\n\n- Carefully extract all relevant numeric information from the word problem, such as quantities, measurements, dates, or other numerical data.\n- Clearly identify and list the calculation steps needed. Show each intermediate result explicitly, so the logic and flow of your solution is transparent.\n- If the problem involves a sequence of operations, perform and display each one separately (e.g., cumulative addition of quantities, division for averages).\n- When the question asks for an average, add all relevant numeric values, show the sum, then divide explicitly by the correct count and show the resulting calculation.\n- If the problem expects an integer answer and your calculation yields a number with decimals, report only the integer if it is standard in context. Round or truncate only as is appropriate for the problem's context, and clearly show what you are doing.\n- State any necessary assumptions, such as whether numbers should be rounded, explicitly before the final calculation.\n- Present only the final answer in the format '#### <number>' on a new line, ensuring the number matches the expected format (e.g., '#### 4' instead of '#### 4.00').\n- Do not add any commentary, summary, or explanation after the final answer.\n\nExample expected output for a rainfall average over five months:\n\nStep 1: Add together all rainfall amounts:\n3.79 + 4.5 = 8.29\n8.29 + 3.95 = 12.24\n12.24 + 3.09 = 15.33\n15.33 + 4.67 = 20.00\n\nStep 2: Divide total rainfall by the number of months:\n20.00 / 5 = 4\n\n#### 4",
+ "cost_usd": 0.5451,
+ "total_metric_calls": 801,
+ "n_proposals": 16,
+ "optimizer": "gepa",
+ "task": "gsm8k",
+ "budget": 800,
+ "seed": 31,
+ "family": "f1"
+}

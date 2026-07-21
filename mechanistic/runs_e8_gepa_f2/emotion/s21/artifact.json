@@ -1,0 +1,218 @@
+{
+ "schema_version": 1,
+ "artifact_id": "88bb6758e44a",
+ "parent_id": null,
+ "task_name": "emotion",
+ "created_at": "2026-07-21T01:40:49-0500",
+ "library": {
+  "name": "melvil",
+  "version": "0.3.0"
+ },
+ "models": {
+  "task": "openrouter/anthropic/claude-haiku-4.5",
+  "reflection": "openrouter/anthropic/claude-sonnet-4.5"
+ },
+ "budget": {
+  "metric_calls_budget": 800,
+  "metric_calls_spent": 842,
+  "cost_usd": 0.3642,
+  "task_lm_usage": {
+   "model": "openrouter/anthropic/claude-haiku-4.5",
+   "prompt_tokens": 297264,
+   "completion_tokens": 3223,
+   "calls": 741,
+   "cache_hits": 201,
+   "cost_usd": 0.313379
+  },
+  "reflection_lm_usage": {
+   "model": "openrouter/anthropic/claude-sonnet-4.5",
+   "prompt_tokens": 3364,
+   "completion_tokens": 2714,
+   "calls": 7,
+   "cache_hits": 0,
+   "cost_usd": 0.050802
+  },
+  "opt_seconds": 165.1
+ },
+ "scores": {
+  "dev_accuracy": 0.65,
+  "dev_macro_f1": 0.4584,
+  "per_label_dev": {
+   "anger": {
+    "precision": 0.8,
+    "recall": 0.6154,
+    "f1": 0.6957,
+    "support": 13
+   },
+   "fear": {
+    "precision": 0.5263,
+    "recall": 0.8333,
+    "f1": 0.6452,
+    "support": 12
+   },
+   "joy": {
+    "precision": 0.6585,
+    "recall": 0.7941,
+    "f1": 0.72,
+    "support": 34
+   },
+   "love": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "support": 8
+   },
+   "sadness": {
+    "precision": 0.6897,
+    "recall": 0.6897,
+    "f1": 0.6897,
+    "support": 29
+   },
+   "surprise": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "support": 4
+   }
+  },
+  "seed_dev_accuracy": 0.6,
+  "dev_accuracy_quarantined": null
+ },
+ "config_hash": "9f89a7f45744",
+ "config": {
+  "task_model": "openrouter/anthropic/claude-haiku-4.5",
+  "reflection_model": "openrouter/anthropic/claude-sonnet-4.5",
+  "budget": "light",
+  "seed": 21,
+  "features": {
+   "codebook": false,
+   "confusion_reflection": false,
+   "hard_example_mining": false
+  },
+  "num_threads": 8,
+  "run_dir": "/Users/harish/Documents/Claude/Projects/6s/labelsmith/mechanistic/runs_e8_gepa_f2/emotion/s21",
+  "task_temperature": 0.0,
+  "task_max_tokens": 40,
+  "reflection_temperature": 1.0,
+  "reflection_max_tokens": 8000,
+  "reflection_minibatch_size": 3,
+  "max_exemplars": 6,
+  "mining_llm_screen": true,
+  "prices": {},
+  "metric_calls": 800
+ },
+ "label_names": [
+  "anger",
+  "fear",
+  "joy",
+  "love",
+  "sadness",
+  "surprise"
+ ],
+ "components": {
+  "instruction": "Classify the given text into one of these categories: anger, fear, joy, love, sadness, surprise.\n\nImportant guidelines:\n- Focus on the primary emotion being expressed in the text, based on the specific words and context used.\n- When someone expresses feeling \"offended\" by repeated comments or behavior, this should be classified as 'anger' rather than 'sadness'. Feeling offended indicates irritation and anger at being disrespected or insulted.\n- When someone discusses not wanting to do something or expresses reluctance about a specific action (particularly in contexts involving duty, obligation, or social responsibility), this often reflects 'fear' rather than 'sadness'. This may indicate anxiety or apprehension about the situation.\n- Pay careful attention to key emotional indicators:\n  - \"offended\" → typically indicates anger\n  - reluctance or not wanting to fulfill obligations → typically indicates fear\n  - expressions of discomfort in interpersonal contexts → consider the specific nature of the discomfort\n- Distinguish between:\n  - Anger: irritation, feeling offended, being disrespected\n  - Fear: anxiety, reluctance, apprehension about situations or obligations\n  - Sadness: sorrow, disappointment, melancholy\n- Analyze the underlying emotional state by identifying the core feeling driving the statement, not just surface-level descriptors.\n- Consider the behavioral implications: fear often relates to avoidance or reluctance, anger relates to offense or violation of boundaries, sadness relates to loss or disappointment."
+ },
+ "exemplars": [],
+ "confusion": {
+  "labels": [
+   "anger",
+   "fear",
+   "joy",
+   "love",
+   "sadness",
+   "surprise"
+  ],
+  "matrix": [
+   [
+    8,
+    1,
+    1,
+    0,
+    2,
+    0,
+    1
+   ],
+   [
+    0,
+    10,
+    1,
+    0,
+    1,
+    0,
+    0
+   ],
+   [
+    1,
+    2,
+    27,
+    0,
+    4,
+    0,
+    0
+   ],
+   [
+    1,
+    1,
+    5,
+    0,
+    1,
+    0,
+    0
+   ],
+   [
+    0,
+    4,
+    5,
+    0,
+    20,
+    0,
+    0
+   ],
+   [
+    0,
+    1,
+    2,
+    0,
+    1,
+    0,
+    0
+   ]
+  ],
+  "unparseable_column": true
+ },
+ "curve": [
+  {
+   "metric_calls": 0,
+   "dev_score": 0.6
+  },
+  {
+   "metric_calls": 106,
+   "dev_score": 0.58
+  },
+  {
+   "metric_calls": 212,
+   "dev_score": 0.65
+  },
+  {
+   "metric_calls": 318,
+   "dev_score": 0.63
+  },
+  {
+   "metric_calls": 424,
+   "dev_score": 0.59
+  },
+  {
+   "metric_calls": 530,
+   "dev_score": 0.64
+  },
+  {
+   "metric_calls": 636,
+   "dev_score": 0.63
+  },
+  {
+   "metric_calls": 742,
+   "dev_score": 0.61
+  }
+ ],
+ "notes": ""
+}

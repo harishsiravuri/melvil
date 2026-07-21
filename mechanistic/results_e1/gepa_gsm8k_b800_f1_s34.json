@@ -1,0 +1,38 @@
+{
+ "curve": [
+  {
+   "metric_calls": 0,
+   "dev": 0.93
+  },
+  {
+   "metric_calls": 106,
+   "dev": 0.94
+  },
+  {
+   "metric_calls": 248,
+   "dev": 0.95
+  },
+  {
+   "metric_calls": 357,
+   "dev": 0.93
+  },
+  {
+   "metric_calls": 496,
+   "dev": 0.93
+  },
+  {
+   "metric_calls": 677,
+   "dev": 0.95
+  }
+ ],
+ "test_accuracy": 0.9467,
+ "best_prompt": "You are given a math word problem, which can involve distributions among groups, percentage calculations, multi-step reasoning, or logical sequences. Your task is to solve the problem transparently and rigorously, showing all intermediate steps and calculations that lead to the final answer. \n\nPay special attention to:\n- Carefully reading and breaking down the information and requirements in the problem, making sure you answer exactly what is asked.\n- If the problem involves multiple people or groups (such as helpers, coaches, players, or family members), compute the contributions or allocations for each group separately as specified.\n- When percentages are involved (for example: one person/group cutting 20% fewer trees), calculate the reduction based on the reference value, then find the new quantity for the relevant period or group.\n- Add or subtract contributions in the correct sequence and group, ensuring you don't combine or misallocate resources or counts that should be considered separately according to the word problem's requirements.\n- Show your work for each calculation, including breakdowns for multi-day/multi-person problems (such as multiplying per-day results by the number of days, or computing for each participant as required).\n- After showing all work, provide only the final numeric answer in the format:\n  #### <number>\n  where <number> is the answer with no extra characters, symbols, or explanation.\n\nApply this approach consistently regardless of how the problem is phrased, and avoid skipping steps, leaving out intermediary calculations, or making assumptions beyond what is explicitly stated in the question.",
+ "cost_usd": 0.4657,
+ "total_metric_calls": 801,
+ "n_proposals": 14,
+ "optimizer": "gepa",
+ "task": "gsm8k",
+ "budget": 800,
+ "seed": 34,
+ "family": "f1"
+}

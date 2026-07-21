@@ -1,0 +1,36 @@
+{
+ "experiment": "e8",
+ "phase": "frozen",
+ "task": "massive",
+ "family": "f2",
+ "seed": 22,
+ "arms": {
+  "seed": {
+   "test_accuracy": 0.8333,
+   "test_macro_f1": 0.8564,
+   "unparseable": 1
+  },
+  "x1": {
+   "test_accuracy": 0.86,
+   "test_macro_f1": 0.8798,
+   "unparseable": 1
+  },
+  "x2": {
+   "test_accuracy": 0.87,
+   "test_macro_f1": 0.886,
+   "unparseable": 0
+  }
+ },
+ "dev_accs": {
+  "input_of_x1": 0.8,
+  "input_of_x2": 0.86
+ },
+ "prompts": {
+  "seed": "Classify the given text into one of these categories: alarm_query, alarm_set, calendar_query, calendar_remove, calendar_set, cooking_recipe, datetime_query, email_query, email_sendemail, general_quirky, iot_hue_lightoff, lists_createoradd, lists_query, lists_remove, music_query, news_query, play_audiobook, play_music, play_podcasts, play_radio, qa_currency, qa_definition, qa_factoid, qa_stock, recommendation_events, recommendation_locations, social_post, takeaway_order, transport_query, weather_query.\n\nRespond with exactly one category name from the list above and nothing else.",
+  "x1": "Classify the given text into one of these categories: alarm_query, alarm_set, calendar_query, calendar_remove, calendar_set, cooking_recipe, datetime_query, email_query, email_sendemail, general_quirky, iot_hue_lightoff, lists_createoradd, lists_query, lists_remove, music_query, news_query, play_audiobook, play_music, play_podcasts, play_radio, qa_currency, qa_definition, qa_factoid, qa_stock, recommendation_events, recommendation_locations, social_post, takeaway_order, transport_query, weather_query.\n\nKey distinctions:\n- calendar_set: setting reminders or calendar events (including \"remind me to\" phrases). Use this for reminder requests, not alarm_set.\n- alarm_set: setting alarms for waking up or time-based alerts without specific event context.\n- calendar_query: asking about scheduled events or checking calendar.\n- social_post: posting, sharing, or updating social media content (tweets, status updates, posts).\n- email_sendemail: sending, replying to, composing, or editing emails. Use this over email_query when the intent is to perform an email action.\n- email_query: checking, reading, or searching for existing emails without taking action.\n- general_quirky: questions about people, celebrities, opinions, personal topics, or conversational queries that don't fit other categories. Use this for \"tell me about [person]\" or subjective questions.\n- qa_factoid: objective factual questions with specific answers (who/what/when/where/how facts).\n- recommendation_locations: requests for place recommendations or location suggestions.\n- play_audiobook: playing audiobooks specifically.\n- play_podcasts: playing podcasts specifically.\n- play_music: playing songs, albums, artists, or music.\n- music_query: asking about music information without playing.\n\nDecision priority: If text involves creating/setting/sending content, choose the action category over query category. Choose the most specific category when multiple seem applicable.\n\nRespond with exactly one category name from the list above and nothing else.",
+  "x2": "Classify the given text into one of these categories: alarm_query, alarm_set, calendar_query, calendar_remove, calendar_set, cooking_recipe, datetime_query, email_query, email_sendemail, general_quirky, iot_hue_lightoff, lists_createoradd, lists_query, lists_remove, music_query, news_query, play_audiobook, play_music, play_podcasts, play_radio, qa_currency, qa_definition, qa_factoid, qa_stock, recommendation_events, recommendation_locations, social_post, takeaway_order, transport_query, weather_query.\n\nCategory definitions:\n- alarm_set: setting alarms for waking up or time-based alerts without specific event context.\n- alarm_query: checking or asking about existing alarms.\n- calendar_set: setting reminders, calendar events, or scheduling (including \"remind me to\" phrases, event creation, and requests for advance notice). Use this even for brief event mentions like \"event calendar [name] [day]\".\n- calendar_query: asking about scheduled events or checking calendar without creating new entries.\n- calendar_remove: deleting or canceling calendar events or reminders.\n- cooking_recipe: requesting recipes or cooking instructions.\n- datetime_query: asking about current time, date, day of week, or timezone.\n- email_sendemail: sending, composing, replying to, or editing emails.\n- email_query: checking, reading, or searching existing emails without taking action.\n- general_quirky: conversational queries, opinions, personal questions, or subjective topics that don't fit structured categories.\n- iot_hue_lightoff: controlling smart lights or turning lights off.\n- lists_createoradd: creating lists or adding items to lists.\n- lists_query: checking or reading list contents.\n- lists_remove: removing items from lists.\n- music_query: asking about music information without playing.\n- news_query: requesting news, headlines, or news updates.\n- play_audiobook: playing audiobooks.\n- play_music: playing songs, albums, artists, or music.\n- play_podcasts: playing podcasts.\n- play_radio: playing radio stations.\n- qa_currency: currency conversion questions.\n- qa_definition: asking what something is, how something looks, descriptions of things, or explanations about concepts (e.g., \"what is X\", \"how does X look\", \"give me some idea about X\").\n- qa_factoid: objective factual questions about specific people, places, events, or things (e.g., \"who is X married to\", \"who is actor X\", \"when did X happen\"). Use this for questions about celebrities, public figures, or verifiable facts about specific individuals.\n- qa_stock: stock price or stock market questions.\n- recommendation_events: requesting event recommendations or suggestions.\n- recommendation_locations: requesting place or location recommendations.\n- social_post: posting, sharing, tweeting, or updating social media content. Use this for brief phrases that appear to be social media content or status updates, even if context is minimal.\n- takeaway_order: ordering food for delivery or takeout.\n- transport_query: asking about transportation, directions, traffic, or travel.\n- weather_query: asking about weather conditions or forecasts.\n\nDecision rules:\n1. For celebrity or public figure questions (e.g., \"who is X married to\", \"do you know actor X\"): use qa_factoid, not general_quirky.\n2. For definition/description questions (e.g., \"how does X look\", \"what is X\", \"idea about X\"): use qa_definition, not general_quirky.\n3. For calendar-related text mentioning events or scheduling: use calendar_set if creating/scheduling, calendar_query only if explicitly checking existing calendar.\n4. For brief phrases that could be social media posts or updates: use social_post, not general_quirky.\n5. Action categories (set/send/create) take priority over query categories when both could apply.\n6. Choose the most specific category when multiple seem applicable.\n\nRespond with exactly one category name from the list above and nothing else."
+ },
+ "cost_usd": 0.5418,
+ "task_lm_calls": 700,
+ "reflection_calls": 2
+}

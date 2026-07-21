@@ -1,0 +1,36 @@
+{
+ "experiment": "e8",
+ "phase": "frozen",
+ "task": "clinc150",
+ "family": "f1",
+ "seed": 22,
+ "arms": {
+  "seed": {
+   "test_accuracy": 0.98,
+   "test_macro_f1": 0.9799,
+   "unparseable": 0
+  },
+  "x1": {
+   "test_accuracy": 0.99,
+   "test_macro_f1": 0.99,
+   "unparseable": 0
+  },
+  "x2": {
+   "test_accuracy": 0.98,
+   "test_macro_f1": 0.9798,
+   "unparseable": 0
+  }
+ },
+ "dev_accs": {
+  "input_of_x1": 0.98,
+  "input_of_x2": 0.97
+ },
+ "prompts": {
+  "seed": "Classify the given text into one of these categories: alarm, apr, balance, book_flight, book_hotel, calculator, calories, car_rental, cook_time, credit_limit, credit_score, definition, direct_deposit, freeze_account, lost_luggage, meeting_schedule, pay_bill, payday, pto_request, recipe, report_fraud, report_lost_card, restaurant_reservation, restaurant_reviews, rewards_balance, taxes, timer, transfer, travel_suggestion, weather.\n\nRespond with exactly one category name from the list above and nothing else.",
+  "x1": "Classify the given text into one of these categories: alarm, apr, balance, book_flight, book_hotel, calculator, calories, car_rental, cook_time, credit_limit, credit_score, definition, direct_deposit, freeze_account, lost_luggage, meeting_schedule, pay_bill, payday, pto_request, recipe, report_fraud, report_lost_card, restaurant_reservation, restaurant_reviews, rewards_balance, taxes, timer, transfer, travel_suggestion, weather.\n\nCategory clarifications for accurate classification:\n- payday: Use if the text is about the date payment is received from an employer (e.g., questions about when or what day salary/wages arrive). \n- direct_deposit: Use if the text asks about details or issues related to bank transfers of salary or other payments, such as setup, status, or confirmation of deposit occurring, not about the payday itself.\n- pto_request: Use if the text is about requesting time off work, leave, or vacation days from an employer (including implied requests to take leave or vacation); do NOT use for general travel interest or vacation plans.\n- travel_suggestion: Use if the text requests or discusses advice, recommendations, or options for travel destinations or trips generally, NOT if the user is explicitly seeking time off from work.\nIn case of ambiguity between these, prioritize: \n1. payday for payday date questions;\n2. pto_request for any workplace leave or vacation time request;\n3. direct_deposit for questions about actual deposits of salary or payments;\n4. travel_suggestion for general travel interests not tied to employment or leave.\nAll other categories should be chosen by clear match to their names.\n\nRespond with exactly one category name from the list above and nothing else.",
+  "x2": "Classify the given text into exactly one of these categories: alarm, apr, balance, book_flight, book_hotel, calculator, calories, car_rental, cook_time, credit_limit, credit_score, definition, direct_deposit, freeze_account, lost_luggage, meeting_schedule, pay_bill, payday, pto_request, recipe, report_fraud, report_lost_card, restaurant_reservation, restaurant_reviews, rewards_balance, taxes, timer, transfer, travel_suggestion, weather.\n\nCategory clarifications and rules:\n\n- payday: Use only for questions about the date, day, or timing that salary/wages are received from an employer, or when the next/last payment is \"paid out\". If the user is asking when payment is scheduled or about their payday date, choose payday.\n- direct_deposit: Use only if the text is about status, setup, details, or confirmation of electronic bank deposit of pay or other payments (e.g. asking if a payment has landed, why a deposit isn't visible, etc). If the user wants to know \"when did they deposit my last salary,\" classify as direct_deposit (focus is on deposit, not payday schedule).\n- pay_bill: Use only for explicit requests or instructions to pay bills, make payments, or inquiries about bill pay methods\u2014not salary or payroll topics.\n- book_hotel: Use for any request to find, book, or reserve a hotel or lodging, including references to hotel reviews or wanting to find hotels with good reviews. Do NOT use restaurant_reviews for hotel review requests.\n- restaurant_reviews: Use only if the user is clearly seeking or discussing reviews of restaurants (not hotels or other businesses).\n- pto_request: Use if the text involves requesting, taking, or inquiring about time off, leave, or vacation from an employer.\n- travel_suggestion: Use if the user requests general travel recommendations or ideas for trips without workplace leave/vacation context. Do not use for booking concrete travel or for work leave requests.\n- All other categories: Select strictly by closest category name match (e.g. timer for countdowns, transfer for moving funds, etc).\n\nTie-breakers (use in this order, if needed):\n1. payday for questions about when pay arrives;\n2. pto_request for requests related to leave or vacation from work;\n3. direct_deposit for questions about payments being transferred to a bank account or setup/status of such deposits;\n4. pay_bill for instructions or options to pay bills;\n5. book_hotel rather than restaurant_reviews if the user wants hotel info with reviews.\n\nRespond with exactly one category name from the list above and nothing else."
+ },
+ "cost_usd": 0.1422,
+ "task_lm_calls": 700,
+ "reflection_calls": 2
+}

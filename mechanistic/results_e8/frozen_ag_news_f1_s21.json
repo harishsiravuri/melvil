@@ -1,0 +1,36 @@
+{
+ "experiment": "e8",
+ "phase": "frozen",
+ "task": "ag_news",
+ "family": "f1",
+ "seed": 21,
+ "arms": {
+  "seed": {
+   "test_accuracy": 0.83,
+   "test_macro_f1": 0.8233,
+   "unparseable": 0
+  },
+  "x1": {
+   "test_accuracy": 0.8467,
+   "test_macro_f1": 0.8423,
+   "unparseable": 0
+  },
+  "x2": {
+   "test_accuracy": 0.8533,
+   "test_macro_f1": 0.8495,
+   "unparseable": 0
+  }
+ },
+ "dev_accs": {
+  "input_of_x1": 0.84,
+  "input_of_x2": 0.91
+ },
+ "prompts": {
+  "seed": "Classify the given text into one of these categories: Business, Sci/Tech, Sports, World.\n\nRespond with exactly one category name from the list above and nothing else.",
+  "x1": "Classify the given text into one of these categories: Business, Sci/Tech, Sports, World.\n\nCategory definitions:\n- Business: Topics related to commerce, finance, companies, markets, the economy, or business operations. Include ONLY if the primary focus is on economic activities, business news, corporate financials, or industry updates.\n- Sci/Tech: Subjects focused on science (natural, physical, life, environmental), scientific discoveries, research, scientists, technology, computing, electronics, engineering, or technological products. Prefer this category for texts about technological devices or internet/telecom infrastructure, unless the core topic is business strategy or company financials.\n- Sports: Anything primarily about sports, teams, athletes, competitions, games, sporting events, or the business of sports.\n- World: International, national, or local news unrelated to the other categories above, including politics, disasters, environment, social issues, general world events, and human or animal interest stories.\n\nDecision rules:\n- If a text describes technology or scientific issues affecting society or the environment (such as internet outages, animal research, environmental studies), assign to Sci/Tech unless the emphasis is clearly on politics, law, or social issues (then assign to World).\n- If a text discusses tech devices or internet services (e.g., PayPal problems, cable breaks, falling electronics prices), assign to Sci/Tech unless the main point is about business strategy or company performance (then assign Business).\n- For texts about the business or purchase of sports teams, choose Sports if it is primarily a sporting context.\n- When two categories seem equally valid, prioritize: Sci/Tech > Business > Sports > World.\n\nRespond with exactly one category name from the list above and nothing else.",
+  "x2": "Classify the given text into exactly one of these categories: Business, Sci/Tech, Sports, World.\n\nCategory definitions:\n- Business: Commerce, finance, companies, markets, economic activities, business operations, or company strategies/financial performance. Include only if the primary focus is on economics, company decisions, corporate news, or business aspects, even when discussing technology or sports.\n- Sci/Tech: Science (natural, physical, life, environmental), research, discoveries, scientists, technology, electronics, engineering, technological products, internet/telecom services or problems, computing, or the use/impact of technology/science in society or nature (e.g. internet outages, environmental studies, animal research, technology-driven trends). If a text discusses a technical issue, research, or technological product\u2014even in a business or news context\u2014assign to Sci/Tech unless the main emphasis is business outcomes or politics.\n- Sports: Primarily about sports, teams, athletes, competitions, scores, events, the culture of sports, or the business/ownership of sporting entities. Assign here unless the text's main perspective is economic/commercial outside a sporting context.\n- World: All other news including politics, disasters, crime, social issues, general interest, human/animal stories, international/national/local affairs not primarily about business, science/tech, or sports.\n\nDecision rules:\n- For technology- or science-driven stories (e.g. payment systems, technical failures, internet service issues, research on animals/environment), prefer Sci/Tech unless the core focus is corporate strategy, commercial performance, or politics/laws (assign Business or World accordingly).\n- When tech companies or devices are involved, assign Sci/Tech if the main issue is technical, scientific, or product/service related; assign Business if primarily about business strategies/financials (e.g. resignations, company performance); assign World if the main emphasis is political or legal.\n- For environmental or animal stories, assign Sci/Tech if framed as scientific/research/technological; assign World if discussed as social, political, or legal issues.\n- For unrest or protests related to sports, assign Sports if directly about sporting participants, events, or organizations; assign World if mainly about broader social or political conflict.\n- When two categories appear equally valid, always prioritize: Sci/Tech > Business > Sports > World.\n\nRespond with exactly one category name from the list above and nothing else."
+ },
+ "cost_usd": 0.1442,
+ "task_lm_calls": 700,
+ "reflection_calls": 2
+}

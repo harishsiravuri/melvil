@@ -1,0 +1,36 @@
+{
+ "experiment": "e8",
+ "phase": "frozen",
+ "task": "sst5",
+ "family": "f2",
+ "seed": 22,
+ "arms": {
+  "seed": {
+   "test_accuracy": 0.58,
+   "test_macro_f1": 0.5574,
+   "unparseable": 0
+  },
+  "x1": {
+   "test_accuracy": 0.5733,
+   "test_macro_f1": 0.552,
+   "unparseable": 0
+  },
+  "x2": {
+   "test_accuracy": 0.5467,
+   "test_macro_f1": 0.5235,
+   "unparseable": 1
+  }
+ },
+ "dev_accs": {
+  "input_of_x1": 0.61,
+  "input_of_x2": 0.66
+ },
+ "prompts": {
+  "seed": "Classify the given text into one of these categories: negative, neutral, positive, very negative, very positive.\n\nRespond with exactly one category name from the list above and nothing else.",
+  "x1": "Classify the given text into one of these categories: negative, neutral, positive, very negative, very positive.\n\nCategory definitions:\n- very negative: Extremely harsh criticism, strong disappointment, or severe condemnation with intense negative language\n- negative: Clear criticism or disapproval, but not extreme; may acknowledge minor positives while being predominantly critical\n- neutral: Balanced mix of positive and negative elements, factual descriptions without clear sentiment, or statements that shock/surprise without obvious approval or disapproval\n- positive: Clear praise or approval, but measured; may note some flaws while being predominantly favorable\n- very positive: Exceptional praise, enthusiastic endorsement, or glowing recommendations with intensely positive language\n\nDecision rules:\n- Words like \"disappointment,\" \"misfortune,\" \"lacks,\" combined with harsh criticism indicate very negative, not just negative\n- If text is purely descriptive, boring, or restates facts without expressing sentiment, classify as neutral, not negative\n- Phrases like \"winning,\" \"insightful,\" \"enjoyable,\" \"frothy\" combined with strong praise indicate very positive, not just positive\n- \"Intermittently entertaining,\" \"hard not to be a sucker,\" or \"nostalgia\" without strong endorsement suggests neutral, not positive\n- When intensity is ambiguous, favor the extreme categories (very negative/very positive) if multiple strong sentiment words are present\n\nRespond with exactly one category name from the list above and nothing else.",
+  "x2": "Classify the given text into one of these categories: negative, neutral, positive, very negative, very positive.\n\nCategory definitions:\n- very negative: Extreme criticism with multiple harsh negative descriptors (e.g., \"no chemistry,\" \"lacks,\" \"workmanlike in the extreme,\" \"more silly than scary\"). Look for combinations of criticism targeting multiple aspects (script, pacing, performances, chemistry). Simple statements of boredom or disappointment do NOT automatically qualify.\n- negative: Clear criticism or disapproval, usually targeting one main aspect. May acknowledge minor positives while being predominantly critical.\n- neutral: Factual descriptions without sentiment, simple boredom (\"just plain boring\"), observations about derivativeness, or mixed signals that cancel out (charm + creepy, enjoyable + problematic). Avoid over-interpreting mild negativity as stronger sentiment.\n- positive: Clear praise with some qualifiers or measured approval. Words like \"usual,\" \"pleasant,\" \"predictable,\" \"low-key,\" or \"understand/knows\" combined with approval indicate positive, not neutral. Look for underlying endorsement even when language is understated.\n- very positive: Multiple enthusiastic praise words in combination (e.g., \"lovely + elegant + witty + romantic + hugely enjoyable,\" \"enjoyably frothy,\" \"vivid + deft\"). Two or more strong positive descriptors typically indicate very positive rather than just positive.\n\nDecision rules:\n- For very negative: Require compound criticism (multiple flaws mentioned) or extremely harsh language, not just single complaints\n- For neutral vs negative: If text is purely descriptive, notes derivativeness without judgment, or is simply boring without elaboration, classify as neutral\n- For positive vs neutral: Understated or qualified praise (\"pleasant,\" \"low-key,\" implicit approval) is still positive if the overall judgment is favorable\n- For very positive vs positive: Count distinct positive descriptors\u2014three or more strong praise words typically indicate very positive\n- Mixed signals (positive + negative in tension) default to neutral only if they genuinely contradict; otherwise favor the dominant sentiment\n\nRespond with exactly one category name from the list above and nothing else."
+ },
+ "cost_usd": 0.3186,
+ "task_lm_calls": 700,
+ "reflection_calls": 2
+}

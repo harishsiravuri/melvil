@@ -1,0 +1,177 @@
+{
+ "schema_version": 1,
+ "artifact_id": "7b119c232846",
+ "parent_id": null,
+ "task_name": "ag_news",
+ "created_at": "2026-07-21T02:46:51-0500",
+ "library": {
+  "name": "melvil",
+  "version": "0.3.0"
+ },
+ "models": {
+  "task": "openrouter/anthropic/claude-haiku-4.5",
+  "reflection": "openrouter/anthropic/claude-sonnet-4.5"
+ },
+ "budget": {
+  "metric_calls_budget": 800,
+  "metric_calls_spent": 875,
+  "cost_usd": 0.3718,
+  "task_lm_usage": {
+   "model": "openrouter/anthropic/claude-haiku-4.5",
+   "prompt_tokens": 299865,
+   "completion_tokens": 3502,
+   "calls": 772,
+   "cache_hits": 203,
+   "cost_usd": 0.317375
+  },
+  "reflection_lm_usage": {
+   "model": "openrouter/anthropic/claude-sonnet-4.5",
+   "prompt_tokens": 3720,
+   "completion_tokens": 2881,
+   "calls": 8,
+   "cache_hits": 0,
+   "cost_usd": 0.054375
+  },
+  "opt_seconds": 203.3
+ },
+ "scores": {
+  "dev_accuracy": 0.9,
+  "dev_macro_f1": 0.8983,
+  "per_label_dev": {
+   "Business": {
+    "precision": 0.8276,
+    "recall": 0.96,
+    "f1": 0.8889,
+    "support": 25
+   },
+   "Sci/Tech": {
+    "precision": 0.95,
+    "recall": 0.76,
+    "f1": 0.8444,
+    "support": 25
+   },
+   "Sports": {
+    "precision": 0.9565,
+    "recall": 0.88,
+    "f1": 0.9167,
+    "support": 25
+   },
+   "World": {
+    "precision": 0.8929,
+    "recall": 1.0,
+    "f1": 0.9434,
+    "support": 25
+   }
+  },
+  "seed_dev_accuracy": 0.89,
+  "dev_accuracy_quarantined": null
+ },
+ "config_hash": "a19fdc130bda",
+ "config": {
+  "task_model": "openrouter/anthropic/claude-haiku-4.5",
+  "reflection_model": "openrouter/anthropic/claude-sonnet-4.5",
+  "budget": "light",
+  "seed": 21,
+  "features": {
+   "codebook": false,
+   "confusion_reflection": false,
+   "hard_example_mining": false
+  },
+  "num_threads": 8,
+  "run_dir": "/Users/harish/Documents/Claude/Projects/6s/labelsmith/mechanistic/runs_e8_gepa_f2/ag_news/s21",
+  "task_temperature": 0.0,
+  "task_max_tokens": 40,
+  "reflection_temperature": 1.0,
+  "reflection_max_tokens": 8000,
+  "reflection_minibatch_size": 3,
+  "max_exemplars": 6,
+  "mining_llm_screen": true,
+  "log_proposals": false,
+  "prices": {},
+  "metric_calls": 800
+ },
+ "label_names": [
+  "Business",
+  "Sci/Tech",
+  "Sports",
+  "World"
+ ],
+ "components": {
+  "instruction": "Classify the given text into one of these categories: Business, Sci/Tech, Sports, World.\n\nImportant classification guidelines:\n\n**Sci/Tech vs Business:**\n- Articles about technology consulting firms, IT services, software companies, and tech-related business developments should be classified as 'Sci/Tech', NOT 'Business'\n- The 'Sci/Tech' category takes precedence over 'Business' when the subject matter involves technology companies, consulting firms in the technology sector, or tech industry news\n- Internet-related topics, websites, online platforms, social media, and digital services should be classified as 'Sci/Tech', even if the article discusses social impacts or consequences (e.g., dating sites, reunion sites, social networks)\n- Articles about the societal impact of technology (like websites affecting divorce rates, internet usage patterns, online behavior) should be classified as 'Sci/Tech' because the primary subject is the technology/internet platform\n- When in doubt between Business and Sci/Tech: if the company, platform, or topic is primarily in the technology sector (software, IT consulting, tech services, websites, internet platforms, etc.), classify it as 'Sci/Tech'\n\n**Business vs World:**\n- 'Business' includes corporate news, mergers and acquisitions, stock market activity, energy companies, financial services, retail, and general corporate developments - even if they involve foreign companies\n- Just because a business story involves a foreign company or happens in another country does NOT automatically make it 'World' news\n- Focus on the PRIMARY subject matter: if it's about corporate deals, investments, company operations, or business strategy, it's 'Business'\n\n**World category:**\n- 'World' is specifically for international relations, geopolitics, conflicts, diplomatic affairs, global security issues, and news where the primary focus is on nations, governments, or international events\n- NOT for business stories that simply happen to involve foreign companies\n\n**Other categories:**\n- 'Sports' is for athletic competitions, teams, players, and sporting events\n\n**Key principle:** Identify the PRIMARY subject of the article. If it's fundamentally about technology, the internet, or digital platforms (even when discussing their effects on society), choose 'Sci/Tech'."
+ },
+ "exemplars": [],
+ "confusion": {
+  "labels": [
+   "Business",
+   "Sci/Tech",
+   "Sports",
+   "World"
+  ],
+  "matrix": [
+   [
+    24,
+    1,
+    0,
+    0,
+    0
+   ],
+   [
+    3,
+    19,
+    1,
+    2,
+    0
+   ],
+   [
+    2,
+    0,
+    22,
+    1,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    25,
+    0
+   ]
+  ],
+  "unparseable_column": true
+ },
+ "curve": [
+  {
+   "metric_calls": 0,
+   "dev_score": 0.89
+  },
+  {
+   "metric_calls": 109,
+   "dev_score": 0.89
+  },
+  {
+   "metric_calls": 230,
+   "dev_score": 0.87
+  },
+  {
+   "metric_calls": 339,
+   "dev_score": 0.85
+  },
+  {
+   "metric_calls": 448,
+   "dev_score": 0.89
+  },
+  {
+   "metric_calls": 557,
+   "dev_score": 0.9
+  },
+  {
+   "metric_calls": 663,
+   "dev_score": 0.86
+  },
+  {
+   "metric_calls": 775,
+   "dev_score": 0.86
+  }
+ ],
+ "notes": ""
+}

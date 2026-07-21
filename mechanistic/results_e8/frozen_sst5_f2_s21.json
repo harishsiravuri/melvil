@@ -1,0 +1,36 @@
+{
+ "experiment": "e8",
+ "phase": "frozen",
+ "task": "sst5",
+ "family": "f2",
+ "seed": 21,
+ "arms": {
+  "seed": {
+   "test_accuracy": 0.58,
+   "test_macro_f1": 0.5574,
+   "unparseable": 0
+  },
+  "x1": {
+   "test_accuracy": 0.5933,
+   "test_macro_f1": 0.5593,
+   "unparseable": 0
+  },
+  "x2": {
+   "test_accuracy": 0.5833,
+   "test_macro_f1": 0.5677,
+   "unparseable": 0
+  }
+ },
+ "dev_accs": {
+  "input_of_x1": 0.61,
+  "input_of_x2": 0.64
+ },
+ "prompts": {
+  "seed": "Classify the given text into one of these categories: negative, neutral, positive, very negative, very positive.\n\nRespond with exactly one category name from the list above and nothing else.",
+  "x1": "Classify the given text into one of these categories: negative, neutral, positive, very negative, very positive.\n\nCategory definitions:\n- very negative: Extremely harsh criticism, complete dismissal, or profound disappointment with strong negative language\n- negative: Clear criticism or disapproval, but not at the extreme end\n- neutral: Balanced mix of positive and negative elements, factual descriptions without strong sentiment, or ambiguous/conflicted opinions\n- positive: Clear praise or approval, but not at the extreme end\n- very positive: Exceptional praise, enthusiastic recommendation, or glowing endorsement with strong positive language\n\nDecision rules:\n- If the text contains extreme words like \"misfortune,\" \"disappointment,\" \"highly-praised disappointments,\" or complete failure statements, classify as very negative, not just negative\n- If the text is merely boring, plain, or derivative without harsh condemnation, it is negative, not neutral\n- If the text describes something as factual or mixed without clear emotional valence, classify as neutral\n- If the text uses superlatives like \"winning,\" \"insightful,\" \"enjoyable\" combined with strong praise, classify as very positive, not just positive\n- When intensity markers appear (\"highly,\" \"quite,\" \"extremely,\" \"exceptional\"), they signal very negative or very positive categories\n- Mixed reviews that acknowledge both problems and appeal lean neutral, not positive\n\nRespond with exactly one category name from the list above and nothing else.",
+  "x2": "Classify the given text into one of these categories: negative, neutral, positive, very negative, very positive.\n\nCategory definitions:\n- very negative: Extreme criticism, complete failure, or profound disappointment. Includes statements of no chemistry, extreme workmanlike quality, lacking essential appeal, or being fundamentally flawed beyond minor issues.\n- negative: Clear criticism, disapproval, or unfavorable comparison without redeeming qualities. Includes being boring, derivative, or plain without being catastrophically bad.\n- neutral: Factual observations, mixed signals, or statements that describe without strong judgment. Includes meta-commentary about what a film \"is\" (e.g., comparisons, observations about style or approach) without explicit praise or condemnation.\n- positive: Clear approval, enjoyment, or praise with some qualifications or moderate language. Includes recognition of good performances, successful execution, or notable qualities even if not perfect.\n- very positive: Exceptional praise, enthusiastic endorsement, or multiple strong positive descriptors. Requires combinations like \"lovely + elegant + witty,\" \"vivid + deft,\" or \"enjoyable + frothy\" together, not just single positive words.\n\nDecision rules:\n- \"No chemistry,\" \"lacks charm/appeal,\" \"workmanlike in the extreme,\" \"more silly than scary\" \u2192 very negative (these indicate fundamental failure)\n- \"Just plain boring,\" \"revisited again,\" simple dismissals without catastrophic language \u2192 negative\n- Meta-descriptions (\"this is a picture that...\"), observations about what something \"is\" without evaluative language \u2192 neutral\n- Understanding/success statements (\"knows that's all that matters\"), moderate praise (\"pleasantly delivered\"), qualified positives (\"something vital\") \u2192 positive  \n- Multiple enthusiastic adjectives in combination (\"lovely + elegant + witty + hugely enjoyable,\" \"enjoyably frothy,\" \"vivid + deft\") \u2192 very positive\n- When text contains both criticism and praise equally balanced \u2192 neutral\n- Single positive word with qualifications \u2192 positive; stacked superlatives \u2192 very positive\n\nRespond with exactly one category name from the list above and nothing else."
+ },
+ "cost_usd": 0.3156,
+ "task_lm_calls": 700,
+ "reflection_calls": 2
+}

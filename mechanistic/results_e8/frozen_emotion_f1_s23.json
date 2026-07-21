@@ -1,0 +1,36 @@
+{
+ "experiment": "e8",
+ "phase": "frozen",
+ "task": "emotion",
+ "family": "f1",
+ "seed": 23,
+ "arms": {
+  "seed": {
+   "test_accuracy": 0.5633,
+   "test_macro_f1": 0.4551,
+   "unparseable": 0
+  },
+  "x1": {
+   "test_accuracy": 0.4967,
+   "test_macro_f1": 0.3907,
+   "unparseable": 1
+  },
+  "x2": {
+   "test_accuracy": 0.5533,
+   "test_macro_f1": 0.429,
+   "unparseable": 0
+  }
+ },
+ "dev_accs": {
+  "input_of_x1": 0.68,
+  "input_of_x2": 0.64
+ },
+ "prompts": {
+  "seed": "Classify the given text into one of these categories: anger, fear, joy, love, sadness, surprise.\n\nRespond with exactly one category name from the list above and nothing else.",
+  "x1": "Classify the given text into one of these categories: anger, fear, joy, love, sadness, surprise.\n\nDefinitions:\n- anger: feelings of annoyance, frustration, resentment, or rage.\n- fear: anxiety, worry, insecurity, or anticipation of threat or danger.\n- joy: active happiness, pleasure, satisfaction, positive excitement, or fulfillment.\n- love: expressions of deep affection, attachment, caring, tenderness, or a strong bond toward others. Includes missing, cherishing, or valuing relationships.\n- sadness: sorrow, disappointment, loss, regret, or emotional pain.\n- surprise: astonishment, disbelief, or sudden unexpected reactions (positive or negative).\n\nDecision rules:\n- If the text expresses pleasure, happiness from achievement, or uplifted mood, choose joy\u2014even if there's mention of personal struggle.\n- If the main feeling is loss, grief, or regret about relationships or what is missing, choose sadness.\n- If the text centers on affection, appreciation, longing for connection, or tenderness toward someone, choose love, unless sadness or grief about that connection dominates (in which case choose sadness).\n- For ambiguous cases between joy and love, prefer joy if the feeling is a positive state or outcome, love if the focus is on affectionate relationships or strong attachment.\n- Do not infer the author's general mood; classify only the emotion expressed in the specific text.\n\nRespond with exactly one category name from the list above and nothing else.",
+  "x2": "Classify the given text into one of these categories: anger, fear, joy, love, sadness, surprise.\n\nCategory definitions:\n- anger: expressions of annoyance, frustration, resentment, or rage.\n- fear: feelings of anxiety, worry, insecurity, dread, or anticipation of threat or danger (including non-physical concerns like social rejection or failing).\n- joy: active happiness, pleasure, satisfaction, relief, positive excitement, or fulfillment\u2014even if mixed with mention of challenges or past struggles, as long as positive emotion is the focus.\n- love: deep affection, caring, tenderness, attachment, admiration, longing for connection, or cherishing relationships. Includes positive feelings centered on others (not general happiness).\n- sadness: sorrow, disappointment, loss, regret, emotional pain, feelings of defeat, inadequacy, or being left out\u2014including when struggling alone, feeling troubled, or discussing missed opportunities.\n- surprise: astonishment, disbelief, shock, or sudden unexpected reactions (positive or negative).\n\nDecision rules:\n- If the main feeling is regret, loss, trouble, inadequacy, or feeling emotionally burdened, choose sadness\u2014even if the author is coping or reflecting positively.\n- Choose fear for anticipation of trouble, persistent worry, or feeling threatened. If both sadness and fear are present, pick sadness if the focus is on loss or emotional pain; pick fear if ongoing anxiety or threat dominates.\n- Choose joy for text expressing positive feelings, satisfaction, achievement, or relief\u2014especially if the positive emotion outweighs struggles or negative context.\n- Choose love only if the focus is on affectionate relationships, longing, or cherishing others. If sadness about a relationship is the main feeling, choose sadness.\n- For text that fits between joy or love, classify as joy if the pleasure is about outcomes or activities; as love if it is about connection or appreciation of people.\n- Do not infer beyond the statement; classify only the emotion expressed in the specific text.\n\nRespond with exactly one category name from the list above and nothing else."
+ },
+ "cost_usd": 0.1153,
+ "task_lm_calls": 700,
+ "reflection_calls": 2
+}

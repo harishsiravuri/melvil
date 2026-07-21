@@ -1,0 +1,36 @@
+{
+ "experiment": "e8",
+ "phase": "frozen",
+ "task": "ag_news",
+ "family": "f1",
+ "seed": 24,
+ "arms": {
+  "seed": {
+   "test_accuracy": 0.83,
+   "test_macro_f1": 0.8233,
+   "unparseable": 0
+  },
+  "x1": {
+   "test_accuracy": 0.8267,
+   "test_macro_f1": 0.8189,
+   "unparseable": 0
+  },
+  "x2": {
+   "test_accuracy": 0.83,
+   "test_macro_f1": 0.8224,
+   "unparseable": 0
+  }
+ },
+ "dev_accs": {
+  "input_of_x1": 0.84,
+  "input_of_x2": 0.86
+ },
+ "prompts": {
+  "seed": "Classify the given text into one of these categories: Business, Sci/Tech, Sports, World.\n\nRespond with exactly one category name from the list above and nothing else.",
+  "x1": "Classify the given text into one of these categories: Business, Sci/Tech, Sports, World.\n\nDefinitions and rules:\n- Business: News primarily about commerce, companies, the economy, financial markets, transactions, or business strategies. If the main focus is on shopping, product pricing, business operations (including technology outages impacting commerce), or economic impacts\u2014even if technology-related\u2014assign Business.\n- Sci/Tech: News focused mainly on scientific discoveries, research, technology and its advances, gadgets, digital/online infrastructure, or the impact of science/technology on society, excluding business aspects. If the content is about wildlife, environment, or nature from a scientific or ecological perspective, choose Sci/Tech, not World.\n- Sports: News about competitions, athletes, athletic events, teams, or leagues, including business moves directly tied to sports organizations (e.g., a team\u2019s sale). If the context is sports competition or industry, assign Sports.\n- World: General news about countries, governments, conflicts, international relations, cultures, or social issues, not primarily about business, sports, or science/technology. Environmental or wildlife issues should go in Sci/Tech if discussed scientifically.\n\nIf a text fits more than one category, always choose the most specific domain in this order: Sci/Tech > Sports > Business > World.\n\nRespond with exactly one category name from the list above and nothing else.",
+  "x2": "Classify the given text into one of these categories: Business, Sci/Tech, Sports, World.\n\nDefinitions and decision rules:\n\n- Business: For news focused on commerce, companies, financial markets, business operations, product pricing, shopping, transactions, or economic policy/impact. If the main point is about buying, selling, or the business aspect\u2014even if technology is involved (e.g., tech outages affecting sales, payment systems, or pricing of tech gadgets)\u2014assign Business.\n\n- Sci/Tech: For news primarily about scientific research, discoveries, new technologies or tech advances, digital/online infrastructure, or scientific analysis of nature, the environment, or wildlife. Assign Sci/Tech only if the text\u2019s focus is on how something works, technology, or scientific context, NOT business effects, products\u2019 market prices, or shopping behavior. Issues like product price trends, payment methods, e-commerce, or shopping rates\u2014even for technology products\u2014should be assigned Business, not Sci/Tech.\n\n- Sports: For news about athletic competitions, athletes, sporting events/games, teams, leagues, or direct business moves involving sports organizations (such as team sales). If the news is about sporting activity, industry, or athletic events/tournaments, pick Sports\u2014even if the context includes conflicts or protests tied to sport.\n\n- World: For news on countries, governments, conflict, international relations, political/social issues, or cultures, NOT focused on business, science/technology, or sports. News about protests or violence that occur in connection with sports events should be assigned Sports if the event context is athletic; otherwise assign World.\n\nIf a text could fit multiple categories, always use this priority for the most specific domain: Sci/Tech > Sports > Business > World.\n\nRespond with exactly one category name from the list above and nothing else."
+ },
+ "cost_usd": 0.1163,
+ "task_lm_calls": 700,
+ "reflection_calls": 2
+}

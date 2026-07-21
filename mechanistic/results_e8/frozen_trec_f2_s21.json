@@ -1,0 +1,36 @@
+{
+ "experiment": "e8",
+ "phase": "frozen",
+ "task": "trec",
+ "family": "f2",
+ "seed": 21,
+ "arms": {
+  "seed": {
+   "test_accuracy": 0.8267,
+   "test_macro_f1": 0.8307,
+   "unparseable": 0
+  },
+  "x1": {
+   "test_accuracy": 0.84,
+   "test_macro_f1": 0.8425,
+   "unparseable": 0
+  },
+  "x2": {
+   "test_accuracy": 0.85,
+   "test_macro_f1": 0.845,
+   "unparseable": 0
+  }
+ },
+ "dev_accs": {
+  "input_of_x1": 0.69,
+  "input_of_x2": 0.77
+ },
+ "prompts": {
+  "seed": "Classify the given text into one of these categories: abbreviation, description, entity, human, location, numeric.\n\nRespond with exactly one category name from the list above and nothing else.",
+  "x1": "Classify the given text into one of these categories: abbreviation, description, entity, human, location, numeric.\n\nCategory definitions:\n- human: Questions asking for names, identities, or biographical information about specific people (including their roles, nicknames, relationships, or actions)\n- location: Questions asking for specific places, geographic locations, cities, countries, buildings, or venues\n- entity: Questions asking for specific things, objects, organizations, products, films, books, concepts, requirements, or traditions (non-human, non-location)\n- description: Questions asking for explanations, definitions, reasons, processes, characteristics, or \"what is/are\" when seeking descriptive information rather than a specific named thing\n- numeric: Questions asking for numbers, quantities, dates, counts, measurements, or percentages\n- abbreviation: Questions asking what an acronym or abbreviation stands for\n\nDecision rules:\n- If a question asks for names/identities of people (even indirectly through roles or relationships), classify as 'human'\n- If a question mentions a person's name but asks for a place associated with them, classify as 'location'\n- If a question asks for specific named things (films, requirements, traditions, phobias, objects), classify as 'entity', not 'description'\n- \"What is [specific named concept]\" questions are 'entity'; \"What is [general explanation]\" questions are 'description'\n- When in doubt between 'entity' and 'human', check if the answer would be a person's name \u2192 'human'\n\nRespond with exactly one category name from the list above and nothing else.",
+  "x2": "Classify the given text into one of these categories: abbreviation, description, entity, human, location, numeric.\n\nCategory definitions:\n- abbreviation: Questions explicitly asking what an acronym, abbreviation, or initialism stands for (using phrases like \"what does X stand for\")\n- human: Questions asking for names, identities, or biographical information about specific people, OR questions asking about groups/organizations/teams when the answer would be their name/identity\n- location: Questions asking for specific places, geographic locations, cities, countries, buildings, or venues\n- entity: Questions asking for specific named things (objects, products, films, books, animals, concepts) OR questions asking \"what is\" when seeking the identity/name of a specific thing rather than an explanation\n- numeric: Questions asking for numbers, quantities, dates, counts, measurements, or percentages\n- description: Questions asking for explanations, definitions, reasons, processes, characteristics, properties, meanings, or compositions (what something is made of, how something works, why something happens)\n\nDecision rules:\n- \"What is a fear of...\" or similar patterns asking about categories/types \u2192 'entity' (seeking the name of the phobia/concept)\n- \"What are the elements/components/ingredients...\" \u2192 'description' (seeking composition/properties)\n- \"What is the meaning of...\" or \"what does X indicate/mean...\" \u2192 'description' (seeking explanation), NOT 'abbreviation'\n- \"What does [acronym] stand for\" \u2192 'abbreviation' ONLY if clearly asking for the expansion of letters\n- Questions about teams, companies, or groups where the answer is their name/identity \u2192 'human'\n- Questions asking for names of pets, animals, or objects belonging to people \u2192 'entity' (the answer is a thing's name, not a person)\n- \"What film has [actor] appeared in\" \u2192 'entity' (seeking film names, not people)\n- \"What is the one thing you need...\" asking for requirements/prerequisites \u2192 'entity' (seeking a specific thing/concept)\n- When \"what is\" precedes a specific named concept (fear, requirement, tradition) \u2192 'entity'; when it asks how/why something works \u2192 'description'\n\nRespond with exactly one category name from the list above and nothing else."
+ },
+ "cost_usd": 0.338,
+ "task_lm_calls": 700,
+ "reflection_calls": 2
+}

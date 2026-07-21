@@ -1,0 +1,36 @@
+{
+ "experiment": "e8",
+ "phase": "frozen",
+ "task": "massive",
+ "family": "f2",
+ "seed": 24,
+ "arms": {
+  "seed": {
+   "test_accuracy": 0.8333,
+   "test_macro_f1": 0.8564,
+   "unparseable": 1
+  },
+  "x1": {
+   "test_accuracy": 0.8533,
+   "test_macro_f1": 0.8558,
+   "unparseable": 1
+  },
+  "x2": {
+   "test_accuracy": 0.88,
+   "test_macro_f1": 0.8898,
+   "unparseable": 0
+  }
+ },
+ "dev_accs": {
+  "input_of_x1": 0.8,
+  "input_of_x2": 0.87
+ },
+ "prompts": {
+  "seed": "Classify the given text into one of these categories: alarm_query, alarm_set, calendar_query, calendar_remove, calendar_set, cooking_recipe, datetime_query, email_query, email_sendemail, general_quirky, iot_hue_lightoff, lists_createoradd, lists_query, lists_remove, music_query, news_query, play_audiobook, play_music, play_podcasts, play_radio, qa_currency, qa_definition, qa_factoid, qa_stock, recommendation_events, recommendation_locations, social_post, takeaway_order, transport_query, weather_query.\n\nRespond with exactly one category name from the list above and nothing else.",
+  "x1": "Classify the given text into one of these categories: alarm_query, alarm_set, calendar_query, calendar_remove, calendar_set, cooking_recipe, datetime_query, email_query, email_sendemail, general_quirky, iot_hue_lightoff, lists_createoradd, lists_query, lists_remove, music_query, news_query, play_audiobook, play_music, play_podcasts, play_radio, qa_currency, qa_definition, qa_factoid, qa_stock, recommendation_events, recommendation_locations, social_post, takeaway_order, transport_query, weather_query.\n\nKey distinctions:\n- calendar_set: setting reminders/appointments for meetings, events, or tasks at specific times. Use this (NOT alarm_set) for \"remind me\" phrases about scheduled activities.\n- alarm_set: setting wake-up alarms or simple time-based alerts without specific event context.\n- social_post: posting, sharing, or updating social media status. Check for keywords like \"post\", \"share\", \"tweet\", \"update status\".\n- email_sendemail: sending, replying to, or composing emails. Use this for \"send\", \"reply\", \"compose\", \"edit email address\".\n- email_query: checking, reading, or searching for emails. Use this for \"check\", \"read\", \"show me emails\".\n- general_quirky: casual conversation, biographical questions about people, subjective opinions, or requests that don't fit task-oriented categories. Use this for \"tell me about [person]\" or conversational queries.\n- qa_factoid: objective factual questions with specific answers (who/what/when/where). NOT for biographical/conversational requests about people.\n- recommendation_locations: asking for recommendations about places to visit or go. Only use if explicitly requesting a recommendation/suggestion.\n- play_audiobook: specifically playing audiobooks.\n- play_podcasts: specifically playing podcasts.\n- play_music: playing songs or music (not audiobooks/podcasts).\n\nRespond with exactly one category name from the list above and nothing else.",
+  "x2": "Classify the given text into one of these categories: alarm_query, alarm_set, calendar_query, calendar_remove, calendar_set, cooking_recipe, datetime_query, email_query, email_sendemail, general_quirky, iot_hue_lightoff, lists_createoradd, lists_query, lists_remove, music_query, news_query, play_audiobook, play_music, play_podcasts, play_radio, qa_currency, qa_definition, qa_factoid, qa_stock, recommendation_events, recommendation_locations, social_post, takeaway_order, transport_query, weather_query.\n\nCategory definitions and rules:\n\nALARMS & CALENDAR:\n- alarm_set: setting wake-up alarms or simple time-based alerts without specific event context\n- alarm_query: checking existing alarms\n- calendar_set: setting reminders/appointments for meetings, events, or tasks at specific times. Use this (NOT alarm_set) for \"remind me\" phrases about scheduled activities\n- calendar_query: checking scheduled events or appointments\n- calendar_remove: deleting calendar events\n\nCOMMUNICATION:\n- email_sendemail: sending, replying to, or composing emails\n- email_query: checking, reading, or searching for emails\n- social_post: posting, sharing, tweeting, or updating social media status. Look for explicit posting/sharing intent\n\nMEDIA PLAYBACK:\n- play_audiobook: playing or resuming audiobooks. \"Resume playback\" in audiobook context = play_audiobook\n- play_podcasts: playing podcasts\n- play_music: playing songs or music. Use for requests about playing specific songs, artists, or music genres\n- play_radio: playing radio stations\n- music_query: asking about music information WITHOUT intent to play (e.g., \"what are the top songs\" without \"play\")\n\nQUESTIONS & ANSWERS:\n- qa_factoid: objective factual questions about people, places, things with specific answers. Questions like \"who is X married to\" or \"who is actor Y\" are factoid lookups, NOT general conversation\n- qa_definition: asking for word meanings or definitions\n- qa_currency: currency conversion questions\n- qa_stock: stock price questions\n- general_quirky: casual conversation, subjective opinions, or non-task queries. Do NOT use for straightforward factual questions about people\n\nRECOMMENDATIONS:\n- recommendation_locations: asking for place recommendations (restaurants, attractions, etc.). Only use when explicitly asking for a recommendation/suggestion, NOT when asking for objective comparison or factual information about locations\n- recommendation_events: asking for event recommendations\n\nOTHER:\n- cooking_recipe: recipe requests\n- datetime_query: asking current time or date\n- iot_hue_lightoff: turning off smart lights\n- lists_createoradd: creating or adding to lists\n- lists_query: checking lists\n- lists_remove: removing from lists\n- news_query: asking for news\n- takeaway_order: ordering food\n- transport_query: asking about transportation\n- weather_query: asking about weather\n\nKey tie-breakers:\n- Factual questions about people (who is X, who married Y) \u2192 qa_factoid, NOT general_quirky\n- \"Resume playback\" \u2192 play_audiobook if in audiobook context, otherwise play_music\n- Requests for \"top songs/hits\" \u2192 play_music if intent is to play them, music_query if just asking for information\n- Asking \"what would be best\" with objective criteria \u2192 NOT recommendation_locations unless explicitly seeking a suggestion\n\nRespond with exactly one category name from the list above and nothing else."
+ },
+ "cost_usd": 0.4977,
+ "task_lm_calls": 700,
+ "reflection_calls": 2
+}

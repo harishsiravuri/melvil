@@ -1,0 +1,218 @@
+{
+ "schema_version": 1,
+ "artifact_id": "a9871b5db7ef",
+ "parent_id": null,
+ "task_name": "emotion",
+ "created_at": "2026-07-21T01:47:57-0500",
+ "library": {
+  "name": "melvil",
+  "version": "0.3.0"
+ },
+ "models": {
+  "task": "openrouter/anthropic/claude-haiku-4.5",
+  "reflection": "openrouter/anthropic/claude-sonnet-4.5"
+ },
+ "budget": {
+  "metric_calls_budget": 800,
+  "metric_calls_spent": 854,
+  "cost_usd": 0.3724,
+  "task_lm_usage": {
+   "model": "openrouter/anthropic/claude-haiku-4.5",
+   "prompt_tokens": 303936,
+   "completion_tokens": 3294,
+   "calls": 754,
+   "cache_hits": 200,
+   "cost_usd": 0.320406
+  },
+  "reflection_lm_usage": {
+   "model": "openrouter/anthropic/claude-sonnet-4.5",
+   "prompt_tokens": 3452,
+   "completion_tokens": 2775,
+   "calls": 8,
+   "cache_hits": 0,
+   "cost_usd": 0.051981
+  },
+  "opt_seconds": 173.8
+ },
+ "scores": {
+  "dev_accuracy": 0.61,
+  "dev_macro_f1": 0.5026,
+  "per_label_dev": {
+   "anger": {
+    "precision": 0.75,
+    "recall": 0.6923,
+    "f1": 0.72,
+    "support": 13
+   },
+   "fear": {
+    "precision": 0.5,
+    "recall": 0.8333,
+    "f1": 0.625,
+    "support": 12
+   },
+   "joy": {
+    "precision": 0.75,
+    "recall": 0.6176,
+    "f1": 0.6774,
+    "support": 34
+   },
+   "love": {
+    "precision": 0.2857,
+    "recall": 0.5,
+    "f1": 0.3636,
+    "support": 8
+   },
+   "sadness": {
+    "precision": 0.68,
+    "recall": 0.5862,
+    "f1": 0.6296,
+    "support": 29
+   },
+   "surprise": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "support": 4
+   }
+  },
+  "seed_dev_accuracy": 0.6,
+  "dev_accuracy_quarantined": null
+ },
+ "config_hash": "81d9724cc975",
+ "config": {
+  "task_model": "openrouter/anthropic/claude-haiku-4.5",
+  "reflection_model": "openrouter/anthropic/claude-sonnet-4.5",
+  "budget": "light",
+  "seed": 23,
+  "features": {
+   "codebook": false,
+   "confusion_reflection": false,
+   "hard_example_mining": false
+  },
+  "num_threads": 8,
+  "run_dir": "/Users/harish/Documents/Claude/Projects/6s/labelsmith/mechanistic/runs_e8_gepa_f2/emotion/s23",
+  "task_temperature": 0.0,
+  "task_max_tokens": 40,
+  "reflection_temperature": 1.0,
+  "reflection_max_tokens": 8000,
+  "reflection_minibatch_size": 3,
+  "max_exemplars": 6,
+  "mining_llm_screen": true,
+  "prices": {},
+  "metric_calls": 800
+ },
+ "label_names": [
+  "anger",
+  "fear",
+  "joy",
+  "love",
+  "sadness",
+  "surprise"
+ ],
+ "components": {
+  "instruction": "Classify the given text into one of these categories: anger, fear, joy, love, sadness, surprise.\n\nImportant guidelines:\n\n## Distinguishing Positive Emotions:\n- Pay careful attention to distinguishing between similar positive emotions, particularly 'joy' and 'love'\n- 'Love' should be used for texts that express feelings of being blessed, touched emotionally, grateful, or experiencing deep emotional warmth and connection\n- 'Joy' should be reserved for texts expressing happiness, excitement, delight, determination, perseverance, or staying committed to goals - even when facing challenges\n- Texts containing words like \"blessed,\" \"touched,\" or expressing gratitude with emotional depth are more likely to indicate 'love' rather than 'joy'\n- Consider the intensity and nature of the emotion: surface-level happiness suggests 'joy', while profound emotional responses suggest 'love'\n\n## Distinguishing Negative Emotions:\n- 'Fear' relates to uncertainty, insecurity, hesitation, or lack of confidence (e.g., feeling \"unsure\" about something)\n- 'Anger' involves frustration, annoyance, or critical judgment about situations, strategies, or behaviors - even when expressed mildly or analytically (e.g., critiquing that something is \"dangerous\" or poorly conceived)\n- 'Sadness' involves grief, loss, dejection, or feeling down\n\n## Key Classification Rules:\n- Expressions of uncertainty, doubt, or being unsure should be classified as 'fear', not 'joy'\n- Critical or judgmental statements about approaches, strategies, or methods should be classified as 'anger', not 'fear'\n- Expressions of commitment, determination, or staying faithful to goals despite tiredness or obstacles should be classified as 'joy', not 'sadness'\n- Focus on the primary emotion expressed, not just the presence of negative circumstances\n\n## Analysis Approach:\n1. Identify the main emotional sentiment in the text\n2. Look for key emotional indicators (uncertainty → fear, criticism → anger, determination → joy)\n3. Don't let negative circumstances automatically indicate negative emotions if the overall sentiment is positive\n4. Consider the speaker's attitude and emotional stance, not just the situation they describe"
+ },
+ "exemplars": [],
+ "confusion": {
+  "labels": [
+   "anger",
+   "fear",
+   "joy",
+   "love",
+   "sadness",
+   "surprise"
+  ],
+  "matrix": [
+   [
+    9,
+    0,
+    1,
+    0,
+    2,
+    0,
+    1
+   ],
+   [
+    0,
+    10,
+    0,
+    1,
+    1,
+    0,
+    0
+   ],
+   [
+    2,
+    2,
+    21,
+    6,
+    3,
+    0,
+    0
+   ],
+   [
+    1,
+    1,
+    1,
+    4,
+    1,
+    0,
+    0
+   ],
+   [
+    0,
+    6,
+    4,
+    2,
+    17,
+    0,
+    0
+   ],
+   [
+    0,
+    1,
+    1,
+    1,
+    1,
+    0,
+    0
+   ]
+  ],
+  "unparseable_column": true
+ },
+ "curve": [
+  {
+   "metric_calls": 0,
+   "dev_score": 0.6
+  },
+  {
+   "metric_calls": 106,
+   "dev_score": 0.6
+  },
+  {
+   "metric_calls": 212,
+   "dev_score": 0.56
+  },
+  {
+   "metric_calls": 330,
+   "dev_score": 0.6
+  },
+  {
+   "metric_calls": 436,
+   "dev_score": 0.56
+  },
+  {
+   "metric_calls": 542,
+   "dev_score": 0.53
+  },
+  {
+   "metric_calls": 648,
+   "dev_score": 0.57
+  },
+  {
+   "metric_calls": 754,
+   "dev_score": 0.61
+  }
+ ],
+ "notes": ""
+}

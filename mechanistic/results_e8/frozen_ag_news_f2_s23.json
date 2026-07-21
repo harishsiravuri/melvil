@@ -1,0 +1,36 @@
+{
+ "experiment": "e8",
+ "phase": "frozen",
+ "task": "ag_news",
+ "family": "f2",
+ "seed": 23,
+ "arms": {
+  "seed": {
+   "test_accuracy": 0.8667,
+   "test_macro_f1": 0.8682,
+   "unparseable": 1
+  },
+  "x1": {
+   "test_accuracy": 0.8333,
+   "test_macro_f1": 0.8269,
+   "unparseable": 0
+  },
+  "x2": {
+   "test_accuracy": 0.86,
+   "test_macro_f1": 0.8599,
+   "unparseable": 0
+  }
+ },
+ "dev_accs": {
+  "input_of_x1": 0.89,
+  "input_of_x2": 0.85
+ },
+ "prompts": {
+  "seed": "Classify the given text into one of these categories: Business, Sci/Tech, Sports, World.\n\nRespond with exactly one category name from the list above and nothing else.",
+  "x1": "Classify the given text into one of these categories: Business, Sci/Tech, Sports, World.\n\nCategory definitions:\n- Business: Corporate earnings, financial markets, company management, retail/sales, economic policy\n- Sci/Tech: Technology products, scientific research, software/hardware, tech companies when focus is on technology itself\n- Sports: Athletic competitions, teams, players, sporting events\n- World: International affairs, geopolitics, regional news, natural disasters, environmental issues with geographic focus\n\nDecision rules:\n- Tech companies (Google, Samsung, eBay/PayPal): classify as Business if focus is on financial performance, leadership changes, or business operations; classify as Sci/Tech only if focus is on technology features or innovation\n- E-commerce and online platforms: default to Business unless discussing technical infrastructure\n- Environmental/nature topics: classify as World if emphasizing geographic regions or global issues; classify as Sci/Tech only if focused on scientific research methods\n- When multiple categories apply, prioritize: 1) Sports if athletics mentioned, 2) World if international/regional angle is primary framing, 3) Business if financial/corporate angle present, 4) Sci/Tech for remaining technology topics\n\nRespond with exactly one category name from the list above and nothing else.",
+  "x2": "Classify the given text into one of these categories: Business, Sci/Tech, Sports, World.\n\nCategory definitions:\n- Business: Corporate earnings, financial markets, mergers/acquisitions, company management, retail/sales, economic policy, IPOs\n- Sci/Tech: Technology products and features, scientific research and discoveries, software/hardware innovations, computing, engineering breakthroughs\n- Sports: Athletic competitions, teams, players, sporting events, Olympics, tournaments, games\n- World: International affairs, geopolitics, regional news, natural disasters, wars, conflicts, diplomacy\n\nCritical decision rules:\n- E-commerce platforms (eBay, PayPal, Amazon): classify as Sci/Tech when discussing technical issues, outages, or platform features\n- Online shopping and cart abandonment topics: classify as Sci/Tech (focus is on website/platform technology)\n- Email standards, spam filtering, digital protocols: classify as Sci/Tech (technology infrastructure)\n- Wildlife, endangered species, conservation, animal behavior: classify as Sci/Tech unless the primary focus is political/policy responses by governments\n- Nature/environmental stories with geographic framing: classify as Sci/Tech if discussing biology, ecology, or species research\n- Sports events with international location mentions: classify as Sports (athletics take priority over location)\n- Business acquisitions of sports teams: classify as Business only if focused on financial transaction; classify as Sports if discussing team/racing operations\n- Tech company news: Business if about financials/leadership; Sci/Tech if about products/technology/technical operations\n\nPriority hierarchy when multiple categories could apply:\n1. Sports - if athletic competition or sporting events are the main subject\n2. Sci/Tech - if technology systems, scientific research, or species/nature study is the core topic\n3. Business - if financial transactions or corporate strategy dominate\n4. World - if international politics or regional conflicts are the primary frame\n\nRespond with exactly one category name from the list above and nothing else."
+ },
+ "cost_usd": 0.3159,
+ "task_lm_calls": 700,
+ "reflection_calls": 2
+}

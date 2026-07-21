@@ -1,0 +1,158 @@
+{
+ "schema_version": 1,
+ "artifact_id": "c80378f50caa",
+ "parent_id": null,
+ "task_name": "stance_abortion",
+ "created_at": "2026-07-21T01:37:42-0500",
+ "library": {
+  "name": "melvil",
+  "version": "0.3.0"
+ },
+ "models": {
+  "task": "openrouter/anthropic/claude-haiku-4.5",
+  "reflection": "openrouter/anthropic/claude-sonnet-4.5"
+ },
+ "budget": {
+  "metric_calls_budget": 800,
+  "metric_calls_spent": 884,
+  "cost_usd": 0.5048,
+  "task_lm_usage": {
+   "model": "openrouter/anthropic/claude-haiku-4.5",
+   "prompt_tokens": 396861,
+   "completion_tokens": 3136,
+   "calls": 784,
+   "cache_hits": 200,
+   "cost_usd": 0.412541
+  },
+  "reflection_lm_usage": {
+   "model": "openrouter/anthropic/claude-sonnet-4.5",
+   "prompt_tokens": 5134,
+   "completion_tokens": 5122,
+   "calls": 11,
+   "cache_hits": 0,
+   "cost_usd": 0.092232
+  },
+  "opt_seconds": 239.0
+ },
+ "scores": {
+  "dev_accuracy": 0.81,
+  "dev_macro_f1": 0.7953,
+  "per_label_dev": {
+   "against": {
+    "precision": 0.9318,
+    "recall": 0.7593,
+    "f1": 0.8367,
+    "support": 54
+   },
+   "favor": {
+    "precision": 0.7368,
+    "recall": 0.7368,
+    "f1": 0.7368,
+    "support": 19
+   },
+   "none": {
+    "precision": 0.7027,
+    "recall": 0.963,
+    "f1": 0.8125,
+    "support": 27
+   }
+  },
+  "seed_dev_accuracy": 0.52,
+  "dev_accuracy_quarantined": null
+ },
+ "config_hash": "89b14e97dd19",
+ "config": {
+  "task_model": "openrouter/anthropic/claude-haiku-4.5",
+  "reflection_model": "openrouter/anthropic/claude-sonnet-4.5",
+  "budget": "light",
+  "seed": 20,
+  "features": {
+   "codebook": false,
+   "confusion_reflection": false,
+   "hard_example_mining": false
+  },
+  "num_threads": 8,
+  "run_dir": "/Users/harish/Documents/Claude/Projects/6s/labelsmith/mechanistic/runs_e8_gepa_f2/stance_abortion/s20",
+  "task_temperature": 0.0,
+  "task_max_tokens": 40,
+  "reflection_temperature": 1.0,
+  "reflection_max_tokens": 8000,
+  "reflection_minibatch_size": 3,
+  "max_exemplars": 6,
+  "mining_llm_screen": true,
+  "prices": {},
+  "metric_calls": 800
+ },
+ "label_names": [
+  "against",
+  "favor",
+  "none"
+ ],
+ "components": {
+  "instruction": "Classify the given text into one of these categories based on the author's stance toward abortion rights/legalization:\n\n- **against**: The text opposes abortion rights or expresses a pro-life position (e.g., emphasizing \"sanctity of life,\" \"life begins at conception,\" promoting adoption as an alternative to abortion, protecting unborn life, religious arguments against abortion)\n\n- **favor**: The text supports abortion rights or expresses a pro-choice position (e.g., supporting bodily autonomy, women's right to choose, access to abortion services, reproductive freedom)\n\n- **none**: The text is neutral, irrelevant to the abortion debate, or does not express a clear stance\n\nImportant: Pro-life messages that emphasize protecting life, adoption alternatives, or life beginning at conception should be classified as \"against\" (opposing abortion rights), NOT \"favor.\""
+ },
+ "exemplars": [],
+ "confusion": {
+  "labels": [
+   "against",
+   "favor",
+   "none"
+  ],
+  "matrix": [
+   [
+    41,
+    5,
+    8,
+    0
+   ],
+   [
+    2,
+    14,
+    3,
+    0
+   ],
+   [
+    1,
+    0,
+    26,
+    0
+   ]
+  ],
+  "unparseable_column": true
+ },
+ "curve": [
+  {
+   "metric_calls": 0,
+   "dev_score": 0.52
+  },
+  {
+   "metric_calls": 115,
+   "dev_score": 0.75
+  },
+  {
+   "metric_calls": 221,
+   "dev_score": 0.79
+  },
+  {
+   "metric_calls": 360,
+   "dev_score": 0.74
+  },
+  {
+   "metric_calls": 466,
+   "dev_score": 0.77
+  },
+  {
+   "metric_calls": 572,
+   "dev_score": 0.75
+  },
+  {
+   "metric_calls": 678,
+   "dev_score": 0.78
+  },
+  {
+   "metric_calls": 784,
+   "dev_score": 0.81
+  }
+ ],
+ "notes": ""
+}

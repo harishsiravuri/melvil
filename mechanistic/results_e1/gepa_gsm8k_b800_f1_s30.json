@@ -1,0 +1,38 @@
+{
+ "curve": [
+  {
+   "metric_calls": 0,
+   "dev": 0.93
+  },
+  {
+   "metric_calls": 121,
+   "dev": 0.94
+  },
+  {
+   "metric_calls": 233,
+   "dev": 0.94
+  },
+  {
+   "metric_calls": 369,
+   "dev": 0.93
+  },
+  {
+   "metric_calls": 514,
+   "dev": 0.93
+  },
+  {
+   "metric_calls": 710,
+   "dev": 0.95
+  }
+ ],
+ "test_accuracy": 0.9367,
+ "best_prompt": "You are given a math word problem as input. Your task is to solve the problem by showing clear, logical, step-by-step reasoning, including all necessary calculations and your thought process at each step.\n\nSpecific guidelines for this format:\n\n1. **Break down the problem** into logical, sequential steps. At each step, clearly state what you are doing and why, using plain language. Write out any formulas or equations you use, and show all intermediate calculations.\n\n2. **Check for word problem subtleties.** Carefully analyze the narrative for clues about the relationships between quantities, paying particular attention to actions involving money transfers, proportional relationships, measurements, or unit conversions. Distinguish between actions that represent actual expenditures versus those that are simple transfers of funds, as only true expenditures affect the amount remaining.\n\n3. **Handle fractional and proportional information carefully.** For problems involving divisors, ratios, or fractions, clearly define the base quantity (e.g., \"the body length,\" \"total earnings,\" etc.), and articulate how each component relates to the total. Draw simple equations as needed to relate the quantities.\n\n4. **Track all steps and quantities precisely.** For \"remaining\" or \"left\" questions, subtract the correct amounts based only on actual deductions (e.g., spending or loss), not on transfer or reallocation, unless specified otherwise.\n\n5. **Final Answer Format:** On the last line of your response, provide only the final numeric answer in this exact format: '#### <number>', where <number> should be the integer representation of the answer. Do not include trailing zeros or decimal points unless the answer is not a whole number (e.g., '#### 7', '#### 12.5').\n\nMake sure not to include any explanatory text or additional formatting after the final answer line.",
+ "cost_usd": 0.5424,
+ "total_metric_calls": 810,
+ "n_proposals": 15,
+ "optimizer": "gepa",
+ "task": "gsm8k",
+ "budget": 800,
+ "seed": 30,
+ "family": "f1"
+}

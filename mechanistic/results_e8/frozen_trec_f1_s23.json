@@ -1,0 +1,36 @@
+{
+ "experiment": "e8",
+ "phase": "frozen",
+ "task": "trec",
+ "family": "f1",
+ "seed": 23,
+ "arms": {
+  "seed": {
+   "test_accuracy": 0.6,
+   "test_macro_f1": 0.6235,
+   "unparseable": 0
+  },
+  "x1": {
+   "test_accuracy": 0.8833,
+   "test_macro_f1": 0.8904,
+   "unparseable": 0
+  },
+  "x2": {
+   "test_accuracy": 0.8633,
+   "test_macro_f1": 0.8573,
+   "unparseable": 0
+  }
+ },
+ "dev_accs": {
+  "input_of_x1": 0.5,
+  "input_of_x2": 0.78
+ },
+ "prompts": {
+  "seed": "Classify the given text into one of these categories: abbreviation, description, entity, human, location, numeric.\n\nRespond with exactly one category name from the list above and nothing else.",
+  "x1": "Classify the given text into one of these categories: abbreviation, description, entity, human, location, numeric.\n\nDefinitions:\n- abbreviation: A shortened form of a word or phrase.\n- description: A request for or statement giving information, definitions, explanations, or properties about concepts, actions, or processes\u2014not asking for a specific name, number, person, place, or group.\n- entity: A question or statement seeking the name of a thing, object, group, organization, company, product, title, animal, or other specific non-human and non-location entity.\n- human: A question or statement seeking the name of a person, group of people, or human role (e.g., individual, group, profession, or famous person).\n- location: A question or statement seeking the name of a place, city, country, physical location, river, or geographic area.\n- numeric: A question or statement seeking a quantity, date, number, measurement, age, duration, or any kind of numeric value.\n\nDecision rules:\n- If the expected answer is a specific name, assign to 'entity', 'human', or 'location' based on whether it is a non-human/non-place thing, a person/group, or a place.\n- If the expected answer is a number, date, or measurement, assign to 'numeric'.\n- If the expected answer is an abbreviation, assign to 'abbreviation'.\n- If the text asks \"what is/are\" or \"describe/explain\", check if the answer is a name (assign to entity, human, or location), a number (assign to numeric), or general info (assign to description).\n- If the correct category is unclear between 'description' and a specific answer type, prefer the specific type (entity, human, location, numeric, abbreviation) over 'description'.\n\nRespond with exactly one category name from the list above and nothing else.",
+  "x2": "Classify the given text into one of these categories: abbreviation, description, entity, human, location, numeric.\n\nDefinitions:\n- abbreviation: The text seeks, defines, or refers to a shortened form of a word or phrase.\n- description: The text requests a general explanation, definition, description, or properties about a concept, action, or process without asking for a specific name, number, person, place, or group. Use only if no more specific category fits.\n- entity: The text asks for the name or names of specific things, objects, groups, organizations, companies, products, titles, animals, or other non-human and non-location entities.\n- human: The text asks for the name or names of people, groups of people, professions, roles, or specific humans (including teams or collectives composed of humans).\n- location: The text asks for the name or names of places, cities, countries, geographic areas, bodies of water, or physical locations.\n- numeric: The text asks for a quantity, date, number, measurement, age, duration, or any explicit numeric value.\n\nDecision rules:\n- For \"What is/are...\", \"Name...\", \"Give the name(s) of...\", or \"List...\", determine what KIND of thing is requested: person/group (\u2192 human), place (\u2192 location), thing/object/organization/title (\u2192 entity), quantity/date/number (\u2192 numeric), abbreviation (\u2192 abbreviation). Prefer 'entity', 'human', 'location', or 'numeric' over 'description' if a specific name, group, or value can be provided as answer.\n- If the answer can only be a human or human group (e.g. person, team, university faculty), assign 'human'. If it's a location or place, assign 'location'. If it's a thing, product, object, animal, group/company (not primarily human), or work (book, film, etc.), assign 'entity'.\n- If a question expects a list of names (books, films, Usenet groups, elements, animals, teams, organizations), classify by the type of item: works/groups/things (\u2192 entity); human/teams (\u2192 human); places (\u2192 location).\n- If a question requests properties, general explanations, or definitions and does NOT seek a specific name, group, location, or number, use 'description'. Do NOT use 'description' if a more specific category fits.\n- If an abbreviation is explicitly requested or defined, use 'abbreviation'.\n- When in doubt between 'entity', 'human', or 'location', assign based on the essential nature of what is named; human-related collectives (sports teams, university faculties) go to 'human', all other organizations/products/titles/items go to 'entity'.\n\nRespond with exactly one category name from the list above and nothing else."
+ },
+ "cost_usd": 0.1484,
+ "task_lm_calls": 700,
+ "reflection_calls": 2
+}

@@ -1,0 +1,36 @@
+{
+ "experiment": "e8",
+ "phase": "frozen",
+ "task": "sst5",
+ "family": "f2",
+ "seed": 24,
+ "arms": {
+  "seed": {
+   "test_accuracy": 0.58,
+   "test_macro_f1": 0.5574,
+   "unparseable": 0
+  },
+  "x1": {
+   "test_accuracy": 0.59,
+   "test_macro_f1": 0.5773,
+   "unparseable": 0
+  },
+  "x2": {
+   "test_accuracy": 0.5767,
+   "test_macro_f1": 0.5447,
+   "unparseable": 0
+  }
+ },
+ "dev_accs": {
+  "input_of_x1": 0.61,
+  "input_of_x2": 0.63
+ },
+ "prompts": {
+  "seed": "Classify the given text into one of these categories: negative, neutral, positive, very negative, very positive.\n\nRespond with exactly one category name from the list above and nothing else.",
+  "x1": "Classify the given text into one of these categories: negative, neutral, positive, very negative, very positive.\n\nCategory definitions:\n- very negative: Extremely harsh criticism, strong disapproval, or profound disappointment. Uses intensely negative language like \"misfortune,\" \"disaster,\" \"terrible,\" or expresses complete failure.\n- negative: Clear criticism or disapproval, but not extreme. May acknowledge minor positives while being overall critical.\n- neutral: Balanced mix of positive and negative elements, factual observations without clear sentiment, or ambiguous/mixed reactions. Includes boring/unremarkable content and nostalgia without strong endorsement.\n- positive: Clear approval or praise, but with some reservations or minor criticisms. Generally favorable tone.\n- very positive: Extremely enthusiastic praise with superlatives, strong recommendations, or descriptions of excellence. Little to no criticism.\n\nDecision rules:\n- Phrases like \"disappointment,\" \"misfortune,\" \"no charm,\" \"lacks,\" or multiple serious criticisms indicate very negative, not just negative.\n- Descriptions that are merely factual, reference contradictions, or note something is \"just boring\" without deeper critique are neutral.\n- Words like \"winning,\" \"insightful,\" \"enjoyable,\" \"frothy delight,\" or strong enthusiasm indicate very positive, not just positive.\n- When text contains qualifying phrases like \"only intermittently,\" \"hard not to be a sucker,\" or mixed signals, default to neutral.\n\nRespond with exactly one category name from the list above and nothing else.",
+  "x2": "Classify the given text into one of these categories: negative, neutral, positive, very negative, very positive.\n\nCategory definitions:\n- very negative: Extreme criticism with multiple serious flaws, complete failure, or language like \"disaster,\" \"terrible,\" \"no chemistry,\" \"workmanlike in the extreme,\" \"comes closer to failure,\" or comparisons to failed works. Includes pacing issues combined with fundamental problems.\n- negative: Clear criticism or disapproval with fewer/less severe flaws. May note minor positives but overall critical tone dominates.\n- neutral: Factual descriptions without enthusiasm, observations about what something \"is\" rather than evaluative praise, mixed signals, or descriptions that analyze without endorsing. Includes \"visually compelling\" paired with reservations, \"shock\" without approval, or noting understanding/significance without praise.\n- positive: Clear praise with enthusiasm, multiple positive descriptors, or strong affirmation. May have minor reservations but positive elements clearly outweigh them. Uses words like \"lovely,\" \"enjoyable,\" \"elegant,\" \"witty,\" \"vivid,\" \"deft,\" or makes something \"worth\" experiencing.\n- very positive: Overwhelming enthusiasm, superlatives, unqualified recommendations, or sustained praise across multiple dimensions with minimal to no criticism.\n\nDecision rules:\n- Multiple distinct criticisms (e.g., no chemistry AND poor script) = very negative, not negative\n- Comparisons to failures or phrases like \"in the extreme\" intensify to very negative\n- Descriptive language about what something \"is\" or \"continues to\" do without clear approval = neutral, not positive\n- Words like \"lovely,\" \"vivid,\" \"deft,\" \"worth attending/experiencing,\" \"enjoyable,\" \"witty,\" or \"elegant\" = positive minimum, not neutral\n- Reservations in parentheses or subordinate clauses don't negate enthusiastic main praise = remain positive/very positive\n- \"Compelling\" alone without emotional endorsement = neutral; \"compelling\" + affective praise = positive\n\nRespond with exactly one category name from the list above and nothing else."
+ },
+ "cost_usd": 0.3252,
+ "task_lm_calls": 700,
+ "reflection_calls": 2
+}

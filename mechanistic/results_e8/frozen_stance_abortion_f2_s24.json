@@ -1,0 +1,36 @@
+{
+ "experiment": "e8",
+ "phase": "frozen",
+ "task": "stance_abortion",
+ "family": "f2",
+ "seed": 24,
+ "arms": {
+  "seed": {
+   "test_accuracy": 0.5286,
+   "test_macro_f1": 0.4689,
+   "unparseable": 0
+  },
+  "x1": {
+   "test_accuracy": 0.6607,
+   "test_macro_f1": 0.6522,
+   "unparseable": 0
+  },
+  "x2": {
+   "test_accuracy": 0.6393,
+   "test_macro_f1": 0.631,
+   "unparseable": 0
+  }
+ },
+ "dev_accs": {
+  "input_of_x1": 0.52,
+  "input_of_x2": 0.8
+ },
+ "prompts": {
+  "seed": "Classify the given text into one of these categories: against, favor, none.\n\nRespond with exactly one category name from the list above and nothing else.",
+  "x1": "Classify the given text into one of these categories: against, favor, none.\n\nCategory definitions:\n- against: Text opposes abortion rights, supports pro-life positions, or advocates for restricting abortion access. Includes references to protecting life, religious anti-abortion arguments, or criticism of pro-choice positions.\n- favor: Text supports abortion rights, pro-choice positions, or advocates for abortion access. Includes criticism of abortion restrictions, arguments for bodily autonomy, or opposition to those who would limit abortion rights.\n- none: Text does not take a clear position on abortion, is neutral, or discusses related political topics without expressing a stance on abortion itself.\n\nDecision rules:\n- Religious or moral statements advocating for life/protecting the unborn should be classified as \"against\"\n- Statements criticizing abortion or pro-choice advocates are \"against\"\n- Statements criticizing abortion restrictions or those who impose them are \"favor\"\n- References to women's autonomy, bodily rights, or forced birth are typically \"favor\"\n- Generic political complaints without clear abortion stance are \"none\"\n- Hashtags like #prolife, #right to life indicate \"against\"; #prochoice, #rapeculture in abortion context indicate \"favor\"\n\nRespond with exactly one category name from the list above and nothing else.",
+  "x2": "Classify the given text into one of these categories: against, favor, none.\n\nCategory definitions:\n- against: Text opposes abortion rights, supports pro-life positions, or advocates for restricting abortion access. Includes references to protecting life, fetal rights, religious anti-abortion arguments, criticism of pro-choice positions, or opposition to abortion procedures.\n- favor: Text supports abortion rights, pro-choice positions, or advocates for abortion access. Includes criticism of abortion restrictions, arguments for bodily autonomy, opposition to pro-life advocates, or defense of abortion rights.\n- none: Text does not take a clear position on abortion, is neutral, discusses related political topics without expressing a stance on abortion itself, or is ambiguous.\n\nDecision rules:\n- Statements about human dignity, protecting the unborn, or sanctity of life are \"against\" even if subtle\n- Feminist arguments or references to women's rights are only \"favor\" if they explicitly connect to abortion/choice; otherwise check context carefully\n- \"#prolife\", \"#right to life\", quotes about doing what's right/wrong in abortion context = \"against\"\n- \"#prochoice\", references to bodily autonomy, \"antichoice\", forced birth, or reproductive freedom = \"favor\"\n- When text mentions \"bodily autonomy\" or \"their body\" in pregnancy context, classify as \"favor\" UNLESS it's clearly being used ironically or sarcastically to argue against abortion\n- General celebration of political/legal victories without explicit abortion connection = \"none\"\n- Rhetorical questions criticizing abortion opponents = \"favor\"\n- Sarcastic use of pro-choice language or hashtags to make anti-abortion points = \"against\"\n- If text uses pro-choice framing (#proChoice) but makes a pro-life argument, prioritize the underlying argument = \"against\"\n\nRespond with exactly one category name from the list above and nothing else."
+ },
+ "cost_usd": 0.279,
+ "task_lm_calls": 660,
+ "reflection_calls": 2
+}

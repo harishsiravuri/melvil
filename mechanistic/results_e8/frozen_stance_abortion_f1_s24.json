@@ -1,0 +1,36 @@
+{
+ "experiment": "e8",
+ "phase": "frozen",
+ "task": "stance_abortion",
+ "family": "f1",
+ "seed": 24,
+ "arms": {
+  "seed": {
+   "test_accuracy": 0.5,
+   "test_macro_f1": 0.4335,
+   "unparseable": 0
+  },
+  "x1": {
+   "test_accuracy": 0.5071,
+   "test_macro_f1": 0.454,
+   "unparseable": 0
+  },
+  "x2": {
+   "test_accuracy": 0.5214,
+   "test_macro_f1": 0.4625,
+   "unparseable": 0
+  }
+ },
+ "dev_accs": {
+  "input_of_x1": 0.43,
+  "input_of_x2": 0.58
+ },
+ "prompts": {
+  "seed": "Classify the given text into one of these categories: against, favor, none.\n\nRespond with exactly one category name from the list above and nothing else.",
+  "x1": "Classify the given text into exactly one of these categories: against, favor, none.\n\nDefinitions:\n- \u201cagainst\u201d: The text clearly expresses opposition to an idea, policy, or action, either directly or by supporting an opposing side (e.g., pro-life in the context of abortion = against abortion). Criticism, negative language, or advocacy against something also belong here.\n- \u201cfavor\u201d: The text clearly expresses support for an idea, policy, or action, either directly or by supporting the corresponding side (e.g., pro-choice in the context of abortion = favor abortion rights). Positive language or advocacy in support of something also belong here.\n- \u201cnone\u201d: Use this when there is no clear support or opposition expressed, or the text is ambiguous, off-topic, neutral, or unrelated to the subject. General comments, personal remarks, jokes, or unrelated hashtags should be labeled \u201cnone\u201d.\n\nDecision rules:\n- If the text advocates for or praises one side, label as \u201cfavor\u201d; if it opposes or criticizes one side, label as \u201cagainst.\u201d\n- Do not infer \u201cfavor\u201d or \u201cagainst\u201d unless the stance is explicit or strongly implied; if unclear, choose \u201cnone.\u201d\n- Prioritize \u201cnone\u201d if the text simply mentions a topic, is ambiguous, sarcastic, general, or includes mixed signals with no clear stance.\n- If both \u201cfavor\u201d and \u201cagainst\u201d could apply, select the stronger, more explicit stance.\n- If unsure, default to \u201cnone.\u201d\n\nRespond with exactly one category name from the list above and nothing else.",
+  "x2": "Classify the given text into exactly one of these categories: against, favor, none.\n\nDefinitions:\n- \u201cagainst\u201d: The text expresses opposition to an idea, policy, or action\u2014directly (clear negative language, explicit opposition, or criticism) or indirectly (by supporting the opposing side). Includes: negative opinions, arguments against, advocacy against, support for an opposing movement (e.g., \u201cpro-life\u201d = \u201cagainst\u201d abortion).\n- \u201cfavor\u201d: The text expresses support for an idea, policy, or action\u2014directly (clear positive language, explicit approval, endorsement, or praise) or indirectly (by supporting the corresponding side). Includes: positive opinions, arguments for, advocacy in support, support for a movement (e.g., \u201cpro-choice\u201d = \u201cfavor\u201d abortion rights).\n- \u201cnone\u201d: The text does not clearly take a side, is ambiguous, neutral, off-topic, contains mixed/contradictory signals, sarcasm, or is merely informational or unrelated. Personal remarks not tied to a stance, jokes, and generic observations also belong here.\n\nDecision rules:\n- Assign \u201cagainst\u201d or \u201cfavor\u201d if the stance is clear OR if the text supports a commonly recognized side (even using indirect, coded, or movement language). If supporting one side inherently opposes the other, choose the corresponding stance (\u201cpro-life\u201d = \u201cagainst\u201d abortion, \u201cpro-choice\u201d = \u201cfavor\u201d abortion rights).\n- Do NOT assign \u201cfavor\u201d or \u201cagainst\u201d unless the position, persuasion, or intent is specific. Sarcasm, rhetorical questions, and indirect language should only be labeled \u201cagainst\u201d or \u201cfavor\u201d if the stance is still clearly conveyed; if ambiguous, select \u201cnone.\u201d\n- If the text is mainly criticism, blame, or negative language targeted at policies, people, or ideas, select \u201cagainst\u201d; if mainly praise or positive advocacy, select \u201cfavor.\u201d\n- If the text mentions a topic neutrally, expresses both sides equally, or the main stance cannot be determined, label as \u201cnone.\u201d\n- If unsure, or if the text contains both stances without a clear dominant position, default to \u201cnone.\u201d\n\nRespond with exactly one category name from the list above and nothing else."
+ },
+ "cost_usd": 0.1201,
+ "task_lm_calls": 660,
+ "reflection_calls": 2
+}

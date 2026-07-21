@@ -1,0 +1,36 @@
+{
+ "experiment": "e8",
+ "phase": "frozen",
+ "task": "stance_abortion",
+ "family": "f2",
+ "seed": 21,
+ "arms": {
+  "seed": {
+   "test_accuracy": 0.5286,
+   "test_macro_f1": 0.4689,
+   "unparseable": 0
+  },
+  "x1": {
+   "test_accuracy": 0.6536,
+   "test_macro_f1": 0.6529,
+   "unparseable": 0
+  },
+  "x2": {
+   "test_accuracy": 0.6036,
+   "test_macro_f1": 0.6076,
+   "unparseable": 0
+  }
+ },
+ "dev_accs": {
+  "input_of_x1": 0.52,
+  "input_of_x2": 0.84
+ },
+ "prompts": {
+  "seed": "Classify the given text into one of these categories: against, favor, none.\n\nRespond with exactly one category name from the list above and nothing else.",
+  "x1": "Classify the given text into one of these categories: against, favor, none.\n\nCategory definitions:\n- against: Text opposes abortion rights, supports pro-life position, or advocates for restricting/banning abortion access. Includes religious arguments against abortion, statements about protecting unborn life, and pro-life advocacy.\n- favor: Text supports abortion rights, pro-choice position, or advocates for abortion access. Includes criticisms of abortion restrictions, arguments for bodily autonomy, and defense of reproductive rights.\n- none: Text is off-topic, unclear, neutral, or does not take a clear stance on abortion. Includes tangential political discussion not directly about abortion policy.\n\nDecision rules:\n- Religious or moral arguments FOR protecting unborn life = against (not favor)\n- Self-identification as \"pro-life\" or using pro-life slogans = against\n- Self-identification as \"feminist\" while opposing abortion = against\n- Criticizing abortion or calling it wrong = against\n- Supporting bodily autonomy or criticizing abortion restrictions = favor\n- Criticizing politicians for restricting abortion = favor\n- General political complaints without abortion focus = none\n\nRespond with exactly one category name from the list above and nothing else.",
+  "x2": "Classify the given text into one of these categories: against, favor, none.\n\nCategory definitions:\n- against: Text opposes abortion rights, supports pro-life position, or advocates for restricting/banning abortion access. Includes religious arguments against abortion, statements about protecting unborn life, pro-life advocacy, and arguments that fetuses have rights.\n- favor: Text supports abortion rights, pro-choice position, or advocates for abortion access. Includes criticisms of abortion restrictions, arguments for bodily autonomy, defense of reproductive rights, celebrating pro-choice outcomes, and criticism of anti-choice positions.\n- none: Text is off-topic, unclear, neutral, or does not take a clear stance on abortion. Includes tangential political discussion, general prayers/religious statements without explicit abortion stance, and satire that doesn't clearly advocate a position.\n\nDecision rules:\n- Religious or moral arguments FOR protecting unborn life = against\n- Self-identification as \"pro-life\" or using pro-life slogans = against\n- Arguments about \"human dignity\" of unborn/fetus = against\n- Claims that \"it's not your body/choice\" (denying bodily autonomy) = against\n- Statements supporting bodily autonomy or reproductive choice = favor\n- Self-identification as \"pro-choice\" or celebrating pro-choice outcomes = favor\n- Criticizing \"anti-choice\" positions or abortion restrictions = favor\n- Questioning hypocrisy of abortion opponents = favor\n- Generic prayers or religious hashtags WITHOUT explicit abortion stance = none\n- Satire mocking anti-abortion arguments (e.g., \"#worstargumentever\", \"#lolanti\") = none\n- General political celebration without abortion focus = none\n\nWhen text mentions bodily autonomy in the context of abortion, classify as favor unless it explicitly denies that autonomy.\n\nRespond with exactly one category name from the list above and nothing else."
+ },
+ "cost_usd": 0.2718,
+ "task_lm_calls": 660,
+ "reflection_calls": 2
+}
