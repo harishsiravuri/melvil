@@ -1,0 +1,12 @@
+{
+ "task": "massive",
+ "seed": 34,
+ "test_accuracy": 0.88,
+ "baseline_test_accuracy": 0.88,
+ "metric_calls_spent": 427,
+ "baseline_metric_calls": 872,
+ "cost_usd": 0.0,
+ "baseline_cost_usd": 0.4506,
+ "n_candidates": 4,
+ "best_dev": 0.88
+}

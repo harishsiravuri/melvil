@@ -1,0 +1,12 @@
+{
+ "task": "banking77",
+ "seed": 30,
+ "test_accuracy": 0.8033,
+ "baseline_test_accuracy": 0.8267,
+ "metric_calls_spent": 436,
+ "baseline_metric_calls": 899,
+ "cost_usd": 0.0,
+ "baseline_cost_usd": 0.3062,
+ "n_candidates": 4,
+ "best_dev": 0.82
+}

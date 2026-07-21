@@ -199,6 +199,23 @@ machinery (LLM split + verification gate) worked as designed — the gate
 correctly caught degraded decompositions — so the negative is attributable to
 the refinement phase itself, not implementation failure.
 
+## E5 Phase B — LIVE adaptive stopping (C5) · **COMPLETE** ($0.61 marginal)
+
+Rule from the enriched Phase-A frontier (stop after 3 accepts OR 150-call
+patience), run live on banking77/trec/massive × seeds 30–34, PAIRED against
+the E1 vanilla B1 cells (same seeds/config, full budget).
+
+**Verdict: C5 DIED as an accuracy-preserving claim.** Stopped runs spend
+**48.9%** of the metric calls and lose **2.8 ± 1.5 test points** (banking77
+−4.1, trec −3.3, massive −0.9). The live test refutes the rescue hypothesis
+that late accepts only chase dev noise — they carry real test value, as the
+distributed-gains result (E1) predicts. (Measured dollar cost of the stopped
+runs was ~12% of baseline, but that is a disk-cache artifact of re-running
+prefixes of already-cached trajectories; metric calls are the honest unit.)
+Paper sentence: *"Early stopping is a dial, not a free lunch: halving the
+budget costs ~3 test points, because reflective evolution's later accepts are
+not noise."* C5 survives only as that explicit trade-off table row.
+
 ## Pending experiments
 - **E1 front-loading (C1)** — harness next; its runs also enrich this
   simulation pool.

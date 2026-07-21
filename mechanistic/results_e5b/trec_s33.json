@@ -1,0 +1,12 @@
+{
+ "task": "trec",
+ "seed": 33,
+ "test_accuracy": 0.86,
+ "baseline_test_accuracy": 0.8867,
+ "metric_calls_spent": 427,
+ "baseline_metric_calls": 857,
+ "cost_usd": 0.0654,
+ "baseline_cost_usd": 0.255,
+ "n_candidates": 4,
+ "best_dev": 0.79
+}
