@@ -1,0 +1,6082 @@
+{
+"train": [
+{
+"text": "whats the highest rated lobster pound in maine and how far is it from me",
+"gold": {
+"Rating": [
+"highest rated"
+],
+"Dish": [
+"lobster pound"
+],
+"Location": [
+"maine"
+]
+}
+},
+{
+"text": "please locate the nearest sub shop that is vegan",
+"gold": {
+"Location": [
+"nearest"
+],
+"Dish": [
+"sub"
+],
+"Cuisine": [
+"vegan"
+]
+}
+},
+{
+"text": "show the restaurant that has the most reviews",
+"gold": {
+"Rating": [
+"reviews"
+]
+}
+},
+{
+"text": "i need someplace to eat thats inexpensive no more than 2 miles away and has a childrens menu",
+"gold": {
+"Price": [
+"inexpensive"
+],
+"Location": [
+"no more than 2 miles away"
+],
+"Amenity": [
+"childrens menu"
+]
+}
+},
+{
+"text": "where is chilis",
+"gold": {
+"Restaurant_Name": [
+"chilis"
+]
+}
+},
+{
+"text": "find me a mexican place within twenty five miles from here",
+"gold": {
+"Cuisine": [
+"mexican"
+],
+"Location": [
+"within twenty five miles"
+]
+}
+},
+{
+"text": "where can i get a turkey sandwich",
+"gold": {
+"Dish": [
+"turkey sandwich"
+]
+}
+},
+{
+"text": "ok where can i find a nearby diner",
+"gold": {
+"Location": [
+"nearby"
+],
+"Cuisine": [
+"diner"
+]
+}
+},
+{
+"text": "wheres the nearest ice cream parlor",
+"gold": {
+"Location": [
+"nearest"
+],
+"Cuisine": [
+"ice cream parlor"
+]
+}
+},
+{
+"text": "eateries",
+"gold": {
+"Cuisine": [
+"eateries"
+]
+}
+},
+{
+"text": "could you find me a place to eat that is low priced and has great service",
+"gold": {
+"Price": [
+"low"
+],
+"Rating": [
+"great service"
+]
+}
+},
+{
+"text": "show me directions to a sit down restaurant",
+"gold": {
+"Amenity": [
+"sit down"
+]
+}
+},
+{
+"text": "is there any parfait places around",
+"gold": {
+"Dish": [
+"parfait"
+],
+"Location": [
+"around"
+]
+}
+},
+{
+"text": "how many nearby chinese restaurants with 5 star reviews",
+"gold": {
+"Location": [
+"nearby"
+],
+"Cuisine": [
+"chinese"
+],
+"Rating": [
+"5 star reviews"
+]
+}
+},
+{
+"text": "i am looking for the best mexican food",
+"gold": {
+"Rating": [
+"best"
+],
+"Cuisine": [
+"mexican"
+]
+}
+},
+{
+"text": "who can sell me some pancakes",
+"gold": {
+"Dish": [
+"pancakes"
+]
+}
+},
+{
+"text": "is there a china garden restaurant in newark",
+"gold": {
+"Restaurant_Name": [
+"china garden"
+],
+"Location": [
+"in newark"
+]
+}
+},
+{
+"text": "is jasmine bistros pricing good",
+"gold": {
+"Restaurant_Name": [
+"jasmine bistros"
+],
+"Price": [
+"pricing good"
+]
+}
+},
+{
+"text": "whats the best hamburger in town",
+"gold": {
+"Rating": [
+"best"
+],
+"Dish": [
+"hamburger"
+],
+"Location": [
+"in town"
+]
+}
+},
+{
+"text": "is there a steak house still open in this city",
+"gold": {
+"Cuisine": [
+"steak house"
+],
+"Hours": [
+"still open"
+],
+"Location": [
+"in this city"
+]
+}
+},
+{
+"text": "can you search for a restaurant that has outdoor dining tables",
+"gold": {
+"Amenity": [
+"outdoor dining tables"
+]
+}
+},
+{
+"text": "please find nearest liquor store",
+"gold": {
+"Location": [
+"nearest"
+]
+}
+},
+{
+"text": "i need somewhere that is open every day",
+"gold": {
+"Hours": [
+"open every day"
+]
+}
+},
+{
+"text": "where can i find a nice high class bakery",
+"gold": {
+"Rating": [
+"nice high class"
+],
+"Cuisine": [
+"bakery"
+]
+}
+},
+{
+"text": "is there an italian spot on corinth street that will allow me to bring my own beer",
+"gold": {
+"Cuisine": [
+"italian"
+],
+"Location": [
+"corinth street"
+],
+"Amenity": [
+"bring my own beer"
+]
+}
+},
+{
+"text": "looking for a restaurant that caters a wide variety menu that can do weddings",
+"gold": {
+"Amenity": [
+"caters",
+"can do weddings"
+],
+"Cuisine": [
+"variety"
+]
+}
+},
+{
+"text": "is wendys open at 6 a m",
+"gold": {
+"Restaurant_Name": [
+"wendys"
+],
+"Hours": [
+"open at 6 a m"
+]
+}
+},
+{
+"text": "where can i find a nearby quiet restaurant that offers a great filet mignon",
+"gold": {
+"Location": [
+"nearby"
+],
+"Amenity": [
+"quiet"
+],
+"Rating": [
+"great"
+],
+"Dish": [
+"filet mignon"
+]
+}
+},
+{
+"text": "could you take me to some nice quiet family restaurant that serves homemade food at a decent price",
+"gold": {
+"Rating": [
+"nice"
+],
+"Amenity": [
+"quiet family"
+],
+"Cuisine": [
+"homemade"
+],
+"Price": [
+"decent"
+]
+}
+},
+{
+"text": "where can i get cheap halal on summer street",
+"gold": {
+"Price": [
+"cheap"
+],
+"Cuisine": [
+"halal"
+],
+"Location": [
+"summer street"
+]
+}
+},
+{
+"text": "search for all restaurants that have steak on the menu and give me their ratings",
+"gold": {
+"Dish": [
+"steak"
+]
+}
+},
+{
+"text": "it is my boyfriends birthday where can i find a nice lunch special in inman square",
+"gold": {
+"Rating": [
+"nice"
+],
+"Hours": [
+"lunch"
+],
+"Amenity": [
+"special"
+],
+"Location": [
+"inman square"
+]
+}
+},
+{
+"text": "i would like to find a thai restaurant on the southside of town that offers a mild curry",
+"gold": {
+"Cuisine": [
+"thai"
+],
+"Location": [
+"southside"
+],
+"Dish": [
+"mild curry"
+]
+}
+},
+{
+"text": "where is there a greek restaurant nearby",
+"gold": {
+"Cuisine": [
+"greek"
+],
+"Location": [
+"nearby"
+]
+}
+},
+{
+"text": "is tie optional at ardens",
+"gold": {
+"Amenity": [
+"tie optional"
+],
+"Restaurant_Name": [
+"ardens"
+]
+}
+},
+{
+"text": "what is the name of that new mongolian bbq place on the parkway",
+"gold": {
+"Cuisine": [
+"new mongolian bbq"
+],
+"Location": [
+"parkway"
+]
+}
+},
+{
+"text": "where can i get a sandwich in times square",
+"gold": {
+"Dish": [
+"sandwich"
+],
+"Location": [
+"times square"
+]
+}
+},
+{
+"text": "whats for dinner",
+"gold": {}
+},
+{
+"text": "need a martini any bars around",
+"gold": {
+"Dish": [
+"martini"
+],
+"Cuisine": [
+"bars"
+]
+}
+},
+{
+"text": "im in the mood for chinese where is the closest restaurant",
+"gold": {
+"Cuisine": [
+"chinese"
+],
+"Location": [
+"closest"
+]
+}
+},
+{
+"text": "how long does it take to get to the wendys on bridge st",
+"gold": {
+"Restaurant_Name": [
+"wendys"
+],
+"Location": [
+"bridge st"
+]
+}
+},
+{
+"text": "is there an inexpensive steak place in littleton",
+"gold": {
+"Price": [
+"inexpensive"
+],
+"Cuisine": [
+"steak"
+],
+"Location": [
+"littleton"
+]
+}
+},
+{
+"text": "what is the number for mikes pizza in hilldale",
+"gold": {
+"Restaurant_Name": [
+"mikes pizza"
+],
+"Location": [
+"hilldale"
+]
+}
+},
+{
+"text": "ony jon morris and companys along the way offering carry out",
+"gold": {
+"Restaurant_Name": [
+"jon morris and companys"
+],
+"Location": [
+"along the way"
+],
+"Amenity": [
+"carry out"
+]
+}
+},
+{
+"text": "find me the best baker in town",
+"gold": {
+"Rating": [
+"best"
+],
+"Cuisine": [
+"baker"
+],
+"Location": [
+"in town"
+]
+}
+},
+{
+"text": "look for an italian restaurant in this area where i can order a la carte",
+"gold": {
+"Cuisine": [
+"italian"
+],
+"Location": [
+"in this area"
+],
+"Amenity": [
+"la carte"
+]
+}
+},
+{
+"text": "whats the daily special at dennis",
+"gold": {
+"Location": [
+"daily special"
+],
+"Restaurant_Name": [
+"dennis"
+]
+}
+},
+{
+"text": "please tell me there is a del taco close by",
+"gold": {
+"Restaurant_Name": [
+"del taco"
+],
+"Location": [
+"close by"
+]
+}
+},
+{
+"text": "who has the cheapest take out korean food in the down town district",
+"gold": {
+"Price": [
+"cheapest"
+],
+"Amenity": [
+"take out"
+],
+"Cuisine": [
+"korean"
+],
+"Location": [
+"down town district"
+]
+}
+},
+{
+"text": "is there a crazy bowl nearby",
+"gold": {
+"Restaurant_Name": [
+"crazy bowl"
+],
+"Location": [
+"nearby"
+]
+}
+},
+{
+"text": "is there a wine bar close by",
+"gold": {
+"Amenity": [
+"wine bar"
+],
+"Location": [
+"close by"
+]
+}
+},
+{
+"text": "where can i go in the evening for a nicely priced sauce",
+"gold": {
+"Hours": [
+"evening"
+],
+"Price": [
+"nicely"
+],
+"Dish": [
+"sauce"
+]
+}
+},
+{
+"text": "id like to eat lunch at a mexican restaurant",
+"gold": {
+"Cuisine": [
+"lunch",
+"mexican"
+]
+}
+},
+{
+"text": "where can i make reservations for dinner",
+"gold": {
+"Amenity": [
+"reservations"
+],
+"Hours": [
+"dinner"
+]
+}
+},
+{
+"text": "does the coffee shop on main street server dinner",
+"gold": {
+"Cuisine": [
+"coffee"
+],
+"Location": [
+"main street"
+],
+"Amenity": [
+"server dinner"
+]
+}
+},
+{
+"text": "we want to eat at a zagat rated italian restaurant",
+"gold": {
+"Rating": [
+"zagat rated"
+],
+"Cuisine": [
+"italian"
+]
+}
+},
+{
+"text": "find me a pricey restaurant within 2 miles",
+"gold": {
+"Location": [
+"within 2 miles"
+]
+}
+},
+{
+"text": "is prattville pizza expensive",
+"gold": {
+"Restaurant_Name": [
+"prattville pizza"
+]
+}
+},
+{
+"text": "is there a place on the route where i can dine at the bar",
+"gold": {
+"Location": [
+"route"
+],
+"Amenity": [
+"dine at the bar"
+]
+}
+},
+{
+"text": "where nearby is a good mexican place for a date",
+"gold": {
+"Location": [
+"nearby"
+],
+"Rating": [
+"good"
+],
+"Cuisine": [
+"mexican"
+],
+"Amenity": [
+"date"
+]
+}
+},
+{
+"text": "i want red beans and rice",
+"gold": {
+"Dish": [
+"red beans and rice"
+]
+}
+},
+{
+"text": "find me a restaurant that serves southern food near the holliston theater district",
+"gold": {
+"Cuisine": [
+"southern"
+],
+"Location": [
+"near the holliston theater district"
+]
+}
+},
+{
+"text": "im really in the mood for pizza today what restaurant has the highest rating for pizza",
+"gold": {
+"Cuisine": [
+"pizza"
+],
+"Rating": [
+"highest rating"
+],
+"Dish": [
+"pizza"
+]
+}
+},
+{
+"text": "where can i find a good hotdog and fries",
+"gold": {
+"Rating": [
+"good"
+],
+"Dish": [
+"hotdog",
+"fries"
+]
+}
+},
+{
+"text": "what burger joints are there on the way open after 1 am",
+"gold": {
+"Cuisine": [
+"burger joints"
+],
+"Location": [
+"way"
+],
+"Hours": [
+"open after 1 am"
+]
+}
+},
+{
+"text": "where can i take the kids for dinner",
+"gold": {
+"Amenity": [
+"kids"
+],
+"Hours": [
+"dinner"
+]
+}
+},
+{
+"text": "me and a buddy are going to met up for lunch where should we go",
+"gold": {
+"Hours": [
+"lunch"
+]
+}
+},
+{
+"text": "where can i go that has easy parking and soup",
+"gold": {
+"Amenity": [
+"easy parking"
+],
+"Dish": [
+"soup"
+]
+}
+},
+{
+"text": "search local pizza hut",
+"gold": {
+"Location": [
+"local"
+],
+"Restaurant_Name": [
+"pizza hut"
+]
+}
+},
+{
+"text": "where is the nearest mcdonalds",
+"gold": {
+"Location": [
+"nearest"
+],
+"Restaurant_Name": [
+"mcdonalds"
+]
+}
+},
+{
+"text": "is there a nice bar on the way",
+"gold": {
+"Rating": [
+"nice"
+],
+"Cuisine": [
+"bar"
+],
+"Location": [
+"way"
+]
+}
+},
+{
+"text": "can you find me the nearest pizzeria",
+"gold": {
+"Location": [
+"nearest"
+],
+"Cuisine": [
+"pizzeria"
+]
+}
+},
+{
+"text": "is there a restaurant in chinatown with a great view and great poek",
+"gold": {
+"Location": [
+"chinatown"
+],
+"Amenity": [
+"great view"
+],
+"Rating": [
+"great"
+],
+"Dish": [
+"poek"
+]
+}
+},
+{
+"text": "im looking or the closest mcdonalds",
+"gold": {
+"Location": [
+"closest"
+],
+"Restaurant_Name": [
+"mcdonalds"
+]
+}
+},
+{
+"text": "what are the korean restaurants within a 5 minute drive of here",
+"gold": {
+"Cuisine": [
+"korean"
+],
+"Location": [
+"within a 5 minute drive of here"
+]
+}
+},
+{
+"text": "search for a restaurant nearby that serves brunch",
+"gold": {
+"Location": [
+"nearby"
+],
+"Hours": [
+"brunch"
+]
+}
+},
+{
+"text": "is there any restaurants that will allow my pet",
+"gold": {
+"Amenity": [
+"allow my pet"
+]
+}
+},
+{
+"text": "where is cabana on peterborough street",
+"gold": {
+"Restaurant_Name": [
+"cabana"
+],
+"Location": [
+"peterborough street"
+]
+}
+},
+{
+"text": "i would like to eat lunch and dessert in somerville",
+"gold": {
+"Hours": [
+"lunch"
+],
+"Dish": [
+"dessert"
+],
+"Location": [
+"somerville"
+]
+}
+},
+{
+"text": "how many miles from my house is it to zaxbys",
+"gold": {
+"Restaurant_Name": [
+"zaxbys"
+]
+}
+},
+{
+"text": "what is the specialty at the herbfarm restaurant",
+"gold": {
+"Restaurant_Name": [
+"herbfarm restaurant"
+]
+}
+},
+{
+"text": "does markees have an outdoor dining area",
+"gold": {
+"Restaurant_Name": [
+"markees"
+],
+"Amenity": [
+"outdoor dining area"
+]
+}
+},
+{
+"text": "i need you to reserve a set at a restraint at 600 pm in two weeks",
+"gold": {
+"Hours": [
+"600 pm",
+"two weeks"
+]
+}
+},
+{
+"text": "hi i need to get to nobu restaurant",
+"gold": {
+"Restaurant_Name": [
+"nobu"
+]
+}
+},
+{
+"text": "look up the reviews of this coffee house and see if its good",
+"gold": {
+"Cuisine": [
+"coffee house"
+]
+}
+},
+{
+"text": "id like to go to a nice italian restaurant lets find one close by",
+"gold": {
+"Rating": [
+"nice"
+],
+"Cuisine": [
+"italian"
+],
+"Location": [
+"close"
+]
+}
+},
+{
+"text": "where is the nearest kid friendly restaurant in toledo ohio",
+"gold": {
+"Location": [
+"nearest",
+"in toledo ohio"
+],
+"Amenity": [
+"kid friendly"
+]
+}
+},
+{
+"text": "id like to go to an asian restaurant that has sriracha sauce",
+"gold": {
+"Cuisine": [
+"asian"
+],
+"Dish": [
+"sriracha sauce"
+]
+}
+},
+{
+"text": "i need a reservation for 2 at 8 pm anywhere downtown",
+"gold": {
+"Amenity": [
+"reservation for 2"
+],
+"Hours": [
+"8 pm"
+],
+"Location": [
+"anywhere downtown"
+]
+}
+},
+{
+"text": "is there any place around here that is known for a unique dining experience",
+"gold": {
+"Location": [
+"around here"
+],
+"Amenity": [
+"unique dining experience"
+]
+}
+},
+{
+"text": "who makes really good chowder in boxford for cheap",
+"gold": {
+"Dish": [
+"chowder"
+],
+"Location": [
+"boxford"
+],
+"Price": [
+"cheap"
+]
+}
+},
+{
+"text": "is red hot and blue a good date restaurant",
+"gold": {
+"Restaurant_Name": [
+"red hot and blue"
+],
+"Amenity": [
+"good date restaurant"
+]
+}
+},
+{
+"text": "does buca de beppo just serve italian food",
+"gold": {
+"Restaurant_Name": [
+"buca de beppo"
+],
+"Cuisine": [
+"italian"
+]
+}
+},
+{
+"text": "i need some kosher food and a place that offers parking",
+"gold": {
+"Cuisine": [
+"kosher"
+],
+"Amenity": [
+"parking"
+]
+}
+},
+{
+"text": "where can i find the nearest all you can eat buffet",
+"gold": {
+"Location": [
+"nearest"
+]
+}
+},
+{
+"text": "suggest the three closest restaurants",
+"gold": {
+"Location": [
+"closest"
+]
+}
+},
+{
+"text": "what is subway phone number",
+"gold": {
+"Restaurant_Name": [
+"subway"
+]
+}
+},
+{
+"text": "where can i get some good rice",
+"gold": {
+"Rating": [
+"good"
+],
+"Dish": [
+"rice"
+]
+}
+},
+{
+"text": "can you help me locate a vietnamese restaurant in the next 25 miles",
+"gold": {
+"Cuisine": [
+"vietnamese"
+],
+"Location": [
+"in the next 25 miles"
+]
+}
+},
+{
+"text": "where can i find a reasonably priced meal",
+"gold": {
+"Price": [
+"reasonably"
+]
+}
+},
+{
+"text": "search for a seafood restaurant that has good size portions",
+"gold": {
+"Cuisine": [
+"seafood"
+],
+"Amenity": [
+"good size portions"
+]
+}
+},
+{
+"text": "what are the prices of the main courses at the italian restaurant nearby",
+"gold": {
+"Cuisine": [
+"italian"
+],
+"Location": [
+"nearby"
+]
+}
+},
+{
+"text": "is there an italian place along this route that offers parking",
+"gold": {
+"Cuisine": [
+"italian"
+],
+"Location": [
+"along this route"
+],
+"Amenity": [
+"parking"
+]
+}
+},
+{
+"text": "where is the closest lil ceasers",
+"gold": {
+"Location": [
+"closest"
+],
+"Restaurant_Name": [
+"lil ceasers"
+]
+}
+},
+{
+"text": "what pizza restaurants near here are open at 11 pm",
+"gold": {
+"Dish": [
+"pizza"
+],
+"Location": [
+"near here"
+],
+"Hours": [
+"open at 11 pm"
+]
+}
+},
+{
+"text": "i need the phone number for restaurant name",
+"gold": {}
+},
+{
+"text": "whats the nearest restaurants",
+"gold": {
+"Location": [
+"nearest"
+]
+}
+},
+{
+"text": "can you please take me to a nearby italian restaurant",
+"gold": {
+"Location": [
+"nearby"
+],
+"Cuisine": [
+"italian"
+]
+}
+},
+{
+"text": "is there a chai restaurant that delivers",
+"gold": {
+"Cuisine": [
+"chai"
+],
+"Amenity": [
+"delivers"
+]
+}
+},
+{
+"text": "i dont have much time i need some fast food",
+"gold": {
+"Cuisine": [
+"fast food"
+]
+}
+},
+{
+"text": "please help me find a mcdonalds in mexico city",
+"gold": {
+"Restaurant_Name": [
+"mcdonalds"
+],
+"Location": [
+"mexico city"
+]
+}
+},
+{
+"text": "where could i find good spanish cuisine before 10 am",
+"gold": {
+"Rating": [
+"good"
+],
+"Cuisine": [
+"spanish"
+],
+"Hours": [
+"before 10 am"
+]
+}
+},
+{
+"text": "what places have super high prices",
+"gold": {
+"Price": [
+"super high"
+]
+}
+},
+{
+"text": "i need some mexican food where can i get some",
+"gold": {
+"Cuisine": [
+"mexican"
+]
+}
+},
+{
+"text": "is there a kid friendly afforable place on alewife brook parkway",
+"gold": {
+"Amenity": [
+"kid friendly"
+],
+"Price": [
+"afforable"
+],
+"Location": [
+"alewife brook parkway"
+]
+}
+},
+{
+"text": "what is the best rated restaurant with a drive thru near me",
+"gold": {
+"Rating": [
+"best rated"
+],
+"Amenity": [
+"drive thru"
+],
+"Location": [
+"near me"
+]
+}
+},
+{
+"text": "italian restaurant open now for carry out",
+"gold": {
+"Cuisine": [
+"italian"
+],
+"Hours": [
+"open now"
+],
+"Amenity": [
+"carry out"
+]
+}
+},
+{
+"text": "what are the latest ratings for the floridita in london",
+"gold": {
+"Rating": [
+"ratings"
+],
+"Restaurant_Name": [
+"floridita"
+],
+"Location": [
+"london"
+]
+}
+},
+{
+"text": "navigate me to outback steakhouse",
+"gold": {
+"Restaurant_Name": [
+"outback steakhouse"
+]
+}
+},
+{
+"text": "does jack in the box accept credit",
+"gold": {
+"Restaurant_Name": [
+"jack in the box"
+],
+"Amenity": [
+"accept credit"
+]
+}
+},
+{
+"text": "tell me where to get a steak and a nice glass of wine",
+"gold": {
+"Dish": [
+"steak"
+],
+"Amenity": [
+"wine"
+]
+}
+},
+{
+"text": "find the best mexican food place to eat",
+"gold": {
+"Rating": [
+"best"
+],
+"Cuisine": [
+"mexican"
+]
+}
+},
+{
+"text": "id like a sports bar that serves food and has a tv",
+"gold": {
+"Cuisine": [
+"sports bar"
+],
+"Amenity": [
+"tv"
+]
+}
+},
+{
+"text": "today i want chicken",
+"gold": {
+"Dish": [
+"chicken"
+]
+}
+},
+{
+"text": "hi you can tell me a spanish restaurant",
+"gold": {
+"Cuisine": [
+"spanish"
+]
+}
+},
+{
+"text": "i need japanese food inside the city",
+"gold": {
+"Cuisine": [
+"japanese"
+],
+"Location": [
+"inside the city"
+]
+}
+},
+{
+"text": "what is the price range for romana on poisedon",
+"gold": {
+"Restaurant_Name": [
+"romana"
+],
+"Location": [
+"poisedon"
+]
+}
+},
+{
+"text": "where can i find a reasonably priced vegetarian restaurant that is open before 10 am on long island",
+"gold": {
+"Price": [
+"reasonably"
+],
+"Cuisine": [
+"vegetarian"
+],
+"Hours": [
+"open before 10 am"
+],
+"Location": [
+"long island"
+]
+}
+},
+{
+"text": "where can i get a good stake",
+"gold": {
+"Rating": [
+"good"
+],
+"Dish": [
+"stake"
+]
+}
+},
+{
+"text": "i want to find a goos delivery pizza place",
+"gold": {
+"Restaurant_Name": [
+"goos"
+],
+"Amenity": [
+"delivery"
+],
+"Cuisine": [
+"pizza"
+]
+}
+},
+{
+"text": "do you show any fast food locations that are open",
+"gold": {
+"Cuisine": [
+"fast food"
+],
+"Hours": [
+"that are open"
+]
+}
+},
+{
+"text": "find me a local game stop",
+"gold": {
+"Location": [
+"local"
+]
+}
+},
+{
+"text": "does mexicale have a dress code",
+"gold": {
+"Restaurant_Name": [
+"mexicale"
+],
+"Amenity": [
+"dress code"
+]
+}
+},
+{
+"text": "what time does the nearest coffeehouse open",
+"gold": {
+"Location": [
+"nearest"
+],
+"Cuisine": [
+"coffeehouse"
+]
+}
+},
+{
+"text": "what are some good italian places within 5 miles",
+"gold": {
+"Rating": [
+"good"
+],
+"Cuisine": [
+"italian"
+],
+"Location": [
+"within 5 miles"
+]
+}
+},
+{
+"text": "i need info on pizza hut coupons",
+"gold": {
+"Restaurant_Name": [
+"pizza hut"
+],
+"Amenity": [
+"coupons"
+]
+}
+},
+{
+"text": "where can i find terrific subs 7 days a week",
+"gold": {
+"Rating": [
+"terrific"
+],
+"Dish": [
+"subs"
+],
+"Hours": [
+"7 days a week"
+]
+}
+},
+{
+"text": "where can i get fries at a prix ffixe menus",
+"gold": {
+"Dish": [
+"fries"
+],
+"Cuisine": [
+"prix ffixe"
+]
+}
+},
+{
+"text": "when does the eastside diner open",
+"gold": {
+"Restaurant_Name": [
+"eastside diner"
+],
+"Hours": [
+"open"
+]
+}
+},
+{
+"text": "where is the best place to take a date",
+"gold": {
+"Rating": [
+"best"
+],
+"Amenity": [
+"date"
+]
+}
+},
+{
+"text": "where can i eat outside",
+"gold": {
+"Amenity": [
+"eat outside"
+]
+}
+},
+{
+"text": "what restaurants are close by",
+"gold": {
+"Location": [
+"close by"
+]
+}
+},
+{
+"text": "what is the best rated restaurant near the next exit for bismark north dakota",
+"gold": {
+"Rating": [
+"best rated"
+],
+"Location": [
+"near the next exit",
+"bismark north dakota"
+]
+}
+},
+{
+"text": "is there a cheesecake factory in hicksville new york",
+"gold": {
+"Restaurant_Name": [
+"cheesecake factory"
+],
+"Location": [
+"hicksville new york"
+]
+}
+},
+{
+"text": "im looking for restaurants that accept discover credit cards",
+"gold": {
+"Amenity": [
+"accept discover",
+"cards"
+]
+}
+},
+{
+"text": "its time for dinner where can i get a great steak",
+"gold": {
+"Hours": [
+"dinner"
+],
+"Rating": [
+"great"
+],
+"Dish": [
+"steak"
+]
+}
+},
+{
+"text": "need a buffet that stays open late like after 10 pm and isnt too far away",
+"gold": {
+"Amenity": [
+"buffet"
+],
+"Hours": [
+"stays open late like after 10 pm"
+],
+"Location": [
+"isnt too far away"
+]
+}
+},
+{
+"text": "where is the best bbq in austin",
+"gold": {
+"Rating": [
+"best"
+],
+"Cuisine": [
+"bbq"
+],
+"Location": [
+"austin"
+]
+}
+},
+{
+"text": "locate the nearest restaurant",
+"gold": {
+"Location": [
+"nearest"
+]
+}
+},
+{
+"text": "find me amazing pizza in chicago",
+"gold": {
+"Rating": [
+"amazing"
+],
+"Cuisine": [
+"pizza"
+],
+"Location": [
+"chicago"
+]
+}
+}
+],
+"dev": [
+{
+"text": "please find a good greek or mexican restaurant that serves cocktails",
+"gold": {
+"Rating": [
+"good"
+],
+"Cuisine": [
+"greek",
+"mexican"
+],
+"Dish": [
+"cocktails"
+]
+}
+},
+{
+"text": "find an ethiopian restaurant in zip code 10025",
+"gold": {
+"Cuisine": [
+"ethiopian"
+],
+"Location": [
+"zip code 10025"
+]
+}
+},
+{
+"text": "is there a waterfront seafood restaurant nearby",
+"gold": {
+"Amenity": [
+"waterfront"
+],
+"Cuisine": [
+"seafood"
+],
+"Location": [
+"nearby"
+]
+}
+},
+{
+"text": "where are late night fast food restaurants in this area",
+"gold": {
+"Hours": [
+"late night"
+],
+"Cuisine": [
+"fast food"
+],
+"Location": [
+"in this area"
+]
+}
+},
+{
+"text": "where is a good mexican restaurant with a large vegetarian selection",
+"gold": {
+"Rating": [
+"good"
+],
+"Cuisine": [
+"mexican",
+"vegetarian"
+]
+}
+},
+{
+"text": "im looking for a restaurant that offers a smoking section",
+"gold": {
+"Amenity": [
+"smoking section"
+]
+}
+},
+{
+"text": "where can i get cuban food at a low price",
+"gold": {
+"Cuisine": [
+"cuban"
+],
+"Price": [
+"low"
+]
+}
+},
+{
+"text": "i need to buy an ice cream cake where is the nearest dunkin donuts",
+"gold": {
+"Dish": [
+"ice cream cake"
+],
+"Location": [
+"nearest"
+],
+"Restaurant_Name": [
+"dunkin donuts"
+]
+}
+},
+{
+"text": "find me kid friendly places",
+"gold": {
+"Amenity": [
+"kid friendly"
+]
+}
+},
+{
+"text": "is there a restaurant nearby that serves mediterranean cuisine",
+"gold": {
+"Location": [
+"nearby"
+],
+"Cuisine": [
+"mediterranean"
+]
+}
+},
+{
+"text": "im looking for a late night malaysian restaurant",
+"gold": {
+"Hours": [
+"late night"
+],
+"Cuisine": [
+"malaysian"
+]
+}
+},
+{
+"text": "i need to find a orange julius that is less than 10 miles away",
+"gold": {
+"Restaurant_Name": [
+"orange julius"
+],
+"Location": [
+"less than 10 miles away"
+]
+}
+},
+{
+"text": "where can i find a cafe with internet connection",
+"gold": {
+"Cuisine": [
+"cafe"
+],
+"Amenity": [
+"internet connection"
+]
+}
+},
+{
+"text": "whats the nearest thai restaurant",
+"gold": {
+"Location": [
+"nearest"
+],
+"Cuisine": [
+"thai"
+]
+}
+},
+{
+"text": "what restaurants serve reasonably priced filet mignon within 5 miles",
+"gold": {
+"Price": [
+"reasonably"
+],
+"Dish": [
+"filet mignon"
+],
+"Location": [
+"within 5 miles"
+]
+}
+},
+{
+"text": "is jerusalem restaurant pricey",
+"gold": {
+"Restaurant_Name": [
+"jerusalem"
+]
+}
+},
+{
+"text": "is cagneys restaurant and pub expensive",
+"gold": {
+"Restaurant_Name": [
+"cagneys restaurant and pub"
+],
+"Price": [
+"expensive"
+]
+}
+},
+{
+"text": "is there a coffee shop that serves breakfast close by",
+"gold": {
+"Cuisine": [
+"coffee"
+],
+"Hours": [
+"breakfast"
+],
+"Location": [
+"close by"
+]
+}
+},
+{
+"text": "i want to find a restaurant that has outdoor dining and has received good reviews citing its service",
+"gold": {
+"Amenity": [
+"outdoor dining"
+],
+"Rating": [
+"received good reviews"
+]
+}
+},
+{
+"text": "find me the closest pizza place from my hotel",
+"gold": {
+"Location": [
+"closest",
+"my hotel"
+],
+"Cuisine": [
+"pizza"
+]
+}
+},
+{
+"text": "i would like the name and location of the nearest bar that has a smoking section",
+"gold": {
+"Location": [
+"nearest"
+],
+"Amenity": [
+"smoking section"
+]
+}
+},
+{
+"text": "where is the closest subway sandwich place",
+"gold": {
+"Location": [
+"closest"
+],
+"Restaurant_Name": [
+"subway"
+]
+}
+},
+{
+"text": "im looking for a restaurant that takes reservations",
+"gold": {
+"Amenity": [
+"reservations"
+]
+}
+},
+{
+"text": "pizza hut on columbia ave in holland mi",
+"gold": {
+"Restaurant_Name": [
+"pizza hut"
+],
+"Location": [
+"columbia ave in holland mi"
+]
+}
+},
+{
+"text": "is there a red robin along my route",
+"gold": {
+"Restaurant_Name": [
+"red robin"
+],
+"Location": [
+"along my route"
+]
+}
+},
+{
+"text": "i am looking for an italian restaurant within five miles from where i am now",
+"gold": {
+"Cuisine": [
+"italian"
+],
+"Location": [
+"within five miles"
+]
+}
+},
+{
+"text": "where can i get portuguese food at a real good price",
+"gold": {
+"Cuisine": [
+"portuguese"
+],
+"Location": [
+"real good price"
+]
+}
+},
+{
+"text": "whats the nearest mc donalds",
+"gold": {
+"Location": [
+"nearest"
+],
+"Restaurant_Name": [
+"mc donalds"
+]
+}
+},
+{
+"text": "ive been working all night and am starving is there anything available that isnt too causal but isnt too formal either",
+"gold": {
+"Amenity": [
+"isnt too causal",
+"isnt too formal"
+]
+}
+},
+{
+"text": "im looking for a local macys store",
+"gold": {
+"Location": [
+"local macys store"
+]
+}
+},
+{
+"text": "i want to find a smoke free restaurant",
+"gold": {
+"Amenity": [
+"smoke free"
+]
+}
+},
+{
+"text": "what the directions to the nearest red lobster",
+"gold": {
+"Location": [
+"nearest"
+],
+"Restaurant_Name": [
+"red lobster"
+]
+}
+},
+{
+"text": "is there a picasso creole cuisine along the way",
+"gold": {
+"Restaurant_Name": [
+"picasso creole cuisine"
+],
+"Location": [
+"along the way"
+]
+}
+},
+{
+"text": "where can i get some chicken",
+"gold": {
+"Dish": [
+"chicken"
+]
+}
+},
+{
+"text": "what kind of food does buffalo wild wings serve",
+"gold": {
+"Restaurant_Name": [
+"buffalo wild wings"
+]
+}
+},
+{
+"text": "find me a nearby restaurant that opens before 12 am",
+"gold": {
+"Location": [
+"nearby"
+],
+"Hours": [
+"opens before 12 am"
+]
+}
+},
+{
+"text": "i am in the mood for pancakes show me some restaurants that serve pancakes",
+"gold": {
+"Dish": [
+"pancakes",
+"pancakes"
+]
+}
+},
+{
+"text": "is there any restaurant in town that opens before 11 am but also stays open late tonight",
+"gold": {
+"Hours": [
+"opens before 11 am",
+"open late tonight"
+]
+}
+},
+{
+"text": "do i need to make a reservation for longhorn steakhouse",
+"gold": {
+"Amenity": [
+"reservation"
+],
+"Restaurant_Name": [
+"longhorn steakhouse"
+]
+}
+},
+{
+"text": "what halal restaurant has the best service in the area",
+"gold": {
+"Cuisine": [
+"halal"
+],
+"Rating": [
+"best service"
+],
+"Location": [
+"in the area"
+]
+}
+},
+{
+"text": "where is a johns roast beef with good beer",
+"gold": {
+"Restaurant_Name": [
+"johns roast beef"
+],
+"Rating": [
+"good"
+],
+"Dish": [
+"beer"
+]
+}
+},
+{
+"text": "what is the most highly rated pizza parlor in the city",
+"gold": {
+"Rating": [
+"most highly"
+],
+"Cuisine": [
+"pizza"
+],
+"Location": [
+"in the city"
+]
+}
+},
+{
+"text": "where is the nearest starbucks",
+"gold": {
+"Location": [
+"nearest"
+],
+"Restaurant_Name": [
+"starbucks"
+]
+}
+},
+{
+"text": "is there a lunch buffet downtown",
+"gold": {
+"Cuisine": [
+"lunch buffet"
+],
+"Location": [
+"downtown"
+]
+}
+},
+{
+"text": "give me all the names of the restaurants downtown nyc with high ratings",
+"gold": {
+"Location": [
+"downtown nyc"
+],
+"Rating": [
+"high ratings"
+]
+}
+},
+{
+"text": "what are some nicely priced places around here",
+"gold": {
+"Price": [
+"nicely"
+],
+"Location": [
+"around here"
+]
+}
+},
+{
+"text": "where can i get onion rings after 1 am",
+"gold": {
+"Dish": [
+"onion rings"
+],
+"Hours": [
+"after 1 am"
+]
+}
+},
+{
+"text": "get me directions to papa gianos pizza parlor",
+"gold": {
+"Restaurant_Name": [
+"papa gianos pizza parlor"
+]
+}
+},
+{
+"text": "what time does the pizza hut in fayetteville nc close",
+"gold": {
+"Hours": [
+"time",
+"close"
+],
+"Restaurant_Name": [
+"pizza hut"
+],
+"Location": [
+"fayetteville nc"
+]
+}
+},
+{
+"text": "list any restaurants that have a broad menu with many different styles of food that would be good for a large group with diverse tastes",
+"gold": {
+"Amenity": [
+"broad menu",
+"large group"
+],
+"Location": [
+"different styles"
+]
+}
+},
+{
+"text": "what forms of payment does the olive garden accept",
+"gold": {
+"Restaurant_Name": [
+"the olive garden"
+]
+}
+},
+{
+"text": "i need a place to eat that serves chinese food and has good reviews of their food",
+"gold": {
+"Cuisine": [
+"chinese"
+],
+"Rating": [
+"good reviews"
+]
+}
+},
+{
+"text": "does the diner on main st service breakfast after 12pm",
+"gold": {
+"Cuisine": [
+"diner"
+],
+"Location": [
+"main st"
+],
+"Hours": [
+"breakfast after 12pm"
+]
+}
+},
+{
+"text": "please give me the phone number for ras sushi on scottsdale road",
+"gold": {
+"Restaurant_Name": [
+"ras sushi"
+],
+"Location": [
+"scottsdale road"
+]
+}
+},
+{
+"text": "what time does the nearest five star restaurant open",
+"gold": {
+"Hours": [
+"time",
+"open"
+],
+"Location": [
+"nearest"
+],
+"Rating": [
+"five star"
+]
+}
+},
+{
+"text": "does the thai dish have a good beer list",
+"gold": {
+"Restaurant_Name": [
+"thai dish"
+],
+"Amenity": [
+"good beer list"
+]
+}
+},
+{
+"text": "do you have directions to the nearest deli",
+"gold": {
+"Location": [
+"nearest"
+],
+"Cuisine": [
+"deli"
+]
+}
+},
+{
+"text": "hi i dont want to eat today",
+"gold": {}
+},
+{
+"text": "where can i get a cheap slice of pizza near central park",
+"gold": {
+"Price": [
+"cheap"
+],
+"Dish": [
+"pizza"
+],
+"Location": [
+"near central park"
+]
+}
+},
+{
+"text": "lets find a coffee place within 5 miles of here",
+"gold": {
+"Cuisine": [
+"coffee"
+],
+"Location": [
+"within 5 miles of here"
+]
+}
+},
+{
+"text": "do you know if sams have a wine list",
+"gold": {
+"Restaurant_Name": [
+"sams"
+]
+}
+},
+{
+"text": "i want get a great steak where should i go that isnt to far",
+"gold": {
+"Dish": [
+"steak"
+],
+"Location": [
+"isnt to far"
+]
+}
+},
+{
+"text": "how much does it cost to eat at jacks bandwagon",
+"gold": {
+"Restaurant_Name": [
+"jacks bandwagon"
+]
+}
+},
+{
+"text": "how do i make reservations for a birthday party at chuck e cheese",
+"gold": {
+"Restaurant_Name": [
+"chuck e cheese"
+]
+}
+},
+{
+"text": "expensive restraunt",
+"gold": {
+"Price": [
+"expensive"
+]
+}
+},
+{
+"text": "is picasso creole cuisine a romantic restaurant",
+"gold": {
+"Restaurant_Name": [
+"picasso creole cuisine"
+],
+"Amenity": [
+"romantic"
+]
+}
+},
+{
+"text": "give me that place that my son said was fantastic",
+"gold": {
+"Amenity": [
+"son"
+],
+"Rating": [
+"fantastic"
+]
+}
+},
+{
+"text": "does the mexican restaurant on lee street include a parking area for horses",
+"gold": {
+"Cuisine": [
+"mexican"
+],
+"Location": [
+"lee street"
+],
+"Amenity": [
+"parking area for horses"
+]
+}
+},
+{
+"text": "is there an option for outdoor seating at the garden terrace restaurant",
+"gold": {
+"Location": [
+"outdoor seating"
+],
+"Restaurant_Name": [
+"garden terrace restaurant"
+]
+}
+},
+{
+"text": "is there any one around here that sales light meals im not really that hungry",
+"gold": {
+"Location": [
+"around here"
+],
+"Amenity": [
+"light meals"
+]
+}
+},
+{
+"text": "im in the mood for tacos",
+"gold": {
+"Dish": [
+"tacos"
+]
+}
+},
+{
+"text": "where is wendys",
+"gold": {
+"Restaurant_Name": [
+"wendys"
+]
+}
+},
+{
+"text": "where can i get lunch for under five dollars",
+"gold": {
+"Hours": [
+"lunch"
+],
+"Price": [
+"under five dollars"
+]
+}
+},
+{
+"text": "search a place with good seafood",
+"gold": {
+"Rating": [
+"good"
+],
+"Cuisine": [
+"seafood"
+]
+}
+},
+{
+"text": "where is the nearest pizza place with late hours",
+"gold": {
+"Location": [
+"nearest"
+],
+"Cuisine": [
+"pizza"
+],
+"Hours": [
+"late hours"
+]
+}
+},
+{
+"text": "tell me the cheapest restaurant in this city with a good rating",
+"gold": {
+"Price": [
+"cheapest"
+],
+"Location": [
+"this city"
+],
+"Rating": [
+"good rating"
+]
+}
+},
+{
+"text": "could you gide me to the nearest restaurant",
+"gold": {
+"Location": [
+"nearest"
+]
+}
+},
+{
+"text": "where is the closest steakhouse with live music on friday nights",
+"gold": {
+"Location": [
+"closest"
+],
+"Cuisine": [
+"steakhouse"
+],
+"Amenity": [
+"live music"
+],
+"Hours": [
+"friday nights"
+]
+}
+},
+{
+"text": "im looking for yemista",
+"gold": {
+"Restaurant_Name": [
+"yemista"
+]
+}
+},
+{
+"text": "suggest local restaurants which serve steak",
+"gold": {
+"Location": [
+"local"
+],
+"Dish": [
+"steak"
+]
+}
+},
+{
+"text": "what time does wendys open",
+"gold": {
+"Restaurant_Name": [
+"wendys"
+]
+}
+},
+{
+"text": "is there a drive in place near here",
+"gold": {
+"Amenity": [
+"drive in"
+],
+"Location": [
+"near here"
+]
+}
+},
+{
+"text": "where can i find good cuban food in oakland",
+"gold": {
+"Rating": [
+"good"
+],
+"Cuisine": [
+"cuban"
+],
+"Location": [
+"in oakland"
+]
+}
+},
+{
+"text": "show me the closest wendys",
+"gold": {
+"Location": [
+"closest"
+],
+"Restaurant_Name": [
+"wendys"
+]
+}
+},
+{
+"text": "who cooks the best steak in town",
+"gold": {
+"Rating": [
+"best"
+],
+"Dish": [
+"steak"
+],
+"Location": [
+"in town"
+]
+}
+},
+{
+"text": "i need the exact location of the restaurant i made reservations at",
+"gold": {
+"Amenity": [
+"restaurant i made reservations at"
+]
+}
+},
+{
+"text": "find a mexican restaurant nearby",
+"gold": {
+"Cuisine": [
+"mexican"
+],
+"Location": [
+"nearby"
+]
+}
+},
+{
+"text": "where can i get fast reasonably priced food this late",
+"gold": {
+"Amenity": [
+"fast"
+],
+"Price": [
+"reasonably"
+],
+"Hours": [
+"this late"
+]
+}
+},
+{
+"text": "how many types of sushi does the restaurant have",
+"gold": {
+"Cuisine": [
+"sushi"
+]
+}
+},
+{
+"text": "whats a recommended four star restaurant in the city",
+"gold": {
+"Rating": [
+"recommended four star"
+],
+"Location": [
+"in the city"
+]
+}
+},
+{
+"text": "i need a really cheap kosher joint",
+"gold": {
+"Price": [
+"really cheap"
+],
+"Cuisine": [
+"kosher"
+]
+}
+},
+{
+"text": "wheres a good place to eat under 10 bucks a person",
+"gold": {
+"Rating": [
+"good"
+],
+"Price": [
+"under 10 bucks a person"
+]
+}
+},
+{
+"text": "find me a nice japanese restaurant",
+"gold": {
+"Cuisine": [
+"japanese"
+]
+}
+},
+{
+"text": "is pizza hut open on sundays",
+"gold": {
+"Restaurant_Name": [
+"pizza hut"
+],
+"Hours": [
+"open on sundays"
+]
+}
+},
+{
+"text": "i need a cheap restaurant nearby",
+"gold": {
+"Price": [
+"cheap"
+],
+"Location": [
+"nearby"
+]
+}
+},
+{
+"text": "i am really craving pizza",
+"gold": {
+"Dish": [
+"pizza"
+]
+}
+},
+{
+"text": "take me to a fancy expensive restaurant please",
+"gold": {
+"Amenity": [
+"fancy"
+],
+"Price": [
+"expensive"
+]
+}
+},
+{
+"text": "i want to eat at a burger joint with parking casual dress large portions and low price",
+"gold": {
+"Cuisine": [
+"burger joint"
+],
+"Amenity": [
+"parking casual dress large portions"
+],
+"Price": [
+"low"
+]
+}
+},
+{
+"text": "what casual restaurants nearby serve barbecue ribs",
+"gold": {
+"Amenity": [
+"casual"
+],
+"Location": [
+"nearby"
+],
+"Dish": [
+"barbecue ribs"
+]
+}
+},
+{
+"text": "i want to eat somewhere fancy",
+"gold": {
+"Amenity": [
+"fancy"
+]
+}
+}
+],
+"test": [
+{
+"text": "does mortons have a dress code",
+"gold": {
+"Restaurant_Name": [
+"mortons"
+],
+"Amenity": [
+"dress code"
+]
+}
+},
+{
+"text": "is there a location of field corner restaurant near by that has a happy hour",
+"gold": {
+"Restaurant_Name": [
+"field corner"
+],
+"Location": [
+"near by"
+],
+"Amenity": [
+"happy hour"
+]
+}
+},
+{
+"text": "lobster roll",
+"gold": {
+"Dish": [
+"lobster roll"
+]
+}
+},
+{
+"text": "are there any restaurants open after 2 am",
+"gold": {
+"Hours": [
+"open after 2 am"
+]
+}
+},
+{
+"text": "which local restaurant serves only seafood",
+"gold": {
+"Location": [
+"local"
+],
+"Amenity": [
+"only"
+],
+"Cuisine": [
+"seafood"
+]
+}
+},
+{
+"text": "i want to find a restaurant with an outdoor dining section that permits smoking",
+"gold": {
+"Amenity": [
+"outdoor dining section",
+"permits smoking"
+]
+}
+},
+{
+"text": "how far to the nearest fast food",
+"gold": {
+"Cuisine": [
+"fast food"
+]
+}
+},
+{
+"text": "looking for crowd pleasing fatz along the way",
+"gold": {
+"Restaurant_Name": [
+"crowd pleasing fatz"
+],
+"Location": [
+"along the way"
+]
+}
+},
+{
+"text": "what italian restaurant is open 24 hours on dalton street",
+"gold": {
+"Cuisine": [
+"italian"
+],
+"Hours": [
+"open 24 hours"
+],
+"Location": [
+"dalton street"
+]
+}
+},
+{
+"text": "can you search for the most expensive restaurant",
+"gold": {
+"Price": [
+"most expensive"
+]
+}
+},
+{
+"text": "any reasonably priced indian restaurants in the theater district",
+"gold": {
+"Price": [
+"reasonably"
+],
+"Cuisine": [
+"indian"
+],
+"Location": [
+"in the theater district"
+]
+}
+},
+{
+"text": "find me soul food in los angeles",
+"gold": {
+"Cuisine": [
+"soul"
+],
+"Location": [
+"los angeles"
+]
+}
+},
+{
+"text": "what is the nearest fast food restaurant",
+"gold": {
+"Location": [
+"nearest"
+],
+"Cuisine": [
+"fast food"
+]
+}
+},
+{
+"text": "please take me to a highly rated family diner",
+"gold": {
+"Rating": [
+"highly rated"
+],
+"Cuisine": [
+"family diner"
+]
+}
+},
+{
+"text": "is there a restaurant in inman square that is after 9 pm 7 days a week",
+"gold": {
+"Hours": [
+"after 9 pm 7 days a week"
+]
+}
+},
+{
+"text": "where is the closest place to get pizza",
+"gold": {
+"Location": [
+"closest"
+],
+"Dish": [
+"pizza"
+]
+}
+},
+{
+"text": "i want a buffet",
+"gold": {
+"Amenity": [
+"buffet"
+]
+}
+},
+{
+"text": "is there a place that serves breakfast this late",
+"gold": {
+"Cuisine": [
+"breakfast"
+],
+"Hours": [
+"late"
+]
+}
+},
+{
+"text": "find me a local restaurant serving turkish food",
+"gold": {
+"Location": [
+"local"
+],
+"Cuisine": [
+"turkish"
+]
+}
+},
+{
+"text": "does chuck e cheeses have drive thru",
+"gold": {
+"Restaurant_Name": [
+"chuck e cheeses"
+],
+"Amenity": [
+"drive thru"
+]
+}
+},
+{
+"text": "i want to get to a restauarant as fast as possible",
+"gold": {
+"Location": [
+"as fast as possible"
+]
+}
+},
+{
+"text": "can i find any restaurants close by with a meal under 8",
+"gold": {
+"Location": [
+"close by"
+],
+"Price": [
+"meal under 8"
+]
+}
+},
+{
+"text": "show me a inexpensive restaurant within 10 miles",
+"gold": {
+"Price": [
+"inexpensive"
+],
+"Location": [
+"within 10 miles"
+]
+}
+},
+{
+"text": "i need a list of restaurants that take the diners card in a 5 mile radius",
+"gold": {
+"Amenity": [
+"diners card"
+],
+"Location": [
+"5 mile radius"
+]
+}
+},
+{
+"text": "i am hungry please find nearby restaurants",
+"gold": {
+"Location": [
+"nearby"
+]
+}
+},
+{
+"text": "which restaurant has a better rating on yelp sakura or fuji ya",
+"gold": {
+"Rating": [
+"better rating"
+],
+"Restaurant_Name": [
+"sakura",
+"fuji ya"
+]
+}
+},
+{
+"text": "where can i find a place with a great wine list",
+"gold": {
+"Amenity": [
+"great wine list"
+]
+}
+},
+{
+"text": "i want to find an italian restaurant",
+"gold": {
+"Cuisine": [
+"italian"
+]
+}
+},
+{
+"text": "i would like some food what restaurants arent closed in the area",
+"gold": {
+"Hours": [
+"closed"
+],
+"Location": [
+"in the area"
+]
+}
+},
+{
+"text": "find me the nearest chase bank",
+"gold": {
+"Location": [
+"nearest"
+],
+"Amenity": [
+"chase bank"
+]
+}
+},
+{
+"text": "what asian restaurants offer carry out",
+"gold": {
+"Cuisine": [
+"asian"
+],
+"Amenity": [
+"carry out"
+]
+}
+},
+{
+"text": "is there a restaurant on waverly street that is priced competitively",
+"gold": {
+"Location": [
+"waverly street"
+],
+"Price": [
+"priced competitively"
+]
+}
+},
+{
+"text": "help me find a good place to eat",
+"gold": {
+"Rating": [
+"good"
+]
+}
+},
+{
+"text": "where can i find halal with a price not so high",
+"gold": {
+"Cuisine": [
+"halal"
+],
+"Price": [
+"price not so high"
+]
+}
+},
+{
+"text": "who serves the best wings in this town",
+"gold": {
+"Cuisine": [
+"who serves",
+"best"
+],
+"Dish": [
+"wings"
+],
+"Location": [
+"in this town"
+]
+}
+},
+{
+"text": "is there caribbean food around here",
+"gold": {
+"Cuisine": [
+"caribbean"
+],
+"Location": [
+"around here"
+]
+}
+},
+{
+"text": "is there a five star restaurant or bar open late",
+"gold": {
+"Rating": [
+"five star"
+],
+"Hours": [
+"open late"
+]
+}
+},
+{
+"text": "please get me the street address of the dennys in this area",
+"gold": {
+"Location": [
+"street address",
+"area"
+],
+"Restaurant_Name": [
+"dennys"
+]
+}
+},
+{
+"text": "can you find a restaurant that serves bean soup in the morning and isnt too expensive",
+"gold": {
+"Dish": [
+"bean soup"
+],
+"Hours": [
+"morning"
+],
+"Price": [
+"isnt too expensive"
+]
+}
+},
+{
+"text": "what places have pretty good prices",
+"gold": {
+"Price": [
+"pretty good"
+]
+}
+},
+{
+"text": "looking for very cheap sake restaurant that allows smoking",
+"gold": {
+"Price": [
+"very cheap"
+],
+"Cuisine": [
+"sake"
+],
+"Amenity": [
+"allows smoking"
+]
+}
+},
+{
+"text": "i want an upscale steakhouse that has valet parking",
+"gold": {
+"Amenity": [
+"upscale",
+"valet parking"
+],
+"Cuisine": [
+"steakhouse"
+]
+}
+},
+{
+"text": "brasil cuisine near me",
+"gold": {
+"Cuisine": [
+"brasil"
+],
+"Location": [
+"near me"
+]
+}
+},
+{
+"text": "looking for sushi with prix fixe menu at a reasonable price",
+"gold": {
+"Dish": [
+"sushi"
+],
+"Amenity": [
+"prix fixe menu"
+],
+"Price": [
+"reasonable"
+]
+}
+},
+{
+"text": "what time is happy hour at the juice shop",
+"gold": {
+"Amenity": [
+"happy hour"
+],
+"Restaurant_Name": [
+"juice shop"
+]
+}
+},
+{
+"text": "does angels have a dress code",
+"gold": {
+"Restaurant_Name": [
+"angels"
+],
+"Amenity": [
+"dress code"
+]
+}
+},
+{
+"text": "any good vegan spots nearby",
+"gold": {
+"Cuisine": [
+"vegan"
+],
+"Location": [
+"nearby"
+]
+}
+},
+{
+"text": "find me a chinese take out restaurant",
+"gold": {
+"Cuisine": [
+"chinese"
+],
+"Amenity": [
+"take out"
+]
+}
+},
+{
+"text": "do you know what restaurants have catering",
+"gold": {
+"Amenity": [
+"catering"
+]
+}
+},
+{
+"text": "where can i get starbucks around me",
+"gold": {
+"Restaurant_Name": [
+"starbucks"
+],
+"Location": [
+"around me"
+]
+}
+},
+{
+"text": "can you help me get to a restaurant where i can get lunch for under 10",
+"gold": {
+"Hours": [
+"lunch"
+],
+"Price": [
+"under 10"
+]
+}
+},
+{
+"text": "is there an olive garden in kendall square with private dining rooms",
+"gold": {
+"Restaurant_Name": [
+"olive garden"
+],
+"Location": [
+"kendall square"
+],
+"Amenity": [
+"private dining rooms"
+]
+}
+},
+{
+"text": "could you find me a place thats open every day",
+"gold": {
+"Hours": [
+"open every day"
+]
+}
+},
+{
+"text": "find me a restaurant that has a smoking area and serves alcohol and is withing 20 miles of my current location",
+"gold": {
+"Amenity": [
+"smoking area"
+],
+"Dish": [
+"alcohol"
+],
+"Location": [
+"withing 20 miles"
+]
+}
+},
+{
+"text": "is the silverbull steakhouse open seven days a week",
+"gold": {
+"Restaurant_Name": [
+"silverbull steakhouse"
+]
+}
+},
+{
+"text": "find me a pizza place that takes credit cards",
+"gold": {
+"Cuisine": [
+"pizza"
+],
+"Amenity": [
+"credit cards"
+]
+}
+},
+{
+"text": "is there a place to eat that has a friendly and cheerful atmosphere and offers steak on the menu",
+"gold": {
+"Amenity": [
+"friendly and cheerful atmosphere"
+],
+"Dish": [
+"steak"
+]
+}
+},
+{
+"text": "how far is the taco bell",
+"gold": {
+"Restaurant_Name": [
+"taco bell"
+]
+}
+},
+{
+"text": "im in the mood to eat something ive never tried before can you find me something like that",
+"gold": {
+"Cuisine": [
+"never tried before"
+]
+}
+},
+{
+"text": "is there an ihop near by",
+"gold": {
+"Restaurant_Name": [
+"ihop"
+],
+"Location": [
+"near by"
+]
+}
+},
+{
+"text": "hi i would like some thai food is there any nearby",
+"gold": {
+"Cuisine": [
+"thai"
+],
+"Location": [
+"nearby"
+]
+}
+},
+{
+"text": "how many miles will it take me to get to dominoes",
+"gold": {
+"Restaurant_Name": [
+"dominoes"
+]
+}
+},
+{
+"text": "where i can get seafood and bring my own drinks",
+"gold": {
+"Cuisine": [
+"seafood"
+],
+"Amenity": [
+"bring my own drinks"
+]
+}
+},
+{
+"text": "can you find me some take out ribs",
+"gold": {
+"Amenity": [
+"take out"
+],
+"Dish": [
+"ribs"
+]
+}
+},
+{
+"text": "is there a rancho veo restaurant in north memphis",
+"gold": {
+"Restaurant_Name": [
+"rancho veo"
+],
+"Location": [
+"north memphis"
+]
+}
+},
+{
+"text": "is there a place with walking distance of the cinema that serves pizza by the slice",
+"gold": {
+"Location": [
+"walking distance of the cinema"
+],
+"Dish": [
+"pizza by the slice"
+]
+}
+},
+{
+"text": "i have an important business luncheon and need to find a place that caters to professionals",
+"gold": {
+"Amenity": [
+"business",
+"caters to professionals"
+],
+"Hours": [
+"luncheon"
+]
+}
+},
+{
+"text": "hello yes i need a steakhouse reservations childrens menu and pricing along with reviews of at least 3 stars",
+"gold": {
+"Cuisine": [
+"steakhouse"
+],
+"Amenity": [
+"reservations childrens menu"
+],
+"Rating": [
+"at least 3 stars"
+]
+}
+},
+{
+"text": "where are some mexican restaurants",
+"gold": {
+"Cuisine": [
+"mexican"
+]
+}
+},
+{
+"text": "im trying to find a family friendly restaurant with a gift shop within 10 miles of sunswept hotel in orange beach",
+"gold": {
+"Amenity": [
+"family friendly",
+"gift shop"
+],
+"Location": [
+"within 10 miles of sunswept hotel in orange beach"
+]
+}
+},
+{
+"text": "give me directions to a mcdonalds",
+"gold": {
+"Restaurant_Name": [
+"mcdonalds"
+]
+}
+},
+{
+"text": "looking for duck dish with great pricing and good rating",
+"gold": {
+"Dish": [
+"duck dish"
+],
+"Price": [
+"great"
+],
+"Rating": [
+"good rating"
+]
+}
+},
+{
+"text": "is papa johns on cradle way still open",
+"gold": {
+"Restaurant_Name": [
+"papa johns"
+],
+"Location": [
+"cradle way"
+],
+"Hours": [
+"still open"
+]
+}
+},
+{
+"text": "is there a deli nearby that takes credit cards and is open right now",
+"gold": {
+"Cuisine": [
+"deli"
+],
+"Location": [
+"nearby"
+],
+"Amenity": [
+"takes credit cards"
+],
+"Hours": [
+"open right now"
+]
+}
+},
+{
+"text": "what restaurant sells crab close by",
+"gold": {
+"Dish": [
+"crab"
+],
+"Location": [
+"close by"
+]
+}
+},
+{
+"text": "show me where the nearest sports bar is",
+"gold": {
+"Location": [
+"nearest"
+],
+"Cuisine": [
+"sports bar"
+]
+}
+},
+{
+"text": "take me to a local restaurant",
+"gold": {
+"Location": [
+"local"
+]
+}
+},
+{
+"text": "where can i find a good pork chop",
+"gold": {
+"Rating": [
+"good"
+],
+"Dish": [
+"pork chop"
+]
+}
+},
+{
+"text": "what restaurants have nice family friendly brunch on weekends",
+"gold": {
+"Amenity": [
+"nice family friendly"
+],
+"Hours": [
+"brunch",
+"weekends"
+]
+}
+},
+{
+"text": "does buffalo wild wings do takeout orders",
+"gold": {
+"Restaurant_Name": [
+"buffalo wild wings"
+],
+"Amenity": [
+"takeout"
+]
+}
+},
+{
+"text": "is there a restaurant that has a 5 star rating for it that people like",
+"gold": {
+"Rating": [
+"5 star rating"
+]
+}
+},
+{
+"text": "what restaurant serves the largest portions of meat within 10 mile",
+"gold": {
+"Amenity": [
+"largest portions"
+],
+"Dish": [
+"meat"
+],
+"Location": [
+"within 10 mile"
+]
+}
+},
+{
+"text": "what time does the sushi place near me open",
+"gold": {
+"Cuisine": [
+"sushi"
+],
+"Location": [
+"near"
+],
+"Hours": [
+"open"
+]
+}
+},
+{
+"text": "i am looking for a mexican restuarant that has a mariachi band",
+"gold": {
+"Cuisine": [
+"mexican"
+],
+"Amenity": [
+"mariachi band"
+]
+}
+},
+{
+"text": "where is some good outdoor dining",
+"gold": {
+"Rating": [
+"good"
+],
+"Amenity": [
+"outdoor dining"
+]
+}
+},
+{
+"text": "is there a mexican restaurant near here with large portion sizes",
+"gold": {
+"Cuisine": [
+"mexican"
+],
+"Location": [
+"near here"
+],
+"Amenity": [
+"large portion sizes"
+]
+}
+},
+{
+"text": "i want to find a restaurant that has a diet friendly menu",
+"gold": {
+"Amenity": [
+"diet friendly"
+]
+}
+},
+{
+"text": "are there any 24 hour breakfast places nearby",
+"gold": {
+"Hours": [
+"24 hour"
+],
+"Cuisine": [
+"breakfast"
+],
+"Location": [
+"nearby"
+]
+}
+},
+{
+"text": "where is the nearest restaurant that allows indoor smoking",
+"gold": {
+"Location": [
+"nearest"
+],
+"Amenity": [
+"indoor smoking"
+]
+}
+},
+{
+"text": "does the mcdonalds on 7 th avenue offer free parking",
+"gold": {
+"Restaurant_Name": [
+"mcdonalds"
+],
+"Location": [
+"7 th avenue"
+],
+"Amenity": [
+"free parking"
+]
+}
+},
+{
+"text": "can you find a highly rated long john silvers open this late",
+"gold": {
+"Rating": [
+"highly rated"
+],
+"Restaurant_Name": [
+"long john silvers"
+],
+"Hours": [
+"open this late"
+]
+}
+},
+{
+"text": "find me a restaurant good for a date",
+"gold": {
+"Amenity": [
+"good for a date"
+]
+}
+},
+{
+"text": "whats the best french style cafe in sacramento",
+"gold": {
+"Rating": [
+"best"
+],
+"Cuisine": [
+"french",
+"cafe"
+],
+"Location": [
+"sacramento"
+]
+}
+},
+{
+"text": "which restaurant in my city has the highest reviews",
+"gold": {
+"Location": [
+"my city"
+],
+"Rating": [
+"highest reviews"
+]
+}
+},
+{
+"text": "what is an italian restaurant in the area with family style meals",
+"gold": {
+"Cuisine": [
+"italian"
+],
+"Location": [
+"in",
+"area"
+],
+"Amenity": [
+"family style"
+]
+}
+},
+{
+"text": "i need a family friendly place to eat tonight",
+"gold": {
+"Amenity": [
+"family friendly"
+],
+"Hours": [
+"tonight"
+]
+}
+},
+{
+"text": "are reservations available for four people for 8 pm tonight at 112 eatery",
+"gold": {
+"Restaurant_Name": [
+"112 eatery"
+]
+}
+},
+{
+"text": "can i get sushi on a prix fixe menu with reasonable prices",
+"gold": {
+"Dish": [
+"sushi"
+],
+"Amenity": [
+"prix fixe menu"
+],
+"Price": [
+"reasonable"
+]
+}
+},
+{
+"text": "can you find a cheap vietnamese restaurant",
+"gold": {
+"Price": [
+"cheap"
+],
+"Cuisine": [
+"vietnamese"
+]
+}
+},
+{
+"text": "does the italian restaurant on 5 th street require a dress code",
+"gold": {
+"Cuisine": [
+"italian"
+],
+"Location": [
+"5 th street"
+],
+"Amenity": [
+"dress code"
+]
+}
+},
+{
+"text": "can i get raw vegan food in honolulu",
+"gold": {
+"Cuisine": [
+"raw vegan"
+],
+"Location": [
+"honolulu"
+]
+}
+},
+{
+"text": "is there a taqueria el rancho grandes around here for taking a date",
+"gold": {
+"Restaurant_Name": [
+"taqueria el rancho grandes"
+],
+"Location": [
+"around here"
+],
+"Amenity": [
+"taking a date"
+]
+}
+},
+{
+"text": "is the chateau restaurant affordable",
+"gold": {
+"Restaurant_Name": [
+"chateau restaurant"
+],
+"Price": [
+"affordable"
+]
+}
+},
+{
+"text": "does the trendy new place in holbrook have egg rolls",
+"gold": {
+"Location": [
+"holbrook"
+],
+"Dish": [
+"egg rolls"
+]
+}
+},
+{
+"text": "do any of the italian restaurants around here offer an all you can eat buffet",
+"gold": {
+"Cuisine": [
+"italian"
+],
+"Location": [
+"around here"
+],
+"Amenity": [
+"all you can eat buffet"
+]
+}
+},
+{
+"text": "is there a mall with a food court around here",
+"gold": {
+"Cuisine": [
+"food court"
+],
+"Location": [
+"around here"
+]
+}
+},
+{
+"text": "what local restaurants have an outdoor play area for young children",
+"gold": {
+"Location": [
+"local"
+],
+"Amenity": [
+"outdoor play area"
+]
+}
+},
+{
+"text": "does the eastside grill have a dress code",
+"gold": {
+"Restaurant_Name": [
+"eastside grill"
+],
+"Amenity": [
+"dress code"
+]
+}
+},
+{
+"text": "find me a restaurant with valet access",
+"gold": {
+"Amenity": [
+"valet access"
+]
+}
+},
+{
+"text": "any restaurants that still allow smoking",
+"gold": {
+"Amenity": [
+"smoking"
+]
+}
+},
+{
+"text": "newbury street bakery and deli directions",
+"gold": {
+"Restaurant_Name": [
+"newbury street bakery and deli"
+]
+}
+},
+{
+"text": "find a mike donuts for non smokers",
+"gold": {
+"Restaurant_Name": [
+"mike donuts"
+],
+"Amenity": [
+"non smokers"
+]
+}
+},
+{
+"text": "im starving tell me where the closest mcdonalds is",
+"gold": {
+"Location": [
+"closest"
+],
+"Restaurant_Name": [
+"mcdonalds"
+]
+}
+},
+{
+"text": "how much is an average plate at spencers diner",
+"gold": {
+"Restaurant_Name": [
+"spencers diner"
+]
+}
+},
+{
+"text": "looking for tom yum cafe around here with excellent prices",
+"gold": {
+"Restaurant_Name": [
+"tom yum cafe"
+],
+"Location": [
+"around here"
+],
+"Price": [
+"excellent"
+]
+}
+},
+{
+"text": "find me a good vegetarian restaurant",
+"gold": {
+"Rating": [
+"good"
+],
+"Cuisine": [
+"vegetarian"
+]
+}
+},
+{
+"text": "i am looking for a nice restaurant within 30 miles that accepts credit cards",
+"gold": {
+"Rating": [
+"nice"
+],
+"Location": [
+"within 30 miles"
+],
+"Amenity": [
+"accepts credit cards"
+]
+}
+},
+{
+"text": "are there any place close by that is open 24 hours",
+"gold": {
+"Location": [
+"close"
+],
+"Hours": [
+"open 24 hours"
+]
+}
+},
+{
+"text": "i need a 5 star rated sushi bar close by",
+"gold": {
+"Rating": [
+"5 star"
+],
+"Cuisine": [
+"sushi bar"
+],
+"Location": [
+"close by"
+]
+}
+},
+{
+"text": "where can i find a thai restaurant that is non smoking",
+"gold": {
+"Cuisine": [
+"thai"
+],
+"Amenity": [
+"non smoking"
+]
+}
+},
+{
+"text": "today is a good day for some tacos off to taco bell",
+"gold": {
+"Dish": [
+"tacos"
+],
+"Restaurant_Name": [
+"taco bell"
+]
+}
+},
+{
+"text": "where can i get a hamburger",
+"gold": {
+"Dish": [
+"hamburger"
+]
+}
+},
+{
+"text": "is there a chinese buffet that serves family style",
+"gold": {
+"Cuisine": [
+"chinese"
+],
+"Amenity": [
+"buffet",
+"family style"
+]
+}
+},
+{
+"text": "are there any spanish restaurants that are cheap",
+"gold": {
+"Cuisine": [
+"spanish"
+],
+"Price": [
+"cheap"
+]
+}
+},
+{
+"text": "where can i find a seafood restaurant that also sells fresh fish",
+"gold": {
+"Cuisine": [
+"seafood"
+],
+"Amenity": [
+"sells fresh fish"
+]
+}
+},
+{
+"text": "i would like to find a french restaurant that is rated at least 4 stars",
+"gold": {
+"Cuisine": [
+"french"
+],
+"Rating": [
+"rated at least 4 stars"
+]
+}
+},
+{
+"text": "i really feel like seafood right now whats close",
+"gold": {
+"Cuisine": [
+"seafood"
+],
+"Location": [
+"close"
+]
+}
+},
+{
+"text": "is the hoseas restaurant nearby and does it offer live music",
+"gold": {
+"Restaurant_Name": [
+"hoseas restaurant"
+],
+"Location": [
+"nearby"
+],
+"Amenity": [
+"live music"
+]
+}
+},
+{
+"text": "who has the best lobster in town",
+"gold": {
+"Rating": [
+"best"
+],
+"Dish": [
+"lobster"
+],
+"Location": [
+"in town"
+]
+}
+},
+{
+"text": "is there a place to get high tea nearby",
+"gold": {
+"Location": [
+"place",
+"nearby"
+],
+"Cuisine": [
+"high tea"
+]
+}
+},
+{
+"text": "can you locate a restaurant that sell burgers after 12 00 am",
+"gold": {
+"Dish": [
+"burgers"
+],
+"Hours": [
+"12 00 am"
+]
+}
+},
+{
+"text": "is there a chinese restaurant in the midvale mall",
+"gold": {
+"Cuisine": [
+"chinese"
+],
+"Location": [
+"midvale mall"
+]
+}
+},
+{
+"text": "looking for a strong fair priced restaurant that is near",
+"gold": {
+"Price": [
+"fair"
+],
+"Location": [
+"near"
+]
+}
+},
+{
+"text": "where can a group be served omelets",
+"gold": {
+"Dish": [
+"omelets"
+]
+}
+},
+{
+"text": "can you find me a thai restaurant that is caual",
+"gold": {
+"Cuisine": [
+"thai"
+],
+"Amenity": [
+"caual"
+]
+}
+},
+{
+"text": "do any of the family restaurants down town serve strawberry milk",
+"gold": {
+"Amenity": [
+"family"
+],
+"Location": [
+"down town"
+],
+"Dish": [
+"strawberry milk"
+]
+}
+},
+{
+"text": "is there any restaurant that serves fried chicken late night",
+"gold": {
+"Dish": [
+"fried chicken"
+],
+"Hours": [
+"late night"
+]
+}
+},
+{
+"text": "what are the three highest rated restaurants in my area",
+"gold": {
+"Rating": [
+"three highest rated"
+],
+"Location": [
+"my area"
+]
+}
+},
+{
+"text": "find restaurants within 5 miles with entrees under 15",
+"gold": {
+"Location": [
+"within 5 miles"
+],
+"Price": [
+"entrees under 15"
+]
+}
+},
+{
+"text": "find me an ethiopian restaurant with good service",
+"gold": {
+"Cuisine": [
+"ethiopian"
+],
+"Amenity": [
+"good service"
+]
+}
+},
+{
+"text": "find me a good pho restaurant in portland or",
+"gold": {
+"Rating": [
+"good"
+],
+"Cuisine": [
+"pho"
+],
+"Location": [
+"portland or"
+]
+}
+},
+{
+"text": "im looking for a family style restaurant so i can eat at the bar anything within two miles",
+"gold": {
+"Amenity": [
+"family style",
+"eat at the bar"
+],
+"Location": [
+"within two miles"
+]
+}
+},
+{
+"text": "is there an all asia cafe nearby",
+"gold": {
+"Restaurant_Name": [
+"all asia cafe"
+],
+"Location": [
+"nearby"
+]
+}
+},
+{
+"text": "does mikes country kitchen have a senior special",
+"gold": {
+"Restaurant_Name": [
+"mikes country kitchen"
+]
+}
+},
+{
+"text": "is there anywhere near here that is open 24 hours and serves breakfast",
+"gold": {
+"Location": [
+"near here"
+],
+"Hours": [
+"24 hours"
+],
+"Cuisine": [
+"breakfast"
+]
+}
+},
+{
+"text": "is there any place around that has bring your own liquor",
+"gold": {
+"Amenity": [
+"bring your own liquor"
+]
+}
+},
+{
+"text": "i want to find a kosher deli that serves tongue and brisket sandwiches",
+"gold": {
+"Cuisine": [
+"kosher deli"
+],
+"Dish": [
+"tongue",
+"brisket sandwiches"
+]
+}
+},
+{
+"text": "how many restaurants near me have bathrooms",
+"gold": {
+"Location": [
+"near me"
+],
+"Amenity": [
+"have bathrooms"
+]
+}
+},
+{
+"text": "where is a good restaurant on the water",
+"gold": {
+"Rating": [
+"good"
+],
+"Location": [
+"water"
+]
+}
+},
+{
+"text": "where is a good place to eat",
+"gold": {
+"Rating": [
+"good"
+]
+}
+},
+{
+"text": "make me a reservation for a restaurant with a nonsmoking patio and that isnt fancy for 30 minutes from now",
+"gold": {
+"Amenity": [
+"reservation",
+"nonsmoking patio",
+"isnt fancy"
+],
+"Hours": [
+"30 minutes from now"
+]
+}
+},
+{
+"text": "where can i get some fast food",
+"gold": {
+"Cuisine": [
+"fast food"
+]
+}
+},
+{
+"text": "are there any turkish restaurants in florida",
+"gold": {
+"Cuisine": [
+"turkish"
+],
+"Location": [
+"florida"
+]
+}
+},
+{
+"text": "what is the fastest route to the sonic",
+"gold": {
+"Restaurant_Name": [
+"sonic"
+]
+}
+},
+{
+"text": "what are some of the best restaurants in this city",
+"gold": {
+"Rating": [
+"best"
+],
+"Location": [
+"in this city"
+]
+}
+},
+{
+"text": "any place along the road has a good beer selection that also serves ribs",
+"gold": {
+"Location": [
+"along the road"
+],
+"Rating": [
+"good"
+],
+"Dish": [
+"beer",
+"ribs"
+]
+}
+},
+{
+"text": "find me a dim sum restaurant open at 8 am",
+"gold": {
+"Dish": [
+"dim sum restaurant"
+],
+"Hours": [
+"open at 8 am"
+]
+}
+},
+{
+"text": "i need a place for kids to eat at 12 pm",
+"gold": {
+"Amenity": [
+"kids"
+],
+"Hours": [
+"12 pm"
+]
+}
+},
+{
+"text": "is there a moderately priced french restaurant in this area",
+"gold": {
+"Price": [
+"moderately"
+],
+"Cuisine": [
+"french"
+],
+"Location": [
+"in this area"
+]
+}
+},
+{
+"text": "where is the nearest kosher restaurant",
+"gold": {
+"Location": [
+"nearest"
+],
+"Cuisine": [
+"kosher"
+]
+}
+},
+{
+"text": "i have a craving for fish and chips but i am on a budget so i need them cheap",
+"gold": {
+"Cuisine": [
+"fish",
+"chips"
+],
+"Price": [
+"cheap"
+]
+}
+},
+{
+"text": "is there an restaurant in this part of town that serves thai food",
+"gold": {
+"Location": [
+"this part of town"
+],
+"Cuisine": [
+"thai"
+]
+}
+},
+{
+"text": "look up the reviews for this new asain restaurant",
+"gold": {
+"Cuisine": [
+"asain"
+]
+}
+},
+{
+"text": "can you find a seafood restaurant",
+"gold": {
+"Cuisine": [
+"seafood"
+]
+}
+},
+{
+"text": "i wanna try something new find me a restaurant that carries sushi",
+"gold": {
+"Dish": [
+"sushi"
+]
+}
+},
+{
+"text": "im looking for somewhere to get affordable sushi",
+"gold": {
+"Price": [
+"affordable"
+],
+"Dish": [
+"sushi"
+]
+}
+},
+{
+"text": "can you please find the olive garden restaurant in manhattan",
+"gold": {
+"Restaurant_Name": [
+"olive garden"
+],
+"Location": [
+"in manhattan"
+]
+}
+},
+{
+"text": "is there a vegan restaurant within 5 miles",
+"gold": {
+"Cuisine": [
+"vegan"
+],
+"Location": [
+"within 5 miles"
+]
+}
+},
+{
+"text": "find a high end place that serves pancakes",
+"gold": {
+"Rating": [
+"high end"
+],
+"Dish": [
+"pancakes"
+]
+}
+},
+{
+"text": "what nearby places are byob",
+"gold": {
+"Location": [
+"nearby"
+],
+"Amenity": [
+"byob"
+]
+}
+},
+{
+"text": "is there any place where i can take my pet",
+"gold": {
+"Amenity": [
+"pet"
+]
+}
+},
+{
+"text": "find me route directions from lexington ky to cincinnatti ohio",
+"gold": {
+"Location": [
+"lexington ky",
+"cincinnatti ohio"
+]
+}
+},
+{
+"text": "find me the phone number to dominos pizza",
+"gold": {
+"Restaurant_Name": [
+"dominos pizza"
+]
+}
+},
+{
+"text": "i need an inexpensive italian restaurant with big portions",
+"gold": {
+"Price": [
+"inexpensive"
+],
+"Cuisine": [
+"italian"
+],
+"Amenity": [
+"big portions"
+]
+}
+},
+{
+"text": "looking for tuna dishes that offer parking",
+"gold": {
+"Dish": [
+"tuna dishes"
+],
+"Amenity": [
+"offer parking"
+]
+}
+},
+{
+"text": "please give me directions to the nearest made to order place where i can get a cheeseburger",
+"gold": {
+"Location": [
+"nearest"
+],
+"Dish": [
+"made to order",
+"cheeseburger"
+]
+}
+},
+{
+"text": "i would like to eat fish today any recommendations",
+"gold": {
+"Dish": [
+"fish"
+],
+"Hours": [
+"today"
+]
+}
+},
+{
+"text": "i want a greek sandwich with goat cheese",
+"gold": {
+"Cuisine": [
+"greek"
+],
+"Dish": [
+"sandwich with goat cheese"
+]
+}
+},
+{
+"text": "show me some restaurants nearby that have 3 star or higher rating",
+"gold": {
+"Location": [
+"nearby"
+],
+"Rating": [
+"3 star or higher rating"
+]
+}
+},
+{
+"text": "is there a halal place downtown where i could eat outside",
+"gold": {
+"Cuisine": [
+"halal"
+],
+"Location": [
+"downtown"
+],
+"Amenity": [
+"eat outside"
+]
+}
+},
+{
+"text": "is there any place in this area that has outdoor seating",
+"gold": {
+"Location": [
+"in this area"
+],
+"Amenity": [
+"outdoor seating"
+]
+}
+},
+{
+"text": "can i find good portugues",
+"gold": {
+"Rating": [
+"good"
+],
+"Cuisine": [
+"portugues"
+]
+}
+},
+{
+"text": "is the pricing fair",
+"gold": {
+"Price": [
+"pricing fair"
+]
+}
+},
+{
+"text": "wheres the closest 5 star restaurant located",
+"gold": {
+"Location": [
+"closest"
+],
+"Rating": [
+"5 star"
+]
+}
+},
+{
+"text": "im looking for an all you can eat mexican buffet",
+"gold": {
+"Amenity": [
+"all you can eat"
+],
+"Cuisine": [
+"mexican buffet"
+]
+}
+},
+{
+"text": "i want a pad thai place around here thats open all day",
+"gold": {
+"Dish": [
+"pad thai"
+],
+"Location": [
+"around here"
+],
+"Hours": [
+"open all day"
+]
+}
+},
+{
+"text": "where is the apple store in the area",
+"gold": {
+"Restaurant_Name": [
+"apple store"
+],
+"Location": [
+"in the area"
+]
+}
+},
+{
+"text": "i need a quick bite to eat",
+"gold": {
+"Amenity": [
+"quick"
+]
+}
+},
+{
+"text": "what is the closest bar near heidis restaurant",
+"gold": {
+"Location": [
+"closest"
+],
+"Restaurant_Name": [
+"heidis restaurant"
+]
+}
+},
+{
+"text": "whats a nicely priced southwestern place near here",
+"gold": {
+"Price": [
+"nicely"
+],
+"Cuisine": [
+"southwestern"
+],
+"Location": [
+"near here"
+]
+}
+},
+{
+"text": "im looking for cheap spanish cuisine",
+"gold": {
+"Price": [
+"cheap"
+],
+"Cuisine": [
+"spanish"
+]
+}
+},
+{
+"text": "where is there a great steak near here that has a buffet",
+"gold": {
+"Rating": [
+"great"
+],
+"Dish": [
+"steak"
+],
+"Location": [
+"near here"
+],
+"Amenity": [
+"buffet"
+]
+}
+},
+{
+"text": "im looking for a nice place to eat for me and my girlfriends one year anniversary where i can schedule romantic candles and flowers for her",
+"gold": {
+"Rating": [
+"nice"
+],
+"Amenity": [
+"romantic candles",
+"flowers"
+]
+}
+},
+{
+"text": "what is the rating on arbys",
+"gold": {
+"Restaurant_Name": [
+"arbys"
+]
+}
+},
+{
+"text": "what is the best pizza place in the theater district",
+"gold": {
+"Rating": [
+"best"
+],
+"Cuisine": [
+"pizza"
+],
+"Location": [
+"theater district"
+]
+}
+},
+{
+"text": "where is the next mcdonald",
+"gold": {
+"Location": [
+"next"
+],
+"Restaurant_Name": [
+"mcdonald"
+]
+}
+},
+{
+"text": "i need directions to the closest pancake place",
+"gold": {
+"Location": [
+"closest"
+],
+"Dish": [
+"pancake"
+]
+}
+},
+{
+"text": "show me the moderately priced japanese restaurants in a ten mile radius",
+"gold": {
+"Price": [
+"moderately"
+],
+"Cuisine": [
+"japanese"
+],
+"Location": [
+"ten mile radius"
+]
+}
+},
+{
+"text": "looking for sebastians restaurant offering generous portions",
+"gold": {
+"Restaurant_Name": [
+"sebastians restaurant"
+],
+"Amenity": [
+"generous portions"
+]
+}
+},
+{
+"text": "where is the best italian food in the city",
+"gold": {
+"Rating": [
+"best"
+],
+"Cuisine": [
+"italian"
+],
+"Location": [
+"in the city"
+]
+}
+},
+{
+"text": "yes the new diner on south street please",
+"gold": {
+"Cuisine": [
+"diner"
+],
+"Location": [
+"south street"
+]
+}
+},
+{
+"text": "are there any restaurants on the way to my destination that have a fireplace inside",
+"gold": {
+"Location": [
+"way to my destination"
+],
+"Amenity": [
+"fireplace inside"
+]
+}
+},
+{
+"text": "wheres the nearest restaurant with a childrens menu",
+"gold": {
+"Location": [
+"nearest"
+],
+"Amenity": [
+"childrens menu"
+]
+}
+},
+{
+"text": "im hungry for a steak any good restaurants around",
+"gold": {
+"Dish": [
+"steak"
+],
+"Rating": [
+"good"
+],
+"Location": [
+"around"
+]
+}
+},
+{
+"text": "what time does little johns open on sunday",
+"gold": {
+"Restaurant_Name": [
+"little johns"
+],
+"Hours": [
+"on sunday"
+]
+}
+},
+{
+"text": "hey take me to variety food court",
+"gold": {
+"Restaurant_Name": [
+"variety food court"
+]
+}
+},
+{
+"text": "im in the mood for some texas chili",
+"gold": {
+"Dish": [
+"texas chili"
+]
+}
+},
+{
+"text": "could you help me locate a place for lunch",
+"gold": {
+"Hours": [
+"lunch"
+]
+}
+},
+{
+"text": "i need a close restaurant that is open currently",
+"gold": {
+"Location": [
+"close"
+],
+"Hours": [
+"open currently"
+]
+}
+},
+{
+"text": "id really like a thai restaurant that has carryout do you know of one",
+"gold": {
+"Cuisine": [
+"thai"
+],
+"Amenity": [
+"carryout"
+]
+}
+},
+{
+"text": "need a reservation for six pm at the steak shack in detroit for four people and possibly a baby for tonight",
+"gold": {
+"Hours": [
+"six pm",
+"tonight"
+],
+"Restaurant_Name": [
+"the steak shack"
+],
+"Location": [
+"detroit"
+]
+}
+},
+{
+"text": "where could i go for a roast beef sandwich right now",
+"gold": {
+"Dish": [
+"roast beef sandwich"
+],
+"Hours": [
+"right now"
+]
+}
+},
+{
+"text": "i need a reservation for 12 at 6 pm at the nearest asian restaurant",
+"gold": {
+"Hours": [
+"6 pm"
+],
+"Location": [
+"nearest"
+],
+"Cuisine": [
+"asian"
+]
+}
+},
+{
+"text": "im on a really tight budget but im hungry help me out",
+"gold": {
+"Price": [
+"tight budget"
+]
+}
+},
+{
+"text": "im looking for a 5 star restaurant whats the closest one",
+"gold": {
+"Rating": [
+"5 star"
+],
+"Location": [
+"closest"
+]
+}
+},
+{
+"text": "can i bring my kid to any of the restaurants down town that have bars attached",
+"gold": {
+"Amenity": [
+"my kid",
+"bars attached"
+],
+"Location": [
+"down town"
+]
+}
+},
+{
+"text": "can you get me a list of chinese food places in great neck ny",
+"gold": {
+"Cuisine": [
+"chinese"
+],
+"Location": [
+"great neck ny"
+]
+}
+},
+{
+"text": "are there any child friendly restaurants within ten miles",
+"gold": {
+"Amenity": [
+"child friendly"
+],
+"Location": [
+"within ten miles"
+]
+}
+},
+{
+"text": "im looking for somewhere with a good wine list within a mile of here that is open before ten in the morning",
+"gold": {
+"Rating": [
+"good"
+],
+"Amenity": [
+"wine list"
+],
+"Location": [
+"within a mile"
+],
+"Hours": [
+"open before ten in the morning"
+]
+}
+},
+{
+"text": "is the mcdonalds near my house open after midnight",
+"gold": {
+"Restaurant_Name": [
+"mcdonalds"
+],
+"Location": [
+"near my house"
+],
+"Hours": [
+"open after midnight"
+]
+}
+},
+{
+"text": "tacos stand near my location",
+"gold": {
+"Cuisine": [
+"tacos stand"
+],
+"Location": [
+"near my location"
+]
+}
+},
+{
+"text": "where can i find naugles",
+"gold": {
+"Restaurant_Name": [
+"naugles"
+]
+}
+},
+{
+"text": "is santa ramen in san mateo busy on thursday nights",
+"gold": {
+"Restaurant_Name": [
+"santa ramen"
+],
+"Location": [
+"san mateo"
+],
+"Hours": [
+"thursday nights"
+]
+}
+},
+{
+"text": "restaurants in the area",
+"gold": {
+"Location": [
+"in the area"
+]
+}
+},
+{
+"text": "any restaurants open right now",
+"gold": {
+"Hours": [
+"open right now"
+]
+}
+},
+{
+"text": "where can i go to eat",
+"gold": {}
+},
+{
+"text": "find italian restaurants in atlanta ga",
+"gold": {
+"Cuisine": [
+"italian"
+],
+"Location": [
+"atlanta ga"
+]
+}
+},
+{
+"text": "what restaurants are still open this late",
+"gold": {
+"Hours": [
+"still open this late"
+]
+}
+},
+{
+"text": "can you take me to a pizza place",
+"gold": {
+"Cuisine": [
+"pizza"
+]
+}
+},
+{
+"text": "are there any donut and donuts within 5 minutes drive that has an extensive beer menu",
+"gold": {
+"Restaurant_Name": [
+"donut and donuts"
+],
+"Location": [
+"within 5 minutes drive"
+],
+"Amenity": [
+"extensive beer menu"
+]
+}
+},
+{
+"text": "do you have information about any deals they may have",
+"gold": {}
+},
+{
+"text": "where is the nearest ice cream shop",
+"gold": {
+"Location": [
+"nearest"
+],
+"Cuisine": [
+"ice cream"
+]
+}
+},
+{
+"text": "is there a mcdonalds between here and my destination",
+"gold": {
+"Restaurant_Name": [
+"mcdonalds"
+],
+"Location": [
+"between here and my destination"
+]
+}
+},
+{
+"text": "red lobster with no smoking",
+"gold": {
+"Restaurant_Name": [
+"red lobster"
+],
+"Amenity": [
+"no smoking"
+]
+}
+},
+{
+"text": "where is the nearest place within 5 miles that has a game room for kids",
+"gold": {
+"Location": [
+"nearest",
+"within 5 miles"
+],
+"Amenity": [
+"game room for kids"
+]
+}
+},
+{
+"text": "what is the best ice cream parlor",
+"gold": {
+"Rating": [
+"best"
+],
+"Cuisine": [
+"ice cream parlor"
+]
+}
+},
+{
+"text": "i would like a list of restaurants that are smoke free near my house",
+"gold": {
+"Amenity": [
+"smoke free"
+],
+"Location": [
+"near my house"
+]
+}
+},
+{
+"text": "in which restaurants can one smoke",
+"gold": {
+"Amenity": [
+"smoke"
+]
+}
+},
+{
+"text": "id like some comfort food farm vegetables",
+"gold": {
+"Cuisine": [
+"comfort food"
+],
+"Dish": [
+"farm vegetables"
+]
+}
+},
+{
+"text": "areas that allow smoking",
+"gold": {
+"Amenity": [
+"allow smoking"
+]
+}
+},
+{
+"text": "i just want to eat at home could you direct me to a fast food place that has carry out",
+"gold": {
+"Cuisine": [
+"fast food"
+],
+"Amenity": [
+"carry out"
+]
+}
+},
+{
+"text": "i want to eat in the best rated restaurant in the area",
+"gold": {
+"Rating": [
+"best rated"
+],
+"Location": [
+"in the area"
+]
+}
+},
+{
+"text": "is there a restaurant around where i could watch a football game it needs to be kid friendly",
+"gold": {
+"Location": [
+"around"
+],
+"Amenity": [
+"watch a football game",
+"kid friendly"
+]
+}
+},
+{
+"text": "find me a thai restaurant with a great rating",
+"gold": {
+"Cuisine": [
+"thai"
+],
+"Rating": [
+"great rating"
+]
+}
+},
+{
+"text": "are there any restaurants around with a smoking area",
+"gold": {
+"Amenity": [
+"smoking area"
+]
+}
+},
+{
+"text": "i want a good milkshake where can i find it nearby",
+"gold": {
+"Rating": [
+"good"
+],
+"Dish": [
+"milkshake"
+],
+"Location": [
+"nearby"
+]
+}
+},
+{
+"text": "where is the place with byob 2 miles from here",
+"gold": {
+"Amenity": [
+"byob"
+],
+"Location": [
+"2 miles from here"
+]
+}
+},
+{
+"text": "can you find me a place that serves french fries",
+"gold": {
+"Dish": [
+"french fries"
+]
+}
+},
+{
+"text": "does any place sells corned beef and cabbage for st patricks day",
+"gold": {
+"Dish": [
+"corned beef and cabbage"
+],
+"Hours": [
+"st patricks day"
+]
+}
+},
+{
+"text": "do you know of a bakery that is still open",
+"gold": {
+"Cuisine": [
+"bakery"
+],
+"Hours": [
+"still open"
+]
+}
+},
+{
+"text": "where is the different locations of taco bell",
+"gold": {
+"Restaurant_Name": [
+"taco bell"
+]
+}
+},
+{
+"text": "is there a olive garden nearby",
+"gold": {
+"Restaurant_Name": [
+"olive garden"
+],
+"Location": [
+"nearby"
+]
+}
+},
+{
+"text": "is there anywhere near me that i can find a great sandwich",
+"gold": {
+"Location": [
+"near me"
+],
+"Rating": [
+"great"
+],
+"Dish": [
+"sandwich"
+]
+}
+},
+{
+"text": "help me find a place my kids would like to eat",
+"gold": {
+"Amenity": [
+"kids would like to eat"
+]
+}
+},
+{
+"text": "where can i get a banana split",
+"gold": {
+"Dish": [
+"banana split"
+]
+}
+},
+{
+"text": "how many pizza restaurants are nearby",
+"gold": {
+"Dish": [
+"pizza"
+],
+"Location": [
+"nearby"
+]
+}
+},
+{
+"text": "is there a club diner in watertown with a bar",
+"gold": {
+"Amenity": [
+"club",
+"bar"
+],
+"Cuisine": [
+"diner"
+],
+"Location": [
+"watertown"
+]
+}
+},
+{
+"text": "is there a bar that stays open after 2 am that is within a 5 minute distance",
+"gold": {
+"Cuisine": [
+"bar"
+],
+"Hours": [
+"open after 2 am"
+],
+"Location": [
+"within a 5 minute distance"
+]
+}
+},
+{
+"text": "can you locate a 4 star or higher restaurant that serves italian food",
+"gold": {
+"Rating": [
+"4 star or higher"
+],
+"Cuisine": [
+"italian"
+]
+}
+},
+{
+"text": "is there a donut and donuts restaurant within 5 miles with a beer list",
+"gold": {
+"Restaurant_Name": [
+"donut and donuts restaurant"
+],
+"Location": [
+"within 5 miles"
+],
+"Amenity": [
+"beer list"
+]
+}
+},
+{
+"text": "what kind of fondue does the magic kettle have",
+"gold": {
+"Dish": [
+"fondue"
+],
+"Restaurant_Name": [
+"magic kettle"
+]
+}
+},
+{
+"text": "where can i find a late night taco joint",
+"gold": {
+"Hours": [
+"late night"
+],
+"Cuisine": [
+"taco joint"
+]
+}
+},
+{
+"text": "give me the names of the three closest pizza parlors",
+"gold": {
+"Location": [
+"closest"
+],
+"Cuisine": [
+"pizza parlors"
+]
+}
+},
+{
+"text": "can you find starting gate restaurant thats hard to find with a huge price",
+"gold": {
+"Restaurant_Name": [
+"starting gate restaurant"
+],
+"Price": [
+"huge"
+]
+}
+},
+{
+"text": "what is the most expensive restaurant with a dress code and valet parking within 15 miles",
+"gold": {
+"Price": [
+"most expensive"
+],
+"Amenity": [
+"dress code",
+"valet parking"
+],
+"Location": [
+"within 15 miles"
+]
+}
+},
+{
+"text": "is there a nice place in the theater district that wont drain my wallet",
+"gold": {
+"Rating": [
+"nice"
+],
+"Location": [
+"theater district"
+],
+"Price": [
+"wont drain my wallet"
+]
+}
+},
+{
+"text": "where can i find a place for people watching nearby",
+"gold": {
+"Amenity": [
+"people watching"
+],
+"Location": [
+"nearby"
+]
+}
+},
+{
+"text": "find me a take out chinese restaurant",
+"gold": {
+"Amenity": [
+"take out"
+],
+"Cuisine": [
+"chinese"
+]
+}
+},
+{
+"text": "what is the best restaurant around",
+"gold": {
+"Rating": [
+"best"
+],
+"Location": [
+"around"
+]
+}
+},
+{
+"text": "find me the best rated chinese restaurant in the twin cities",
+"gold": {
+"Rating": [
+"best rated"
+],
+"Cuisine": [
+"chinese"
+],
+"Location": [
+"twin cities"
+]
+}
+},
+{
+"text": "hey im looking for a great date night idea any suggestions",
+"gold": {
+"Rating": [
+"great"
+],
+"Amenity": [
+"date night"
+]
+}
+},
+{
+"text": "can you find me a pizza place",
+"gold": {
+"Dish": [
+"pizza"
+]
+}
+},
+{
+"text": "looking for freebirds world burrito that is open late",
+"gold": {
+"Restaurant_Name": [
+"freebirds world burrito"
+],
+"Hours": [
+"open late"
+]
+}
+},
+{
+"text": "where can i get a milkshake within walking distance",
+"gold": {
+"Dish": [
+"milkshake"
+],
+"Location": [
+"within walking distance"
+]
+}
+},
+{
+"text": "which five star italian restaurants in manattan have the best reviews",
+"gold": {
+"Rating": [
+"five star",
+"best reviews"
+],
+"Cuisine": [
+"italian"
+],
+"Location": [
+"manattan"
+]
+}
+},
+{
+"text": "which parks are kid friendly",
+"gold": {
+"Amenity": [
+"kid friendly"
+]
+}
+},
+{
+"text": "can you help me find a restaurant that has fast service and is open before 11 am",
+"gold": {
+"Amenity": [
+"fast service"
+],
+"Hours": [
+"open before 11 am"
+]
+}
+},
+{
+"text": "what high end restaurants are nearby",
+"gold": {
+"Rating": [
+"high end"
+],
+"Location": [
+"nearby"
+]
+}
+},
+{
+"text": "i need food delivered from near downtown",
+"gold": {
+"Amenity": [
+"delivered"
+],
+"Location": [
+"near downtown"
+]
+}
+},
+{
+"text": "i need the hours of operation for lulus restaurant in gulf shores",
+"gold": {
+"Restaurant_Name": [
+"lulus"
+],
+"Location": [
+"gulf shores"
+]
+}
+},
+{
+"text": "do you know if there are any reviews on monacos",
+"gold": {
+"Restaurant_Name": [
+"monacos"
+]
+}
+},
+{
+"text": "find me a southwestern restaurant that serves breakfast and is located nearby",
+"gold": {
+"Cuisine": [
+"southwestern"
+],
+"Hours": [
+"breakfast"
+],
+"Location": [
+"located nearby"
+]
+}
+},
+{
+"text": "what is the phone number to alans on oak street",
+"gold": {
+"Restaurant_Name": [
+"alans"
+],
+"Location": [
+"oak street"
+]
+}
+},
+{
+"text": "take me for the best dessert today",
+"gold": {
+"Rating": [
+"best"
+],
+"Cuisine": [
+"dessert"
+],
+"Hours": [
+"today"
+]
+}
+},
+{
+"text": "what is the most popular italian restaurant near me",
+"gold": {
+"Cuisine": [
+"italian"
+],
+"Location": [
+"near me"
+]
+}
+},
+{
+"text": "find a fine dining restaurant within 6 miles",
+"gold": {
+"Amenity": [
+"fine dining"
+],
+"Location": [
+"within 6 miles"
+]
+}
+},
+{
+"text": "what time does kareems restaurant open",
+"gold": {
+"Restaurant_Name": [
+"kareems"
+]
+}
+},
+{
+"text": "any asian cuisine around",
+"gold": {
+"Cuisine": [
+"asian"
+],
+"Location": [
+"around"
+]
+}
+},
+{
+"text": "does tgi fridays have senior discounts",
+"gold": {
+"Restaurant_Name": [
+"tgi fridays"
+],
+"Amenity": [
+"senior discounts"
+]
+}
+},
+{
+"text": "where is the nearest shell gas station",
+"gold": {
+"Location": [
+"nearest"
+]
+}
+},
+{
+"text": "where is the closest 5 star restaurant",
+"gold": {
+"Location": [
+"closest"
+],
+"Rating": [
+"5 star"
+]
+}
+},
+{
+"text": "i want to try something exotic",
+"gold": {
+"Cuisine": [
+"exotic"
+]
+}
+},
+{
+"text": "are there any four star restaurants in this town",
+"gold": {
+"Rating": [
+"four star"
+],
+"Location": [
+"town"
+]
+}
+},
+{
+"text": "are there any restaurant nearby that serve thai food",
+"gold": {
+"Location": [
+"nearby"
+],
+"Cuisine": [
+"thai"
+]
+}
+},
+{
+"text": "i need directions to the nearest ethiopian restaurant",
+"gold": {
+"Location": [
+"nearest"
+],
+"Cuisine": [
+"ethiopian"
+]
+}
+},
+{
+"text": "can you tell me where an affordable burmese place is",
+"gold": {
+"Price": [
+"affordable"
+],
+"Cuisine": [
+"burmese"
+]
+}
+},
+{
+"text": "smoke friendly restaurants",
+"gold": {
+"Amenity": [
+"smoke friendly"
+]
+}
+},
+{
+"text": "i want the spiciest buffalo wings in town where should i go",
+"gold": {
+"Dish": [
+"spiciest buffalo wings"
+],
+"Location": [
+"in town"
+]
+}
+},
+{
+"text": "who makes the absolute best sausage",
+"gold": {
+"Rating": [
+"absolute best"
+],
+"Dish": [
+"sausage"
+]
+}
+},
+{
+"text": "is there more than one fatty fish restaurant on long island",
+"gold": {
+"Restaurant_Name": [
+"fatty fish"
+],
+"Location": [
+"long island"
+]
+}
+}
+]
+}
