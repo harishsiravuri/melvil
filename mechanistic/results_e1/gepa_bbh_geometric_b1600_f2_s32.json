@@ -1,0 +1,113 @@
+{
+ "curve": [
+  {
+   "metric_calls": 0,
+   "dev": 0.1
+  },
+  {
+   "metric_calls": 68,
+   "dev": 0.24
+  },
+  {
+   "metric_calls": 124,
+   "dev": 0.14
+  },
+  {
+   "metric_calls": 180,
+   "dev": 0.4
+  },
+  {
+   "metric_calls": 236,
+   "dev": 0.2
+  },
+  {
+   "metric_calls": 292,
+   "dev": 0.38
+  },
+  {
+   "metric_calls": 348,
+   "dev": 0.4
+  },
+  {
+   "metric_calls": 482,
+   "dev": 0.32
+  },
+  {
+   "metric_calls": 565,
+   "dev": 0.2
+  },
+  {
+   "metric_calls": 624,
+   "dev": 0.32
+  },
+  {
+   "metric_calls": 692,
+   "dev": 0.36
+  },
+  {
+   "metric_calls": 766,
+   "dev": 0.42
+  },
+  {
+   "metric_calls": 822,
+   "dev": 0.38
+  },
+  {
+   "metric_calls": 884,
+   "dev": 0.36
+  },
+  {
+   "metric_calls": 940,
+   "dev": 0.2
+  },
+  {
+   "metric_calls": 996,
+   "dev": 0.22
+  },
+  {
+   "metric_calls": 1052,
+   "dev": 0.46
+  },
+  {
+   "metric_calls": 1114,
+   "dev": 0.18
+  },
+  {
+   "metric_calls": 1170,
+   "dev": 0.28
+  },
+  {
+   "metric_calls": 1250,
+   "dev": 0.3
+  },
+  {
+   "metric_calls": 1306,
+   "dev": 0.52
+  },
+  {
+   "metric_calls": 1362,
+   "dev": 0.54
+  },
+  {
+   "metric_calls": 1424,
+   "dev": 0.3
+  },
+  {
+   "metric_calls": 1480,
+   "dev": 0.46
+  },
+  {
+   "metric_calls": 1545,
+   "dev": 0.44
+  }
+ ],
+ "test_accuracy": 0.53,
+ "cost_usd": 1.4715,
+ "total_metric_calls": 1601,
+ "n_proposals": 57,
+ "optimizer": "gepa",
+ "task": "bbh_geometric",
+ "budget": 1600,
+ "seed": 32,
+ "family": "f2"
+}

@@ -43,14 +43,19 @@ def load_pool() -> list[dict]:
     return [json.loads(line) for line in (HERE / "curve_pool.jsonl").read_text().splitlines()]
 
 
+def run_total(run: dict) -> int:
+    return int(run.get("budget") or TOTAL)
+
+
 def accepts(run: dict) -> list[tuple[int, float]]:
     """(spend_after_full_eval, running_best_dev) per accepted candidate,
     excluding the seed candidate (index 0)."""
     pts = sorted(run["curve"], key=lambda c: c["metric_calls"])
+    total = run_total(run)
     out, best = [], pts[0]["dev"]
     for p in pts[1:]:
         best = max(best, p["dev"])
-        out.append((min(p["metric_calls"] + FULL_EVAL, TOTAL), best))
+        out.append((min(p["metric_calls"] + FULL_EVAL, total), best))
     return out
 
 
@@ -59,7 +64,7 @@ def apply_accept_rule(run: dict, k: int) -> tuple[int, float]:
     seed_dev = run["curve"][0]["dev"]
     if len(acc) >= k:
         return acc[k - 1]
-    return (TOTAL, acc[-1][1] if acc else seed_dev)
+    return (run_total(run), acc[-1][1] if acc else seed_dev)
 
 
 def apply_gap_rule(run: dict, c: int) -> tuple[int, float]:
@@ -67,11 +72,12 @@ def apply_gap_rule(run: dict, c: int) -> tuple[int, float]:
     seed_dev = run["curve"][0]["dev"]
     last_accept_end = FULL_EVAL  # seed candidate's full eval
     best = seed_dev
+    total = run_total(run)
     for spend, dev in acc:
         if spend - last_accept_end > c:  # patience expired before this accept
-            return (min(last_accept_end + c, TOTAL), best)
+            return (min(last_accept_end + c, total), best)
         last_accept_end, best = spend, dev
-    return (min(last_accept_end + c, TOTAL), best)
+    return (min(last_accept_end + c, total), best)
 
 
 def ci95(vals):
@@ -101,7 +107,7 @@ def main() -> None:
             if gain < MIN_GAIN:
                 n_flat += 1
                 continue
-            fracs.append(spend / TOTAL)
+            fracs.append(spend / run_total(run))
             rets.append((best - seed_dev) / gain)
         out["rules"][label] = {
             "mean_budget_frac": round(statistics.mean(fracs), 4),

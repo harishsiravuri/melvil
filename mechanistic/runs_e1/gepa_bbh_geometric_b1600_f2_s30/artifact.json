@@ -1,0 +1,365 @@
+{
+ "schema_version": 1,
+ "artifact_id": "ad6749b94961",
+ "parent_id": null,
+ "task_name": "bbh_geometric",
+ "created_at": "2026-07-21T07:57:07-0500",
+ "library": {
+  "name": "melvil",
+  "version": "0.3.0"
+ },
+ "models": {
+  "task": "openrouter/anthropic/claude-haiku-4.5",
+  "reflection": "openrouter/anthropic/claude-sonnet-4.5"
+ },
+ "budget": {
+  "metric_calls_budget": 1600,
+  "metric_calls_spent": 1622,
+  "cost_usd": 1.1396,
+  "task_lm_usage": {
+   "model": "openrouter/anthropic/claude-haiku-4.5",
+   "prompt_tokens": 690380,
+   "completion_tokens": 14208,
+   "calls": 798,
+   "cache_hits": 874,
+   "cost_usd": 0.76142
+  },
+  "reflection_lm_usage": {
+   "model": "openrouter/anthropic/claude-sonnet-4.5",
+   "prompt_tokens": 27781,
+   "completion_tokens": 19657,
+   "calls": 25,
+   "cache_hits": 33,
+   "cost_usd": 0.378198
+  },
+  "opt_seconds": 499.7
+ },
+ "scores": {
+  "dev_accuracy": 0.5,
+  "dev_macro_f1": 0.502,
+  "per_label_dev": {
+   "B": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "support": 5
+   },
+   "C": {
+    "precision": 1.0,
+    "recall": 0.1429,
+    "f1": 0.25,
+    "support": 7
+   },
+   "D": {
+    "precision": 0.25,
+    "recall": 1.0,
+    "f1": 0.4,
+    "support": 4
+   },
+   "E": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "support": 5
+   },
+   "F": {
+    "precision": 1.0,
+    "recall": 0.6,
+    "f1": 0.75,
+    "support": 5
+   },
+   "G": {
+    "precision": 0.25,
+    "recall": 0.5,
+    "f1": 0.3333,
+    "support": 4
+   },
+   "I": {
+    "precision": 0.5556,
+    "recall": 1.0,
+    "f1": 0.7143,
+    "support": 5
+   },
+   "J": {
+    "precision": 1.0,
+    "recall": 0.8,
+    "f1": 0.8889,
+    "support": 5
+   },
+   "K": {
+    "precision": 1.0,
+    "recall": 0.1,
+    "f1": 0.1818,
+    "support": 10
+   }
+  },
+  "seed_dev_accuracy": 0.1,
+  "dev_accuracy_quarantined": null
+ },
+ "config_hash": "9aba6b2a9f7b",
+ "config": {
+  "task_model": "openrouter/anthropic/claude-haiku-4.5",
+  "reflection_model": "openrouter/anthropic/claude-sonnet-4.5",
+  "budget": 1600,
+  "seed": 30,
+  "features": {
+   "codebook": false,
+   "confusion_reflection": false,
+   "hard_example_mining": false
+  },
+  "num_threads": 8,
+  "run_dir": "/Users/harish/Documents/Claude/Projects/6s/labelsmith/mechanistic/runs_e1/gepa_bbh_geometric_b1600_f2_s30",
+  "task_temperature": 0.0,
+  "task_max_tokens": 40,
+  "reflection_temperature": 1.0,
+  "reflection_max_tokens": 8000,
+  "reflection_minibatch_size": 3,
+  "max_exemplars": 6,
+  "mining_llm_screen": true,
+  "log_proposals": true,
+  "prices": {},
+  "metric_calls": 1600
+ },
+ "label_names": [
+  "B",
+  "C",
+  "D",
+  "E",
+  "F",
+  "G",
+  "I",
+  "J",
+  "K"
+ ],
+ "components": {
+  "instruction": "Classify the given text into one of these categories: B, C, D, E, F, G, I, J, K.\n\nThe input will be a multiple choice question about what shape an SVG path element draws, with options labeled (A) through (J).\n\nYour response must be ONLY a single letter from the allowed categories (B, C, D, E, F, G, I, J, K). Do not include any explanation, analysis, or additional text whatsoever.\n\nTo determine the correct answer:\n1. Parse the SVG path commands (M = move to, L = line to)\n2. Count the number of distinct vertices/points in the path\n3. Each coordinate pair (x,y) after M or L represents a vertex\n4. If the path returns to the starting point, do not double-count it\n5. Match the vertex count to the corresponding shape option\n6. Return only the letter corresponding to that shape from the allowed categories\n\nShape to vertex count mapping:\n- 3 distinct points = triangle (J)\n- 4 distinct points = kite (D) or rectangle (not in allowed set)\n- 5 distinct points = pentagon (G)\n- 6 distinct points = hexagon (C)\n- 7 distinct points = heptagon (B)\n- 8 distinct points = octagon (F)\n\nAdditional notes:\n- The path may have multiple segments separated by M commands\n- Count all unique coordinate pairs across all path segments\n- Line (E), sector (I), and K are also valid response options depending on the shape\n- Only respond with one of these letters: B, C, D, E, F, G, I, J, or K\n- Do not provide any reasoning, explanation, parsing steps, or additional text in your response\n- Your entire response must be exactly one letter\n\nCritical: The assistant in the example started explaining their process instead of providing only the answer letter. This violates the core requirement. Always output ONLY the single letter answer, nothing else."
+ },
+ "exemplars": [],
+ "confusion": {
+  "labels": [
+   "B",
+   "C",
+   "D",
+   "E",
+   "F",
+   "G",
+   "I",
+   "J",
+   "K"
+  ],
+  "matrix": [
+   [
+    0,
+    0,
+    3,
+    0,
+    0,
+    2,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    2,
+    1,
+    0,
+    0,
+    0,
+    4,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    4,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    5,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    1,
+    0,
+    1,
+    0,
+    3,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    2,
+    0,
+    0,
+    2,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    5,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    4,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    5,
+    0,
+    0,
+    0,
+    4,
+    0,
+    1,
+    0
+   ]
+  ],
+  "unparseable_column": true
+ },
+ "curve": [
+  {
+   "metric_calls": 0,
+   "dev_score": 0.1
+  },
+  {
+   "metric_calls": 92,
+   "dev_score": 0.38
+  },
+  {
+   "metric_calls": 154,
+   "dev_score": 0.5
+  },
+  {
+   "metric_calls": 222,
+   "dev_score": 0.5
+  },
+  {
+   "metric_calls": 284,
+   "dev_score": 0.24
+  },
+  {
+   "metric_calls": 346,
+   "dev_score": 0.36
+  },
+  {
+   "metric_calls": 432,
+   "dev_score": 0.3
+  },
+  {
+   "metric_calls": 497,
+   "dev_score": 0.4
+  },
+  {
+   "metric_calls": 568,
+   "dev_score": 0.38
+  },
+  {
+   "metric_calls": 624,
+   "dev_score": 0.12
+  },
+  {
+   "metric_calls": 692,
+   "dev_score": 0.38
+  },
+  {
+   "metric_calls": 760,
+   "dev_score": 0.26
+  },
+  {
+   "metric_calls": 828,
+   "dev_score": 0.1
+  },
+  {
+   "metric_calls": 884,
+   "dev_score": 0.36
+  },
+  {
+   "metric_calls": 940,
+   "dev_score": 0.4
+  },
+  {
+   "metric_calls": 996,
+   "dev_score": 0.42
+  },
+  {
+   "metric_calls": 1058,
+   "dev_score": 0.3
+  },
+  {
+   "metric_calls": 1138,
+   "dev_score": 0.46
+  },
+  {
+   "metric_calls": 1194,
+   "dev_score": 0.48
+  },
+  {
+   "metric_calls": 1256,
+   "dev_score": 0.22
+  },
+  {
+   "metric_calls": 1312,
+   "dev_score": 0.2
+  },
+  {
+   "metric_calls": 1386,
+   "dev_score": 0.42
+  },
+  {
+   "metric_calls": 1442,
+   "dev_score": 0.42
+  },
+  {
+   "metric_calls": 1504,
+   "dev_score": 0.34
+  },
+  {
+   "metric_calls": 1572,
+   "dev_score": 0.34
+  }
+ ],
+ "notes": ""
+}

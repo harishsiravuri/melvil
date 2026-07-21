@@ -1,0 +1,66 @@
+{
+ "curve": [
+  {
+   "metric_calls": 0,
+   "dev": 0.94
+  },
+  {
+   "metric_calls": 133,
+   "dev": 0.97
+  },
+  {
+   "metric_calls": 263,
+   "dev": 0.96
+  },
+  {
+   "metric_calls": 444,
+   "dev": 0.9
+  },
+  {
+   "metric_calls": 574,
+   "dev": 0.97
+  },
+  {
+   "metric_calls": 686,
+   "dev": 0.96
+  },
+  {
+   "metric_calls": 807,
+   "dev": 0.95
+  },
+  {
+   "metric_calls": 964,
+   "dev": 0.97
+  },
+  {
+   "metric_calls": 1103,
+   "dev": 0.96
+  },
+  {
+   "metric_calls": 1230,
+   "dev": 0.97
+  },
+  {
+   "metric_calls": 1339,
+   "dev": 0.94
+  },
+  {
+   "metric_calls": 1463,
+   "dev": 0.94
+  },
+  {
+   "metric_calls": 1593,
+   "dev": 0.94
+  }
+ ],
+ "test_accuracy": 0.95,
+ "best_prompt": "Solve the math word problem step by step. Show your reasoning, then end your response with the final numeric answer on its own line in the form '#### <number>'.\n\nImportant: The final answer must be a plain number without any currency symbols, units, or additional formatting. For example, if the answer is $7.00, write '#### 7' not '#### $7.00'. Remove dollar signs, decimal points that indicate whole numbers (e.g., 7.00 should be 7), and any other symbols from the final answer.",
+ "cost_usd": 1.1699,
+ "total_metric_calls": 1693,
+ "n_proposals": 25,
+ "optimizer": "gepa",
+ "task": "gsm8k",
+ "budget": 1600,
+ "seed": 30,
+ "family": "f2"
+}

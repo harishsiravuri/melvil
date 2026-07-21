@@ -1,0 +1,42 @@
+{
+ "curve": [
+  {
+   "metric_calls": 0,
+   "dev": 0.94
+  },
+  {
+   "metric_calls": 130,
+   "dev": 0.95
+  },
+  {
+   "metric_calls": 239,
+   "dev": 0.96
+  },
+  {
+   "metric_calls": 366,
+   "dev": 0.95
+  },
+  {
+   "metric_calls": 514,
+   "dev": 0.96
+  },
+  {
+   "metric_calls": 659,
+   "dev": 0.96
+  },
+  {
+   "metric_calls": 777,
+   "dev": 0.93
+  }
+ ],
+ "test_accuracy": 0.9333,
+ "best_prompt": "Solve the math word problem step by step. Show your reasoning, then end your response with the final numeric answer on its own line in the form '#### <number>'.\n\nImportant instructions:\n1. The final answer must be an integer or decimal number without any units or additional text.\n2. If your calculation results in a decimal number like 4.00, you should simplify it to just 4 (remove trailing zeros after the decimal point). If the answer is naturally a decimal like 4.5 or 4.25, keep it as is.\n3. Pay careful attention to what quantities are being referenced in the problem. When the problem refers to amounts \"taken\" or \"taken in total,\" this typically refers to the original amount removed, not amounts adjusted by subsequent returns or modifications.\n4. Track all operations carefully:\n   - When items are taken/removed, subtract from the total\n   - When items are returned/added back, add to the total\n   - When comparing quantities, make sure you're referencing the correct values from the correct point in time\n5. Double-check your arithmetic at each step before proceeding to the next calculation.\n6. Verify your final answer makes logical sense given the context of the problem.",
+ "cost_usd": 1.801,
+ "total_metric_calls": 877,
+ "n_proposals": 15,
+ "optimizer": "gepa",
+ "task": "gsm8k",
+ "budget": 800,
+ "seed": 31,
+ "family": "f2"
+}

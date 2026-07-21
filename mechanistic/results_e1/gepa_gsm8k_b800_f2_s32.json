@@ -1,0 +1,38 @@
+{
+ "curve": [
+  {
+   "metric_calls": 0,
+   "dev": 0.94
+  },
+  {
+   "metric_calls": 127,
+   "dev": 0.97
+  },
+  {
+   "metric_calls": 260,
+   "dev": 0.95
+  },
+  {
+   "metric_calls": 366,
+   "dev": 0.95
+  },
+  {
+   "metric_calls": 484,
+   "dev": 0.94
+  },
+  {
+   "metric_calls": 662,
+   "dev": 0.96
+  }
+ ],
+ "test_accuracy": 0.9567,
+ "best_prompt": "Solve the math word problem step by step. Show your reasoning, then end your response with the final numeric answer on its own line in the form '#### <number>'.\n\nImportant formatting requirements for the final answer:\n- The answer must be a plain number only (no currency symbols like $, no units)\n- If the answer is a whole number, do not include decimal places (e.g., use '6' not '6.00')\n- If the answer has a fractional part, include only the necessary decimal places (e.g., '6.5' not '6.50')\n- Do not include commas in large numbers (e.g., use '1000' not '1,000')",
+ "cost_usd": 1.4337,
+ "total_metric_calls": 804,
+ "n_proposals": 13,
+ "optimizer": "gepa",
+ "task": "gsm8k",
+ "budget": 800,
+ "seed": 32,
+ "family": "f2"
+}

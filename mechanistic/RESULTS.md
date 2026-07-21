@@ -119,6 +119,41 @@ vanilla GEPA at B1, seeds 20–24. Metrics: test accuracy, macro-F1, recovery
 fraction (arm − seed)/(GEPA − seed), cost per arm; mean ± 95% CI over seeds;
 paired bootstrap vs GEPA on identical test sets. No changes after numbers.
 
+## E1 — front-loading (C1) · **COMPLETE** ($93.74)
+
+Full matrix: GEPA × {800, 1600, 3200} × 5 tasks (banking77/trec/massive +
+bbh_geometric + gsm8k) × 5 fresh seeds (30–34) on F1, with per-proposal-attempt
+instrumentation; GEPA-F2 (claude) B1/B2 × 3 seeds; MIPROv2-F1 by preset tier
+(light/medium/heavy; GSM8K-MIPROv2 dropped — budget parity uninterpretable;
+TextGrad skipped — no maintained harness within a day). 165 runs, zero failures.
+
+**Headline: C1 DIED as stated.** Median fraction of total dev gain from the
+FIRST accepted proposal: **0.33** on F1 (n=73), **0.42** on F2 (n=30) — flat
+across budgets B1→B3 (no concentration even at 4× budget), and strongly
+task-dependent (trec 0.62–0.64, massive 0.29–0.33, banking77 0.00, gsm8k
+0.00–0.25). Half of the gain needs ~2 accepts (median by-2 = 0.50); the rest
+accrues across later accepts. MIPROv2's apparent 0.71 is measured at its own
+full-eval checkpoints (2–4 per run) — a granularity artifact of its evaluation
+schedule, reported with that caveat, so the cross-optimizer contrast is
+qualified rather than claimed.
+
+![cumulative gain](plots/e1_cumulative_gain.png)
+
+Paper sentence: *"Reflective prompt evolution's gains are distributed, not
+front-loaded: across budgets, tasks, and two model families, the first accepted
+rewrite carries a median one-third of the final improvement — refuting the
+folk model in which one good rewrite does the work, and explaining why methods
+that bank on early signal (racing, aggressive stopping, best-of-K round one)
+underdeliver."* Secondary finding for practitioners: budget scaling is strongly
+diminishing — 4× budget buys +1.4 test points on average (GEPA F1 0.811 →
+0.825); GEPA beats MIPROv2 at every budget tier (replicating the benchmark
+confirmation).
+
+E1's 105 GEPA curves were folded into the simulation pool; the E5-A frontier
+re-computed on 222 informative runs is unchanged in shape (A(2): 63% retention
+at 38% budget; A(3): 75% at 51%; G(200): 90% at 92%) — C5's verdict stands
+with better power.
+
 ## Pending experiments
 - **E1 front-loading (C1)** — harness next; its runs also enrich this
   simulation pool.

@@ -1,0 +1,313 @@
+{
+ "schema_version": 1,
+ "artifact_id": "1df3dae8f248",
+ "parent_id": null,
+ "task_name": "bbh_geometric",
+ "created_at": "2026-07-21T07:48:31-0500",
+ "library": {
+  "name": "melvil",
+  "version": "0.3.0"
+ },
+ "models": {
+  "task": "openrouter/anthropic/claude-haiku-4.5",
+  "reflection": "openrouter/anthropic/claude-sonnet-4.5"
+ },
+ "budget": {
+  "metric_calls_budget": 800,
+  "metric_calls_spent": 816,
+  "cost_usd": 1.0509,
+  "task_lm_usage": {
+   "model": "openrouter/anthropic/claude-haiku-4.5",
+   "prompt_tokens": 535469,
+   "completion_tokens": 18460,
+   "calls": 763,
+   "cache_hits": 103,
+   "cost_usd": 0.627769
+  },
+  "reflection_lm_usage": {
+   "model": "openrouter/anthropic/claude-sonnet-4.5",
+   "prompt_tokens": 40102,
+   "completion_tokens": 20188,
+   "calls": 35,
+   "cache_hits": 0,
+   "cost_usd": 0.423126
+  },
+  "opt_seconds": 555.0
+ },
+ "scores": {
+  "dev_accuracy": 0.42,
+  "dev_macro_f1": 0.4339,
+  "per_label_dev": {
+   "B": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "support": 5
+   },
+   "C": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "support": 7
+   },
+   "D": {
+    "precision": 0.6667,
+    "recall": 0.5,
+    "f1": 0.5714,
+    "support": 4
+   },
+   "E": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "support": 5
+   },
+   "F": {
+    "precision": 1.0,
+    "recall": 0.2,
+    "f1": 0.3333,
+    "support": 5
+   },
+   "G": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "support": 4
+   },
+   "I": {
+    "precision": 0.5,
+    "recall": 1.0,
+    "f1": 0.6667,
+    "support": 5
+   },
+   "J": {
+    "precision": 1.0,
+    "recall": 0.8,
+    "f1": 0.8889,
+    "support": 5
+   },
+   "K": {
+    "precision": 0.5,
+    "recall": 0.4,
+    "f1": 0.4444,
+    "support": 10
+   }
+  },
+  "seed_dev_accuracy": 0.1,
+  "dev_accuracy_quarantined": null
+ },
+ "config_hash": "5aa0bfc6639b",
+ "config": {
+  "task_model": "openrouter/anthropic/claude-haiku-4.5",
+  "reflection_model": "openrouter/anthropic/claude-sonnet-4.5",
+  "budget": 800,
+  "seed": 32,
+  "features": {
+   "codebook": false,
+   "confusion_reflection": false,
+   "hard_example_mining": false
+  },
+  "num_threads": 8,
+  "run_dir": "/Users/harish/Documents/Claude/Projects/6s/labelsmith/mechanistic/runs_e1/gepa_bbh_geometric_b800_f2_s32",
+  "task_temperature": 0.0,
+  "task_max_tokens": 40,
+  "reflection_temperature": 1.0,
+  "reflection_max_tokens": 8000,
+  "reflection_minibatch_size": 3,
+  "max_exemplars": 6,
+  "mining_llm_screen": true,
+  "log_proposals": true,
+  "prices": {},
+  "metric_calls": 800
+ },
+ "label_names": [
+  "B",
+  "C",
+  "D",
+  "E",
+  "F",
+  "G",
+  "I",
+  "J",
+  "K"
+ ],
+ "components": {
+  "instruction": "Classify the given text into one of these categories: B, C, D, E, F, G, I, J, K.\n\nThe input will be a question about what shape an SVG path element draws, followed by multiple choice options labeled (A) through (K).\n\nYour task is to:\n1. Analyze the SVG path to determine what shape it represents\n2. Identify the shape type based on the path commands and geometry\n3. Match the shape to one of the provided options\n4. Return ONLY the single letter corresponding to the correct answer (e.g., \"B\", \"F\", \"K\")\n\nImportant details about SVG paths:\n- \"M\" command moves to a starting point\n- \"L\" command draws a straight line to the next point\n- \"A\" command draws an elliptical arc\n- Paths can contain a mix of different commands\n\nKey shape identification rules:\n- **Sector**: A path that contains an \"A\" (arc) command along with straight lines typically represents a sector (like a pie slice). The arc command indicates a curved portion, which is characteristic of sectors and circles.\n- **Triangle (3 distinct vertices)**: If the path has exactly 3 unique coordinate points before closing, it's a triangle = J\n- **Quadrilateral/Kite (4 distinct vertices)**: If the path has exactly 4 unique coordinate points, it could be a kite, trapezoid, or rectangle = K or D depending on the shape\n  - A **kite** specifically has 4 vertices where two pairs of adjacent sides are equal, often forming a diamond-like shape with an axis of symmetry\n- **Pentagon (5 distinct vertices)** = G\n- **Hexagon (6 distinct vertices)** = C\n- **Heptagon (7 distinct vertices)** = B\n- **Octagon (8 distinct vertices)** = F\n\nShape recognition priority:\n1. First check for arc commands (\"A\") - if present with lines forming a closed shape, it's likely a sector (I)\n2. Then check if it's a special quadrilateral like a kite (D) by examining the symmetry and coordinate pattern\n3. Finally count distinct vertices for regular polygons\n\nWhen counting vertices:\n- Count all unique coordinate pairs\n- The final point that returns to the starting position should not be counted as an additional vertex\n- Each M and L command typically introduces a coordinate pair\n\nCritical instruction: You must output ONLY a single letter from the allowed categories (B, C, D, E, F, G, I, J, K). Do NOT provide any explanations, reasoning, analysis, or working. Do NOT start with phrases like \"I need to\" or show your counting process. Output nothing except the single letter answer."
+ },
+ "exemplars": [],
+ "confusion": {
+  "labels": [
+   "B",
+   "C",
+   "D",
+   "E",
+   "F",
+   "G",
+   "I",
+   "J",
+   "K"
+  ],
+  "matrix": [
+   [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    5
+   ],
+   [
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    1,
+    4
+   ],
+   [
+    0,
+    0,
+    2,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    1
+   ],
+   [
+    0,
+    0,
+    0,
+    5,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    4
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    2,
+    2
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    5,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    4,
+    0,
+    1
+   ],
+   [
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    5,
+    0,
+    4,
+    0
+   ]
+  ],
+  "unparseable_column": true
+ },
+ "curve": [
+  {
+   "metric_calls": 0,
+   "dev_score": 0.1
+  },
+  {
+   "metric_calls": 68,
+   "dev_score": 0.24
+  },
+  {
+   "metric_calls": 124,
+   "dev_score": 0.14
+  },
+  {
+   "metric_calls": 180,
+   "dev_score": 0.4
+  },
+  {
+   "metric_calls": 236,
+   "dev_score": 0.2
+  },
+  {
+   "metric_calls": 292,
+   "dev_score": 0.38
+  },
+  {
+   "metric_calls": 348,
+   "dev_score": 0.4
+  },
+  {
+   "metric_calls": 482,
+   "dev_score": 0.32
+  },
+  {
+   "metric_calls": 565,
+   "dev_score": 0.2
+  },
+  {
+   "metric_calls": 624,
+   "dev_score": 0.32
+  },
+  {
+   "metric_calls": 692,
+   "dev_score": 0.36
+  },
+  {
+   "metric_calls": 766,
+   "dev_score": 0.42
+  }
+ ],
+ "notes": ""
+}

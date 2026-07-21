@@ -1,75 +1,75 @@
 {
- "n_runs": 156,
+ "n_runs": 261,
  "rules": {
   "A(k=1)": {
-   "mean_budget_frac": 0.3011,
-   "budget_ci95": 0.0106,
-   "mean_retention": 0.4779,
-   "retention_ci95": 0.0726,
-   "median_retention": 0.5,
-   "pct_full_retention": 0.235,
-   "n_scored": 119,
-   "n_flat_excluded": 37
+   "mean_budget_frac": 0.2351,
+   "budget_ci95": 0.0131,
+   "mean_retention": 0.4252,
+   "retention_ci95": 0.0479,
+   "median_retention": 0.4167,
+   "pct_full_retention": 0.153,
+   "n_scored": 222,
+   "n_flat_excluded": 39
   },
   "A(k=2)": {
-   "mean_budget_frac": 0.4931,
-   "budget_ci95": 0.0248,
-   "mean_retention": 0.7218,
-   "retention_ci95": 0.0626,
-   "median_retention": 0.8947,
-   "pct_full_retention": 0.445,
-   "n_scored": 119,
-   "n_flat_excluded": 37
+   "mean_budget_frac": 0.3758,
+   "budget_ci95": 0.0239,
+   "mean_retention": 0.6299,
+   "retention_ci95": 0.0459,
+   "median_retention": 0.6667,
+   "pct_full_retention": 0.311,
+   "n_scored": 222,
+   "n_flat_excluded": 39
   },
   "A(k=3)": {
-   "mean_budget_frac": 0.6724,
-   "budget_ci95": 0.0267,
-   "mean_retention": 0.8513,
-   "retention_ci95": 0.0451,
-   "median_retention": 1.0,
-   "pct_full_retention": 0.613,
-   "n_scored": 119,
-   "n_flat_excluded": 37
+   "mean_budget_frac": 0.5097,
+   "budget_ci95": 0.0309,
+   "mean_retention": 0.7543,
+   "retention_ci95": 0.039,
+   "median_retention": 0.8619,
+   "pct_full_retention": 0.423,
+   "n_scored": 222,
+   "n_flat_excluded": 39
   },
   "G(C=60)": {
-   "mean_budget_frac": 0.2,
-   "budget_ci95": 0.0,
-   "mean_retention": 0.0,
-   "retention_ci95": 0.0,
+   "mean_budget_frac": 0.1666,
+   "budget_ci95": 0.0074,
+   "mean_retention": 0.016,
+   "retention_ci95": 0.0131,
    "median_retention": 0.0,
    "pct_full_retention": 0.0,
-   "n_scored": 119,
-   "n_flat_excluded": 37
+   "n_scored": 222,
+   "n_flat_excluded": 39
   },
   "G(C=120)": {
-   "mean_budget_frac": 0.4632,
-   "budget_ci95": 0.0472,
-   "mean_retention": 0.3428,
-   "retention_ci95": 0.0799,
-   "median_retention": 0.0,
-   "pct_full_retention": 0.244,
-   "n_scored": 119,
-   "n_flat_excluded": 37
+   "mean_budget_frac": 0.5374,
+   "budget_ci95": 0.0413,
+   "mean_retention": 0.5179,
+   "retention_ci95": 0.0597,
+   "median_retention": 0.6667,
+   "pct_full_retention": 0.347,
+   "n_scored": 222,
+   "n_flat_excluded": 39
   },
   "G(C=200)": {
-   "mean_budget_frac": 0.8716,
-   "budget_ci95": 0.0409,
-   "mean_retention": 0.8305,
-   "retention_ci95": 0.0667,
+   "mean_budget_frac": 0.9181,
+   "budget_ci95": 0.0252,
+   "mean_retention": 0.9013,
+   "retention_ci95": 0.0383,
    "median_retention": 1.0,
-   "pct_full_retention": 0.824,
-   "n_scored": 119,
-   "n_flat_excluded": 37
+   "pct_full_retention": 0.887,
+   "n_scored": 222,
+   "n_flat_excluded": 39
   },
   "G(C=300)": {
-   "mean_budget_frac": 0.9794,
-   "budget_ci95": 0.0131,
-   "mean_retention": 0.9916,
-   "retention_ci95": 0.0165,
+   "mean_budget_frac": 0.987,
+   "budget_ci95": 0.0081,
+   "mean_retention": 0.9955,
+   "retention_ci95": 0.0088,
    "median_retention": 1.0,
-   "pct_full_retention": 0.992,
-   "n_scored": 119,
-   "n_flat_excluded": 37
+   "pct_full_retention": 0.995,
+   "n_scored": 222,
+   "n_flat_excluded": 39
   }
  },
  "notes": [

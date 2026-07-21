@@ -1,0 +1,236 @@
+{
+ "test_accuracy": 0.5,
+ "curve": null,
+ "trial_logs": {
+  "1": {
+   "full_eval_program_path": null,
+   "full_eval_score": 40.0,
+   "total_eval_calls_so_far": 50,
+   "full_eval_program": "Predict(StringSignature(text -> label\n    instructions='Classify the given text into one of these categories: B, C, D, E, F, G, I, J, K. Answer with the category name only.'\n    text = Field(annotation=str required=True json_schema_extra={'IS_TYPE_UNDEFINED': True, '__dspy_field_type': 'input', 'prefix': 'Text:', 'desc': '${text}'})\n    label = Field(annotation=str required=True json_schema_extra={'__dspy_field_type': 'output', 'prefix': 'Label:', 'desc': '${label}'})\n))"
+  },
+  "2": {
+   "0_predictor_instruction": 3,
+   "0_predictor_demos": 16,
+   "full_eval_program_path": null,
+   "full_eval_score": 52.0,
+   "total_eval_calls_so_far": 100,
+   "full_eval_program": "Predict(StringSignature(text -> label\n    instructions='Given a description of an SVG path element and a list of geometric shape options, carefully analyze the SVG path commands and coordinates to determine which geometric figure the path represents. Consider the sequence and type of drawing commands (e.g., \"M\" for move, \"L\" for line), the number and placement of points, and the overall structure implied by the SVG syntax. Select the label that best matches the inferred geometric shape from the provided options, and answer only with the category name (do not include extraneous explanation or the label letter).'\n    text = Field(annotation=str required=True json_schema_extra={'IS_TYPE_UNDEFINED': True, '__dspy_field_type': 'input', 'prefix': 'Text:', 'desc': '${text}'})\n    label = Field(annotation=str required=True json_schema_extra={'__dspy_field_type': 'output', 'prefix': 'Label:', 'desc': '${label}'})\n))"
+  },
+  "3": {
+   "0_predictor_instruction": 2,
+   "0_predictor_demos": 8,
+   "full_eval_program_path": null,
+   "full_eval_score": 44.0,
+   "total_eval_calls_so_far": 150,
+   "full_eval_program": "Predict(StringSignature(text -> label\n    instructions='Given a text that contains an SVG path description and a list of multiple-choice options labeled with letters and geometric shape names, analyze the SVG path commands to determine which geometric shape the path draws. Match your inferred shape to one of the provided options and output only the corresponding label letter (for example, \"J\" for triangle, \"D\" for kite, etc.).'\n    text = Field(annotation=str required=True json_schema_extra={'IS_TYPE_UNDEFINED': True, '__dspy_field_type': 'input', 'prefix': 'Text:', 'desc': '${text}'})\n    label = Field(annotation=str required=True json_schema_extra={'__dspy_field_type': 'output', 'prefix': 'Label:', 'desc': '${label}'})\n))"
+  },
+  "4": {
+   "0_predictor_instruction": 4,
+   "0_predictor_demos": 2,
+   "full_eval_program_path": null,
+   "full_eval_score": 56.0,
+   "total_eval_calls_so_far": 200,
+   "full_eval_program": "Predict(StringSignature(text -> label\n    instructions='You are participating in a geometry examination to determine advanced AI proficiency in geometric reasoning. For each question, you are given a technical SVG path element and a list of potential shape labels. Your task is to carefully analyze the SVG path syntax, interpret the underlying geometric structure it describes, and select which geometric shape from the provided choices is being drawn. Your answer will directly impact your qualification for AI certification\u2014so choose the most accurate label from the list based on precise parsing and understanding of the SVG path. Only respond with the exact label.'\n    text = Field(annotation=str required=True json_schema_extra={'IS_TYPE_UNDEFINED': True, '__dspy_field_type': 'input', 'prefix': 'Text:', 'desc': '${text}'})\n    label = Field(annotation=str required=True json_schema_extra={'__dspy_field_type': 'output', 'prefix': 'Label:', 'desc': '${label}'})\n))"
+  },
+  "5": {
+   "0_predictor_instruction": 0,
+   "0_predictor_demos": 17,
+   "full_eval_program_path": null,
+   "full_eval_score": 52.0,
+   "total_eval_calls_so_far": 250,
+   "full_eval_program": "Predict(StringSignature(text -> label\n    instructions='Classify the given text into one of these categories: B, C, D, E, F, G, I, J, K. Answer with the category name only.'\n    text = Field(annotation=str required=True json_schema_extra={'IS_TYPE_UNDEFINED': True, '__dspy_field_type': 'input', 'prefix': 'Text:', 'desc': '${text}'})\n    label = Field(annotation=str required=True json_schema_extra={'__dspy_field_type': 'output', 'prefix': 'Label:', 'desc': '${label}'})\n))"
+  },
+  "6": {
+   "0_predictor_instruction": 5,
+   "0_predictor_demos": 10,
+   "full_eval_program_path": null,
+   "full_eval_score": 40.0,
+   "total_eval_calls_so_far": 300,
+   "full_eval_program": "Predict(StringSignature(text -> label\n    instructions='Given an SVG path element and a set of multiple-choice options, determine which geometric shape the path element draws. Select the correct label from the provided options and answer with the label only.'\n    text = Field(annotation=str required=True json_schema_extra={'IS_TYPE_UNDEFINED': True, '__dspy_field_type': 'input', 'prefix': 'Text:', 'desc': '${text}'})\n    label = Field(annotation=str required=True json_schema_extra={'__dspy_field_type': 'output', 'prefix': 'Label:', 'desc': '${label}'})\n))"
+  },
+  "7": {
+   "0_predictor_instruction": 0,
+   "0_predictor_demos": 8,
+   "full_eval_program_path": null,
+   "full_eval_score": 48.0,
+   "total_eval_calls_so_far": 350,
+   "full_eval_program": "Predict(StringSignature(text -> label\n    instructions='Classify the given text into one of these categories: B, C, D, E, F, G, I, J, K. Answer with the category name only.'\n    text = Field(annotation=str required=True json_schema_extra={'IS_TYPE_UNDEFINED': True, '__dspy_field_type': 'input', 'prefix': 'Text:', 'desc': '${text}'})\n    label = Field(annotation=str required=True json_schema_extra={'__dspy_field_type': 'output', 'prefix': 'Label:', 'desc': '${label}'})\n))"
+  },
+  "8": {
+   "0_predictor_instruction": 1,
+   "0_predictor_demos": 0,
+   "full_eval_program_path": null,
+   "full_eval_score": 0.0,
+   "total_eval_calls_so_far": 400,
+   "full_eval_program": "Predict(StringSignature(text -> label\n    instructions='Given the input text containing an SVG path element and a list of possible geometric shape options, analyze the SVG path syntax, including all commands and coordinates, to accurately determine which geometric shape is depicted. Choose the label from the provided options that best matches the path described in the input. Respond with only the correct label.'\n    text = Field(annotation=str required=True json_schema_extra={'IS_TYPE_UNDEFINED': True, '__dspy_field_type': 'input', 'prefix': 'Text:', 'desc': '${text}'})\n    label = Field(annotation=str required=True json_schema_extra={'__dspy_field_type': 'output', 'prefix': 'Label:', 'desc': '${label}'})\n))"
+  },
+  "9": {
+   "0_predictor_instruction": 2,
+   "0_predictor_demos": 5,
+   "full_eval_program_path": null,
+   "full_eval_score": 52.0,
+   "total_eval_calls_so_far": 450,
+   "full_eval_program": "Predict(StringSignature(text -> label\n    instructions='Given a text that contains an SVG path description and a list of multiple-choice options labeled with letters and geometric shape names, analyze the SVG path commands to determine which geometric shape the path draws. Match your inferred shape to one of the provided options and output only the corresponding label letter (for example, \"J\" for triangle, \"D\" for kite, etc.).'\n    text = Field(annotation=str required=True json_schema_extra={'IS_TYPE_UNDEFINED': True, '__dspy_field_type': 'input', 'prefix': 'Text:', 'desc': '${text}'})\n    label = Field(annotation=str required=True json_schema_extra={'__dspy_field_type': 'output', 'prefix': 'Label:', 'desc': '${label}'})\n))"
+  },
+  "10": {
+   "0_predictor_instruction": 5,
+   "0_predictor_demos": 8,
+   "full_eval_program_path": null,
+   "full_eval_score": 42.0,
+   "total_eval_calls_so_far": 500,
+   "full_eval_program": "Predict(StringSignature(text -> label\n    instructions='Given an SVG path element and a set of multiple-choice options, determine which geometric shape the path element draws. Select the correct label from the provided options and answer with the label only.'\n    text = Field(annotation=str required=True json_schema_extra={'IS_TYPE_UNDEFINED': True, '__dspy_field_type': 'input', 'prefix': 'Text:', 'desc': '${text}'})\n    label = Field(annotation=str required=True json_schema_extra={'__dspy_field_type': 'output', 'prefix': 'Label:', 'desc': '${label}'})\n))"
+  },
+  "11": {
+   "0_predictor_instruction": 4,
+   "0_predictor_demos": 2,
+   "full_eval_program_path": null,
+   "full_eval_score": 56.0,
+   "total_eval_calls_so_far": 550,
+   "full_eval_program": "Predict(StringSignature(text -> label\n    instructions='You are participating in a geometry examination to determine advanced AI proficiency in geometric reasoning. For each question, you are given a technical SVG path element and a list of potential shape labels. Your task is to carefully analyze the SVG path syntax, interpret the underlying geometric structure it describes, and select which geometric shape from the provided choices is being drawn. Your answer will directly impact your qualification for AI certification\u2014so choose the most accurate label from the list based on precise parsing and understanding of the SVG path. Only respond with the exact label.'\n    text = Field(annotation=str required=True json_schema_extra={'IS_TYPE_UNDEFINED': True, '__dspy_field_type': 'input', 'prefix': 'Text:', 'desc': '${text}'})\n    label = Field(annotation=str required=True json_schema_extra={'__dspy_field_type': 'output', 'prefix': 'Label:', 'desc': '${label}'})\n))"
+  },
+  "12": {
+   "0_predictor_instruction": 4,
+   "0_predictor_demos": 2,
+   "full_eval_program_path": null,
+   "full_eval_score": 56.0,
+   "total_eval_calls_so_far": 600,
+   "full_eval_program": "Predict(StringSignature(text -> label\n    instructions='You are participating in a geometry examination to determine advanced AI proficiency in geometric reasoning. For each question, you are given a technical SVG path element and a list of potential shape labels. Your task is to carefully analyze the SVG path syntax, interpret the underlying geometric structure it describes, and select which geometric shape from the provided choices is being drawn. Your answer will directly impact your qualification for AI certification\u2014so choose the most accurate label from the list based on precise parsing and understanding of the SVG path. Only respond with the exact label.'\n    text = Field(annotation=str required=True json_schema_extra={'IS_TYPE_UNDEFINED': True, '__dspy_field_type': 'input', 'prefix': 'Text:', 'desc': '${text}'})\n    label = Field(annotation=str required=True json_schema_extra={'__dspy_field_type': 'output', 'prefix': 'Label:', 'desc': '${label}'})\n))"
+  },
+  "13": {
+   "0_predictor_instruction": 4,
+   "0_predictor_demos": 12,
+   "full_eval_program_path": null,
+   "full_eval_score": 54.0,
+   "total_eval_calls_so_far": 650,
+   "full_eval_program": "Predict(StringSignature(text -> label\n    instructions='You are participating in a geometry examination to determine advanced AI proficiency in geometric reasoning. For each question, you are given a technical SVG path element and a list of potential shape labels. Your task is to carefully analyze the SVG path syntax, interpret the underlying geometric structure it describes, and select which geometric shape from the provided choices is being drawn. Your answer will directly impact your qualification for AI certification\u2014so choose the most accurate label from the list based on precise parsing and understanding of the SVG path. Only respond with the exact label.'\n    text = Field(annotation=str required=True json_schema_extra={'IS_TYPE_UNDEFINED': True, '__dspy_field_type': 'input', 'prefix': 'Text:', 'desc': '${text}'})\n    label = Field(annotation=str required=True json_schema_extra={'__dspy_field_type': 'output', 'prefix': 'Label:', 'desc': '${label}'})\n))"
+  },
+  "14": {
+   "0_predictor_instruction": 7,
+   "0_predictor_demos": 2,
+   "full_eval_program_path": null,
+   "full_eval_score": 52.0,
+   "total_eval_calls_so_far": 700,
+   "full_eval_program": "Predict(StringSignature(text -> label\n    instructions='Given a textual description of an SVG `<path>` element, including the path\\'s \"d\" attribute, and a list of multiple-choice options each representing a different geometric shape, carefully analyze the SVG path commands (such as \"M\", \"L\", and \"A\") to determine which geometric figure is being depicted. Select the most accurate label from the provided options that correctly classifies the geometric shape formed by the SVG path. Respond with only the appropriate label letter corresponding to your choice.'\n    text = Field(annotation=str required=True json_schema_extra={'IS_TYPE_UNDEFINED': True, '__dspy_field_type': 'input', 'prefix': 'Text:', 'desc': '${text}'})\n    label = Field(annotation=str required=True json_schema_extra={'__dspy_field_type': 'output', 'prefix': 'Label:', 'desc': '${label}'})\n))"
+  },
+  "15": {
+   "0_predictor_instruction": 4,
+   "0_predictor_demos": 13,
+   "full_eval_program_path": null,
+   "full_eval_score": 52.0,
+   "total_eval_calls_so_far": 750,
+   "full_eval_program": "Predict(StringSignature(text -> label\n    instructions='You are participating in a geometry examination to determine advanced AI proficiency in geometric reasoning. For each question, you are given a technical SVG path element and a list of potential shape labels. Your task is to carefully analyze the SVG path syntax, interpret the underlying geometric structure it describes, and select which geometric shape from the provided choices is being drawn. Your answer will directly impact your qualification for AI certification\u2014so choose the most accurate label from the list based on precise parsing and understanding of the SVG path. Only respond with the exact label.'\n    text = Field(annotation=str required=True json_schema_extra={'IS_TYPE_UNDEFINED': True, '__dspy_field_type': 'input', 'prefix': 'Text:', 'desc': '${text}'})\n    label = Field(annotation=str required=True json_schema_extra={'__dspy_field_type': 'output', 'prefix': 'Label:', 'desc': '${label}'})\n))"
+  },
+  "16": {
+   "0_predictor_instruction": 6,
+   "0_predictor_demos": 9,
+   "full_eval_program_path": null,
+   "full_eval_score": 48.0,
+   "total_eval_calls_so_far": 800,
+   "full_eval_program": "Predict(StringSignature(text -> label\n    instructions='You are an expert geometry teacher specializing in technical graphics and SVG interpretation. Given a text description of an SVG <path> element and a list of possible geometric figure options, analyze the SVG path syntax and commands to semantically interpret the shape being drawn. Determine which category from the provided list most accurately describes the geometric figure represented by the SVG path, and respond with only the name of the correct category.'\n    text = Field(annotation=str required=True json_schema_extra={'IS_TYPE_UNDEFINED': True, '__dspy_field_type': 'input', 'prefix': 'Text:', 'desc': '${text}'})\n    label = Field(annotation=str required=True json_schema_extra={'__dspy_field_type': 'output', 'prefix': 'Label:', 'desc': '${label}'})\n))"
+  },
+  "17": {
+   "0_predictor_instruction": 8,
+   "0_predictor_demos": 6,
+   "full_eval_program_path": null,
+   "full_eval_score": 54.0,
+   "total_eval_calls_so_far": 850,
+   "full_eval_program": "Predict(StringSignature(text -> label\n    instructions='You are an expert in SVG graphics and geometric reasoning. Given an SVG path description along with a list of possible geometric shape labels, carefully analyze the SVG path commands and determine which shape is being drawn. Respond with the correct label corresponding to the shape represented by the path. Base your answer solely on the SVG syntax and geometric structure.'\n    text = Field(annotation=str required=True json_schema_extra={'IS_TYPE_UNDEFINED': True, '__dspy_field_type': 'input', 'prefix': 'Text:', 'desc': '${text}'})\n    label = Field(annotation=str required=True json_schema_extra={'__dspy_field_type': 'output', 'prefix': 'Label:', 'desc': '${label}'})\n))"
+  },
+  "18": {
+   "0_predictor_instruction": 4,
+   "0_predictor_demos": 11,
+   "full_eval_program_path": null,
+   "full_eval_score": 54.0,
+   "total_eval_calls_so_far": 900,
+   "full_eval_program": "Predict(StringSignature(text -> label\n    instructions='You are participating in a geometry examination to determine advanced AI proficiency in geometric reasoning. For each question, you are given a technical SVG path element and a list of potential shape labels. Your task is to carefully analyze the SVG path syntax, interpret the underlying geometric structure it describes, and select which geometric shape from the provided choices is being drawn. Your answer will directly impact your qualification for AI certification\u2014so choose the most accurate label from the list based on precise parsing and understanding of the SVG path. Only respond with the exact label.'\n    text = Field(annotation=str required=True json_schema_extra={'IS_TYPE_UNDEFINED': True, '__dspy_field_type': 'input', 'prefix': 'Text:', 'desc': '${text}'})\n    label = Field(annotation=str required=True json_schema_extra={'__dspy_field_type': 'output', 'prefix': 'Label:', 'desc': '${label}'})\n))"
+  },
+  "19": {
+   "0_predictor_instruction": 3,
+   "0_predictor_demos": 2,
+   "full_eval_program_path": null,
+   "full_eval_score": 56.0,
+   "total_eval_calls_so_far": 950,
+   "full_eval_program": "Predict(StringSignature(text -> label\n    instructions='Given a description of an SVG path element and a list of geometric shape options, carefully analyze the SVG path commands and coordinates to determine which geometric figure the path represents. Consider the sequence and type of drawing commands (e.g., \"M\" for move, \"L\" for line), the number and placement of points, and the overall structure implied by the SVG syntax. Select the label that best matches the inferred geometric shape from the provided options, and answer only with the category name (do not include extraneous explanation or the label letter).'\n    text = Field(annotation=str required=True json_schema_extra={'IS_TYPE_UNDEFINED': True, '__dspy_field_type': 'input', 'prefix': 'Text:', 'desc': '${text}'})\n    label = Field(annotation=str required=True json_schema_extra={'__dspy_field_type': 'output', 'prefix': 'Label:', 'desc': '${label}'})\n))"
+  },
+  "20": {
+   "0_predictor_instruction": 4,
+   "0_predictor_demos": 7,
+   "full_eval_program_path": null,
+   "full_eval_score": 56.0,
+   "total_eval_calls_so_far": 1000,
+   "full_eval_program": "Predict(StringSignature(text -> label\n    instructions='You are participating in a geometry examination to determine advanced AI proficiency in geometric reasoning. For each question, you are given a technical SVG path element and a list of potential shape labels. Your task is to carefully analyze the SVG path syntax, interpret the underlying geometric structure it describes, and select which geometric shape from the provided choices is being drawn. Your answer will directly impact your qualification for AI certification\u2014so choose the most accurate label from the list based on precise parsing and understanding of the SVG path. Only respond with the exact label.'\n    text = Field(annotation=str required=True json_schema_extra={'IS_TYPE_UNDEFINED': True, '__dspy_field_type': 'input', 'prefix': 'Text:', 'desc': '${text}'})\n    label = Field(annotation=str required=True json_schema_extra={'__dspy_field_type': 'output', 'prefix': 'Label:', 'desc': '${label}'})\n))"
+  },
+  "21": {
+   "0_predictor_instruction": 6,
+   "0_predictor_demos": 2,
+   "full_eval_program_path": null,
+   "full_eval_score": 50.0,
+   "total_eval_calls_so_far": 1050,
+   "full_eval_program": "Predict(StringSignature(text -> label\n    instructions='You are an expert geometry teacher specializing in technical graphics and SVG interpretation. Given a text description of an SVG <path> element and a list of possible geometric figure options, analyze the SVG path syntax and commands to semantically interpret the shape being drawn. Determine which category from the provided list most accurately describes the geometric figure represented by the SVG path, and respond with only the name of the correct category.'\n    text = Field(annotation=str required=True json_schema_extra={'IS_TYPE_UNDEFINED': True, '__dspy_field_type': 'input', 'prefix': 'Text:', 'desc': '${text}'})\n    label = Field(annotation=str required=True json_schema_extra={'__dspy_field_type': 'output', 'prefix': 'Label:', 'desc': '${label}'})\n))"
+  },
+  "22": {
+   "0_predictor_instruction": 4,
+   "0_predictor_demos": 2,
+   "full_eval_program_path": null,
+   "full_eval_score": 56.0,
+   "total_eval_calls_so_far": 1100,
+   "full_eval_program": "Predict(StringSignature(text -> label\n    instructions='You are participating in a geometry examination to determine advanced AI proficiency in geometric reasoning. For each question, you are given a technical SVG path element and a list of potential shape labels. Your task is to carefully analyze the SVG path syntax, interpret the underlying geometric structure it describes, and select which geometric shape from the provided choices is being drawn. Your answer will directly impact your qualification for AI certification\u2014so choose the most accurate label from the list based on precise parsing and understanding of the SVG path. Only respond with the exact label.'\n    text = Field(annotation=str required=True json_schema_extra={'IS_TYPE_UNDEFINED': True, '__dspy_field_type': 'input', 'prefix': 'Text:', 'desc': '${text}'})\n    label = Field(annotation=str required=True json_schema_extra={'__dspy_field_type': 'output', 'prefix': 'Label:', 'desc': '${label}'})\n))"
+  },
+  "23": {
+   "0_predictor_instruction": 4,
+   "0_predictor_demos": 2,
+   "full_eval_program_path": null,
+   "full_eval_score": 56.0,
+   "total_eval_calls_so_far": 1150,
+   "full_eval_program": "Predict(StringSignature(text -> label\n    instructions='You are participating in a geometry examination to determine advanced AI proficiency in geometric reasoning. For each question, you are given a technical SVG path element and a list of potential shape labels. Your task is to carefully analyze the SVG path syntax, interpret the underlying geometric structure it describes, and select which geometric shape from the provided choices is being drawn. Your answer will directly impact your qualification for AI certification\u2014so choose the most accurate label from the list based on precise parsing and understanding of the SVG path. Only respond with the exact label.'\n    text = Field(annotation=str required=True json_schema_extra={'IS_TYPE_UNDEFINED': True, '__dspy_field_type': 'input', 'prefix': 'Text:', 'desc': '${text}'})\n    label = Field(annotation=str required=True json_schema_extra={'__dspy_field_type': 'output', 'prefix': 'Label:', 'desc': '${label}'})\n))"
+  },
+  "24": {
+   "0_predictor_instruction": 4,
+   "0_predictor_demos": 3,
+   "full_eval_program_path": null,
+   "full_eval_score": 60.0,
+   "total_eval_calls_so_far": 1200,
+   "full_eval_program": "Predict(StringSignature(text -> label\n    instructions='You are participating in a geometry examination to determine advanced AI proficiency in geometric reasoning. For each question, you are given a technical SVG path element and a list of potential shape labels. Your task is to carefully analyze the SVG path syntax, interpret the underlying geometric structure it describes, and select which geometric shape from the provided choices is being drawn. Your answer will directly impact your qualification for AI certification\u2014so choose the most accurate label from the list based on precise parsing and understanding of the SVG path. Only respond with the exact label.'\n    text = Field(annotation=str required=True json_schema_extra={'IS_TYPE_UNDEFINED': True, '__dspy_field_type': 'input', 'prefix': 'Text:', 'desc': '${text}'})\n    label = Field(annotation=str required=True json_schema_extra={'__dspy_field_type': 'output', 'prefix': 'Label:', 'desc': '${label}'})\n))"
+  },
+  "25": {
+   "0_predictor_instruction": 4,
+   "0_predictor_demos": 3,
+   "full_eval_program_path": null,
+   "full_eval_score": 60.0,
+   "total_eval_calls_so_far": 1250,
+   "full_eval_program": "Predict(StringSignature(text -> label\n    instructions='You are participating in a geometry examination to determine advanced AI proficiency in geometric reasoning. For each question, you are given a technical SVG path element and a list of potential shape labels. Your task is to carefully analyze the SVG path syntax, interpret the underlying geometric structure it describes, and select which geometric shape from the provided choices is being drawn. Your answer will directly impact your qualification for AI certification\u2014so choose the most accurate label from the list based on precise parsing and understanding of the SVG path. Only respond with the exact label.'\n    text = Field(annotation=str required=True json_schema_extra={'IS_TYPE_UNDEFINED': True, '__dspy_field_type': 'input', 'prefix': 'Text:', 'desc': '${text}'})\n    label = Field(annotation=str required=True json_schema_extra={'__dspy_field_type': 'output', 'prefix': 'Label:', 'desc': '${label}'})\n))"
+  },
+  "26": {
+   "0_predictor_instruction": 4,
+   "0_predictor_demos": 3,
+   "full_eval_program_path": null,
+   "full_eval_score": 60.0,
+   "total_eval_calls_so_far": 1300,
+   "full_eval_program": "Predict(StringSignature(text -> label\n    instructions='You are participating in a geometry examination to determine advanced AI proficiency in geometric reasoning. For each question, you are given a technical SVG path element and a list of potential shape labels. Your task is to carefully analyze the SVG path syntax, interpret the underlying geometric structure it describes, and select which geometric shape from the provided choices is being drawn. Your answer will directly impact your qualification for AI certification\u2014so choose the most accurate label from the list based on precise parsing and understanding of the SVG path. Only respond with the exact label.'\n    text = Field(annotation=str required=True json_schema_extra={'IS_TYPE_UNDEFINED': True, '__dspy_field_type': 'input', 'prefix': 'Text:', 'desc': '${text}'})\n    label = Field(annotation=str required=True json_schema_extra={'__dspy_field_type': 'output', 'prefix': 'Label:', 'desc': '${label}'})\n))"
+  },
+  "27": {
+   "0_predictor_instruction": 4,
+   "0_predictor_demos": 3,
+   "full_eval_program_path": null,
+   "full_eval_score": 60.0,
+   "total_eval_calls_so_far": 1350,
+   "full_eval_program": "Predict(StringSignature(text -> label\n    instructions='You are participating in a geometry examination to determine advanced AI proficiency in geometric reasoning. For each question, you are given a technical SVG path element and a list of potential shape labels. Your task is to carefully analyze the SVG path syntax, interpret the underlying geometric structure it describes, and select which geometric shape from the provided choices is being drawn. Your answer will directly impact your qualification for AI certification\u2014so choose the most accurate label from the list based on precise parsing and understanding of the SVG path. Only respond with the exact label.'\n    text = Field(annotation=str required=True json_schema_extra={'IS_TYPE_UNDEFINED': True, '__dspy_field_type': 'input', 'prefix': 'Text:', 'desc': '${text}'})\n    label = Field(annotation=str required=True json_schema_extra={'__dspy_field_type': 'output', 'prefix': 'Label:', 'desc': '${label}'})\n))"
+  },
+  "28": {
+   "0_predictor_instruction": 1,
+   "0_predictor_demos": 3,
+   "full_eval_program_path": null,
+   "full_eval_score": 54.0,
+   "total_eval_calls_so_far": 1400,
+   "full_eval_program": "Predict(StringSignature(text -> label\n    instructions='Given the input text containing an SVG path element and a list of possible geometric shape options, analyze the SVG path syntax, including all commands and coordinates, to accurately determine which geometric shape is depicted. Choose the label from the provided options that best matches the path described in the input. Respond with only the correct label.'\n    text = Field(annotation=str required=True json_schema_extra={'IS_TYPE_UNDEFINED': True, '__dspy_field_type': 'input', 'prefix': 'Text:', 'desc': '${text}'})\n    label = Field(annotation=str required=True json_schema_extra={'__dspy_field_type': 'output', 'prefix': 'Label:', 'desc': '${label}'})\n))"
+  }
+ },
+ "cost_usd": 0.3987,
+ "total_metric_calls": 1131,
+ "auto_preset": "heavy",
+ "optimizer": "miprov2",
+ "task": "bbh_geometric",
+ "budget": 3200,
+ "seed": 32,
+ "family": "f1"
+}
