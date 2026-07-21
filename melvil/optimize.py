@@ -15,6 +15,7 @@ from melvil.adapter import ClassificationAdapter, RoundInfo
 from melvil.artifact import (
     BLOB_COMPONENT,
     BOUNDARY_COMPONENT,
+    OUTPUT_CONTRACT,
     TASK_COMPONENT,
     PromptArtifact,
     label_component,
@@ -88,6 +89,7 @@ def optimize(
     resume: bool = False,
     on_round: Callable[[RoundInfo], None] | None = None,
     parent: PromptArtifact | None = None,
+    start_from: PromptArtifact | None = None,
 ) -> PromptArtifact:
     """Optimize a classifier prompt for `spec` and return a PromptArtifact.
 
@@ -95,6 +97,13 @@ def optimize(
     config.json, the gepa engine state (which makes ``resume=True`` work after
     an interruption), reflection traces, run.log, and artifact.json. The dev
     set drives all optimization decisions; no other data is touched.
+
+    ``start_from``: seed the optimization from an existing artifact's rendered
+    prompt (e.g. a ``draft()`` result) instead of the TaskSpec seed. UNTESTED
+    COMBINATION: our measured results cover draft alone and optimize alone;
+    draft-then-evolve has no benchmark numbers yet. Lineage is recorded
+    (parent defaults to ``start_from``). Only supported with
+    ``Features.none()`` (blob mode).
     """
     _validate_data(spec, train, dev)
     run_dir = Path(config.run_dir) if config.run_dir else _default_run_dir(spec, config)
@@ -177,7 +186,19 @@ def optimize(
             config.metric_calls, gepa_budget, len(dev),
         )
 
-    seed_candidate = seed_candidate_for(spec, feats)
+    if start_from is not None:
+        if feats.codebook:
+            raise ValueError("start_from is only supported with Features.none() (blob mode)")
+        blob = start_from.render()
+        # render_prompt re-appends the output contract; strip it so the seeded
+        # prompt is byte-identical to the artifact's rendered prompt
+        while blob.rstrip().endswith(OUTPUT_CONTRACT):
+            blob = blob.rstrip()[: -len(OUTPUT_CONTRACT)].rstrip()
+        seed_candidate = {BLOB_COMPONENT: blob}
+        if parent is None:
+            parent = start_from
+    else:
+        seed_candidate = seed_candidate_for(spec, feats)
     if feats.codebook and feats.confusion_reflection:
         module_selector = ConfusionComponentSelector(adapter.confusion, list(seed_candidate))
     else:

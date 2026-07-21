@@ -18,8 +18,14 @@ from melvil._about import LIBRARY_NAME, __version__
 from melvil.adapter import RoundInfo
 from melvil.artifact import PromptArtifact, render_prompt
 from melvil.config import BUDGET_PRESETS, Config, Features
-from melvil.costs import CostEstimate, estimate_evaluate_cost, estimate_optimize_cost
+from melvil.costs import (
+    CostEstimate,
+    estimate_draft_cost,
+    estimate_evaluate_cost,
+    estimate_optimize_cost,
+)
 from melvil.data import Example, load_csv, load_hf, train_dev_split
+from melvil.draft import draft
 from melvil.evaluate import Report, evaluate, report
 from melvil.optimize import optimize
 from melvil.screen import ScreenResult, screen
@@ -38,6 +44,8 @@ __all__ = [
     "RoundInfo",
     "TaskSpec",
     "__version__",
+    "draft",
+    "estimate_draft_cost",
     "estimate_evaluate_cost",
     "estimate_optimize_cost",
     "evaluate",

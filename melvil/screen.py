@@ -17,7 +17,6 @@ from melvil.costs import lm_usage, usage_cost_usd
 from melvil.data import Example, stratified_sample
 from melvil.lmutil import make_lm
 from melvil.program import classify_batch
-from melvil.taskspec import TaskSpec
 
 #: verdict bands on seed-prompt accuracy (inclusive lower bounds)
 SATURATED_AT = 0.95
@@ -43,7 +42,7 @@ class ScreenResult:
 
 
 def screen(
-    spec: TaskSpec,
+    spec_or_artifact,
     data: list[Example],
     config: Config,
     sample_size: int = 100,
@@ -60,26 +59,36 @@ def screen(
     Costs one sample-sized evaluation (uses `config.task_model`). The sample is
     drawn from `data` — use your dev split, never test.
     """
+    from melvil.artifact import PromptArtifact
     from melvil.config import Features
     from melvil.optimize import seed_candidate_for
 
+    if isinstance(spec_or_artifact, PromptArtifact):
+        # post-draft/post-optimize headroom check: evaluate the artifact's
+        # rendered prompt (draft -> screen -> maybe optimize workflow)
+        artifact = spec_or_artifact
+        label_names = artifact.label_names
+        rendered = artifact.render()
+    else:
+        spec = spec_or_artifact
+        label_names = spec.label_names
+        # blob-mode seed: the same baseline the benchmarks call "seed prompt"
+        components = seed_candidate_for(spec, Features.none())
+        rendered = render_prompt(components, label_names)
     if len(data) > sample_size:
         idx = stratified_sample(data, sample_size, random.Random(seed))
         sample = [data[i] for i in idx]
     else:
         sample = list(data)
-    # blob-mode seed: the same baseline the benchmarks call "seed prompt"
-    components = seed_candidate_for(spec, Features.none())
-    rendered = render_prompt(components, spec.label_names)
 
     lm = make_lm(config.task_model, config.task_temperature, config.task_max_tokens)
     since = len(lm.history)
-    preds = classify_batch(lm, rendered, sample, spec.label_names, config.num_threads)
+    preds = classify_batch(lm, rendered, sample, label_names, config.num_threads)
     acc = sum(1 for p in preds if p.correct) / len(preds)
     floor = (acc * (1 - acc) / len(preds)) ** 0.5
 
     weak = []
-    for name in spec.label_names:
+    for name in label_names:
         support = [p for p in preds if p.gold == name]
         if support and not any(p.correct for p in support):
             weak.append(name)

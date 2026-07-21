@@ -30,8 +30,8 @@ train, dev = mv.train_dev_split(examples, dev_size=100, seed=0)
 spec = mv.TaskSpec.from_examples("agnews-topics", examples)
 cfg = mv.Config(task_model="openrouter/openai/gpt-4.1-mini",
                 reflection_model="openrouter/openai/gpt-4.1", budget="light")
-print(mv.estimate_optimize_cost(spec, train, dev, cfg))  # dry-run, before spending
-artifact = mv.optimize(spec, train, dev, cfg, resume=True)
+print(mv.estimate_draft_cost(spec, dev, cfg))          # dry-run, before spending
+artifact = mv.draft(spec, train, dev, cfg, resume=True)   # primary path (see README)
 print(artifact.render())                               # deployable prompt string
 artifact.save("agnews_topics.v1.json")
 

@@ -2,13 +2,11 @@
 
 **Labeled examples + a label taxonomy in → an optimized, versioned classifier prompt out.**
 
-melvil wraps the [GEPA](https://github.com/gepa-ai/gepa) reflective prompt-evolution
-engine with a classification-specific layer that generic prompt optimizers lack:
-confusion-driven reflection, a per-label prompt codebook, and hard-example mining.
-It is a pure Python library — the API is the product.
-
-*Named for [Melvil Dewey](https://en.wikipedia.org/wiki/Melvil_Dewey), who gave
-libraries a system for putting things in the right category.*
+One error-grounded rewrite captures most of what full prompt evolution delivers, at
+about a tenth of the cost — 60–91% of GEPA's gain in our frozen-protocol benchmarks
+(model-family dependent), beating full GEPA outright on 2 of 8 tasks
+([the numbers](mechanistic/RESULTS.md)). That is what `mv.draft()` does, and it is
+where melvil starts:
 
 ```python
 import melvil as mv
@@ -17,11 +15,20 @@ examples = mv.load_csv("tickets.csv")                  # text,label columns
 train, dev = mv.train_dev_split(examples, dev_size=100, seed=0)
 spec = mv.TaskSpec.from_examples("ticket-intents", examples)
 cfg = mv.Config(task_model="openai/gpt-4.1-mini",
-                reflection_model="openai/gpt-4.1", budget="light")
-artifact = mv.optimize(spec, train, dev, cfg)
+                reflection_model="openai/gpt-4.1")
+artifact = mv.draft(spec, train, dev, cfg)             # diagnose errors -> write the prompt (x2)
 print(artifact.render())                               # deployable prompt string
 artifact.save("ticket_intents.v1.json")
 ```
+
+`draft()` evaluates your seed prompt once on dev, builds a structured error diagnosis
+(per-label accuracy, top confused pairs with concrete examples), has the reflection
+model write a complete replacement prompt, and repeats once (`iterations=2`, the
+benchmarked arm). The diagnosis reports are saved in the run directory. Full GEPA
+evolution (`mv.optimize()`) remains fully supported — as the escalation path.
+
+*Named for [Melvil Dewey](https://en.wikipedia.org/wiki/Melvil_Dewey), who gave
+libraries a system for putting things in the right category.*
 
 ## Install
 
@@ -39,6 +46,24 @@ pip install -e '.[hf,dev]'       # + test/lint tooling
 Model names are [LiteLLM](https://docs.litellm.ai) ids (`openai/...`,
 `anthropic/...`, `openrouter/...`); set the matching API key env var
 (`OPENAI_API_KEY`, `OPENROUTER_API_KEY`, ...).
+
+## When to run full optimization
+
+The recommended workflow is **draft → screen → maybe optimize**:
+
+```python
+artifact = mv.draft(spec, train, dev, cfg)
+check = mv.screen(artifact, dev, cfg)      # remaining headroom AFTER drafting
+if check.verdict == "headroom":
+    better = mv.optimize(spec, train, dev, cfg, start_from=artifact)
+```
+
+Decision rule: draft first. If `screen()` says meaningful headroom remains AND the
+extra accuracy is worth roughly 10× the spend, run `optimize()` — full GEPA at full
+budget still wins most tasks on absolute accuracy (it beat `draft` on 6 of 8 tasks
+in the frozen pass; `draft` recovered 60–91% of its gain and won the other 2).
+Honest caveat on `start_from`: draft-then-evolve is an UNTESTED combination — our
+measured results cover draft alone and optimize alone.
 
 ## What the benchmarks say (read this before choosing features)
 

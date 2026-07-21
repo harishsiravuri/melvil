@@ -164,7 +164,7 @@ def patch_lms(monkeypatch_or_module, task_lm: FakeTaskLM, reflection_lm: FakeRef
     # package are the re-exported functions; go through importlib for modules.
     modules = [
         importlib.import_module(f"melvil.{m}")
-        for m in ("lmutil", "optimize", "evaluate", "screen", "c2f")
+        for m in ("lmutil", "optimize", "evaluate", "screen", "c2f", "draft")
     ]
     for mod in modules:
         if hasattr(monkeypatch_or_module, "setattr"):

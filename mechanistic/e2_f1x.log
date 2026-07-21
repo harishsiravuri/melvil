@@ -15081,3 +15081,143 @@ Iteration 14: Valset score for new program: 0.82 (coverage 100 / 100)
 Iteration 14: Val aggregate for new program: 0.82
 Iteration 14: Individual valset scores for new program: {0: 1.0, 1: 1.0, 2: 1.0, 3: 1.0, 4: 1.0, 5: 1.0, 6: 1.0, 7: 1.0, 8: 1.0, 9: 1.0, 10: 1.0, 11: 1.0, 12: 1.0, 13: 1.0, 14: 1.0, 15: 1.0, 16: 1.0, 17: 0.0, 18: 0.0, 19: 1.0, 20: 1.0, 21: 0.0, 22: 1.0, 23: 1.0, 24: 1.0, 25: 1.0, 26: 1.0, 27: 1.0, 28: 1.0, 29: 1.0, 30: 1.0, 31: 1.0, 32: 1.0, 33: 1.0, 34: 0.0, 35: 1.0, 36: 1.0, 37: 1.0, 38: 1.0, 39: 1.0, 40: 1.0, 41: 1.0, 42: 1.0, 43: 1.0, 44: 1.0, 45: 1.0, 46: 1.0, 47: 1.0, 48: 1.0, 49: 1.0, 50: 1.0, 51: 1.0, 52: 1.0, 53: 0.0, 54: 1.0, 55: 1.0, 56: 1.0, 57: 0.0, 58: 1.0, 59: 1.0, 60: 0.0, 61: 0.0, 62: 1.0, 63: 0.0, 64: 0.0, 65: 0.0, 66: 1.0, 67: 1.0, 68: 1.0, 69: 1.0, 70: 1.0, 71: 1.0, 72: 1.0, 73: 1.0, 74: 1.0, 75: 1.0, 76: 1.0, 77: 1.0, 78: 1.0, 79: 1.0, 80: 0.0, 81: 1.0, 82: 1.0, 83: 1.0, 84: 0.0, 85: 0.0, 86: 0.0, 87: 1.0, 88: 0.0, 89: 1.0, 90: 1.0, 91: 0.0, 92: 1.0, 93: 0.0, 94: 1.0, 95: 1.0, 96: 1.0, 97: 1.0, 98: 1.0, 99: 1.0}
 Iteration 14: New valset pareto front scores: {0: 1.0, 1: 1.0, 2: 1.0, 3: 1.0, 4: 1.0, 5: 1.0, 6: 1.0, 7: 1.0, 8: 1.0, 9: 1.0, 10: 1.0, 11: 1.0, 12: 1.0, 13: 1.0, 14: 1.0, 15: 1.0, 16: 1.0, 17: 0.0, 18: 0.0, 19: 1.0, 20: 1.0, 21: 1.0, 22: 1.0, 23: 1.0, 24: 1.0, 25: 1.0, 26: 1.0, 27: 1.0, 28: 1.0, 29: 1.0, 30: 1.0, 31: 1.0, 32: 1.0, 33: 1.0, 34: 0.0, 35: 1.0, 36: 1.0, 37: 1.0, 38: 1.0, 39: 1.0, 40: 1.0, 41: 1.0, 42: 1.0, 43: 1.0, 44: 1.0, 45: 1.0, 46: 1.0, 47: 1.0, 48: 1.0, 49: 1.0, 50: 1.0, 51: 1.0, 52: 1.0, 53: 0.0, 54: 1.0, 55: 1.0, 56: 1.0, 57: 0.0, 58: 1.0, 59: 1.0, 60: 0.0, 61: 1.0, 62: 1.0, 63: 1.0, 64: 0.0, 65: 1.0, 66: 1.0, 67: 1.0, 68: 1.0, 69: 1.0, 70: 1.0, 71: 1.0, 72: 1.0, 73: 1.0, 74: 1.0, 75: 1.0, 76: 1.0, 77: 1.0, 78: 1.0, 79: 1.0, 80: 1.0, 81: 1.0, 82: 1.0, 83: 1.0, 84: 1.0, 85: 0.0, 86: 1.0, 87: 1.0, 88: 0.0, 89: 1.0, 90: 1.0, 91: 1.0, 92: 1.0, 93: 0.0, 94: 1.0, 95: 1.0, 96: 1.0, 97: 1.0, 98: 1.0, 99: 1.0}
+Iteration 14: Valset pareto front aggregate score: 0.9
+Iteration 14: Updated valset pareto front programs: {0: {0, 1, 2, 3, 4, 5}, 1: {0, 1, 2, 3, 4, 5}, 2: {0, 1, 2, 3, 4, 5}, 3: {0, 1, 2, 3, 4, 5}, 4: {0, 1, 2, 3, 4, 5}, 5: {0, 1, 2, 3, 4, 5}, 6: {0, 1, 2, 3, 4, 5}, 7: {0, 1, 2, 3, 4, 5}, 8: {0, 1, 2, 4, 5}, 9: {0, 1, 2, 3, 4, 5}, 10: {0, 1, 2, 3, 4, 5}, 11: {0, 1, 2, 3, 4, 5}, 12: {0, 1, 2, 3, 4, 5}, 13: {0, 1, 2, 3, 4, 5}, 14: {0, 1, 2, 3, 4, 5}, 15: {0, 1, 2, 3, 4, 5}, 16: {0, 1, 2, 3, 4, 5}, 17: {0, 1, 2, 3, 4, 5}, 18: {0, 1, 2, 3, 4, 5}, 19: {0, 1, 2, 3, 4, 5}, 20: {1, 2, 3, 4, 5}, 21: {0, 3, 4}, 22: {0, 1, 2, 3, 4, 5}, 23: {0, 1, 2, 3, 4, 5}, 24: {0, 1, 2, 3, 4, 5}, 25: {0, 1, 2, 3, 4, 5}, 26: {0, 1, 2, 3, 4, 5}, 27: {0, 1, 2, 3, 4, 5}, 28: {0, 1, 2, 3, 4, 5}, 29: {0, 1, 2, 3, 4, 5}, 30: {0, 1, 2, 3, 4, 5}, 31: {0, 1, 2, 3, 4, 5}, 32: {0, 1, 2, 3, 4, 5}, 33: {0, 1, 2, 3, 4, 5}, 34: {0, 1, 2, 3, 4, 5}, 35: {0, 1, 2, 3, 4, 5}, 36: {0, 1, 2, 3, 4, 5}, 37: {0, 1, 2, 3, 4, 5}, 38: {0, 1, 2, 3, 4, 5}, 39: {0, 1, 2, 3, 4, 5}, 40: {0, 1, 2, 3, 4, 5}, 41: {0, 1, 2, 3, 4, 5}, 42: {0, 1, 2, 3, 4, 5}, 43: {0, 1, 2, 3, 4, 5}, 44: {0, 1, 2, 3, 4, 5}, 45: {0, 1, 3, 4, 5}, 46: {2, 5}, 47: {0, 1, 2, 3, 4, 5}, 48: {0, 1, 2, 3, 4, 5}, 49: {0, 1, 2, 3, 4, 5}, 50: {0, 1, 2, 3, 4, 5}, 51: {0, 1, 2, 3, 4, 5}, 52: {0, 1, 2, 3, 4, 5}, 53: {0, 1, 2, 3, 4, 5}, 54: {0, 1, 2, 3, 4, 5}, 55: {0, 1, 2, 3, 4, 5}, 56: {0, 1, 2, 3, 4, 5}, 57: {0, 1, 2, 3, 4, 5}, 58: {0, 1, 2, 3, 4, 5}, 59: {0, 1, 2, 3, 4, 5}, 60: {0, 1, 2, 3, 4, 5}, 61: {1, 2, 3}, 62: {0, 1, 2, 3, 4, 5}, 63: {2}, 64: {0, 1, 2, 3, 4, 5}, 65: {3}, 66: {0, 1, 2, 3, 4, 5}, 67: {1, 2, 3, 4, 5}, 68: {0, 1, 2, 3, 4, 5}, 69: {0, 1, 2, 3, 4, 5}, 70: {0, 1, 2, 3, 4, 5}, 71: {0, 1, 2, 3, 4, 5}, 72: {0, 1, 2, 3, 4, 5}, 73: {0, 1, 2, 3, 4, 5}, 74: {0, 1, 2, 3, 4, 5}, 75: {0, 1, 2, 3, 4, 5}, 76: {0, 1, 2, 3, 4, 5}, 77: {0, 1, 2, 3, 4, 5}, 78: {0, 1, 2, 3, 4, 5}, 79: {0, 1, 2, 3, 4, 5}, 80: {4}, 81: {0, 1, 2, 3, 4, 5}, 82: {0, 1, 2, 3, 4, 5}, 83: {0, 1, 2, 3, 4, 5}, 84: {0, 2, 4}, 85: {0, 1, 2, 3, 4, 5}, 86: {0, 1, 4}, 87: {0, 1, 2, 3, 4, 5}, 88: {0, 1, 2, 3, 4, 5}, 89: {0, 1, 2, 3, 4, 5}, 90: {1, 3, 4, 5}, 91: {1, 2}, 92: {0, 1, 2, 3, 4, 5}, 93: {0, 1, 2, 3, 4, 5}, 94: {0, 1, 2, 3, 4, 5}, 95: {0, 1, 2, 3, 4, 5}, 96: {0, 1, 2, 3, 4, 5}, 97: {0, 1, 2, 3, 4, 5}, 98: {0, 1, 2, 3, 4, 5}, 99: {0, 1, 2, 3, 4, 5}}
+Iteration 14: Best valset aggregate score so far: 0.85
+Iteration 14: Best program as per aggregate score on valset: 4
+Iteration 14: Best score on valset: 0.85
+Iteration 14: Linear pareto front program index: 4
+Iteration 14: New program candidate index: 5
+Iteration 15: Selected program 3 score: 0.83
+Iteration 15: All subsample scores perfect. Skipping.
+Iteration 15: Reflective mutation did not propose a new candidate
+Iteration 16: Selected program 2 score: 0.84
+Iteration 16: Proposed new text for instruction: You are tasked with categorizing a user's text input into one of the following predefined intent categories related to smart assistant and voice assistant functionalities:
+
+alarm_query, alarm_set, calendar_query, calendar_remove, calendar_set, cooking_recipe, datetime_query, email_query, email_sendemail, general_quirky, iot_hue_lightoff, lists_createoradd, lists_query, lists_remove, music_query, news_query, play_audiobook, play_music, play_podcasts, play_radio, qa_currency, qa_definition, qa_factoid, qa_stock, recommendation_events, recommendation_locations, social_post, takeaway_order, transport_query, weather_query.
+
+**INPUT FORMAT:**
+You will receive an input object containing a `text` field. This field contains a user's spoken or written command for a smart assistant. Example:
+{
+  "text": "play for me american idol show"
+}
+
+**YOUR TASK:**
+- Carefully read the user's utterance.
+- Assign one and only one category label from the list above that best matches the user's primary expressed intent.
+- Only output the category label (no explanation or justification).
+
+**DETAILED INSTRUCTIONS:**
+
+1. **Category Selection:**
+   - Identify the main action or information the user is requesting.
+   - Always choose the most specific and accurate category available.
+   - If a user request closely aligns with multiple categories, select the most specific applicable one.
+
+2. **Key Category Guidance:**
+   - **ALARM:** 
+     - "alarm_query": User is asking about existing alarms.
+     - "alarm_set": User wants to set a new alarm.
+   - **CALENDAR:**
+     - "calendar_query": User is asking for information about events/appointments already on their schedule or calendar (including queries about the timing or details of a known event, even if it is, for example, a sports game).
+     - "calendar_remove": Deletion of calendar events.
+     - "calendar_set": Creation or scheduling of new events.
+   - **RECOMMENDATIONS:**
+     - "recommendation_events": Only for requests asking the assistant to suggest or recommend possible events to attend/do (not for queries about already-known events).
+     - "recommendation_locations": User requests place/location recommendations (e.g., restaurants, attractions).
+   - **MEDIA:**
+     - "play_music": Requests to play specific songs, artists, albums, or genres of music.
+     - "music_query": Inquiries about music information (song details, artist info, etc) without requesting playback.
+     - "play_radio": Requests to play radio stations, live broadcast TV/radio programs, shows, or channels (e.g., "play for me american idol show").
+     - "play_podcasts": Requests to play podcast episodes or shows.
+     - "play_audiobook": Requests to play audiobooks.
+     - "news_query": Requests about news or to play news.
+   - **LISTS:**
+     - "lists_createoradd": Add items to a shopping/list, or create a new list.
+     - "lists_query": Ask about list contents.
+     - "lists_remove": Remove items from lists.
+   - **EMAIL:**
+     - "email_query": User asks about emails (looking up, finding, or reading).
+     - "email_sendemail": User wants to send or write an email.
+   - **FACTUAL/QA:**
+     - "qa_currency": Currency conversion/rates.
+     - "qa_definition": Word definitions.
+     - "qa_factoid": Factual queries, trivia, or straightforward information requests.
+     - "qa_stock": Stock prices or info.
+   - **OTHER DOMAINS:**
+     - "cooking_recipe": User requests recipes, cooking help.
+     - "datetime_query": User asks for current date/time or time to an event.
+     - "general_quirky": Sarcastic, humorous, or non-serious requests.
+     - "iot_hue_lightoff": Requests to turn off smart lights.
+     - "social_post": User wants to post to social media.
+     - "takeaway_order": User wishes to order food for takeaway/delivery.
+     - "transport_query": Information about transportation (e.g., "when is the next bus?").
+     - "weather_query": Weather requests.
+
+3. **Additional Domain Knowledge:**
+   - For requests referencing "shows" (TV shows, contest shows, etc.), if the context is playback (e.g., "play for me american idol show"), categorize as "play_radio", which includes radio stations, live broadcast shows, and similar entertainment methods.
+   - DO NOT classify all "play" commands as "play_music". Use "play_radio", "play_podcasts", or "play_audiobook" where appropriate, based on the type of content (e.g., TV show, radio, podcast, audiobook).
+   - "music_query" is for seeking information about music rather than playback.
+   - Always distinguish between "query" (retrieval of existing information or content) and "set" (creating, adding, scheduling, or starting) where both exist.
+   - When ambiguous, favor the more specific or restrictive category, not a broad or general one.
+   - For factual lookups, use "qa_" intent categories. For schedule/calendar-related questions, use "calendar_*" intents as appropriate.
+
+4. **Output Constraints:**
+   - Only output the single correct intent label, exactly as it appears in the provided category list.
+   - Do not include any text, commentary, or explanation before or after the label.
+
+**SUMMARY:** Your job is to analyze the given user request, assign the most precise intent label from the provided list according to the above rules, and return only that label.
+Iteration 16: New subsample score 3.0 is better than old score 2.0. Continue to full eval and add to candidate pool.
+Iteration 16: Valset score for new program: 0.84 (coverage 100 / 100)
+Iteration 16: Val aggregate for new program: 0.84
+Iteration 16: Individual valset scores for new program: {0: 1.0, 1: 1.0, 2: 1.0, 3: 1.0, 4: 1.0, 5: 1.0, 6: 1.0, 7: 1.0, 8: 1.0, 9: 1.0, 10: 1.0, 11: 1.0, 12: 1.0, 13: 1.0, 14: 1.0, 15: 1.0, 16: 1.0, 17: 0.0, 18: 0.0, 19: 1.0, 20: 1.0, 21: 0.0, 22: 1.0, 23: 1.0, 24: 1.0, 25: 1.0, 26: 1.0, 27: 1.0, 28: 1.0, 29: 1.0, 30: 1.0, 31: 1.0, 32: 1.0, 33: 1.0, 34: 0.0, 35: 1.0, 36: 1.0, 37: 1.0, 38: 1.0, 39: 1.0, 40: 1.0, 41: 1.0, 42: 1.0, 43: 1.0, 44: 1.0, 45: 0.0, 46: 1.0, 47: 1.0, 48: 1.0, 49: 1.0, 50: 1.0, 51: 1.0, 52: 1.0, 53: 0.0, 54: 1.0, 55: 1.0, 56: 1.0, 57: 0.0, 58: 1.0, 59: 1.0, 60: 0.0, 61: 1.0, 62: 1.0, 63: 0.0, 64: 0.0, 65: 0.0, 66: 1.0, 67: 1.0, 68: 1.0, 69: 1.0, 70: 1.0, 71: 1.0, 72: 1.0, 73: 1.0, 74: 1.0, 75: 1.0, 76: 1.0, 77: 1.0, 78: 1.0, 79: 1.0, 80: 0.0, 81: 1.0, 82: 1.0, 83: 1.0, 84: 1.0, 85: 1.0, 86: 0.0, 87: 1.0, 88: 0.0, 89: 1.0, 90: 0.0, 91: 1.0, 92: 1.0, 93: 0.0, 94: 1.0, 95: 1.0, 96: 1.0, 97: 1.0, 98: 1.0, 99: 1.0}
+Iteration 16: New valset pareto front scores: {0: 1.0, 1: 1.0, 2: 1.0, 3: 1.0, 4: 1.0, 5: 1.0, 6: 1.0, 7: 1.0, 8: 1.0, 9: 1.0, 10: 1.0, 11: 1.0, 12: 1.0, 13: 1.0, 14: 1.0, 15: 1.0, 16: 1.0, 17: 0.0, 18: 0.0, 19: 1.0, 20: 1.0, 21: 1.0, 22: 1.0, 23: 1.0, 24: 1.0, 25: 1.0, 26: 1.0, 27: 1.0, 28: 1.0, 29: 1.0, 30: 1.0, 31: 1.0, 32: 1.0, 33: 1.0, 34: 0.0, 35: 1.0, 36: 1.0, 37: 1.0, 38: 1.0, 39: 1.0, 40: 1.0, 41: 1.0, 42: 1.0, 43: 1.0, 44: 1.0, 45: 1.0, 46: 1.0, 47: 1.0, 48: 1.0, 49: 1.0, 50: 1.0, 51: 1.0, 52: 1.0, 53: 0.0, 54: 1.0, 55: 1.0, 56: 1.0, 57: 0.0, 58: 1.0, 59: 1.0, 60: 0.0, 61: 1.0, 62: 1.0, 63: 1.0, 64: 0.0, 65: 1.0, 66: 1.0, 67: 1.0, 68: 1.0, 69: 1.0, 70: 1.0, 71: 1.0, 72: 1.0, 73: 1.0, 74: 1.0, 75: 1.0, 76: 1.0, 77: 1.0, 78: 1.0, 79: 1.0, 80: 1.0, 81: 1.0, 82: 1.0, 83: 1.0, 84: 1.0, 85: 1.0, 86: 1.0, 87: 1.0, 88: 0.0, 89: 1.0, 90: 1.0, 91: 1.0, 92: 1.0, 93: 0.0, 94: 1.0, 95: 1.0, 96: 1.0, 97: 1.0, 98: 1.0, 99: 1.0}
+Iteration 16: Valset pareto front aggregate score: 0.91
+Iteration 16: Updated valset pareto front programs: {0: {0, 1, 2, 3, 4, 5, 6}, 1: {0, 1, 2, 3, 4, 5, 6}, 2: {0, 1, 2, 3, 4, 5, 6}, 3: {0, 1, 2, 3, 4, 5, 6}, 4: {0, 1, 2, 3, 4, 5, 6}, 5: {0, 1, 2, 3, 4, 5, 6}, 6: {0, 1, 2, 3, 4, 5, 6}, 7: {0, 1, 2, 3, 4, 5, 6}, 8: {0, 1, 2, 4, 5, 6}, 9: {0, 1, 2, 3, 4, 5, 6}, 10: {0, 1, 2, 3, 4, 5, 6}, 11: {0, 1, 2, 3, 4, 5, 6}, 12: {0, 1, 2, 3, 4, 5, 6}, 13: {0, 1, 2, 3, 4, 5, 6}, 14: {0, 1, 2, 3, 4, 5, 6}, 15: {0, 1, 2, 3, 4, 5, 6}, 16: {0, 1, 2, 3, 4, 5, 6}, 17: {0, 1, 2, 3, 4, 5, 6}, 18: {0, 1, 2, 3, 4, 5, 6}, 19: {0, 1, 2, 3, 4, 5, 6}, 20: {1, 2, 3, 4, 5, 6}, 21: {0, 3, 4}, 22: {0, 1, 2, 3, 4, 5, 6}, 23: {0, 1, 2, 3, 4, 5, 6}, 24: {0, 1, 2, 3, 4, 5, 6}, 25: {0, 1, 2, 3, 4, 5, 6}, 26: {0, 1, 2, 3, 4, 5, 6}, 27: {0, 1, 2, 3, 4, 5, 6}, 28: {0, 1, 2, 3, 4, 5, 6}, 29: {0, 1, 2, 3, 4, 5, 6}, 30: {0, 1, 2, 3, 4, 5, 6}, 31: {0, 1, 2, 3, 4, 5, 6}, 32: {0, 1, 2, 3, 4, 5, 6}, 33: {0, 1, 2, 3, 4, 5, 6}, 34: {0, 1, 2, 3, 4, 5, 6}, 35: {0, 1, 2, 3, 4, 5, 6}, 36: {0, 1, 2, 3, 4, 5, 6}, 37: {0, 1, 2, 3, 4, 5, 6}, 38: {0, 1, 2, 3, 4, 5, 6}, 39: {0, 1, 2, 3, 4, 5, 6}, 40: {0, 1, 2, 3, 4, 5, 6}, 41: {0, 1, 2, 3, 4, 5, 6}, 42: {0, 1, 2, 3, 4, 5, 6}, 43: {0, 1, 2, 3, 4, 5, 6}, 44: {0, 1, 2, 3, 4, 5, 6}, 45: {0, 1, 3, 4, 5}, 46: {2, 5, 6}, 47: {0, 1, 2, 3, 4, 5, 6}, 48: {0, 1, 2, 3, 4, 5, 6}, 49: {0, 1, 2, 3, 4, 5, 6}, 50: {0, 1, 2, 3, 4, 5, 6}, 51: {0, 1, 2, 3, 4, 5, 6}, 52: {0, 1, 2, 3, 4, 5, 6}, 53: {0, 1, 2, 3, 4, 5, 6}, 54: {0, 1, 2, 3, 4, 5, 6}, 55: {0, 1, 2, 3, 4, 5, 6}, 56: {0, 1, 2, 3, 4, 5, 6}, 57: {0, 1, 2, 3, 4, 5, 6}, 58: {0, 1, 2, 3, 4, 5, 6}, 59: {0, 1, 2, 3, 4, 5, 6}, 60: {0, 1, 2, 3, 4, 5, 6}, 61: {1, 2, 3, 6}, 62: {0, 1, 2, 3, 4, 5, 6}, 63: {2}, 64: {0, 1, 2, 3, 4, 5, 6}, 65: {3}, 66: {0, 1, 2, 3, 4, 5, 6}, 67: {1, 2, 3, 4, 5, 6}, 68: {0, 1, 2, 3, 4, 5, 6}, 69: {0, 1, 2, 3, 4, 5, 6}, 70: {0, 1, 2, 3, 4, 5, 6}, 71: {0, 1, 2, 3, 4, 5, 6}, 72: {0, 1, 2, 3, 4, 5, 6}, 73: {0, 1, 2, 3, 4, 5, 6}, 74: {0, 1, 2, 3, 4, 5, 6}, 75: {0, 1, 2, 3, 4, 5, 6}, 76: {0, 1, 2, 3, 4, 5, 6}, 77: {0, 1, 2, 3, 4, 5, 6}, 78: {0, 1, 2, 3, 4, 5, 6}, 79: {0, 1, 2, 3, 4, 5, 6}, 80: {4}, 81: {0, 1, 2, 3, 4, 5, 6}, 82: {0, 1, 2, 3, 4, 5, 6}, 83: {0, 1, 2, 3, 4, 5, 6}, 84: {0, 2, 4, 6}, 85: {6}, 86: {0, 1, 4}, 87: {0, 1, 2, 3, 4, 5, 6}, 88: {0, 1, 2, 3, 4, 5, 6}, 89: {0, 1, 2, 3, 4, 5, 6}, 90: {1, 3, 4, 5}, 91: {1, 2, 6}, 92: {0, 1, 2, 3, 4, 5, 6}, 93: {0, 1, 2, 3, 4, 5, 6}, 94: {0, 1, 2, 3, 4, 5, 6}, 95: {0, 1, 2, 3, 4, 5, 6}, 96: {0, 1, 2, 3, 4, 5, 6}, 97: {0, 1, 2, 3, 4, 5, 6}, 98: {0, 1, 2, 3, 4, 5, 6}, 99: {0, 1, 2, 3, 4, 5, 6}}
+Iteration 16: Best valset aggregate score so far: 0.85
+Iteration 16: Best program as per aggregate score on valset: 4
+Iteration 16: Best score on valset: 0.85
+Iteration 16: Linear pareto front program index: 4
+Iteration 16: New program candidate index: 6
+Iteration 17: Selected program 2 score: 0.84
+Iteration 17: Proposed new text for instruction: You are tasked with classifying a user's text input into exactly one intent category from a predefined list of smart or voice assistant functionalities:
+
+alarm_query, alarm_set, calendar_query, calendar_remove, calendar_set, cooking_recipe, datetime_query, email_query, email_sendemail, general_quirky, iot_hue_lightoff, lists_createoradd, lists_query, lists_remove, music_query, news_query, play_audiobook, play_music, play_podcasts, play_radio, qa_currency, qa_definition, qa_factoid, qa_stock, recommendation_events, recommendation_locations, social_post, takeaway_order, transport_query, weather_query.
+
+**Instructions:**
+
+1. You will be given an object with a single `text` field, containing a short user input. Your task is to analyze and assign the most accurate, specific intent label from the above list. 
+2. Output **only** the chosen label (category name). Do not provide explanations or extra text.
+
+**Detailed Guidance:**
+
+- Focus on the explicit action, request, or information the user expresses. Do not infer unrelated or tangential intentions.
+- Always determine if the user is asking to *retrieve* information (typically using a `*_query` intent), *set* something up or perform an action (often a `*_set` intent), or asking for *recommendations* (often a `recommendation_*` intent).
+- For event-related utterances, such as sports games or appointments, use:
+    - `calendar_query` for requests about existing scheduled events, their details, or their timing (even for popular events if the user is asking about their existence in the user's calendar, or for their time/schedule).
+    - `recommendation_events` only when the user asks for suggestions for events to attend or activities to do (not when referencing a specific event).
+- Use `news_query` specifically for requests for news, updates on current events, or questions phrased to find out "what's happening" in the world (e.g., "what has trump done now").
+- Use `qa_factoid` only for direct, factual look-up questions that aren't specifically about definitions, currency rates, or stocks (those use `qa_definition`, `qa_currency`, `qa_stock`). Do NOT use `qa_factoid` for questions that are seeking updates or news.
+- Use `general_quirky` for open-ended or general curiosity questions, "how-to" inquiries not covered by a more specific label, or off-beat questions (like "how does she do her makeup").
+- Always opt for the strictest, most specific label matching the user's explicit intent, especially when labels overlap.
+
+**Common pitfalls:**
+- Do NOT assign `qa_factoid` for questions seeking news or current events—prefer `news_query`.
+- Do NOT assign `qa_factoid` for questions about "how" something is done in a general or quirky context—prefer `general_quirky`.
+- For ambiguous or borderline cases, always select the most domain-specific label.
+
+**Format:**
+- Your response must be a single label (category name) from the list, matching the user's explicit input.
+Iteration 17: New subsample score 3.0 is better than old score 1.0. Continue to full eval and add to candidate pool.
+Iteration 17: Valset score for new program: 0.81 (coverage 100 / 100)
+Iteration 17: Val aggregate for new program: 0.81
+Iteration 17: Individual valset scores for new program: {0: 1.0, 1: 1.0, 2: 1.0, 3: 1.0, 4: 1.0, 5: 1.0, 6: 1.0, 7: 1.0, 8: 1.0, 9: 1.0, 10: 1.0, 11: 1.0, 12: 1.0, 13: 1.0, 14: 1.0, 15: 1.0, 16: 1.0, 17: 0.0, 18: 0.0, 19: 1.0, 20: 1.0, 21: 0.0, 22: 1.0, 23: 1.0, 24: 1.0, 25: 1.0, 26: 1.0, 27: 1.0, 28: 1.0, 29: 1.0, 30: 1.0, 31: 1.0, 32: 1.0, 33: 1.0, 34: 0.0, 35: 1.0, 36: 1.0, 37: 1.0, 38: 1.0, 39: 1.0, 40: 1.0, 41: 1.0, 42: 1.0, 43: 1.0, 44: 1.0, 45: 0.0, 46: 0.0, 47: 1.0, 48: 1.0, 49: 1.0, 50: 1.0, 51: 1.0, 52: 1.0, 53: 0.0, 54: 1.0, 55: 1.0, 56: 1.0, 57: 0.0, 58: 1.0, 59: 1.0, 60: 0.0, 61: 1.0, 62: 1.0, 63: 0.0, 64: 0.0, 65: 0.0, 66: 1.0, 67: 1.0, 68: 1.0, 69: 1.0, 70: 1.0, 71: 1.0, 72: 1.0, 73: 1.0, 74: 1.0, 75: 1.0, 76: 1.0, 77: 1.0, 78: 1.0, 79: 1.0, 80: 0.0, 81: 1.0, 82: 1.0, 83: 1.0, 84: 0.0, 85: 0.0, 86: 0.0, 87: 1.0, 88: 0.0, 89: 1.0, 90: 1.0, 91: 0.0, 92: 1.0, 93: 0.0, 94: 1.0, 95: 1.0, 96: 1.0, 97: 1.0, 98: 1.0, 99: 1.0}
+Iteration 17: New valset pareto front scores: {0: 1.0, 1: 1.0, 2: 1.0, 3: 1.0, 4: 1.0, 5: 1.0, 6: 1.0, 7: 1.0, 8: 1.0, 9: 1.0, 10: 1.0, 11: 1.0, 12: 1.0, 13: 1.0, 14: 1.0, 15: 1.0, 16: 1.0, 17: 0.0, 18: 0.0, 19: 1.0, 20: 1.0, 21: 1.0, 22: 1.0, 23: 1.0, 24: 1.0, 25: 1.0, 26: 1.0, 27: 1.0, 28: 1.0, 29: 1.0, 30: 1.0, 31: 1.0, 32: 1.0, 33: 1.0, 34: 0.0, 35: 1.0, 36: 1.0, 37: 1.0, 38: 1.0, 39: 1.0, 40: 1.0, 41: 1.0, 42: 1.0, 43: 1.0, 44: 1.0, 45: 1.0, 46: 1.0, 47: 1.0, 48: 1.0, 49: 1.0, 50: 1.0, 51: 1.0, 52: 1.0, 53: 0.0, 54: 1.0, 55: 1.0, 56: 1.0, 57: 0.0, 58: 1.0, 59: 1.0, 60: 0.0, 61: 1.0, 62: 1.0, 63: 1.0, 64: 0.0, 65: 1.0, 66: 1.0, 67: 1.0, 68: 1.0, 69: 1.0, 70: 1.0, 71: 1.0, 72: 1.0, 73: 1.0, 74: 1.0, 75: 1.0, 76: 1.0, 77: 1.0, 78: 1.0, 79: 1.0, 80: 1.0, 81: 1.0, 82: 1.0, 83: 1.0, 84: 1.0, 85: 1.0, 86: 1.0, 87: 1.0, 88: 0.0, 89: 1.0, 90: 1.0, 91: 1.0, 92: 1.0, 93: 0.0, 94: 1.0, 95: 1.0, 96: 1.0, 97: 1.0, 98: 1.0, 99: 1.0}
+Iteration 17: Valset pareto front aggregate score: 0.91
+Iteration 17: Updated valset pareto front programs: {0: {0, 1, 2, 3, 4, 5, 6, 7}, 1: {0, 1, 2, 3, 4, 5, 6, 7}, 2: {0, 1, 2, 3, 4, 5, 6, 7}, 3: {0, 1, 2, 3, 4, 5, 6, 7}, 4: {0, 1, 2, 3, 4, 5, 6, 7}, 5: {0, 1, 2, 3, 4, 5, 6, 7}, 6: {0, 1, 2, 3, 4, 5, 6, 7}, 7: {0, 1, 2, 3, 4, 5, 6, 7}, 8: {0, 1, 2, 4, 5, 6, 7}, 9: {0, 1, 2, 3, 4, 5, 6, 7}, 10: {0, 1, 2, 3, 4, 5, 6, 7}, 11: {0, 1, 2, 3, 4, 5, 6, 7}, 12: {0, 1, 2, 3, 4, 5, 6, 7}, 13: {0, 1, 2, 3, 4, 5, 6, 7}, 14: {0, 1, 2, 3, 4, 5, 6, 7}, 15: {0, 1, 2, 3, 4, 5, 6, 7}, 16: {0, 1, 2, 3, 4, 5, 6, 7}, 17: {0, 1, 2, 3, 4, 5, 6, 7}, 18: {0, 1, 2, 3, 4, 5, 6, 7}, 19: {0, 1, 2, 3, 4, 5, 6, 7}, 20: {1, 2, 3, 4, 5, 6, 7}, 21: {0, 3, 4}, 22: {0, 1, 2, 3, 4, 5, 6, 7}, 23: {0, 1, 2, 3, 4, 5, 6, 7}, 24: {0, 1, 2, 3, 4, 5, 6, 7}, 25: {0, 1, 2, 3, 4, 5, 6, 7}, 26: {0, 1, 2, 3, 4, 5, 6, 7}, 27: {0, 1, 2, 3, 4, 5, 6, 7}, 28: {0, 1, 2, 3, 4, 5, 6, 7}, 29: {0, 1, 2, 3, 4, 5, 6, 7}, 30: {0, 1, 2, 3, 4, 5, 6, 7}, 31: {0, 1, 2, 3, 4, 5, 6, 7}, 32: {0, 1, 2, 3, 4, 5, 6, 7}, 33: {0, 1, 2, 3, 4, 5, 6, 7}, 34: {0, 1, 2, 3, 4, 5, 6, 7}, 35: {0, 1, 2, 3, 4, 5, 6, 7}, 36: {0, 1, 2, 3, 4, 5, 6, 7}, 37: {0, 1, 2, 3, 4, 5, 6, 7}, 38: {0, 1, 2, 3, 4, 5, 6, 7}, 39: {0, 1, 2, 3, 4, 5, 6, 7}, 40: {0, 1, 2, 3, 4, 5, 6, 7}, 41: {0, 1, 2, 3, 4, 5, 6, 7}, 42: {0, 1, 2, 3, 4, 5, 6, 7}, 43: {0, 1, 2, 3, 4, 5, 6, 7}, 44: {0, 1, 2, 3, 4, 5, 6, 7}, 45: {0, 1, 3, 4, 5}, 46: {2, 5, 6}, 47: {0, 1, 2, 3, 4, 5, 6, 7}, 48: {0, 1, 2, 3, 4, 5, 6, 7}, 49: {0, 1, 2, 3, 4, 5, 6, 7}, 50: {0, 1, 2, 3, 4, 5, 6, 7}, 51: {0, 1, 2, 3, 4, 5, 6, 7}, 52: {0, 1, 2, 3, 4, 5, 6, 7}, 53: {0, 1, 2, 3, 4, 5, 6, 7}, 54: {0, 1, 2, 3, 4, 5, 6, 7}, 55: {0, 1, 2, 3, 4, 5, 6, 7}, 56: {0, 1, 2, 3, 4, 5, 6, 7}, 57: {0, 1, 2, 3, 4, 5, 6, 7}, 58: {0, 1, 2, 3, 4, 5, 6, 7}, 59: {0, 1, 2, 3, 4, 5, 6, 7}, 60: {0, 1, 2, 3, 4, 5, 6, 7}, 61: {1, 2, 3, 6, 7}, 62: {0, 1, 2, 3, 4, 5, 6, 7}, 63: {2}, 64: {0, 1, 2, 3, 4, 5, 6, 7}, 65: {3}, 66: {0, 1, 2, 3, 4, 5, 6, 7}, 67: {1, 2, 3, 4, 5, 6, 7}, 68: {0, 1, 2, 3, 4, 5, 6, 7}, 69: {0, 1, 2, 3, 4, 5, 6, 7}, 70: {0, 1, 2, 3, 4, 5, 6, 7}, 71: {0, 1, 2, 3, 4, 5, 6, 7}, 72: {0, 1, 2, 3, 4, 5, 6, 7}, 73: {0, 1, 2, 3, 4, 5, 6, 7}, 74: {0, 1, 2, 3, 4, 5, 6, 7}, 75: {0, 1, 2, 3, 4, 5, 6, 7}, 76: {0, 1, 2, 3, 4, 5, 6, 7}, 77: {0, 1, 2, 3, 4, 5, 6, 7}, 78: {0, 1, 2, 3, 4, 5, 6, 7}, 79: {0, 1, 2, 3, 4, 5, 6, 7}, 80: {4}, 81: {0, 1, 2, 3, 4, 5, 6, 7}, 82: {0, 1, 2, 3, 4, 5, 6, 7}, 83: {0, 1, 2, 3, 4, 5, 6, 7}, 84: {0, 2, 4, 6}, 85: {6}, 86: {0, 1, 4}, 87: {0, 1, 2, 3, 4, 5, 6, 7}, 88: {0, 1, 2, 3, 4, 5, 6, 7}, 89: {0, 1, 2, 3, 4, 5, 6, 7}, 90: {1, 3, 4, 5, 7}, 91: {1, 2, 6}, 92: {0, 1, 2, 3, 4, 5, 6, 7}, 93: {0, 1, 2, 3, 4, 5, 6, 7}, 94: {0, 1, 2, 3, 4, 5, 6, 7}, 95: {0, 1, 2, 3, 4, 5, 6, 7}, 96: {0, 1, 2, 3, 4, 5, 6, 7}, 97: {0, 1, 2, 3, 4, 5, 6, 7}, 98: {0, 1, 2, 3, 4, 5, 6, 7}, 99: {0, 1, 2, 3, 4, 5, 6, 7}}
+Iteration 17: Best valset aggregate score so far: 0.85
+Iteration 17: Best program as per aggregate score on valset: 4
+Iteration 17: Best score on valset: 0.85
+Iteration 17: Linear pareto front program index: 4
+Iteration 17: New program candidate index: 7
+[done] a_massive_f1_s40.json: 0.857 ($0.30)

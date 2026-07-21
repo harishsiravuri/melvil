@@ -56,9 +56,27 @@ vanilla GEPA (single free-text instruction, stock proposer).
 - `config.metric_calls`, `config.config_hash` (stable across `run_dir` /
   `num_threads` changes), `Config.from_yaml(path)`.
 
+## draft — the primary entry point
+
+### `draft(spec, train, dev, config, *, iterations=2, resume=False, parent=None) -> PromptArtifact`
+Error-grounded prompt writing, no evolutionary search: one dev evaluation of
+the seed prompt → structured diagnosis (per-label accuracy, confusion, top
+confused pairs with concrete examples) → one reflection-model call writes the
+complete replacement prompt; repeated `iterations` times (2 = the benchmarked
+arm: 60–91% of full GEPA's gain at ~1/10 its cost; see mechanistic/RESULTS.md).
+Returns the same `PromptArtifact` type as `optimize()`; the run directory gets
+`diagnosis_x<i>.txt` reports; diagnoses are also stored in the artifact
+(`artifact.config["draft_diagnoses"]`). Only `dev` drives the procedure.
+
+### `estimate_draft_cost(spec, dev, config, iterations=2) -> CostEstimate`
+Dry-run upper bound for one `draft()` call.
+
+Recommended workflow: `draft` → `screen(artifact, dev, cfg)` → escalate to
+`optimize()` only if headroom remains and it's worth ~10× the spend.
+
 ## optimize
 
-### `optimize(spec, train, dev, config, *, resume=False, on_round=None, parent=None) -> PromptArtifact`
+### `optimize(spec, train, dev, config, *, resume=False, on_round=None, parent=None, start_from=None) -> PromptArtifact`
 Runs GEPA with the classification adapter. The dev set drives all optimization
 decisions. Writes a run directory (default `runs/<task>/<confighash>-s<seed>/`):
 `config.json`, gepa engine state (checkpoint), `traces.jsonl` (every
@@ -71,6 +89,9 @@ reflection), `artifact.json`.
   `RoundInfo(round, dev_score, best_dev_score, metric_calls_spent, cost_usd,
   top_confusions)`.
 - `parent`: record lineage (`artifact.parent_id`).
+- `start_from`: seed the optimization from an existing artifact's rendered
+  prompt (e.g. a `draft()` result); blob mode only. UNTESTED combination —
+  measured results cover draft alone and optimize alone.
 - When `hard_example_mining` is on, one full dev evaluation is reserved from
   the budget for the exemplar accept/reject check.
 
@@ -99,6 +120,14 @@ a transfer evaluation (`report.transfer == True`).
 
 ### `report(report_or_artifact) -> str`
 Markdown rendering for notebooks/docs.
+
+## screen
+
+### `screen(spec_or_artifact, data, config, sample_size=100, seed=0) -> ScreenResult`
+Headroom check. Pass a `TaskSpec` to evaluate the bare seed prompt, or a
+`PromptArtifact` (e.g. a `draft()` result) to check the headroom REMAINING
+after drafting — the middle step of draft → screen → optimize. Verdicts:
+`saturated` (≥0.95) / `marginal` (≥0.85) / `headroom`.
 
 ## Costs
 

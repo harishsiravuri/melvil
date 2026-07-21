@@ -241,6 +241,15 @@ dev 0.65 vs 0.62), so the +4 bundles structured seeding with structured
 evolution; we treat the bundle as the method, and note the free arm had the
 full budget to absorb definitions and did not close the gap.
 
+## Library alignment (v0.4)
+
+As of melvil v0.4.0 the library leads with the same method the campaign
+confirmed: `mv.draft()` (the E8 procedure, ported verbatim from
+`e8_diagnose.py`) is the primary entry point and the README's first code
+example; full GEPA evolution is the documented escalation path
+(draft → screen → optimize). Library and paper now make the same claim with
+the same evidence.
+
 ## Pending experiments
 - **E1 front-loading (C1)** — harness next; its runs also enrich this
   simulation pool.

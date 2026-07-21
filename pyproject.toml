@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "pymelvil"
-version = "0.3.0"
+version = "0.4.0"
 description = "Optimized, versioned classifier prompts from labeled examples — GEPA prompt evolution with a classification-specific layer."
 readme = "README.md"
 license = { file = "LICENSE" }
@@ -48,6 +48,7 @@ ignore = ["SIM108"]  # ternary-vs-if is a style call we make per case
 # change the prompt
 "melvil/proposer.py" = ["E501"]
 "melvil/c2f.py" = ["E501"]
+"melvil/draft.py" = ["E501"]
 # experiment scripts embed natural-language prompt templates
 "mechanistic/*.py" = ["E501"]
 

@@ -120,6 +120,28 @@ def estimate_optimize_cost(spec, train, dev, config) -> CostEstimate:
     )
 
 
+def estimate_draft_cost(spec, dev, config, iterations: int = 2) -> CostEstimate:
+    """Upper-bound dry-run for one `draft()` call: (iterations+1) dev
+    evaluations + `iterations` reflection calls (diagnosis + full rewrite)."""
+    from melvil.artifact import render_prompt
+    from melvil.optimize import seed_candidate_for
+
+    seed_prompt = render_prompt(seed_candidate_for(spec), spec.label_names)
+    avg_text = sum(_tokens(e.text) for e in dev[:200]) / max(1, len(dev[:200]))
+    per_call_in = 2 * _tokens(seed_prompt) + avg_text + 20
+    tin, tout = price_for(config.task_model, config.prices)
+    rin, rout = price_for(config.reflection_model, config.prices)
+    evals_usd = (iterations + 1) * len(dev) * (per_call_in * tin + 8 * tout) / 1e6
+    refl_usd = iterations * ((2000 + 2 * _tokens(seed_prompt)) * rin + 900 * rout) / 1e6
+    return CostEstimate(
+        total_usd=evals_usd + refl_usd,
+        lines=[
+            f"{iterations + 1} dev evals x {len(dev)} calls = ${evals_usd:.2f}",
+            f"{iterations} diagnosis rewrites ({config.reflection_model}) = ${refl_usd:.2f}",
+        ],
+    )
+
+
 def estimate_evaluate_cost(artifact, data, model: str, prices=None) -> CostEstimate:
     per_call_in = _tokens(artifact.render()) + 40
     pin, pout = price_for(model, prices)
