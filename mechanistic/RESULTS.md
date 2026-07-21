@@ -250,10 +250,90 @@ example; full GEPA evolution is the documented escalation path
 (draft → screen → optimize). Library and paper now make the same claim with
 the same evidence.
 
-## Pending experiments
-- **E1 front-loading (C1)** — harness next; its runs also enrich this
-  simulation pool.
-- **E2 dissociation (C2), E3 structure (C3), E4 coarse-to-fine (C4),
-  E7 best-of-K (C7), E5 Phase B** — queued per campaign order; E7's rationale
-  is weakened (not killed) by the C1 side-finding: the first accept is ~50% of
-  gain, so improving it still matters, but expectations are tempered.
+## E2 — dissociation (C2) · **COMPLETE** ($99.83 + $3 judging)
+
+Full rerun of the pilot's design at campaign scale: per-family lesson banks
+re-distilled from traced vanilla runs on three disjoint source tasks (F1: 16
+lessons, F2: 12); arms (a) vanilla [test scores reused from E1 B1 cells],
+(b) lessons in reflection, (c) lessons at inference only, (d) lessons in the
+initial instruction then vanilla optimization; 5 eval tasks including
+non-classification (bbh_geometric, gsm8k) × both families × 5 seeds.
+
+Mean test-accuracy deltas vs vanilla: **(b) −1.4 (F1) / +0.8 (F2)** points —
+within noise, both signs; **(d) +0.4 / −0.3** — null; **(c) −11 / −17** —
+inference-only lessons lose badly everywhere (and catastrophically break
+claude on BBH: 0.09, a formatting failure worth a footnote).
+
+**Uptake metric: the pre-specified judge FAILED ITS CONTROL, and that is the
+finding.** Arm-(a) reflections (which never saw a lesson) are judged to
+"apply" lessons at the same rate as arm-(b) (F1: 1.00 vs 1.00; F2: 0.71 vs
+0.69; validation sample inspected — e.g. a no-lesson ag_news reflection judged
+to apply 6 lessons). The distilled lessons are generic good practice that
+reflection already performs unprompted; "absorption" is unmeasurable because
+there is nothing distinctive to absorb.
+
+**Verdict: C2 SURVIVED, sharpened.** The dissociation replicates at scale and
+beyond classification — lessons help nowhere they're injected (reflection or
+seed) and hurt at inference — and the mechanism is now cleaner than
+"absorbed but inert": *distilled cross-task lessons are redundant with what
+reflective optimization already does*, which is why injecting them changes
+nothing and why the pilot's vocabulary-overlap "uptake" was real but causally
+empty. Paper sentence: *"Cross-task experience distilled into lessons is
+redundant, not inert: an uptake judge with a no-lesson control shows vanilla
+reflections already exhibit every behavior the lessons prescribe, explaining
+why injection changes nothing (Δ ≤ 1.4 points, both families) while the same
+text at inference costs 11–17 points."*
+
+## Campaign closeout
+
+**No further confirmation pass is needed, by design audit:** E8 already ran
+under a frozen pre-registered protocol with fresh seeds (its numbers are the
+headline); E7/E5-B used paired designs on fresh seeds against matched E1
+cells; E3-extraction has 5 paired seeds with CIs; E4/E6 died in
+iteration/simulation (nothing to confirm); E1/E2 are measurement studies, not
+tunable methods. Remaining balance and calendar go to the paper.
+
+Campaign spend: E8 $42.62 · E1 $93.74 · E2 $102.8 · E3-extraction $13.78 ·
+E4 $4.58 · E7 $6.37 · E5-B $0.61 · simulations $0 · misc ≈ $1 →
+**≈ $266 total** (brief envelope $220–400). Zero failed runs across ~560
+optimization/evaluation runs; every result checkpointed and committed.
+
+## The paper's figures (generated, in plots/)
+
+1. `e1_cumulative_gain.png` — THE mechanistic figure: cumulative gain by
+   accepted-proposal index, per task × budget; median first-accept share 0.33.
+2. `e5_frontier.png` — stopping-rule cost-retention frontier (222 runs): the
+   no-free-lunch trade, with the E5-B live −2.8-point check in the caption.
+3. `e6_frontier.png` — racing ≤ 0 at matched budget in every cell.
+4. E8 recovery table (from `results_sim/e8_summary.json`) rendered as the
+   headline bar figure for draft-vs-GEPA per task × family (to typeset).
+5. E3-extraction vs classification structure contrast (two-panel; to typeset
+   from `results_e3x/` + benchmark tables).
+
+## Which method should the paper lead with — the memo
+
+**Ranking by confirmed effect size × cost × story:**
+
+1. **E8 / `draft()` — LEAD.** Only surviving positive method. Frozen numbers:
+   60–91% of GEPA's gain at ~1/10 cost, 2/8 outright wins, both families,
+   fresh seeds. It is also now the library's primary API (v0.4.0), so the
+   paper and the artifact tell one story. Frame: error-grounded direct
+   writing, not evolution-acceleration (C1's death is what makes this framing
+   correct).
+2. **E1 distributed-gains — the SPINE.** Not a method but the paper's central
+   measurement: median first-accept share 0.33, flat across budgets/families.
+   It explains every negative (E5/E6/E7) and motivates E8's framing. Lead
+   section after the intro.
+3. **E3 shape-match — the nuance contribution.** Structure pays on extraction
+   (+4 slot-F1, CI-separated on F2) and costs on classification; first
+   evidence the structure question is about prompt-shape/task-shape match.
+4. **E2 redundancy — the dissociation, sharpened.** Strong negative with a
+   novel measurement twist (the failed-control uptake finding is itself a
+   methods contribution about LLM-judged "uptake" metrics).
+5. **E5 stopping — one honest table row** (the dial: −2.8 pts at 49% calls).
+   E4/E6/E7 appear as the coherent negative triad, each one paragraph.
+
+Suggested title framing: *"Distributed, Not Front-Loaded: What Reflective
+Prompt Evolution Actually Buys, and When One Rewrite Is Enough."*
+
+

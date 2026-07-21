@@ -1,0 +1,225 @@
+[
+ {
+  "run": "a_ag_news_f1_s40",
+  "reflection": "```\nYou will be provided with a piece of news text. Your task is to classify this text into one of the following four categories: Business, Sci/Tech (Science/Technology), Sports, or World. Examine the content and main topic of the text to determine the most appropriate category. Select:\n\n- \"Business\" if the text is mainly about finance, companies, markets, economics, or commercial trends.\n- \"Sci/Tech\" if the text is primarily about scientific discoveries, technological products, innovation, research, or developments in electronics/computers (for example, coverage about iPods, new gadgets, or digital trends).\n- \"Sports\" if the main focus of the text is on athletic events, competitions, teams, or sports personalities.\n- \"World\" if the text mainly discusses international news, global politics, wars, diplomacy, or events that concern multiple countries.\n\nProvide only the correct label as your response.\n```",
+  "judge": [
+   1,
+   2,
+   3
+  ]
+ },
+ {
+  "run": "a_ag_news_f1_s40",
+  "reflection": "```\nYou are tasked with classifying short news texts into one of four specific categories: Business, Sci/Tech (Science/Technology), Sports, or World. You will be provided with a snippet of news text under a \"text\" key. Your response should be a single word indicating ONLY the most appropriate label from the following list:\n\n- Business\n- Sci/Tech\n- Sports\n- World\n\nConsider these detailed guidelines:\n\n1. **Business:** Select this label if the news primarily discusses finance, companies, markets, economic trends, acquisitions, mergers, commercial strategies, or related topics within commerce and industry.\n\n2. **Sci/Tech:** Choose this label for news that is centered on scientific research, discoveries, innovation, technological advancements, electronics, new consumer tech products (like gadgets, iPods, digital platforms), developments in computers, or information technology firms (especially where the primary focus is on their technology and not on business operations). For technology consulting firms, if the article is mainly about strategic changes or innovations in their technological services or products, pick 'Sci/Tech'\u2014even if the company\u2019s name is prominent.\n\n3. **Sports:** Use this category for articles focused mainly on athletic events, competitions, sports teams, leagues, games, or personalities from the world of sports.\n\n4. **World:** Assign this label to news texts dealing with international events, global affairs and politics, wars, diplomacy, or major incidents inv",
+  "judge": [
+   1,
+   2,
+   3,
+   4,
+   6,
+   10
+  ]
+ },
+ {
+  "run": "a_ag_news_f1_s40",
+  "reflection": "```\nYou will be given a short news text. Your task is to classify this text into one of four specific categories: Business, Sci/Tech, Sports, or World. Carefully analyze the main topic and subject matter of the text, using the following detailed guidelines to determine the most accurate category:\n\n- Business: Select this label if the text is primarily discussing topics related to finance, companies, the stock market, economics, business trends, mergers and acquisitions, management strategies, or other commercial/industry developments.\n\n- Sci/Tech (Science/Technology): Use this label if the main focus of the text is scientific research, technology products, innovation, new gadgets, developments in electronics or computers, or general news about the science and technology sector. For example, news about new software, digital storage, scientific discoveries, device launches, or reports on technological advancements should be labeled as Sci/Tech (even if they have clear business applications, prioritize Sci/Tech if the technological or scientific element is primary).\n\n- Sports: Assign this label when the text is centered on athletic competitions, sports teams, events, match results, player transfers, or sports figures and their activities. This includes both professional and amateur sports.\n\n- World: Choose this category if the text addresses international news such as diplomacy, global politics, war and conflict, treaties, foreign affairs, or major incidents that impact multiple",
+  "judge": [
+   1,
+   2,
+   3,
+   4,
+   6,
+   8
+  ]
+ },
+ {
+  "run": "a_ag_news_f1_s40",
+  "reflection": "```\nYou will receive a short news passage. Your objective is to classify the news text into exactly one of four categories: Business, Sci/Tech, Sports, or World, according to these definitions:\n\n- Business: Select this label if the main subject of the news is finance, companies, economic policy, business strategies, market trends, corporate leadership, mergers and acquisitions, management, or commercial/industry developments.\n\n- Sci/Tech (Science/Technology): Apply this label if the central focus is on scientific research, innovation, technology products, digital devices, computers, electronics, software, hardware, scientific studies, discoveries, or any news about advancements or trends within science or technology sectors. Notably, if a text is about a business-oriented technology (such as new storage systems, digital gadgets, or technological advancements with business impact), select 'Sci/Tech' when the scientific or technological innovation is the primary topic, even if business relevance is present.\n\n- Sports: Use this label strictly for texts about athletic competitions, sports teams or clubs, match/game results, player transfers or trades, sports events, and news about athletes or the sporting world.\n\n- World: Choose this category for reports on international or global news, including diplomacy, foreign leaders, international politics, global treaties or events, war and conflict, foreign affairs, and issues or incidents with impact across multiple nations.\n\nAnalyze th",
+  "judge": [
+   1,
+   2,
+   3,
+   6
+  ]
+ },
+ {
+  "run": "a_ag_news_f1_s40",
+  "reflection": "```\nYou will be given a short piece of news text. Your job is to classify this news text into one of the following four categories: Business, Sci/Tech (Science/Technology), Sports, or World. \n\nCarefully read and analyze the main topic and content of the news in order to choose the most accurate category. Select only one label. Your response must only be the correct label, with no explanation or additional text.\n\nUse the following detailed category definitions and guidelines:\n\n- \"Business\": Select this category if the news primarily concerns finance, companies, mergers & acquisitions, markets, economics, commercial trends, or corporate strategy and performance.\n- \"Sci/Tech\": Choose this label if the main subject is about scientific research, technological innovation, product launches in technology, scientific discoveries, electronics, computers, gadgets, or coverage related to digital products and services (for example, stories about iPods, new gadgets, digital music/downloads, or internet services). Be aware that stories about technology companies that focus on product launches or digital services (rather than on their financial or market performance) should be categorized as \"Sci/Tech.\"\n- \"Sports\": Apply this category when the news is centered on athletic events, competitions, athletes, teams, scores, or any sports-related activities or personalities.\n- \"World\": Select this label if the content is about international affairs, global politics, diplomatic events, wars, geopoli",
+  "judge": [
+   1,
+   2,
+   3,
+   4,
+   6,
+   10
+  ]
+ },
+ {
+  "run": "a_ag_news_f1_s40",
+  "reflection": "```\nYou will receive a news text excerpt as input. Your task is to assign it to one of four predefined categories\u2014Business, Sci/Tech (Science/Technology), Sports, or World\u2014based on the primary topic and content discussed in the text.\n\nCarefully analyze the entire excerpt to understand its main subject and core context. Apply the following strict criteria when determining the category:\n\n- \"Business\": Select this category if the text primarily addresses subjects related to finance, companies, industry, economics, stock markets, or trends in commerce and trade.\n- \"Sci/Tech\": Select this category if the article is mainly about scientific research, discoveries or inventions, technological advancements, new gadgets, digital trends, effects of technology on society, or developments in electronics and computers. Note: Even if the topic intersects with social phenomena (such as the impact of websites or tech products on daily life), if the technology or science angle is predominant, choose \"Sci/Tech\".\n- \"Sports\": Use this label if the main focus is athletic events, competitions, sports teams, players, results, or any coverage primarily centered on sports or athlete personalities.\n- \"World\": Choose this category if the text chiefly covers international affairs, global politics, wars, diplomacy, intergovernmental events, cross-border issues, or news centered on activities involving multiple countries or regions.\n\nWhen selecting a category, focus on the primary topic, not secondary menti",
+  "judge": [
+   1,
+   2,
+   3,
+   6
+  ]
+ },
+ {
+  "run": "a_ag_news_f1_s40",
+  "reflection": "```\nYou will be shown a short passage of news text. Your task is to classify the text into exactly one of the following four categories: Business, Sci/Tech, Sports, or World. Your classification must be based on a careful analysis of the main topic and subject matter of the text. Follow these category definitions and guidelines:\n\n- Business: Apply this label if the passage mainly concerns finance, company performance, the stock market, economics, business management, mergers/acquisitions, or commercial and industry developments.\n\n- Sci/Tech (Science/Technology): Use this label if the news is primarily about scientific research, technology products or innovations, new gadgets, electronics, computers, or developments in science and technology. Prioritize Sci/Tech if the text focuses on the advancement, creation, or introduction of technology or scientific discoveries, even if those have business implications (for example, news about new digital storage systems or software should be labeled Sci/Tech if the technological or scientific element is primary).\n\n- Sports: Select this label for texts discussing athletic competitions, sporting events, match results, team or player updates, sports figures, transfers, or anything related to sports activities, whether professional or amateur.\n\n- World: Choose this category for news primarily about international affairs, diplomacy, world politics, war/conflict, treaties, significant global events, or incidents impacting multiple countries. T",
+  "judge": [
+   1,
+   2,
+   3,
+   4,
+   6,
+   8
+  ]
+ },
+ {
+  "run": "a_ag_news_f1_s40",
+  "reflection": "```\nYou will be given a piece of news text as input. Your task is to classify this news text into one of the following four categories: Business, Sci/Tech (Science/Technology), Sports, or World.\n\nCarefully read the content and main topic of the provided news text. Determine and provide only the most appropriate category label from the options below:\n\n- \"Business\": Select this label only if the primary focus of the text is on finance, corporate earnings, companies, markets, economic issues, or general commercial trends.\n- \"Sci/Tech\" (Science/Technology): Select this label if the main subject of the text is about scientific discoveries, digital products, technological innovation, computers or electronics (such as gadgets, product announcements, or updates from tech companies, including companies like Apple if the news is technology/product related), or developments in research or science.\n- \"Sports\": Select this label if the text is mainly about athletic events, competitions, teams, sports performances, or well-known sports personalities.\n- \"World\": Select this label if the text\u2019s main topic is international news, global politics, wars, diplomatic events, or issues/events with significant global or multinational impact.\n\nImportant: \n- Pay particular attention when the news involves technology companies like Apple or Microsoft. If the article is about a company\u2019s new technology product, platform, or technical innovation (such as the launch of a new device or operating system), o",
+  "judge": [
+   1,
+   2,
+   3,
+   4,
+   6,
+   10
+  ]
+ },
+ {
+  "run": "a_ag_news_f1_s40",
+  "reflection": "```\nYou will be given a brief news excerpt and must classify it into exactly one of these four categories: Business, Sci/Tech, Sports, or World. Carefully determine the primary subject matter by analyzing both the explicit content and the underlying focus of the article, following these refined guidelines:\n\n- Business: Assign this label if the news centers on corporate activities, finance, stock markets, industry trends, mergers and acquisitions, economic changes, or business management topics. Choose 'Business' only when the discussion is specifically and primarily about the financial or economic implications, commercial performance, or corporate strategies.\n\n- Sci/Tech (Science/Technology): Use this label whenever the article's main emphasis is on technological innovations, science research, new products or devices, advancements in electronics or computing, or general updates about the science/tech sector. This includes news about new gadgets, technology product launches, digital storage solutions, software releases, or scientific discoveries. Importantly, if the news is about a technology company acquiring or developing new tech (such as network design, software, or digital storage systems) and the central theme is about the product or technological innovation\u2014not just the business transaction\u2014prioritize 'Sci/Tech', even if there are business implications mentioned.\n\n- Sports: Select this category if the text covers athletic competitions, match outcomes, sports teams, play",
+  "judge": [
+   1,
+   3,
+   4,
+   6,
+   8
+  ]
+ },
+ {
+  "run": "a_banking77_f1_s40",
+  "reflection": "```\nYou are given a short text input that describes a banking or financial issue or request from a user. Your task is to classify this text into one of the following predefined categories:\n\n- automatic_top_up\n- balance_not_updated_after_bank_transfer\n- beneficiary_not_allowed\n- cancel_transfer\n- card_payment_fee_charged\n- card_payment_not_recognised\n- declined_cash_withdrawal\n- exchange_rate\n- exchange_via_app\n- failed_transfer\n- get_disposable_virtual_card\n- get_physical_card\n- passcode_forgotten\n- pending_top_up\n- pending_transfer\n- receiving_money\n- reverted_card_payment?\n- top_up_by_cash_or_cheque\n- top_up_reverted\n- topping_up_by_card\n- transfer_fee_charged\n- transfer_into_account\n- transfer_timing\n- verify_my_identity\n- verify_source_of_funds\n\nYour response must be the most appropriate single label from the above list, based on the intent or main issue described in the text. Do not provide explanations or additional content\u2014return only the label.\n\nSome important guidelines and niche/domain-specific notes that must be considered:\n\n- \"transfer_into_account\" should be used when the user is asking about or making a transfer into their account or another account, NOT when they are specifically looking for a missing or delayed balance update after a transfer.\n- \"balance_not_updated_after_bank_transfer\" should be used if the text suggests the user is concerned that a transfer was made but their balance did not update, or they are looking for confirmation or clarification about",
+  "judge": [
+   1,
+   2,
+   3,
+   4,
+   6,
+   7,
+   8
+  ]
+ },
+ {
+  "run": "a_banking77_f1_s40",
+  "reflection": "```\nYou are given a text input from a user related to financial services or banking tasks, such as account management, payments, transfers, card operations, identity verification, or related issues. Your task is to classify the text into exactly one of the following predefined categories:\n\nautomatic_top_up, balance_not_updated_after_bank_transfer, beneficiary_not_allowed, cancel_transfer, card_payment_fee_charged, card_payment_not_recognised, declined_cash_withdrawal, exchange_rate, exchange_via_app, failed_transfer, get_disposable_virtual_card, get_physical_card, passcode_forgotten, pending_top_up, pending_transfer, receiving_money, reverted_card_payment?, top_up_by_cash_or_cheque, top_up_reverted, topping_up_by_card, transfer_fee_charged, transfer_into_account, transfer_timing, verify_my_identity, verify_source_of_funds.\n\nConsider the user's intent, banking terminology, and context. Note that many of the categories are specific to banking workflows and tasks, such as requesting cards, currency exchange, verifying identities, or dealing with payment failures. Carefully analyze the input text for key concepts or domain-specific cues:\n\n- \u2018receiving_money\u2019 covers scenarios where the user is asking about getting funds from external sources (e.g., salary, third-party transfers).\n- \u2018transfer_into_account\u2019 may refer more generally to the process of transferring funds into the user\u2019s own account, not when funds are coming in from external unrelated sources.\n- The difference between ",
+  "judge": [
+   1,
+   3,
+   4,
+   6,
+   7
+  ]
+ },
+ {
+  "run": "a_banking77_f1_s40",
+  "reflection": "```\nYou are given a task to classify user queries related to banking and payment services into exactly one of the following categories: \n\n- automatic_top_up\n- balance_not_updated_after_bank_transfer\n- beneficiary_not_allowed\n- cancel_transfer\n- card_payment_fee_charged\n- card_payment_not_recognised\n- declined_cash_withdrawal\n- exchange_rate\n- exchange_via_app\n- failed_transfer\n- get_disposable_virtual_card\n- get_physical_card\n- passcode_forgotten\n- pending_top_up\n- pending_transfer\n- receiving_money\n- reverted_card_payment?\n- top_up_by_cash_or_cheque\n- top_up_reverted\n- topping_up_by_card\n- transfer_fee_charged\n- transfer_into_account\n- transfer_timing\n- verify_my_identity\n- verify_source_of_funds\n\nThe input will always consist of a single user query as free-form text. Your goal is to read the user's text and select the one category from the list above that most specifically describes the main problem or request within the user's message.\n\nPay particular attention to the specific domain meanings of each label:\n- If the user is talking about not being able to send a transfer to a specific recipient or country, classify as \"beneficiary_not_allowed\" rather than generic transfer failure.\n- If the user's query is about their card payment not being recognized by either themselves or the merchant, use \"card_payment_not_recognised\".\n- If the user asks about receiving money or whether funds can be deposited directly (for example, queries about salary deposits), classify as \"receiving_",
+  "judge": [
+   1,
+   2,
+   3,
+   4,
+   6,
+   8
+  ]
+ },
+ {
+  "run": "a_banking77_f1_s40",
+  "reflection": "```\nYou are given a task to classify user queries related to financial transactions and banking services into one of a predefined set of 24 categories. The input will be a text string (labeled as \"text\") representing a user\u2019s question, concern, or issue regarding their account, transfers, payments, cards, or verification. Your response should be the most appropriate single category from the following list:\n\nautomatic_top_up, balance_not_updated_after_bank_transfer, beneficiary_not_allowed, cancel_transfer, card_payment_fee_charged, card_payment_not_recognised, declined_cash_withdrawal, exchange_rate, exchange_via_app, failed_transfer, get_disposable_virtual_card, get_physical_card, passcode_forgotten, pending_top_up, pending_transfer, receiving_money, reverted_card_payment?, top_up_by_cash_or_cheque, top_up_reverted, topping_up_by_card, transfer_fee_charged, transfer_into_account, transfer_timing, verify_my_identity, verify_source_of_funds.\n\nHere are important guidelines for classification:\n- Carefully read the user's text and identify the specific banking/financial process or issue it refers to, using context clues when the wording is ambiguous or general.\n- Some categories may overlap in meaning, but you must select the most specific and relevant one. For example, if a user asks \"What happened to the transfer I did?\" and the context implies the user is worried because their account balance hasn't increased after a bank transfer, the correct label is 'balance_not_updated_aft",
+  "judge": [
+   1,
+   2,
+   3,
+   6
+  ]
+ },
+ {
+  "run": "a_banking77_f1_s40",
+  "reflection": "```\nYou are given a piece of text related to banking and payment services. Your task is to classify this text into EXACTLY ONE of the following specific categories, based solely on the content of the text provided:\n\nautomatic_top_up  \nbalance_not_updated_after_bank_transfer  \nbeneficiary_not_allowed  \ncancel_transfer  \ncard_payment_fee_charged  \ncard_payment_not_recognised  \ndeclined_cash_withdrawal  \nexchange_rate  \nexchange_via_app  \nfailed_transfer  \nget_disposable_virtual_card  \nget_physical_card  \npasscode_forgotten  \npending_top_up  \npending_transfer  \nreceiving_money  \nreverted_card_payment?  \ntop_up_by_cash_or_cheque  \ntop_up_reverted  \ntopping_up_by_card  \ntransfer_fee_charged  \ntransfer_into_account  \ntransfer_timing  \nverify_my_identity  \nverify_source_of_funds  \n\nInstructions and important notes:  \n- Assign exactly ONE label from the list above that most accurately describes the user's issue or request in the text provided.  \n- When deciding between labels, pay close attention to the specific meaning of each category. For example, if the user's card payment was cancelled or reversed, use 'reverted_card_payment?' rather than 'cancel_transfer', which should be used for explicit requests to cancel a transfer.  \n- Do not invent new categories, and do not provide explanations\u2014output only the label.  \n- If multiple categories seem to apply, select only the SINGLE MOST RELEVANT category, prioritizing the one that refers to the specific issue explicitly mentioned in the t",
+  "judge": [
+   1,
+   2,
+   3,
+   4,
+   6
+  ]
+ },
+ {
+  "run": "a_banking77_f1_s40",
+  "reflection": "```\nYou are given a single user query in free-form text, describing a problem or request related to banking and payments. Your task is to classify this user query into exactly one of the following predefined and mutually exclusive categories:\n\n- automatic_top_up\n- balance_not_updated_after_bank_transfer\n- beneficiary_not_allowed\n- cancel_transfer\n- card_payment_fee_charged\n- card_payment_not_recognised\n- declined_cash_withdrawal\n- exchange_rate\n- exchange_via_app\n- failed_transfer\n- get_disposable_virtual_card\n- get_physical_card\n- passcode_forgotten\n- pending_top_up\n- pending_transfer\n- receiving_money\n- reverted_card_payment\n- top_up_by_cash_or_cheque\n- top_up_reverted\n- topping_up_by_card\n- transfer_fee_charged\n- transfer_into_account\n- transfer_timing\n- verify_my_identity\n- verify_source_of_funds\n\nYour classification should select the one category that most specifically and accurately describes the main problem or request in the user's message. When making your selection, prioritize the intended meaning of the user\u2019s message over superficial keyword matches\u2014be attentive to nuanced, domain-specific meanings described below, and do NOT provide explanations, only output the category label.\n\nKey category distinctions to ensure accurate classification:\n- If the user reports that a transfer they have made has not yet reflected in their account balance or has not arrived, classify this as **balance_not_updated_after_bank_transfer** (not \"pending_transfer\").\n- If the user is unab",
+  "judge": [
+   1,
+   3,
+   4,
+   6,
+   8
+  ]
+ },
+ {
+  "run": "a_banking77_f1_s40",
+  "reflection": "```\nYou are given a user's text input related to financial services or banking activities. Your task is to accurately classify the user's message into exactly one of the following predefined categories:\n\nautomatic_top_up, balance_not_updated_after_bank_transfer, beneficiary_not_allowed, cancel_transfer, card_payment_fee_charged, card_payment_not_recognised, declined_cash_withdrawal, exchange_rate, exchange_via_app, failed_transfer, get_disposable_virtual_card, get_physical_card, passcode_forgotten, pending_top_up, pending_transfer, receiving_money, reverted_card_payment?, top_up_by_cash_or_cheque, top_up_reverted, topping_up_by_card, transfer_fee_charged, transfer_into_account, transfer_timing, verify_my_identity, verify_source_of_funds.\n\nYou must carefully analyze the user's intent and banking context as expressed in the input. Consider these key points for accurate classification:\n\n- Pay special attention to banking terminology and workflows. Many category terms are narrowly defined for bank operations; do not rely just on keyword matches.\n- Distinguish between *requests for card information or physical card-related issues* (such as 'How do I know what my PIN is?') which should be categorized as 'get_physical_card', and issues involving forgotten passwords or access codes (such as 'I forgot my passcode'), which should be classified as 'passcode_forgotten'.\n- If a user reports initiating a top-up by card and mentions the funds have not appeared (e.g., 'I used my card to top ",
+  "judge": [
+   1,
+   2,
+   3,
+   4,
+   6
+  ]
+ },
+ {
+  "run": "a_banking77_f1_s40",
+  "reflection": "```\nYou are provided with a short text snippet related to banking and payment services. Your task is to classify the text into exactly ONE category from the specific list below:\n\nautomatic_top_up  \nbalance_not_updated_after_bank_transfer  \nbeneficiary_not_allowed  \ncancel_transfer  \ncard_payment_fee_charged  \ncard_payment_not_recognised  \ndeclined_cash_withdrawal  \nexchange_rate  \nexchange_via_app  \nfailed_transfer  \nget_disposable_virtual_card  \nget_physical_card  \npasscode_forgotten  \npending_top_up  \npending_transfer  \nreceiving_money  \nreverted_card_payment?  \ntop_up_by_cash_or_cheque  \ntop_up_reverted  \ntopping_up_by_card  \ntransfer_fee_charged  \ntransfer_into_account  \ntransfer_timing  \nverify_my_identity  \nverify_source_of_funds  \n\nSpecific and important instructions:\n\n- Assign ONLY ONE label from the list above that BEST matches the user's issue or request, based SOLELY on the content of the provided text.\n- Carefully distinguish between similar-sounding categories, especially fee-related and transaction-type categories:\n    - If the text refers to FEES or CHARGES for **card payments**, select 'card_payment_fee_charged'.\n    - If the text refers to FEES or CHARGES for **bank transfers or account transfers** (not cards), use 'transfer_fee_charged'.\n    - If the text discusses an UNRECOGNIZED or disputed **card payment**, use 'card_payment_not_recognised'.\n    - If the text is about a fee in general but does NOT specify the transaction type, analyze for context clues; i",
+  "judge": [
+   1,
+   2,
+   4,
+   6
+  ]
+ },
+ {
+  "run": "a_banking77_f1_s40",
+  "reflection": "```\nYou are given a classification task. Your goal is to categorize each user query\u2014written as free-form text and related to banking or payment services\u2014into exactly one label from a defined list of categories. The list of possible categories is as follows:\n\n- automatic_top_up\n- balance_not_updated_after_bank_transfer\n- beneficiary_not_allowed\n- cancel_transfer\n- card_payment_fee_charged\n- card_payment_not_recognised\n- declined_cash_withdrawal\n- exchange_rate\n- exchange_via_app\n- failed_transfer\n- get_disposable_virtual_card\n- get_physical_card\n- passcode_forgotten\n- pending_top_up\n- pending_transfer\n- receiving_money\n- reverted_card_payment?\n- top_up_by_cash_or_cheque\n- top_up_reverted\n- topping_up_by_card\n- transfer_fee_charged\n- transfer_into_account\n- transfer_timing\n- verify_my_identity\n- verify_source_of_funds\n\nYour task is to read the user's query and select the *single* most specific and accurate label that best describes the main problem or request. Return ONLY the label, with no additional text or commentary.\n\nImportant domain-specific guidance:\n\n- Select \"beneficiary_not_allowed\" ONLY when a transfer or exchange fails specifically due to restrictions on the recipient, country, or asset (including crypto). For example, if the user is unable to purchase, send, or exchange to a certain person, country, or for certain assets due to policy or regulation, use this label.\n- When a user describes a technical issue with exchanging currencies (such as problems accessing, ini",
+  "judge": [
+   1,
+   2,
+   3,
+   4,
+   6,
+   8
+  ]
+ },
+ {
+  "run": "a_banking77_f1_s40",
+  "reflection": "```\nYou are tasked with classifying user queries related to banking and payment services into exactly one of the specific categories provided. Your response must ONLY be the single most accurate category label that applies to the user's query\u2014no explanations or extra text.\n\nHere\u2019s how to perform the classification:\n\n1. **Input Format**: \n   - Each input consists solely of a user's free-form text query relating to banking or payment matters.\n\n2. **Categories**: Only choose from the following labels:\n   - automatic_top_up\n   - balance_not_updated_after_bank_transfer\n   - beneficiary_not_allowed\n   - cancel_transfer\n   - card_payment_fee_charged\n   - card_payment_not_recognised\n   - declined_cash_withdrawal\n   - exchange_rate\n   - exchange_via_app\n   - failed_transfer\n   - get_disposable_virtual_card\n   - get_physical_card\n   - passcode_forgotten\n   - pending_top_up\n   - pending_transfer\n   - receiving_money\n   - reverted_card_payment?\n   - top_up_by_cash_or_cheque\n   - top_up_reverted\n   - topping_up_by_card\n   - transfer_fee_charged\n   - transfer_into_account\n   - transfer_timing\n   - verify_my_identity\n   - verify_source_of_funds\n\n3. **Label Selection Guidance**:\n   - Your goal is to **identify and output the ONE category** from the list that most specifically and accurately describes the user's main problem or request.\n   - Prioritize intent and meaning over specific keywords.\n\n4. **Category Domain Notes and Decision Rules (factual guidance):**\n   - **Failed Transfers:** Use",
+  "judge": [
+   2,
+   3,
+   6,
+   7,
+   4
+  ]
+ },
+ {
+  "run": "a_bbh_geometric_f1_s40",
+  "reflection": "```\nYou are given a prompt that describes an SVG path element and asks what geometric shape it draws. The prompt will include the raw SVG path data (e.g., the 'd' attribute from an SVG <path> element) and a list of options labeled with letters, each corresponding to the name of a geometric shape. Your task is to classify the path into one of the following specific categories (using the associated label): B, C, D, E, F, G, I, J, or K. These correspond to:\n\nB. heptagon (7 sides)\nC. hexagon (6 sides)\nD. kite\nE. line\nF. octagon (8 sides)\nG. pentagon (5 sides)\nI. sector\nJ. triangle (3 sides)\nK. trapezoid\n\n**Instructions:**\n\n1. Read the SVG path data and interpret the geometric shape it would produce if rendered.\n2. Ignore any options that are not among the following: B, C, D, E, F, G, I, J, K.\n3. Select the single most accurate label for the shape, based on the SVG path.\n   - For polygons (pentagon, hexagon, heptagon, octagon), deduce the number of vertices (\"L\" and \"M\" SVG commands typically move or draw lines between shape corners).\n   - For complex polygons like kites or trapezoids, determine if the path fits the specific definition (e.g., a kite has two distinct pairs of adjacent sides that are equal; a trapezoid has exactly one pair of parallel sides).\n   - For lines, check if the path is a straight segment.\n   - For triangles, make sure the path connects three vertices (with direct or implied closure).\n   - For sectors (portion of a circle), look for arc commands or other in",
+  "judge": [
+   1,
+   2,
+   3,
+   4,
+   6
+  ]
+ }
+]

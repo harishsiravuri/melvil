@@ -1,0 +1,136 @@
+/Users/harish/Documents/Claude/Projects/6s/.venv/lib/python3.13/site-packages/dspy/clients/base_lm.py:129: UserWarning: rollout_id has no effect when temperature=0; set temperature>0 to bypass the cache.
+  response = self.forward(prompt=prompt, messages=messages, **kwargs)
+{
+ "a_ag_news_f1_s40": {
+  "n_reflections": 9,
+  "uptake": 1.0
+ },
+ "a_banking77_f1_s40": {
+  "n_reflections": 10,
+  "uptake": 1.0
+ },
+ "a_bbh_geometric_f1_s40": {
+  "n_reflections": 46,
+  "uptake": 1.0
+ },
+ "a_clinc150_f1_s40": {
+  "n_reflections": 1,
+  "uptake": 1.0
+ },
+ "a_emotion_f1_s40": {
+  "n_reflections": 14,
+  "uptake": 1.0
+ },
+ "a_gsm8k_f1_s40": {
+  "n_reflections": 16,
+  "uptake": 1.0
+ },
+ "a_massive_f1_s40": {
+  "n_reflections": 7,
+  "uptake": 1.0
+ },
+ "a_trec_f1_s40": {
+  "n_reflections": 8,
+  "uptake": 1.0
+ },
+ "b_banking77_f1_s40": {
+  "n_reflections": 8,
+  "uptake": 1.0
+ },
+ "b_banking77_f1_s41": {
+  "n_reflections": 9,
+  "uptake": 1.0
+ },
+ "b_banking77_f1_s42": {
+  "n_reflections": 8,
+  "uptake": 1.0
+ },
+ "b_banking77_f1_s43": {
+  "n_reflections": 11,
+  "uptake": 1.0
+ },
+ "b_banking77_f1_s44": {
+  "n_reflections": 8,
+  "uptake": 1.0
+ },
+ "b_bbh_geometric_f1_s40": {
+  "n_reflections": 41,
+  "uptake": 1.0
+ },
+ "b_bbh_geometric_f1_s41": {
+  "n_reflections": 31,
+  "uptake": 1.0
+ },
+ "b_bbh_geometric_f1_s42": {
+  "n_reflections": 39,
+  "uptake": 1.0
+ },
+ "b_bbh_geometric_f1_s43": {
+  "n_reflections": 32,
+  "uptake": 1.0
+ },
+ "b_bbh_geometric_f1_s44": {
+  "n_reflections": 37,
+  "uptake": 1.0
+ },
+ "b_gsm8k_f1_s40": {
+  "n_reflections": 12,
+  "uptake": 1.0
+ },
+ "b_gsm8k_f1_s41": {
+  "n_reflections": 13,
+  "uptake": 1.0
+ },
+ "b_gsm8k_f1_s42": {
+  "n_reflections": 15,
+  "uptake": 1.0
+ },
+ "b_gsm8k_f1_s43": {
+  "n_reflections": 14,
+  "uptake": 1.0
+ },
+ "b_gsm8k_f1_s44": {
+  "n_reflections": 17,
+  "uptake": 1.0
+ },
+ "b_massive_f1_s40": {
+  "n_reflections": 8,
+  "uptake": 1.0
+ },
+ "b_massive_f1_s41": {
+  "n_reflections": 7,
+  "uptake": 1.0
+ },
+ "b_massive_f1_s42": {
+  "n_reflections": 7,
+  "uptake": 1.0
+ },
+ "b_massive_f1_s43": {
+  "n_reflections": 8,
+  "uptake": 1.0
+ },
+ "b_massive_f1_s44": {
+  "n_reflections": 7,
+  "uptake": 1.0
+ },
+ "b_trec_f1_s40": {
+  "n_reflections": 9,
+  "uptake": 1.0
+ },
+ "b_trec_f1_s41": {
+  "n_reflections": 7,
+  "uptake": 1.0
+ },
+ "b_trec_f1_s42": {
+  "n_reflections": 8,
+  "uptake": 1.0
+ },
+ "b_trec_f1_s43": {
+  "n_reflections": 7,
+  "uptake": 1.0
+ },
+ "b_trec_f1_s44": {
+  "n_reflections": 10,
+  "uptake": 1.0
+ }
+}

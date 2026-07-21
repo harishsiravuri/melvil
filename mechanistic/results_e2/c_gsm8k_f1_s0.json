@@ -1,0 +1,8 @@
+{
+ "test_accuracy": 0.9267,
+ "cost_usd": 0.1277,
+ "arm": "c",
+ "task": "gsm8k",
+ "family": "f1",
+ "seed": 0
+}

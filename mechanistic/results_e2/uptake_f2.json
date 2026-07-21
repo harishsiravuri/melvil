@@ -1,0 +1,134 @@
+{
+ "a_ag_news_f2_s40": {
+  "n_reflections": 9,
+  "uptake": 1.0
+ },
+ "a_banking77_f2_s40": {
+  "n_reflections": 7,
+  "uptake": 0.857
+ },
+ "a_bbh_geometric_f2_s40": {
+  "n_reflections": 25,
+  "uptake": 0.16
+ },
+ "a_clinc150_f2_s40": {
+  "n_reflections": 1,
+  "uptake": 1.0
+ },
+ "a_emotion_f2_s40": {
+  "n_reflections": 7,
+  "uptake": 1.0
+ },
+ "a_gsm8k_f2_s40": {
+  "n_reflections": 15,
+  "uptake": 0.067
+ },
+ "a_massive_f2_s40": {
+  "n_reflections": 8,
+  "uptake": 1.0
+ },
+ "a_trec_f2_s40": {
+  "n_reflections": 8,
+  "uptake": 0.625
+ },
+ "b_banking77_f2_s40": {
+  "n_reflections": 7,
+  "uptake": 1.0
+ },
+ "b_banking77_f2_s41": {
+  "n_reflections": 7,
+  "uptake": 1.0
+ },
+ "b_banking77_f2_s42": {
+  "n_reflections": 8,
+  "uptake": 1.0
+ },
+ "b_banking77_f2_s43": {
+  "n_reflections": 7,
+  "uptake": 0.857
+ },
+ "b_banking77_f2_s44": {
+  "n_reflections": 7,
+  "uptake": 1.0
+ },
+ "b_bbh_geometric_f2_s40": {
+  "n_reflections": 24,
+  "uptake": 0.042
+ },
+ "b_bbh_geometric_f2_s41": {
+  "n_reflections": 37,
+  "uptake": 0.081
+ },
+ "b_bbh_geometric_f2_s42": {
+  "n_reflections": 22,
+  "uptake": 0.0
+ },
+ "b_bbh_geometric_f2_s43": {
+  "n_reflections": 31,
+  "uptake": 0.097
+ },
+ "b_bbh_geometric_f2_s44": {
+  "n_reflections": 30,
+  "uptake": 0.1
+ },
+ "b_gsm8k_f2_s40": {
+  "n_reflections": 18,
+  "uptake": 0.278
+ },
+ "b_gsm8k_f2_s41": {
+  "n_reflections": 15,
+  "uptake": 0.733
+ },
+ "b_gsm8k_f2_s42": {
+  "n_reflections": 16,
+  "uptake": 0.375
+ },
+ "b_gsm8k_f2_s43": {
+  "n_reflections": 13,
+  "uptake": 0.308
+ },
+ "b_gsm8k_f2_s44": {
+  "n_reflections": 10,
+  "uptake": 0.4
+ },
+ "b_massive_f2_s40": {
+  "n_reflections": 7,
+  "uptake": 1.0
+ },
+ "b_massive_f2_s41": {
+  "n_reflections": 7,
+  "uptake": 1.0
+ },
+ "b_massive_f2_s42": {
+  "n_reflections": 7,
+  "uptake": 1.0
+ },
+ "b_massive_f2_s43": {
+  "n_reflections": 7,
+  "uptake": 1.0
+ },
+ "b_massive_f2_s44": {
+  "n_reflections": 7,
+  "uptake": 1.0
+ },
+ "b_trec_f2_s40": {
+  "n_reflections": 8,
+  "uptake": 1.0
+ },
+ "b_trec_f2_s41": {
+  "n_reflections": 9,
+  "uptake": 1.0
+ },
+ "b_trec_f2_s42": {
+  "n_reflections": 7,
+  "uptake": 1.0
+ },
+ "b_trec_f2_s43": {
+  "n_reflections": 8,
+  "uptake": 1.0
+ },
+ "b_trec_f2_s44": {
+  "n_reflections": 7,
+  "uptake": 1.0
+ }
+}
