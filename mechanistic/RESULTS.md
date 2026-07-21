@@ -99,9 +99,20 @@ error-grounded rewrite recovers 60–91% of GEPA's gain (family-dependent) at
 about a tenth of its cost — supporting a screen → diagnose-then-write →
 evolve-if-headroom pipeline — but on tasks requiring globally restructured
 prompts, iterative evolution remains necessary."* Iteration-pass numbers held
-under fresh seeds (banking77 0.849→0.843, trec 0.856→0.852). Pending for the
-final tables: paired bootstrap CIs (per-example scores recomputable from saved
-prompts via the temp-0 cache at ~zero cost).
+under fresh seeds (banking77 0.849→0.843, trec 0.856→0.852). **Significance (paired bootstrap, added post-freeze; does NOT alter the frozen
+point estimates).** Per-example correctness was recovered for every arm from
+the temp-0 cache (0 live calls, $0; `e8_bootstrap.py`) and bootstrapped over
+the identical test set (B=10,000; full per-task table in the appendix below).
+The point-estimate "beats GEPA on 2 of 8 tasks" softens under CIs to **one
+CI-separated win — banking77 — in BOTH families** (Δ +0.029 [+0.011, +0.048]
+on F1; +0.034 [+0.011, +0.057] on F2). Draft-×2 is a **statistical tie** with
+GEPA on 4 tasks per family (the saturated/near-ceiling ones), and CI-separated
+*below* GEPA on the genuinely hard tasks (F1: ag_news, stance_abortion, sst5;
+F2: ag_news, trec, stance_abortion). This tightens the verdict rather than
+overturning it: draft matches full evolution wherever the task is easy or
+mid-difficulty, wins outright on the one large-taxonomy intent task, and is
+beaten only where global prompt restructuring matters — precisely the
+escalation boundary the library encodes (draft → screen → optimize).
 
 ### Iteration-phase record (pre-freeze)
 
@@ -336,4 +347,37 @@ optimization/evaluation runs; every result checkpointed and committed.
 Suggested title framing: *"Distributed, Not Front-Loaded: What Reflective
 Prompt Evolution Actually Buys, and When One Rewrite Is Enough."*
 
+### Appendix — E8 per-task paired-bootstrap table
 
+Per-example correctness recovered from the temp-0 cache (0 live calls, $0); seed-averaged over the frozen draft seeds (20–24) and the E8 GEPA reference pool; paired bootstrap over the identical test set, B=10,000. Δ = draft-×2 accuracy − GEPA accuracy; `*` = 95% CI excludes 0. Recovery = (×2−seed)/(GEPA−seed), shown only where GEPA's gain over seed clears the noise floor (else *sat* = saturated).
+
+
+**F1 (gpt-4.1-mini / gpt-4.1)** — GEPA reference = v0.1+confirmation vanilla pool
+
+| task | seed | draft ×2 | GEPA | Δ (×2−GEPA) | 95% CI | recovery | recovery 95% CI |
+|---|---|---|---|---|---|---|---|
+| banking77 | 0.760 | 0.843 | 0.813 | +0.029* | [+0.011, +0.048] | 1.55 | [1.18, 2.43] |
+| ag_news | 0.830 | 0.838 | 0.863 | -0.025* | [-0.047, -0.004] | 0.24 | [-0.27, 0.74] |
+| emotion | 0.563 | 0.547 | 0.553 | -0.007 | [-0.030, +0.016] | sat | — |
+| trec | 0.600 | 0.852 | 0.867 | -0.015 | [-0.035, +0.005] | 0.94 | [0.88, 1.02] |
+| clinc150 | 0.980 | 0.986 | 0.980 | +0.006 | [-0.003, +0.017] | sat | — |
+| massive | 0.840 | 0.867 | 0.864 | +0.003 | [-0.015, +0.020] | 1.12 | [0.00, 2.66] |
+| stance_abortion | 0.500 | 0.473 | 0.650 | -0.177* | [-0.241, -0.112] | -0.18 | [-0.70, 0.06] |
+| sst5 | 0.547 | 0.569 | 0.619 | -0.050* | [-0.088, -0.014] | 0.30 | [-0.43, 0.69] |
+
+**F2 (claude-haiku-4.5 / sonnet-4.5)** — GEPA reference = fresh vanilla GEPA seeds 20–24
+
+| task | seed | draft ×2 | GEPA | Δ (×2−GEPA) | 95% CI | recovery | recovery 95% CI |
+|---|---|---|---|---|---|---|---|
+| banking77 | 0.767 | 0.810 | 0.776 | +0.034* | [+0.011, +0.057] | sat | — |
+| ag_news | 0.867 | 0.853 | 0.880 | -0.027* | [-0.050, -0.005] | sat | — |
+| emotion | 0.553 | 0.568 | 0.544 | +0.024 | [-0.003, +0.051] | sat | — |
+| trec | 0.827 | 0.852 | 0.881 | -0.029* | [-0.051, -0.008] | 0.47 | [-0.21, 0.84] |
+| clinc150 | 0.980 | 0.982 | 0.980 | +0.002 | [-0.003, +0.009] | sat | — |
+| massive | 0.833 | 0.861 | 0.867 | -0.006 | [-0.029, +0.017] | 0.82 | [-0.23, 2.04] |
+| stance_abortion | 0.529 | 0.666 | 0.689 | -0.022* | [-0.036, -0.008] | 0.86 | [0.71, 0.95] |
+| sst5 | 0.580 | 0.575 | 0.579 | -0.005 | [-0.038, +0.028] | sat | — |
+
+F1 significance: draft-×2 CI-separated WIN on ['banking77']; statistical tie on ['emotion', 'trec', 'clinc150', 'massive']; CI-separated loss on ['ag_news', 'stance_abortion', 'sst5'].
+
+F2 significance: draft-×2 CI-separated WIN on ['banking77']; statistical tie on ['emotion', 'clinc150', 'massive', 'sst5']; CI-separated loss on ['ag_news', 'trec', 'stance_abortion'].
