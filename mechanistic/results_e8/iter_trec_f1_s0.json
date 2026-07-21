@@ -1,0 +1,36 @@
+{
+ "experiment": "e8",
+ "phase": "iter",
+ "task": "trec",
+ "family": "f1",
+ "seed": 0,
+ "arms": {
+  "seed": {
+   "test_accuracy": 0.6,
+   "test_macro_f1": 0.6235,
+   "unparseable": 0
+  },
+  "x1": {
+   "test_accuracy": 0.82,
+   "test_macro_f1": 0.8123,
+   "unparseable": 0
+  },
+  "x2": {
+   "test_accuracy": 0.88,
+   "test_macro_f1": 0.8722,
+   "unparseable": 0
+  }
+ },
+ "dev_accs": {
+  "input_of_x1": 0.5,
+  "input_of_x2": 0.77
+ },
+ "prompts": {
+  "seed": "Classify the given text into one of these categories: abbreviation, description, entity, human, location, numeric.\n\nRespond with exactly one category name from the list above and nothing else.",
+  "x1": "Classify the given text into exactly one of the following categories: abbreviation, description, entity, human, location, numeric.\n\nCATEGORY DEFINITIONS:\n- abbreviation: The text is asking for a shortened or acronym form of a word or phrase.\n- description: The text is seeking an explanation, definition, or description about a concept, process, phenomenon, or \"what is\" something (not asking for a specific name, number, place, person, or group).\n- entity: The text is asking for the specific name of a thing that is not a human or a location (includes objects, organizations, titles of works, animals, products, groups, companies, etc.).\n- human: The text is asking for the name or identity of a specific person or a group of people (including professions, groups, or roles defined by humans).\n- location: The text is seeking the name of a geographic location (city, country, body of water, mountain, building, address, etc.).\n- numeric: The text is asking for a specific number, date, time, quantity, size, age, measurement, or amount.\n\nDECISION RULES:\n- If the primary answer requires a specific person's name, group of humans, or their profession/role, use \"human\". If it's the name of a place, use \"location\". If it's something else that is a physical thing, work, animal, company, or organization, use \"entity\".\n- If the answer is purely a number, date, or measurement, use \"numeric\", even if the question is phrased as \"how many\", \"how much\", \"when\", \"what year\", or similar.\n- If the question is asking \"what is\", \"describe\", or for an explanation and not for a proper name, use \"description\".\n- If more than one category might apply, select the more specific one according to this order of priority: numeric > human > location > entity > abbreviation > description.\n\nRespond with exactly one category name from the list above and nothing else.",
+  "x2": "Classify the given text into exactly one of the following categories: abbreviation, description, entity, human, location, numeric.\n\nCATEGORY DEFINITIONS:\n- abbreviation: The text seeks a shortened or acronym form of a word or phrase.\n- description: The text is seeking an explanation, definition, process, phenomenon, or \"what is\" something, when a proper name or specific unique answer is not required.\n- entity: The text is asking for the specific name or term for a thing that is not a human or a location (includes objects, animals, organizations, companies, products, works of art/literature/media, abstract concepts with proper names, and named groups that are not people or places).\n- human: The text is seeking the name/identity of an individual person, a group of humans, people defined by profession or role, or titles explicitly referring to humans.\n- location: The text is seeking the name of a specific place, geographic area, address, landmark (natural or man-made), or physical site.\n- numeric: The text is seeking a specific number, date, time, year, amount, measurement, count, or quantity (use even if the query asks \"when,\" \"how many,\" \"how much,\" or similar).\n\nDECISION RULES:\n- When the answer is a number, date, or measurement, use \"numeric\" regardless of question wording.\n- If the answer is a specific person's name, group of humans, profession/role, or anything referring explicitly to people, select \"human\".\n- If the answer is a proper place name or physical/geographical location, use \"location\".\n- Use \"entity\" for questions seeking a specific proper name or term for a thing, group (not human), animal, product, company, organization, or titled work (such as a book, film, show, website, or named object/species). Use \"entity\" for \"what is the term/name for...\" requests when the answer is a thing, not a person or location.\n- Use \"description\" strictly for questions whose answers are explanations or definitions, not specific names/terms, people, places, or numbers.\n- Use \"abbreviation\" only when a shortened or acronym form is requested.\n- For ambiguous cases, apply this order of priority: numeric > human > location > entity > abbreviation > description.\n- When the question asks for the \"name\" or \"term\" of something non-human and non-location, choose \"entity\". If unsure between \"entity\" and \"description\", prefer \"entity\" if the expected answer is a recognized term, object, or title, not an explanation.\n\nRespond with exactly one category name from the list above and nothing else."
+ },
+ "cost_usd": 0.1493,
+ "task_lm_calls": 700,
+ "reflection_calls": 2
+}

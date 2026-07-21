@@ -1,0 +1,79 @@
+{
+ "n_runs": 156,
+ "rules": {
+  "A(k=1)": {
+   "mean_budget_frac": 0.3011,
+   "budget_ci95": 0.0106,
+   "mean_retention": 0.4779,
+   "retention_ci95": 0.0726,
+   "median_retention": 0.5,
+   "pct_full_retention": 0.235,
+   "n_scored": 119,
+   "n_flat_excluded": 37
+  },
+  "A(k=2)": {
+   "mean_budget_frac": 0.4931,
+   "budget_ci95": 0.0248,
+   "mean_retention": 0.7218,
+   "retention_ci95": 0.0626,
+   "median_retention": 0.8947,
+   "pct_full_retention": 0.445,
+   "n_scored": 119,
+   "n_flat_excluded": 37
+  },
+  "A(k=3)": {
+   "mean_budget_frac": 0.6724,
+   "budget_ci95": 0.0267,
+   "mean_retention": 0.8513,
+   "retention_ci95": 0.0451,
+   "median_retention": 1.0,
+   "pct_full_retention": 0.613,
+   "n_scored": 119,
+   "n_flat_excluded": 37
+  },
+  "G(C=60)": {
+   "mean_budget_frac": 0.2,
+   "budget_ci95": 0.0,
+   "mean_retention": 0.0,
+   "retention_ci95": 0.0,
+   "median_retention": 0.0,
+   "pct_full_retention": 0.0,
+   "n_scored": 119,
+   "n_flat_excluded": 37
+  },
+  "G(C=120)": {
+   "mean_budget_frac": 0.4632,
+   "budget_ci95": 0.0472,
+   "mean_retention": 0.3428,
+   "retention_ci95": 0.0799,
+   "median_retention": 0.0,
+   "pct_full_retention": 0.244,
+   "n_scored": 119,
+   "n_flat_excluded": 37
+  },
+  "G(C=200)": {
+   "mean_budget_frac": 0.8716,
+   "budget_ci95": 0.0409,
+   "mean_retention": 0.8305,
+   "retention_ci95": 0.0667,
+   "median_retention": 1.0,
+   "pct_full_retention": 0.824,
+   "n_scored": 119,
+   "n_flat_excluded": 37
+  },
+  "G(C=300)": {
+   "mean_budget_frac": 0.9794,
+   "budget_ci95": 0.0131,
+   "mean_retention": 0.9916,
+   "retention_ci95": 0.0165,
+   "median_retention": 1.0,
+   "pct_full_retention": 0.992,
+   "n_scored": 119,
+   "n_flat_excluded": 37
+  }
+ },
+ "notes": [
+  "A(k)/G(C) computed exactly from accepted-candidate curves",
+  "budget frac relative to nominal 800; full evals dominate accept cost"
+ ]
+}
