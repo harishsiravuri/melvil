@@ -12,6 +12,8 @@ DEFAULT_PRICES: dict[str, tuple[float, float]] = {
     "openai/gpt-4.1": (2.00, 8.00),
     "openai/gpt-4.1-nano": (0.10, 0.40),
     "openai/gpt-4o-mini": (0.15, 0.60),
+    "anthropic/claude-haiku-4.5": (1.00, 5.00),
+    "anthropic/claude-sonnet-4.5": (3.00, 15.00),
     "anthropic/claude-haiku-4-5-20251001": (1.00, 5.00),
     "anthropic/claude-sonnet-4-5-20250929": (3.00, 15.00),
     "meta-llama/llama-3.1-8b-instruct": (0.02, 0.03),

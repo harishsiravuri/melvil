@@ -74,9 +74,23 @@ channel to overcome a negative matched-budget baseline). This negative is
 itself paper material alongside C1's weakening: both say the early signal is
 noisier than the front-loading story implied.
 
-## Pending experiments
+## E8 — diagnose-then-write (C8) · iteration done; FROZEN protocol below
 
-- **E8 diagnose-then-write (C8)** — in progress (iteration phase).
+Iteration (banking77 + trec, F1, seeds 0–1, ~$0.91): seed→×1→×2 test accuracy
+0.760→0.811→**0.849** on banking77 (GEPA reference 0.821 — exceeded) and
+0.600→0.792→**0.856** on trec (GEPA 0.871 — 94% of gain recovered), at
+~15–25% of GEPA's optimization spend. Headline candidate.
+
+**FROZEN protocol (registered before any frozen run):** code as committed at
+freeze; all 8 prepped datasets; families F1 (gpt-4.1-mini / gpt-4.1) and F2
+(claude-haiku-4.5 / claude-sonnet-4.5); fresh seeds 20–24; arms seed / ×1 / ×2
+from one script run per (task, family, seed). GEPA references: F1 = existing
+vanilla runs (seeds 0–2 v0.1 + 10–12 confirmation, reported as such); F2 = new
+vanilla GEPA at B1, seeds 20–24. Metrics: test accuracy, macro-F1, recovery
+fraction (arm − seed)/(GEPA − seed), cost per arm; mean ± 95% CI over seeds;
+paired bootstrap vs GEPA on identical test sets. No changes after numbers.
+
+## Pending experiments
 - **E1 front-loading (C1)** — harness next; its runs also enrich this
   simulation pool.
 - **E2 dissociation (C2), E3 structure (C3), E4 coarse-to-fine (C4),

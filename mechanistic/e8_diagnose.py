@@ -147,6 +147,35 @@ def run_e8(task_name: str, seed: int, family: str, iterations: int = 2,
     return record
 
 
+FROZEN_SEEDS = [20, 21, 22, 23, 24]  # fresh, never used anywhere
+
+
+def run_gepa_f2_baseline(task_name: str, seed: int) -> None:
+    """Vanilla GEPA at B1 under family F2 — the E8-F2 comparison reference."""
+    import melvil as mv
+
+    out_path = RESULTS_DIR / f"gepa_{task_name}_f2_s{seed}.json"
+    if out_path.exists():
+        print(f"[skip] {out_path.name}")
+        return
+    task = load_task(task_name)
+    spec = mv.TaskSpec.from_examples(task_name, task["train"] + task["dev"])
+    fam = FAMILIES["f2"]
+    cfg = mv.Config(
+        task_model=fam["task"], reflection_model=fam["reflection"], budget="light",
+        seed=seed, features=mv.Features.none(),
+        run_dir=str(HERE / "runs_e8_gepa_f2" / task_name / f"s{seed}"),
+    )
+    artifact = mv.optimize(spec, task["train"], task["dev"], cfg, resume=True)
+    rep = mv.evaluate(artifact, task["test"], model=fam["task"])
+    out_path.write_text(json.dumps({
+        "experiment": "e8_gepa_baseline", "task": task_name, "family": "f2", "seed": seed,
+        "test_accuracy": rep.accuracy, "test_macro_f1": rep.macro_f1,
+        "cost_usd": round(artifact.budget.get("cost_usd", 0) + rep.cost_usd, 4),
+    }, indent=1))
+    print(f"[done] {out_path.name}: {rep.accuracy:.3f}")
+
+
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--task", choices=ALL_TASKS)
@@ -154,11 +183,19 @@ def main() -> None:
     ap.add_argument("--family", default="f1", choices=list(FAMILIES))
     ap.add_argument("--iterate", action="store_true",
                     help="cheap iteration pass: banking77+trec, seeds 0/1, f1")
+    ap.add_argument("--freeze-task", choices=ALL_TASKS,
+                    help="frozen pass for one task: both families x seeds 20-24 + GEPA-F2")
     args = ap.parse_args()
     if args.iterate:
         for t in ("banking77", "trec"):
             for s in (0, 1):
                 run_e8(t, s, "f1", tag="iter")
+    elif args.freeze_task:
+        for fam in ("f1", "f2"):
+            for s in FROZEN_SEEDS:
+                run_e8(args.freeze_task, s, fam, tag="frozen")
+        for s in FROZEN_SEEDS:
+            run_gepa_f2_baseline(args.freeze_task, s)
     elif args.task:
         run_e8(args.task, args.seed, args.family)
     else:
