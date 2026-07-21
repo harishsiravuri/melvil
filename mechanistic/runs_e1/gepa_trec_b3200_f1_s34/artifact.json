@@ -1,0 +1,303 @@
+{
+ "schema_version": 1,
+ "artifact_id": "0871ce274a13",
+ "parent_id": null,
+ "task_name": "trec",
+ "created_at": "2026-07-21T04:27:28-0500",
+ "library": {
+  "name": "melvil",
+  "version": "0.3.0"
+ },
+ "models": {
+  "task": "openrouter/openai/gpt-4.1-mini",
+  "reflection": "openrouter/openai/gpt-4.1"
+ },
+ "budget": {
+  "metric_calls_budget": 3200,
+  "metric_calls_spent": 3215,
+  "cost_usd": 0.6933,
+  "task_lm_usage": {
+   "model": "openrouter/openai/gpt-4.1-mini",
+   "prompt_tokens": 1410727,
+   "completion_tokens": 3199,
+   "calls": 1574,
+   "cache_hits": 1741,
+   "cost_usd": 0.539611
+  },
+  "reflection_lm_usage": {
+   "model": "openrouter/openai/gpt-4.1",
+   "prompt_tokens": 17727,
+   "completion_tokens": 14778,
+   "calls": 17,
+   "cache_hits": 18,
+   "cost_usd": 0.153678
+  },
+  "opt_seconds": 353.3
+ },
+ "scores": {
+  "dev_accuracy": 0.88,
+  "dev_macro_f1": 0.8556,
+  "per_label_dev": {
+   "abbreviation": {
+    "precision": 0.5,
+    "recall": 1.0,
+    "f1": 0.6667,
+    "support": 2
+   },
+   "description": {
+    "precision": 0.8636,
+    "recall": 0.9048,
+    "f1": 0.8837,
+    "support": 21
+   },
+   "entity": {
+    "precision": 0.7917,
+    "recall": 0.8261,
+    "f1": 0.8085,
+    "support": 23
+   },
+   "human": {
+    "precision": 0.95,
+    "recall": 0.8636,
+    "f1": 0.9048,
+    "support": 22
+   },
+   "location": {
+    "precision": 1.0,
+    "recall": 0.8667,
+    "f1": 0.9286,
+    "support": 15
+   },
+   "numeric": {
+    "precision": 0.9412,
+    "recall": 0.9412,
+    "f1": 0.9412,
+    "support": 17
+   }
+  },
+  "seed_dev_accuracy": 0.5,
+  "dev_accuracy_quarantined": null
+ },
+ "config_hash": "3445c4e1e8b3",
+ "config": {
+  "task_model": "openrouter/openai/gpt-4.1-mini",
+  "reflection_model": "openrouter/openai/gpt-4.1",
+  "budget": 3200,
+  "seed": 34,
+  "features": {
+   "codebook": false,
+   "confusion_reflection": false,
+   "hard_example_mining": false
+  },
+  "num_threads": 8,
+  "run_dir": "/Users/harish/Documents/Claude/Projects/6s/labelsmith/mechanistic/runs_e1/gepa_trec_b3200_f1_s34",
+  "task_temperature": 0.0,
+  "task_max_tokens": 40,
+  "reflection_temperature": 1.0,
+  "reflection_max_tokens": 8000,
+  "reflection_minibatch_size": 3,
+  "max_exemplars": 6,
+  "mining_llm_screen": true,
+  "log_proposals": true,
+  "prices": {},
+  "metric_calls": 3200
+ },
+ "label_names": [
+  "abbreviation",
+  "description",
+  "entity",
+  "human",
+  "location",
+  "numeric"
+ ],
+ "components": {
+  "instruction": "You are to classify English-language inputs containing the key \"text\" and a string (which may be a question, phrase, or fact-seeking statement) into exactly one of six predefined categories. Your response must be ONLY the single category name (one word, all lowercase) as defined below, without any explanation or extra text.\n\n### CATEGORIES & DETAILED DEFINITIONS\n- abbreviation: Assign this if the input is itself an abbreviation or acronym, or asks for the meaning, definition, expansion, or identification of an abbreviation or acronym. Includes questions like \"What does NATO stand for?\", or cases where the string is simply \"WWW\".\n- description: Use only if the input is explicitly requesting an explanation, definition (\"what is\", \"describe\", \"explain\", etc.), or a contextual, discursive passage about how something works, its features, or its background. Only classify as \"description\" if the answer is expected to be a descriptive narrative or conceptual explanation, not just a simple identification or enumeration.\n- entity: Use if the answer is expected to be a non-human, non-location noun or term (such as the name of an object, thing, animal, product, technology, organization, event (unless the expected answer is a date or number), concept, process, activity, or a list or set thereof). For ambiguous cases (e.g., asking about members of a set as in \"What colors make up a rainbow?\"), if the answer is a set/list of entities, treat the expected answer as \"entity\".\n- human: Use if the expected answer is a person's proper name or refers to a specific individual or group. This is signaled by queries seeking the name or identity of a human being (e.g., \"Who invented the telephone?\", \"Who won in 1995?\"). Even if the question mentions a discovery, invention, or accomplishment, if the answer is a human or group of humans, always choose \"human\".\n- location: Use if the answer is or refers to a geographic place, such as a country, city, region, landmark, feature, address, or notable location. If the question specifically asks for someone's nationality, assign \"location\", as the expected answer is a place or its adjective form.\n- numeric: Assign \"numeric\" if the answer is primarily or exclusively a number, quantity, date, percentage, count, temperature, currency amount, duration, or data value. This includes requests for dates (e.g., \"When did WWI end?\"), counts (e.g., \"How many continents are there?\"), or other measurable values.\n\n### SPECIAL & DOMAIN-SPECIFIC RULES\n- DO NOT use any categories except: abbreviation, description, entity, human, location, numeric.\n- Always base your classification on the expected type of answer, NOT just on question words.\n- If the question is ambiguous, focus on what the likely answer type would be.\n- Questions expecting named individuals as answers are always \"human\", even if prompted by an achievement or context (e.g., \"Who discovered gravity?\" = \"human\").\n- When asked for items in a list or set where each member is a non-human, use \"entity\" (e.g., \"What colors make up a rainbow?\" → \"entity\", since the answer is a list of color entities, not a description or numeric value).\n- For queries referencing games, system categories, or similar (like \"What is the highest possible bid in Contract Bridge?\"), use \"entity\" unless the answer is strictly a number or score (\"numeric\").\n- If the expected answer is a single number, date, or measured value, choose \"numeric\".\n- Never output more than one word, nor any text beyond the exact category name.\n- Do not infer categories beyond the provided six, even if the question might fit another type in another taxonomy.\n\n### INPUT FORMAT\nThe input is always a single-entry JSON object with the key \"text\", e.g.:\n{\n  \"text\": \"What colors make up a rainbow ?\"\n}\n\n### OUTPUT FORMAT\nRespond with exactly one of: abbreviation, description, entity, human, location, numeric.\nNo extra explanation or formatting.\n\n### EXAMPLES\n\nInput:\n{\n  \"text\": \"What does NASA stand for?\"\n}\nOutput:\nabbreviation\n\nInput:\n{\n  \"text\": \"Describe the process of osmosis\"\n}\nOutput:\ndescription\n\nInput:\n{\n  \"text\": \"What colors make up a rainbow ?\"\n}\nOutput:\nentity\n\nInput:\n{\n  \"text\": \"Who painted the Mona Lisa?\"\n}\nOutput:\nhuman\n\nInput:\n{\n  \"text\": \"What nationality is Marie Curie?\"\n}\nOutput:\nlocation\n\nInput:\n{\n  \"text\": \"How many goals were scored in the match?\"\n}\nOutput:\nnumeric\n\nRE-READ these rules before you answer. Adhere strictly to category definitions, especially for edge cases and lists/sets (e.g., \"What colors make up a rainbow?\" is \"entity\", not \"description\", because it expects a set/list of entities as the answer). Never elaborate or provide justification."
+ },
+ "exemplars": [],
+ "confusion": {
+  "labels": [
+   "abbreviation",
+   "description",
+   "entity",
+   "human",
+   "location",
+   "numeric"
+  ],
+  "matrix": [
+   [
+    2,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    2,
+    19,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    2,
+    19,
+    1,
+    0,
+    1,
+    0
+   ],
+   [
+    0,
+    0,
+    3,
+    19,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    1,
+    1,
+    0,
+    13,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    1,
+    0,
+    0,
+    16,
+    0
+   ]
+  ],
+  "unparseable_column": true
+ },
+ "curve": [
+  {
+   "metric_calls": 0,
+   "dev_score": 0.5
+  },
+  {
+   "metric_calls": 115,
+   "dev_score": 0.45
+  },
+  {
+   "metric_calls": 221,
+   "dev_score": 0.59
+  },
+  {
+   "metric_calls": 327,
+   "dev_score": 0.79
+  },
+  {
+   "metric_calls": 436,
+   "dev_score": 0.72
+  },
+  {
+   "metric_calls": 542,
+   "dev_score": 0.76
+  },
+  {
+   "metric_calls": 648,
+   "dev_score": 0.83
+  },
+  {
+   "metric_calls": 772,
+   "dev_score": 0.79
+  },
+  {
+   "metric_calls": 887,
+   "dev_score": 0.77
+  },
+  {
+   "metric_calls": 993,
+   "dev_score": 0.73
+  },
+  {
+   "metric_calls": 1099,
+   "dev_score": 0.84
+  },
+  {
+   "metric_calls": 1205,
+   "dev_score": 0.8
+  },
+  {
+   "metric_calls": 1311,
+   "dev_score": 0.76
+  },
+  {
+   "metric_calls": 1435,
+   "dev_score": 0.83
+  },
+  {
+   "metric_calls": 1541,
+   "dev_score": 0.78
+  },
+  {
+   "metric_calls": 1656,
+   "dev_score": 0.82
+  },
+  {
+   "metric_calls": 1765,
+   "dev_score": 0.79
+  },
+  {
+   "metric_calls": 1871,
+   "dev_score": 0.84
+  },
+  {
+   "metric_calls": 1977,
+   "dev_score": 0.79
+  },
+  {
+   "metric_calls": 2083,
+   "dev_score": 0.83
+  },
+  {
+   "metric_calls": 2189,
+   "dev_score": 0.88
+  },
+  {
+   "metric_calls": 2298,
+   "dev_score": 0.81
+  },
+  {
+   "metric_calls": 2434,
+   "dev_score": 0.8
+  },
+  {
+   "metric_calls": 2543,
+   "dev_score": 0.8
+  },
+  {
+   "metric_calls": 2667,
+   "dev_score": 0.82
+  },
+  {
+   "metric_calls": 2773,
+   "dev_score": 0.84
+  },
+  {
+   "metric_calls": 2894,
+   "dev_score": 0.84
+  },
+  {
+   "metric_calls": 3003,
+   "dev_score": 0.7
+  },
+  {
+   "metric_calls": 3115,
+   "dev_score": 0.86
+  }
+ ],
+ "notes": ""
+}

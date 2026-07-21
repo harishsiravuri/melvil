@@ -1,0 +1,90 @@
+{
+ "curve": [
+  {
+   "metric_calls": 0,
+   "dev": 0.93
+  },
+  {
+   "metric_calls": 124,
+   "dev": 0.93
+  },
+  {
+   "metric_calls": 230,
+   "dev": 0.93
+  },
+  {
+   "metric_calls": 390,
+   "dev": 0.93
+  },
+  {
+   "metric_calls": 598,
+   "dev": 0.92
+  },
+  {
+   "metric_calls": 821,
+   "dev": 0.89
+  },
+  {
+   "metric_calls": 957,
+   "dev": 0.92
+  },
+  {
+   "metric_calls": 1195,
+   "dev": 0.89
+  },
+  {
+   "metric_calls": 1457,
+   "dev": 0.89
+  },
+  {
+   "metric_calls": 1563,
+   "dev": 0.93
+  },
+  {
+   "metric_calls": 1762,
+   "dev": 0.92
+  },
+  {
+   "metric_calls": 1994,
+   "dev": 0.79
+  },
+  {
+   "metric_calls": 2160,
+   "dev": 0.92
+  },
+  {
+   "metric_calls": 2308,
+   "dev": 0.91
+  },
+  {
+   "metric_calls": 2474,
+   "dev": 0.75
+  },
+  {
+   "metric_calls": 2646,
+   "dev": 0.92
+  },
+  {
+   "metric_calls": 2851,
+   "dev": 0.92
+  },
+  {
+   "metric_calls": 2978,
+   "dev": 0.94
+  },
+  {
+   "metric_calls": 3147,
+   "dev": 0.93
+  }
+ ],
+ "test_accuracy": 0.93,
+ "best_prompt": "You are tasked with solving step-by-step math word problems based solely on the provided problem statement. First, carefully read and extract all explicit and implicit numerical values, relevant relationships, and necessary information. For cases involving time frames (such as splitting a year into \"first half\" and \"second half\"), make clear which elements fall into each category, based on standard conventions (e.g., months 1\u20136 as the first half of the year, months 7\u201312 as the second half). Analyze what is being asked (for example, the difference in counts of items given in different periods), and identify any special requirements tied to events (such as birthday presents being tied to the months in which birthdays occur and Christmas presents always being counted once per brother regardless of birth month).\n\nPerform unit conversions if necessary. For each type of present, clearly count how many are needed for each half of the year (or other relevant categories), based on the problem's context. For Christmas or universally applied gifts, count them once for each recipient, not per half-year unless the problem states otherwise.\n\nShow all calculations and intermediate steps. If the answer is monetary and the result is a whole number, output the number without decimals (\"6\"). If not whole, round and display exactly two decimal digits (\"6.25\"). For non-monetary answers, report without a decimal if the result is an integer (\"4\" instead of \"4.0\"). Do not provide units or currency symbols in your final answer.\n\nConclude by repeating only the final numeric answer in a separate line using the format:\n#### <number>\n\nwhere <number> is your calculated answer, without any currency symbols or units.",
+ "cost_usd": 0.8668,
+ "total_metric_calls": 3247,
+ "n_proposals": 99,
+ "optimizer": "gepa",
+ "task": "gsm8k",
+ "budget": 3200,
+ "seed": 32,
+ "family": "f1"
+}

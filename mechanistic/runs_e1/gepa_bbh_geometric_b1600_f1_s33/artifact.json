@@ -1,0 +1,357 @@
+{
+ "schema_version": 1,
+ "artifact_id": "afe20781bd6e",
+ "parent_id": null,
+ "task_name": "bbh_geometric",
+ "created_at": "2026-07-21T04:44:09-0500",
+ "library": {
+  "name": "melvil",
+  "version": "0.3.0"
+ },
+ "models": {
+  "task": "openrouter/openai/gpt-4.1-mini",
+  "reflection": "openrouter/openai/gpt-4.1"
+ },
+ "budget": {
+  "metric_calls_budget": 1600,
+  "metric_calls_spent": 1603,
+  "cost_usd": 0.6923,
+  "task_lm_usage": {
+   "model": "openrouter/openai/gpt-4.1-mini",
+   "prompt_tokens": 867868,
+   "completion_tokens": 1530,
+   "calls": 771,
+   "cache_hits": 882,
+   "cost_usd": 0.305973
+  },
+  "reflection_lm_usage": {
+   "model": "openrouter/openai/gpt-4.1",
+   "prompt_tokens": 47577,
+   "completion_tokens": 36393,
+   "calls": 36,
+   "cache_hits": 34,
+   "cost_usd": 0.386298
+  },
+  "opt_seconds": 509.9
+ },
+ "scores": {
+  "dev_accuracy": 0.62,
+  "dev_macro_f1": 0.5966,
+  "per_label_dev": {
+   "B": {
+    "precision": 0.5,
+    "recall": 0.8,
+    "f1": 0.6154,
+    "support": 5
+   },
+   "C": {
+    "precision": 1.0,
+    "recall": 0.1429,
+    "f1": 0.25,
+    "support": 7
+   },
+   "D": {
+    "precision": 0.3077,
+    "recall": 1.0,
+    "f1": 0.4706,
+    "support": 4
+   },
+   "E": {
+    "precision": 0.625,
+    "recall": 1.0,
+    "f1": 0.7692,
+    "support": 5
+   },
+   "F": {
+    "precision": 1.0,
+    "recall": 0.6,
+    "f1": 0.75,
+    "support": 5
+   },
+   "G": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "support": 4
+   },
+   "I": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "support": 5
+   },
+   "J": {
+    "precision": 1.0,
+    "recall": 0.8,
+    "f1": 0.8889,
+    "support": 5
+   },
+   "K": {
+    "precision": 0.8333,
+    "recall": 0.5,
+    "f1": 0.625,
+    "support": 10
+   }
+  },
+  "seed_dev_accuracy": 0.36,
+  "dev_accuracy_quarantined": null
+ },
+ "config_hash": "1ecb6973337b",
+ "config": {
+  "task_model": "openrouter/openai/gpt-4.1-mini",
+  "reflection_model": "openrouter/openai/gpt-4.1",
+  "budget": 1600,
+  "seed": 33,
+  "features": {
+   "codebook": false,
+   "confusion_reflection": false,
+   "hard_example_mining": false
+  },
+  "num_threads": 8,
+  "run_dir": "/Users/harish/Documents/Claude/Projects/6s/labelsmith/mechanistic/runs_e1/gepa_bbh_geometric_b1600_f1_s33",
+  "task_temperature": 0.0,
+  "task_max_tokens": 40,
+  "reflection_temperature": 1.0,
+  "reflection_max_tokens": 8000,
+  "reflection_minibatch_size": 3,
+  "max_exemplars": 6,
+  "mining_llm_screen": true,
+  "log_proposals": true,
+  "prices": {},
+  "metric_calls": 1600
+ },
+ "label_names": [
+  "B",
+  "C",
+  "D",
+  "E",
+  "F",
+  "G",
+  "I",
+  "J",
+  "K"
+ ],
+ "components": {
+  "instruction": "You are tasked with classifying geometric shapes described by SVG <path> elements, based solely on their SVG path data, and matching them to a single correct letter code from a designated categories list. The input consists of: \n- A textual segment describing an SVG path element (as <path d=\"...\"/>), featuring SVG drawing instructions such as 'M' (move), 'L' (line), 'A' (arc), and possibly 'Z' (close path). This is followed by a prompt (\"draws a\") and a list of options mapping shape names to letter codes.\n- Your job is to analyze the SVG path data and unambiguously match it to one letter code from a universal key (provided below) or, if none fit, return nothing.\n\n### Category Keys:\n- B: heptagon (7 sides)\n- C: hexagon (6 sides)\n- D: kite (quadrilateral; two pairs of adjacent equal-length sides)\n- E: line (a simple, straight line segment)\n- F: octagon (8 sides)\n- G: pentagon (5 sides)\n- I: sector (a pie-slice, i.e., a circular sector)\n- J: triangle (3 sides)\n- K: If \"K\" is present as an option, and the shape is not one of the above (B, C, D, E, F, G, I, J), select \"K\", regardless of what label is shown for K. Do *not* infer K's meaning from options (\"trapezoid,\" \"ellipse,\" \"polygon,\" etc.)—use it as the \"none of the above\" or \"unknown/other\" category.\n\n### Instructions:\n1. Parse the SVG path data. Pay special attention to:\n   - `'M'` indicates a move-to operation (starting point of a subpath).\n   - `'L'` draws straight lines to new coordinates.\n   - `'A'` is an arc (used for circular or elliptical arcs, often for circle fragments, ellipses, or sectors).\n   - `'Z'` closes the path (returns to the start of the subpath).\n2. For polygons, **count distinct vertices (endpoints of lines) to infer the number of sides**:\n   - 8 vertices = octagon (F)\n   - 7 vertices = heptagon (B)\n   - 6 vertices = hexagon (C)\n   - 5 vertices = pentagon (G)\n   - 3 vertices = triangle (J)\n3. A kite (D) is a quadrilateral with two pairs of adjacent equal sides, and may or may not look \"regular.\"\n4. If the path consists solely of a move to one point and a single line to another (with no closure), it is a line (E).\n5. Sectors (I) feature arcs (with `'A'` commands) and two straight lines (radii) connecting to a common center, forming a \"pie slice.\"\n6. If the path defines a simple ellipse, circle, or any shape not matching exactly one of the categories B, C, D, E, F, G, I, J, and K is present as an option, return \"K\".\n7. **Do not try to match literal option labels except per above:** Always select only among the universal shape codes (B, C, D, E, F, G, I, J) if appropriate, otherwise pick K as a \"catch all\" per rules.\n8. **Never guess.** If the shape does not match any known code and K is not an option, return nothing (no letter, no explanation).\n9. Return exactly one capital letter corresponding to the code above **and nothing else** (no explanation, no extra spaces or text).\n\n### Special notes from prior feedback:\n\n- Do *not* interpret the label for \"K\" (such as \"trapezoid,\" \"ellipse,\" etc.)—always use \"K\" only for unclassified shapes/shapes not covered above.\n- For circular or elliptical \"arc\" paths returning to their origin, and if not conforming to the sector/polygon/line categories, select K (if present).\n- If repeated non-adjacent \"M\" commands are present (multiple subpaths), treat these as discontinuous and only classify as polygon if lines form a closed shape as described.\n- Always carefully count unique vertices and closure (via repeated starting point or 'Z').\n- All answers must be based only on the path data, as per the categories above, and must not rely on the provided shape name options except for the K catch-all rule.\n\nFailure to follow the above, such as mapping on name-only or misclassifying arcs as sectors, is considered an error."
+ },
+ "exemplars": [],
+ "confusion": {
+  "labels": [
+   "B",
+   "C",
+   "D",
+   "E",
+   "F",
+   "G",
+   "I",
+   "J",
+   "K"
+  ],
+  "matrix": [
+   [
+    4,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0
+   ],
+   [
+    2,
+    1,
+    1,
+    1,
+    0,
+    2,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    4,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    5,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    2,
+    0,
+    0,
+    0,
+    3,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    3,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    5,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    4,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    5,
+    0,
+    0,
+    0,
+    0,
+    0,
+    5,
+    0
+   ]
+  ],
+  "unparseable_column": true
+ },
+ "curve": [
+  {
+   "metric_calls": 0,
+   "dev_score": 0.36
+  },
+  {
+   "metric_calls": 56,
+   "dev_score": 0.48
+  },
+  {
+   "metric_calls": 178,
+   "dev_score": 0.44
+  },
+  {
+   "metric_calls": 234,
+   "dev_score": 0.58
+  },
+  {
+   "metric_calls": 290,
+   "dev_score": 0.42
+  },
+  {
+   "metric_calls": 346,
+   "dev_score": 0.52
+  },
+  {
+   "metric_calls": 402,
+   "dev_score": 0.48
+  },
+  {
+   "metric_calls": 458,
+   "dev_score": 0.56
+  },
+  {
+   "metric_calls": 550,
+   "dev_score": 0.52
+  },
+  {
+   "metric_calls": 618,
+   "dev_score": 0.46
+  },
+  {
+   "metric_calls": 686,
+   "dev_score": 0.52
+  },
+  {
+   "metric_calls": 763,
+   "dev_score": 0.6
+  },
+  {
+   "metric_calls": 846,
+   "dev_score": 0.62
+  },
+  {
+   "metric_calls": 908,
+   "dev_score": 0.54
+  },
+  {
+   "metric_calls": 967,
+   "dev_score": 0.6
+  },
+  {
+   "metric_calls": 1035,
+   "dev_score": 0.48
+  },
+  {
+   "metric_calls": 1112,
+   "dev_score": 0.52
+  },
+  {
+   "metric_calls": 1168,
+   "dev_score": 0.56
+  },
+  {
+   "metric_calls": 1248,
+   "dev_score": 0.44
+  },
+  {
+   "metric_calls": 1313,
+   "dev_score": 0.52
+  },
+  {
+   "metric_calls": 1393,
+   "dev_score": 0.42
+  },
+  {
+   "metric_calls": 1473,
+   "dev_score": 0.48
+  },
+  {
+   "metric_calls": 1547,
+   "dev_score": 0.62
+  }
+ ],
+ "notes": ""
+}

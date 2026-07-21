@@ -1,0 +1,353 @@
+{
+ "schema_version": 1,
+ "artifact_id": "1463af5781bd",
+ "parent_id": null,
+ "task_name": "bbh_geometric",
+ "created_at": "2026-07-21T04:25:54-0500",
+ "library": {
+  "name": "melvil",
+  "version": "0.3.0"
+ },
+ "models": {
+  "task": "openrouter/openai/gpt-4.1-mini",
+  "reflection": "openrouter/openai/gpt-4.1"
+ },
+ "budget": {
+  "metric_calls_budget": 1600,
+  "metric_calls_spent": 1601,
+  "cost_usd": 0.7884,
+  "task_lm_usage": {
+   "model": "openrouter/openai/gpt-4.1-mini",
+   "prompt_tokens": 940708,
+   "completion_tokens": 1537,
+   "calls": 753,
+   "cache_hits": 898,
+   "cost_usd": 0.306474
+  },
+  "reflection_lm_usage": {
+   "model": "openrouter/openai/gpt-4.1",
+   "prompt_tokens": 62199,
+   "completion_tokens": 45070,
+   "calls": 43,
+   "cache_hits": 36,
+   "cost_usd": 0.481886
+  },
+  "opt_seconds": 701.1
+ },
+ "scores": {
+  "dev_accuracy": 0.58,
+  "dev_macro_f1": 0.5662,
+  "per_label_dev": {
+   "B": {
+    "precision": 0.5714,
+    "recall": 0.8,
+    "f1": 0.6667,
+    "support": 5
+   },
+   "C": {
+    "precision": 1.0,
+    "recall": 0.1429,
+    "f1": 0.25,
+    "support": 7
+   },
+   "D": {
+    "precision": 0.2,
+    "recall": 0.5,
+    "f1": 0.2857,
+    "support": 4
+   },
+   "E": {
+    "precision": 0.4167,
+    "recall": 1.0,
+    "f1": 0.5882,
+    "support": 5
+   },
+   "F": {
+    "precision": 1.0,
+    "recall": 0.6,
+    "f1": 0.75,
+    "support": 5
+   },
+   "G": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "support": 4
+   },
+   "I": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "support": 5
+   },
+   "J": {
+    "precision": 1.0,
+    "recall": 0.8,
+    "f1": 0.8889,
+    "support": 5
+   },
+   "K": {
+    "precision": 1.0,
+    "recall": 0.5,
+    "f1": 0.6667,
+    "support": 10
+   }
+  },
+  "seed_dev_accuracy": 0.36,
+  "dev_accuracy_quarantined": null
+ },
+ "config_hash": "97ac492a08de",
+ "config": {
+  "task_model": "openrouter/openai/gpt-4.1-mini",
+  "reflection_model": "openrouter/openai/gpt-4.1",
+  "budget": 1600,
+  "seed": 31,
+  "features": {
+   "codebook": false,
+   "confusion_reflection": false,
+   "hard_example_mining": false
+  },
+  "num_threads": 8,
+  "run_dir": "/Users/harish/Documents/Claude/Projects/6s/labelsmith/mechanistic/runs_e1/gepa_bbh_geometric_b1600_f1_s31",
+  "task_temperature": 0.0,
+  "task_max_tokens": 40,
+  "reflection_temperature": 1.0,
+  "reflection_max_tokens": 8000,
+  "reflection_minibatch_size": 3,
+  "max_exemplars": 6,
+  "mining_llm_screen": true,
+  "log_proposals": true,
+  "prices": {},
+  "metric_calls": 1600
+ },
+ "label_names": [
+  "B",
+  "C",
+  "D",
+  "E",
+  "F",
+  "G",
+  "I",
+  "J",
+  "K"
+ ],
+ "components": {
+  "instruction": "You are given a prompt consisting of a brief description of an SVG path element, including its \"d\" attribute (the path data string), and a list of multiple-choice options labeled with upper-case letters. Your task is to classify the shape described by the SVG path data into the correct category, responding with only the single correct uppercase letter chosen from the following set: B, C, D, E, F, G, I, J, K.\n\nUse the following mapping for classification:\n- B: heptagon (seven-sided polygon)\n- C: hexagon (six-sided polygon)\n- D: kite (a quadrilateral with two distinct pairs of adjacent sides that are equal in length, but not necessarily right angles)\n- E: line (a straight line segment, not a polygon or curve)\n- F: octagon (eight-sided polygon)\n- G: pentagon (five-sided polygon)\n- I: sector (a portion of a circle bounded by two radii and their included arc)\n- J: triangle (three-sided polygon)\n- K: ellipse (including ellipses and circles—see the note below)\n\nImportant and domain-specific guidance:\n1. The \"d\" attribute provides the geometric commands—typically move (M), line (L), curve (C, Q), and close path (Z)—that, when traced, form the overall shape.\n2. To determine the number of sides, count the number of distinct lines connecting points before the path closes (typically every \"L\" or \"M\" indicates a vertex, and a repeated initial point indicates closure).\n3. Only reply using one of the letters in this list: B, C, D, E, F, G, I, J, K.\n4. Do **not** respond with 'A' (even if 'A' is \"circle\"). Circles, ellipses, and their segments should always be classified as 'K' (ellipse), according to the rules.\n5. 'K' (ellipse) explicitly includes both ellipses and circles, regardless of whether 'circle' or 'ellipse' appears in the list of options. Always use 'K' for these.\n6. For polygons, match the number of sides: 3 (J), 5 (G), 6 (C), 7 (B), 8 (F). For lines, reply with E. For a closed curved region with two straight lines meeting at the center (as in a pizza slice), use I (sector).\n7. You do not need to explain your answer or provide any rationale—all output must be a single uppercase letter from the allowed choices.\n\nExample path analysis strategies:\n- If you see a path like \"M x1,y1 L x2,y2 L x3,y3 Z\", it closes a triangle (three sides, reply 'J').\n- For \"M ... L ... L ... L ... L ... Z\" with exactly 5 corners, reply 'G' (pentagon).\n- If the path data uses \"A\" (elliptical arc), or matches the form of a circle or ellipse, reply 'K'.\n- For a single \"M ... L ...\" with no closure, and no further commands, reply 'E' for line.\n- For kites, look for four-sided polygons with two pairs of equal adjacent sides; for sectors (I), look for a path starting at the circle center, using an arc, and returning to the center.\n- Be careful to count vertices based on the command sequence—not just the number of commands, but where \"Z\" or the repeating start point indicates closure and number of sides.\n\nYour response must be a single, uppercase letter from: B, C, D, E, F, G, I, J, K—with no explanation or commentary."
+ },
+ "exemplars": [],
+ "confusion": {
+  "labels": [
+   "B",
+   "C",
+   "D",
+   "E",
+   "F",
+   "G",
+   "I",
+   "J",
+   "K"
+  ],
+  "matrix": [
+   [
+    4,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    2,
+    1,
+    2,
+    1,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    2,
+    0,
+    0,
+    2,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    5,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    1,
+    0,
+    1,
+    0,
+    3,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    2,
+    2,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    5,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    4,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    3,
+    2,
+    0,
+    0,
+    0,
+    0,
+    5,
+    0
+   ]
+  ],
+  "unparseable_column": true
+ },
+ "curve": [
+  {
+   "metric_calls": 0,
+   "dev_score": 0.36
+  },
+  {
+   "metric_calls": 68,
+   "dev_score": 0.42
+  },
+  {
+   "metric_calls": 130,
+   "dev_score": 0.54
+  },
+  {
+   "metric_calls": 198,
+   "dev_score": 0.44
+  },
+  {
+   "metric_calls": 254,
+   "dev_score": 0.48
+  },
+  {
+   "metric_calls": 316,
+   "dev_score": 0.48
+  },
+  {
+   "metric_calls": 390,
+   "dev_score": 0.44
+  },
+  {
+   "metric_calls": 464,
+   "dev_score": 0.48
+  },
+  {
+   "metric_calls": 535,
+   "dev_score": 0.5
+  },
+  {
+   "metric_calls": 600,
+   "dev_score": 0.5
+  },
+  {
+   "metric_calls": 707,
+   "dev_score": 0.46
+  },
+  {
+   "metric_calls": 781,
+   "dev_score": 0.52
+  },
+  {
+   "metric_calls": 855,
+   "dev_score": 0.54
+  },
+  {
+   "metric_calls": 980,
+   "dev_score": 0.5
+  },
+  {
+   "metric_calls": 1063,
+   "dev_score": 0.5
+  },
+  {
+   "metric_calls": 1131,
+   "dev_score": 0.44
+  },
+  {
+   "metric_calls": 1199,
+   "dev_score": 0.48
+  },
+  {
+   "metric_calls": 1261,
+   "dev_score": 0.5
+  },
+  {
+   "metric_calls": 1323,
+   "dev_score": 0.52
+  },
+  {
+   "metric_calls": 1418,
+   "dev_score": 0.48
+  },
+  {
+   "metric_calls": 1486,
+   "dev_score": 0.44
+  },
+  {
+   "metric_calls": 1548,
+   "dev_score": 0.58
+  }
+ ],
+ "notes": ""
+}

@@ -1,0 +1,303 @@
+{
+ "schema_version": 1,
+ "artifact_id": "372903c5abf5",
+ "parent_id": null,
+ "task_name": "trec",
+ "created_at": "2026-07-21T04:21:08-0500",
+ "library": {
+  "name": "melvil",
+  "version": "0.3.0"
+ },
+ "models": {
+  "task": "openrouter/openai/gpt-4.1-mini",
+  "reflection": "openrouter/openai/gpt-4.1"
+ },
+ "budget": {
+  "metric_calls_budget": 3200,
+  "metric_calls_spent": 3215,
+  "cost_usd": 0.6069,
+  "task_lm_usage": {
+   "model": "openrouter/openai/gpt-4.1-mini",
+   "prompt_tokens": 1247061,
+   "completion_tokens": 3176,
+   "calls": 1570,
+   "cache_hits": 1745,
+   "cost_usd": 0.474415
+  },
+  "reflection_lm_usage": {
+   "model": "openrouter/openai/gpt-4.1",
+   "prompt_tokens": 14356,
+   "completion_tokens": 12969,
+   "calls": 17,
+   "cache_hits": 16,
+   "cost_usd": 0.132464
+  },
+  "opt_seconds": 350.0
+ },
+ "scores": {
+  "dev_accuracy": 0.88,
+  "dev_macro_f1": 0.876,
+  "per_label_dev": {
+   "abbreviation": {
+    "precision": 0.6667,
+    "recall": 1.0,
+    "f1": 0.8,
+    "support": 2
+   },
+   "description": {
+    "precision": 0.8636,
+    "recall": 0.9048,
+    "f1": 0.8837,
+    "support": 21
+   },
+   "entity": {
+    "precision": 0.7917,
+    "recall": 0.8261,
+    "f1": 0.8085,
+    "support": 23
+   },
+   "human": {
+    "precision": 0.9,
+    "recall": 0.8182,
+    "f1": 0.8571,
+    "support": 22
+   },
+   "location": {
+    "precision": 1.0,
+    "recall": 0.9333,
+    "f1": 0.9655,
+    "support": 15
+   },
+   "numeric": {
+    "precision": 0.9412,
+    "recall": 0.9412,
+    "f1": 0.9412,
+    "support": 17
+   }
+  },
+  "seed_dev_accuracy": 0.5,
+  "dev_accuracy_quarantined": null
+ },
+ "config_hash": "a553de0d8f8d",
+ "config": {
+  "task_model": "openrouter/openai/gpt-4.1-mini",
+  "reflection_model": "openrouter/openai/gpt-4.1",
+  "budget": 3200,
+  "seed": 33,
+  "features": {
+   "codebook": false,
+   "confusion_reflection": false,
+   "hard_example_mining": false
+  },
+  "num_threads": 8,
+  "run_dir": "/Users/harish/Documents/Claude/Projects/6s/labelsmith/mechanistic/runs_e1/gepa_trec_b3200_f1_s33",
+  "task_temperature": 0.0,
+  "task_max_tokens": 40,
+  "reflection_temperature": 1.0,
+  "reflection_max_tokens": 8000,
+  "reflection_minibatch_size": 3,
+  "max_exemplars": 6,
+  "mining_llm_screen": true,
+  "log_proposals": true,
+  "prices": {},
+  "metric_calls": 3200
+ },
+ "label_names": [
+  "abbreviation",
+  "description",
+  "entity",
+  "human",
+  "location",
+  "numeric"
+ ],
+ "components": {
+  "instruction": "You are given a short piece of text—typically a question or statement—and your task is to classify this text into exactly one of six predefined categories based on what the text is primarily seeking as an answer type. The possible categories are: abbreviation, description, entity, human, location, or numeric. \n\n## Input Format:\n- Each input will provide a \"text\" field containing a short question or sentence (the subject of classification).\n\n## Output Format:\n- Output exactly one word: the single, most appropriate category from the list above. Do not provide explanations or extra formatting; the output should consist of only the one selected category.\n\n## Category Definitions:\n- **abbreviation:** Use this category only if the text asks explicitly about an abbreviation or acronym (e.g., \"What does NASA stand for?\"). This includes questions asking to spell out or explain an acronym.\n- **description:** Use this only if the question is clearly seeking an explanation, definition, process, mechanism, \"why,\" or \"how\" something happens. Examples: \"What is osmosis?\", \"Explain Newton's Third Law,\" \"How does photosynthesis work?\" Do NOT use 'description' for general questions unless a definition or explanation is explicitly requested.\n- **entity:** Use this if the question asks for a non-human, non-location thing, such as a physical object, organism, category, class, group, or type. This includes animals, plants, things, classes, groups, or general types (e.g., \"What is the fastest land animal?,\" \"Name a type of bridge.\"). Also use for questions asking about \"types,\" \"kinds,\" or \"groups\" that do not ask for a number or description.\n- **human:** Use this for questions that seek a specific person or a group of people as the answer (e.g., \"Who discovered penicillin?\"). Do NOT use for organizations, nationalities, ethnicities, or non-human groups.\n- **location:** Use this for questions where the answer is a specific place, address, geographic location, or country, including questions about nationality or origin when the answer is a country or region (e.g., \"Where is the Eiffel Tower?\", \"What nationality is Albert Einstein?\"). If nationality, ethnicity, or origin answers as a place, label as 'location'.\n- **numeric:** Use this if the answer must be a number, count, measure, size, age, date, or other quantitative value (e.g., \"How many planets are in the solar system?\", \"What is the length of the Amazon River?\", \"How old is the universe?\"). Use this for superlative questions that clearly call for a numeric answer (\"What is the highest temperature...?\").\n\n## Detailed Task Guidance:\n- Always focus on what the question is asking for as an answer, not merely its grammatical form.\n- When a question contains a superlative like \"highest,\" \"largest,\" etc., assign 'numeric' only if the expected answer is numeric (e.g., \"highest temperature\" → numeric; \"highest mountain\" → entity because the answer is a name).\n- When questions concern \"nationality,\" \"origin,\" or similar, where the expected answer is a place (such as a country or region), use 'location'.\n- Do NOT default to 'description'. Reserve it only for clear requests for explanations or definitions.\n- For questions about \"types,\" \"kinds,\" or \"groups,\" use 'entity' unless the text explicitly asks for a number, a description, or another specific answer type listed.\n- Only output one word: abbreviation, description, entity, human, location, or numeric.\n\n## Known Nuances & Examples:\n- Questions that appear to seek a thing, but where the answer is a location (such as planetary discoveries) must be labeled as 'location', not 'entity'. For example: \"What planet did Percival Lovell discover?\" should be 'location' because planets are classified here as locations, not general entities.\n- For all questions, carefully determine the core information being requested and select the most precise category.\n\nIn summary, your job is to analyze each text and use both broad classification and domain-specific nuances—such as treating planets as 'locations' rather than 'entities'—to produce a single, accurately chosen category label as output."
+ },
+ "exemplars": [],
+ "confusion": {
+  "labels": [
+   "abbreviation",
+   "description",
+   "entity",
+   "human",
+   "location",
+   "numeric"
+  ],
+  "matrix": [
+   [
+    2,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    1,
+    19,
+    0,
+    1,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    2,
+    19,
+    1,
+    0,
+    1,
+    0
+   ],
+   [
+    0,
+    0,
+    4,
+    18,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    1,
+    0,
+    14,
+    0,
+    0
+   ],
+   [
+    0,
+    1,
+    0,
+    0,
+    0,
+    16,
+    0
+   ]
+  ],
+  "unparseable_column": true
+ },
+ "curve": [
+  {
+   "metric_calls": 0,
+   "dev_score": 0.5
+  },
+  {
+   "metric_calls": 106,
+   "dev_score": 0.77
+  },
+  {
+   "metric_calls": 215,
+   "dev_score": 0.79
+  },
+  {
+   "metric_calls": 327,
+   "dev_score": 0.75
+  },
+  {
+   "metric_calls": 433,
+   "dev_score": 0.71
+  },
+  {
+   "metric_calls": 539,
+   "dev_score": 0.79
+  },
+  {
+   "metric_calls": 648,
+   "dev_score": 0.82
+  },
+  {
+   "metric_calls": 757,
+   "dev_score": 0.77
+  },
+  {
+   "metric_calls": 878,
+   "dev_score": 0.82
+  },
+  {
+   "metric_calls": 990,
+   "dev_score": 0.82
+  },
+  {
+   "metric_calls": 1108,
+   "dev_score": 0.79
+  },
+  {
+   "metric_calls": 1217,
+   "dev_score": 0.78
+  },
+  {
+   "metric_calls": 1329,
+   "dev_score": 0.82
+  },
+  {
+   "metric_calls": 1435,
+   "dev_score": 0.77
+  },
+  {
+   "metric_calls": 1541,
+   "dev_score": 0.7
+  },
+  {
+   "metric_calls": 1662,
+   "dev_score": 0.74
+  },
+  {
+   "metric_calls": 1768,
+   "dev_score": 0.79
+  },
+  {
+   "metric_calls": 1898,
+   "dev_score": 0.82
+  },
+  {
+   "metric_calls": 2004,
+   "dev_score": 0.83
+  },
+  {
+   "metric_calls": 2125,
+   "dev_score": 0.78
+  },
+  {
+   "metric_calls": 2237,
+   "dev_score": 0.88
+  },
+  {
+   "metric_calls": 2349,
+   "dev_score": 0.84
+  },
+  {
+   "metric_calls": 2458,
+   "dev_score": 0.86
+  },
+  {
+   "metric_calls": 2564,
+   "dev_score": 0.83
+  },
+  {
+   "metric_calls": 2670,
+   "dev_score": 0.83
+  },
+  {
+   "metric_calls": 2776,
+   "dev_score": 0.81
+  },
+  {
+   "metric_calls": 2882,
+   "dev_score": 0.74
+  },
+  {
+   "metric_calls": 3009,
+   "dev_score": 0.87
+  },
+  {
+   "metric_calls": 3115,
+   "dev_score": 0.82
+  }
+ ],
+ "notes": ""
+}

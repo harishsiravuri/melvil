@@ -1,0 +1,313 @@
+{
+ "schema_version": 1,
+ "artifact_id": "29228c9dbf18",
+ "parent_id": null,
+ "task_name": "bbh_geometric",
+ "created_at": "2026-07-21T03:24:25-0500",
+ "library": {
+  "name": "melvil",
+  "version": "0.3.0"
+ },
+ "models": {
+  "task": "openrouter/openai/gpt-4.1-mini",
+  "reflection": "openrouter/openai/gpt-4.1"
+ },
+ "budget": {
+  "metric_calls_budget": 800,
+  "metric_calls_spent": 801,
+  "cost_usd": 0.5483,
+  "task_lm_usage": {
+   "model": "openrouter/openai/gpt-4.1-mini",
+   "prompt_tokens": 693339,
+   "completion_tokens": 1653,
+   "calls": 800,
+   "cache_hits": 51,
+   "cost_usd": 0.279366
+  },
+  "reflection_lm_usage": {
+   "model": "openrouter/openai/gpt-4.1",
+   "prompt_tokens": 32403,
+   "completion_tokens": 25519,
+   "calls": 31,
+   "cache_hits": 0,
+   "cost_usd": 0.268958
+  },
+  "opt_seconds": 554.8
+ },
+ "scores": {
+  "dev_accuracy": 0.62,
+  "dev_macro_f1": 0.6184,
+  "per_label_dev": {
+   "B": {
+    "precision": 0.4444,
+    "recall": 0.8,
+    "f1": 0.5714,
+    "support": 5
+   },
+   "C": {
+    "precision": 1.0,
+    "recall": 0.2857,
+    "f1": 0.4444,
+    "support": 7
+   },
+   "D": {
+    "precision": 0.2,
+    "recall": 0.5,
+    "f1": 0.2857,
+    "support": 4
+   },
+   "E": {
+    "precision": 0.5556,
+    "recall": 1.0,
+    "f1": 0.7143,
+    "support": 5
+   },
+   "F": {
+    "precision": 1.0,
+    "recall": 0.6,
+    "f1": 0.75,
+    "support": 5
+   },
+   "G": {
+    "precision": 0.5,
+    "recall": 0.25,
+    "f1": 0.3333,
+    "support": 4
+   },
+   "I": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "support": 5
+   },
+   "J": {
+    "precision": 0.8,
+    "recall": 0.8,
+    "f1": 0.8,
+    "support": 5
+   },
+   "K": {
+    "precision": 1.0,
+    "recall": 0.5,
+    "f1": 0.6667,
+    "support": 10
+   }
+  },
+  "seed_dev_accuracy": 0.36,
+  "dev_accuracy_quarantined": null
+ },
+ "config_hash": "5972b3330da1",
+ "config": {
+  "task_model": "openrouter/openai/gpt-4.1-mini",
+  "reflection_model": "openrouter/openai/gpt-4.1",
+  "budget": 800,
+  "seed": 30,
+  "features": {
+   "codebook": false,
+   "confusion_reflection": false,
+   "hard_example_mining": false
+  },
+  "num_threads": 8,
+  "run_dir": "/Users/harish/Documents/Claude/Projects/6s/labelsmith/mechanistic/runs_e1/gepa_bbh_geometric_b800_f1_s30",
+  "task_temperature": 0.0,
+  "task_max_tokens": 40,
+  "reflection_temperature": 1.0,
+  "reflection_max_tokens": 8000,
+  "reflection_minibatch_size": 3,
+  "max_exemplars": 6,
+  "mining_llm_screen": true,
+  "log_proposals": true,
+  "prices": {},
+  "metric_calls": 800
+ },
+ "label_names": [
+  "B",
+  "C",
+  "D",
+  "E",
+  "F",
+  "G",
+  "I",
+  "J",
+  "K"
+ ],
+ "components": {
+  "instruction": "You will be provided with a text input describing a graphical or geometric element, such as an SVG path description or a verbal geometric shape description. Your task is to carefully analyze the input and classify the shape it describes by outputting ONLY the single correct letter from the following list:\n\nB, C, D, E, F, G, I, J, K\n\nHere is the correspondence between letters and geometric shapes:\n\n- B: Heptagon (7-sided polygon)\n- C: Hexagon (6-sided polygon)\n- D: Kite (A quadrilateral with two pairs of adjacent sides that are equal in length)\n- E: Line (A one-dimensional, straight shape between two points)\n- F: Octagon (8-sided polygon)\n- G: Pentagon (5-sided polygon)\n- I: Sector (A portion of a circle bounded by two radii and the connecting arc—think \"pie slice\")\n- J: Triangle (3-sided polygon)\n- K: Ellipse (A closed, oval-shaped curve akin to a stretched circle)\n\nSpecial notes:\n- You will not be given some categories/letters (A: circle, H: rectangle, etc.); ignore these even if they appear in the input 'Options' list.\n- The shape descriptions may use SVG path syntax (e.g., the 'd' attribute), geometric terminology, or a mixture.\n- For SVG path data:\n  - Count the unique points/vertices to classify polygons. For example: 5 vertices = pentagon (G); 6 = hexagon (C); 7 = heptagon (B); 8 = octagon (F).\n  - If the path defines only a straight connection between TWO distinct coordinates (and is unbroken), it is classified as E (Line).\n  - For a kite (D), check specifically for a four-sided closed path where two pairs of adjacent sides are equal.\n  - A triangle (J) is a closed shape with three straight sides.\n  - A sector (I) is defined by the region between two radii and the arc connecting them; look for the use of SVG arc ('A') commands plus a clear \"pie-slice\" segment.\n  - An ellipse (K) (not a circle) is identified by elliptical arc commands or by explicit mention of an ellipse/oval; note that elliptical arcs in SVG often use the 'A' command with differing rx and ry values.\n- Be careful: an arc command alone can denote either a sector (if combined with two radii forming a closed \"slice\") or an ellipse (if forming a closed, oval shape). Use context, arc parameters, and the shape's closure style.\n- Do NOT confuse a sector for an ellipse or vice versa. Sectors are \"pie slices\" of a circle or ellipse (portion of area, typically with two straight lines and a curved edge); ellipses are closed, continuous curves.\n- Ignore other distractor shape options that might appear in the input (e.g., A: circle, H: rectangle, etc).\n- Output ONLY the single correct letter (B, C, D, E, F, G, I, J, or K); do NOT provide explanations, repeat the input, or output multiple letters.\n\nIn ambiguous cases, always err on the side of geometric definition and SVG path analysis per above.\n\nExamples:\n- SVG path with 5 unique vertices (closed): G (Pentagon)\n- SVG path with 'A' command, radii suggest ellipse: K (Ellipse)\n- SVG path with 'A' command and two lines connecting from center or radii—forming a \"slice\": I (Sector)\n- Only two points in a straight line: E (Line)\n- Three points, closed path: J (Triangle)\n\nStay precise—output just one letter."
+ },
+ "exemplars": [],
+ "confusion": {
+  "labels": [
+   "B",
+   "C",
+   "D",
+   "E",
+   "F",
+   "G",
+   "I",
+   "J",
+   "K"
+  ],
+  "matrix": [
+   [
+    4,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    3,
+    2,
+    1,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    2,
+    1,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    5,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    2,
+    0,
+    0,
+    0,
+    3,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    2,
+    1,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    5,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    4,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    4,
+    0,
+    0,
+    0,
+    0,
+    1,
+    5,
+    0
+   ]
+  ],
+  "unparseable_column": true
+ },
+ "curve": [
+  {
+   "metric_calls": 0,
+   "dev_score": 0.36
+  },
+  {
+   "metric_calls": 62,
+   "dev_score": 0.52
+  },
+  {
+   "metric_calls": 139,
+   "dev_score": 0.52
+  },
+  {
+   "metric_calls": 213,
+   "dev_score": 0.52
+  },
+  {
+   "metric_calls": 269,
+   "dev_score": 0.62
+  },
+  {
+   "metric_calls": 346,
+   "dev_score": 0.54
+  },
+  {
+   "metric_calls": 408,
+   "dev_score": 0.52
+  },
+  {
+   "metric_calls": 470,
+   "dev_score": 0.6
+  },
+  {
+   "metric_calls": 547,
+   "dev_score": 0.58
+  },
+  {
+   "metric_calls": 612,
+   "dev_score": 0.58
+  },
+  {
+   "metric_calls": 668,
+   "dev_score": 0.44
+  },
+  {
+   "metric_calls": 724,
+   "dev_score": 0.58
+  }
+ ],
+ "notes": ""
+}

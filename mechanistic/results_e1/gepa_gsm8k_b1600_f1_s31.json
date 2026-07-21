@@ -1,0 +1,58 @@
+{
+ "curve": [
+  {
+   "metric_calls": 0,
+   "dev": 0.93
+  },
+  {
+   "metric_calls": 109,
+   "dev": 0.93
+  },
+  {
+   "metric_calls": 233,
+   "dev": 0.95
+  },
+  {
+   "metric_calls": 369,
+   "dev": 0.93
+  },
+  {
+   "metric_calls": 511,
+   "dev": 0.94
+  },
+  {
+   "metric_calls": 701,
+   "dev": 0.95
+  },
+  {
+   "metric_calls": 813,
+   "dev": 0.94
+  },
+  {
+   "metric_calls": 931,
+   "dev": 0.9
+  },
+  {
+   "metric_calls": 1088,
+   "dev": 0.93
+  },
+  {
+   "metric_calls": 1236,
+   "dev": 0.91
+  },
+  {
+   "metric_calls": 1447,
+   "dev": 0.96
+  }
+ ],
+ "test_accuracy": 0.9467,
+ "best_prompt": "You are tasked with solving math word problems in a detailed, step-by-step fashion, carefully demonstrating all calculations and reasoning. You must precisely extract and use all relevant numerical data from the problem statement, ensuring accuracy and transparency in your computations. Follow these rules and conventions:\n\n- Carefully read the word problem to identify and extract all quantitative information, like durations, sums, measurements, time values, or date/time formats.\n- Explicitly state each step of your computation, showing every intermediate calculation. If the solution requires several sequential operations, write out each one clearly in the order required.\n- For average calculations, clearly list all items to be summed, show the cumulative total, and then divide by the correct number of items, displaying each part of the computation explicitly.\n- Clearly state and apply relevant conversions (e.g., hours to minutes, or 24-hour to non-padded hour formats), showing all steps of conversion.\n- When subtracting time or durations, explicitly show the step-by-step arithmetic.\n- When the solution must be reported in a particular format, pay careful attention to formatting instructions. For instance:\n    - If the answer requires a time in 24-hour format WITHOUT zero-padding (e.g., '730' for 7:30am), be sure to omit leading zeros.\n    - For integer answers, round, truncate, or adjust only as contextually appropriate, and state any assumption before the last calculation.\n- After completing all calculation steps, present ONLY the final answer, prefixed by '#### ' followed by the number or value in the required format (e.g., '#### 730').\n- Do not include any commentary, explanation, or statements after the answer.\n- Reference all your calculation stages to the information explicitly given in the problem.\n\nYour output must follow the format in this example for a time calculation:\n\nStep 1: Add walk and train times:\n10 + 80 = 90 minutes\n\nStep 2: Latest possible arrival in minutes from midnight:\n9 * 60 = 540 minutes\n\nStep 3: Calculate latest departure time:\n540 - 90 = 450 minutes\n\nStep 4: Convert 450 minutes to 24-hour time without leading zeros:\n450 / 60 = 7 hours with a remainder of 30 minutes\nSo the time is 7:30, which is '730' in required format.\n\n#### 730",
+ "cost_usd": 0.7165,
+ "total_metric_calls": 1604,
+ "n_proposals": 37,
+ "optimizer": "gepa",
+ "task": "gsm8k",
+ "budget": 1600,
+ "seed": 31,
+ "family": "f1"
+}

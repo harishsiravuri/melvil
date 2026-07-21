@@ -1,0 +1,106 @@
+{
+ "curve": [
+  {
+   "metric_calls": 0,
+   "dev": 0.93
+  },
+  {
+   "metric_calls": 121,
+   "dev": 0.94
+  },
+  {
+   "metric_calls": 233,
+   "dev": 0.94
+  },
+  {
+   "metric_calls": 369,
+   "dev": 0.93
+  },
+  {
+   "metric_calls": 514,
+   "dev": 0.93
+  },
+  {
+   "metric_calls": 710,
+   "dev": 0.95
+  },
+  {
+   "metric_calls": 855,
+   "dev": 0.94
+  },
+  {
+   "metric_calls": 1000,
+   "dev": 0.93
+  },
+  {
+   "metric_calls": 1109,
+   "dev": 0.9
+  },
+  {
+   "metric_calls": 1248,
+   "dev": 0.94
+  },
+  {
+   "metric_calls": 1405,
+   "dev": 0.94
+  },
+  {
+   "metric_calls": 1532,
+   "dev": 0.94
+  },
+  {
+   "metric_calls": 1701,
+   "dev": 0.92
+  },
+  {
+   "metric_calls": 1828,
+   "dev": 0.93
+  },
+  {
+   "metric_calls": 1985,
+   "dev": 0.93
+  },
+  {
+   "metric_calls": 2127,
+   "dev": 0.91
+  },
+  {
+   "metric_calls": 2296,
+   "dev": 0.93
+  },
+  {
+   "metric_calls": 2414,
+   "dev": 0.93
+  },
+  {
+   "metric_calls": 2535,
+   "dev": 0.96
+  },
+  {
+   "metric_calls": 2641,
+   "dev": 0.9
+  },
+  {
+   "metric_calls": 2795,
+   "dev": 0.93
+  },
+  {
+   "metric_calls": 2973,
+   "dev": 0.92
+  },
+  {
+   "metric_calls": 3139,
+   "dev": 0.93
+  }
+ ],
+ "test_accuracy": 0.96,
+ "best_prompt": "You are tasked with systematically solving practical word problems that involve step-by-step calculations, usually related to time, distance, or cost (such as travel scheduling or commuting expenses). In each case, you must extract all necessary data, perform explicit step-by-step arithmetic, and format your final output in a precise, numeric-only style. Follow these detailed guidelines:\n\n1. **Identify the Problem Type**: \n   - Carefully read and analyze the problem to determine if it concerns time scheduling (arrival/departure times, durations, commute times, etc.), total distance calculation, cost/expense calculations (such as tolls, fuel costs), or similar real-life quantitative scenarios.\n\n2. **Extract and List All Quantitative Data**:\n   - For time-based problems: List every mentioned time and duration, specifying each value and unit. Convert all times to a consistent unit, using hours and minutes in 24-hour format (without leading zeros unless explicitly required).\n   - For cost/distance problems: List all relevant quantities (unit toll rates, number of days/trips, distances, vehicle efficiencies, gas prices, etc.). Be explicit\u2014note the number of trips, their type, rates per unit, and distances.\n\n3. **Clarify What the Problem Is Asking For**:\n   - State clearly the numeric value that must be found (e.g., \u201cFind the total cost in dollars for the week,\u201d \u201cFind the total distance traveled,\u201d \u201cFind the earliest arrival time in 24-hour format\u201d).\n\n4. **Show Every Calculation Step-by-Step**:\n   - Do not skip arithmetic steps. For each calculation, explicitly write out the numerical operation and match it to the quantities involved:\n     - For time: Show each addition or subtraction (e.g., \u201c11:20 + 1 hour 45 minutes = 13:05\u201d).\n     - For costs/distances: Write each arithmetic operation with units and show intermediate results (e.g., \u201c3 days \u00d7 2 trips/day \u00d7 $12.50 = $75 for car tolls\u201d).\n   - Use parentheses and grouping for clarity as necessary.\n   - Where multiple subtotals are combined, show how they sum to the final result.\n\n5. **Final Answer Output Formatting**:\n   - For time answers: Convert the final time to a four-digit 24-hour numeric value (e.g., '#### 730' for 07:30, or '#### 1835' for 18:35), omitting leading zeros except when specifically instructed.\n   - For non-time numeric answers (distances, costs, etc.): Output only the integer needed, without extra formatting, symbols, or decimals unless an exact decimal is required by the context (e.g., write '#### 118' for a cost of $118, not '#### 118.00' or '#### $118').\n   - Regardless of the problem context, the last line of your response should strictly be in the format '#### <number>' (where <number> is the calculated answer), with no further commentary or units.\n\n6. **Do Not Provide Any Explanation or Extra Formatting After the Final Numeric Output**:\n   - After your numeric answer, provide no further explanation, steps, or notes.\n\n7. **Verify Data and Arithmetic Consistency**:\n   - Double-check you have included all relevant problem data and that all arithmetic steps are clearly shown and correct.\n   - Be sure the final answer matches the required format and reflects accurate and complete calculation steps from the problem scenario.\n\n8. **Attention to Detail in Formatting**:\n   - Do not use punctuation, currency symbols, or other extra formatting in the final answer line.\n   - Only use leading zeros in time formatting if specifically requested by the problem.\n\nUse this procedural approach and formatting for every response to ensure clarity, reproducibility, and accurate grading of your work on practical, numerically-focused word problems.",
+ "cost_usd": 1.1175,
+ "total_metric_calls": 3239,
+ "n_proposals": 66,
+ "optimizer": "gepa",
+ "task": "gsm8k",
+ "budget": 3200,
+ "seed": 30,
+ "family": "f1"
+}

@@ -1,0 +1,188 @@
+{
+ "test_accuracy": 0.8033,
+ "curve": null,
+ "trial_logs": {
+  "1": {
+   "full_eval_program_path": null,
+   "full_eval_score": 79.0,
+   "total_eval_calls_so_far": 100,
+   "full_eval_program": "Predict(StringSignature(text -> label\n    instructions='Classify the given text into one of these categories: automatic_top_up, balance_not_updated_after_bank_transfer, beneficiary_not_allowed, cancel_transfer, card_payment_fee_charged, card_payment_not_recognised, declined_cash_withdrawal, exchange_rate, exchange_via_app, failed_transfer, get_disposable_virtual_card, get_physical_card, passcode_forgotten, pending_top_up, pending_transfer, receiving_money, reverted_card_payment?, top_up_by_cash_or_cheque, top_up_reverted, topping_up_by_card, transfer_fee_charged, transfer_into_account, transfer_timing, verify_my_identity, verify_source_of_funds. Answer with the category name only.'\n    text = Field(annotation=str required=True json_schema_extra={'IS_TYPE_UNDEFINED': True, '__dspy_field_type': 'input', 'prefix': 'Text:', 'desc': '${text}'})\n    label = Field(annotation=str required=True json_schema_extra={'__dspy_field_type': 'output', 'prefix': 'Label:', 'desc': '${label}'})\n))"
+  },
+  "2": {
+   "0_predictor_instruction": 3,
+   "0_predictor_demos": 1,
+   "mb_program_path": null,
+   "mb_score": 91.43,
+   "total_eval_calls_so_far": 135,
+   "mb_program": "Predict(StringSignature(text -> label\n    instructions=\"You are an automated banking support agent responsible for immediately routing urgent customer issues to the correct support workflow. Given a user's message describing their digital banking problem or request, you must classify the text into exactly one of the following categories: automatic_top_up, balance_not_updated_after_bank_transfer, beneficiary_not_allowed, cancel_transfer, card_payment_fee_charged, card_payment_not_recognised, declined_cash_withdrawal, exchange_rate, exchange_via_app, failed_transfer, get_disposable_virtual_card, get_physical_card, passcode_forgotten, pending_top_up, pending_transfer, receiving_money, reverted_card_payment?, top_up_by_cash_or_cheque, top_up_reverted, topping_up_by_card, transfer_fee_charged, transfer_into_account, transfer_timing, verify_my_identity, verify_source_of_funds. Select the single most appropriate category label for the user's issue, as your classification will determine how quickly and correctly the customer receives assistance. Output only the corresponding category name.\"\n    text = Field(annotation=str required=True json_schema_extra={'IS_TYPE_UNDEFINED': True, '__dspy_field_type': 'input', 'prefix': 'Text:', 'desc': '${text}'})\n    label = Field(annotation=str required=True json_schema_extra={'__dspy_field_type': 'output', 'prefix': 'Label:', 'desc': '${label}'})\n))"
+  },
+  "3": {
+   "0_predictor_instruction": 2,
+   "0_predictor_demos": 1,
+   "mb_program_path": null,
+   "mb_score": 85.71,
+   "total_eval_calls_so_far": 170,
+   "mb_program": "Predict(StringSignature(text -> label\n    instructions='Given a user\u2019s message about a digital banking issue or request, determine which of the following intent categories most accurately captures the main purpose or problem being described. Return only the single, most appropriate intent label from this list: automatic_top_up, balance_not_updated_after_bank_transfer, beneficiary_not_allowed, cancel_transfer, card_payment_fee_charged, card_payment_not_recognised, declined_cash_withdrawal, exchange_rate, exchange_via_app, failed_transfer, get_disposable_virtual_card, get_physical_card, passcode_forgotten, pending_top_up, pending_transfer, receiving_money, reverted_card_payment?, top_up_by_cash_or_cheque, top_up_reverted, topping_up_by_card, transfer_fee_charged, transfer_into_account, transfer_timing, verify_my_identity, or verify_source_of_funds. Focus on the user\u2019s main intent, and use only the given categories\u2014do not invent new ones. Respond with the category label in plain text.'\n    text = Field(annotation=str required=True json_schema_extra={'IS_TYPE_UNDEFINED': True, '__dspy_field_type': 'input', 'prefix': 'Text:', 'desc': '${text}'})\n    label = Field(annotation=str required=True json_schema_extra={'__dspy_field_type': 'output', 'prefix': 'Label:', 'desc': '${label}'})\n))"
+  },
+  "4": {
+   "0_predictor_instruction": 1,
+   "0_predictor_demos": 2,
+   "mb_program_path": null,
+   "mb_score": 77.14,
+   "total_eval_calls_so_far": 205,
+   "mb_program": "Predict(StringSignature(text -> label\n    instructions=\"Given a user query related to digital banking, analyze the text and assign the most appropriate intent label from the following list, based on the user's described action, request, or problem: automatic_top_up, balance_not_updated_after_bank_transfer, beneficiary_not_allowed, cancel_transfer, card_payment_fee_charged, card_payment_not_recognised, declined_cash_withdrawal, exchange_rate, exchange_via_app, failed_transfer, get_disposable_virtual_card, get_physical_card, passcode_forgotten, pending_top_up, pending_transfer, receiving_money, reverted_card_payment?, top_up_by_cash_or_cheque, top_up_reverted, topping_up_by_card, transfer_fee_charged, transfer_into_account, transfer_timing, verify_my_identity, verify_source_of_funds. Return only the exact label that best matches the user's intent, without any additional explanation.\"\n    text = Field(annotation=str required=True json_schema_extra={'IS_TYPE_UNDEFINED': True, '__dspy_field_type': 'input', 'prefix': 'Text:', 'desc': '${text}'})\n    label = Field(annotation=str required=True json_schema_extra={'__dspy_field_type': 'output', 'prefix': 'Label:', 'desc': '${label}'})\n))"
+  },
+  "5": {
+   "0_predictor_instruction": 4,
+   "0_predictor_demos": 5,
+   "mb_program_path": null,
+   "mb_score": 74.29,
+   "total_eval_calls_so_far": 240,
+   "mb_program": "Predict(StringSignature(text -> label\n    instructions='Read the following user message related to digital banking and determine the single most accurate intent label from the provided list of categories. Do not output anything except the exact category name.\\nCategories: automatic_top_up, balance_not_updated_after_bank_transfer, beneficiary_not_allowed, cancel_transfer, card_payment_fee_charged, card_payment_not_recognised, declined_cash_withdrawal, exchange_rate, exchange_via_app, failed_transfer, get_disposable_virtual_card, get_physical_card, passcode_forgotten, pending_top_up, pending_transfer, receiving_money, reverted_card_payment, top_up_by_cash_or_cheque, top_up_reverted, topping_up_by_card, transfer_fee_charged, transfer_into_account, transfer_timing, verify_my_identity, verify_source_of_funds.'\n    text = Field(annotation=str required=True json_schema_extra={'IS_TYPE_UNDEFINED': True, '__dspy_field_type': 'input', 'prefix': 'Text:', 'desc': '${text}'})\n    label = Field(annotation=str required=True json_schema_extra={'__dspy_field_type': 'output', 'prefix': 'Label:', 'desc': '${label}'})\n))"
+  },
+  "6": {
+   "0_predictor_instruction": 5,
+   "0_predictor_demos": 1,
+   "mb_program_path": null,
+   "mb_score": 82.86,
+   "total_eval_calls_so_far": 275,
+   "mb_program": "Predict(StringSignature(text -> label\n    instructions='A customer is urgently seeking help through digital banking support and needs their issue resolved quickly and accurately. Given the incoming message, analyze it carefully and classify it into exactly one of these intent categories: automatic_top_up, balance_not_updated_after_bank_transfer, beneficiary_not_allowed, cancel_transfer, card_payment_fee_charged, card_payment_not_recognised, declined_cash_withdrawal, exchange_rate, exchange_via_app, failed_transfer, get_disposable_virtual_card, get_physical_card, passcode_forgotten, pending_top_up, pending_transfer, receiving_money, reverted_card_payment?, top_up_by_cash_or_cheque, top_up_reverted, topping_up_by_card, transfer_fee_charged, transfer_into_account, transfer_timing, verify_my_identity, verify_source_of_funds.  \\nYou must select the intent that best matches the user\u2019s underlying request or problem, even if their language is informal, vague, or urgent.  \\nOutput the category name ONLY. Your accurate classification can directly impact the speed and correctness of the user\u2019s support experience.'\n    text = Field(annotation=str required=True json_schema_extra={'IS_TYPE_UNDEFINED': True, '__dspy_field_type': 'input', 'prefix': 'Text:', 'desc': '${text}'})\n    label = Field(annotation=str required=True json_schema_extra={'__dspy_field_type': 'output', 'prefix': 'Label:', 'desc': '${label}'})\n))"
+  },
+  "7": {
+   "total_eval_calls_so_far": 375,
+   "full_eval_program_path": null,
+   "full_eval_program": "Predict(StringSignature(text -> label\n    instructions=\"You are an automated banking support agent responsible for immediately routing urgent customer issues to the correct support workflow. Given a user's message describing their digital banking problem or request, you must classify the text into exactly one of the following categories: automatic_top_up, balance_not_updated_after_bank_transfer, beneficiary_not_allowed, cancel_transfer, card_payment_fee_charged, card_payment_not_recognised, declined_cash_withdrawal, exchange_rate, exchange_via_app, failed_transfer, get_disposable_virtual_card, get_physical_card, passcode_forgotten, pending_top_up, pending_transfer, receiving_money, reverted_card_payment?, top_up_by_cash_or_cheque, top_up_reverted, topping_up_by_card, transfer_fee_charged, transfer_into_account, transfer_timing, verify_my_identity, verify_source_of_funds. Select the single most appropriate category label for the user's issue, as your classification will determine how quickly and correctly the customer receives assistance. Output only the corresponding category name.\"\n    text = Field(annotation=str required=True json_schema_extra={'IS_TYPE_UNDEFINED': True, '__dspy_field_type': 'input', 'prefix': 'Text:', 'desc': '${text}'})\n    label = Field(annotation=str required=True json_schema_extra={'__dspy_field_type': 'output', 'prefix': 'Label:', 'desc': '${label}'})\n))",
+   "full_eval_score": 79.0
+  },
+  "8": {
+   "0_predictor_instruction": 4,
+   "0_predictor_demos": 11,
+   "mb_program_path": null,
+   "mb_score": 77.14,
+   "total_eval_calls_so_far": 410,
+   "mb_program": "Predict(StringSignature(text -> label\n    instructions='Read the following user message related to digital banking and determine the single most accurate intent label from the provided list of categories. Do not output anything except the exact category name.\\nCategories: automatic_top_up, balance_not_updated_after_bank_transfer, beneficiary_not_allowed, cancel_transfer, card_payment_fee_charged, card_payment_not_recognised, declined_cash_withdrawal, exchange_rate, exchange_via_app, failed_transfer, get_disposable_virtual_card, get_physical_card, passcode_forgotten, pending_top_up, pending_transfer, receiving_money, reverted_card_payment, top_up_by_cash_or_cheque, top_up_reverted, topping_up_by_card, transfer_fee_charged, transfer_into_account, transfer_timing, verify_my_identity, verify_source_of_funds.'\n    text = Field(annotation=str required=True json_schema_extra={'IS_TYPE_UNDEFINED': True, '__dspy_field_type': 'input', 'prefix': 'Text:', 'desc': '${text}'})\n    label = Field(annotation=str required=True json_schema_extra={'__dspy_field_type': 'output', 'prefix': 'Label:', 'desc': '${label}'})\n))"
+  },
+  "9": {
+   "0_predictor_instruction": 5,
+   "0_predictor_demos": 9,
+   "mb_program_path": null,
+   "mb_score": 82.86,
+   "total_eval_calls_so_far": 445,
+   "mb_program": "Predict(StringSignature(text -> label\n    instructions='A customer is urgently seeking help through digital banking support and needs their issue resolved quickly and accurately. Given the incoming message, analyze it carefully and classify it into exactly one of these intent categories: automatic_top_up, balance_not_updated_after_bank_transfer, beneficiary_not_allowed, cancel_transfer, card_payment_fee_charged, card_payment_not_recognised, declined_cash_withdrawal, exchange_rate, exchange_via_app, failed_transfer, get_disposable_virtual_card, get_physical_card, passcode_forgotten, pending_top_up, pending_transfer, receiving_money, reverted_card_payment?, top_up_by_cash_or_cheque, top_up_reverted, topping_up_by_card, transfer_fee_charged, transfer_into_account, transfer_timing, verify_my_identity, verify_source_of_funds.  \\nYou must select the intent that best matches the user\u2019s underlying request or problem, even if their language is informal, vague, or urgent.  \\nOutput the category name ONLY. Your accurate classification can directly impact the speed and correctness of the user\u2019s support experience.'\n    text = Field(annotation=str required=True json_schema_extra={'IS_TYPE_UNDEFINED': True, '__dspy_field_type': 'input', 'prefix': 'Text:', 'desc': '${text}'})\n    label = Field(annotation=str required=True json_schema_extra={'__dspy_field_type': 'output', 'prefix': 'Label:', 'desc': '${label}'})\n))"
+  },
+  "10": {
+   "0_predictor_instruction": 1,
+   "0_predictor_demos": 3,
+   "mb_program_path": null,
+   "mb_score": 82.86,
+   "total_eval_calls_so_far": 480,
+   "mb_program": "Predict(StringSignature(text -> label\n    instructions=\"Given a user query related to digital banking, analyze the text and assign the most appropriate intent label from the following list, based on the user's described action, request, or problem: automatic_top_up, balance_not_updated_after_bank_transfer, beneficiary_not_allowed, cancel_transfer, card_payment_fee_charged, card_payment_not_recognised, declined_cash_withdrawal, exchange_rate, exchange_via_app, failed_transfer, get_disposable_virtual_card, get_physical_card, passcode_forgotten, pending_top_up, pending_transfer, receiving_money, reverted_card_payment?, top_up_by_cash_or_cheque, top_up_reverted, topping_up_by_card, transfer_fee_charged, transfer_into_account, transfer_timing, verify_my_identity, verify_source_of_funds. Return only the exact label that best matches the user's intent, without any additional explanation.\"\n    text = Field(annotation=str required=True json_schema_extra={'IS_TYPE_UNDEFINED': True, '__dspy_field_type': 'input', 'prefix': 'Text:', 'desc': '${text}'})\n    label = Field(annotation=str required=True json_schema_extra={'__dspy_field_type': 'output', 'prefix': 'Label:', 'desc': '${label}'})\n))"
+  },
+  "11": {
+   "0_predictor_instruction": 3,
+   "0_predictor_demos": 8,
+   "mb_program_path": null,
+   "mb_score": 74.29,
+   "total_eval_calls_so_far": 515,
+   "mb_program": "Predict(StringSignature(text -> label\n    instructions=\"You are an automated banking support agent responsible for immediately routing urgent customer issues to the correct support workflow. Given a user's message describing their digital banking problem or request, you must classify the text into exactly one of the following categories: automatic_top_up, balance_not_updated_after_bank_transfer, beneficiary_not_allowed, cancel_transfer, card_payment_fee_charged, card_payment_not_recognised, declined_cash_withdrawal, exchange_rate, exchange_via_app, failed_transfer, get_disposable_virtual_card, get_physical_card, passcode_forgotten, pending_top_up, pending_transfer, receiving_money, reverted_card_payment?, top_up_by_cash_or_cheque, top_up_reverted, topping_up_by_card, transfer_fee_charged, transfer_into_account, transfer_timing, verify_my_identity, verify_source_of_funds. Select the single most appropriate category label for the user's issue, as your classification will determine how quickly and correctly the customer receives assistance. Output only the corresponding category name.\"\n    text = Field(annotation=str required=True json_schema_extra={'IS_TYPE_UNDEFINED': True, '__dspy_field_type': 'input', 'prefix': 'Text:', 'desc': '${text}'})\n    label = Field(annotation=str required=True json_schema_extra={'__dspy_field_type': 'output', 'prefix': 'Label:', 'desc': '${label}'})\n))"
+  },
+  "12": {
+   "0_predictor_instruction": 2,
+   "0_predictor_demos": 1,
+   "mb_program_path": null,
+   "mb_score": 82.86,
+   "total_eval_calls_so_far": 550,
+   "mb_program": "Predict(StringSignature(text -> label\n    instructions='Given a user\u2019s message about a digital banking issue or request, determine which of the following intent categories most accurately captures the main purpose or problem being described. Return only the single, most appropriate intent label from this list: automatic_top_up, balance_not_updated_after_bank_transfer, beneficiary_not_allowed, cancel_transfer, card_payment_fee_charged, card_payment_not_recognised, declined_cash_withdrawal, exchange_rate, exchange_via_app, failed_transfer, get_disposable_virtual_card, get_physical_card, passcode_forgotten, pending_top_up, pending_transfer, receiving_money, reverted_card_payment?, top_up_by_cash_or_cheque, top_up_reverted, topping_up_by_card, transfer_fee_charged, transfer_into_account, transfer_timing, verify_my_identity, or verify_source_of_funds. Focus on the user\u2019s main intent, and use only the given categories\u2014do not invent new ones. Respond with the category label in plain text.'\n    text = Field(annotation=str required=True json_schema_extra={'IS_TYPE_UNDEFINED': True, '__dspy_field_type': 'input', 'prefix': 'Text:', 'desc': '${text}'})\n    label = Field(annotation=str required=True json_schema_extra={'__dspy_field_type': 'output', 'prefix': 'Label:', 'desc': '${label}'})\n))"
+  },
+  "13": {
+   "total_eval_calls_so_far": 650,
+   "full_eval_program_path": null,
+   "full_eval_program": "Predict(StringSignature(text -> label\n    instructions='Given a user\u2019s message about a digital banking issue or request, determine which of the following intent categories most accurately captures the main purpose or problem being described. Return only the single, most appropriate intent label from this list: automatic_top_up, balance_not_updated_after_bank_transfer, beneficiary_not_allowed, cancel_transfer, card_payment_fee_charged, card_payment_not_recognised, declined_cash_withdrawal, exchange_rate, exchange_via_app, failed_transfer, get_disposable_virtual_card, get_physical_card, passcode_forgotten, pending_top_up, pending_transfer, receiving_money, reverted_card_payment?, top_up_by_cash_or_cheque, top_up_reverted, topping_up_by_card, transfer_fee_charged, transfer_into_account, transfer_timing, verify_my_identity, or verify_source_of_funds. Focus on the user\u2019s main intent, and use only the given categories\u2014do not invent new ones. Respond with the category label in plain text.'\n    text = Field(annotation=str required=True json_schema_extra={'IS_TYPE_UNDEFINED': True, '__dspy_field_type': 'input', 'prefix': 'Text:', 'desc': '${text}'})\n    label = Field(annotation=str required=True json_schema_extra={'__dspy_field_type': 'output', 'prefix': 'Label:', 'desc': '${label}'})\n))",
+   "full_eval_score": 81.0
+  },
+  "14": {
+   "0_predictor_instruction": 2,
+   "0_predictor_demos": 10,
+   "mb_program_path": null,
+   "mb_score": 82.86,
+   "total_eval_calls_so_far": 685,
+   "mb_program": "Predict(StringSignature(text -> label\n    instructions='Given a user\u2019s message about a digital banking issue or request, determine which of the following intent categories most accurately captures the main purpose or problem being described. Return only the single, most appropriate intent label from this list: automatic_top_up, balance_not_updated_after_bank_transfer, beneficiary_not_allowed, cancel_transfer, card_payment_fee_charged, card_payment_not_recognised, declined_cash_withdrawal, exchange_rate, exchange_via_app, failed_transfer, get_disposable_virtual_card, get_physical_card, passcode_forgotten, pending_top_up, pending_transfer, receiving_money, reverted_card_payment?, top_up_by_cash_or_cheque, top_up_reverted, topping_up_by_card, transfer_fee_charged, transfer_into_account, transfer_timing, verify_my_identity, or verify_source_of_funds. Focus on the user\u2019s main intent, and use only the given categories\u2014do not invent new ones. Respond with the category label in plain text.'\n    text = Field(annotation=str required=True json_schema_extra={'IS_TYPE_UNDEFINED': True, '__dspy_field_type': 'input', 'prefix': 'Text:', 'desc': '${text}'})\n    label = Field(annotation=str required=True json_schema_extra={'__dspy_field_type': 'output', 'prefix': 'Label:', 'desc': '${label}'})\n))"
+  },
+  "15": {
+   "0_predictor_instruction": 0,
+   "0_predictor_demos": 4,
+   "mb_program_path": null,
+   "mb_score": 88.57,
+   "total_eval_calls_so_far": 720,
+   "mb_program": "Predict(StringSignature(text -> label\n    instructions='Classify the given text into one of these categories: automatic_top_up, balance_not_updated_after_bank_transfer, beneficiary_not_allowed, cancel_transfer, card_payment_fee_charged, card_payment_not_recognised, declined_cash_withdrawal, exchange_rate, exchange_via_app, failed_transfer, get_disposable_virtual_card, get_physical_card, passcode_forgotten, pending_top_up, pending_transfer, receiving_money, reverted_card_payment?, top_up_by_cash_or_cheque, top_up_reverted, topping_up_by_card, transfer_fee_charged, transfer_into_account, transfer_timing, verify_my_identity, verify_source_of_funds. Answer with the category name only.'\n    text = Field(annotation=str required=True json_schema_extra={'IS_TYPE_UNDEFINED': True, '__dspy_field_type': 'input', 'prefix': 'Text:', 'desc': '${text}'})\n    label = Field(annotation=str required=True json_schema_extra={'__dspy_field_type': 'output', 'prefix': 'Label:', 'desc': '${label}'})\n))"
+  },
+  "16": {
+   "0_predictor_instruction": 0,
+   "0_predictor_demos": 4,
+   "mb_program_path": null,
+   "mb_score": 71.43,
+   "total_eval_calls_so_far": 755,
+   "mb_program": "Predict(StringSignature(text -> label\n    instructions='Classify the given text into one of these categories: automatic_top_up, balance_not_updated_after_bank_transfer, beneficiary_not_allowed, cancel_transfer, card_payment_fee_charged, card_payment_not_recognised, declined_cash_withdrawal, exchange_rate, exchange_via_app, failed_transfer, get_disposable_virtual_card, get_physical_card, passcode_forgotten, pending_top_up, pending_transfer, receiving_money, reverted_card_payment?, top_up_by_cash_or_cheque, top_up_reverted, topping_up_by_card, transfer_fee_charged, transfer_into_account, transfer_timing, verify_my_identity, verify_source_of_funds. Answer with the category name only.'\n    text = Field(annotation=str required=True json_schema_extra={'IS_TYPE_UNDEFINED': True, '__dspy_field_type': 'input', 'prefix': 'Text:', 'desc': '${text}'})\n    label = Field(annotation=str required=True json_schema_extra={'__dspy_field_type': 'output', 'prefix': 'Label:', 'desc': '${label}'})\n))"
+  },
+  "17": {
+   "0_predictor_instruction": 3,
+   "0_predictor_demos": 6,
+   "mb_program_path": null,
+   "mb_score": 71.43,
+   "total_eval_calls_so_far": 790,
+   "mb_program": "Predict(StringSignature(text -> label\n    instructions=\"You are an automated banking support agent responsible for immediately routing urgent customer issues to the correct support workflow. Given a user's message describing their digital banking problem or request, you must classify the text into exactly one of the following categories: automatic_top_up, balance_not_updated_after_bank_transfer, beneficiary_not_allowed, cancel_transfer, card_payment_fee_charged, card_payment_not_recognised, declined_cash_withdrawal, exchange_rate, exchange_via_app, failed_transfer, get_disposable_virtual_card, get_physical_card, passcode_forgotten, pending_top_up, pending_transfer, receiving_money, reverted_card_payment?, top_up_by_cash_or_cheque, top_up_reverted, topping_up_by_card, transfer_fee_charged, transfer_into_account, transfer_timing, verify_my_identity, verify_source_of_funds. Select the single most appropriate category label for the user's issue, as your classification will determine how quickly and correctly the customer receives assistance. Output only the corresponding category name.\"\n    text = Field(annotation=str required=True json_schema_extra={'IS_TYPE_UNDEFINED': True, '__dspy_field_type': 'input', 'prefix': 'Text:', 'desc': '${text}'})\n    label = Field(annotation=str required=True json_schema_extra={'__dspy_field_type': 'output', 'prefix': 'Label:', 'desc': '${label}'})\n))"
+  },
+  "18": {
+   "0_predictor_instruction": 3,
+   "0_predictor_demos": 4,
+   "mb_program_path": null,
+   "mb_score": 82.86,
+   "total_eval_calls_so_far": 825,
+   "mb_program": "Predict(StringSignature(text -> label\n    instructions=\"You are an automated banking support agent responsible for immediately routing urgent customer issues to the correct support workflow. Given a user's message describing their digital banking problem or request, you must classify the text into exactly one of the following categories: automatic_top_up, balance_not_updated_after_bank_transfer, beneficiary_not_allowed, cancel_transfer, card_payment_fee_charged, card_payment_not_recognised, declined_cash_withdrawal, exchange_rate, exchange_via_app, failed_transfer, get_disposable_virtual_card, get_physical_card, passcode_forgotten, pending_top_up, pending_transfer, receiving_money, reverted_card_payment?, top_up_by_cash_or_cheque, top_up_reverted, topping_up_by_card, transfer_fee_charged, transfer_into_account, transfer_timing, verify_my_identity, verify_source_of_funds. Select the single most appropriate category label for the user's issue, as your classification will determine how quickly and correctly the customer receives assistance. Output only the corresponding category name.\"\n    text = Field(annotation=str required=True json_schema_extra={'IS_TYPE_UNDEFINED': True, '__dspy_field_type': 'input', 'prefix': 'Text:', 'desc': '${text}'})\n    label = Field(annotation=str required=True json_schema_extra={'__dspy_field_type': 'output', 'prefix': 'Label:', 'desc': '${label}'})\n))"
+  },
+  "19": {
+   "total_eval_calls_so_far": 925,
+   "full_eval_program_path": null,
+   "full_eval_program": "Predict(StringSignature(text -> label\n    instructions='A customer is urgently seeking help through digital banking support and needs their issue resolved quickly and accurately. Given the incoming message, analyze it carefully and classify it into exactly one of these intent categories: automatic_top_up, balance_not_updated_after_bank_transfer, beneficiary_not_allowed, cancel_transfer, card_payment_fee_charged, card_payment_not_recognised, declined_cash_withdrawal, exchange_rate, exchange_via_app, failed_transfer, get_disposable_virtual_card, get_physical_card, passcode_forgotten, pending_top_up, pending_transfer, receiving_money, reverted_card_payment?, top_up_by_cash_or_cheque, top_up_reverted, topping_up_by_card, transfer_fee_charged, transfer_into_account, transfer_timing, verify_my_identity, verify_source_of_funds.  \\nYou must select the intent that best matches the user\u2019s underlying request or problem, even if their language is informal, vague, or urgent.  \\nOutput the category name ONLY. Your accurate classification can directly impact the speed and correctness of the user\u2019s support experience.'\n    text = Field(annotation=str required=True json_schema_extra={'IS_TYPE_UNDEFINED': True, '__dspy_field_type': 'input', 'prefix': 'Text:', 'desc': '${text}'})\n    label = Field(annotation=str required=True json_schema_extra={'__dspy_field_type': 'output', 'prefix': 'Label:', 'desc': '${label}'})\n))",
+   "full_eval_score": 79.0
+  },
+  "20": {
+   "0_predictor_instruction": 0,
+   "0_predictor_demos": 7,
+   "mb_program_path": null,
+   "mb_score": 80.0,
+   "total_eval_calls_so_far": 960,
+   "mb_program": "Predict(StringSignature(text -> label\n    instructions='Classify the given text into one of these categories: automatic_top_up, balance_not_updated_after_bank_transfer, beneficiary_not_allowed, cancel_transfer, card_payment_fee_charged, card_payment_not_recognised, declined_cash_withdrawal, exchange_rate, exchange_via_app, failed_transfer, get_disposable_virtual_card, get_physical_card, passcode_forgotten, pending_top_up, pending_transfer, receiving_money, reverted_card_payment?, top_up_by_cash_or_cheque, top_up_reverted, topping_up_by_card, transfer_fee_charged, transfer_into_account, transfer_timing, verify_my_identity, verify_source_of_funds. Answer with the category name only.'\n    text = Field(annotation=str required=True json_schema_extra={'IS_TYPE_UNDEFINED': True, '__dspy_field_type': 'input', 'prefix': 'Text:', 'desc': '${text}'})\n    label = Field(annotation=str required=True json_schema_extra={'__dspy_field_type': 'output', 'prefix': 'Label:', 'desc': '${label}'})\n))"
+  },
+  "21": {
+   "0_predictor_instruction": 0,
+   "0_predictor_demos": 2,
+   "mb_program_path": null,
+   "mb_score": 71.43,
+   "total_eval_calls_so_far": 995,
+   "mb_program": "Predict(StringSignature(text -> label\n    instructions='Classify the given text into one of these categories: automatic_top_up, balance_not_updated_after_bank_transfer, beneficiary_not_allowed, cancel_transfer, card_payment_fee_charged, card_payment_not_recognised, declined_cash_withdrawal, exchange_rate, exchange_via_app, failed_transfer, get_disposable_virtual_card, get_physical_card, passcode_forgotten, pending_top_up, pending_transfer, receiving_money, reverted_card_payment?, top_up_by_cash_or_cheque, top_up_reverted, topping_up_by_card, transfer_fee_charged, transfer_into_account, transfer_timing, verify_my_identity, verify_source_of_funds. Answer with the category name only.'\n    text = Field(annotation=str required=True json_schema_extra={'IS_TYPE_UNDEFINED': True, '__dspy_field_type': 'input', 'prefix': 'Text:', 'desc': '${text}'})\n    label = Field(annotation=str required=True json_schema_extra={'__dspy_field_type': 'output', 'prefix': 'Label:', 'desc': '${label}'})\n))"
+  },
+  "22": {
+   "0_predictor_instruction": 1,
+   "0_predictor_demos": 4,
+   "mb_program_path": null,
+   "mb_score": 68.57,
+   "total_eval_calls_so_far": 1030,
+   "mb_program": "Predict(StringSignature(text -> label\n    instructions=\"Given a user query related to digital banking, analyze the text and assign the most appropriate intent label from the following list, based on the user's described action, request, or problem: automatic_top_up, balance_not_updated_after_bank_transfer, beneficiary_not_allowed, cancel_transfer, card_payment_fee_charged, card_payment_not_recognised, declined_cash_withdrawal, exchange_rate, exchange_via_app, failed_transfer, get_disposable_virtual_card, get_physical_card, passcode_forgotten, pending_top_up, pending_transfer, receiving_money, reverted_card_payment?, top_up_by_cash_or_cheque, top_up_reverted, topping_up_by_card, transfer_fee_charged, transfer_into_account, transfer_timing, verify_my_identity, verify_source_of_funds. Return only the exact label that best matches the user's intent, without any additional explanation.\"\n    text = Field(annotation=str required=True json_schema_extra={'IS_TYPE_UNDEFINED': True, '__dspy_field_type': 'input', 'prefix': 'Text:', 'desc': '${text}'})\n    label = Field(annotation=str required=True json_schema_extra={'__dspy_field_type': 'output', 'prefix': 'Label:', 'desc': '${label}'})\n))"
+  },
+  "23": {
+   "total_eval_calls_so_far": 1130,
+   "full_eval_program_path": null,
+   "full_eval_program": "Predict(StringSignature(text -> label\n    instructions='A customer is urgently seeking help through digital banking support and needs their issue resolved quickly and accurately. Given the incoming message, analyze it carefully and classify it into exactly one of these intent categories: automatic_top_up, balance_not_updated_after_bank_transfer, beneficiary_not_allowed, cancel_transfer, card_payment_fee_charged, card_payment_not_recognised, declined_cash_withdrawal, exchange_rate, exchange_via_app, failed_transfer, get_disposable_virtual_card, get_physical_card, passcode_forgotten, pending_top_up, pending_transfer, receiving_money, reverted_card_payment?, top_up_by_cash_or_cheque, top_up_reverted, topping_up_by_card, transfer_fee_charged, transfer_into_account, transfer_timing, verify_my_identity, verify_source_of_funds.  \\nYou must select the intent that best matches the user\u2019s underlying request or problem, even if their language is informal, vague, or urgent.  \\nOutput the category name ONLY. Your accurate classification can directly impact the speed and correctness of the user\u2019s support experience.'\n    text = Field(annotation=str required=True json_schema_extra={'IS_TYPE_UNDEFINED': True, '__dspy_field_type': 'input', 'prefix': 'Text:', 'desc': '${text}'})\n    label = Field(annotation=str required=True json_schema_extra={'__dspy_field_type': 'output', 'prefix': 'Label:', 'desc': '${label}'})\n))",
+   "full_eval_score": 82.0
+  }
+ },
+ "cost_usd": 0.2585,
+ "total_metric_calls": 1140,
+ "auto_preset": "medium",
+ "optimizer": "miprov2",
+ "task": "banking77",
+ "budget": 1600,
+ "seed": 32,
+ "family": "f1"
+}

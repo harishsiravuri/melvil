@@ -1,0 +1,219 @@
+{
+ "schema_version": 1,
+ "artifact_id": "d026433d9370",
+ "parent_id": null,
+ "task_name": "trec",
+ "created_at": "2026-07-21T03:29:56-0500",
+ "library": {
+  "name": "melvil",
+  "version": "0.3.0"
+ },
+ "models": {
+  "task": "openrouter/openai/gpt-4.1-mini",
+  "reflection": "openrouter/openai/gpt-4.1"
+ },
+ "budget": {
+  "metric_calls_budget": 800,
+  "metric_calls_spent": 857,
+  "cost_usd": 0.1866,
+  "task_lm_usage": {
+   "model": "openrouter/openai/gpt-4.1-mini",
+   "prompt_tokens": 369623,
+   "completion_tokens": 1505,
+   "calls": 742,
+   "cache_hits": 215,
+   "cost_usd": 0.150257
+  },
+  "reflection_lm_usage": {
+   "model": "openrouter/openai/gpt-4.1",
+   "prompt_tokens": 3454,
+   "completion_tokens": 3677,
+   "calls": 8,
+   "cache_hits": 0,
+   "cost_usd": 0.036324
+  },
+  "opt_seconds": 168.0
+ },
+ "scores": {
+  "dev_accuracy": 0.82,
+  "dev_macro_f1": 0.8029,
+  "per_label_dev": {
+   "abbreviation": {
+    "precision": 0.5,
+    "recall": 1.0,
+    "f1": 0.6667,
+    "support": 2
+   },
+   "description": {
+    "precision": 0.72,
+    "recall": 0.8571,
+    "f1": 0.7826,
+    "support": 21
+   },
+   "entity": {
+    "precision": 0.8421,
+    "recall": 0.6957,
+    "f1": 0.7619,
+    "support": 23
+   },
+   "human": {
+    "precision": 0.8,
+    "recall": 0.9091,
+    "f1": 0.8511,
+    "support": 22
+   },
+   "location": {
+    "precision": 1.0,
+    "recall": 0.7333,
+    "f1": 0.8462,
+    "support": 15
+   },
+   "numeric": {
+    "precision": 0.9375,
+    "recall": 0.8824,
+    "f1": 0.9091,
+    "support": 17
+   }
+  },
+  "seed_dev_accuracy": 0.5,
+  "dev_accuracy_quarantined": null
+ },
+ "config_hash": "9bf4de499bd0",
+ "config": {
+  "task_model": "openrouter/openai/gpt-4.1-mini",
+  "reflection_model": "openrouter/openai/gpt-4.1",
+  "budget": 800,
+  "seed": 33,
+  "features": {
+   "codebook": false,
+   "confusion_reflection": false,
+   "hard_example_mining": false
+  },
+  "num_threads": 8,
+  "run_dir": "/Users/harish/Documents/Claude/Projects/6s/labelsmith/mechanistic/runs_e1/gepa_trec_b800_f1_s33",
+  "task_temperature": 0.0,
+  "task_max_tokens": 40,
+  "reflection_temperature": 1.0,
+  "reflection_max_tokens": 8000,
+  "reflection_minibatch_size": 3,
+  "max_exemplars": 6,
+  "mining_llm_screen": true,
+  "log_proposals": true,
+  "prices": {},
+  "metric_calls": 800
+ },
+ "label_names": [
+  "abbreviation",
+  "description",
+  "entity",
+  "human",
+  "location",
+  "numeric"
+ ],
+ "components": {
+  "instruction": "You are given a short piece of text, such as a question or sentence. Your goal is to classify this text into one of the following six categories: abbreviation, description, entity, human, location, or numeric.\n\nHere are the category definitions, guidelines, and some domain-specific notes to ensure your classifications are accurate and consistent:\n\n- abbreviation: The text asks about or contains an abbreviation or acronym, such as \"What does NASA stand for?\"\n\n- description: The text asks specifically for an explanation, definition, process, reason, or other descriptive information. Typical question forms include \"What is X?\" or \"Explain Y.\" Only use 'description' if the primary intent is to describe or define.\n\n- entity: The text asks about a specific non-human, non-location thing, object, class, or category. Use 'entity' for anything that doesn’t fit as human, location, or numeric, such as questions about objects, groups, types, animals, or general things (including things like \"Which gender has bigger thighs?\").\n\n- human: The text asks about a person or group of people (\"Who wrote Hamlet?\"). Use 'human' only when the answer must be a human individual or group.\n\n- location: The text targets a place, address, or geographic location (\"Where is the Eiffel Tower?\"). Use this only when the intended answer is a location.\n\n- numeric: The text specifically asks for a numerical value, such as a count, total, measurement, or other quantity. Questions beginning with \"How many\" or \"How much\" nearly always fall here, as do requests for highest/lowest numbers, sizes, or counts (\"How old is...?\", \"What is the population of...?\").\n\nConsider these key points from domain feedback:\n\n- For questions that ask about the \"highest\", \"largest\", or any superlative (like \"What's the highest possible bid in Contract Bridge?\") – don't default to 'numeric' unless the question is specifically seeking a number. If the answer is naming an object, category, or entity (e.g., a bid type or contract), use 'entity' even if the answer has a value attached.\n- Use the label that describes what the question is primarily seeking, not just the form or grammar of the question.\n- When a question refers to “types,” “kinds,” or “groups” and does NOT ask for a number or description, classify as 'entity'.\n- Never default to 'description' unless the question explicitly seeks an explanation or definition.\n\nYour response should always be a single word: the chosen label. Do not include any other explanation or formatting."
+ },
+ "exemplars": [],
+ "confusion": {
+  "labels": [
+   "abbreviation",
+   "description",
+   "entity",
+   "human",
+   "location",
+   "numeric"
+  ],
+  "matrix": [
+   [
+    2,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    2,
+    18,
+    0,
+    1,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    4,
+    16,
+    2,
+    0,
+    1,
+    0
+   ],
+   [
+    0,
+    0,
+    2,
+    20,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    1,
+    1,
+    2,
+    11,
+    0,
+    0
+   ],
+   [
+    0,
+    2,
+    0,
+    0,
+    0,
+    15,
+    0
+   ]
+  ],
+  "unparseable_column": true
+ },
+ "curve": [
+  {
+   "metric_calls": 0,
+   "dev_score": 0.5
+  },
+  {
+   "metric_calls": 106,
+   "dev_score": 0.77
+  },
+  {
+   "metric_calls": 215,
+   "dev_score": 0.79
+  },
+  {
+   "metric_calls": 327,
+   "dev_score": 0.75
+  },
+  {
+   "metric_calls": 433,
+   "dev_score": 0.71
+  },
+  {
+   "metric_calls": 539,
+   "dev_score": 0.79
+  },
+  {
+   "metric_calls": 648,
+   "dev_score": 0.82
+  },
+  {
+   "metric_calls": 757,
+   "dev_score": 0.77
+  }
+ ],
+ "notes": ""
+}

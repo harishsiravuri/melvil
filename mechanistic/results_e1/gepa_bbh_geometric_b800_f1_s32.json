@@ -1,0 +1,65 @@
+{
+ "curve": [
+  {
+   "metric_calls": 0,
+   "dev": 0.36
+  },
+  {
+   "metric_calls": 56,
+   "dev": 0.52
+  },
+  {
+   "metric_calls": 130,
+   "dev": 0.48
+  },
+  {
+   "metric_calls": 186,
+   "dev": 0.54
+  },
+  {
+   "metric_calls": 248,
+   "dev": 0.5
+  },
+  {
+   "metric_calls": 304,
+   "dev": 0.36
+  },
+  {
+   "metric_calls": 360,
+   "dev": 0.36
+  },
+  {
+   "metric_calls": 416,
+   "dev": 0.48
+  },
+  {
+   "metric_calls": 508,
+   "dev": 0.48
+  },
+  {
+   "metric_calls": 570,
+   "dev": 0.5
+  },
+  {
+   "metric_calls": 626,
+   "dev": 0.48
+  },
+  {
+   "metric_calls": 703,
+   "dev": 0.5
+  },
+  {
+   "metric_calls": 759,
+   "dev": 0.54
+  }
+ ],
+ "test_accuracy": 0.48,
+ "cost_usd": 0.5468,
+ "total_metric_calls": 809,
+ "n_proposals": 25,
+ "optimizer": "gepa",
+ "task": "bbh_geometric",
+ "budget": 800,
+ "seed": 32,
+ "family": "f1"
+}

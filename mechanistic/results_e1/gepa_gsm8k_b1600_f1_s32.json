@@ -1,0 +1,54 @@
+{
+ "curve": [
+  {
+   "metric_calls": 0,
+   "dev": 0.93
+  },
+  {
+   "metric_calls": 124,
+   "dev": 0.93
+  },
+  {
+   "metric_calls": 230,
+   "dev": 0.93
+  },
+  {
+   "metric_calls": 390,
+   "dev": 0.93
+  },
+  {
+   "metric_calls": 598,
+   "dev": 0.92
+  },
+  {
+   "metric_calls": 821,
+   "dev": 0.89
+  },
+  {
+   "metric_calls": 957,
+   "dev": 0.92
+  },
+  {
+   "metric_calls": 1195,
+   "dev": 0.89
+  },
+  {
+   "metric_calls": 1457,
+   "dev": 0.89
+  },
+  {
+   "metric_calls": 1563,
+   "dev": 0.93
+  }
+ ],
+ "test_accuracy": 0.92,
+ "best_prompt": "Solve the math word problem step by step. Show your reasoning, then end your response with the final numeric answer on its own line in the form '#### <number>'.",
+ "cost_usd": 0.2821,
+ "total_metric_calls": 1663,
+ "n_proposals": 43,
+ "optimizer": "gepa",
+ "task": "gsm8k",
+ "budget": 1600,
+ "seed": 32,
+ "family": "f1"
+}

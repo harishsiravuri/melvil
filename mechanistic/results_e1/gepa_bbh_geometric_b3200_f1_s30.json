@@ -1,0 +1,153 @@
+{
+ "curve": [
+  {
+   "metric_calls": 0,
+   "dev": 0.36
+  },
+  {
+   "metric_calls": 62,
+   "dev": 0.52
+  },
+  {
+   "metric_calls": 139,
+   "dev": 0.52
+  },
+  {
+   "metric_calls": 213,
+   "dev": 0.52
+  },
+  {
+   "metric_calls": 269,
+   "dev": 0.62
+  },
+  {
+   "metric_calls": 346,
+   "dev": 0.54
+  },
+  {
+   "metric_calls": 408,
+   "dev": 0.52
+  },
+  {
+   "metric_calls": 470,
+   "dev": 0.6
+  },
+  {
+   "metric_calls": 547,
+   "dev": 0.58
+  },
+  {
+   "metric_calls": 612,
+   "dev": 0.58
+  },
+  {
+   "metric_calls": 668,
+   "dev": 0.44
+  },
+  {
+   "metric_calls": 724,
+   "dev": 0.58
+  },
+  {
+   "metric_calls": 837,
+   "dev": 0.62
+  },
+  {
+   "metric_calls": 899,
+   "dev": 0.52
+  },
+  {
+   "metric_calls": 955,
+   "dev": 0.48
+  },
+  {
+   "metric_calls": 1029,
+   "dev": 0.54
+  },
+  {
+   "metric_calls": 1118,
+   "dev": 0.62
+  },
+  {
+   "metric_calls": 1183,
+   "dev": 0.62
+  },
+  {
+   "metric_calls": 1287,
+   "dev": 0.52
+  },
+  {
+   "metric_calls": 1445,
+   "dev": 0.62
+  },
+  {
+   "metric_calls": 1663,
+   "dev": 0.54
+  },
+  {
+   "metric_calls": 1731,
+   "dev": 0.26
+  },
+  {
+   "metric_calls": 1817,
+   "dev": 0.56
+  },
+  {
+   "metric_calls": 1912,
+   "dev": 0.52
+  },
+  {
+   "metric_calls": 2004,
+   "dev": 0.64
+  },
+  {
+   "metric_calls": 2123,
+   "dev": 0.64
+  },
+  {
+   "metric_calls": 2296,
+   "dev": 0.62
+  },
+  {
+   "metric_calls": 2364,
+   "dev": 0.52
+  },
+  {
+   "metric_calls": 2426,
+   "dev": 0.62
+  },
+  {
+   "metric_calls": 2605,
+   "dev": 0.58
+  },
+  {
+   "metric_calls": 2691,
+   "dev": 0.58
+  },
+  {
+   "metric_calls": 2762,
+   "dev": 0.64
+  },
+  {
+   "metric_calls": 2821,
+   "dev": 0.62
+  },
+  {
+   "metric_calls": 2994,
+   "dev": 0.54
+  },
+  {
+   "metric_calls": 3140,
+   "dev": 0.56
+  }
+ ],
+ "test_accuracy": 0.57,
+ "cost_usd": 1.5215,
+ "total_metric_calls": 3205,
+ "n_proposals": 221,
+ "optimizer": "gepa",
+ "task": "bbh_geometric",
+ "budget": 3200,
+ "seed": 30,
+ "family": "f1"
+}
