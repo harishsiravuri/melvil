@@ -147,8 +147,25 @@ def optimize(
         trace_path=run_dir / "traces.jsonl",
         on_round=_log_round, cost_fn=spend,
     )
+
+    refl_call = reflection_callable(reflection_lm)
+    if config.log_proposals:
+        # E1 instrumentation: one reflection call == one proposal attempt.
+        # Logs the metric-call position of every attempt (accepted AND
+        # rejected), which accepted-candidate curves alone cannot recover.
+        proposals_path = run_dir / "proposals.jsonl"
+        _bare_call = refl_call
+        _counter = {"n": 0}
+
+        def refl_call(prompt: str) -> str:  # noqa: F811
+            rec = {"call_idx": _counter["n"], "metric_calls_at_call": adapter._metric_calls}
+            _counter["n"] += 1
+            with open(proposals_path, "a") as f:
+                f.write(json.dumps(rec) + "\n")
+            return _bare_call(prompt)
+
     if adapter.proposer is not None:
-        adapter.proposer.bind_lm(reflection_callable(reflection_lm))
+        adapter.proposer.bind_lm(refl_call)
 
     feats = config.features
     mining_reserve = len(dev) if feats.hard_example_mining else 0
@@ -182,7 +199,7 @@ def optimize(
         trainset=train,
         valset=dev,
         adapter=adapter,
-        reflection_lm=reflection_callable(reflection_lm),
+        reflection_lm=refl_call,
         module_selector=module_selector,
         reflection_minibatch_size=config.reflection_minibatch_size,
         max_metric_calls=gepa_budget,

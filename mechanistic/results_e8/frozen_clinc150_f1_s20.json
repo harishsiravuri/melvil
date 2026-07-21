@@ -1,0 +1,36 @@
+{
+ "experiment": "e8",
+ "phase": "frozen",
+ "task": "clinc150",
+ "family": "f1",
+ "seed": 20,
+ "arms": {
+  "seed": {
+   "test_accuracy": 0.98,
+   "test_macro_f1": 0.9799,
+   "unparseable": 0
+  },
+  "x1": {
+   "test_accuracy": 0.9867,
+   "test_macro_f1": 0.9866,
+   "unparseable": 0
+  },
+  "x2": {
+   "test_accuracy": 0.9867,
+   "test_macro_f1": 0.9864,
+   "unparseable": 0
+  }
+ },
+ "dev_accs": {
+  "input_of_x1": 0.98,
+  "input_of_x2": 0.98
+ },
+ "prompts": {
+  "seed": "Classify the given text into one of these categories: alarm, apr, balance, book_flight, book_hotel, calculator, calories, car_rental, cook_time, credit_limit, credit_score, definition, direct_deposit, freeze_account, lost_luggage, meeting_schedule, pay_bill, payday, pto_request, recipe, report_fraud, report_lost_card, restaurant_reservation, restaurant_reviews, rewards_balance, taxes, timer, transfer, travel_suggestion, weather.\n\nRespond with exactly one category name from the list above and nothing else.",
+  "x1": "Classify the given text into exactly one of these categories: alarm, apr, balance, book_flight, book_hotel, calculator, calories, car_rental, cook_time, credit_limit, credit_score, definition, direct_deposit, freeze_account, lost_luggage, meeting_schedule, pay_bill, payday, pto_request, recipe, report_fraud, report_lost_card, restaurant_reservation, restaurant_reviews, rewards_balance, taxes, timer, transfer, travel_suggestion, weather.\n\nDefinitions and decision rules:\n- payday: Select if the text refers to the timing or date of salary or wage payments (e.g., \"When is my next paycheck?\" or \"When did I get paid?\").\n- direct_deposit: Select only if the text concerns the method of payment (e.g., \"Set up direct deposit\" or \"Is my paycheck direct deposited?\"), and not just the date or occurrence of payment.\n- pto_request: Use if the text explicitly mentions requesting or taking paid time off, sick days, or vacation from work; prefer this even for vague vacation requests (e.g. \"I'd like to go on vacation\" \u2192 pto_request).\n- travel_suggestion: Use only if the text seeks recommendations or ideas about where or how to travel, and not when the speaker is requesting time off.\n- For all categories, select the most specific applicable category; do not select travel_suggestion for leave/vacation requests if pto_request is plausible.\n- If text ambiguously refers to both payroll timing and payment method, choose payday if timing/date is central.\n- If unsure between payday and direct_deposit, prefer payday when the main aspect is payment timing or receipt.\n\nRespond with exactly one category name from the list above and nothing else.",
+  "x2": "Classify the given text into exactly one of these categories: alarm, apr, balance, book_flight, book_hotel, calculator, calories, car_rental, cook_time, credit_limit, credit_score, definition, direct_deposit, freeze_account, lost_luggage, meeting_schedule, pay_bill, payday, pto_request, recipe, report_fraud, report_lost_card, restaurant_reservation, restaurant_reviews, rewards_balance, taxes, timer, transfer, travel_suggestion, weather.\n\nDefinitions and decision rules:\n\n- payday: Select if the text refers primarily to when salary or wages are paid (the timing, date, or occurrence of pay), including pay schedules or paycheck receipt.\n- direct_deposit: Select if the text refers to how payments (usually salary) are delivered, setup, or managed (e.g., payment methods, direct deposit enrollment), even if other (timing) info is present, unless timing is clearly the primary focus.\n- If a text discusses both timing (when) and payment method (how), select direct_deposit only if the method is at least equally central; otherwise, select payday.\n- pay_bill: Select if the text involves paying a bill or an invoice.\n- book_hotel: Select if the text is about booking, reserving, or searching for hotels or accommodations\u2014even if the user mentions reviews or ratings specifically for hotels.\n- restaurant_reviews: Select if the text is primarily about looking for opinions, ratings, or feedback about restaurants (not hotels or accommodations).\n- pto_request: Use if the text is about requesting or planning paid time off, vacation, or sick leave from work, even in vague terms (\"I want a vacation\").\n- travel_suggestion: Use only if the text asks for recommendations or ideas about where or how to travel, not just time off or vacation requests.\n- For all categories, choose the most specific and directly matching category based on the main purpose or target of the request.\n- If classification between book_hotel and restaurant_reviews is uncertain and the text is about hotels (even mentioning reviews), select book_hotel.\n- If text could be either direct_deposit or payday and both are plausible, prefer direct_deposit if payment method is a major consideration; prefer payday if date/timing is clearly more important.\n- Do not use restaurant_reviews for hotels, and do not use book_hotel for restaurant reviews; select based on which is the main service being discussed.\n- Only use travel_suggestion for requests for ideas or inspiration on destinations or means of travel.\n- For all other categories, assign the label whose definition most precisely fits the text.\n\nRespond with exactly one category name from the list above and nothing else."
+ },
+ "cost_usd": 0.1438,
+ "task_lm_calls": 700,
+ "reflection_calls": 2
+}

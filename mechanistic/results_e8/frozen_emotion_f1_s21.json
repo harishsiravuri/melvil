@@ -1,0 +1,36 @@
+{
+ "experiment": "e8",
+ "phase": "frozen",
+ "task": "emotion",
+ "family": "f1",
+ "seed": 21,
+ "arms": {
+  "seed": {
+   "test_accuracy": 0.5633,
+   "test_macro_f1": 0.4551,
+   "unparseable": 0
+  },
+  "x1": {
+   "test_accuracy": 0.5167,
+   "test_macro_f1": 0.4197,
+   "unparseable": 0
+  },
+  "x2": {
+   "test_accuracy": 0.5533,
+   "test_macro_f1": 0.4555,
+   "unparseable": 1
+  }
+ },
+ "dev_accs": {
+  "input_of_x1": 0.68,
+  "input_of_x2": 0.68
+ },
+ "prompts": {
+  "seed": "Classify the given text into one of these categories: anger, fear, joy, love, sadness, surprise.\n\nRespond with exactly one category name from the list above and nothing else.",
+  "x1": "Classify the given text into one of these categories: anger, fear, joy, love, sadness, surprise.\n\nDefinitions:\n- anger: feelings of annoyance, frustration, resentment, or rage.\n- fear: anxiety, apprehension, worry, dread, or being scared.\n- joy: happiness, delight, contentment, amusement, satisfaction, pleasure, or positive energy not focused on people/relationships.\n- love: affection, care, fondness, deep attachment, warmth, or devotion toward a person(s), animal, or thing; includes both romantic and platonic feelings when the core is attachment.\n- sadness: sorrow, grief, disappointment, loss, or unhappiness; focus on distress, hurt, or feeling \"down\".\n- surprise: shock, amazement, astonishment, or something unexpected.\n\nDecision rules:\n- If the text expresses both positive emotion toward someone/something (love) and general happiness (joy), label as love if attachment or affection is central; otherwise, joy.\n- If positive emotion is about achievement, satisfaction, or general well-being\u2014without focus on another entity\u2014choose joy.\n- If the text is positive about overcoming negative feelings or past hardships, check for tone: joy if celebrating the improvement, sadness if still focused on the hardship.\n- If you cannot confidently assign love (due to missing clear attachment/affection), do not choose love.\n\nRespond with exactly one category name from the list above and nothing else.",
+  "x2": "Classify the given text into one of these categories: anger, fear, joy, love, sadness, surprise.\n\nDefinitions:\n- anger: annoyance, frustration, resentment, or rage.\n- fear: anxiety, apprehension, worry, dread, discomfort about possible future events, or feeling unsafe.\n- joy: happiness, delight, amusement, satisfaction, pleasure, or positive feelings NOT focused on attachment to others; includes celebrating achievement or improvement, even with hardships mentioned, if the primary tone is upbeat.\n- love: affection, care, fondness, attachment, warmth, or devotion toward someone or something; includes romantic, platonic, familial, or strong emotional bonds where attachment is central.\n- sadness: sorrow, grief, disappointment, loss, unhappiness, distress, hurt, struggle, or feeling \u201cdown\u201d; includes feeling troubled, defeated, or ashamed, especially when lacking clear attachment to another entity.\n- surprise: shock, amazement, astonishment, or reacting to something unexpected.\n\nDecision rules:\n- If text mixes negative and positive emotions about adversity, choose joy ONLY if the main tone is celebrating or clearly positive about improvement; sadness if focus remains on struggle, hardship, or unresolved distress.\n- If text describes positive feelings involving strong connection to another person, animal, or thing, and attachment/affection is central, choose love. Otherwise, if positive feeling is general or self-focused, choose joy.\n- If both fear and sadness are present, label as sadness if distress, struggle, or hurt is more prominent; fear if anxiety or dread about future or possible events dominates.\n- Don\u2019t assign love unless clear attachment or affection is central.\n- If text is ambiguous between sadness and fear, prefer sadness if emotional pain is present, fear only if anxiety or apprehension is primary.\n- For nuanced emotions, focus on which feeling dominates the tone and intent.\n\nRespond with exactly one category name from the list above and nothing else."
+ },
+ "cost_usd": 0.1136,
+ "task_lm_calls": 700,
+ "reflection_calls": 2
+}

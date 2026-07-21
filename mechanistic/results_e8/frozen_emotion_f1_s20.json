@@ -1,0 +1,36 @@
+{
+ "experiment": "e8",
+ "phase": "frozen",
+ "task": "emotion",
+ "family": "f1",
+ "seed": 20,
+ "arms": {
+  "seed": {
+   "test_accuracy": 0.5633,
+   "test_macro_f1": 0.4551,
+   "unparseable": 0
+  },
+  "x1": {
+   "test_accuracy": 0.5267,
+   "test_macro_f1": 0.4294,
+   "unparseable": 1
+  },
+  "x2": {
+   "test_accuracy": 0.5467,
+   "test_macro_f1": 0.4399,
+   "unparseable": 0
+  }
+ },
+ "dev_accs": {
+  "input_of_x1": 0.68,
+  "input_of_x2": 0.68
+ },
+ "prompts": {
+  "seed": "Classify the given text into one of these categories: anger, fear, joy, love, sadness, surprise.\n\nRespond with exactly one category name from the list above and nothing else.",
+  "x1": "Classify the given text into one of these categories: anger, fear, joy, love, sadness, surprise.\n\nDefinitions and rules:\n- anger: The text expresses irritation, frustration, resentment, or rage toward a person, situation, or thing.\n- fear: The text describes anxiety, worry, dread, or concern about something bad that might happen or is happening.\n- joy: The text conveys feelings of happiness, satisfaction, pleasure, amusement, pride, or positive excitement, whether small or large.\n- love: The text conveys affection, deep care, attachment, warmth, or appreciation for someone or something, including admiration, longing, or expressions of strong bond.\n- sadness: The text expresses unhappiness, sorrow, disappointment, regret, grief, loneliness, or emotional pain about a loss, unmet desire, or difficulty.\n- surprise: The text centers on being startled, amazed, or caught off guard\u2014whether by something positive, negative, or neutral.\n\nDecision rules and tie-breakers:\n- If both joy and love are present, choose love if the focus is on affection, connection, admiration, or attachment; choose joy if the main feeling is happiness or personal satisfaction, rather than caring for another.\n- If both joy and sadness (e.g., bittersweet feelings) appear, select sadness if the overall tone involves loss, disappointment, or regret; select joy if the emphasis is on positive outcomes, relief, or self-affirmation.\n- Appreciation and gratitude are joy unless clearly centered on affection or attachment to someone/something, in which case choose love.\n- If no clear emotion fits, pick the closest category based on primary emotional tone.\n\nRespond with exactly one category name from the list above and nothing else.",
+  "x2": "Classify the given text into one of these categories: anger, fear, joy, love, sadness, surprise.\n\nCategory definitions:\n- anger: The text expresses irritation, frustration, resentment, or rage at a person, situation, or thing.\n- fear: The text expresses anxiety, worry, dread, or concern about something bad that might happen or is happening.\n- joy: The text expresses happiness, satisfaction, amusement, pride, or positive excitement, even if modest.\n- love: The text expresses affection, deep care, attachment, warmth, admiration, longing, or a strong personal bond with someone or something.\n- sadness: The text expresses unhappiness, sorrow, disappointment, regret, grief, emotional pain, or loneliness, especially about loss, unmet desire, or difficulty.\n- surprise: The text centers on being startled, amazed, or caught off guard, whether the cause is positive, negative, or neutral.\n\nDecision rules and tie-breakers:\n- For mixed joy and sadness (e.g., bittersweet, pride despite loss): If the text dwells on loss, regret, or emotional pain, select sadness. If the emphasis is on positive achievement, pleasure, or relief, select joy.\n- For mixed joy and love: Select love if the main point is affection, admiration, longing, or human connection; select joy if happiness or self-focused satisfaction is strongest.\n- For appreciation, gratitude, or pride: Choose joy unless the text centers on warm feelings about a person, relationship, or longing/attachment\u2014then choose love.\n- If sadness and fear both appear, but the main feeling is about current or past loss, rejection, or regret, select sadness. If the main feeling is about what could go wrong or anxiety about the future, select fear.\n- If expressing defeat, stress, dissatisfaction, or feeling troubled without happiness, choose sadness unless the tone is actively optimistic or positive.\n- If negative feelings toward self (shame, guilt, self-blame) appear, prefer sadness unless anger at self or anxiety about consequences is dominant.\n- If no clear emotion fits, pick the closest category by overall emotional emphasis.\n\nRespond with exactly one category name from the list above and nothing else."
+ },
+ "cost_usd": 0.1298,
+ "task_lm_calls": 700,
+ "reflection_calls": 2
+}

@@ -1,0 +1,36 @@
+{
+ "experiment": "e8",
+ "phase": "frozen",
+ "task": "stance_abortion",
+ "family": "f1",
+ "seed": 20,
+ "arms": {
+  "seed": {
+   "test_accuracy": 0.5,
+   "test_macro_f1": 0.4335,
+   "unparseable": 0
+  },
+  "x1": {
+   "test_accuracy": 0.5,
+   "test_macro_f1": 0.4583,
+   "unparseable": 0
+  },
+  "x2": {
+   "test_accuracy": 0.4321,
+   "test_macro_f1": 0.4186,
+   "unparseable": 0
+  }
+ },
+ "dev_accs": {
+  "input_of_x1": 0.43,
+  "input_of_x2": 0.43
+ },
+ "prompts": {
+  "seed": "Classify the given text into one of these categories: against, favor, none.\n\nRespond with exactly one category name from the list above and nothing else.",
+  "x1": "Classify the given text into one of these categories: against, favor, none.\n\nDefinitions:\n- against: The text expresses opposition, disagreement, or a negative stance toward a cause, issue, person, or policy.\n- favor: The text expresses support, agreement, or a positive stance toward a cause, issue, person, or policy.\n- none: The text does not express a clear opinion for or against a specific cause, issue, person, or policy; it is neutral, ambiguous, irrelevant, off-topic, or lacks enough context for classification.\n\nDecision rules:\n- If the stance for or against is about a controversial or social topic, assign 'favor' or 'against' based only on the position shown.\n- Do not infer a stance unless there are clear, explicit indications. If the meaning is ambiguous, sarcastic, off-topic, or simply mentioning terms with no clear position, choose 'none'.\n- If the text uses language that strongly promotes or supports, choose 'favor'. If it strongly criticizes or opposes, choose 'against'.\n- If both stances could plausibly apply and the text is not clear, assign 'none' as the tie-breaker.\n\nRespond with exactly one category name from the list above and nothing else.",
+  "x2": "Classify the given text into one of these categories: against, favor, none.\n\nDefinitions:\n- against: The text explicitly expresses opposition, criticism, or disapproval toward a cause, issue, person, or policy.\n- favor: The text explicitly expresses support, approval, or promotion of a cause, issue, person, or policy.\n- none: The text does not make its stance clear, is neutral, ambiguous, off-topic, only mentions issues without an explicit opinion, or lacks enough context to assign 'favor' or 'against'.\n\nDecision rules:\n- Assign 'favor' or 'against' ONLY if the stance is explicit, direct, or unmistakably implied\u2014do not infer stance from hashtags, sarcasm, or indirect references.\n- Do not rely on the presence of terms that may be typical of one side; require direct language of support or opposition.\n- For ironic, sarcastic, rhetorical, or ambiguous texts, or texts mixing positive and negative content with no clear stance, assign 'none'.\n- For statements that are factual, descriptive, merely reporting, or only mentioning issues/people without a clear position, assign 'none'.\n- If the text is hostile or critical but does NOT specify a target (e.g., just being negative or venting), assign 'none'.\n- Tie-breaker: If at any point uncertainty remains about stance, assign 'none'.\n\nRespond with exactly one category name from the list above and nothing else."
+ },
+ "cost_usd": 0.0909,
+ "task_lm_calls": 660,
+ "reflection_calls": 2
+}
