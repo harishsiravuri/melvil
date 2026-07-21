@@ -1,0 +1,73 @@
+{
+ "curve": [
+  {
+   "metric_calls": 0,
+   "dev": 0.8
+  },
+  {
+   "metric_calls": 106,
+   "dev": 0.81
+  },
+  {
+   "metric_calls": 212,
+   "dev": 0.81
+  },
+  {
+   "metric_calls": 318,
+   "dev": 0.81
+  },
+  {
+   "metric_calls": 427,
+   "dev": 0.8
+  },
+  {
+   "metric_calls": 536,
+   "dev": 0.8
+  },
+  {
+   "metric_calls": 642,
+   "dev": 0.82
+  },
+  {
+   "metric_calls": 748,
+   "dev": 0.81
+  },
+  {
+   "metric_calls": 857,
+   "dev": 0.83
+  },
+  {
+   "metric_calls": 963,
+   "dev": 0.86
+  },
+  {
+   "metric_calls": 1075,
+   "dev": 0.82
+  },
+  {
+   "metric_calls": 1184,
+   "dev": 0.81
+  },
+  {
+   "metric_calls": 1305,
+   "dev": 0.82
+  },
+  {
+   "metric_calls": 1417,
+   "dev": 0.85
+  },
+  {
+   "metric_calls": 1535,
+   "dev": 0.83
+  }
+ ],
+ "test_accuracy": 0.8767,
+ "cost_usd": 1.0872,
+ "total_metric_calls": 1635,
+ "n_proposals": 14,
+ "optimizer": "gepa",
+ "task": "massive",
+ "budget": 1600,
+ "seed": 31,
+ "family": "f2"
+}

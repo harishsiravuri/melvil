@@ -1,0 +1,219 @@
+{
+ "schema_version": 1,
+ "artifact_id": "d4a72e9ec216",
+ "parent_id": null,
+ "task_name": "trec",
+ "created_at": "2026-07-21T06:42:54-0500",
+ "library": {
+  "name": "melvil",
+  "version": "0.3.0"
+ },
+ "models": {
+  "task": "openrouter/anthropic/claude-haiku-4.5",
+  "reflection": "openrouter/anthropic/claude-sonnet-4.5"
+ },
+ "budget": {
+  "metric_calls_budget": 800,
+  "metric_calls_spent": 851,
+  "cost_usd": 0.526,
+  "task_lm_usage": {
+   "model": "openrouter/anthropic/claude-haiku-4.5",
+   "prompt_tokens": 437036,
+   "completion_tokens": 3019,
+   "calls": 747,
+   "cache_hits": 204,
+   "cost_usd": 0.452131
+  },
+  "reflection_lm_usage": {
+   "model": "openrouter/anthropic/claude-sonnet-4.5",
+   "prompt_tokens": 4411,
+   "completion_tokens": 4041,
+   "calls": 7,
+   "cache_hits": 0,
+   "cost_usd": 0.073848
+  },
+  "opt_seconds": 190.7
+ },
+ "scores": {
+  "dev_accuracy": 0.82,
+  "dev_macro_f1": 0.7901,
+  "per_label_dev": {
+   "abbreviation": {
+    "precision": 0.4,
+    "recall": 1.0,
+    "f1": 0.5714,
+    "support": 2
+   },
+   "description": {
+    "precision": 1.0,
+    "recall": 0.8571,
+    "f1": 0.9231,
+    "support": 21
+   },
+   "entity": {
+    "precision": 0.6176,
+    "recall": 0.913,
+    "f1": 0.7368,
+    "support": 23
+   },
+   "human": {
+    "precision": 0.9444,
+    "recall": 0.7727,
+    "f1": 0.85,
+    "support": 22
+   },
+   "location": {
+    "precision": 1.0,
+    "recall": 0.6,
+    "f1": 0.75,
+    "support": 15
+   },
+   "numeric": {
+    "precision": 0.9375,
+    "recall": 0.8824,
+    "f1": 0.9091,
+    "support": 17
+   }
+  },
+  "seed_dev_accuracy": 0.69,
+  "dev_accuracy_quarantined": null
+ },
+ "config_hash": "5aa0bfc6639b",
+ "config": {
+  "task_model": "openrouter/anthropic/claude-haiku-4.5",
+  "reflection_model": "openrouter/anthropic/claude-sonnet-4.5",
+  "budget": 800,
+  "seed": 32,
+  "features": {
+   "codebook": false,
+   "confusion_reflection": false,
+   "hard_example_mining": false
+  },
+  "num_threads": 8,
+  "run_dir": "/Users/harish/Documents/Claude/Projects/6s/labelsmith/mechanistic/runs_e1/gepa_trec_b800_f2_s32",
+  "task_temperature": 0.0,
+  "task_max_tokens": 40,
+  "reflection_temperature": 1.0,
+  "reflection_max_tokens": 8000,
+  "reflection_minibatch_size": 3,
+  "max_exemplars": 6,
+  "mining_llm_screen": true,
+  "log_proposals": true,
+  "prices": {},
+  "metric_calls": 800
+ },
+ "label_names": [
+  "abbreviation",
+  "description",
+  "entity",
+  "human",
+  "location",
+  "numeric"
+ ],
+ "components": {
+  "instruction": "Classify the given text into one of these categories: abbreviation, description, entity, human, location, numeric.\n\nImportant classification guidelines:\n- Questions asking \"What\" followed by a noun (e.g., \"What colors...\", \"What gender...\") should typically be classified as 'entity' rather than 'human' or 'description', even if they relate to human characteristics or descriptive properties\n- The classification should focus on what type of answer is being requested, not the subject matter of the question\n- 'entity' category applies to questions asking about things, objects, concepts, or attributes (including colors, genders, physical properties)\n- 'human' category should be reserved for questions specifically asking about individual people or groups of people by name or identity, not general human attributes\n- 'description' category applies to questions asking for explanations or descriptions of processes, not questions asking for a list of things or attributes"
+ },
+ "exemplars": [],
+ "confusion": {
+  "labels": [
+   "abbreviation",
+   "description",
+   "entity",
+   "human",
+   "location",
+   "numeric"
+  ],
+  "matrix": [
+   [
+    2,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    2,
+    18,
+    1,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    1,
+    0,
+    21,
+    0,
+    0,
+    1,
+    0
+   ],
+   [
+    0,
+    0,
+    5,
+    17,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    5,
+    1,
+    9,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    2,
+    0,
+    0,
+    15,
+    0
+   ]
+  ],
+  "unparseable_column": true
+ },
+ "curve": [
+  {
+   "metric_calls": 0,
+   "dev_score": 0.69
+  },
+  {
+   "metric_calls": 109,
+   "dev_score": 0.82
+  },
+  {
+   "metric_calls": 215,
+   "dev_score": 0.77
+  },
+  {
+   "metric_calls": 324,
+   "dev_score": 0.78
+  },
+  {
+   "metric_calls": 433,
+   "dev_score": 0.75
+  },
+  {
+   "metric_calls": 539,
+   "dev_score": 0.76
+  },
+  {
+   "metric_calls": 645,
+   "dev_score": 0.78
+  },
+  {
+   "metric_calls": 751,
+   "dev_score": 0.77
+  }
+ ],
+ "notes": ""
+}

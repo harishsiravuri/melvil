@@ -1,0 +1,272 @@
+{
+ "test_accuracy": 0.8633,
+ "curve": null,
+ "trial_logs": {
+  "1": {
+   "full_eval_program_path": null,
+   "full_eval_score": 57.0,
+   "total_eval_calls_so_far": 100,
+   "full_eval_program": "Predict(StringSignature(text -> label\n    instructions='Classify the given text into one of these categories: abbreviation, description, entity, human, location, numeric. Answer with the category name only.'\n    text = Field(annotation=str required=True json_schema_extra={'IS_TYPE_UNDEFINED': True, '__dspy_field_type': 'input', 'prefix': 'Text:', 'desc': '${text}'})\n    label = Field(annotation=str required=True json_schema_extra={'__dspy_field_type': 'output', 'prefix': 'Label:', 'desc': '${label}'})\n))"
+  },
+  "2": {
+   "0_predictor_instruction": 6,
+   "0_predictor_demos": 8,
+   "mb_program_path": null,
+   "mb_score": 82.86,
+   "total_eval_calls_so_far": 135,
+   "mb_program": "Predict(StringSignature(text -> label\n    instructions='You are responsible for powering an automated medical triage system that must accurately and quickly categorize incoming patient questions to ensure they reach the correct specialist. Given a single-sentence question, classify it into the most appropriate category: abbreviation, description, entity, human, location, or numeric. Output only the category label. Your classification determines whether vital information reaches doctors in time\u2014choose carefully.'\n    text = Field(annotation=str required=True json_schema_extra={'IS_TYPE_UNDEFINED': True, '__dspy_field_type': 'input', 'prefix': 'Text:', 'desc': '${text}'})\n    label = Field(annotation=str required=True json_schema_extra={'__dspy_field_type': 'output', 'prefix': 'Label:', 'desc': '${label}'})\n))"
+  },
+  "3": {
+   "0_predictor_instruction": 3,
+   "0_predictor_demos": 10,
+   "mb_program_path": null,
+   "mb_score": 91.43,
+   "total_eval_calls_so_far": 170,
+   "mb_program": "Predict(StringSignature(text -> label\n    instructions='You are an expert question analyst for a large-scale question answering system. Your task is to read the provided question and determine which answer type category it belongs to. Classify each question into one of the following categories based on the kind of answer it seeks: abbreviation, description, entity, human, location, or numeric. Provide only the category name as your answer.'\n    text = Field(annotation=str required=True json_schema_extra={'IS_TYPE_UNDEFINED': True, '__dspy_field_type': 'input', 'prefix': 'Text:', 'desc': '${text}'})\n    label = Field(annotation=str required=True json_schema_extra={'__dspy_field_type': 'output', 'prefix': 'Label:', 'desc': '${label}'})\n))"
+  },
+  "4": {
+   "0_predictor_instruction": 2,
+   "0_predictor_demos": 17,
+   "mb_program_path": null,
+   "mb_score": 71.43,
+   "total_eval_calls_so_far": 205,
+   "mb_program": "Predict(StringSignature(text -> label\n    instructions='Read the provided single-sentence question and analyze its purpose and content. Based on your understanding, assign the most suitable category from the following list of possible answer types: abbreviation, description, entity, human, location, or numeric. Your answer should be a single word: the name of the category that best matches the type of question being asked. Do not include any explanations or additional text\u2014only output the category label.'\n    text = Field(annotation=str required=True json_schema_extra={'IS_TYPE_UNDEFINED': True, '__dspy_field_type': 'input', 'prefix': 'Text:', 'desc': '${text}'})\n    label = Field(annotation=str required=True json_schema_extra={'__dspy_field_type': 'output', 'prefix': 'Label:', 'desc': '${label}'})\n))"
+  },
+  "5": {
+   "0_predictor_instruction": 2,
+   "0_predictor_demos": 3,
+   "mb_program_path": null,
+   "mb_score": 74.29,
+   "total_eval_calls_so_far": 240,
+   "mb_program": "Predict(StringSignature(text -> label\n    instructions='Read the provided single-sentence question and analyze its purpose and content. Based on your understanding, assign the most suitable category from the following list of possible answer types: abbreviation, description, entity, human, location, or numeric. Your answer should be a single word: the name of the category that best matches the type of question being asked. Do not include any explanations or additional text\u2014only output the category label.'\n    text = Field(annotation=str required=True json_schema_extra={'IS_TYPE_UNDEFINED': True, '__dspy_field_type': 'input', 'prefix': 'Text:', 'desc': '${text}'})\n    label = Field(annotation=str required=True json_schema_extra={'__dspy_field_type': 'output', 'prefix': 'Label:', 'desc': '${label}'})\n))"
+  },
+  "6": {
+   "0_predictor_instruction": 8,
+   "0_predictor_demos": 11,
+   "mb_program_path": null,
+   "mb_score": 82.86,
+   "total_eval_calls_so_far": 275,
+   "mb_program": "Predict(StringSignature(text -> label\n    instructions='Given a single-sentence factual question, analyze it and determine the most appropriate answer type category from the following options: abbreviation, description, entity, human, location, or numeric. Respond with only the category label that best matches the expected type of answer for the question.'\n    text = Field(annotation=str required=True json_schema_extra={'IS_TYPE_UNDEFINED': True, '__dspy_field_type': 'input', 'prefix': 'Text:', 'desc': '${text}'})\n    label = Field(annotation=str required=True json_schema_extra={'__dspy_field_type': 'output', 'prefix': 'Label:', 'desc': '${label}'})\n))"
+  },
+  "7": {
+   "total_eval_calls_so_far": 375,
+   "full_eval_program_path": null,
+   "full_eval_program": "Predict(StringSignature(text -> label\n    instructions='You are an expert question analyst for a large-scale question answering system. Your task is to read the provided question and determine which answer type category it belongs to. Classify each question into one of the following categories based on the kind of answer it seeks: abbreviation, description, entity, human, location, or numeric. Provide only the category name as your answer.'\n    text = Field(annotation=str required=True json_schema_extra={'IS_TYPE_UNDEFINED': True, '__dspy_field_type': 'input', 'prefix': 'Text:', 'desc': '${text}'})\n    label = Field(annotation=str required=True json_schema_extra={'__dspy_field_type': 'output', 'prefix': 'Label:', 'desc': '${label}'})\n))",
+   "full_eval_score": 79.0
+  },
+  "8": {
+   "0_predictor_instruction": 4,
+   "0_predictor_demos": 9,
+   "mb_program_path": null,
+   "mb_score": 65.71,
+   "total_eval_calls_so_far": 410,
+   "mb_program": "Predict(StringSignature(text -> label\n    instructions='Imagine you are building a critical information retrieval system for a national emergency response center. Accurately classifying each incoming query into its appropriate category is essential for routing questions to the right experts without delay. For each input text, identify its type by assigning it to one of these categories: abbreviation, description, entity, human, location, or numeric. Respond with the exact category name\u2014your correct classification will directly impact the effectiveness of the emergency response.'\n    text = Field(annotation=str required=True json_schema_extra={'IS_TYPE_UNDEFINED': True, '__dspy_field_type': 'input', 'prefix': 'Text:', 'desc': '${text}'})\n    label = Field(annotation=str required=True json_schema_extra={'__dspy_field_type': 'output', 'prefix': 'Label:', 'desc': '${label}'})\n))"
+  },
+  "9": {
+   "0_predictor_instruction": 3,
+   "0_predictor_demos": 1,
+   "mb_program_path": null,
+   "mb_score": 74.29,
+   "total_eval_calls_so_far": 445,
+   "mb_program": "Predict(StringSignature(text -> label\n    instructions='You are an expert question analyst for a large-scale question answering system. Your task is to read the provided question and determine which answer type category it belongs to. Classify each question into one of the following categories based on the kind of answer it seeks: abbreviation, description, entity, human, location, or numeric. Provide only the category name as your answer.'\n    text = Field(annotation=str required=True json_schema_extra={'IS_TYPE_UNDEFINED': True, '__dspy_field_type': 'input', 'prefix': 'Text:', 'desc': '${text}'})\n    label = Field(annotation=str required=True json_schema_extra={'__dspy_field_type': 'output', 'prefix': 'Label:', 'desc': '${label}'})\n))"
+  },
+  "10": {
+   "0_predictor_instruction": 1,
+   "0_predictor_demos": 3,
+   "mb_program_path": null,
+   "mb_score": 77.14,
+   "total_eval_calls_so_far": 480,
+   "mb_program": "Predict(StringSignature(text -> label\n    instructions='You are an expert question intent classifier. Given a single-sentence question, analyze its wording to determine the type of information it is seeking. If the question asks for an explanation, definition, or conceptual description, classify it as \"description.\" Choose only one label from the following categories: abbreviation, description, entity, human, location, numeric. Respond with the category name that best matches the question\\'s intent.'\n    text = Field(annotation=str required=True json_schema_extra={'IS_TYPE_UNDEFINED': True, '__dspy_field_type': 'input', 'prefix': 'Text:', 'desc': '${text}'})\n    label = Field(annotation=str required=True json_schema_extra={'__dspy_field_type': 'output', 'prefix': 'Label:', 'desc': '${label}'})\n))"
+  },
+  "11": {
+   "0_predictor_instruction": 7,
+   "0_predictor_demos": 10,
+   "mb_program_path": null,
+   "mb_score": 85.71,
+   "total_eval_calls_so_far": 515,
+   "mb_program": "Predict(StringSignature(text -> label\n    instructions='Read the provided question and determine what type of answer it is seeking. Choose the most appropriate label from the following categories: abbreviation (for questions asking what an acronym or abbreviation stands for), numeric (for questions asking about quantities or numbers), description (for questions seeking explanations or descriptions), entity (for questions seeking the name of an object, thing, or concept), human (for questions seeking a person\u2019s name or identity), or location (for questions seeking a place). Respond with the single best-fitting category name only.'\n    text = Field(annotation=str required=True json_schema_extra={'IS_TYPE_UNDEFINED': True, '__dspy_field_type': 'input', 'prefix': 'Text:', 'desc': '${text}'})\n    label = Field(annotation=str required=True json_schema_extra={'__dspy_field_type': 'output', 'prefix': 'Label:', 'desc': '${label}'})\n))"
+  },
+  "12": {
+   "0_predictor_instruction": 7,
+   "0_predictor_demos": 2,
+   "mb_program_path": null,
+   "mb_score": 71.43,
+   "total_eval_calls_so_far": 550,
+   "mb_program": "Predict(StringSignature(text -> label\n    instructions='Read the provided question and determine what type of answer it is seeking. Choose the most appropriate label from the following categories: abbreviation (for questions asking what an acronym or abbreviation stands for), numeric (for questions asking about quantities or numbers), description (for questions seeking explanations or descriptions), entity (for questions seeking the name of an object, thing, or concept), human (for questions seeking a person\u2019s name or identity), or location (for questions seeking a place). Respond with the single best-fitting category name only.'\n    text = Field(annotation=str required=True json_schema_extra={'IS_TYPE_UNDEFINED': True, '__dspy_field_type': 'input', 'prefix': 'Text:', 'desc': '${text}'})\n    label = Field(annotation=str required=True json_schema_extra={'__dspy_field_type': 'output', 'prefix': 'Label:', 'desc': '${label}'})\n))"
+  },
+  "13": {
+   "total_eval_calls_so_far": 650,
+   "full_eval_program_path": null,
+   "full_eval_program": "Predict(StringSignature(text -> label\n    instructions='Read the provided question and determine what type of answer it is seeking. Choose the most appropriate label from the following categories: abbreviation (for questions asking what an acronym or abbreviation stands for), numeric (for questions asking about quantities or numbers), description (for questions seeking explanations or descriptions), entity (for questions seeking the name of an object, thing, or concept), human (for questions seeking a person\u2019s name or identity), or location (for questions seeking a place). Respond with the single best-fitting category name only.'\n    text = Field(annotation=str required=True json_schema_extra={'IS_TYPE_UNDEFINED': True, '__dspy_field_type': 'input', 'prefix': 'Text:', 'desc': '${text}'})\n    label = Field(annotation=str required=True json_schema_extra={'__dspy_field_type': 'output', 'prefix': 'Label:', 'desc': '${label}'})\n))",
+   "full_eval_score": 76.0
+  },
+  "14": {
+   "0_predictor_instruction": 5,
+   "0_predictor_demos": 6,
+   "mb_program_path": null,
+   "mb_score": 77.14,
+   "total_eval_calls_so_far": 685,
+   "mb_program": "Predict(StringSignature(text -> label\n    instructions='You are an expert question classification system. Given a single-sentence factual question, analyze its wording and intent to determine which of the following answer types best describes the expected response: abbreviation, description, entity, human, location, or numeric. Return only the label that most accurately reflects the answer type required by the question.'\n    text = Field(annotation=str required=True json_schema_extra={'IS_TYPE_UNDEFINED': True, '__dspy_field_type': 'input', 'prefix': 'Text:', 'desc': '${text}'})\n    label = Field(annotation=str required=True json_schema_extra={'__dspy_field_type': 'output', 'prefix': 'Label:', 'desc': '${label}'})\n))"
+  },
+  "15": {
+   "0_predictor_instruction": 6,
+   "0_predictor_demos": 10,
+   "mb_program_path": null,
+   "mb_score": 82.86,
+   "total_eval_calls_so_far": 720,
+   "mb_program": "Predict(StringSignature(text -> label\n    instructions='You are responsible for powering an automated medical triage system that must accurately and quickly categorize incoming patient questions to ensure they reach the correct specialist. Given a single-sentence question, classify it into the most appropriate category: abbreviation, description, entity, human, location, or numeric. Output only the category label. Your classification determines whether vital information reaches doctors in time\u2014choose carefully.'\n    text = Field(annotation=str required=True json_schema_extra={'IS_TYPE_UNDEFINED': True, '__dspy_field_type': 'input', 'prefix': 'Text:', 'desc': '${text}'})\n    label = Field(annotation=str required=True json_schema_extra={'__dspy_field_type': 'output', 'prefix': 'Label:', 'desc': '${label}'})\n))"
+  },
+  "16": {
+   "0_predictor_instruction": 3,
+   "0_predictor_demos": 7,
+   "mb_program_path": null,
+   "mb_score": 82.86,
+   "total_eval_calls_so_far": 755,
+   "mb_program": "Predict(StringSignature(text -> label\n    instructions='You are an expert question analyst for a large-scale question answering system. Your task is to read the provided question and determine which answer type category it belongs to. Classify each question into one of the following categories based on the kind of answer it seeks: abbreviation, description, entity, human, location, or numeric. Provide only the category name as your answer.'\n    text = Field(annotation=str required=True json_schema_extra={'IS_TYPE_UNDEFINED': True, '__dspy_field_type': 'input', 'prefix': 'Text:', 'desc': '${text}'})\n    label = Field(annotation=str required=True json_schema_extra={'__dspy_field_type': 'output', 'prefix': 'Label:', 'desc': '${label}'})\n))"
+  },
+  "17": {
+   "0_predictor_instruction": 7,
+   "0_predictor_demos": 14,
+   "mb_program_path": null,
+   "mb_score": 62.86,
+   "total_eval_calls_so_far": 790,
+   "mb_program": "Predict(StringSignature(text -> label\n    instructions='Read the provided question and determine what type of answer it is seeking. Choose the most appropriate label from the following categories: abbreviation (for questions asking what an acronym or abbreviation stands for), numeric (for questions asking about quantities or numbers), description (for questions seeking explanations or descriptions), entity (for questions seeking the name of an object, thing, or concept), human (for questions seeking a person\u2019s name or identity), or location (for questions seeking a place). Respond with the single best-fitting category name only.'\n    text = Field(annotation=str required=True json_schema_extra={'IS_TYPE_UNDEFINED': True, '__dspy_field_type': 'input', 'prefix': 'Text:', 'desc': '${text}'})\n    label = Field(annotation=str required=True json_schema_extra={'__dspy_field_type': 'output', 'prefix': 'Label:', 'desc': '${label}'})\n))"
+  },
+  "18": {
+   "0_predictor_instruction": 4,
+   "0_predictor_demos": 10,
+   "mb_program_path": null,
+   "mb_score": 80.0,
+   "total_eval_calls_so_far": 825,
+   "mb_program": "Predict(StringSignature(text -> label\n    instructions='Imagine you are building a critical information retrieval system for a national emergency response center. Accurately classifying each incoming query into its appropriate category is essential for routing questions to the right experts without delay. For each input text, identify its type by assigning it to one of these categories: abbreviation, description, entity, human, location, or numeric. Respond with the exact category name\u2014your correct classification will directly impact the effectiveness of the emergency response.'\n    text = Field(annotation=str required=True json_schema_extra={'IS_TYPE_UNDEFINED': True, '__dspy_field_type': 'input', 'prefix': 'Text:', 'desc': '${text}'})\n    label = Field(annotation=str required=True json_schema_extra={'__dspy_field_type': 'output', 'prefix': 'Label:', 'desc': '${label}'})\n))"
+  },
+  "19": {
+   "total_eval_calls_so_far": 925,
+   "full_eval_program_path": null,
+   "full_eval_program": "Predict(StringSignature(text -> label\n    instructions='You are responsible for powering an automated medical triage system that must accurately and quickly categorize incoming patient questions to ensure they reach the correct specialist. Given a single-sentence question, classify it into the most appropriate category: abbreviation, description, entity, human, location, or numeric. Output only the category label. Your classification determines whether vital information reaches doctors in time\u2014choose carefully.'\n    text = Field(annotation=str required=True json_schema_extra={'IS_TYPE_UNDEFINED': True, '__dspy_field_type': 'input', 'prefix': 'Text:', 'desc': '${text}'})\n    label = Field(annotation=str required=True json_schema_extra={'__dspy_field_type': 'output', 'prefix': 'Label:', 'desc': '${label}'})\n))",
+   "full_eval_score": 78.0
+  },
+  "20": {
+   "0_predictor_instruction": 1,
+   "0_predictor_demos": 5,
+   "mb_program_path": null,
+   "mb_score": 65.71,
+   "total_eval_calls_so_far": 960,
+   "mb_program": "Predict(StringSignature(text -> label\n    instructions='You are an expert question intent classifier. Given a single-sentence question, analyze its wording to determine the type of information it is seeking. If the question asks for an explanation, definition, or conceptual description, classify it as \"description.\" Choose only one label from the following categories: abbreviation, description, entity, human, location, numeric. Respond with the category name that best matches the question\\'s intent.'\n    text = Field(annotation=str required=True json_schema_extra={'IS_TYPE_UNDEFINED': True, '__dspy_field_type': 'input', 'prefix': 'Text:', 'desc': '${text}'})\n    label = Field(annotation=str required=True json_schema_extra={'__dspy_field_type': 'output', 'prefix': 'Label:', 'desc': '${label}'})\n))"
+  },
+  "21": {
+   "0_predictor_instruction": 7,
+   "0_predictor_demos": 4,
+   "mb_program_path": null,
+   "mb_score": 85.71,
+   "total_eval_calls_so_far": 995,
+   "mb_program": "Predict(StringSignature(text -> label\n    instructions='Read the provided question and determine what type of answer it is seeking. Choose the most appropriate label from the following categories: abbreviation (for questions asking what an acronym or abbreviation stands for), numeric (for questions asking about quantities or numbers), description (for questions seeking explanations or descriptions), entity (for questions seeking the name of an object, thing, or concept), human (for questions seeking a person\u2019s name or identity), or location (for questions seeking a place). Respond with the single best-fitting category name only.'\n    text = Field(annotation=str required=True json_schema_extra={'IS_TYPE_UNDEFINED': True, '__dspy_field_type': 'input', 'prefix': 'Text:', 'desc': '${text}'})\n    label = Field(annotation=str required=True json_schema_extra={'__dspy_field_type': 'output', 'prefix': 'Label:', 'desc': '${label}'})\n))"
+  },
+  "22": {
+   "0_predictor_instruction": 7,
+   "0_predictor_demos": 4,
+   "mb_program_path": null,
+   "mb_score": 74.29,
+   "total_eval_calls_so_far": 1030,
+   "mb_program": "Predict(StringSignature(text -> label\n    instructions='Read the provided question and determine what type of answer it is seeking. Choose the most appropriate label from the following categories: abbreviation (for questions asking what an acronym or abbreviation stands for), numeric (for questions asking about quantities or numbers), description (for questions seeking explanations or descriptions), entity (for questions seeking the name of an object, thing, or concept), human (for questions seeking a person\u2019s name or identity), or location (for questions seeking a place). Respond with the single best-fitting category name only.'\n    text = Field(annotation=str required=True json_schema_extra={'IS_TYPE_UNDEFINED': True, '__dspy_field_type': 'input', 'prefix': 'Text:', 'desc': '${text}'})\n    label = Field(annotation=str required=True json_schema_extra={'__dspy_field_type': 'output', 'prefix': 'Label:', 'desc': '${label}'})\n))"
+  },
+  "23": {
+   "0_predictor_instruction": 7,
+   "0_predictor_demos": 15,
+   "mb_program_path": null,
+   "mb_score": 71.43,
+   "total_eval_calls_so_far": 1065,
+   "mb_program": "Predict(StringSignature(text -> label\n    instructions='Read the provided question and determine what type of answer it is seeking. Choose the most appropriate label from the following categories: abbreviation (for questions asking what an acronym or abbreviation stands for), numeric (for questions asking about quantities or numbers), description (for questions seeking explanations or descriptions), entity (for questions seeking the name of an object, thing, or concept), human (for questions seeking a person\u2019s name or identity), or location (for questions seeking a place). Respond with the single best-fitting category name only.'\n    text = Field(annotation=str required=True json_schema_extra={'IS_TYPE_UNDEFINED': True, '__dspy_field_type': 'input', 'prefix': 'Text:', 'desc': '${text}'})\n    label = Field(annotation=str required=True json_schema_extra={'__dspy_field_type': 'output', 'prefix': 'Label:', 'desc': '${label}'})\n))"
+  },
+  "24": {
+   "0_predictor_instruction": 3,
+   "0_predictor_demos": 4,
+   "mb_program_path": null,
+   "mb_score": 74.29,
+   "total_eval_calls_so_far": 1100,
+   "mb_program": "Predict(StringSignature(text -> label\n    instructions='You are an expert question analyst for a large-scale question answering system. Your task is to read the provided question and determine which answer type category it belongs to. Classify each question into one of the following categories based on the kind of answer it seeks: abbreviation, description, entity, human, location, or numeric. Provide only the category name as your answer.'\n    text = Field(annotation=str required=True json_schema_extra={'IS_TYPE_UNDEFINED': True, '__dspy_field_type': 'input', 'prefix': 'Text:', 'desc': '${text}'})\n    label = Field(annotation=str required=True json_schema_extra={'__dspy_field_type': 'output', 'prefix': 'Label:', 'desc': '${label}'})\n))"
+  },
+  "25": {
+   "total_eval_calls_so_far": 1200,
+   "full_eval_program_path": null,
+   "full_eval_program": "Predict(StringSignature(text -> label\n    instructions='Given a single-sentence factual question, analyze it and determine the most appropriate answer type category from the following options: abbreviation, description, entity, human, location, or numeric. Respond with only the category label that best matches the expected type of answer for the question.'\n    text = Field(annotation=str required=True json_schema_extra={'IS_TYPE_UNDEFINED': True, '__dspy_field_type': 'input', 'prefix': 'Text:', 'desc': '${text}'})\n    label = Field(annotation=str required=True json_schema_extra={'__dspy_field_type': 'output', 'prefix': 'Label:', 'desc': '${label}'})\n))",
+   "full_eval_score": 77.0
+  },
+  "26": {
+   "0_predictor_instruction": 0,
+   "0_predictor_demos": 12,
+   "mb_program_path": null,
+   "mb_score": 77.14,
+   "total_eval_calls_so_far": 1235,
+   "mb_program": "Predict(StringSignature(text -> label\n    instructions='Classify the given text into one of these categories: abbreviation, description, entity, human, location, numeric. Answer with the category name only.'\n    text = Field(annotation=str required=True json_schema_extra={'IS_TYPE_UNDEFINED': True, '__dspy_field_type': 'input', 'prefix': 'Text:', 'desc': '${text}'})\n    label = Field(annotation=str required=True json_schema_extra={'__dspy_field_type': 'output', 'prefix': 'Label:', 'desc': '${label}'})\n))"
+  },
+  "27": {
+   "0_predictor_instruction": 5,
+   "0_predictor_demos": 16,
+   "mb_program_path": null,
+   "mb_score": 74.29,
+   "total_eval_calls_so_far": 1270,
+   "mb_program": "Predict(StringSignature(text -> label\n    instructions='You are an expert question classification system. Given a single-sentence factual question, analyze its wording and intent to determine which of the following answer types best describes the expected response: abbreviation, description, entity, human, location, or numeric. Return only the label that most accurately reflects the answer type required by the question.'\n    text = Field(annotation=str required=True json_schema_extra={'IS_TYPE_UNDEFINED': True, '__dspy_field_type': 'input', 'prefix': 'Text:', 'desc': '${text}'})\n    label = Field(annotation=str required=True json_schema_extra={'__dspy_field_type': 'output', 'prefix': 'Label:', 'desc': '${label}'})\n))"
+  },
+  "28": {
+   "0_predictor_instruction": 7,
+   "0_predictor_demos": 12,
+   "mb_program_path": null,
+   "mb_score": 68.57,
+   "total_eval_calls_so_far": 1305,
+   "mb_program": "Predict(StringSignature(text -> label\n    instructions='Read the provided question and determine what type of answer it is seeking. Choose the most appropriate label from the following categories: abbreviation (for questions asking what an acronym or abbreviation stands for), numeric (for questions asking about quantities or numbers), description (for questions seeking explanations or descriptions), entity (for questions seeking the name of an object, thing, or concept), human (for questions seeking a person\u2019s name or identity), or location (for questions seeking a place). Respond with the single best-fitting category name only.'\n    text = Field(annotation=str required=True json_schema_extra={'IS_TYPE_UNDEFINED': True, '__dspy_field_type': 'input', 'prefix': 'Text:', 'desc': '${text}'})\n    label = Field(annotation=str required=True json_schema_extra={'__dspy_field_type': 'output', 'prefix': 'Label:', 'desc': '${label}'})\n))"
+  },
+  "29": {
+   "0_predictor_instruction": 8,
+   "0_predictor_demos": 10,
+   "mb_program_path": null,
+   "mb_score": 77.14,
+   "total_eval_calls_so_far": 1340,
+   "mb_program": "Predict(StringSignature(text -> label\n    instructions='Given a single-sentence factual question, analyze it and determine the most appropriate answer type category from the following options: abbreviation, description, entity, human, location, or numeric. Respond with only the category label that best matches the expected type of answer for the question.'\n    text = Field(annotation=str required=True json_schema_extra={'IS_TYPE_UNDEFINED': True, '__dspy_field_type': 'input', 'prefix': 'Text:', 'desc': '${text}'})\n    label = Field(annotation=str required=True json_schema_extra={'__dspy_field_type': 'output', 'prefix': 'Label:', 'desc': '${label}'})\n))"
+  },
+  "30": {
+   "0_predictor_instruction": 0,
+   "0_predictor_demos": 4,
+   "mb_program_path": null,
+   "mb_score": 62.86,
+   "total_eval_calls_so_far": 1375,
+   "mb_program": "Predict(StringSignature(text -> label\n    instructions='Classify the given text into one of these categories: abbreviation, description, entity, human, location, numeric. Answer with the category name only.'\n    text = Field(annotation=str required=True json_schema_extra={'IS_TYPE_UNDEFINED': True, '__dspy_field_type': 'input', 'prefix': 'Text:', 'desc': '${text}'})\n    label = Field(annotation=str required=True json_schema_extra={'__dspy_field_type': 'output', 'prefix': 'Label:', 'desc': '${label}'})\n))"
+  },
+  "31": {
+   "total_eval_calls_so_far": 1475,
+   "full_eval_program_path": null,
+   "full_eval_program": "Predict(StringSignature(text -> label\n    instructions='You are responsible for powering an automated medical triage system that must accurately and quickly categorize incoming patient questions to ensure they reach the correct specialist. Given a single-sentence question, classify it into the most appropriate category: abbreviation, description, entity, human, location, or numeric. Output only the category label. Your classification determines whether vital information reaches doctors in time\u2014choose carefully.'\n    text = Field(annotation=str required=True json_schema_extra={'IS_TYPE_UNDEFINED': True, '__dspy_field_type': 'input', 'prefix': 'Text:', 'desc': '${text}'})\n    label = Field(annotation=str required=True json_schema_extra={'__dspy_field_type': 'output', 'prefix': 'Label:', 'desc': '${label}'})\n))",
+   "full_eval_score": 77.0
+  },
+  "32": {
+   "0_predictor_instruction": 6,
+   "0_predictor_demos": 13,
+   "mb_program_path": null,
+   "mb_score": 80.0,
+   "total_eval_calls_so_far": 1510,
+   "mb_program": "Predict(StringSignature(text -> label\n    instructions='You are responsible for powering an automated medical triage system that must accurately and quickly categorize incoming patient questions to ensure they reach the correct specialist. Given a single-sentence question, classify it into the most appropriate category: abbreviation, description, entity, human, location, or numeric. Output only the category label. Your classification determines whether vital information reaches doctors in time\u2014choose carefully.'\n    text = Field(annotation=str required=True json_schema_extra={'IS_TYPE_UNDEFINED': True, '__dspy_field_type': 'input', 'prefix': 'Text:', 'desc': '${text}'})\n    label = Field(annotation=str required=True json_schema_extra={'__dspy_field_type': 'output', 'prefix': 'Label:', 'desc': '${label}'})\n))"
+  },
+  "33": {
+   "0_predictor_instruction": 8,
+   "0_predictor_demos": 8,
+   "mb_program_path": null,
+   "mb_score": 74.29,
+   "total_eval_calls_so_far": 1545,
+   "mb_program": "Predict(StringSignature(text -> label\n    instructions='Given a single-sentence factual question, analyze it and determine the most appropriate answer type category from the following options: abbreviation, description, entity, human, location, or numeric. Respond with only the category label that best matches the expected type of answer for the question.'\n    text = Field(annotation=str required=True json_schema_extra={'IS_TYPE_UNDEFINED': True, '__dspy_field_type': 'input', 'prefix': 'Text:', 'desc': '${text}'})\n    label = Field(annotation=str required=True json_schema_extra={'__dspy_field_type': 'output', 'prefix': 'Label:', 'desc': '${label}'})\n))"
+  },
+  "34": {
+   "total_eval_calls_so_far": 1645,
+   "full_eval_program_path": null,
+   "full_eval_program": "Predict(StringSignature(text -> label\n    instructions='You are an expert question analyst for a large-scale question answering system. Your task is to read the provided question and determine which answer type category it belongs to. Classify each question into one of the following categories based on the kind of answer it seeks: abbreviation, description, entity, human, location, or numeric. Provide only the category name as your answer.'\n    text = Field(annotation=str required=True json_schema_extra={'IS_TYPE_UNDEFINED': True, '__dspy_field_type': 'input', 'prefix': 'Text:', 'desc': '${text}'})\n    label = Field(annotation=str required=True json_schema_extra={'__dspy_field_type': 'output', 'prefix': 'Label:', 'desc': '${label}'})\n))",
+   "full_eval_score": 81.0
+  }
+ },
+ "cost_usd": 0.2662,
+ "total_metric_calls": 1633,
+ "auto_preset": "heavy",
+ "optimizer": "miprov2",
+ "task": "trec",
+ "budget": 3200,
+ "seed": 30,
+ "family": "f1"
+}

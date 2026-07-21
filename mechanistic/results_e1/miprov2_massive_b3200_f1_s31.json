@@ -1,0 +1,272 @@
+{
+ "test_accuracy": 0.8533,
+ "curve": null,
+ "trial_logs": {
+  "1": {
+   "full_eval_program_path": null,
+   "full_eval_score": 87.0,
+   "total_eval_calls_so_far": 100,
+   "full_eval_program": "Predict(StringSignature(text -> label\n    instructions='Classify the given text into one of these categories: alarm_query, alarm_set, calendar_query, calendar_remove, calendar_set, cooking_recipe, datetime_query, email_query, email_sendemail, general_quirky, iot_hue_lightoff, lists_createoradd, lists_query, lists_remove, music_query, news_query, play_audiobook, play_music, play_podcasts, play_radio, qa_currency, qa_definition, qa_factoid, qa_stock, recommendation_events, recommendation_locations, social_post, takeaway_order, transport_query, weather_query. Answer with the category name only.'\n    text = Field(annotation=str required=True json_schema_extra={'IS_TYPE_UNDEFINED': True, '__dspy_field_type': 'input', 'prefix': 'Text:', 'desc': '${text}'})\n    label = Field(annotation=str required=True json_schema_extra={'__dspy_field_type': 'output', 'prefix': 'Label:', 'desc': '${label}'})\n))"
+  },
+  "2": {
+   "0_predictor_instruction": 3,
+   "0_predictor_demos": 10,
+   "mb_program_path": null,
+   "mb_score": 82.86,
+   "total_eval_calls_so_far": 135,
+   "mb_program": "Predict(StringSignature(text -> label\n    instructions='Read the user\u2019s input text and select the single most appropriate intent label from the following categories: alarm_query, alarm_set, calendar_query, calendar_remove, calendar_set, cooking_recipe, datetime_query, email_query, email_sendemail, general_quirky, iot_hue_lightoff, lists_createoradd, lists_query, lists_remove, music_query, news_query, play_audiobook, play_music, play_podcasts, play_radio, qa_currency, qa_definition, qa_factoid, qa_stock, recommendation_events, recommendation_locations, social_post, takeaway_order, transport_query, weather_query. Return only the intent label that best represents the user\u2019s underlying request or command, without any explanation or additional text.'\n    text = Field(annotation=str required=True json_schema_extra={'IS_TYPE_UNDEFINED': True, '__dspy_field_type': 'input', 'prefix': 'Text:', 'desc': '${text}'})\n    label = Field(annotation=str required=True json_schema_extra={'__dspy_field_type': 'output', 'prefix': 'Label:', 'desc': '${label}'})\n))"
+  },
+  "3": {
+   "0_predictor_instruction": 0,
+   "0_predictor_demos": 5,
+   "mb_program_path": null,
+   "mb_score": 85.71,
+   "total_eval_calls_so_far": 170,
+   "mb_program": "Predict(StringSignature(text -> label\n    instructions='Classify the given text into one of these categories: alarm_query, alarm_set, calendar_query, calendar_remove, calendar_set, cooking_recipe, datetime_query, email_query, email_sendemail, general_quirky, iot_hue_lightoff, lists_createoradd, lists_query, lists_remove, music_query, news_query, play_audiobook, play_music, play_podcasts, play_radio, qa_currency, qa_definition, qa_factoid, qa_stock, recommendation_events, recommendation_locations, social_post, takeaway_order, transport_query, weather_query. Answer with the category name only.'\n    text = Field(annotation=str required=True json_schema_extra={'IS_TYPE_UNDEFINED': True, '__dspy_field_type': 'input', 'prefix': 'Text:', 'desc': '${text}'})\n    label = Field(annotation=str required=True json_schema_extra={'__dspy_field_type': 'output', 'prefix': 'Label:', 'desc': '${label}'})\n))"
+  },
+  "4": {
+   "0_predictor_instruction": 8,
+   "0_predictor_demos": 5,
+   "mb_program_path": null,
+   "mb_score": 85.71,
+   "total_eval_calls_so_far": 205,
+   "mb_program": "Predict(StringSignature(text -> label\n    instructions=\"Given a short, informal user request in English, determine which single intent category from the following list best matches the user's intended action: alarm_query, alarm_set, calendar_query, calendar_remove, calendar_set, cooking_recipe, datetime_query, email_query, email_sendemail, general_quirky, iot_hue_lightoff, lists_createoradd, lists_query, lists_remove, music_query, news_query, play_audiobook, play_music, play_podcasts, play_radio, qa_currency, qa_definition, qa_factoid, qa_stock, recommendation_events, recommendation_locations, social_post, takeaway_order, transport_query, or weather_query. Respond with only the intent category label.\"\n    text = Field(annotation=str required=True json_schema_extra={'IS_TYPE_UNDEFINED': True, '__dspy_field_type': 'input', 'prefix': 'Text:', 'desc': '${text}'})\n    label = Field(annotation=str required=True json_schema_extra={'__dspy_field_type': 'output', 'prefix': 'Label:', 'desc': '${label}'})\n))"
+  },
+  "5": {
+   "0_predictor_instruction": 1,
+   "0_predictor_demos": 11,
+   "mb_program_path": null,
+   "mb_score": 82.86,
+   "total_eval_calls_so_far": 240,
+   "mb_program": "Predict(StringSignature(text -> label\n    instructions=\"Read the user's text and determine which of the provided categories best describes their intent. Return only the most appropriate category name from this list: alarm_query, alarm_set, calendar_query, calendar_remove, calendar_set, cooking_recipe, datetime_query, email_query, email_sendemail, general_quirky, iot_hue_lightoff, lists_createoradd, lists_query, lists_remove, music_query, news_query, play_audiobook, play_music, play_podcasts, play_radio, qa_currency, qa_definition, qa_factoid, qa_stock, recommendation_events, recommendation_locations, social_post, takeaway_order, transport_query, weather_query. Output only the single category name that matches the input text.\"\n    text = Field(annotation=str required=True json_schema_extra={'IS_TYPE_UNDEFINED': True, '__dspy_field_type': 'input', 'prefix': 'Text:', 'desc': '${text}'})\n    label = Field(annotation=str required=True json_schema_extra={'__dspy_field_type': 'output', 'prefix': 'Label:', 'desc': '${label}'})\n))"
+  },
+  "6": {
+   "0_predictor_instruction": 7,
+   "0_predictor_demos": 1,
+   "mb_program_path": null,
+   "mb_score": 94.29,
+   "total_eval_calls_so_far": 275,
+   "mb_program": "Predict(StringSignature(text -> label\n    instructions='Given a user\u2019s request or query as a text input, identify the single most appropriate intent label from the following list: alarm_query, alarm_set, calendar_query, calendar_remove, calendar_set, cooking_recipe, datetime_query, email_query, email_sendemail, general_quirky, iot_hue_lightoff, lists_createoradd, lists_query, lists_remove, music_query, news_query, play_audiobook, play_music, play_podcasts, play_radio, qa_currency, qa_definition, qa_factoid, qa_stock, recommendation_events, recommendation_locations, social_post, takeaway_order, transport_query, weather_query. Return only the intent label that best represents the user\u2019s intended action, without any extra explanation or formatting.'\n    text = Field(annotation=str required=True json_schema_extra={'IS_TYPE_UNDEFINED': True, '__dspy_field_type': 'input', 'prefix': 'Text:', 'desc': '${text}'})\n    label = Field(annotation=str required=True json_schema_extra={'__dspy_field_type': 'output', 'prefix': 'Label:', 'desc': '${label}'})\n))"
+  },
+  "7": {
+   "total_eval_calls_so_far": 375,
+   "full_eval_program_path": null,
+   "full_eval_program": "Predict(StringSignature(text -> label\n    instructions='Given a user\u2019s request or query as a text input, identify the single most appropriate intent label from the following list: alarm_query, alarm_set, calendar_query, calendar_remove, calendar_set, cooking_recipe, datetime_query, email_query, email_sendemail, general_quirky, iot_hue_lightoff, lists_createoradd, lists_query, lists_remove, music_query, news_query, play_audiobook, play_music, play_podcasts, play_radio, qa_currency, qa_definition, qa_factoid, qa_stock, recommendation_events, recommendation_locations, social_post, takeaway_order, transport_query, weather_query. Return only the intent label that best represents the user\u2019s intended action, without any extra explanation or formatting.'\n    text = Field(annotation=str required=True json_schema_extra={'IS_TYPE_UNDEFINED': True, '__dspy_field_type': 'input', 'prefix': 'Text:', 'desc': '${text}'})\n    label = Field(annotation=str required=True json_schema_extra={'__dspy_field_type': 'output', 'prefix': 'Label:', 'desc': '${label}'})\n))",
+   "full_eval_score": 86.0
+  },
+  "8": {
+   "0_predictor_instruction": 5,
+   "0_predictor_demos": 6,
+   "mb_program_path": null,
+   "mb_score": 85.71,
+   "total_eval_calls_so_far": 410,
+   "mb_program": "Predict(StringSignature(text -> label\n    instructions=\"Given a user's single-turn, informal English request intended for a digital assistant, analyze the meaning of the text and determine which intent from the following list best captures what the user is trying to accomplish: alarm_query, alarm_set, calendar_query, calendar_remove, calendar_set, cooking_recipe, datetime_query, email_query, email_sendemail, general_quirky, iot_hue_lightoff, lists_createoradd, lists_query, lists_remove, music_query, news_query, play_audiobook, play_music, play_podcasts, play_radio, qa_currency, qa_definition, qa_factoid, qa_stock, recommendation_events, recommendation_locations, social_post, takeaway_order, transport_query, weather_query. Focus on identifying the user's main goal (such as asking for information, controlling a device, or managing tasks) and provide only the single most relevant label from the list that accurately describes the intent of the request. Respond exclusively with the category label (for example: lists_query), without any extra explanation or formatting.\"\n    text = Field(annotation=str required=True json_schema_extra={'IS_TYPE_UNDEFINED': True, '__dspy_field_type': 'input', 'prefix': 'Text:', 'desc': '${text}'})\n    label = Field(annotation=str required=True json_schema_extra={'__dspy_field_type': 'output', 'prefix': 'Label:', 'desc': '${label}'})\n))"
+  },
+  "9": {
+   "0_predictor_instruction": 1,
+   "0_predictor_demos": 11,
+   "mb_program_path": null,
+   "mb_score": 88.57,
+   "total_eval_calls_so_far": 445,
+   "mb_program": "Predict(StringSignature(text -> label\n    instructions=\"Read the user's text and determine which of the provided categories best describes their intent. Return only the most appropriate category name from this list: alarm_query, alarm_set, calendar_query, calendar_remove, calendar_set, cooking_recipe, datetime_query, email_query, email_sendemail, general_quirky, iot_hue_lightoff, lists_createoradd, lists_query, lists_remove, music_query, news_query, play_audiobook, play_music, play_podcasts, play_radio, qa_currency, qa_definition, qa_factoid, qa_stock, recommendation_events, recommendation_locations, social_post, takeaway_order, transport_query, weather_query. Output only the single category name that matches the input text.\"\n    text = Field(annotation=str required=True json_schema_extra={'IS_TYPE_UNDEFINED': True, '__dspy_field_type': 'input', 'prefix': 'Text:', 'desc': '${text}'})\n    label = Field(annotation=str required=True json_schema_extra={'__dspy_field_type': 'output', 'prefix': 'Label:', 'desc': '${label}'})\n))"
+  },
+  "10": {
+   "0_predictor_instruction": 7,
+   "0_predictor_demos": 10,
+   "mb_program_path": null,
+   "mb_score": 80.0,
+   "total_eval_calls_so_far": 480,
+   "mb_program": "Predict(StringSignature(text -> label\n    instructions='Given a user\u2019s request or query as a text input, identify the single most appropriate intent label from the following list: alarm_query, alarm_set, calendar_query, calendar_remove, calendar_set, cooking_recipe, datetime_query, email_query, email_sendemail, general_quirky, iot_hue_lightoff, lists_createoradd, lists_query, lists_remove, music_query, news_query, play_audiobook, play_music, play_podcasts, play_radio, qa_currency, qa_definition, qa_factoid, qa_stock, recommendation_events, recommendation_locations, social_post, takeaway_order, transport_query, weather_query. Return only the intent label that best represents the user\u2019s intended action, without any extra explanation or formatting.'\n    text = Field(annotation=str required=True json_schema_extra={'IS_TYPE_UNDEFINED': True, '__dspy_field_type': 'input', 'prefix': 'Text:', 'desc': '${text}'})\n    label = Field(annotation=str required=True json_schema_extra={'__dspy_field_type': 'output', 'prefix': 'Label:', 'desc': '${label}'})\n))"
+  },
+  "11": {
+   "0_predictor_instruction": 2,
+   "0_predictor_demos": 1,
+   "mb_program_path": null,
+   "mb_score": 80.0,
+   "total_eval_calls_so_far": 515,
+   "mb_program": "Predict(StringSignature(text -> label\n    instructions=\"Read the user's query and determine which single intent best matches the request from the following options: alarm_query, alarm_set, calendar_query, calendar_remove, calendar_set, cooking_recipe, datetime_query, email_query, email_sendemail, general_quirky, iot_hue_lightoff, lists_createoradd, lists_query, lists_remove, music_query, news_query, play_audiobook, play_music, play_podcasts, play_radio, qa_currency, qa_definition, qa_factoid, qa_stock, recommendation_events, recommendation_locations, social_post, takeaway_order, transport_query, weather_query. Respond with only the intent label that most accurately represents the user's purpose in their message\u2014no explanation or other text.\"\n    text = Field(annotation=str required=True json_schema_extra={'IS_TYPE_UNDEFINED': True, '__dspy_field_type': 'input', 'prefix': 'Text:', 'desc': '${text}'})\n    label = Field(annotation=str required=True json_schema_extra={'__dspy_field_type': 'output', 'prefix': 'Label:', 'desc': '${label}'})\n))"
+  },
+  "12": {
+   "0_predictor_instruction": 1,
+   "0_predictor_demos": 15,
+   "mb_program_path": null,
+   "mb_score": 85.71,
+   "total_eval_calls_so_far": 550,
+   "mb_program": "Predict(StringSignature(text -> label\n    instructions=\"Read the user's text and determine which of the provided categories best describes their intent. Return only the most appropriate category name from this list: alarm_query, alarm_set, calendar_query, calendar_remove, calendar_set, cooking_recipe, datetime_query, email_query, email_sendemail, general_quirky, iot_hue_lightoff, lists_createoradd, lists_query, lists_remove, music_query, news_query, play_audiobook, play_music, play_podcasts, play_radio, qa_currency, qa_definition, qa_factoid, qa_stock, recommendation_events, recommendation_locations, social_post, takeaway_order, transport_query, weather_query. Output only the single category name that matches the input text.\"\n    text = Field(annotation=str required=True json_schema_extra={'IS_TYPE_UNDEFINED': True, '__dspy_field_type': 'input', 'prefix': 'Text:', 'desc': '${text}'})\n    label = Field(annotation=str required=True json_schema_extra={'__dspy_field_type': 'output', 'prefix': 'Label:', 'desc': '${label}'})\n))"
+  },
+  "13": {
+   "total_eval_calls_so_far": 650,
+   "full_eval_program_path": null,
+   "full_eval_program": "Predict(StringSignature(text -> label\n    instructions=\"Read the user's text and determine which of the provided categories best describes their intent. Return only the most appropriate category name from this list: alarm_query, alarm_set, calendar_query, calendar_remove, calendar_set, cooking_recipe, datetime_query, email_query, email_sendemail, general_quirky, iot_hue_lightoff, lists_createoradd, lists_query, lists_remove, music_query, news_query, play_audiobook, play_music, play_podcasts, play_radio, qa_currency, qa_definition, qa_factoid, qa_stock, recommendation_events, recommendation_locations, social_post, takeaway_order, transport_query, weather_query. Output only the single category name that matches the input text.\"\n    text = Field(annotation=str required=True json_schema_extra={'IS_TYPE_UNDEFINED': True, '__dspy_field_type': 'input', 'prefix': 'Text:', 'desc': '${text}'})\n    label = Field(annotation=str required=True json_schema_extra={'__dspy_field_type': 'output', 'prefix': 'Label:', 'desc': '${label}'})\n))",
+   "full_eval_score": 85.0
+  },
+  "14": {
+   "0_predictor_instruction": 4,
+   "0_predictor_demos": 9,
+   "mb_program_path": null,
+   "mb_score": 91.43,
+   "total_eval_calls_so_far": 685,
+   "mb_program": "Predict(StringSignature(text -> label\n    instructions=\"You are an intelligent virtual assistant designed to help classify user requests for a variety of everyday digital assistant tasks. Analyze the following input text and decide which of the provided intent categories best describes the user's request. Respond with only the single most relevant category name from this list: alarm_query, alarm_set, calendar_query, calendar_remove, calendar_set, cooking_recipe, datetime_query, email_query, email_sendemail, general_quirky, iot_hue_lightoff, lists_createoradd, lists_query, lists_remove, music_query, news_query, play_audiobook, play_music, play_podcasts, play_radio, qa_currency, qa_definition, qa_factoid, qa_stock, recommendation_events, recommendation_locations, social_post, takeaway_order, transport_query, weather_query. Do not include any explanations or additional text\u2014output the category name only.\"\n    text = Field(annotation=str required=True json_schema_extra={'IS_TYPE_UNDEFINED': True, '__dspy_field_type': 'input', 'prefix': 'Text:', 'desc': '${text}'})\n    label = Field(annotation=str required=True json_schema_extra={'__dspy_field_type': 'output', 'prefix': 'Label:', 'desc': '${label}'})\n))"
+  },
+  "15": {
+   "0_predictor_instruction": 4,
+   "0_predictor_demos": 14,
+   "mb_program_path": null,
+   "mb_score": 85.71,
+   "total_eval_calls_so_far": 720,
+   "mb_program": "Predict(StringSignature(text -> label\n    instructions=\"You are an intelligent virtual assistant designed to help classify user requests for a variety of everyday digital assistant tasks. Analyze the following input text and decide which of the provided intent categories best describes the user's request. Respond with only the single most relevant category name from this list: alarm_query, alarm_set, calendar_query, calendar_remove, calendar_set, cooking_recipe, datetime_query, email_query, email_sendemail, general_quirky, iot_hue_lightoff, lists_createoradd, lists_query, lists_remove, music_query, news_query, play_audiobook, play_music, play_podcasts, play_radio, qa_currency, qa_definition, qa_factoid, qa_stock, recommendation_events, recommendation_locations, social_post, takeaway_order, transport_query, weather_query. Do not include any explanations or additional text\u2014output the category name only.\"\n    text = Field(annotation=str required=True json_schema_extra={'IS_TYPE_UNDEFINED': True, '__dspy_field_type': 'input', 'prefix': 'Text:', 'desc': '${text}'})\n    label = Field(annotation=str required=True json_schema_extra={'__dspy_field_type': 'output', 'prefix': 'Label:', 'desc': '${label}'})\n))"
+  },
+  "16": {
+   "0_predictor_instruction": 4,
+   "0_predictor_demos": 17,
+   "mb_program_path": null,
+   "mb_score": 77.14,
+   "total_eval_calls_so_far": 755,
+   "mb_program": "Predict(StringSignature(text -> label\n    instructions=\"You are an intelligent virtual assistant designed to help classify user requests for a variety of everyday digital assistant tasks. Analyze the following input text and decide which of the provided intent categories best describes the user's request. Respond with only the single most relevant category name from this list: alarm_query, alarm_set, calendar_query, calendar_remove, calendar_set, cooking_recipe, datetime_query, email_query, email_sendemail, general_quirky, iot_hue_lightoff, lists_createoradd, lists_query, lists_remove, music_query, news_query, play_audiobook, play_music, play_podcasts, play_radio, qa_currency, qa_definition, qa_factoid, qa_stock, recommendation_events, recommendation_locations, social_post, takeaway_order, transport_query, weather_query. Do not include any explanations or additional text\u2014output the category name only.\"\n    text = Field(annotation=str required=True json_schema_extra={'IS_TYPE_UNDEFINED': True, '__dspy_field_type': 'input', 'prefix': 'Text:', 'desc': '${text}'})\n    label = Field(annotation=str required=True json_schema_extra={'__dspy_field_type': 'output', 'prefix': 'Label:', 'desc': '${label}'})\n))"
+  },
+  "17": {
+   "0_predictor_instruction": 4,
+   "0_predictor_demos": 9,
+   "mb_program_path": null,
+   "mb_score": 80.0,
+   "total_eval_calls_so_far": 790,
+   "mb_program": "Predict(StringSignature(text -> label\n    instructions=\"You are an intelligent virtual assistant designed to help classify user requests for a variety of everyday digital assistant tasks. Analyze the following input text and decide which of the provided intent categories best describes the user's request. Respond with only the single most relevant category name from this list: alarm_query, alarm_set, calendar_query, calendar_remove, calendar_set, cooking_recipe, datetime_query, email_query, email_sendemail, general_quirky, iot_hue_lightoff, lists_createoradd, lists_query, lists_remove, music_query, news_query, play_audiobook, play_music, play_podcasts, play_radio, qa_currency, qa_definition, qa_factoid, qa_stock, recommendation_events, recommendation_locations, social_post, takeaway_order, transport_query, weather_query. Do not include any explanations or additional text\u2014output the category name only.\"\n    text = Field(annotation=str required=True json_schema_extra={'IS_TYPE_UNDEFINED': True, '__dspy_field_type': 'input', 'prefix': 'Text:', 'desc': '${text}'})\n    label = Field(annotation=str required=True json_schema_extra={'__dspy_field_type': 'output', 'prefix': 'Label:', 'desc': '${label}'})\n))"
+  },
+  "18": {
+   "0_predictor_instruction": 6,
+   "0_predictor_demos": 9,
+   "mb_program_path": null,
+   "mb_score": 82.86,
+   "total_eval_calls_so_far": 825,
+   "mb_program": "Predict(StringSignature(text -> label\n    instructions=\"Analyze the following single-turn, informal English utterance\u2014typically a brief spoken-style request intended for a digital assistant\u2014and determine which intent label best describes the user's main goal. Choose the correct category from the following options: alarm_query, alarm_set, calendar_query, calendar_remove, calendar_set, cooking_recipe, datetime_query, email_query, email_sendemail, general_quirky, iot_hue_lightoff, lists_createoradd, lists_query, lists_remove, music_query, news_query, play_audiobook, play_music, play_podcasts, play_radio, qa_currency, qa_definition, qa_factoid, qa_stock, recommendation_events, recommendation_locations, social_post, takeaway_order, transport_query, or weather_query. Your response should be the label name only\u2014no additional explanation. Carefully consider the user's wording to determine their core intent, even if the language is casual or abbreviated.\"\n    text = Field(annotation=str required=True json_schema_extra={'IS_TYPE_UNDEFINED': True, '__dspy_field_type': 'input', 'prefix': 'Text:', 'desc': '${text}'})\n    label = Field(annotation=str required=True json_schema_extra={'__dspy_field_type': 'output', 'prefix': 'Label:', 'desc': '${label}'})\n))"
+  },
+  "19": {
+   "total_eval_calls_so_far": 925,
+   "full_eval_program_path": null,
+   "full_eval_program": "Predict(StringSignature(text -> label\n    instructions=\"You are an intelligent virtual assistant designed to help classify user requests for a variety of everyday digital assistant tasks. Analyze the following input text and decide which of the provided intent categories best describes the user's request. Respond with only the single most relevant category name from this list: alarm_query, alarm_set, calendar_query, calendar_remove, calendar_set, cooking_recipe, datetime_query, email_query, email_sendemail, general_quirky, iot_hue_lightoff, lists_createoradd, lists_query, lists_remove, music_query, news_query, play_audiobook, play_music, play_podcasts, play_radio, qa_currency, qa_definition, qa_factoid, qa_stock, recommendation_events, recommendation_locations, social_post, takeaway_order, transport_query, weather_query. Do not include any explanations or additional text\u2014output the category name only.\"\n    text = Field(annotation=str required=True json_schema_extra={'IS_TYPE_UNDEFINED': True, '__dspy_field_type': 'input', 'prefix': 'Text:', 'desc': '${text}'})\n    label = Field(annotation=str required=True json_schema_extra={'__dspy_field_type': 'output', 'prefix': 'Label:', 'desc': '${label}'})\n))",
+   "full_eval_score": 86.0
+  },
+  "20": {
+   "0_predictor_instruction": 7,
+   "0_predictor_demos": 13,
+   "mb_program_path": null,
+   "mb_score": 82.86,
+   "total_eval_calls_so_far": 960,
+   "mb_program": "Predict(StringSignature(text -> label\n    instructions='Given a user\u2019s request or query as a text input, identify the single most appropriate intent label from the following list: alarm_query, alarm_set, calendar_query, calendar_remove, calendar_set, cooking_recipe, datetime_query, email_query, email_sendemail, general_quirky, iot_hue_lightoff, lists_createoradd, lists_query, lists_remove, music_query, news_query, play_audiobook, play_music, play_podcasts, play_radio, qa_currency, qa_definition, qa_factoid, qa_stock, recommendation_events, recommendation_locations, social_post, takeaway_order, transport_query, weather_query. Return only the intent label that best represents the user\u2019s intended action, without any extra explanation or formatting.'\n    text = Field(annotation=str required=True json_schema_extra={'IS_TYPE_UNDEFINED': True, '__dspy_field_type': 'input', 'prefix': 'Text:', 'desc': '${text}'})\n    label = Field(annotation=str required=True json_schema_extra={'__dspy_field_type': 'output', 'prefix': 'Label:', 'desc': '${label}'})\n))"
+  },
+  "21": {
+   "0_predictor_instruction": 5,
+   "0_predictor_demos": 3,
+   "mb_program_path": null,
+   "mb_score": 94.29,
+   "total_eval_calls_so_far": 995,
+   "mb_program": "Predict(StringSignature(text -> label\n    instructions=\"Given a user's single-turn, informal English request intended for a digital assistant, analyze the meaning of the text and determine which intent from the following list best captures what the user is trying to accomplish: alarm_query, alarm_set, calendar_query, calendar_remove, calendar_set, cooking_recipe, datetime_query, email_query, email_sendemail, general_quirky, iot_hue_lightoff, lists_createoradd, lists_query, lists_remove, music_query, news_query, play_audiobook, play_music, play_podcasts, play_radio, qa_currency, qa_definition, qa_factoid, qa_stock, recommendation_events, recommendation_locations, social_post, takeaway_order, transport_query, weather_query. Focus on identifying the user's main goal (such as asking for information, controlling a device, or managing tasks) and provide only the single most relevant label from the list that accurately describes the intent of the request. Respond exclusively with the category label (for example: lists_query), without any extra explanation or formatting.\"\n    text = Field(annotation=str required=True json_schema_extra={'IS_TYPE_UNDEFINED': True, '__dspy_field_type': 'input', 'prefix': 'Text:', 'desc': '${text}'})\n    label = Field(annotation=str required=True json_schema_extra={'__dspy_field_type': 'output', 'prefix': 'Label:', 'desc': '${label}'})\n))"
+  },
+  "22": {
+   "0_predictor_instruction": 5,
+   "0_predictor_demos": 3,
+   "mb_program_path": null,
+   "mb_score": 88.57,
+   "total_eval_calls_so_far": 1030,
+   "mb_program": "Predict(StringSignature(text -> label\n    instructions=\"Given a user's single-turn, informal English request intended for a digital assistant, analyze the meaning of the text and determine which intent from the following list best captures what the user is trying to accomplish: alarm_query, alarm_set, calendar_query, calendar_remove, calendar_set, cooking_recipe, datetime_query, email_query, email_sendemail, general_quirky, iot_hue_lightoff, lists_createoradd, lists_query, lists_remove, music_query, news_query, play_audiobook, play_music, play_podcasts, play_radio, qa_currency, qa_definition, qa_factoid, qa_stock, recommendation_events, recommendation_locations, social_post, takeaway_order, transport_query, weather_query. Focus on identifying the user's main goal (such as asking for information, controlling a device, or managing tasks) and provide only the single most relevant label from the list that accurately describes the intent of the request. Respond exclusively with the category label (for example: lists_query), without any extra explanation or formatting.\"\n    text = Field(annotation=str required=True json_schema_extra={'IS_TYPE_UNDEFINED': True, '__dspy_field_type': 'input', 'prefix': 'Text:', 'desc': '${text}'})\n    label = Field(annotation=str required=True json_schema_extra={'__dspy_field_type': 'output', 'prefix': 'Label:', 'desc': '${label}'})\n))"
+  },
+  "23": {
+   "0_predictor_instruction": 5,
+   "0_predictor_demos": 1,
+   "mb_program_path": null,
+   "mb_score": 88.57,
+   "total_eval_calls_so_far": 1065,
+   "mb_program": "Predict(StringSignature(text -> label\n    instructions=\"Given a user's single-turn, informal English request intended for a digital assistant, analyze the meaning of the text and determine which intent from the following list best captures what the user is trying to accomplish: alarm_query, alarm_set, calendar_query, calendar_remove, calendar_set, cooking_recipe, datetime_query, email_query, email_sendemail, general_quirky, iot_hue_lightoff, lists_createoradd, lists_query, lists_remove, music_query, news_query, play_audiobook, play_music, play_podcasts, play_radio, qa_currency, qa_definition, qa_factoid, qa_stock, recommendation_events, recommendation_locations, social_post, takeaway_order, transport_query, weather_query. Focus on identifying the user's main goal (such as asking for information, controlling a device, or managing tasks) and provide only the single most relevant label from the list that accurately describes the intent of the request. Respond exclusively with the category label (for example: lists_query), without any extra explanation or formatting.\"\n    text = Field(annotation=str required=True json_schema_extra={'IS_TYPE_UNDEFINED': True, '__dspy_field_type': 'input', 'prefix': 'Text:', 'desc': '${text}'})\n    label = Field(annotation=str required=True json_schema_extra={'__dspy_field_type': 'output', 'prefix': 'Label:', 'desc': '${label}'})\n))"
+  },
+  "24": {
+   "0_predictor_instruction": 8,
+   "0_predictor_demos": 3,
+   "mb_program_path": null,
+   "mb_score": 82.86,
+   "total_eval_calls_so_far": 1100,
+   "mb_program": "Predict(StringSignature(text -> label\n    instructions=\"Given a short, informal user request in English, determine which single intent category from the following list best matches the user's intended action: alarm_query, alarm_set, calendar_query, calendar_remove, calendar_set, cooking_recipe, datetime_query, email_query, email_sendemail, general_quirky, iot_hue_lightoff, lists_createoradd, lists_query, lists_remove, music_query, news_query, play_audiobook, play_music, play_podcasts, play_radio, qa_currency, qa_definition, qa_factoid, qa_stock, recommendation_events, recommendation_locations, social_post, takeaway_order, transport_query, or weather_query. Respond with only the intent category label.\"\n    text = Field(annotation=str required=True json_schema_extra={'IS_TYPE_UNDEFINED': True, '__dspy_field_type': 'input', 'prefix': 'Text:', 'desc': '${text}'})\n    label = Field(annotation=str required=True json_schema_extra={'__dspy_field_type': 'output', 'prefix': 'Label:', 'desc': '${label}'})\n))"
+  },
+  "25": {
+   "total_eval_calls_so_far": 1200,
+   "full_eval_program_path": null,
+   "full_eval_program": "Predict(StringSignature(text -> label\n    instructions=\"Given a user's single-turn, informal English request intended for a digital assistant, analyze the meaning of the text and determine which intent from the following list best captures what the user is trying to accomplish: alarm_query, alarm_set, calendar_query, calendar_remove, calendar_set, cooking_recipe, datetime_query, email_query, email_sendemail, general_quirky, iot_hue_lightoff, lists_createoradd, lists_query, lists_remove, music_query, news_query, play_audiobook, play_music, play_podcasts, play_radio, qa_currency, qa_definition, qa_factoid, qa_stock, recommendation_events, recommendation_locations, social_post, takeaway_order, transport_query, weather_query. Focus on identifying the user's main goal (such as asking for information, controlling a device, or managing tasks) and provide only the single most relevant label from the list that accurately describes the intent of the request. Respond exclusively with the category label (for example: lists_query), without any extra explanation or formatting.\"\n    text = Field(annotation=str required=True json_schema_extra={'IS_TYPE_UNDEFINED': True, '__dspy_field_type': 'input', 'prefix': 'Text:', 'desc': '${text}'})\n    label = Field(annotation=str required=True json_schema_extra={'__dspy_field_type': 'output', 'prefix': 'Label:', 'desc': '${label}'})\n))",
+   "full_eval_score": 84.0
+  },
+  "26": {
+   "0_predictor_instruction": 2,
+   "0_predictor_demos": 8,
+   "mb_program_path": null,
+   "mb_score": 91.43,
+   "total_eval_calls_so_far": 1235,
+   "mb_program": "Predict(StringSignature(text -> label\n    instructions=\"Read the user's query and determine which single intent best matches the request from the following options: alarm_query, alarm_set, calendar_query, calendar_remove, calendar_set, cooking_recipe, datetime_query, email_query, email_sendemail, general_quirky, iot_hue_lightoff, lists_createoradd, lists_query, lists_remove, music_query, news_query, play_audiobook, play_music, play_podcasts, play_radio, qa_currency, qa_definition, qa_factoid, qa_stock, recommendation_events, recommendation_locations, social_post, takeaway_order, transport_query, weather_query. Respond with only the intent label that most accurately represents the user's purpose in their message\u2014no explanation or other text.\"\n    text = Field(annotation=str required=True json_schema_extra={'IS_TYPE_UNDEFINED': True, '__dspy_field_type': 'input', 'prefix': 'Text:', 'desc': '${text}'})\n    label = Field(annotation=str required=True json_schema_extra={'__dspy_field_type': 'output', 'prefix': 'Label:', 'desc': '${label}'})\n))"
+  },
+  "27": {
+   "0_predictor_instruction": 7,
+   "0_predictor_demos": 7,
+   "mb_program_path": null,
+   "mb_score": 91.43,
+   "total_eval_calls_so_far": 1270,
+   "mb_program": "Predict(StringSignature(text -> label\n    instructions='Given a user\u2019s request or query as a text input, identify the single most appropriate intent label from the following list: alarm_query, alarm_set, calendar_query, calendar_remove, calendar_set, cooking_recipe, datetime_query, email_query, email_sendemail, general_quirky, iot_hue_lightoff, lists_createoradd, lists_query, lists_remove, music_query, news_query, play_audiobook, play_music, play_podcasts, play_radio, qa_currency, qa_definition, qa_factoid, qa_stock, recommendation_events, recommendation_locations, social_post, takeaway_order, transport_query, weather_query. Return only the intent label that best represents the user\u2019s intended action, without any extra explanation or formatting.'\n    text = Field(annotation=str required=True json_schema_extra={'IS_TYPE_UNDEFINED': True, '__dspy_field_type': 'input', 'prefix': 'Text:', 'desc': '${text}'})\n    label = Field(annotation=str required=True json_schema_extra={'__dspy_field_type': 'output', 'prefix': 'Label:', 'desc': '${label}'})\n))"
+  },
+  "28": {
+   "0_predictor_instruction": 5,
+   "0_predictor_demos": 16,
+   "mb_program_path": null,
+   "mb_score": 85.71,
+   "total_eval_calls_so_far": 1305,
+   "mb_program": "Predict(StringSignature(text -> label\n    instructions=\"Given a user's single-turn, informal English request intended for a digital assistant, analyze the meaning of the text and determine which intent from the following list best captures what the user is trying to accomplish: alarm_query, alarm_set, calendar_query, calendar_remove, calendar_set, cooking_recipe, datetime_query, email_query, email_sendemail, general_quirky, iot_hue_lightoff, lists_createoradd, lists_query, lists_remove, music_query, news_query, play_audiobook, play_music, play_podcasts, play_radio, qa_currency, qa_definition, qa_factoid, qa_stock, recommendation_events, recommendation_locations, social_post, takeaway_order, transport_query, weather_query. Focus on identifying the user's main goal (such as asking for information, controlling a device, or managing tasks) and provide only the single most relevant label from the list that accurately describes the intent of the request. Respond exclusively with the category label (for example: lists_query), without any extra explanation or formatting.\"\n    text = Field(annotation=str required=True json_schema_extra={'IS_TYPE_UNDEFINED': True, '__dspy_field_type': 'input', 'prefix': 'Text:', 'desc': '${text}'})\n    label = Field(annotation=str required=True json_schema_extra={'__dspy_field_type': 'output', 'prefix': 'Label:', 'desc': '${label}'})\n))"
+  },
+  "29": {
+   "0_predictor_instruction": 6,
+   "0_predictor_demos": 12,
+   "mb_program_path": null,
+   "mb_score": 82.86,
+   "total_eval_calls_so_far": 1340,
+   "mb_program": "Predict(StringSignature(text -> label\n    instructions=\"Analyze the following single-turn, informal English utterance\u2014typically a brief spoken-style request intended for a digital assistant\u2014and determine which intent label best describes the user's main goal. Choose the correct category from the following options: alarm_query, alarm_set, calendar_query, calendar_remove, calendar_set, cooking_recipe, datetime_query, email_query, email_sendemail, general_quirky, iot_hue_lightoff, lists_createoradd, lists_query, lists_remove, music_query, news_query, play_audiobook, play_music, play_podcasts, play_radio, qa_currency, qa_definition, qa_factoid, qa_stock, recommendation_events, recommendation_locations, social_post, takeaway_order, transport_query, or weather_query. Your response should be the label name only\u2014no additional explanation. Carefully consider the user's wording to determine their core intent, even if the language is casual or abbreviated.\"\n    text = Field(annotation=str required=True json_schema_extra={'IS_TYPE_UNDEFINED': True, '__dspy_field_type': 'input', 'prefix': 'Text:', 'desc': '${text}'})\n    label = Field(annotation=str required=True json_schema_extra={'__dspy_field_type': 'output', 'prefix': 'Label:', 'desc': '${label}'})\n))"
+  },
+  "30": {
+   "0_predictor_instruction": 3,
+   "0_predictor_demos": 4,
+   "mb_program_path": null,
+   "mb_score": 82.86,
+   "total_eval_calls_so_far": 1375,
+   "mb_program": "Predict(StringSignature(text -> label\n    instructions='Read the user\u2019s input text and select the single most appropriate intent label from the following categories: alarm_query, alarm_set, calendar_query, calendar_remove, calendar_set, cooking_recipe, datetime_query, email_query, email_sendemail, general_quirky, iot_hue_lightoff, lists_createoradd, lists_query, lists_remove, music_query, news_query, play_audiobook, play_music, play_podcasts, play_radio, qa_currency, qa_definition, qa_factoid, qa_stock, recommendation_events, recommendation_locations, social_post, takeaway_order, transport_query, weather_query. Return only the intent label that best represents the user\u2019s underlying request or command, without any explanation or additional text.'\n    text = Field(annotation=str required=True json_schema_extra={'IS_TYPE_UNDEFINED': True, '__dspy_field_type': 'input', 'prefix': 'Text:', 'desc': '${text}'})\n    label = Field(annotation=str required=True json_schema_extra={'__dspy_field_type': 'output', 'prefix': 'Label:', 'desc': '${label}'})\n))"
+  },
+  "31": {
+   "total_eval_calls_so_far": 1475,
+   "full_eval_program_path": null,
+   "full_eval_program": "Predict(StringSignature(text -> label\n    instructions=\"Read the user's query and determine which single intent best matches the request from the following options: alarm_query, alarm_set, calendar_query, calendar_remove, calendar_set, cooking_recipe, datetime_query, email_query, email_sendemail, general_quirky, iot_hue_lightoff, lists_createoradd, lists_query, lists_remove, music_query, news_query, play_audiobook, play_music, play_podcasts, play_radio, qa_currency, qa_definition, qa_factoid, qa_stock, recommendation_events, recommendation_locations, social_post, takeaway_order, transport_query, weather_query. Respond with only the intent label that most accurately represents the user's purpose in their message\u2014no explanation or other text.\"\n    text = Field(annotation=str required=True json_schema_extra={'IS_TYPE_UNDEFINED': True, '__dspy_field_type': 'input', 'prefix': 'Text:', 'desc': '${text}'})\n    label = Field(annotation=str required=True json_schema_extra={'__dspy_field_type': 'output', 'prefix': 'Label:', 'desc': '${label}'})\n))",
+   "full_eval_score": 85.0
+  },
+  "32": {
+   "0_predictor_instruction": 7,
+   "0_predictor_demos": 8,
+   "mb_program_path": null,
+   "mb_score": 88.57,
+   "total_eval_calls_so_far": 1510,
+   "mb_program": "Predict(StringSignature(text -> label\n    instructions='Given a user\u2019s request or query as a text input, identify the single most appropriate intent label from the following list: alarm_query, alarm_set, calendar_query, calendar_remove, calendar_set, cooking_recipe, datetime_query, email_query, email_sendemail, general_quirky, iot_hue_lightoff, lists_createoradd, lists_query, lists_remove, music_query, news_query, play_audiobook, play_music, play_podcasts, play_radio, qa_currency, qa_definition, qa_factoid, qa_stock, recommendation_events, recommendation_locations, social_post, takeaway_order, transport_query, weather_query. Return only the intent label that best represents the user\u2019s intended action, without any extra explanation or formatting.'\n    text = Field(annotation=str required=True json_schema_extra={'IS_TYPE_UNDEFINED': True, '__dspy_field_type': 'input', 'prefix': 'Text:', 'desc': '${text}'})\n    label = Field(annotation=str required=True json_schema_extra={'__dspy_field_type': 'output', 'prefix': 'Label:', 'desc': '${label}'})\n))"
+  },
+  "33": {
+   "0_predictor_instruction": 0,
+   "0_predictor_demos": 2,
+   "mb_program_path": null,
+   "mb_score": 85.71,
+   "total_eval_calls_so_far": 1545,
+   "mb_program": "Predict(StringSignature(text -> label\n    instructions='Classify the given text into one of these categories: alarm_query, alarm_set, calendar_query, calendar_remove, calendar_set, cooking_recipe, datetime_query, email_query, email_sendemail, general_quirky, iot_hue_lightoff, lists_createoradd, lists_query, lists_remove, music_query, news_query, play_audiobook, play_music, play_podcasts, play_radio, qa_currency, qa_definition, qa_factoid, qa_stock, recommendation_events, recommendation_locations, social_post, takeaway_order, transport_query, weather_query. Answer with the category name only.'\n    text = Field(annotation=str required=True json_schema_extra={'IS_TYPE_UNDEFINED': True, '__dspy_field_type': 'input', 'prefix': 'Text:', 'desc': '${text}'})\n    label = Field(annotation=str required=True json_schema_extra={'__dspy_field_type': 'output', 'prefix': 'Label:', 'desc': '${label}'})\n))"
+  },
+  "34": {
+   "total_eval_calls_so_far": 1645,
+   "full_eval_program_path": null,
+   "full_eval_program": "Predict(StringSignature(text -> label\n    instructions='Given a user\u2019s request or query as a text input, identify the single most appropriate intent label from the following list: alarm_query, alarm_set, calendar_query, calendar_remove, calendar_set, cooking_recipe, datetime_query, email_query, email_sendemail, general_quirky, iot_hue_lightoff, lists_createoradd, lists_query, lists_remove, music_query, news_query, play_audiobook, play_music, play_podcasts, play_radio, qa_currency, qa_definition, qa_factoid, qa_stock, recommendation_events, recommendation_locations, social_post, takeaway_order, transport_query, weather_query. Return only the intent label that best represents the user\u2019s intended action, without any extra explanation or formatting.'\n    text = Field(annotation=str required=True json_schema_extra={'IS_TYPE_UNDEFINED': True, '__dspy_field_type': 'input', 'prefix': 'Text:', 'desc': '${text}'})\n    label = Field(annotation=str required=True json_schema_extra={'__dspy_field_type': 'output', 'prefix': 'Label:', 'desc': '${label}'})\n))",
+   "full_eval_score": 84.0
+  }
+ },
+ "cost_usd": 0.2357,
+ "total_metric_calls": 1204,
+ "auto_preset": "heavy",
+ "optimizer": "miprov2",
+ "task": "massive",
+ "budget": 3200,
+ "seed": 31,
+ "family": "f1"
+}
