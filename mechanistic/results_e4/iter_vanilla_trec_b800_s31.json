@@ -1,0 +1,43 @@
+{
+ "arm": "vanilla",
+ "task": "trec",
+ "seed": 31,
+ "budget": 800,
+ "test_accuracy": 0.9,
+ "cost_usd": 0.0,
+ "source": "reused-e1",
+ "curve": [
+  {
+   "metric_calls": 0,
+   "dev": 0.5
+  },
+  {
+   "metric_calls": 106,
+   "dev": 0.79
+  },
+  {
+   "metric_calls": 212,
+   "dev": 0.71
+  },
+  {
+   "metric_calls": 318,
+   "dev": 0.76
+  },
+  {
+   "metric_calls": 424,
+   "dev": 0.83
+  },
+  {
+   "metric_calls": 530,
+   "dev": 0.8
+  },
+  {
+   "metric_calls": 636,
+   "dev": 0.8
+  },
+  {
+   "metric_calls": 751,
+   "dev": 0.82
+  }
+ ]
+}

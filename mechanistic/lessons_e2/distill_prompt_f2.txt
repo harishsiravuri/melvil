@@ -1,0 +1,8 @@
+You are analyzing reflection traces from GEPA, a prompt-optimization algorithm, run on {n} different tasks: {tasks}. Each record shows the optimizer's diagnosis of failures and its proposed replacement instruction, with whether the proposal was accepted.
+
+Distill 12-20 TASK-AGNOSTIC lessons about how to improve task prompts. Rules: each lesson generalizable (no task names, label names, or dataset specifics in the lesson text); ground each in the traces via an evidence field; derive from successes AND failures; deduplicate aggressively.
+
+Return ONLY a JSON array: [{{"lesson": "<1-2 imperative sentences>", "type": "strategy"|"error-pattern", "evidence": [{{"task": "...", "what_happened": "..."}}]}}]
+
+Trace records:
+{records}

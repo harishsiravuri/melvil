@@ -1,0 +1,158 @@
+[
+ {
+  "lesson": "Classify based on the primary framing and context of the content, not just superficial keywords or subject matter.",
+  "type": "strategy",
+  "evidence": [
+   {
+    "task": "ag_news",
+    "what_happened": "Multiple successful refinements emphasized distinguishing between articles about technology topics framed as international/political news (World) versus technology itself (Sci/Tech), and between corporate governance stories (Business) versus technical developments (Sci/Tech)."
+   },
+   {
+    "task": "emotion",
+    "what_happened": "Successful improvements noted that 'dangerous' in a critical context indicates anger rather than fear, and that 'love [something] for their qualities' expresses joy not love, requiring analysis beyond surface keywords."
+   }
+  ]
+ },
+ {
+  "lesson": "Pay special attention to negations and negative constructions, as they often reverse the apparent sentiment or meaning of a statement.",
+  "type": "error-pattern",
+  "evidence": [
+   {
+    "task": "emotion",
+    "what_happened": "Multiple refinements highlighted that statements like 'don't feel so exhausted' may indicate sadness rather than relief, requiring careful analysis of what negations actually imply about emotional state."
+   }
+  ]
+ },
+ {
+  "lesson": "When entities belong to a specific domain, prioritize domain classification over generic activity classification, even when the content describes generic activities.",
+  "type": "strategy",
+  "evidence": [
+   {
+    "task": "ag_news",
+    "what_happened": "Instructions evolved to classify financial results of technology companies as Sci/Tech rather than Business, recognizing that the company's domain takes precedence over the activity type."
+   },
+   {
+    "task": "ag_news",
+    "what_happened": "Technology consulting firms discussing business aspects should be classified as Sci/Tech because their primary domain is technology."
+   }
+  ]
+ },
+ {
+  "lesson": "Distinguish between the subject matter itself and news about governance/policy/regulation of that subject matter, assigning them to different categories.",
+  "type": "strategy",
+  "evidence": [
+   {
+    "task": "ag_news",
+    "what_happened": "Nuclear reactor incidents were successfully reclassified from Sci/Tech to World when framed as government responses or regulatory actions, separating technical topics from political/regulatory coverage."
+   },
+   {
+    "task": "ag_news",
+    "what_happened": "Economic policy debates and electoral politics about the economy were classified as World (political) rather than Business (economic), distinguishing policy discussion from business activity."
+   }
+  ]
+ },
+ {
+  "lesson": "Create explicit decision rules for overlapping categories by defining what type of content each category should prioritize.",
+  "type": "strategy",
+  "evidence": [
+   {
+    "task": "ag_news",
+    "what_happened": "Successful refinement distinguished corporate governance changes at tech companies (Business) from their financial results (Sci/Tech) and technical products (Sci/Tech) through explicit prioritization rules."
+   },
+   {
+    "task": "emotion",
+    "what_happened": "Instructions evolved to distinguish joy (happiness about experiences) from love (emotional connection, gratitude, being moved) through explicit defining characteristics."
+   }
+  ]
+ },
+ {
+  "lesson": "When the same word or phrase can indicate different categories depending on context, provide specific contextual disambiguation rules.",
+  "type": "strategy",
+  "evidence": [
+   {
+    "task": "emotion",
+    "what_happened": "The word 'dangerous' was clarified to indicate anger when used critically versus fear when expressing anxiety, based on overall tone."
+   },
+   {
+    "task": "emotion",
+    "what_happened": "The word 'love' in 'I love [thing] for [qualities]' was distinguished from interpersonal/spiritual love through contextual rules."
+   }
+  ]
+ },
+ {
+  "lesson": "Identify and document counterintuitive labeling patterns in the dataset rather than imposing conventional interpretations.",
+  "type": "strategy",
+  "evidence": [
+   {
+    "task": "emotion",
+    "what_happened": "Instructions acknowledged that hesitation about sincerity is labeled as joy rather than fear in the dataset, documenting this unconventional pattern explicitly."
+   },
+   {
+    "task": "emotion",
+    "what_happened": "Expressions of gratitude and feeling blessed were clarified as love rather than joy, departing from intuitive categorization."
+   }
+  ]
+ },
+ {
+  "lesson": "Distinguish between transactional framing and technical/substantive framing of the same event, assigning each to different categories.",
+  "type": "strategy",
+  "evidence": [
+   {
+    "task": "ag_news",
+    "what_happened": "Acquisitions framed around the technology being acquired (technical architecture, solutions) were classified as Sci/Tech, while those focused on the business deal itself were Business."
+   }
+  ]
+ },
+ {
+  "lesson": "Create specific rules for differentiating closely related categories that share similar vocabulary but serve different intents.",
+  "type": "strategy",
+  "evidence": [
+   {
+    "task": "clinc150",
+    "what_happened": "Instructions added explicit differentiation between car_rental, book_hotel, and book_flight, noting they are distinct despite all being travel-related and having similar phrasing patterns."
+   }
+  ]
+ },
+ {
+  "lesson": "When dealing with emotional or subjective content, distinguish between the target of the emotion and the type of emotion to avoid misclassification.",
+  "type": "strategy",
+  "evidence": [
+   {
+    "task": "emotion",
+    "what_happened": "Jealousy (resentment toward others) was reclassified from sadness to anger, recognizing that the target and nature of the emotion matter."
+   },
+   {
+    "task": "emotion",
+    "what_happened": "Being emotionally affected by students' responses was classified as love (caring investment) rather than fear (anxiety), based on recognizing emotional investment versus threat."
+   }
+  ]
+ },
+ {
+  "lesson": "Identify and provide guidance on tone indicators that signal category distinctions, such as assertive versus anxious tone or critical versus descriptive tone.",
+  "type": "strategy",
+  "evidence": [
+   {
+    "task": "emotion",
+    "what_happened": "Instructions specified that assertive/critical tone signals anger while anxious/worried tone signals fear, even when discussing similar subject matter."
+   },
+   {
+    "task": "emotion",
+    "what_happened": "Reflective tone about punishment indicates sadness while hostile tone indicates anger, requiring tone analysis for disambiguation."
+   }
+  ]
+ },
+ {
+  "lesson": "For categories with implicit or unstated criteria, make the underlying classification logic explicit through examples and patterns.",
+  "type": "strategy",
+  "evidence": [
+   {
+    "task": "ag_news",
+    "what_happened": "Multiple iterations made explicit that technology companies default to Sci/Tech for financial news, that government corruption is World not Business, and that product launches emphasizing technology are Sci/Tech not Business."
+   },
+   {
+    "task": "emotion",
+    "what_happened": "Instructions evolved to explicitly state that expressing enjoyment of things is joy while interpersonal/spiritual appreciation is love, even when the word 'love' appears in the text."
+   }
+  ]
+ }
+]

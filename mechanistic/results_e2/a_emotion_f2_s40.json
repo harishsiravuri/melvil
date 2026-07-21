@@ -1,0 +1,44 @@
+{
+ "test_accuracy": 0.57,
+ "best_dev": 0.66,
+ "seed_dev": 0.6,
+ "curve": [
+  {
+   "metric_calls": 0,
+   "dev": 0.6
+  },
+  {
+   "metric_calls": 106,
+   "dev": 0.66
+  },
+  {
+   "metric_calls": 212,
+   "dev": 0.6
+  },
+  {
+   "metric_calls": 318,
+   "dev": 0.62
+  },
+  {
+   "metric_calls": 424,
+   "dev": 0.62
+  },
+  {
+   "metric_calls": 530,
+   "dev": 0.62
+  },
+  {
+   "metric_calls": 636,
+   "dev": 0.61
+  },
+  {
+   "metric_calls": 742,
+   "dev": 0.64
+  }
+ ],
+ "cost_usd": 0.403,
+ "arm": "a",
+ "task": "emotion",
+ "family": "f2",
+ "seed": 40
+}

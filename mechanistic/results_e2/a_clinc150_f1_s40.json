@@ -1,0 +1,20 @@
+{
+ "test_accuracy": 0.9833,
+ "best_dev": 0.99,
+ "seed_dev": 0.98,
+ "curve": [
+  {
+   "metric_calls": 0,
+   "dev": 0.98
+  },
+  {
+   "metric_calls": 127,
+   "dev": 0.99
+  }
+ ],
+ "cost_usd": 0.154,
+ "arm": "a",
+ "task": "clinc150",
+ "family": "f1",
+ "seed": 40
+}

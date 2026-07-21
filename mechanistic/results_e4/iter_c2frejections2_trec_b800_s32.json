@@ -1,0 +1,57 @@
+{
+ "arm": "c2f",
+ "switch": [
+  "rejections",
+  2
+ ],
+ "task": "trec",
+ "seed": 32,
+ "budget": 800,
+ "test_accuracy": 0.89,
+ "test_macro_f1": 0.8737,
+ "dev_accuracy": 0.83,
+ "notes": "c2f switch=('rejections', 2); skipped (decomposed dev 0.810 vs blob 0.830)",
+ "curve": [
+  {
+   "metric_calls": 0,
+   "dev_score": 0.5,
+   "phase": 1
+  },
+  {
+   "metric_calls": 106,
+   "dev_score": 0.63,
+   "phase": 1
+  },
+  {
+   "metric_calls": 212,
+   "dev_score": 0.75,
+   "phase": 1
+  },
+  {
+   "metric_calls": 318,
+   "dev_score": 0.78,
+   "phase": 1
+  },
+  {
+   "metric_calls": 430,
+   "dev_score": 0.81,
+   "phase": 1
+  },
+  {
+   "metric_calls": 536,
+   "dev_score": 0.83,
+   "phase": 1
+  },
+  {
+   "metric_calls": 642,
+   "dev_score": 0.83,
+   "phase": 1
+  },
+  {
+   "metric_calls": 748,
+   "dev_score": 0.83,
+   "phase": 1
+  }
+ ],
+ "cost_usd": 0.0466
+}

@@ -154,6 +154,25 @@ re-computed on 222 informative runs is unchanged in shape (A(2): 63% retention
 at 38% budget; A(3): 75% at 51%; G(200): 90% at 92%) — C5's verdict stands
 with better power.
 
+## E7 — best-of-K first rewrite (C7) · **COMPLETE** ($6.37)
+
+K=4 diverse first rewrites (distinct reflection cache namespaces + distinct
+error samples), 25-example dev screen, winner promoted, vanilla continuation at
+matched total budget; banking77/trec/massive × seeds 30–34 vs the E1 vanilla
+B1 cells (identical seeds — paired comparison).
+
+**Verdict: C7 DIED (clean null).** Paired mean test delta **+0.002 ± 0.009**
+(banking77 +0.001, trec +0.010, massive −0.005). The screen itself works — the
+K rewrites spread by a mean 7.2 accuracy points on the screen set and the
+winner's first full-dev score averages 0.822 — but the head start washes out:
+with gains distributed across many accepts (E1), evolution re-converges
+regardless of the starting rewrite. Paper sentence: *"Investing budget in a
+better first rewrite buys nothing at matched total budget (+0.2 ± 0.9 points):
+the optimizer's later accepts redistribute whatever the first rewrite missed."*
+Together with E6 (racing dead) and E5 (modest stopping frontier), all three
+early-signal exploits fail for the same measured reason — a coherent negative
+triad grounded in the E1 result.
+
 ## Pending experiments
 - **E1 front-loading (C1)** — harness next; its runs also enrich this
   simulation pool.

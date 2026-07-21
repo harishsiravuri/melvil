@@ -1,0 +1,50 @@
+{
+ "experiment": "e7",
+ "task": "trec",
+ "family": "f1",
+ "seed": 34,
+ "screen_accs": [
+  0.76,
+  0.88,
+  0.88,
+  0.84
+ ],
+ "winner_k": 1,
+ "winner_screen_acc": 0.88,
+ "round1_dev_first_full": 0.81,
+ "best_dev": 0.88,
+ "test_accuracy": 0.9067,
+ "budget_screen_spent": 124,
+ "budget_gepa": 676,
+ "cost_usd": 0.3897,
+ "curve": [
+  {
+   "metric_calls": 124,
+   "dev": 0.81
+  },
+  {
+   "metric_calls": 251,
+   "dev": 0.8
+  },
+  {
+   "metric_calls": 357,
+   "dev": 0.86
+  },
+  {
+   "metric_calls": 466,
+   "dev": 0.88
+  },
+  {
+   "metric_calls": 578,
+   "dev": 0.83
+  },
+  {
+   "metric_calls": 684,
+   "dev": 0.87
+  },
+  {
+   "metric_calls": 799,
+   "dev": 0.84
+  }
+ ]
+}

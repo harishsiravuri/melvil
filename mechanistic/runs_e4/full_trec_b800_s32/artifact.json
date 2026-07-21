@@ -1,0 +1,229 @@
+{
+ "schema_version": 1,
+ "artifact_id": "c9c5d9e739d6",
+ "parent_id": null,
+ "task_name": "trec",
+ "created_at": "2026-07-21T11:15:28-0500",
+ "library": {
+  "name": "melvil",
+  "version": "0.3.0"
+ },
+ "models": {
+  "task": "openrouter/openai/gpt-4.1-mini",
+  "reflection": "openrouter/openai/gpt-4.1"
+ },
+ "budget": {
+  "metric_calls_budget": 800,
+  "metric_calls_spent": 803,
+  "cost_usd": 0.1365,
+  "task_lm_usage": {
+   "model": "openrouter/openai/gpt-4.1-mini",
+   "prompt_tokens": 207698,
+   "completion_tokens": 1419,
+   "calls": 702,
+   "cache_hits": 301,
+   "cost_usd": 0.08535
+  },
+  "reflection_lm_usage": {
+   "model": "openrouter/openai/gpt-4.1",
+   "prompt_tokens": 15195,
+   "completion_tokens": 2594,
+   "calls": 16,
+   "cache_hits": 0,
+   "cost_usd": 0.051142
+  },
+  "opt_seconds": 236.9
+ },
+ "scores": {
+  "dev_accuracy": 0.83,
+  "dev_macro_f1": 0.86,
+  "per_label_dev": {
+   "abbreviation": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "support": 2
+   },
+   "description": {
+    "precision": 0.7241,
+    "recall": 1.0,
+    "f1": 0.84,
+    "support": 21
+   },
+   "entity": {
+    "precision": 0.7391,
+    "recall": 0.7391,
+    "f1": 0.7391,
+    "support": 23
+   },
+   "human": {
+    "precision": 0.9412,
+    "recall": 0.7273,
+    "f1": 0.8205,
+    "support": 22
+   },
+   "location": {
+    "precision": 1.0,
+    "recall": 0.7333,
+    "f1": 0.8462,
+    "support": 15
+   },
+   "numeric": {
+    "precision": 0.8889,
+    "recall": 0.9412,
+    "f1": 0.9143,
+    "support": 17
+   }
+  },
+  "seed_dev_accuracy": 0.53,
+  "dev_accuracy_quarantined": 0.8265
+ },
+ "config_hash": "32830acb6de8",
+ "config": {
+  "task_model": "openrouter/openai/gpt-4.1-mini",
+  "reflection_model": "openrouter/openai/gpt-4.1",
+  "budget": 800,
+  "seed": 32,
+  "features": {
+   "codebook": true,
+   "confusion_reflection": true,
+   "hard_example_mining": true
+  },
+  "num_threads": 8,
+  "run_dir": "/Users/harish/Documents/Claude/Projects/6s/labelsmith/mechanistic/runs_e4/full_trec_b800_s32",
+  "task_temperature": 0.0,
+  "task_max_tokens": 40,
+  "reflection_temperature": 1.0,
+  "reflection_max_tokens": 8000,
+  "reflection_minibatch_size": 3,
+  "max_exemplars": 6,
+  "mining_llm_screen": true,
+  "log_proposals": false,
+  "prices": {},
+  "metric_calls": 800
+ },
+ "label_names": [
+  "abbreviation",
+  "description",
+  "entity",
+  "human",
+  "location",
+  "numeric"
+ ],
+ "components": {
+  "task_instruction": "You are a precise text classifier. Read the input text and assign it to exactly one of the categories defined below.",
+  "label::abbreviation": "",
+  "label::description": "Assign 'description' only when the expected answer is an explanatory statement or factual information that cannot be reduced to a specific name, numeric value, or entity. If the answer is a quantity or directly measurable fact, use 'numeric' instead. Use 'description' for explanatory, non-numeric responses.",
+  "label::entity": "Assign 'entity' if the expected answer is a specific thing, concept, object, substance, animal, or organization that is not a human or a location. If unclear between 'entity' and 'location', choose 'entity' when the correct answer is not a place or geographic area; otherwise, use 'location' for places.",
+  "label::human": "",
+  "label::location": "Assign 'location' if the expected answer is a place, country, city, region, geographical feature, or any answer specifying a physical location. If deciding between 'location' and 'entity', choose 'location' when the correct answer is a place name; use 'entity' only for non-location things such as objects, concepts, organizations, or animals.",
+  "label::numeric": "Assign 'numeric' if the question requests a number, quantity, measurement, date, duration, probability, or any value that can be answered with digits or a numeric value. Decide 'numeric' even if additional context or wording is present, as long as the core answer is a quantity or measurable fact. If a question could be answered with a definite number but not a name or factual term, use 'numeric' rather than 'description'.",
+  "boundary_rules": ""
+ },
+ "exemplars": [
+  {
+   "text": "What are the most common elements in seawater ?",
+   "label": "entity",
+   "boundary": "entity|description"
+  },
+  {
+   "text": "What 's the term for a bet before cards are dealt ?",
+   "label": "entity",
+   "boundary": "entity|abbreviation"
+  }
+ ],
+ "confusion": {
+  "labels": [
+   "abbreviation",
+   "description",
+   "entity",
+   "human",
+   "location",
+   "numeric"
+  ],
+  "matrix": [
+   [
+    2,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    21,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    4,
+    17,
+    1,
+    0,
+    1,
+    0
+   ],
+   [
+    0,
+    0,
+    6,
+    16,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    3,
+    0,
+    0,
+    11,
+    1,
+    0
+   ],
+   [
+    0,
+    1,
+    0,
+    0,
+    0,
+    16,
+    0
+   ]
+  ],
+  "unparseable_column": true
+ },
+ "curve": [
+  {
+   "metric_calls": 0,
+   "dev_score": 0.53
+  },
+  {
+   "metric_calls": 106,
+   "dev_score": 0.67
+  },
+  {
+   "metric_calls": 212,
+   "dev_score": 0.74
+  },
+  {
+   "metric_calls": 327,
+   "dev_score": 0.69
+  },
+  {
+   "metric_calls": 439,
+   "dev_score": 0.76
+  },
+  {
+   "metric_calls": 605,
+   "dev_score": 0.66
+  }
+ ],
+ "notes": "kept 2 exemplars (quarantined dev 0.827 > 0.775 + noise floor 0.042)"
+}

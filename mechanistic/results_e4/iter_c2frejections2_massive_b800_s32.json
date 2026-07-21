@@ -1,0 +1,57 @@
+{
+ "arm": "c2f",
+ "switch": [
+  "rejections",
+  2
+ ],
+ "task": "massive",
+ "seed": 32,
+ "budget": 800,
+ "test_accuracy": 0.8733,
+ "test_macro_f1": 0.8862,
+ "dev_accuracy": 0.85,
+ "notes": "c2f switch=('rejections', 2); skipped (decomposed dev 0.860 vs blob 0.850)",
+ "curve": [
+  {
+   "metric_calls": 0,
+   "dev_score": 0.81,
+   "phase": 1
+  },
+  {
+   "metric_calls": 106,
+   "dev_score": 0.84,
+   "phase": 1
+  },
+  {
+   "metric_calls": 218,
+   "dev_score": 0.84,
+   "phase": 1
+  },
+  {
+   "metric_calls": 330,
+   "dev_score": 0.84,
+   "phase": 1
+  },
+  {
+   "metric_calls": 442,
+   "dev_score": 0.81,
+   "phase": 1
+  },
+  {
+   "metric_calls": 548,
+   "dev_score": 0.85,
+   "phase": 1
+  },
+  {
+   "metric_calls": 654,
+   "dev_score": 0.83,
+   "phase": 1
+  },
+  {
+   "metric_calls": 787,
+   "dev_score": 0.81,
+   "phase": 1
+  }
+ ],
+ "cost_usd": 0.0451
+}

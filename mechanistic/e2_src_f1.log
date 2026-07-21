@@ -1,0 +1,1243 @@
+Iteration 0: Base program full valset score: 0.84 over 100 / 100 examples
+Iteration 1: Selected program 0 score: 0.84
+Iteration 1: All subsample scores perfect. Skipping.
+Iteration 1: Reflective mutation did not propose a new candidate
+Iteration 2: Selected program 0 score: 0.84
+Iteration 2: Proposed new text for instruction: You will be provided with a piece of news text. Your task is to classify this text into one of the following four categories: Business, Sci/Tech (Science/Technology), Sports, or World. Examine the content and main topic of the text to determine the most appropriate category. Select:
+
+- "Business" if the text is mainly about finance, companies, markets, economics, or commercial trends.
+- "Sci/Tech" if the text is primarily about scientific discoveries, technological products, innovation, research, or developments in electronics/computers (for example, coverage about iPods, new gadgets, or digital trends).
+- "Sports" if the main focus of the text is on athletic events, competitions, teams, or sports personalities.
+- "World" if the text mainly discusses international news, global politics, wars, diplomacy, or events that concern multiple countries.
+
+Provide only the correct label as your response.
+Iteration 2: New subsample score 3.0 is better than old score 2.0. Continue to full eval and add to candidate pool.
+Iteration 2: Found a better program on the valset with score 0.88.
+Iteration 2: Valset score for new program: 0.88 (coverage 100 / 100)
+Iteration 2: Val aggregate for new program: 0.88
+Iteration 2: Individual valset scores for new program: {0: 0.0, 1: 1.0, 2: 1.0, 3: 1.0, 4: 1.0, 5: 1.0, 6: 1.0, 7: 1.0, 8: 1.0, 9: 1.0, 10: 1.0, 11: 1.0, 12: 1.0, 13: 1.0, 14: 0.0, 15: 0.0, 16: 0.0, 17: 0.0, 18: 1.0, 19: 1.0, 20: 1.0, 21: 1.0, 22: 1.0, 23: 1.0, 24: 1.0, 25: 1.0, 26: 1.0, 27: 1.0, 28: 1.0, 29: 1.0, 30: 1.0, 31: 1.0, 32: 1.0, 33: 1.0, 34: 1.0, 35: 1.0, 36: 1.0, 37: 1.0, 38: 1.0, 39: 1.0, 40: 1.0, 41: 1.0, 42: 1.0, 43: 0.0, 44: 1.0, 45: 1.0, 46: 1.0, 47: 1.0, 48: 1.0, 49: 1.0, 50: 1.0, 51: 1.0, 52: 1.0, 53: 1.0, 54: 1.0, 55: 1.0, 56: 1.0, 57: 1.0, 58: 1.0, 59: 1.0, 60: 0.0, 61: 1.0, 62: 1.0, 63: 0.0, 64: 1.0, 65: 1.0, 66: 1.0, 67: 1.0, 68: 1.0, 69: 1.0, 70: 1.0, 71: 1.0, 72: 1.0, 73: 1.0, 74: 1.0, 75: 1.0, 76: 1.0, 77: 1.0, 78: 1.0, 79: 1.0, 80: 0.0, 81: 1.0, 82: 1.0, 83: 1.0, 84: 1.0, 85: 1.0, 86: 1.0, 87: 0.0, 88: 0.0, 89: 1.0, 90: 1.0, 91: 1.0, 92: 1.0, 93: 1.0, 94: 1.0, 95: 1.0, 96: 1.0, 97: 0.0, 98: 1.0, 99: 1.0}
+Iteration 2: New valset pareto front scores: {0: 0.0, 1: 1.0, 2: 1.0, 3: 1.0, 4: 1.0, 5: 1.0, 6: 1.0, 7: 1.0, 8: 1.0, 9: 1.0, 10: 1.0, 11: 1.0, 12: 1.0, 13: 1.0, 14: 0.0, 15: 0.0, 16: 0.0, 17: 0.0, 18: 1.0, 19: 1.0, 20: 1.0, 21: 1.0, 22: 1.0, 23: 1.0, 24: 1.0, 25: 1.0, 26: 1.0, 27: 1.0, 28: 1.0, 29: 1.0, 30: 1.0, 31: 1.0, 32: 1.0, 33: 1.0, 34: 1.0, 35: 1.0, 36: 1.0, 37: 1.0, 38: 1.0, 39: 1.0, 40: 1.0, 41: 1.0, 42: 1.0, 43: 0.0, 44: 1.0, 45: 1.0, 46: 1.0, 47: 1.0, 48: 1.0, 49: 1.0, 50: 1.0, 51: 1.0, 52: 1.0, 53: 1.0, 54: 1.0, 55: 1.0, 56: 1.0, 57: 1.0, 58: 1.0, 59: 1.0, 60: 0.0, 61: 1.0, 62: 1.0, 63: 0.0, 64: 1.0, 65: 1.0, 66: 1.0, 67: 1.0, 68: 1.0, 69: 1.0, 70: 1.0, 71: 1.0, 72: 1.0, 73: 1.0, 74: 1.0, 75: 1.0, 76: 1.0, 77: 1.0, 78: 1.0, 79: 1.0, 80: 0.0, 81: 1.0, 82: 1.0, 83: 1.0, 84: 1.0, 85: 1.0, 86: 1.0, 87: 0.0, 88: 0.0, 89: 1.0, 90: 1.0, 91: 1.0, 92: 1.0, 93: 1.0, 94: 1.0, 95: 1.0, 96: 1.0, 97: 0.0, 98: 1.0, 99: 1.0}
+Iteration 2: Valset pareto front aggregate score: 0.88
+Iteration 2: Updated valset pareto front programs: {0: {0, 1}, 1: {0, 1}, 2: {0, 1}, 3: {0, 1}, 4: {0, 1}, 5: {0, 1}, 6: {0, 1}, 7: {0, 1}, 8: {0, 1}, 9: {0, 1}, 10: {0, 1}, 11: {0, 1}, 12: {0, 1}, 13: {0, 1}, 14: {0, 1}, 15: {0, 1}, 16: {0, 1}, 17: {0, 1}, 18: {0, 1}, 19: {0, 1}, 20: {0, 1}, 21: {0, 1}, 22: {0, 1}, 23: {0, 1}, 24: {0, 1}, 25: {0, 1}, 26: {1}, 27: {0, 1}, 28: {0, 1}, 29: {1}, 30: {0, 1}, 31: {0, 1}, 32: {0, 1}, 33: {0, 1}, 34: {0, 1}, 35: {0, 1}, 36: {0, 1}, 37: {0, 1}, 38: {0, 1}, 39: {0, 1}, 40: {0, 1}, 41: {0, 1}, 42: {0, 1}, 43: {0, 1}, 44: {0, 1}, 45: {1}, 46: {0, 1}, 47: {0, 1}, 48: {0, 1}, 49: {0, 1}, 50: {0, 1}, 51: {0, 1}, 52: {0, 1}, 53: {0, 1}, 54: {0, 1}, 55: {0, 1}, 56: {0, 1}, 57: {0, 1}, 58: {0, 1}, 59: {0, 1}, 60: {0, 1}, 61: {0, 1}, 62: {0, 1}, 63: {0, 1}, 64: {0, 1}, 65: {0, 1}, 66: {0, 1}, 67: {0, 1}, 68: {0, 1}, 69: {0, 1}, 70: {0, 1}, 71: {0, 1}, 72: {0, 1}, 73: {0, 1}, 74: {0, 1}, 75: {0, 1}, 76: {0, 1}, 77: {0, 1}, 78: {0, 1}, 79: {0, 1}, 80: {0, 1}, 81: {1}, 82: {0, 1}, 83: {0, 1}, 84: {0, 1}, 85: {0, 1}, 86: {0, 1}, 87: {0, 1}, 88: {0, 1}, 89: {0, 1}, 90: {0, 1}, 91: {0, 1}, 92: {0, 1}, 93: {0, 1}, 94: {0, 1}, 95: {0, 1}, 96: {0, 1}, 97: {0, 1}, 98: {0, 1}, 99: {0, 1}}
+Iteration 2: Best valset aggregate score so far: 0.88
+Iteration 2: Best program as per aggregate score on valset: 1
+Iteration 2: Best score on valset: 0.88
+Iteration 2: Linear pareto front program index: 1
+Iteration 2: New program candidate index: 1
+Iteration 3: Selected program 1 score: 0.88
+Iteration 3: All subsample scores perfect. Skipping.
+Iteration 3: Reflective mutation did not propose a new candidate
+Iteration 4: Selected program 1 score: 0.88
+Iteration 4: All subsample scores perfect. Skipping.
+Iteration 4: Reflective mutation did not propose a new candidate
+Iteration 5: Selected program 1 score: 0.88
+Iteration 5: Proposed new text for instruction: You are tasked with classifying short news texts into one of four specific categories: Business, Sci/Tech (Science/Technology), Sports, or World. You will be provided with a snippet of news text under a "text" key. Your response should be a single word indicating ONLY the most appropriate label from the following list:
+
+- Business
+- Sci/Tech
+- Sports
+- World
+
+Consider these detailed guidelines:
+
+1. **Business:** Select this label if the news primarily discusses finance, companies, markets, economic trends, acquisitions, mergers, commercial strategies, or related topics within commerce and industry.
+
+2. **Sci/Tech:** Choose this label for news that is centered on scientific research, discoveries, innovation, technological advancements, electronics, new consumer tech products (like gadgets, iPods, digital platforms), developments in computers, or information technology firms (especially where the primary focus is on their technology and not on business operations). For technology consulting firms, if the article is mainly about strategic changes or innovations in their technological services or products, pick 'Sci/Tech'—even if the company’s name is prominent.
+
+3. **Sports:** Use this category for articles focused mainly on athletic events, competitions, sports teams, leagues, games, or personalities from the world of sports.
+
+4. **World:** Assign this label to news texts dealing with international events, global affairs and politics, wars, diplomacy, or major incidents involving multiple countries.
+
+**Important:** Pay close attention to the main subject and angle of the article. For organizations or companies operating in technology, classify under "Sci/Tech" if the story is about their technological innovations, services, or products, not just their business strategies. If the story is more about business operations, finances, or possible acquisitions, it belongs under "Business."
+
+A correct response consists ONLY of the label ("Business", "Sci/Tech", "Sports", or "World")—no extra commentary, formatting, or explanation.
+Iteration 5: New subsample score 1.0 is not better than old score 2.0, skipping
+Iteration 6: Selected program 1 score: 0.88
+Iteration 6: Proposed new text for instruction: You will be given a short news text. Your task is to classify this text into one of four specific categories: Business, Sci/Tech, Sports, or World. Carefully analyze the main topic and subject matter of the text, using the following detailed guidelines to determine the most accurate category:
+
+- Business: Select this label if the text is primarily discussing topics related to finance, companies, the stock market, economics, business trends, mergers and acquisitions, management strategies, or other commercial/industry developments.
+
+- Sci/Tech (Science/Technology): Use this label if the main focus of the text is scientific research, technology products, innovation, new gadgets, developments in electronics or computers, or general news about the science and technology sector. For example, news about new software, digital storage, scientific discoveries, device launches, or reports on technological advancements should be labeled as Sci/Tech (even if they have clear business applications, prioritize Sci/Tech if the technological or scientific element is primary).
+
+- Sports: Assign this label when the text is centered on athletic competitions, sports teams, events, match results, player transfers, or sports figures and their activities. This includes both professional and amateur sports.
+
+- World: Choose this category if the text addresses international news such as diplomacy, global politics, war and conflict, treaties, foreign affairs, or major incidents that impact multiple countries. Coverage about international leaders, government actions abroad, and multinational issues also falls in this category.
+
+Your answer must be exactly one of the following: Business, Sci/Tech, Sports, or World. Review the substance of the news and reason about the context—especially for texts about business-oriented technology products (such as new storage systems or digital gadgets), use 'Sci/Tech' if the innovation or technological aspect is central, even if it also has business relevance.
+
+Respond with ONLY the correct single label, and nothing else.
+Iteration 6: New subsample score 3.0 is better than old score 2.0. Continue to full eval and add to candidate pool.
+Iteration 6: Found a better program on the valset with score 0.89.
+Iteration 6: Valset score for new program: 0.89 (coverage 100 / 100)
+Iteration 6: Val aggregate for new program: 0.89
+Iteration 6: Individual valset scores for new program: {0: 0.0, 1: 1.0, 2: 1.0, 3: 1.0, 4: 1.0, 5: 1.0, 6: 1.0, 7: 1.0, 8: 1.0, 9: 1.0, 10: 1.0, 11: 1.0, 12: 1.0, 13: 1.0, 14: 0.0, 15: 1.0, 16: 0.0, 17: 0.0, 18: 1.0, 19: 1.0, 20: 1.0, 21: 1.0, 22: 1.0, 23: 1.0, 24: 1.0, 25: 1.0, 26: 1.0, 27: 1.0, 28: 1.0, 29: 1.0, 30: 1.0, 31: 1.0, 32: 1.0, 33: 1.0, 34: 1.0, 35: 1.0, 36: 1.0, 37: 1.0, 38: 1.0, 39: 1.0, 40: 1.0, 41: 1.0, 42: 1.0, 43: 0.0, 44: 1.0, 45: 0.0, 46: 1.0, 47: 1.0, 48: 1.0, 49: 1.0, 50: 1.0, 51: 1.0, 52: 1.0, 53: 1.0, 54: 1.0, 55: 1.0, 56: 1.0, 57: 1.0, 58: 1.0, 59: 1.0, 60: 0.0, 61: 1.0, 62: 1.0, 63: 0.0, 64: 1.0, 65: 1.0, 66: 1.0, 67: 1.0, 68: 1.0, 69: 1.0, 70: 1.0, 71: 1.0, 72: 1.0, 73: 1.0, 74: 1.0, 75: 1.0, 76: 1.0, 77: 1.0, 78: 1.0, 79: 1.0, 80: 0.0, 81: 1.0, 82: 1.0, 83: 1.0, 84: 1.0, 85: 1.0, 86: 1.0, 87: 1.0, 88: 0.0, 89: 1.0, 90: 1.0, 91: 1.0, 92: 1.0, 93: 1.0, 94: 1.0, 95: 1.0, 96: 1.0, 97: 0.0, 98: 1.0, 99: 1.0}
+Iteration 6: New valset pareto front scores: {0: 0.0, 1: 1.0, 2: 1.0, 3: 1.0, 4: 1.0, 5: 1.0, 6: 1.0, 7: 1.0, 8: 1.0, 9: 1.0, 10: 1.0, 11: 1.0, 12: 1.0, 13: 1.0, 14: 0.0, 15: 1.0, 16: 0.0, 17: 0.0, 18: 1.0, 19: 1.0, 20: 1.0, 21: 1.0, 22: 1.0, 23: 1.0, 24: 1.0, 25: 1.0, 26: 1.0, 27: 1.0, 28: 1.0, 29: 1.0, 30: 1.0, 31: 1.0, 32: 1.0, 33: 1.0, 34: 1.0, 35: 1.0, 36: 1.0, 37: 1.0, 38: 1.0, 39: 1.0, 40: 1.0, 41: 1.0, 42: 1.0, 43: 0.0, 44: 1.0, 45: 1.0, 46: 1.0, 47: 1.0, 48: 1.0, 49: 1.0, 50: 1.0, 51: 1.0, 52: 1.0, 53: 1.0, 54: 1.0, 55: 1.0, 56: 1.0, 57: 1.0, 58: 1.0, 59: 1.0, 60: 0.0, 61: 1.0, 62: 1.0, 63: 0.0, 64: 1.0, 65: 1.0, 66: 1.0, 67: 1.0, 68: 1.0, 69: 1.0, 70: 1.0, 71: 1.0, 72: 1.0, 73: 1.0, 74: 1.0, 75: 1.0, 76: 1.0, 77: 1.0, 78: 1.0, 79: 1.0, 80: 0.0, 81: 1.0, 82: 1.0, 83: 1.0, 84: 1.0, 85: 1.0, 86: 1.0, 87: 1.0, 88: 0.0, 89: 1.0, 90: 1.0, 91: 1.0, 92: 1.0, 93: 1.0, 94: 1.0, 95: 1.0, 96: 1.0, 97: 0.0, 98: 1.0, 99: 1.0}
+Iteration 6: Valset pareto front aggregate score: 0.9
+Iteration 6: Updated valset pareto front programs: {0: {0, 1, 2}, 1: {0, 1, 2}, 2: {0, 1, 2}, 3: {0, 1, 2}, 4: {0, 1, 2}, 5: {0, 1, 2}, 6: {0, 1, 2}, 7: {0, 1, 2}, 8: {0, 1, 2}, 9: {0, 1, 2}, 10: {0, 1, 2}, 11: {0, 1, 2}, 12: {0, 1, 2}, 13: {0, 1, 2}, 14: {0, 1, 2}, 15: {2}, 16: {0, 1, 2}, 17: {0, 1, 2}, 18: {0, 1, 2}, 19: {0, 1, 2}, 20: {0, 1, 2}, 21: {0, 1, 2}, 22: {0, 1, 2}, 23: {0, 1, 2}, 24: {0, 1, 2}, 25: {0, 1, 2}, 26: {1, 2}, 27: {0, 1, 2}, 28: {0, 1, 2}, 29: {1, 2}, 30: {0, 1, 2}, 31: {0, 1, 2}, 32: {0, 1, 2}, 33: {0, 1, 2}, 34: {0, 1, 2}, 35: {0, 1, 2}, 36: {0, 1, 2}, 37: {0, 1, 2}, 38: {0, 1, 2}, 39: {0, 1, 2}, 40: {0, 1, 2}, 41: {0, 1, 2}, 42: {0, 1, 2}, 43: {0, 1, 2}, 44: {0, 1, 2}, 45: {1}, 46: {0, 1, 2}, 47: {0, 1, 2}, 48: {0, 1, 2}, 49: {0, 1, 2}, 50: {0, 1, 2}, 51: {0, 1, 2}, 52: {0, 1, 2}, 53: {0, 1, 2}, 54: {0, 1, 2}, 55: {0, 1, 2}, 56: {0, 1, 2}, 57: {0, 1, 2}, 58: {0, 1, 2}, 59: {0, 1, 2}, 60: {0, 1, 2}, 61: {0, 1, 2}, 62: {0, 1, 2}, 63: {0, 1, 2}, 64: {0, 1, 2}, 65: {0, 1, 2}, 66: {0, 1, 2}, 67: {0, 1, 2}, 68: {0, 1, 2}, 69: {0, 1, 2}, 70: {0, 1, 2}, 71: {0, 1, 2}, 72: {0, 1, 2}, 73: {0, 1, 2}, 74: {0, 1, 2}, 75: {0, 1, 2}, 76: {0, 1, 2}, 77: {0, 1, 2}, 78: {0, 1, 2}, 79: {0, 1, 2}, 80: {0, 1, 2}, 81: {1, 2}, 82: {0, 1, 2}, 83: {0, 1, 2}, 84: {0, 1, 2}, 85: {0, 1, 2}, 86: {0, 1, 2}, 87: {2}, 88: {0, 1, 2}, 89: {0, 1, 2}, 90: {0, 1, 2}, 91: {0, 1, 2}, 92: {0, 1, 2}, 93: {0, 1, 2}, 94: {0, 1, 2}, 95: {0, 1, 2}, 96: {0, 1, 2}, 97: {0, 1, 2}, 98: {0, 1, 2}, 99: {0, 1, 2}}
+Iteration 6: Best valset aggregate score so far: 0.89
+Iteration 6: Best program as per aggregate score on valset: 2
+Iteration 6: Best score on valset: 0.89
+Iteration 6: Linear pareto front program index: 2
+Iteration 6: New program candidate index: 2
+Iteration 7: Selected program 2 score: 0.89
+Iteration 7: All subsample scores perfect. Skipping.
+Iteration 7: Reflective mutation did not propose a new candidate
+Iteration 8: Selected program 2 score: 0.89
+Iteration 8: Proposed new text for instruction: You will receive a short news passage. Your objective is to classify the news text into exactly one of four categories: Business, Sci/Tech, Sports, or World, according to these definitions:
+
+- Business: Select this label if the main subject of the news is finance, companies, economic policy, business strategies, market trends, corporate leadership, mergers and acquisitions, management, or commercial/industry developments.
+
+- Sci/Tech (Science/Technology): Apply this label if the central focus is on scientific research, innovation, technology products, digital devices, computers, electronics, software, hardware, scientific studies, discoveries, or any news about advancements or trends within science or technology sectors. Notably, if a text is about a business-oriented technology (such as new storage systems, digital gadgets, or technological advancements with business impact), select 'Sci/Tech' when the scientific or technological innovation is the primary topic, even if business relevance is present.
+
+- Sports: Use this label strictly for texts about athletic competitions, sports teams or clubs, match/game results, player transfers or trades, sports events, and news about athletes or the sporting world.
+
+- World: Choose this category for reports on international or global news, including diplomacy, foreign leaders, international politics, global treaties or events, war and conflict, foreign affairs, and issues or incidents with impact across multiple nations.
+
+Analyze the main topic and context of the passage carefully. Disregard opinions about the category based solely on economic or political implications if the text is fundamentally about technology or science—prioritize Sci/Tech when technology or science is the central theme even in business settings. Do not provide any explanation or extra text; respond with one word only, which must be exactly one of: Business, Sci/Tech, Sports, or World.
+Iteration 8: New subsample score 2.0 is not better than old score 2.0, skipping
+Iteration 9: Selected program 1 score: 0.88
+Iteration 9: Proposed new text for instruction: You will be given a short piece of news text. Your job is to classify this news text into one of the following four categories: Business, Sci/Tech (Science/Technology), Sports, or World. 
+
+Carefully read and analyze the main topic and content of the news in order to choose the most accurate category. Select only one label. Your response must only be the correct label, with no explanation or additional text.
+
+Use the following detailed category definitions and guidelines:
+
+- "Business": Select this category if the news primarily concerns finance, companies, mergers & acquisitions, markets, economics, commercial trends, or corporate strategy and performance.
+- "Sci/Tech": Choose this label if the main subject is about scientific research, technological innovation, product launches in technology, scientific discoveries, electronics, computers, gadgets, or coverage related to digital products and services (for example, stories about iPods, new gadgets, digital music/downloads, or internet services). Be aware that stories about technology companies that focus on product launches or digital services (rather than on their financial or market performance) should be categorized as "Sci/Tech."
+- "Sports": Apply this category when the news is centered on athletic events, competitions, athletes, teams, scores, or any sports-related activities or personalities.
+- "World": Select this label if the content is about international affairs, global politics, diplomatic events, wars, geopolitical conflicts, world leaders' actions, or events with wide international relevance.
+
+Important notes:
+- The categorization should rely on the primary focus of the text, not merely on keywords. 
+- For technology company news, distinguish stories about financial moves (Business) from stories about tech products/services or innovations (Sci/Tech).
+- Only return the exact label ("Business", "Sci/Tech", "Sports", or "World") as your output, with no further explanation.
+
+Example input:
+Yahoo! plays catch-up as it buys music download service LONDON - Yahoo! is joining the music-download arena with the $160m acquisition of Musicmatch, which sees it playing catch-up with established competitors such as Apple's iTunes, Coca-Cola's MyCokeMusic and MSN Music.
+
+Correct output:
+Sci/Tech
+Iteration 9: New subsample score 3.0 is better than old score 2.0. Continue to full eval and add to candidate pool.
+Iteration 9: Valset score for new program: 0.88 (coverage 100 / 100)
+Iteration 9: Val aggregate for new program: 0.88
+Iteration 9: Individual valset scores for new program: {0: 0.0, 1: 1.0, 2: 1.0, 3: 1.0, 4: 1.0, 5: 1.0, 6: 1.0, 7: 1.0, 8: 1.0, 9: 1.0, 10: 1.0, 11: 1.0, 12: 1.0, 13: 1.0, 14: 0.0, 15: 1.0, 16: 0.0, 17: 0.0, 18: 1.0, 19: 1.0, 20: 1.0, 21: 1.0, 22: 1.0, 23: 1.0, 24: 1.0, 25: 1.0, 26: 1.0, 27: 1.0, 28: 1.0, 29: 1.0, 30: 1.0, 31: 1.0, 32: 1.0, 33: 1.0, 34: 1.0, 35: 1.0, 36: 1.0, 37: 1.0, 38: 0.0, 39: 1.0, 40: 1.0, 41: 1.0, 42: 1.0, 43: 0.0, 44: 1.0, 45: 0.0, 46: 1.0, 47: 1.0, 48: 1.0, 49: 1.0, 50: 1.0, 51: 1.0, 52: 1.0, 53: 1.0, 54: 1.0, 55: 1.0, 56: 1.0, 57: 1.0, 58: 1.0, 59: 1.0, 60: 0.0, 61: 1.0, 62: 1.0, 63: 0.0, 64: 1.0, 65: 1.0, 66: 1.0, 67: 1.0, 68: 1.0, 69: 1.0, 70: 1.0, 71: 1.0, 72: 1.0, 73: 1.0, 74: 1.0, 75: 1.0, 76: 1.0, 77: 1.0, 78: 1.0, 79: 1.0, 80: 0.0, 81: 1.0, 82: 1.0, 83: 1.0, 84: 1.0, 85: 1.0, 86: 1.0, 87: 1.0, 88: 0.0, 89: 1.0, 90: 1.0, 91: 1.0, 92: 1.0, 93: 1.0, 94: 1.0, 95: 1.0, 96: 1.0, 97: 0.0, 98: 1.0, 99: 1.0}
+Iteration 9: New valset pareto front scores: {0: 0.0, 1: 1.0, 2: 1.0, 3: 1.0, 4: 1.0, 5: 1.0, 6: 1.0, 7: 1.0, 8: 1.0, 9: 1.0, 10: 1.0, 11: 1.0, 12: 1.0, 13: 1.0, 14: 0.0, 15: 1.0, 16: 0.0, 17: 0.0, 18: 1.0, 19: 1.0, 20: 1.0, 21: 1.0, 22: 1.0, 23: 1.0, 24: 1.0, 25: 1.0, 26: 1.0, 27: 1.0, 28: 1.0, 29: 1.0, 30: 1.0, 31: 1.0, 32: 1.0, 33: 1.0, 34: 1.0, 35: 1.0, 36: 1.0, 37: 1.0, 38: 1.0, 39: 1.0, 40: 1.0, 41: 1.0, 42: 1.0, 43: 0.0, 44: 1.0, 45: 1.0, 46: 1.0, 47: 1.0, 48: 1.0, 49: 1.0, 50: 1.0, 51: 1.0, 52: 1.0, 53: 1.0, 54: 1.0, 55: 1.0, 56: 1.0, 57: 1.0, 58: 1.0, 59: 1.0, 60: 0.0, 61: 1.0, 62: 1.0, 63: 0.0, 64: 1.0, 65: 1.0, 66: 1.0, 67: 1.0, 68: 1.0, 69: 1.0, 70: 1.0, 71: 1.0, 72: 1.0, 73: 1.0, 74: 1.0, 75: 1.0, 76: 1.0, 77: 1.0, 78: 1.0, 79: 1.0, 80: 0.0, 81: 1.0, 82: 1.0, 83: 1.0, 84: 1.0, 85: 1.0, 86: 1.0, 87: 1.0, 88: 0.0, 89: 1.0, 90: 1.0, 91: 1.0, 92: 1.0, 93: 1.0, 94: 1.0, 95: 1.0, 96: 1.0, 97: 0.0, 98: 1.0, 99: 1.0}
+Iteration 9: Valset pareto front aggregate score: 0.9
+Iteration 9: Updated valset pareto front programs: {0: {0, 1, 2, 3}, 1: {0, 1, 2, 3}, 2: {0, 1, 2, 3}, 3: {0, 1, 2, 3}, 4: {0, 1, 2, 3}, 5: {0, 1, 2, 3}, 6: {0, 1, 2, 3}, 7: {0, 1, 2, 3}, 8: {0, 1, 2, 3}, 9: {0, 1, 2, 3}, 10: {0, 1, 2, 3}, 11: {0, 1, 2, 3}, 12: {0, 1, 2, 3}, 13: {0, 1, 2, 3}, 14: {0, 1, 2, 3}, 15: {2, 3}, 16: {0, 1, 2, 3}, 17: {0, 1, 2, 3}, 18: {0, 1, 2, 3}, 19: {0, 1, 2, 3}, 20: {0, 1, 2, 3}, 21: {0, 1, 2, 3}, 22: {0, 1, 2, 3}, 23: {0, 1, 2, 3}, 24: {0, 1, 2, 3}, 25: {0, 1, 2, 3}, 26: {1, 2, 3}, 27: {0, 1, 2, 3}, 28: {0, 1, 2, 3}, 29: {1, 2, 3}, 30: {0, 1, 2, 3}, 31: {0, 1, 2, 3}, 32: {0, 1, 2, 3}, 33: {0, 1, 2, 3}, 34: {0, 1, 2, 3}, 35: {0, 1, 2, 3}, 36: {0, 1, 2, 3}, 37: {0, 1, 2, 3}, 38: {0, 1, 2}, 39: {0, 1, 2, 3}, 40: {0, 1, 2, 3}, 41: {0, 1, 2, 3}, 42: {0, 1, 2, 3}, 43: {0, 1, 2, 3}, 44: {0, 1, 2, 3}, 45: {1}, 46: {0, 1, 2, 3}, 47: {0, 1, 2, 3}, 48: {0, 1, 2, 3}, 49: {0, 1, 2, 3}, 50: {0, 1, 2, 3}, 51: {0, 1, 2, 3}, 52: {0, 1, 2, 3}, 53: {0, 1, 2, 3}, 54: {0, 1, 2, 3}, 55: {0, 1, 2, 3}, 56: {0, 1, 2, 3}, 57: {0, 1, 2, 3}, 58: {0, 1, 2, 3}, 59: {0, 1, 2, 3}, 60: {0, 1, 2, 3}, 61: {0, 1, 2, 3}, 62: {0, 1, 2, 3}, 63: {0, 1, 2, 3}, 64: {0, 1, 2, 3}, 65: {0, 1, 2, 3}, 66: {0, 1, 2, 3}, 67: {0, 1, 2, 3}, 68: {0, 1, 2, 3}, 69: {0, 1, 2, 3}, 70: {0, 1, 2, 3}, 71: {0, 1, 2, 3}, 72: {0, 1, 2, 3}, 73: {0, 1, 2, 3}, 74: {0, 1, 2, 3}, 75: {0, 1, 2, 3}, 76: {0, 1, 2, 3}, 77: {0, 1, 2, 3}, 78: {0, 1, 2, 3}, 79: {0, 1, 2, 3}, 80: {0, 1, 2, 3}, 81: {1, 2, 3}, 82: {0, 1, 2, 3}, 83: {0, 1, 2, 3}, 84: {0, 1, 2, 3}, 85: {0, 1, 2, 3}, 86: {0, 1, 2, 3}, 87: {2, 3}, 88: {0, 1, 2, 3}, 89: {0, 1, 2, 3}, 90: {0, 1, 2, 3}, 91: {0, 1, 2, 3}, 92: {0, 1, 2, 3}, 93: {0, 1, 2, 3}, 94: {0, 1, 2, 3}, 95: {0, 1, 2, 3}, 96: {0, 1, 2, 3}, 97: {0, 1, 2, 3}, 98: {0, 1, 2, 3}, 99: {0, 1, 2, 3}}
+Iteration 9: Best valset aggregate score so far: 0.89
+Iteration 9: Best program as per aggregate score on valset: 2
+Iteration 9: Best score on valset: 0.89
+Iteration 9: Linear pareto front program index: 2
+Iteration 9: New program candidate index: 3
+Iteration 10: Selected program 1 score: 0.88
+Iteration 10: Proposed new text for instruction: You will receive a news text excerpt as input. Your task is to assign it to one of four predefined categories—Business, Sci/Tech (Science/Technology), Sports, or World—based on the primary topic and content discussed in the text.
+
+Carefully analyze the entire excerpt to understand its main subject and core context. Apply the following strict criteria when determining the category:
+
+- "Business": Select this category if the text primarily addresses subjects related to finance, companies, industry, economics, stock markets, or trends in commerce and trade.
+- "Sci/Tech": Select this category if the article is mainly about scientific research, discoveries or inventions, technological advancements, new gadgets, digital trends, effects of technology on society, or developments in electronics and computers. Note: Even if the topic intersects with social phenomena (such as the impact of websites or tech products on daily life), if the technology or science angle is predominant, choose "Sci/Tech".
+- "Sports": Use this label if the main focus is athletic events, competitions, sports teams, players, results, or any coverage primarily centered on sports or athlete personalities.
+- "World": Choose this category if the text chiefly covers international affairs, global politics, wars, diplomacy, intergovernmental events, cross-border issues, or news centered on activities involving multiple countries or regions.
+
+When selecting a category, focus on the primary topic, not secondary mentions or tangentially related content. For texts where new technologies or scientific trends impact other domains (such as society or business), use "Sci/Tech" if that aspect is central to the report.
+
+Respond with only the correct label ("Business", "Sci/Tech", "Sports", or "World") and do not include reasons, commentary, or additional text.
+Iteration 10: New subsample score 3.0 is better than old score 2.0. Continue to full eval and add to candidate pool.
+Iteration 10: Valset score for new program: 0.88 (coverage 100 / 100)
+Iteration 10: Val aggregate for new program: 0.88
+Iteration 10: Individual valset scores for new program: {0: 0.0, 1: 1.0, 2: 1.0, 3: 1.0, 4: 1.0, 5: 1.0, 6: 1.0, 7: 1.0, 8: 1.0, 9: 1.0, 10: 1.0, 11: 1.0, 12: 1.0, 13: 1.0, 14: 0.0, 15: 0.0, 16: 0.0, 17: 0.0, 18: 1.0, 19: 1.0, 20: 1.0, 21: 1.0, 22: 1.0, 23: 1.0, 24: 1.0, 25: 1.0, 26: 1.0, 27: 1.0, 28: 1.0, 29: 1.0, 30: 1.0, 31: 1.0, 32: 1.0, 33: 1.0, 34: 1.0, 35: 1.0, 36: 1.0, 37: 1.0, 38: 1.0, 39: 1.0, 40: 1.0, 41: 1.0, 42: 1.0, 43: 0.0, 44: 1.0, 45: 0.0, 46: 1.0, 47: 1.0, 48: 1.0, 49: 1.0, 50: 1.0, 51: 1.0, 52: 1.0, 53: 1.0, 54: 1.0, 55: 1.0, 56: 1.0, 57: 1.0, 58: 1.0, 59: 1.0, 60: 0.0, 61: 1.0, 62: 1.0, 63: 0.0, 64: 1.0, 65: 1.0, 66: 1.0, 67: 1.0, 68: 1.0, 69: 1.0, 70: 1.0, 71: 1.0, 72: 1.0, 73: 1.0, 74: 1.0, 75: 1.0, 76: 1.0, 77: 1.0, 78: 1.0, 79: 1.0, 80: 0.0, 81: 1.0, 82: 1.0, 83: 1.0, 84: 1.0, 85: 1.0, 86: 1.0, 87: 1.0, 88: 0.0, 89: 1.0, 90: 1.0, 91: 1.0, 92: 1.0, 93: 1.0, 94: 1.0, 95: 1.0, 96: 1.0, 97: 0.0, 98: 1.0, 99: 1.0}
+Iteration 10: New valset pareto front scores: {0: 0.0, 1: 1.0, 2: 1.0, 3: 1.0, 4: 1.0, 5: 1.0, 6: 1.0, 7: 1.0, 8: 1.0, 9: 1.0, 10: 1.0, 11: 1.0, 12: 1.0, 13: 1.0, 14: 0.0, 15: 1.0, 16: 0.0, 17: 0.0, 18: 1.0, 19: 1.0, 20: 1.0, 21: 1.0, 22: 1.0, 23: 1.0, 24: 1.0, 25: 1.0, 26: 1.0, 27: 1.0, 28: 1.0, 29: 1.0, 30: 1.0, 31: 1.0, 32: 1.0, 33: 1.0, 34: 1.0, 35: 1.0, 36: 1.0, 37: 1.0, 38: 1.0, 39: 1.0, 40: 1.0, 41: 1.0, 42: 1.0, 43: 0.0, 44: 1.0, 45: 1.0, 46: 1.0, 47: 1.0, 48: 1.0, 49: 1.0, 50: 1.0, 51: 1.0, 52: 1.0, 53: 1.0, 54: 1.0, 55: 1.0, 56: 1.0, 57: 1.0, 58: 1.0, 59: 1.0, 60: 0.0, 61: 1.0, 62: 1.0, 63: 0.0, 64: 1.0, 65: 1.0, 66: 1.0, 67: 1.0, 68: 1.0, 69: 1.0, 70: 1.0, 71: 1.0, 72: 1.0, 73: 1.0, 74: 1.0, 75: 1.0, 76: 1.0, 77: 1.0, 78: 1.0, 79: 1.0, 80: 0.0, 81: 1.0, 82: 1.0, 83: 1.0, 84: 1.0, 85: 1.0, 86: 1.0, 87: 1.0, 88: 0.0, 89: 1.0, 90: 1.0, 91: 1.0, 92: 1.0, 93: 1.0, 94: 1.0, 95: 1.0, 96: 1.0, 97: 0.0, 98: 1.0, 99: 1.0}
+Iteration 10: Valset pareto front aggregate score: 0.9
+Iteration 10: Updated valset pareto front programs: {0: {0, 1, 2, 3, 4}, 1: {0, 1, 2, 3, 4}, 2: {0, 1, 2, 3, 4}, 3: {0, 1, 2, 3, 4}, 4: {0, 1, 2, 3, 4}, 5: {0, 1, 2, 3, 4}, 6: {0, 1, 2, 3, 4}, 7: {0, 1, 2, 3, 4}, 8: {0, 1, 2, 3, 4}, 9: {0, 1, 2, 3, 4}, 10: {0, 1, 2, 3, 4}, 11: {0, 1, 2, 3, 4}, 12: {0, 1, 2, 3, 4}, 13: {0, 1, 2, 3, 4}, 14: {0, 1, 2, 3, 4}, 15: {2, 3}, 16: {0, 1, 2, 3, 4}, 17: {0, 1, 2, 3, 4}, 18: {0, 1, 2, 3, 4}, 19: {0, 1, 2, 3, 4}, 20: {0, 1, 2, 3, 4}, 21: {0, 1, 2, 3, 4}, 22: {0, 1, 2, 3, 4}, 23: {0, 1, 2, 3, 4}, 24: {0, 1, 2, 3, 4}, 25: {0, 1, 2, 3, 4}, 26: {1, 2, 3, 4}, 27: {0, 1, 2, 3, 4}, 28: {0, 1, 2, 3, 4}, 29: {1, 2, 3, 4}, 30: {0, 1, 2, 3, 4}, 31: {0, 1, 2, 3, 4}, 32: {0, 1, 2, 3, 4}, 33: {0, 1, 2, 3, 4}, 34: {0, 1, 2, 3, 4}, 35: {0, 1, 2, 3, 4}, 36: {0, 1, 2, 3, 4}, 37: {0, 1, 2, 3, 4}, 38: {0, 1, 2, 4}, 39: {0, 1, 2, 3, 4}, 40: {0, 1, 2, 3, 4}, 41: {0, 1, 2, 3, 4}, 42: {0, 1, 2, 3, 4}, 43: {0, 1, 2, 3, 4}, 44: {0, 1, 2, 3, 4}, 45: {1}, 46: {0, 1, 2, 3, 4}, 47: {0, 1, 2, 3, 4}, 48: {0, 1, 2, 3, 4}, 49: {0, 1, 2, 3, 4}, 50: {0, 1, 2, 3, 4}, 51: {0, 1, 2, 3, 4}, 52: {0, 1, 2, 3, 4}, 53: {0, 1, 2, 3, 4}, 54: {0, 1, 2, 3, 4}, 55: {0, 1, 2, 3, 4}, 56: {0, 1, 2, 3, 4}, 57: {0, 1, 2, 3, 4}, 58: {0, 1, 2, 3, 4}, 59: {0, 1, 2, 3, 4}, 60: {0, 1, 2, 3, 4}, 61: {0, 1, 2, 3, 4}, 62: {0, 1, 2, 3, 4}, 63: {0, 1, 2, 3, 4}, 64: {0, 1, 2, 3, 4}, 65: {0, 1, 2, 3, 4}, 66: {0, 1, 2, 3, 4}, 67: {0, 1, 2, 3, 4}, 68: {0, 1, 2, 3, 4}, 69: {0, 1, 2, 3, 4}, 70: {0, 1, 2, 3, 4}, 71: {0, 1, 2, 3, 4}, 72: {0, 1, 2, 3, 4}, 73: {0, 1, 2, 3, 4}, 74: {0, 1, 2, 3, 4}, 75: {0, 1, 2, 3, 4}, 76: {0, 1, 2, 3, 4}, 77: {0, 1, 2, 3, 4}, 78: {0, 1, 2, 3, 4}, 79: {0, 1, 2, 3, 4}, 80: {0, 1, 2, 3, 4}, 81: {1, 2, 3, 4}, 82: {0, 1, 2, 3, 4}, 83: {0, 1, 2, 3, 4}, 84: {0, 1, 2, 3, 4}, 85: {0, 1, 2, 3, 4}, 86: {0, 1, 2, 3, 4}, 87: {2, 3, 4}, 88: {0, 1, 2, 3, 4}, 89: {0, 1, 2, 3, 4}, 90: {0, 1, 2, 3, 4}, 91: {0, 1, 2, 3, 4}, 92: {0, 1, 2, 3, 4}, 93: {0, 1, 2, 3, 4}, 94: {0, 1, 2, 3, 4}, 95: {0, 1, 2, 3, 4}, 96: {0, 1, 2, 3, 4}, 97: {0, 1, 2, 3, 4}, 98: {0, 1, 2, 3, 4}, 99: {0, 1, 2, 3, 4}}
+Iteration 10: Best valset aggregate score so far: 0.89
+Iteration 10: Best program as per aggregate score on valset: 2
+Iteration 10: Best score on valset: 0.89
+Iteration 10: Linear pareto front program index: 2
+Iteration 10: New program candidate index: 4
+Iteration 11: Selected program 2 score: 0.89
+Iteration 11: All subsample scores perfect. Skipping.
+Iteration 11: Reflective mutation did not propose a new candidate
+Iteration 12: Selected program 2 score: 0.89
+Iteration 12: All subsample scores perfect. Skipping.
+Iteration 12: Reflective mutation did not propose a new candidate
+Iteration 13: Selected program 2 score: 0.89
+Iteration 13: Proposed new text for instruction: You will be shown a short passage of news text. Your task is to classify the text into exactly one of the following four categories: Business, Sci/Tech, Sports, or World. Your classification must be based on a careful analysis of the main topic and subject matter of the text. Follow these category definitions and guidelines:
+
+- Business: Apply this label if the passage mainly concerns finance, company performance, the stock market, economics, business management, mergers/acquisitions, or commercial and industry developments.
+
+- Sci/Tech (Science/Technology): Use this label if the news is primarily about scientific research, technology products or innovations, new gadgets, electronics, computers, or developments in science and technology. Prioritize Sci/Tech if the text focuses on the advancement, creation, or introduction of technology or scientific discoveries, even if those have business implications (for example, news about new digital storage systems or software should be labeled Sci/Tech if the technological or scientific element is primary).
+
+- Sports: Select this label for texts discussing athletic competitions, sporting events, match results, team or player updates, sports figures, transfers, or anything related to sports activities, whether professional or amateur.
+
+- World: Choose this category for news primarily about international affairs, diplomacy, world politics, war/conflict, treaties, significant global events, or incidents impacting multiple countries. This includes coverage of international leaders, government actions abroad, multinational issues, and broad corruption or affairs affecting multiple nations or the international community. Importantly, news about large-scale corruption—especially when spanning governments, international organizations, or multiple states—should be classified as 'World', not 'Business', even if business entities are involved.
+
+When assigning a category, focus on the overarching context and the central subject of the passage, not just the specific actors mentioned. For example, international corruption investigations, global conflicts, or diplomatic matters should be labeled as ‘World’, whereas local corporate financial updates should be labeled as 'Business'. Complex cases with technology having business applications should be labeled 'Sci/Tech' if the innovation or scientific aspect is foregrounded.
+
+Return only the single category label: Business, Sci/Tech, Sports, or World. Do not include explanations or any extra commentary—output the label alone.
+Iteration 13: New subsample score 3.0 is better than old score 2.0. Continue to full eval and add to candidate pool.
+Iteration 13: Valset score for new program: 0.88 (coverage 100 / 100)
+Iteration 13: Val aggregate for new program: 0.88
+Iteration 13: Individual valset scores for new program: {0: 0.0, 1: 1.0, 2: 1.0, 3: 1.0, 4: 1.0, 5: 1.0, 6: 1.0, 7: 1.0, 8: 1.0, 9: 1.0, 10: 1.0, 11: 1.0, 12: 1.0, 13: 1.0, 14: 0.0, 15: 1.0, 16: 0.0, 17: 0.0, 18: 1.0, 19: 1.0, 20: 1.0, 21: 1.0, 22: 1.0, 23: 1.0, 24: 1.0, 25: 1.0, 26: 1.0, 27: 1.0, 28: 1.0, 29: 1.0, 30: 1.0, 31: 1.0, 32: 1.0, 33: 1.0, 34: 1.0, 35: 1.0, 36: 1.0, 37: 1.0, 38: 1.0, 39: 1.0, 40: 1.0, 41: 1.0, 42: 1.0, 43: 0.0, 44: 1.0, 45: 0.0, 46: 1.0, 47: 1.0, 48: 1.0, 49: 1.0, 50: 1.0, 51: 1.0, 52: 1.0, 53: 1.0, 54: 1.0, 55: 1.0, 56: 1.0, 57: 1.0, 58: 1.0, 59: 1.0, 60: 0.0, 61: 1.0, 62: 1.0, 63: 0.0, 64: 1.0, 65: 1.0, 66: 1.0, 67: 1.0, 68: 1.0, 69: 1.0, 70: 1.0, 71: 1.0, 72: 1.0, 73: 1.0, 74: 1.0, 75: 1.0, 76: 1.0, 77: 1.0, 78: 1.0, 79: 1.0, 80: 0.0, 81: 1.0, 82: 1.0, 83: 1.0, 84: 1.0, 85: 1.0, 86: 1.0, 87: 1.0, 88: 0.0, 89: 1.0, 90: 1.0, 91: 1.0, 92: 1.0, 93: 1.0, 94: 1.0, 95: 1.0, 96: 1.0, 97: 0.0, 98: 1.0, 99: 0.0}
+Iteration 13: New valset pareto front scores: {0: 0.0, 1: 1.0, 2: 1.0, 3: 1.0, 4: 1.0, 5: 1.0, 6: 1.0, 7: 1.0, 8: 1.0, 9: 1.0, 10: 1.0, 11: 1.0, 12: 1.0, 13: 1.0, 14: 0.0, 15: 1.0, 16: 0.0, 17: 0.0, 18: 1.0, 19: 1.0, 20: 1.0, 21: 1.0, 22: 1.0, 23: 1.0, 24: 1.0, 25: 1.0, 26: 1.0, 27: 1.0, 28: 1.0, 29: 1.0, 30: 1.0, 31: 1.0, 32: 1.0, 33: 1.0, 34: 1.0, 35: 1.0, 36: 1.0, 37: 1.0, 38: 1.0, 39: 1.0, 40: 1.0, 41: 1.0, 42: 1.0, 43: 0.0, 44: 1.0, 45: 1.0, 46: 1.0, 47: 1.0, 48: 1.0, 49: 1.0, 50: 1.0, 51: 1.0, 52: 1.0, 53: 1.0, 54: 1.0, 55: 1.0, 56: 1.0, 57: 1.0, 58: 1.0, 59: 1.0, 60: 0.0, 61: 1.0, 62: 1.0, 63: 0.0, 64: 1.0, 65: 1.0, 66: 1.0, 67: 1.0, 68: 1.0, 69: 1.0, 70: 1.0, 71: 1.0, 72: 1.0, 73: 1.0, 74: 1.0, 75: 1.0, 76: 1.0, 77: 1.0, 78: 1.0, 79: 1.0, 80: 0.0, 81: 1.0, 82: 1.0, 83: 1.0, 84: 1.0, 85: 1.0, 86: 1.0, 87: 1.0, 88: 0.0, 89: 1.0, 90: 1.0, 91: 1.0, 92: 1.0, 93: 1.0, 94: 1.0, 95: 1.0, 96: 1.0, 97: 0.0, 98: 1.0, 99: 1.0}
+Iteration 13: Valset pareto front aggregate score: 0.9
+Iteration 13: Updated valset pareto front programs: {0: {0, 1, 2, 3, 4, 5}, 1: {0, 1, 2, 3, 4, 5}, 2: {0, 1, 2, 3, 4, 5}, 3: {0, 1, 2, 3, 4, 5}, 4: {0, 1, 2, 3, 4, 5}, 5: {0, 1, 2, 3, 4, 5}, 6: {0, 1, 2, 3, 4, 5}, 7: {0, 1, 2, 3, 4, 5}, 8: {0, 1, 2, 3, 4, 5}, 9: {0, 1, 2, 3, 4, 5}, 10: {0, 1, 2, 3, 4, 5}, 11: {0, 1, 2, 3, 4, 5}, 12: {0, 1, 2, 3, 4, 5}, 13: {0, 1, 2, 3, 4, 5}, 14: {0, 1, 2, 3, 4, 5}, 15: {2, 3, 5}, 16: {0, 1, 2, 3, 4, 5}, 17: {0, 1, 2, 3, 4, 5}, 18: {0, 1, 2, 3, 4, 5}, 19: {0, 1, 2, 3, 4, 5}, 20: {0, 1, 2, 3, 4, 5}, 21: {0, 1, 2, 3, 4, 5}, 22: {0, 1, 2, 3, 4, 5}, 23: {0, 1, 2, 3, 4, 5}, 24: {0, 1, 2, 3, 4, 5}, 25: {0, 1, 2, 3, 4, 5}, 26: {1, 2, 3, 4, 5}, 27: {0, 1, 2, 3, 4, 5}, 28: {0, 1, 2, 3, 4, 5}, 29: {1, 2, 3, 4, 5}, 30: {0, 1, 2, 3, 4, 5}, 31: {0, 1, 2, 3, 4, 5}, 32: {0, 1, 2, 3, 4, 5}, 33: {0, 1, 2, 3, 4, 5}, 34: {0, 1, 2, 3, 4, 5}, 35: {0, 1, 2, 3, 4, 5}, 36: {0, 1, 2, 3, 4, 5}, 37: {0, 1, 2, 3, 4, 5}, 38: {0, 1, 2, 4, 5}, 39: {0, 1, 2, 3, 4, 5}, 40: {0, 1, 2, 3, 4, 5}, 41: {0, 1, 2, 3, 4, 5}, 42: {0, 1, 2, 3, 4, 5}, 43: {0, 1, 2, 3, 4, 5}, 44: {0, 1, 2, 3, 4, 5}, 45: {1}, 46: {0, 1, 2, 3, 4, 5}, 47: {0, 1, 2, 3, 4, 5}, 48: {0, 1, 2, 3, 4, 5}, 49: {0, 1, 2, 3, 4, 5}, 50: {0, 1, 2, 3, 4, 5}, 51: {0, 1, 2, 3, 4, 5}, 52: {0, 1, 2, 3, 4, 5}, 53: {0, 1, 2, 3, 4, 5}, 54: {0, 1, 2, 3, 4, 5}, 55: {0, 1, 2, 3, 4, 5}, 56: {0, 1, 2, 3, 4, 5}, 57: {0, 1, 2, 3, 4, 5}, 58: {0, 1, 2, 3, 4, 5}, 59: {0, 1, 2, 3, 4, 5}, 60: {0, 1, 2, 3, 4, 5}, 61: {0, 1, 2, 3, 4, 5}, 62: {0, 1, 2, 3, 4, 5}, 63: {0, 1, 2, 3, 4, 5}, 64: {0, 1, 2, 3, 4, 5}, 65: {0, 1, 2, 3, 4, 5}, 66: {0, 1, 2, 3, 4, 5}, 67: {0, 1, 2, 3, 4, 5}, 68: {0, 1, 2, 3, 4, 5}, 69: {0, 1, 2, 3, 4, 5}, 70: {0, 1, 2, 3, 4, 5}, 71: {0, 1, 2, 3, 4, 5}, 72: {0, 1, 2, 3, 4, 5}, 73: {0, 1, 2, 3, 4, 5}, 74: {0, 1, 2, 3, 4, 5}, 75: {0, 1, 2, 3, 4, 5}, 76: {0, 1, 2, 3, 4, 5}, 77: {0, 1, 2, 3, 4, 5}, 78: {0, 1, 2, 3, 4, 5}, 79: {0, 1, 2, 3, 4, 5}, 80: {0, 1, 2, 3, 4, 5}, 81: {1, 2, 3, 4, 5}, 82: {0, 1, 2, 3, 4, 5}, 83: {0, 1, 2, 3, 4, 5}, 84: {0, 1, 2, 3, 4, 5}, 85: {0, 1, 2, 3, 4, 5}, 86: {0, 1, 2, 3, 4, 5}, 87: {2, 3, 4, 5}, 88: {0, 1, 2, 3, 4, 5}, 89: {0, 1, 2, 3, 4, 5}, 90: {0, 1, 2, 3, 4, 5}, 91: {0, 1, 2, 3, 4, 5}, 92: {0, 1, 2, 3, 4, 5}, 93: {0, 1, 2, 3, 4, 5}, 94: {0, 1, 2, 3, 4, 5}, 95: {0, 1, 2, 3, 4, 5}, 96: {0, 1, 2, 3, 4, 5}, 97: {0, 1, 2, 3, 4, 5}, 98: {0, 1, 2, 3, 4, 5}, 99: {0, 1, 2, 3, 4}}
+Iteration 13: Best valset aggregate score so far: 0.89
+Iteration 13: Best program as per aggregate score on valset: 2
+Iteration 13: Best score on valset: 0.89
+Iteration 13: Linear pareto front program index: 2
+Iteration 13: New program candidate index: 5
+Iteration 14: Selected program 2 score: 0.89
+Iteration 14: All subsample scores perfect. Skipping.
+Iteration 14: Reflective mutation did not propose a new candidate
+Iteration 15: Selected program 1 score: 0.88
+Iteration 15: All subsample scores perfect. Skipping.
+Iteration 15: Reflective mutation did not propose a new candidate
+Iteration 16: Selected program 1 score: 0.88
+Iteration 16: All subsample scores perfect. Skipping.
+Iteration 16: Reflective mutation did not propose a new candidate
+Iteration 17: Selected program 1 score: 0.88
+Iteration 17: All subsample scores perfect. Skipping.
+Iteration 17: Reflective mutation did not propose a new candidate
+Iteration 18: Selected program 1 score: 0.88
+Iteration 18: Proposed new text for instruction: You will be given a piece of news text as input. Your task is to classify this news text into one of the following four categories: Business, Sci/Tech (Science/Technology), Sports, or World.
+
+Carefully read the content and main topic of the provided news text. Determine and provide only the most appropriate category label from the options below:
+
+- "Business": Select this label only if the primary focus of the text is on finance, corporate earnings, companies, markets, economic issues, or general commercial trends.
+- "Sci/Tech" (Science/Technology): Select this label if the main subject of the text is about scientific discoveries, digital products, technological innovation, computers or electronics (such as gadgets, product announcements, or updates from tech companies, including companies like Apple if the news is technology/product related), or developments in research or science.
+- "Sports": Select this label if the text is mainly about athletic events, competitions, teams, sports performances, or well-known sports personalities.
+- "World": Select this label if the text’s main topic is international news, global politics, wars, diplomatic events, or issues/events with significant global or multinational impact.
+
+Important: 
+- Pay particular attention when the news involves technology companies like Apple or Microsoft. If the article is about a company’s new technology product, platform, or technical innovation (such as the launch of a new device or operating system), or covers digital trends, this should be categorized as "Sci/Tech" rather than "Business", even if there is mention of financial results, unless the primary emphasis is purely on financial performance with no significant reference to scientific or technological content.
+- If an article presents both financial and technical information (such as a tech company's earnings report that references new product lines, innovation, or technology performance), give priority to the "Sci/Tech" label if the technology aspect is emphasized.
+- Provide only the correct single label as your response, and do not provide explanations.
+
+Input format: 
+You will receive a text block labeled with "text", containing the news article.
+
+Output format:
+Respond with exactly one of the following four labels: Business, Sci/Tech, Sports, or World.
+Iteration 18: New subsample score 2.0 is not better than old score 2.0, skipping
+Iteration 19: Selected program 1 score: 0.88
+Iteration 19: All subsample scores perfect. Skipping.
+Iteration 19: Reflective mutation did not propose a new candidate
+Iteration 20: Selected program 1 score: 0.88
+Iteration 20: All subsample scores perfect. Skipping.
+Iteration 20: Reflective mutation did not propose a new candidate
+Iteration 21: Selected program 1 score: 0.88
+Iteration 21: All subsample scores perfect. Skipping.
+Iteration 21: Reflective mutation did not propose a new candidate
+Iteration 22: Selected program 2 score: 0.89
+Iteration 22: All subsample scores perfect. Skipping.
+Iteration 22: Reflective mutation did not propose a new candidate
+Iteration 23: Selected program 2 score: 0.89
+Iteration 23: All subsample scores perfect. Skipping.
+Iteration 23: Reflective mutation did not propose a new candidate
+Iteration 24: Selected program 1 score: 0.88
+Iteration 24: All subsample scores perfect. Skipping.
+Iteration 24: Reflective mutation did not propose a new candidate
+Iteration 25: Selected program 1 score: 0.88
+Iteration 25: All subsample scores perfect. Skipping.
+Iteration 25: Reflective mutation did not propose a new candidate
+Iteration 26: Selected program 2 score: 0.89
+Iteration 26: Proposed new text for instruction: You will be given a brief news excerpt and must classify it into exactly one of these four categories: Business, Sci/Tech, Sports, or World. Carefully determine the primary subject matter by analyzing both the explicit content and the underlying focus of the article, following these refined guidelines:
+
+- Business: Assign this label if the news centers on corporate activities, finance, stock markets, industry trends, mergers and acquisitions, economic changes, or business management topics. Choose 'Business' only when the discussion is specifically and primarily about the financial or economic implications, commercial performance, or corporate strategies.
+
+- Sci/Tech (Science/Technology): Use this label whenever the article's main emphasis is on technological innovations, science research, new products or devices, advancements in electronics or computing, or general updates about the science/tech sector. This includes news about new gadgets, technology product launches, digital storage solutions, software releases, or scientific discoveries. Importantly, if the news is about a technology company acquiring or developing new tech (such as network design, software, or digital storage systems) and the central theme is about the product or technological innovation—not just the business transaction—prioritize 'Sci/Tech', even if there are business implications mentioned.
+
+- Sports: Select this category if the text covers athletic competitions, match outcomes, sports teams, player or coach moves, or issues directly involving sporting activities and athletes.
+
+- World: Apply this label to news about international affairs—such as diplomacy, wars or conflicts, treaties, multinational issues, foreign government actions, or significant incidents with global impact.
+
+Special Clarification: If you encounter business-oriented news involving technology companies (such as acquisitions or product launches), evaluate whether the key topic is the technology/innovation itself or the business/financial aspect. If the text is fundamentally about what the technology does, how it advances the field, or its development process, label it as 'Sci/Tech', even if business details (like acquisitions or strategies) are present.
+
+Output strictly one label—Business, Sci/Tech, Sports, or World—and do not include explanations or extraneous text. Focus on the true central topic of the news excerpt, following these rules for categorization.
+Iteration 26: New subsample score 3.0 is better than old score 2.0. Continue to full eval and add to candidate pool.
+Iteration 26: Valset score for new program: 0.88 (coverage 100 / 100)
+Iteration 26: Val aggregate for new program: 0.88
+Iteration 26: Individual valset scores for new program: {0: 0.0, 1: 1.0, 2: 1.0, 3: 1.0, 4: 1.0, 5: 1.0, 6: 1.0, 7: 1.0, 8: 1.0, 9: 1.0, 10: 1.0, 11: 1.0, 12: 1.0, 13: 1.0, 14: 0.0, 15: 1.0, 16: 0.0, 17: 0.0, 18: 1.0, 19: 1.0, 20: 1.0, 21: 1.0, 22: 0.0, 23: 1.0, 24: 1.0, 25: 1.0, 26: 1.0, 27: 1.0, 28: 1.0, 29: 1.0, 30: 1.0, 31: 1.0, 32: 1.0, 33: 1.0, 34: 1.0, 35: 1.0, 36: 1.0, 37: 1.0, 38: 0.0, 39: 1.0, 40: 1.0, 41: 1.0, 42: 1.0, 43: 0.0, 44: 1.0, 45: 1.0, 46: 1.0, 47: 1.0, 48: 1.0, 49: 1.0, 50: 1.0, 51: 1.0, 52: 1.0, 53: 1.0, 54: 1.0, 55: 1.0, 56: 1.0, 57: 1.0, 58: 1.0, 59: 1.0, 60: 0.0, 61: 1.0, 62: 1.0, 63: 0.0, 64: 1.0, 65: 1.0, 66: 1.0, 67: 1.0, 68: 1.0, 69: 1.0, 70: 1.0, 71: 1.0, 72: 1.0, 73: 1.0, 74: 1.0, 75: 1.0, 76: 1.0, 77: 1.0, 78: 1.0, 79: 1.0, 80: 0.0, 81: 1.0, 82: 1.0, 83: 1.0, 84: 1.0, 85: 1.0, 86: 1.0, 87: 1.0, 88: 0.0, 89: 1.0, 90: 1.0, 91: 1.0, 92: 1.0, 93: 1.0, 94: 1.0, 95: 1.0, 96: 1.0, 97: 0.0, 98: 1.0, 99: 1.0}
+Iteration 26: New valset pareto front scores: {0: 0.0, 1: 1.0, 2: 1.0, 3: 1.0, 4: 1.0, 5: 1.0, 6: 1.0, 7: 1.0, 8: 1.0, 9: 1.0, 10: 1.0, 11: 1.0, 12: 1.0, 13: 1.0, 14: 0.0, 15: 1.0, 16: 0.0, 17: 0.0, 18: 1.0, 19: 1.0, 20: 1.0, 21: 1.0, 22: 1.0, 23: 1.0, 24: 1.0, 25: 1.0, 26: 1.0, 27: 1.0, 28: 1.0, 29: 1.0, 30: 1.0, 31: 1.0, 32: 1.0, 33: 1.0, 34: 1.0, 35: 1.0, 36: 1.0, 37: 1.0, 38: 1.0, 39: 1.0, 40: 1.0, 41: 1.0, 42: 1.0, 43: 0.0, 44: 1.0, 45: 1.0, 46: 1.0, 47: 1.0, 48: 1.0, 49: 1.0, 50: 1.0, 51: 1.0, 52: 1.0, 53: 1.0, 54: 1.0, 55: 1.0, 56: 1.0, 57: 1.0, 58: 1.0, 59: 1.0, 60: 0.0, 61: 1.0, 62: 1.0, 63: 0.0, 64: 1.0, 65: 1.0, 66: 1.0, 67: 1.0, 68: 1.0, 69: 1.0, 70: 1.0, 71: 1.0, 72: 1.0, 73: 1.0, 74: 1.0, 75: 1.0, 76: 1.0, 77: 1.0, 78: 1.0, 79: 1.0, 80: 0.0, 81: 1.0, 82: 1.0, 83: 1.0, 84: 1.0, 85: 1.0, 86: 1.0, 87: 1.0, 88: 0.0, 89: 1.0, 90: 1.0, 91: 1.0, 92: 1.0, 93: 1.0, 94: 1.0, 95: 1.0, 96: 1.0, 97: 0.0, 98: 1.0, 99: 1.0}
+Iteration 26: Valset pareto front aggregate score: 0.9
+Iteration 26: Updated valset pareto front programs: {0: {0, 1, 2, 3, 4, 5, 6}, 1: {0, 1, 2, 3, 4, 5, 6}, 2: {0, 1, 2, 3, 4, 5, 6}, 3: {0, 1, 2, 3, 4, 5, 6}, 4: {0, 1, 2, 3, 4, 5, 6}, 5: {0, 1, 2, 3, 4, 5, 6}, 6: {0, 1, 2, 3, 4, 5, 6}, 7: {0, 1, 2, 3, 4, 5, 6}, 8: {0, 1, 2, 3, 4, 5, 6}, 9: {0, 1, 2, 3, 4, 5, 6}, 10: {0, 1, 2, 3, 4, 5, 6}, 11: {0, 1, 2, 3, 4, 5, 6}, 12: {0, 1, 2, 3, 4, 5, 6}, 13: {0, 1, 2, 3, 4, 5, 6}, 14: {0, 1, 2, 3, 4, 5, 6}, 15: {2, 3, 5, 6}, 16: {0, 1, 2, 3, 4, 5, 6}, 17: {0, 1, 2, 3, 4, 5, 6}, 18: {0, 1, 2, 3, 4, 5, 6}, 19: {0, 1, 2, 3, 4, 5, 6}, 20: {0, 1, 2, 3, 4, 5, 6}, 21: {0, 1, 2, 3, 4, 5, 6}, 22: {0, 1, 2, 3, 4, 5}, 23: {0, 1, 2, 3, 4, 5, 6}, 24: {0, 1, 2, 3, 4, 5, 6}, 25: {0, 1, 2, 3, 4, 5, 6}, 26: {1, 2, 3, 4, 5, 6}, 27: {0, 1, 2, 3, 4, 5, 6}, 28: {0, 1, 2, 3, 4, 5, 6}, 29: {1, 2, 3, 4, 5, 6}, 30: {0, 1, 2, 3, 4, 5, 6}, 31: {0, 1, 2, 3, 4, 5, 6}, 32: {0, 1, 2, 3, 4, 5, 6}, 33: {0, 1, 2, 3, 4, 5, 6}, 34: {0, 1, 2, 3, 4, 5, 6}, 35: {0, 1, 2, 3, 4, 5, 6}, 36: {0, 1, 2, 3, 4, 5, 6}, 37: {0, 1, 2, 3, 4, 5, 6}, 38: {0, 1, 2, 4, 5}, 39: {0, 1, 2, 3, 4, 5, 6}, 40: {0, 1, 2, 3, 4, 5, 6}, 41: {0, 1, 2, 3, 4, 5, 6}, 42: {0, 1, 2, 3, 4, 5, 6}, 43: {0, 1, 2, 3, 4, 5, 6}, 44: {0, 1, 2, 3, 4, 5, 6}, 45: {1, 6}, 46: {0, 1, 2, 3, 4, 5, 6}, 47: {0, 1, 2, 3, 4, 5, 6}, 48: {0, 1, 2, 3, 4, 5, 6}, 49: {0, 1, 2, 3, 4, 5, 6}, 50: {0, 1, 2, 3, 4, 5, 6}, 51: {0, 1, 2, 3, 4, 5, 6}, 52: {0, 1, 2, 3, 4, 5, 6}, 53: {0, 1, 2, 3, 4, 5, 6}, 54: {0, 1, 2, 3, 4, 5, 6}, 55: {0, 1, 2, 3, 4, 5, 6}, 56: {0, 1, 2, 3, 4, 5, 6}, 57: {0, 1, 2, 3, 4, 5, 6}, 58: {0, 1, 2, 3, 4, 5, 6}, 59: {0, 1, 2, 3, 4, 5, 6}, 60: {0, 1, 2, 3, 4, 5, 6}, 61: {0, 1, 2, 3, 4, 5, 6}, 62: {0, 1, 2, 3, 4, 5, 6}, 63: {0, 1, 2, 3, 4, 5, 6}, 64: {0, 1, 2, 3, 4, 5, 6}, 65: {0, 1, 2, 3, 4, 5, 6}, 66: {0, 1, 2, 3, 4, 5, 6}, 67: {0, 1, 2, 3, 4, 5, 6}, 68: {0, 1, 2, 3, 4, 5, 6}, 69: {0, 1, 2, 3, 4, 5, 6}, 70: {0, 1, 2, 3, 4, 5, 6}, 71: {0, 1, 2, 3, 4, 5, 6}, 72: {0, 1, 2, 3, 4, 5, 6}, 73: {0, 1, 2, 3, 4, 5, 6}, 74: {0, 1, 2, 3, 4, 5, 6}, 75: {0, 1, 2, 3, 4, 5, 6}, 76: {0, 1, 2, 3, 4, 5, 6}, 77: {0, 1, 2, 3, 4, 5, 6}, 78: {0, 1, 2, 3, 4, 5, 6}, 79: {0, 1, 2, 3, 4, 5, 6}, 80: {0, 1, 2, 3, 4, 5, 6}, 81: {1, 2, 3, 4, 5, 6}, 82: {0, 1, 2, 3, 4, 5, 6}, 83: {0, 1, 2, 3, 4, 5, 6}, 84: {0, 1, 2, 3, 4, 5, 6}, 85: {0, 1, 2, 3, 4, 5, 6}, 86: {0, 1, 2, 3, 4, 5, 6}, 87: {2, 3, 4, 5, 6}, 88: {0, 1, 2, 3, 4, 5, 6}, 89: {0, 1, 2, 3, 4, 5, 6}, 90: {0, 1, 2, 3, 4, 5, 6}, 91: {0, 1, 2, 3, 4, 5, 6}, 92: {0, 1, 2, 3, 4, 5, 6}, 93: {0, 1, 2, 3, 4, 5, 6}, 94: {0, 1, 2, 3, 4, 5, 6}, 95: {0, 1, 2, 3, 4, 5, 6}, 96: {0, 1, 2, 3, 4, 5, 6}, 97: {0, 1, 2, 3, 4, 5, 6}, 98: {0, 1, 2, 3, 4, 5, 6}, 99: {0, 1, 2, 3, 4, 6}}
+Iteration 26: Best valset aggregate score so far: 0.89
+Iteration 26: Best program as per aggregate score on valset: 2
+Iteration 26: Best score on valset: 0.89
+Iteration 26: Linear pareto front program index: 2
+Iteration 26: New program candidate index: 6
+[done] a_ag_news_f1_s40.json: 0.853 ($0.22)
+Iteration 0: Base program full valset score: 0.68 over 100 / 100 examples
+Iteration 1: Selected program 0 score: 0.68
+Iteration 1: Proposed new text for instruction: You are given a piece of text. Your task is to classify this text into one of the following six emotion categories: anger, fear, joy, love, sadness, or surprise.
+
+Carefully read the input text and consider the emotional context, nuances, and implied feelings expressed within it. Assign one, and only one, of the specified emotion labels that best captures the overall sentiment conveyed by the text.
+
+Your response should be the name of the selected emotion category only, with no additional explanation or text.
+
+For example, given the input "i don t feel so exhausted all the time", the appropriate category is 'sadness', not 'joy', as the sentiment expressed reflects a negative or downcast emotional state. Avoid misclassifying positive or negative affect.
+
+Always select from the exact list of labels: anger, fear, joy, love, sadness, surprise.
+Iteration 1: New subsample score 3.0 is better than old score 2.0. Continue to full eval and add to candidate pool.
+Iteration 1: Valset score for new program: 0.68 (coverage 100 / 100)
+Iteration 1: Val aggregate for new program: 0.68
+Iteration 1: Individual valset scores for new program: {0: 1.0, 1: 1.0, 2: 1.0, 3: 1.0, 4: 1.0, 5: 1.0, 6: 0.0, 7: 1.0, 8: 0.0, 9: 1.0, 10: 1.0, 11: 1.0, 12: 0.0, 13: 0.0, 14: 0.0, 15: 0.0, 16: 1.0, 17: 1.0, 18: 1.0, 19: 0.0, 20: 1.0, 21: 1.0, 22: 1.0, 23: 0.0, 24: 1.0, 25: 1.0, 26: 1.0, 27: 0.0, 28: 1.0, 29: 1.0, 30: 0.0, 31: 1.0, 32: 1.0, 33: 1.0, 34: 1.0, 35: 1.0, 36: 1.0, 37: 1.0, 38: 0.0, 39: 0.0, 40: 1.0, 41: 1.0, 42: 1.0, 43: 1.0, 44: 1.0, 45: 0.0, 46: 1.0, 47: 1.0, 48: 0.0, 49: 1.0, 50: 1.0, 51: 0.0, 52: 1.0, 53: 1.0, 54: 0.0, 55: 1.0, 56: 1.0, 57: 0.0, 58: 0.0, 59: 1.0, 60: 1.0, 61: 0.0, 62: 0.0, 63: 1.0, 64: 1.0, 65: 1.0, 66: 1.0, 67: 0.0, 68: 1.0, 69: 1.0, 70: 1.0, 71: 0.0, 72: 1.0, 73: 1.0, 74: 0.0, 75: 0.0, 76: 1.0, 77: 1.0, 78: 1.0, 79: 1.0, 80: 1.0, 81: 1.0, 82: 0.0, 83: 1.0, 84: 0.0, 85: 0.0, 86: 1.0, 87: 1.0, 88: 1.0, 89: 1.0, 90: 0.0, 91: 1.0, 92: 0.0, 93: 1.0, 94: 0.0, 95: 1.0, 96: 0.0, 97: 1.0, 98: 1.0, 99: 0.0}
+Iteration 1: New valset pareto front scores: {0: 1.0, 1: 1.0, 2: 1.0, 3: 1.0, 4: 1.0, 5: 1.0, 6: 0.0, 7: 1.0, 8: 0.0, 9: 1.0, 10: 1.0, 11: 1.0, 12: 1.0, 13: 0.0, 14: 0.0, 15: 0.0, 16: 1.0, 17: 1.0, 18: 1.0, 19: 0.0, 20: 1.0, 21: 1.0, 22: 1.0, 23: 0.0, 24: 1.0, 25: 1.0, 26: 1.0, 27: 0.0, 28: 1.0, 29: 1.0, 30: 0.0, 31: 1.0, 32: 1.0, 33: 1.0, 34: 1.0, 35: 1.0, 36: 1.0, 37: 1.0, 38: 1.0, 39: 0.0, 40: 1.0, 41: 1.0, 42: 1.0, 43: 1.0, 44: 1.0, 45: 0.0, 46: 1.0, 47: 1.0, 48: 0.0, 49: 1.0, 50: 1.0, 51: 0.0, 52: 1.0, 53: 1.0, 54: 0.0, 55: 1.0, 56: 1.0, 57: 0.0, 58: 0.0, 59: 1.0, 60: 1.0, 61: 0.0, 62: 0.0, 63: 1.0, 64: 1.0, 65: 1.0, 66: 1.0, 67: 0.0, 68: 1.0, 69: 1.0, 70: 1.0, 71: 0.0, 72: 1.0, 73: 1.0, 74: 0.0, 75: 1.0, 76: 1.0, 77: 1.0, 78: 1.0, 79: 1.0, 80: 1.0, 81: 1.0, 82: 0.0, 83: 1.0, 84: 0.0, 85: 0.0, 86: 1.0, 87: 1.0, 88: 1.0, 89: 1.0, 90: 0.0, 91: 1.0, 92: 0.0, 93: 1.0, 94: 0.0, 95: 1.0, 96: 0.0, 97: 1.0, 98: 1.0, 99: 0.0}
+Iteration 1: Valset pareto front aggregate score: 0.71
+Iteration 1: Updated valset pareto front programs: {0: {0, 1}, 1: {0, 1}, 2: {0, 1}, 3: {0, 1}, 4: {0, 1}, 5: {0, 1}, 6: {0, 1}, 7: {0, 1}, 8: {0, 1}, 9: {0, 1}, 10: {0, 1}, 11: {0, 1}, 12: {0}, 13: {0, 1}, 14: {0, 1}, 15: {0, 1}, 16: {0, 1}, 17: {0, 1}, 18: {0, 1}, 19: {0, 1}, 20: {0, 1}, 21: {0, 1}, 22: {0, 1}, 23: {0, 1}, 24: {0, 1}, 25: {0, 1}, 26: {0, 1}, 27: {0, 1}, 28: {0, 1}, 29: {0, 1}, 30: {0, 1}, 31: {0, 1}, 32: {0, 1}, 33: {0, 1}, 34: {0, 1}, 35: {1}, 36: {0, 1}, 37: {0, 1}, 38: {0}, 39: {0, 1}, 40: {0, 1}, 41: {1}, 42: {0, 1}, 43: {0, 1}, 44: {0, 1}, 45: {0, 1}, 46: {0, 1}, 47: {1}, 48: {0, 1}, 49: {0, 1}, 50: {0, 1}, 51: {0, 1}, 52: {0, 1}, 53: {0, 1}, 54: {0, 1}, 55: {0, 1}, 56: {0, 1}, 57: {0, 1}, 58: {0, 1}, 59: {0, 1}, 60: {0, 1}, 61: {0, 1}, 62: {0, 1}, 63: {0, 1}, 64: {0, 1}, 65: {0, 1}, 66: {0, 1}, 67: {0, 1}, 68: {0, 1}, 69: {0, 1}, 70: {0, 1}, 71: {0, 1}, 72: {0, 1}, 73: {0, 1}, 74: {0, 1}, 75: {0}, 76: {0, 1}, 77: {0, 1}, 78: {0, 1}, 79: {0, 1}, 80: {0, 1}, 81: {0, 1}, 82: {0, 1}, 83: {0, 1}, 84: {0, 1}, 85: {0, 1}, 86: {0, 1}, 87: {0, 1}, 88: {0, 1}, 89: {0, 1}, 90: {0, 1}, 91: {0, 1}, 92: {0, 1}, 93: {0, 1}, 94: {0, 1}, 95: {0, 1}, 96: {0, 1}, 97: {0, 1}, 98: {0, 1}, 99: {0, 1}}
+Iteration 1: Best valset aggregate score so far: 0.68
+Iteration 1: Best program as per aggregate score on valset: 0
+Iteration 1: Best score on valset: 0.68
+Iteration 1: Linear pareto front program index: 0
+Iteration 1: New program candidate index: 1
+Iteration 2: Selected program 1 score: 0.68
+Iteration 2: Proposed new text for instruction: You are given a piece of text and must determine its predominant emotional category. The possible categories are: anger, fear, joy, love, sadness, and surprise. This is a single-label classification task: you must choose only one category per input.
+
+Instructions:
+- Carefully read and analyze the input text. Consider explicit emotional words as well as nuances, implied sentiment, and context.
+- Assign the single most appropriate emotion from the exact list provided: anger, fear, joy, love, sadness, surprise. Use only these labels; do not use synonyms or invent new categories.
+- Base your decision not just on obvious emotional cues, but also on subtler factors such as gratitude (often love), blessing (often love), hesitancy (which may indicate fear or uncertainty), etc. For example:
+    - Expressions of feeling "blessed" or "grateful" often suggest 'love', not just 'joy'.
+    - Expressions of energy, happiness, or excitement without relational or grateful context may be 'joy'.
+    - Negative, downcast, or weary sentiments without explicit anger often indicate 'sadness'.
+    - Hesitation or apprehension about outcomes may reflect 'fear'.
+    - Reactions to unexpected events (positive or negative) may reflect 'surprise'.
+    - Outward expressions of irritation, frustration, or hostility indicate 'anger'.
+- Do not add any explanations, justifications, or formatting; respond with only the exact label.
+
+Your entire response must be a single word corresponding to the selected emotion from the list.
+Iteration 2: New subsample score 2.0 is better than old score 1.0. Continue to full eval and add to candidate pool.
+Iteration 2: Valset score for new program: 0.63 (coverage 100 / 100)
+Iteration 2: Val aggregate for new program: 0.63
+Iteration 2: Individual valset scores for new program: {0: 1.0, 1: 1.0, 2: 1.0, 3: 1.0, 4: 1.0, 5: 0.0, 6: 0.0, 7: 0.0, 8: 0.0, 9: 1.0, 10: 1.0, 11: 1.0, 12: 1.0, 13: 0.0, 14: 0.0, 15: 0.0, 16: 1.0, 17: 1.0, 18: 1.0, 19: 0.0, 20: 1.0, 21: 1.0, 22: 1.0, 23: 0.0, 24: 1.0, 25: 1.0, 26: 1.0, 27: 0.0, 28: 1.0, 29: 1.0, 30: 0.0, 31: 1.0, 32: 1.0, 33: 1.0, 34: 1.0, 35: 1.0, 36: 1.0, 37: 1.0, 38: 0.0, 39: 0.0, 40: 0.0, 41: 1.0, 42: 1.0, 43: 1.0, 44: 1.0, 45: 0.0, 46: 0.0, 47: 1.0, 48: 0.0, 49: 1.0, 50: 1.0, 51: 0.0, 52: 1.0, 53: 1.0, 54: 0.0, 55: 1.0, 56: 1.0, 57: 0.0, 58: 0.0, 59: 1.0, 60: 1.0, 61: 0.0, 62: 0.0, 63: 1.0, 64: 1.0, 65: 1.0, 66: 1.0, 67: 0.0, 68: 1.0, 69: 1.0, 70: 1.0, 71: 0.0, 72: 1.0, 73: 1.0, 74: 0.0, 75: 0.0, 76: 1.0, 77: 1.0, 78: 1.0, 79: 1.0, 80: 1.0, 81: 1.0, 82: 0.0, 83: 1.0, 84: 0.0, 85: 0.0, 86: 1.0, 87: 1.0, 88: 1.0, 89: 0.0, 90: 0.0, 91: 1.0, 92: 0.0, 93: 1.0, 94: 0.0, 95: 1.0, 96: 0.0, 97: 0.0, 98: 1.0, 99: 0.0}
+Iteration 2: New valset pareto front scores: {0: 1.0, 1: 1.0, 2: 1.0, 3: 1.0, 4: 1.0, 5: 1.0, 6: 0.0, 7: 1.0, 8: 0.0, 9: 1.0, 10: 1.0, 11: 1.0, 12: 1.0, 13: 0.0, 14: 0.0, 15: 0.0, 16: 1.0, 17: 1.0, 18: 1.0, 19: 0.0, 20: 1.0, 21: 1.0, 22: 1.0, 23: 0.0, 24: 1.0, 25: 1.0, 26: 1.0, 27: 0.0, 28: 1.0, 29: 1.0, 30: 0.0, 31: 1.0, 32: 1.0, 33: 1.0, 34: 1.0, 35: 1.0, 36: 1.0, 37: 1.0, 38: 1.0, 39: 0.0, 40: 1.0, 41: 1.0, 42: 1.0, 43: 1.0, 44: 1.0, 45: 0.0, 46: 1.0, 47: 1.0, 48: 0.0, 49: 1.0, 50: 1.0, 51: 0.0, 52: 1.0, 53: 1.0, 54: 0.0, 55: 1.0, 56: 1.0, 57: 0.0, 58: 0.0, 59: 1.0, 60: 1.0, 61: 0.0, 62: 0.0, 63: 1.0, 64: 1.0, 65: 1.0, 66: 1.0, 67: 0.0, 68: 1.0, 69: 1.0, 70: 1.0, 71: 0.0, 72: 1.0, 73: 1.0, 74: 0.0, 75: 1.0, 76: 1.0, 77: 1.0, 78: 1.0, 79: 1.0, 80: 1.0, 81: 1.0, 82: 0.0, 83: 1.0, 84: 0.0, 85: 0.0, 86: 1.0, 87: 1.0, 88: 1.0, 89: 1.0, 90: 0.0, 91: 1.0, 92: 0.0, 93: 1.0, 94: 0.0, 95: 1.0, 96: 0.0, 97: 1.0, 98: 1.0, 99: 0.0}
+Iteration 2: Valset pareto front aggregate score: 0.71
+Iteration 2: Updated valset pareto front programs: {0: {0, 1, 2}, 1: {0, 1, 2}, 2: {0, 1, 2}, 3: {0, 1, 2}, 4: {0, 1, 2}, 5: {0, 1}, 6: {0, 1, 2}, 7: {0, 1}, 8: {0, 1, 2}, 9: {0, 1, 2}, 10: {0, 1, 2}, 11: {0, 1, 2}, 12: {0, 2}, 13: {0, 1, 2}, 14: {0, 1, 2}, 15: {0, 1, 2}, 16: {0, 1, 2}, 17: {0, 1, 2}, 18: {0, 1, 2}, 19: {0, 1, 2}, 20: {0, 1, 2}, 21: {0, 1, 2}, 22: {0, 1, 2}, 23: {0, 1, 2}, 24: {0, 1, 2}, 25: {0, 1, 2}, 26: {0, 1, 2}, 27: {0, 1, 2}, 28: {0, 1, 2}, 29: {0, 1, 2}, 30: {0, 1, 2}, 31: {0, 1, 2}, 32: {0, 1, 2}, 33: {0, 1, 2}, 34: {0, 1, 2}, 35: {1, 2}, 36: {0, 1, 2}, 37: {0, 1, 2}, 38: {0}, 39: {0, 1, 2}, 40: {0, 1}, 41: {1, 2}, 42: {0, 1, 2}, 43: {0, 1, 2}, 44: {0, 1, 2}, 45: {0, 1, 2}, 46: {0, 1}, 47: {1, 2}, 48: {0, 1, 2}, 49: {0, 1, 2}, 50: {0, 1, 2}, 51: {0, 1, 2}, 52: {0, 1, 2}, 53: {0, 1, 2}, 54: {0, 1, 2}, 55: {0, 1, 2}, 56: {0, 1, 2}, 57: {0, 1, 2}, 58: {0, 1, 2}, 59: {0, 1, 2}, 60: {0, 1, 2}, 61: {0, 1, 2}, 62: {0, 1, 2}, 63: {0, 1, 2}, 64: {0, 1, 2}, 65: {0, 1, 2}, 66: {0, 1, 2}, 67: {0, 1, 2}, 68: {0, 1, 2}, 69: {0, 1, 2}, 70: {0, 1, 2}, 71: {0, 1, 2}, 72: {0, 1, 2}, 73: {0, 1, 2}, 74: {0, 1, 2}, 75: {0}, 76: {0, 1, 2}, 77: {0, 1, 2}, 78: {0, 1, 2}, 79: {0, 1, 2}, 80: {0, 1, 2}, 81: {0, 1, 2}, 82: {0, 1, 2}, 83: {0, 1, 2}, 84: {0, 1, 2}, 85: {0, 1, 2}, 86: {0, 1, 2}, 87: {0, 1, 2}, 88: {0, 1, 2}, 89: {0, 1}, 90: {0, 1, 2}, 91: {0, 1, 2}, 92: {0, 1, 2}, 93: {0, 1, 2}, 94: {0, 1, 2}, 95: {0, 1, 2}, 96: {0, 1, 2}, 97: {0, 1}, 98: {0, 1, 2}, 99: {0, 1, 2}}
+Iteration 2: Best valset aggregate score so far: 0.68
+Iteration 2: Best program as per aggregate score on valset: 0
+Iteration 2: Best score on valset: 0.68
+Iteration 2: Linear pareto front program index: 0
+Iteration 2: New program candidate index: 2
+Iteration 3: Selected program 0 score: 0.68
+Iteration 3: Proposed new text for instruction: You will be given a single input field called "text" containing a passage, sentence, or phrase. Your task is to classify the overall emotion expressed in the given text. Assign exactly one label to the text based on the following set of categories: anger, fear, joy, love, sadness, or surprise.
+
+Read the entire text carefully and determine which single category best captures the emotional tone or intent conveyed. Consider contextual clues, tone, and implications in your analysis. Do not provide multiple categories, probability scores, or explanations—return only the label that most accurately fits the emotional content of the given text.
+
+For reference, here is the set of labels you must choose from:
+- anger
+- fear
+- joy
+- love
+- sadness
+- surprise
+Iteration 3: New subsample score 2.0 is not better than old score 2.0, skipping
+Iteration 4: Selected program 1 score: 0.68
+Iteration 4: Proposed new text for instruction: You are tasked with classifying short pieces of text into one of six specific emotion categories: anger, fear, joy, love, sadness, or surprise. Your response must be the name of the single most appropriate emotion category, selected strictly from this list: anger, fear, joy, love, sadness, surprise.
+
+Carefully read and consider the emotional content, context, implications, and any nuanced cues present in the text. The emotion you select should accurately reflect the main feeling or emotional tone expressed in the statement.
+
+You must select only one emotion label per input and respond with the category name only, without any additional explanation, punctuation, or formatting.
+
+Pay special attention to implied or indirect feelings. For example, sarcastic or ironic statements that refer to negative events or actions (such as "it is very rude that i keep destroying your house with my face") may express 'anger' rather than 'surprise' or other emotions. Always strive to identify the intended emotional state rather than choosing based on surface words or literal meanings alone.
+
+Do not infer positive affect when the tone is negative, and vice versa. When ambiguity is present, choose the most likely category based on the context and implied feelings. Rely on both explicit and subtle emotional indicators.
+
+Again, your output should be only one of the following: anger, fear, joy, love, sadness, surprise.
+Iteration 4: New subsample score 3.0 is better than old score 2.0. Continue to full eval and add to candidate pool.
+Iteration 4: Valset score for new program: 0.68 (coverage 100 / 100)
+Iteration 4: Val aggregate for new program: 0.68
+Iteration 4: Individual valset scores for new program: {0: 1.0, 1: 1.0, 2: 1.0, 3: 1.0, 4: 1.0, 5: 1.0, 6: 0.0, 7: 1.0, 8: 0.0, 9: 1.0, 10: 1.0, 11: 1.0, 12: 0.0, 13: 0.0, 14: 0.0, 15: 0.0, 16: 1.0, 17: 1.0, 18: 1.0, 19: 0.0, 20: 1.0, 21: 1.0, 22: 0.0, 23: 0.0, 24: 1.0, 25: 1.0, 26: 1.0, 27: 0.0, 28: 1.0, 29: 1.0, 30: 0.0, 31: 1.0, 32: 1.0, 33: 1.0, 34: 1.0, 35: 1.0, 36: 1.0, 37: 1.0, 38: 0.0, 39: 0.0, 40: 1.0, 41: 1.0, 42: 1.0, 43: 1.0, 44: 1.0, 45: 0.0, 46: 1.0, 47: 1.0, 48: 0.0, 49: 1.0, 50: 1.0, 51: 0.0, 52: 1.0, 53: 1.0, 54: 0.0, 55: 1.0, 56: 1.0, 57: 0.0, 58: 0.0, 59: 1.0, 60: 1.0, 61: 0.0, 62: 0.0, 63: 1.0, 64: 1.0, 65: 1.0, 66: 1.0, 67: 0.0, 68: 1.0, 69: 1.0, 70: 1.0, 71: 0.0, 72: 1.0, 73: 1.0, 74: 0.0, 75: 1.0, 76: 1.0, 77: 1.0, 78: 1.0, 79: 1.0, 80: 1.0, 81: 1.0, 82: 0.0, 83: 1.0, 84: 0.0, 85: 0.0, 86: 1.0, 87: 1.0, 88: 1.0, 89: 1.0, 90: 0.0, 91: 1.0, 92: 0.0, 93: 1.0, 94: 0.0, 95: 1.0, 96: 0.0, 97: 1.0, 98: 1.0, 99: 0.0}
+Iteration 4: New valset pareto front scores: {0: 1.0, 1: 1.0, 2: 1.0, 3: 1.0, 4: 1.0, 5: 1.0, 6: 0.0, 7: 1.0, 8: 0.0, 9: 1.0, 10: 1.0, 11: 1.0, 12: 1.0, 13: 0.0, 14: 0.0, 15: 0.0, 16: 1.0, 17: 1.0, 18: 1.0, 19: 0.0, 20: 1.0, 21: 1.0, 22: 1.0, 23: 0.0, 24: 1.0, 25: 1.0, 26: 1.0, 27: 0.0, 28: 1.0, 29: 1.0, 30: 0.0, 31: 1.0, 32: 1.0, 33: 1.0, 34: 1.0, 35: 1.0, 36: 1.0, 37: 1.0, 38: 1.0, 39: 0.0, 40: 1.0, 41: 1.0, 42: 1.0, 43: 1.0, 44: 1.0, 45: 0.0, 46: 1.0, 47: 1.0, 48: 0.0, 49: 1.0, 50: 1.0, 51: 0.0, 52: 1.0, 53: 1.0, 54: 0.0, 55: 1.0, 56: 1.0, 57: 0.0, 58: 0.0, 59: 1.0, 60: 1.0, 61: 0.0, 62: 0.0, 63: 1.0, 64: 1.0, 65: 1.0, 66: 1.0, 67: 0.0, 68: 1.0, 69: 1.0, 70: 1.0, 71: 0.0, 72: 1.0, 73: 1.0, 74: 0.0, 75: 1.0, 76: 1.0, 77: 1.0, 78: 1.0, 79: 1.0, 80: 1.0, 81: 1.0, 82: 0.0, 83: 1.0, 84: 0.0, 85: 0.0, 86: 1.0, 87: 1.0, 88: 1.0, 89: 1.0, 90: 0.0, 91: 1.0, 92: 0.0, 93: 1.0, 94: 0.0, 95: 1.0, 96: 0.0, 97: 1.0, 98: 1.0, 99: 0.0}
+Iteration 4: Valset pareto front aggregate score: 0.71
+Iteration 4: Updated valset pareto front programs: {0: {0, 1, 2, 3}, 1: {0, 1, 2, 3}, 2: {0, 1, 2, 3}, 3: {0, 1, 2, 3}, 4: {0, 1, 2, 3}, 5: {0, 1, 3}, 6: {0, 1, 2, 3}, 7: {0, 1, 3}, 8: {0, 1, 2, 3}, 9: {0, 1, 2, 3}, 10: {0, 1, 2, 3}, 11: {0, 1, 2, 3}, 12: {0, 2}, 13: {0, 1, 2, 3}, 14: {0, 1, 2, 3}, 15: {0, 1, 2, 3}, 16: {0, 1, 2, 3}, 17: {0, 1, 2, 3}, 18: {0, 1, 2, 3}, 19: {0, 1, 2, 3}, 20: {0, 1, 2, 3}, 21: {0, 1, 2, 3}, 22: {0, 1, 2}, 23: {0, 1, 2, 3}, 24: {0, 1, 2, 3}, 25: {0, 1, 2, 3}, 26: {0, 1, 2, 3}, 27: {0, 1, 2, 3}, 28: {0, 1, 2, 3}, 29: {0, 1, 2, 3}, 30: {0, 1, 2, 3}, 31: {0, 1, 2, 3}, 32: {0, 1, 2, 3}, 33: {0, 1, 2, 3}, 34: {0, 1, 2, 3}, 35: {1, 2, 3}, 36: {0, 1, 2, 3}, 37: {0, 1, 2, 3}, 38: {0}, 39: {0, 1, 2, 3}, 40: {0, 1, 3}, 41: {1, 2, 3}, 42: {0, 1, 2, 3}, 43: {0, 1, 2, 3}, 44: {0, 1, 2, 3}, 45: {0, 1, 2, 3}, 46: {0, 1, 3}, 47: {1, 2, 3}, 48: {0, 1, 2, 3}, 49: {0, 1, 2, 3}, 50: {0, 1, 2, 3}, 51: {0, 1, 2, 3}, 52: {0, 1, 2, 3}, 53: {0, 1, 2, 3}, 54: {0, 1, 2, 3}, 55: {0, 1, 2, 3}, 56: {0, 1, 2, 3}, 57: {0, 1, 2, 3}, 58: {0, 1, 2, 3}, 59: {0, 1, 2, 3}, 60: {0, 1, 2, 3}, 61: {0, 1, 2, 3}, 62: {0, 1, 2, 3}, 63: {0, 1, 2, 3}, 64: {0, 1, 2, 3}, 65: {0, 1, 2, 3}, 66: {0, 1, 2, 3}, 67: {0, 1, 2, 3}, 68: {0, 1, 2, 3}, 69: {0, 1, 2, 3}, 70: {0, 1, 2, 3}, 71: {0, 1, 2, 3}, 72: {0, 1, 2, 3}, 73: {0, 1, 2, 3}, 74: {0, 1, 2, 3}, 75: {0, 3}, 76: {0, 1, 2, 3}, 77: {0, 1, 2, 3}, 78: {0, 1, 2, 3}, 79: {0, 1, 2, 3}, 80: {0, 1, 2, 3}, 81: {0, 1, 2, 3}, 82: {0, 1, 2, 3}, 83: {0, 1, 2, 3}, 84: {0, 1, 2, 3}, 85: {0, 1, 2, 3}, 86: {0, 1, 2, 3}, 87: {0, 1, 2, 3}, 88: {0, 1, 2, 3}, 89: {0, 1, 3}, 90: {0, 1, 2, 3}, 91: {0, 1, 2, 3}, 92: {0, 1, 2, 3}, 93: {0, 1, 2, 3}, 94: {0, 1, 2, 3}, 95: {0, 1, 2, 3}, 96: {0, 1, 2, 3}, 97: {0, 1, 3}, 98: {0, 1, 2, 3}, 99: {0, 1, 2, 3}}
+Iteration 4: Best valset aggregate score so far: 0.68
+Iteration 4: Best program as per aggregate score on valset: 0
+Iteration 4: Best score on valset: 0.68
+Iteration 4: Linear pareto front program index: 0
+Iteration 4: New program candidate index: 3
+Iteration 5: Selected program 0 score: 0.68
+Iteration 5: Proposed new text for instruction: You are given a piece of text, and your task is to classify the dominant emotion conveyed in that text. Choose one of the following six categories: anger, fear, joy, love, sadness, or surprise. 
+
+Only output the single most appropriate emotion label from the list above, with no explanation or extra words.
+
+Some additional guidelines:
+
+- Focus on the emotion expressed by the speaker/writer, not on what emotion you personally feel when reading the text.
+- Be attentive to distinctions between similar emotions:
+  - "Joy" is for expressions of happiness, delight, satisfaction, or general positive emotional states, even if specific things are being praised.
+  - "Love" is for clear declarations of affection, attachment, or deep fondness toward someone or something, typically involving a relational context.
+- "Surprise" applies when the text describes unexpectedness, shock, amazement, or feelings of being startled, even if mixed with other emotions.
+- "Sadness" is for expressions of regret, sorrow, disappointment, or longing.
+- If more than one emotion seems to be present, select the most prominent one based on what the speaker is emphasizing.
+
+Output only one category label: anger, fear, joy, love, sadness, or surprise.
+Iteration 5: New subsample score 2.0 is better than old score 1.0. Continue to full eval and add to candidate pool.
+Iteration 5: Valset score for new program: 0.67 (coverage 100 / 100)
+Iteration 5: Val aggregate for new program: 0.67
+Iteration 5: Individual valset scores for new program: {0: 1.0, 1: 1.0, 2: 1.0, 3: 1.0, 4: 1.0, 5: 1.0, 6: 0.0, 7: 1.0, 8: 0.0, 9: 1.0, 10: 1.0, 11: 1.0, 12: 0.0, 13: 0.0, 14: 0.0, 15: 0.0, 16: 1.0, 17: 1.0, 18: 0.0, 19: 0.0, 20: 1.0, 21: 1.0, 22: 0.0, 23: 0.0, 24: 1.0, 25: 1.0, 26: 1.0, 27: 0.0, 28: 1.0, 29: 1.0, 30: 0.0, 31: 1.0, 32: 1.0, 33: 1.0, 34: 1.0, 35: 1.0, 36: 1.0, 37: 1.0, 38: 1.0, 39: 0.0, 40: 1.0, 41: 0.0, 42: 1.0, 43: 1.0, 44: 1.0, 45: 0.0, 46: 1.0, 47: 1.0, 48: 0.0, 49: 1.0, 50: 1.0, 51: 0.0, 52: 1.0, 53: 1.0, 54: 0.0, 55: 1.0, 56: 1.0, 57: 1.0, 58: 0.0, 59: 1.0, 60: 1.0, 61: 0.0, 62: 0.0, 63: 1.0, 64: 1.0, 65: 1.0, 66: 1.0, 67: 0.0, 68: 1.0, 69: 1.0, 70: 1.0, 71: 0.0, 72: 1.0, 73: 1.0, 74: 0.0, 75: 1.0, 76: 1.0, 77: 1.0, 78: 1.0, 79: 1.0, 80: 1.0, 81: 1.0, 82: 0.0, 83: 1.0, 84: 0.0, 85: 0.0, 86: 1.0, 87: 1.0, 88: 1.0, 89: 0.0, 90: 0.0, 91: 1.0, 92: 0.0, 93: 1.0, 94: 0.0, 95: 1.0, 96: 0.0, 97: 1.0, 98: 1.0, 99: 0.0}
+Iteration 5: New valset pareto front scores: {0: 1.0, 1: 1.0, 2: 1.0, 3: 1.0, 4: 1.0, 5: 1.0, 6: 0.0, 7: 1.0, 8: 0.0, 9: 1.0, 10: 1.0, 11: 1.0, 12: 1.0, 13: 0.0, 14: 0.0, 15: 0.0, 16: 1.0, 17: 1.0, 18: 1.0, 19: 0.0, 20: 1.0, 21: 1.0, 22: 1.0, 23: 0.0, 24: 1.0, 25: 1.0, 26: 1.0, 27: 0.0, 28: 1.0, 29: 1.0, 30: 0.0, 31: 1.0, 32: 1.0, 33: 1.0, 34: 1.0, 35: 1.0, 36: 1.0, 37: 1.0, 38: 1.0, 39: 0.0, 40: 1.0, 41: 1.0, 42: 1.0, 43: 1.0, 44: 1.0, 45: 0.0, 46: 1.0, 47: 1.0, 48: 0.0, 49: 1.0, 50: 1.0, 51: 0.0, 52: 1.0, 53: 1.0, 54: 0.0, 55: 1.0, 56: 1.0, 57: 1.0, 58: 0.0, 59: 1.0, 60: 1.0, 61: 0.0, 62: 0.0, 63: 1.0, 64: 1.0, 65: 1.0, 66: 1.0, 67: 0.0, 68: 1.0, 69: 1.0, 70: 1.0, 71: 0.0, 72: 1.0, 73: 1.0, 74: 0.0, 75: 1.0, 76: 1.0, 77: 1.0, 78: 1.0, 79: 1.0, 80: 1.0, 81: 1.0, 82: 0.0, 83: 1.0, 84: 0.0, 85: 0.0, 86: 1.0, 87: 1.0, 88: 1.0, 89: 1.0, 90: 0.0, 91: 1.0, 92: 0.0, 93: 1.0, 94: 0.0, 95: 1.0, 96: 0.0, 97: 1.0, 98: 1.0, 99: 0.0}
+Iteration 5: Valset pareto front aggregate score: 0.72
+Iteration 5: Updated valset pareto front programs: {0: {0, 1, 2, 3, 4}, 1: {0, 1, 2, 3, 4}, 2: {0, 1, 2, 3, 4}, 3: {0, 1, 2, 3, 4}, 4: {0, 1, 2, 3, 4}, 5: {0, 1, 3, 4}, 6: {0, 1, 2, 3, 4}, 7: {0, 1, 3, 4}, 8: {0, 1, 2, 3, 4}, 9: {0, 1, 2, 3, 4}, 10: {0, 1, 2, 3, 4}, 11: {0, 1, 2, 3, 4}, 12: {0, 2}, 13: {0, 1, 2, 3, 4}, 14: {0, 1, 2, 3, 4}, 15: {0, 1, 2, 3, 4}, 16: {0, 1, 2, 3, 4}, 17: {0, 1, 2, 3, 4}, 18: {0, 1, 2, 3}, 19: {0, 1, 2, 3, 4}, 20: {0, 1, 2, 3, 4}, 21: {0, 1, 2, 3, 4}, 22: {0, 1, 2}, 23: {0, 1, 2, 3, 4}, 24: {0, 1, 2, 3, 4}, 25: {0, 1, 2, 3, 4}, 26: {0, 1, 2, 3, 4}, 27: {0, 1, 2, 3, 4}, 28: {0, 1, 2, 3, 4}, 29: {0, 1, 2, 3, 4}, 30: {0, 1, 2, 3, 4}, 31: {0, 1, 2, 3, 4}, 32: {0, 1, 2, 3, 4}, 33: {0, 1, 2, 3, 4}, 34: {0, 1, 2, 3, 4}, 35: {1, 2, 3, 4}, 36: {0, 1, 2, 3, 4}, 37: {0, 1, 2, 3, 4}, 38: {0, 4}, 39: {0, 1, 2, 3, 4}, 40: {0, 1, 3, 4}, 41: {1, 2, 3}, 42: {0, 1, 2, 3, 4}, 43: {0, 1, 2, 3, 4}, 44: {0, 1, 2, 3, 4}, 45: {0, 1, 2, 3, 4}, 46: {0, 1, 3, 4}, 47: {1, 2, 3, 4}, 48: {0, 1, 2, 3, 4}, 49: {0, 1, 2, 3, 4}, 50: {0, 1, 2, 3, 4}, 51: {0, 1, 2, 3, 4}, 52: {0, 1, 2, 3, 4}, 53: {0, 1, 2, 3, 4}, 54: {0, 1, 2, 3, 4}, 55: {0, 1, 2, 3, 4}, 56: {0, 1, 2, 3, 4}, 57: {4}, 58: {0, 1, 2, 3, 4}, 59: {0, 1, 2, 3, 4}, 60: {0, 1, 2, 3, 4}, 61: {0, 1, 2, 3, 4}, 62: {0, 1, 2, 3, 4}, 63: {0, 1, 2, 3, 4}, 64: {0, 1, 2, 3, 4}, 65: {0, 1, 2, 3, 4}, 66: {0, 1, 2, 3, 4}, 67: {0, 1, 2, 3, 4}, 68: {0, 1, 2, 3, 4}, 69: {0, 1, 2, 3, 4}, 70: {0, 1, 2, 3, 4}, 71: {0, 1, 2, 3, 4}, 72: {0, 1, 2, 3, 4}, 73: {0, 1, 2, 3, 4}, 74: {0, 1, 2, 3, 4}, 75: {0, 3, 4}, 76: {0, 1, 2, 3, 4}, 77: {0, 1, 2, 3, 4}, 78: {0, 1, 2, 3, 4}, 79: {0, 1, 2, 3, 4}, 80: {0, 1, 2, 3, 4}, 81: {0, 1, 2, 3, 4}, 82: {0, 1, 2, 3, 4}, 83: {0, 1, 2, 3, 4}, 84: {0, 1, 2, 3, 4}, 85: {0, 1, 2, 3, 4}, 86: {0, 1, 2, 3, 4}, 87: {0, 1, 2, 3, 4}, 88: {0, 1, 2, 3, 4}, 89: {0, 1, 3}, 90: {0, 1, 2, 3, 4}, 91: {0, 1, 2, 3, 4}, 92: {0, 1, 2, 3, 4}, 93: {0, 1, 2, 3, 4}, 94: {0, 1, 2, 3, 4}, 95: {0, 1, 2, 3, 4}, 96: {0, 1, 2, 3, 4}, 97: {0, 1, 3, 4}, 98: {0, 1, 2, 3, 4}, 99: {0, 1, 2, 3, 4}}
+Iteration 5: Best valset aggregate score so far: 0.68
+Iteration 5: Best program as per aggregate score on valset: 0
+Iteration 5: Best score on valset: 0.68
+Iteration 5: Linear pareto front program index: 0
+Iteration 5: New program candidate index: 4
+Iteration 6: Selected program 3 score: 0.68
+Iteration 6: Proposed new text for instruction: You are tasked with classifying short pieces of text into a single emotion category, chosen from the following six options: anger, fear, joy, love, sadness, or surprise. Your response must be exactly one of these category names, with no additional text, formatting, or explanation.
+
+Here are key details and expectations for this classification task:
+
+- **Objective**: Assign the most appropriate, contextually accurate emotion category to a given short text.
+- **Categories**: You must select only one from: anger, fear, joy, love, sadness, or surprise.
+- **Format**: Your response must be the category name only. Do not include punctuation, explanation, or formatting.
+
+## Important Guidelines:
+
+1. **Deep Emotional Analysis**: Carefully consider both the explicit content and any implied or indirect emotional undertones. Pay special attention to subtleties such as sarcasm, irony, or complex emotional cues.
+2. **Primary Emotion**: Identify the dominant emotional tone of the text, rather than selecting an emotion based on any single word or superficial reading.
+3. **Resolution of Ambiguity**: When a text could fit multiple categories, choose the most likely based on complete context and nuance.
+4. **Domain-Specific Nuance**: Be aware that some emotional expressions may not be literal; for example, hyperbolic or exaggerated statements about one's state (e.g., feeling psychologically delicate) may imply vulnerability due to care or concern, pointing to 'love' rather than fear or sadness.
+5. **Literal vs. Intended Meaning**: Do not infer positive emotion for texts with a negative tone, and vice versa. Base your classification on the intended meaning, as signaled by implication, context, or emotional resonance.
+6. **Examples**: For instance, the phrase "i feel like any student response can tip the delicate balance of my psyche"—although it may suggest anxiety—could actually imply a deep investment and emotional sensitivity indicative of 'love' rather than 'fear'.
+
+Your goal is to reliably and accurately capture the singular, most relevant emotional category for each text, reflecting any complex emotional signals and indirect cues present.
+
+Again: Reply with only the single most appropriate category from the list: anger, fear, joy, love, sadness, surprise.
+Iteration 6: New subsample score 2.0 is not better than old score 2.0, skipping
+Iteration 7: Selected program 0 score: 0.68
+Iteration 7: Proposed new text for instruction: You will be given a single text input. Your task is to classify the emotional tone of the given text into one of the following six categories: anger, fear, joy, love, sadness, or surprise.
+
+Consider that emotions expressed in text can be nuanced and may not always align with the most obvious or surface-level reaction; ensure you infer the underlying or most dominant emotion rather than just keywords. For example, sadness may be present in statements expressing loss or exclusion, even if words like "jealous" are used, while anger might be more appropriate in texts implying blame or strong resentment, even if the emotion isn't directly stated.
+
+When making your classification, take into account both direct expressions of feelings and the context or reasoning behind them. Always select the single category that best matches the overall sentiment conveyed by the speaker in the provided text.
+
+Your output should be the name of the emotion category only: 'anger', 'fear', 'joy', 'love', 'sadness', or 'surprise'.
+Iteration 7: New subsample score 1.0 is not better than old score 1.0, skipping
+Iteration 8: Selected program 0 score: 0.68
+Iteration 8: Proposed new text for instruction: You are given a snippet of text as input. Your task is to classify the emotional tone expressed in the text into exactly one of the following categories: anger, fear, joy, love, sadness, or surprise. 
+
+Follow these steps:
+1. Carefully read and consider the specific wording and context of the input text.
+2. Analyze the emotional content of the text, focusing on the author's likely feelings or the dominant emotional state being described or implied.
+3. Assign the one emotion from the list above that is most accurately reflected in the text. If more than one emotion seems possible, select the one that is most dominant or central to the message.
+4. Output only the emotion label as your response; do not include explanations or additional text.
+
+Note: Take extra care to distinguish between emotions with similar language but different tones. For example, while strong or harsh phrasing may initially suggest "anger," consider whether the underlying sentiment might actually be "sadness" or another emotion. Base your classification on the actual emotional intent rather than on surface-level clues like harsh vocabulary.
+Iteration 8: New subsample score 2.0 is not better than old score 2.0, skipping
+Iteration 9: Selected program 4 score: 0.67
+Iteration 9: Proposed new text for instruction: You are given a task to classify the dominant emotion expressed by the *speaker or writer* in a provided piece of text. The classification must be limited to one of the following six emotion categories: anger, fear, joy, love, sadness, or surprise.
+
+Task requirements and process:
+
+1. Input Format: 
+   - You will receive a piece of text (such as a sentence, passage, or statement) which you must analyze.
+   - Only the text of the utterance is provided.
+
+2. Category Selection:
+   - Select the single *dominant* emotion present in the text.
+   - Your response must be strictly one of: anger, fear, joy, love, sadness, or surprise.
+   - Output only the category label with no explanation, additional words, or extra formatting.
+
+3. Emotion Interpretation Guidelines:
+   - Focus on what emotion the *speaker/writer* expresses, regardless of what you (as the reader) feel in response.
+   - If multiple emotions appear present, choose the one most prominently *emphasized* or explicitly expressed by the speaker/writer.
+   - Use the following clarifications for distinguishing between similar emotions:
+     - "Joy": Used for any expressions of happiness, satisfaction, general positivity, or delight, even if the text briefly mentions negative aspects, as long as the overall tone is positive.
+     - "Love": Reserved for statements that explicitly express affection, attachment, or deep fondness—usually involving a relational context directed at a person, group, or thing.
+     - "Anger": Applies to expressions of frustration, irritation, annoyance, or hostility.
+     - "Fear": Applicable when the speaker/writer conveys anxiety, apprehension, worry, or concern for danger or negative outcomes.
+     - "Sadness": Use for statements expressing regret, sorrow, longing, disappointment, or a general sense of unhappiness.
+     - "Surprise": Should be used when the statement explicitly mentions or describes unexpectedness, astonishment, shock, or unexpected outcomes—regardless of whether other emotions are present.
+   - Pay special attention to subtle cues and context provided in the statement to discern the proper emotion.
+
+4. Example-Based Guidance:
+   - Do not interpret mild complaints or mixed sentiment as "sadness" if the overall message is one of satisfaction or positivity. For example, if someone describes satisfaction with an experience even if parts were challenging, the dominant label should be "joy," not "sadness."
+
+5. Output:
+   - The output must be *only* the single most appropriate category label from the list (anger, fear, joy, love, sadness, surprise). No further explanation, punctuation, or elaboration should be included.
+
+Summary: Read the given text, carefully identify the principal emotion demonstrated by the speaker/writer, select the correct category according to the guidelines above, and output the single label.
+Iteration 9: New subsample score 2.0 is not better than old score 2.0, skipping
+Iteration 10: Selected program 0 score: 0.68
+Iteration 10: Proposed new text for instruction: You are given a piece of text. Your task is to classify the emotion expressed in the text into one of the following categories: anger, fear, joy, love, sadness, or surprise.
+
+For your response, return only the single word representing the most relevant emotion from the list above—do not provide explanations or additional commentary.
+
+To perform this task:
+- Carefully read the provided text and analyze its tone, purpose, and implied emotional context.
+- Consider subtle expressions of emotion: not all texts will be explicit in naming feelings; use clues from wording, intent, and context.
+- Assign the emotion category that best matches the overall sentiment or emotional state conveyed in the text, even if the expression is indirect.
+- Make sure not to make assumptions that go beyond what is presented in the text.
+
+Choose from exactly and only these six categories: anger, fear, joy, love, sadness, or surprise. Your response should be just one of these words.
+
+Examples:
+- For "I feel like starting with my name is susanna but i dont want to be that boring", the correct label is 'sadness', not 'fear'.
+- For "i ask you how can they feel virtuous if any members of their preferred victim groups learn to take responsibility for their own lives", the correct label is 'joy', not 'anger'.
+
+Remember, sometimes emotion can be subtle, and sarcasm or social commentary may express emotions contrary to the direct wording; interpret the overall intent carefully.
+Iteration 10: New subsample score 3.0 is better than old score 1.0. Continue to full eval and add to candidate pool.
+Iteration 10: Valset score for new program: 0.67 (coverage 100 / 100)
+Iteration 10: Val aggregate for new program: 0.67
+Iteration 10: Individual valset scores for new program: {0: 1.0, 1: 1.0, 2: 1.0, 3: 1.0, 4: 1.0, 5: 1.0, 6: 0.0, 7: 0.0, 8: 0.0, 9: 1.0, 10: 1.0, 11: 1.0, 12: 0.0, 13: 0.0, 14: 0.0, 15: 0.0, 16: 1.0, 17: 1.0, 18: 0.0, 19: 0.0, 20: 1.0, 21: 1.0, 22: 1.0, 23: 0.0, 24: 1.0, 25: 1.0, 26: 1.0, 27: 0.0, 28: 1.0, 29: 1.0, 30: 0.0, 31: 1.0, 32: 1.0, 33: 1.0, 34: 1.0, 35: 1.0, 36: 1.0, 37: 1.0, 38: 1.0, 39: 0.0, 40: 1.0, 41: 0.0, 42: 1.0, 43: 1.0, 44: 1.0, 45: 0.0, 46: 1.0, 47: 1.0, 48: 0.0, 49: 1.0, 50: 1.0, 51: 0.0, 52: 1.0, 53: 1.0, 54: 0.0, 55: 1.0, 56: 1.0, 57: 0.0, 58: 0.0, 59: 1.0, 60: 1.0, 61: 0.0, 62: 0.0, 63: 1.0, 64: 1.0, 65: 1.0, 66: 1.0, 67: 0.0, 68: 1.0, 69: 1.0, 70: 1.0, 71: 0.0, 72: 1.0, 73: 1.0, 74: 0.0, 75: 1.0, 76: 1.0, 77: 1.0, 78: 1.0, 79: 1.0, 80: 1.0, 81: 1.0, 82: 0.0, 83: 1.0, 84: 0.0, 85: 0.0, 86: 1.0, 87: 1.0, 88: 1.0, 89: 1.0, 90: 0.0, 91: 1.0, 92: 0.0, 93: 1.0, 94: 0.0, 95: 1.0, 96: 0.0, 97: 1.0, 98: 1.0, 99: 0.0}
+Iteration 10: New valset pareto front scores: {0: 1.0, 1: 1.0, 2: 1.0, 3: 1.0, 4: 1.0, 5: 1.0, 6: 0.0, 7: 1.0, 8: 0.0, 9: 1.0, 10: 1.0, 11: 1.0, 12: 1.0, 13: 0.0, 14: 0.0, 15: 0.0, 16: 1.0, 17: 1.0, 18: 1.0, 19: 0.0, 20: 1.0, 21: 1.0, 22: 1.0, 23: 0.0, 24: 1.0, 25: 1.0, 26: 1.0, 27: 0.0, 28: 1.0, 29: 1.0, 30: 0.0, 31: 1.0, 32: 1.0, 33: 1.0, 34: 1.0, 35: 1.0, 36: 1.0, 37: 1.0, 38: 1.0, 39: 0.0, 40: 1.0, 41: 1.0, 42: 1.0, 43: 1.0, 44: 1.0, 45: 0.0, 46: 1.0, 47: 1.0, 48: 0.0, 49: 1.0, 50: 1.0, 51: 0.0, 52: 1.0, 53: 1.0, 54: 0.0, 55: 1.0, 56: 1.0, 57: 1.0, 58: 0.0, 59: 1.0, 60: 1.0, 61: 0.0, 62: 0.0, 63: 1.0, 64: 1.0, 65: 1.0, 66: 1.0, 67: 0.0, 68: 1.0, 69: 1.0, 70: 1.0, 71: 0.0, 72: 1.0, 73: 1.0, 74: 0.0, 75: 1.0, 76: 1.0, 77: 1.0, 78: 1.0, 79: 1.0, 80: 1.0, 81: 1.0, 82: 0.0, 83: 1.0, 84: 0.0, 85: 0.0, 86: 1.0, 87: 1.0, 88: 1.0, 89: 1.0, 90: 0.0, 91: 1.0, 92: 0.0, 93: 1.0, 94: 0.0, 95: 1.0, 96: 0.0, 97: 1.0, 98: 1.0, 99: 0.0}
+Iteration 10: Valset pareto front aggregate score: 0.72
+Iteration 10: Updated valset pareto front programs: {0: {0, 1, 2, 3, 4, 5}, 1: {0, 1, 2, 3, 4, 5}, 2: {0, 1, 2, 3, 4, 5}, 3: {0, 1, 2, 3, 4, 5}, 4: {0, 1, 2, 3, 4, 5}, 5: {0, 1, 3, 4, 5}, 6: {0, 1, 2, 3, 4, 5}, 7: {0, 1, 3, 4}, 8: {0, 1, 2, 3, 4, 5}, 9: {0, 1, 2, 3, 4, 5}, 10: {0, 1, 2, 3, 4, 5}, 11: {0, 1, 2, 3, 4, 5}, 12: {0, 2}, 13: {0, 1, 2, 3, 4, 5}, 14: {0, 1, 2, 3, 4, 5}, 15: {0, 1, 2, 3, 4, 5}, 16: {0, 1, 2, 3, 4, 5}, 17: {0, 1, 2, 3, 4, 5}, 18: {0, 1, 2, 3}, 19: {0, 1, 2, 3, 4, 5}, 20: {0, 1, 2, 3, 4, 5}, 21: {0, 1, 2, 3, 4, 5}, 22: {0, 1, 2, 5}, 23: {0, 1, 2, 3, 4, 5}, 24: {0, 1, 2, 3, 4, 5}, 25: {0, 1, 2, 3, 4, 5}, 26: {0, 1, 2, 3, 4, 5}, 27: {0, 1, 2, 3, 4, 5}, 28: {0, 1, 2, 3, 4, 5}, 29: {0, 1, 2, 3, 4, 5}, 30: {0, 1, 2, 3, 4, 5}, 31: {0, 1, 2, 3, 4, 5}, 32: {0, 1, 2, 3, 4, 5}, 33: {0, 1, 2, 3, 4, 5}, 34: {0, 1, 2, 3, 4, 5}, 35: {1, 2, 3, 4, 5}, 36: {0, 1, 2, 3, 4, 5}, 37: {0, 1, 2, 3, 4, 5}, 38: {0, 4, 5}, 39: {0, 1, 2, 3, 4, 5}, 40: {0, 1, 3, 4, 5}, 41: {1, 2, 3}, 42: {0, 1, 2, 3, 4, 5}, 43: {0, 1, 2, 3, 4, 5}, 44: {0, 1, 2, 3, 4, 5}, 45: {0, 1, 2, 3, 4, 5}, 46: {0, 1, 3, 4, 5}, 47: {1, 2, 3, 4, 5}, 48: {0, 1, 2, 3, 4, 5}, 49: {0, 1, 2, 3, 4, 5}, 50: {0, 1, 2, 3, 4, 5}, 51: {0, 1, 2, 3, 4, 5}, 52: {0, 1, 2, 3, 4, 5}, 53: {0, 1, 2, 3, 4, 5}, 54: {0, 1, 2, 3, 4, 5}, 55: {0, 1, 2, 3, 4, 5}, 56: {0, 1, 2, 3, 4, 5}, 57: {4}, 58: {0, 1, 2, 3, 4, 5}, 59: {0, 1, 2, 3, 4, 5}, 60: {0, 1, 2, 3, 4, 5}, 61: {0, 1, 2, 3, 4, 5}, 62: {0, 1, 2, 3, 4, 5}, 63: {0, 1, 2, 3, 4, 5}, 64: {0, 1, 2, 3, 4, 5}, 65: {0, 1, 2, 3, 4, 5}, 66: {0, 1, 2, 3, 4, 5}, 67: {0, 1, 2, 3, 4, 5}, 68: {0, 1, 2, 3, 4, 5}, 69: {0, 1, 2, 3, 4, 5}, 70: {0, 1, 2, 3, 4, 5}, 71: {0, 1, 2, 3, 4, 5}, 72: {0, 1, 2, 3, 4, 5}, 73: {0, 1, 2, 3, 4, 5}, 74: {0, 1, 2, 3, 4, 5}, 75: {0, 3, 4, 5}, 76: {0, 1, 2, 3, 4, 5}, 77: {0, 1, 2, 3, 4, 5}, 78: {0, 1, 2, 3, 4, 5}, 79: {0, 1, 2, 3, 4, 5}, 80: {0, 1, 2, 3, 4, 5}, 81: {0, 1, 2, 3, 4, 5}, 82: {0, 1, 2, 3, 4, 5}, 83: {0, 1, 2, 3, 4, 5}, 84: {0, 1, 2, 3, 4, 5}, 85: {0, 1, 2, 3, 4, 5}, 86: {0, 1, 2, 3, 4, 5}, 87: {0, 1, 2, 3, 4, 5}, 88: {0, 1, 2, 3, 4, 5}, 89: {0, 1, 3, 5}, 90: {0, 1, 2, 3, 4, 5}, 91: {0, 1, 2, 3, 4, 5}, 92: {0, 1, 2, 3, 4, 5}, 93: {0, 1, 2, 3, 4, 5}, 94: {0, 1, 2, 3, 4, 5}, 95: {0, 1, 2, 3, 4, 5}, 96: {0, 1, 2, 3, 4, 5}, 97: {0, 1, 3, 4, 5}, 98: {0, 1, 2, 3, 4, 5}, 99: {0, 1, 2, 3, 4, 5}}
+Iteration 10: Best valset aggregate score so far: 0.68
+Iteration 10: Best program as per aggregate score on valset: 0
+Iteration 10: Best score on valset: 0.68
+Iteration 10: Linear pareto front program index: 0
+Iteration 10: New program candidate index: 5
+Iteration 11: Selected program 3 score: 0.68
+Iteration 11: Proposed new text for instruction: You are assigned the task of emotion classification for short textual statements. Your goal is to read a provided short text and determine which one of six predefined emotion categories most accurately captures the principal emotion expressed in the text.
+
+The only allowed response categories are: anger, fear, joy, love, sadness, surprise.
+
+For each input, you must:
+- Carefully read the text and assess both explicit and implicit emotional content.
+- Take into account subtle cues, sarcasm, irony, and the overall context to infer the intended emotional state.
+- Select the single most appropriate emotion label from the six options above.
+- Output only the chosen category name as plain text; do not provide explanations, additional context, formatting, or punctuation.
+- In cases of ambiguity, select the most probable or dominant emotion based on the implicit and explicit cues.
+
+Important domain-specific notes:
+- Do not label a statement as 'joy' if the text reflects negative or self-deprecating tones, even if positive words are used sarcastically.
+- For statements masquerading as positive through irony or sarcasm, carefully infer whether the underlying feeling is actually negative (such as 'sadness' or 'anger') and choose the label accordingly.
+- Do not assume positivity unless the tone and context are unambiguously positive.
+- Only one label must be provided for each input.
+
+Your classification should emphasize nuanced inference over surface-level meanings. Always choose the most contextually appropriate emotion from: anger, fear, joy, love, sadness, surprise.
+Iteration 11: New subsample score 2.0 is not better than old score 2.0, skipping
+Iteration 12: Selected program 0 score: 0.68
+Iteration 12: Proposed new text for instruction: You are given a task to classify a piece of text into one of six specific emotions: anger, fear, joy, love, sadness, or surprise. The input will be provided as follows:
+
+## text
+<text to classify>
+
+Your job is to carefully analyze the emotion expressed in the text and choose the single most appropriate category from the provided list. Your output should consist of only the label (anger, fear, joy, love, sadness, or surprise) and nothing else.
+
+Important guidelines:
+- Note that subtle distinctions exist between the emotions; for example, 'love' refers to feelings of affection, care, or attachment, especially towards others, while 'joy' indicates a sense of happiness, pleasure, or delight that may not necessarily be connected to affection.
+- When a text describes being admired or the positive feeling from such experiences, unless it clearly implies affection/attachment towards others, it often corresponds to 'joy' rather than 'love'.
+- Feelings of being disturbed, uneasy, or discomforted can sometimes indicate 'sadness' rather than 'fear', unless there is an explicit presence of threat or danger.
+- Always consider the context and underlying sentiment, not just surface words or associations.
+- Only select from the provided categories and do not guess outside the list.
+
+Output the chosen emotion label only—do not repeat the text or provide explanations.
+Iteration 12: New subsample score 0.0 is not better than old score 1.0, skipping
+Iteration 13: Selected program 3 score: 0.68
+Iteration 13: Proposed new text for instruction: You are assigned the task of classifying short text excerpts according to the dominant emotion conveyed. The classification categories are restricted to exactly and only these six emotion labels: anger, fear, joy, love, sadness, surprise. For every input, your response must consist of one and only one of these category names, written plainly without any additional words, explanation, formatting, or punctuation.
+
+Carefully read and interpret the given text. Consider both the explicit wording and any implied or subtle emotional undertones, context, or cues. Pay particular attention to cases where the surface content and the underlying emotional tone might differ, such as sarcastic, ironic, or understated expressions.
+
+The classification should reflect the primary emotional state, as intended or expressed by the text’s author, not simply the most direct or literal reading of the words used.
+
+When ambiguity or complexity is present, choose the emotion most likely to be central, according to both context and emotional indicators (direct or indirect). Do not default to positive categories if the overall affect is negative, and vice versa. It is crucial to respond based on true emotional intent, even if surface-level cues suggest otherwise.
+
+Special notes, based on prior examples:
+- Statements expressing amazement or something unexpectedly good, even if positive, may best fit 'surprise' rather than 'joy'.
+- Attempts to avoid negative feelings by rationalizing or self-soothing—such as talking about not depriving oneself—can often imply 'sadness' beneath the surface, rather than 'joy'.
+- When dealing with mixed or ambiguous emotions, select the emotion that most plausibly characterizes the underlying feeling as reflected by the text’s context.
+
+Summary of strict response format and process:
+1. Read and reflect on the full scope of the text, considering both direct and indirect emotional cues.
+2. Choose the most accurate single emotion from: anger, fear, joy, love, sadness, surprise.
+3. Respond with the category name only; do not add any explanations, justifications, or formatting.
+Iteration 13: New subsample score 3.0 is better than old score 1.0. Continue to full eval and add to candidate pool.
+Iteration 13: Valset score for new program: 0.68 (coverage 100 / 100)
+Iteration 13: Val aggregate for new program: 0.68
+Iteration 13: Individual valset scores for new program: {0: 1.0, 1: 1.0, 2: 1.0, 3: 1.0, 4: 1.0, 5: 1.0, 6: 0.0, 7: 1.0, 8: 0.0, 9: 1.0, 10: 1.0, 11: 1.0, 12: 0.0, 13: 0.0, 14: 0.0, 15: 0.0, 16: 1.0, 17: 1.0, 18: 1.0, 19: 0.0, 20: 1.0, 21: 1.0, 22: 1.0, 23: 0.0, 24: 1.0, 25: 1.0, 26: 1.0, 27: 1.0, 28: 1.0, 29: 1.0, 30: 0.0, 31: 1.0, 32: 1.0, 33: 1.0, 34: 1.0, 35: 1.0, 36: 1.0, 37: 1.0, 38: 0.0, 39: 0.0, 40: 0.0, 41: 1.0, 42: 1.0, 43: 1.0, 44: 1.0, 45: 0.0, 46: 1.0, 47: 1.0, 48: 0.0, 49: 1.0, 50: 1.0, 51: 0.0, 52: 1.0, 53: 1.0, 54: 0.0, 55: 1.0, 56: 1.0, 57: 0.0, 58: 0.0, 59: 1.0, 60: 1.0, 61: 0.0, 62: 0.0, 63: 1.0, 64: 1.0, 65: 1.0, 66: 1.0, 67: 0.0, 68: 1.0, 69: 1.0, 70: 1.0, 71: 0.0, 72: 1.0, 73: 1.0, 74: 0.0, 75: 1.0, 76: 1.0, 77: 1.0, 78: 1.0, 79: 1.0, 80: 1.0, 81: 1.0, 82: 0.0, 83: 1.0, 84: 0.0, 85: 0.0, 86: 1.0, 87: 1.0, 88: 1.0, 89: 0.0, 90: 0.0, 91: 1.0, 92: 0.0, 93: 1.0, 94: 0.0, 95: 1.0, 96: 0.0, 97: 1.0, 98: 1.0, 99: 0.0}
+Iteration 13: New valset pareto front scores: {0: 1.0, 1: 1.0, 2: 1.0, 3: 1.0, 4: 1.0, 5: 1.0, 6: 0.0, 7: 1.0, 8: 0.0, 9: 1.0, 10: 1.0, 11: 1.0, 12: 1.0, 13: 0.0, 14: 0.0, 15: 0.0, 16: 1.0, 17: 1.0, 18: 1.0, 19: 0.0, 20: 1.0, 21: 1.0, 22: 1.0, 23: 0.0, 24: 1.0, 25: 1.0, 26: 1.0, 27: 1.0, 28: 1.0, 29: 1.0, 30: 0.0, 31: 1.0, 32: 1.0, 33: 1.0, 34: 1.0, 35: 1.0, 36: 1.0, 37: 1.0, 38: 1.0, 39: 0.0, 40: 1.0, 41: 1.0, 42: 1.0, 43: 1.0, 44: 1.0, 45: 0.0, 46: 1.0, 47: 1.0, 48: 0.0, 49: 1.0, 50: 1.0, 51: 0.0, 52: 1.0, 53: 1.0, 54: 0.0, 55: 1.0, 56: 1.0, 57: 1.0, 58: 0.0, 59: 1.0, 60: 1.0, 61: 0.0, 62: 0.0, 63: 1.0, 64: 1.0, 65: 1.0, 66: 1.0, 67: 0.0, 68: 1.0, 69: 1.0, 70: 1.0, 71: 0.0, 72: 1.0, 73: 1.0, 74: 0.0, 75: 1.0, 76: 1.0, 77: 1.0, 78: 1.0, 79: 1.0, 80: 1.0, 81: 1.0, 82: 0.0, 83: 1.0, 84: 0.0, 85: 0.0, 86: 1.0, 87: 1.0, 88: 1.0, 89: 1.0, 90: 0.0, 91: 1.0, 92: 0.0, 93: 1.0, 94: 0.0, 95: 1.0, 96: 0.0, 97: 1.0, 98: 1.0, 99: 0.0}
+Iteration 13: Valset pareto front aggregate score: 0.73
+Iteration 13: Updated valset pareto front programs: {0: {0, 1, 2, 3, 4, 5, 6}, 1: {0, 1, 2, 3, 4, 5, 6}, 2: {0, 1, 2, 3, 4, 5, 6}, 3: {0, 1, 2, 3, 4, 5, 6}, 4: {0, 1, 2, 3, 4, 5, 6}, 5: {0, 1, 3, 4, 5, 6}, 6: {0, 1, 2, 3, 4, 5, 6}, 7: {0, 1, 3, 4, 6}, 8: {0, 1, 2, 3, 4, 5, 6}, 9: {0, 1, 2, 3, 4, 5, 6}, 10: {0, 1, 2, 3, 4, 5, 6}, 11: {0, 1, 2, 3, 4, 5, 6}, 12: {0, 2}, 13: {0, 1, 2, 3, 4, 5, 6}, 14: {0, 1, 2, 3, 4, 5, 6}, 15: {0, 1, 2, 3, 4, 5, 6}, 16: {0, 1, 2, 3, 4, 5, 6}, 17: {0, 1, 2, 3, 4, 5, 6}, 18: {0, 1, 2, 3, 6}, 19: {0, 1, 2, 3, 4, 5, 6}, 20: {0, 1, 2, 3, 4, 5, 6}, 21: {0, 1, 2, 3, 4, 5, 6}, 22: {0, 1, 2, 5, 6}, 23: {0, 1, 2, 3, 4, 5, 6}, 24: {0, 1, 2, 3, 4, 5, 6}, 25: {0, 1, 2, 3, 4, 5, 6}, 26: {0, 1, 2, 3, 4, 5, 6}, 27: {6}, 28: {0, 1, 2, 3, 4, 5, 6}, 29: {0, 1, 2, 3, 4, 5, 6}, 30: {0, 1, 2, 3, 4, 5, 6}, 31: {0, 1, 2, 3, 4, 5, 6}, 32: {0, 1, 2, 3, 4, 5, 6}, 33: {0, 1, 2, 3, 4, 5, 6}, 34: {0, 1, 2, 3, 4, 5, 6}, 35: {1, 2, 3, 4, 5, 6}, 36: {0, 1, 2, 3, 4, 5, 6}, 37: {0, 1, 2, 3, 4, 5, 6}, 38: {0, 4, 5}, 39: {0, 1, 2, 3, 4, 5, 6}, 40: {0, 1, 3, 4, 5}, 41: {1, 2, 3, 6}, 42: {0, 1, 2, 3, 4, 5, 6}, 43: {0, 1, 2, 3, 4, 5, 6}, 44: {0, 1, 2, 3, 4, 5, 6}, 45: {0, 1, 2, 3, 4, 5, 6}, 46: {0, 1, 3, 4, 5, 6}, 47: {1, 2, 3, 4, 5, 6}, 48: {0, 1, 2, 3, 4, 5, 6}, 49: {0, 1, 2, 3, 4, 5, 6}, 50: {0, 1, 2, 3, 4, 5, 6}, 51: {0, 1, 2, 3, 4, 5, 6}, 52: {0, 1, 2, 3, 4, 5, 6}, 53: {0, 1, 2, 3, 4, 5, 6}, 54: {0, 1, 2, 3, 4, 5, 6}, 55: {0, 1, 2, 3, 4, 5, 6}, 56: {0, 1, 2, 3, 4, 5, 6}, 57: {4}, 58: {0, 1, 2, 3, 4, 5, 6}, 59: {0, 1, 2, 3, 4, 5, 6}, 60: {0, 1, 2, 3, 4, 5, 6}, 61: {0, 1, 2, 3, 4, 5, 6}, 62: {0, 1, 2, 3, 4, 5, 6}, 63: {0, 1, 2, 3, 4, 5, 6}, 64: {0, 1, 2, 3, 4, 5, 6}, 65: {0, 1, 2, 3, 4, 5, 6}, 66: {0, 1, 2, 3, 4, 5, 6}, 67: {0, 1, 2, 3, 4, 5, 6}, 68: {0, 1, 2, 3, 4, 5, 6}, 69: {0, 1, 2, 3, 4, 5, 6}, 70: {0, 1, 2, 3, 4, 5, 6}, 71: {0, 1, 2, 3, 4, 5, 6}, 72: {0, 1, 2, 3, 4, 5, 6}, 73: {0, 1, 2, 3, 4, 5, 6}, 74: {0, 1, 2, 3, 4, 5, 6}, 75: {0, 3, 4, 5, 6}, 76: {0, 1, 2, 3, 4, 5, 6}, 77: {0, 1, 2, 3, 4, 5, 6}, 78: {0, 1, 2, 3, 4, 5, 6}, 79: {0, 1, 2, 3, 4, 5, 6}, 80: {0, 1, 2, 3, 4, 5, 6}, 81: {0, 1, 2, 3, 4, 5, 6}, 82: {0, 1, 2, 3, 4, 5, 6}, 83: {0, 1, 2, 3, 4, 5, 6}, 84: {0, 1, 2, 3, 4, 5, 6}, 85: {0, 1, 2, 3, 4, 5, 6}, 86: {0, 1, 2, 3, 4, 5, 6}, 87: {0, 1, 2, 3, 4, 5, 6}, 88: {0, 1, 2, 3, 4, 5, 6}, 89: {0, 1, 3, 5}, 90: {0, 1, 2, 3, 4, 5, 6}, 91: {0, 1, 2, 3, 4, 5, 6}, 92: {0, 1, 2, 3, 4, 5, 6}, 93: {0, 1, 2, 3, 4, 5, 6}, 94: {0, 1, 2, 3, 4, 5, 6}, 95: {0, 1, 2, 3, 4, 5, 6}, 96: {0, 1, 2, 3, 4, 5, 6}, 97: {0, 1, 3, 4, 5, 6}, 98: {0, 1, 2, 3, 4, 5, 6}, 99: {0, 1, 2, 3, 4, 5, 6}}
+Iteration 13: Best valset aggregate score so far: 0.68
+Iteration 13: Best program as per aggregate score on valset: 0
+Iteration 13: Best score on valset: 0.68
+Iteration 13: Linear pareto front program index: 0
+Iteration 13: New program candidate index: 6
+Iteration 14: Selected program 0 score: 0.68
+Iteration 14: Proposed new text for instruction: You are given a task in which you need to classify a single piece of input text into one of the following six emotion categories: anger, fear, joy, love, sadness, or surprise. 
+
+The input will be provided to you in JSON or markdown format as follows:
+
+### text
+[some text here]
+
+Your job is to read the provided "text" and determine which one of the specified emotional categories best reflects the overall emotion expressed in the passage. The classification should be based not only on explicit emotion words (like "afraid," "happy," "sad," etc.), but also on the overall tone, context, and nuanced emotional signals that may be present implicitly in the language.
+
+Several key points to consider:
+
+- **Categories**: The only valid labels you can assign are: anger, fear, joy, love, sadness, or surprise. Choose the single best fitting category; do not provide multiple labels or subcategories.
+- **Nuanced Emotion Understanding**: Words or phrases that may signal emotional states can be subtle. For example, feelings of being "victimized," "resentful," or "ripped off," even when accompanied by the word "fearful," may often reflect a deeper sense of "sadness" rather than "fear," especially if the tone is more resigned or sorrowful than anxious.
+- **Scenario Context**: Some situations that at first seem negative (e.g., "I was feeling anything but adventurous and stuck with my comfort zone and ordered McDonald's") may, in context, actually express "joy" (e.g., the comfort and happiness of familiar things) rather than "sadness" (e.g., regret or disappointment).
+- **Pay Attention to Emotional Complexity**: If a text mentions physical or emotional reactions that seem chaotic or negative, interpret which emotion most closely matches the speaker's underlying experience (for instance, persistent feelings of "tension" and being "ripped off" can signal a deeper sadness rather than acute fear).
+- **Format your response**: Your response should be a single word— the name of the emotion category that best fits the text, written in lowercase.
+- **Do not provide explanations or additional commentary**: Only provide the category label.
+
+Summary:
+Read the text carefully, taking into account subtle clues and implied emotional context, and classify the predominant emotion expressed as one of: anger, fear, joy, love, sadness, surprise. Return only the category label as your answer.
+Iteration 14: New subsample score 2.0 is better than old score 0.0. Continue to full eval and add to candidate pool.
+Iteration 14: Valset score for new program: 0.68 (coverage 100 / 100)
+Iteration 14: Val aggregate for new program: 0.68
+Iteration 14: Individual valset scores for new program: {0: 1.0, 1: 1.0, 2: 1.0, 3: 1.0, 4: 1.0, 5: 1.0, 6: 0.0, 7: 0.0, 8: 0.0, 9: 1.0, 10: 1.0, 11: 1.0, 12: 0.0, 13: 0.0, 14: 0.0, 15: 0.0, 16: 1.0, 17: 1.0, 18: 0.0, 19: 0.0, 20: 1.0, 21: 1.0, 22: 1.0, 23: 0.0, 24: 1.0, 25: 1.0, 26: 1.0, 27: 0.0, 28: 1.0, 29: 1.0, 30: 0.0, 31: 1.0, 32: 1.0, 33: 1.0, 34: 1.0, 35: 1.0, 36: 1.0, 37: 1.0, 38: 1.0, 39: 0.0, 40: 1.0, 41: 1.0, 42: 1.0, 43: 1.0, 44: 1.0, 45: 0.0, 46: 1.0, 47: 1.0, 48: 0.0, 49: 1.0, 50: 1.0, 51: 0.0, 52: 1.0, 53: 1.0, 54: 0.0, 55: 1.0, 56: 1.0, 57: 0.0, 58: 0.0, 59: 1.0, 60: 1.0, 61: 0.0, 62: 0.0, 63: 1.0, 64: 1.0, 65: 1.0, 66: 1.0, 67: 0.0, 68: 1.0, 69: 1.0, 70: 1.0, 71: 0.0, 72: 1.0, 73: 1.0, 74: 0.0, 75: 1.0, 76: 1.0, 77: 1.0, 78: 1.0, 79: 1.0, 80: 1.0, 81: 1.0, 82: 0.0, 83: 1.0, 84: 0.0, 85: 0.0, 86: 1.0, 87: 1.0, 88: 1.0, 89: 1.0, 90: 0.0, 91: 1.0, 92: 0.0, 93: 1.0, 94: 0.0, 95: 1.0, 96: 0.0, 97: 1.0, 98: 1.0, 99: 0.0}
+Iteration 14: New valset pareto front scores: {0: 1.0, 1: 1.0, 2: 1.0, 3: 1.0, 4: 1.0, 5: 1.0, 6: 0.0, 7: 1.0, 8: 0.0, 9: 1.0, 10: 1.0, 11: 1.0, 12: 1.0, 13: 0.0, 14: 0.0, 15: 0.0, 16: 1.0, 17: 1.0, 18: 1.0, 19: 0.0, 20: 1.0, 21: 1.0, 22: 1.0, 23: 0.0, 24: 1.0, 25: 1.0, 26: 1.0, 27: 1.0, 28: 1.0, 29: 1.0, 30: 0.0, 31: 1.0, 32: 1.0, 33: 1.0, 34: 1.0, 35: 1.0, 36: 1.0, 37: 1.0, 38: 1.0, 39: 0.0, 40: 1.0, 41: 1.0, 42: 1.0, 43: 1.0, 44: 1.0, 45: 0.0, 46: 1.0, 47: 1.0, 48: 0.0, 49: 1.0, 50: 1.0, 51: 0.0, 52: 1.0, 53: 1.0, 54: 0.0, 55: 1.0, 56: 1.0, 57: 1.0, 58: 0.0, 59: 1.0, 60: 1.0, 61: 0.0, 62: 0.0, 63: 1.0, 64: 1.0, 65: 1.0, 66: 1.0, 67: 0.0, 68: 1.0, 69: 1.0, 70: 1.0, 71: 0.0, 72: 1.0, 73: 1.0, 74: 0.0, 75: 1.0, 76: 1.0, 77: 1.0, 78: 1.0, 79: 1.0, 80: 1.0, 81: 1.0, 82: 0.0, 83: 1.0, 84: 0.0, 85: 0.0, 86: 1.0, 87: 1.0, 88: 1.0, 89: 1.0, 90: 0.0, 91: 1.0, 92: 0.0, 93: 1.0, 94: 0.0, 95: 1.0, 96: 0.0, 97: 1.0, 98: 1.0, 99: 0.0}
+Iteration 14: Valset pareto front aggregate score: 0.73
+Iteration 14: Updated valset pareto front programs: {0: {0, 1, 2, 3, 4, 5, 6, 7}, 1: {0, 1, 2, 3, 4, 5, 6, 7}, 2: {0, 1, 2, 3, 4, 5, 6, 7}, 3: {0, 1, 2, 3, 4, 5, 6, 7}, 4: {0, 1, 2, 3, 4, 5, 6, 7}, 5: {0, 1, 3, 4, 5, 6, 7}, 6: {0, 1, 2, 3, 4, 5, 6, 7}, 7: {0, 1, 3, 4, 6}, 8: {0, 1, 2, 3, 4, 5, 6, 7}, 9: {0, 1, 2, 3, 4, 5, 6, 7}, 10: {0, 1, 2, 3, 4, 5, 6, 7}, 11: {0, 1, 2, 3, 4, 5, 6, 7}, 12: {0, 2}, 13: {0, 1, 2, 3, 4, 5, 6, 7}, 14: {0, 1, 2, 3, 4, 5, 6, 7}, 15: {0, 1, 2, 3, 4, 5, 6, 7}, 16: {0, 1, 2, 3, 4, 5, 6, 7}, 17: {0, 1, 2, 3, 4, 5, 6, 7}, 18: {0, 1, 2, 3, 6}, 19: {0, 1, 2, 3, 4, 5, 6, 7}, 20: {0, 1, 2, 3, 4, 5, 6, 7}, 21: {0, 1, 2, 3, 4, 5, 6, 7}, 22: {0, 1, 2, 5, 6, 7}, 23: {0, 1, 2, 3, 4, 5, 6, 7}, 24: {0, 1, 2, 3, 4, 5, 6, 7}, 25: {0, 1, 2, 3, 4, 5, 6, 7}, 26: {0, 1, 2, 3, 4, 5, 6, 7}, 27: {6}, 28: {0, 1, 2, 3, 4, 5, 6, 7}, 29: {0, 1, 2, 3, 4, 5, 6, 7}, 30: {0, 1, 2, 3, 4, 5, 6, 7}, 31: {0, 1, 2, 3, 4, 5, 6, 7}, 32: {0, 1, 2, 3, 4, 5, 6, 7}, 33: {0, 1, 2, 3, 4, 5, 6, 7}, 34: {0, 1, 2, 3, 4, 5, 6, 7}, 35: {1, 2, 3, 4, 5, 6, 7}, 36: {0, 1, 2, 3, 4, 5, 6, 7}, 37: {0, 1, 2, 3, 4, 5, 6, 7}, 38: {0, 4, 5, 7}, 39: {0, 1, 2, 3, 4, 5, 6, 7}, 40: {0, 1, 3, 4, 5, 7}, 41: {1, 2, 3, 6, 7}, 42: {0, 1, 2, 3, 4, 5, 6, 7}, 43: {0, 1, 2, 3, 4, 5, 6, 7}, 44: {0, 1, 2, 3, 4, 5, 6, 7}, 45: {0, 1, 2, 3, 4, 5, 6, 7}, 46: {0, 1, 3, 4, 5, 6, 7}, 47: {1, 2, 3, 4, 5, 6, 7}, 48: {0, 1, 2, 3, 4, 5, 6, 7}, 49: {0, 1, 2, 3, 4, 5, 6, 7}, 50: {0, 1, 2, 3, 4, 5, 6, 7}, 51: {0, 1, 2, 3, 4, 5, 6, 7}, 52: {0, 1, 2, 3, 4, 5, 6, 7}, 53: {0, 1, 2, 3, 4, 5, 6, 7}, 54: {0, 1, 2, 3, 4, 5, 6, 7}, 55: {0, 1, 2, 3, 4, 5, 6, 7}, 56: {0, 1, 2, 3, 4, 5, 6, 7}, 57: {4}, 58: {0, 1, 2, 3, 4, 5, 6, 7}, 59: {0, 1, 2, 3, 4, 5, 6, 7}, 60: {0, 1, 2, 3, 4, 5, 6, 7}, 61: {0, 1, 2, 3, 4, 5, 6, 7}, 62: {0, 1, 2, 3, 4, 5, 6, 7}, 63: {0, 1, 2, 3, 4, 5, 6, 7}, 64: {0, 1, 2, 3, 4, 5, 6, 7}, 65: {0, 1, 2, 3, 4, 5, 6, 7}, 66: {0, 1, 2, 3, 4, 5, 6, 7}, 67: {0, 1, 2, 3, 4, 5, 6, 7}, 68: {0, 1, 2, 3, 4, 5, 6, 7}, 69: {0, 1, 2, 3, 4, 5, 6, 7}, 70: {0, 1, 2, 3, 4, 5, 6, 7}, 71: {0, 1, 2, 3, 4, 5, 6, 7}, 72: {0, 1, 2, 3, 4, 5, 6, 7}, 73: {0, 1, 2, 3, 4, 5, 6, 7}, 74: {0, 1, 2, 3, 4, 5, 6, 7}, 75: {0, 3, 4, 5, 6, 7}, 76: {0, 1, 2, 3, 4, 5, 6, 7}, 77: {0, 1, 2, 3, 4, 5, 6, 7}, 78: {0, 1, 2, 3, 4, 5, 6, 7}, 79: {0, 1, 2, 3, 4, 5, 6, 7}, 80: {0, 1, 2, 3, 4, 5, 6, 7}, 81: {0, 1, 2, 3, 4, 5, 6, 7}, 82: {0, 1, 2, 3, 4, 5, 6, 7}, 83: {0, 1, 2, 3, 4, 5, 6, 7}, 84: {0, 1, 2, 3, 4, 5, 6, 7}, 85: {0, 1, 2, 3, 4, 5, 6, 7}, 86: {0, 1, 2, 3, 4, 5, 6, 7}, 87: {0, 1, 2, 3, 4, 5, 6, 7}, 88: {0, 1, 2, 3, 4, 5, 6, 7}, 89: {0, 1, 3, 5, 7}, 90: {0, 1, 2, 3, 4, 5, 6, 7}, 91: {0, 1, 2, 3, 4, 5, 6, 7}, 92: {0, 1, 2, 3, 4, 5, 6, 7}, 93: {0, 1, 2, 3, 4, 5, 6, 7}, 94: {0, 1, 2, 3, 4, 5, 6, 7}, 95: {0, 1, 2, 3, 4, 5, 6, 7}, 96: {0, 1, 2, 3, 4, 5, 6, 7}, 97: {0, 1, 3, 4, 5, 6, 7}, 98: {0, 1, 2, 3, 4, 5, 6, 7}, 99: {0, 1, 2, 3, 4, 5, 6, 7}}
+Iteration 14: Best valset aggregate score so far: 0.68
+Iteration 14: Best program as per aggregate score on valset: 0
+Iteration 14: Best score on valset: 0.68
+Iteration 14: Linear pareto front program index: 0
+Iteration 14: New program candidate index: 7
+[done] a_emotion_f1_s40.json: 0.563 ($0.16)
+Iteration 0: Base program full valset score: 0.98 over 100 / 100 examples
+Iteration 1: Selected program 0 score: 0.98
+Iteration 1: All subsample scores perfect. Skipping.
+Iteration 1: Reflective mutation did not propose a new candidate
+Iteration 2: Selected program 0 score: 0.98
+Iteration 2: All subsample scores perfect. Skipping.
+Iteration 2: Reflective mutation did not propose a new candidate
+Iteration 3: Selected program 0 score: 0.98
+Iteration 3: All subsample scores perfect. Skipping.
+Iteration 3: Reflective mutation did not propose a new candidate
+Iteration 4: Selected program 0 score: 0.98
+Iteration 4: All subsample scores perfect. Skipping.
+Iteration 4: Reflective mutation did not propose a new candidate
+Iteration 5: Selected program 0 score: 0.98
+Iteration 5: All subsample scores perfect. Skipping.
+Iteration 5: Reflective mutation did not propose a new candidate
+Iteration 6: Selected program 0 score: 0.98
+Iteration 6: All subsample scores perfect. Skipping.
+Iteration 6: Reflective mutation did not propose a new candidate
+Iteration 7: Selected program 0 score: 0.98
+Iteration 7: All subsample scores perfect. Skipping.
+Iteration 7: Reflective mutation did not propose a new candidate
+Iteration 8: Selected program 0 score: 0.98
+Iteration 8: Proposed new text for instruction: You are given a text input representing a user's request or query. Your task is to classify this text into one of the following predefined categories: alarm, apr, balance, book_flight, book_hotel, calculator, calories, car_rental, cook_time, credit_limit, credit_score, definition, direct_deposit, freeze_account, lost_luggage, meeting_schedule, pay_bill, payday, pto_request, recipe, report_fraud, report_lost_card, restaurant_reservation, restaurant_reviews, rewards_balance, taxes, timer, transfer, travel_suggestion, weather.
+
+- Choose exactly one category that most accurately describes the user's intent based on the provided text.
+- Pay close attention to subtle distinctions between categories, especially those that may seem similar. For example:
+  - If the user's text suggests that their card was stolen or lost (such as "someone stole my card"), classify it as 'report_lost_card', not 'report_fraud'.
+  - Reserve 'report_fraud' for inputs specifically indicating unauthorized or suspicious transactions (e.g., "there's a charge I didn't make").
+- Use the category definitions below to inform your decision:
+  - 'alarm': Setting or querying alarms.
+  - 'apr': Requests about annual percentage rates.
+  - 'balance': Inquiries about account balances.
+  - 'book_flight': Requests to book flights.
+  - 'book_hotel': Requests to book hotels.
+  - 'calculator': Mathematical calculations.
+  - 'calories': Calorie-related queries.
+  - 'car_rental': Requests for car rentals.
+  - 'cook_time': Cooking or baking times.
+  - 'credit_limit': Questions about credit card limits.
+  - 'credit_score': Inquiries about credit scores.
+  - 'definition': Asking for the meaning of a word or term.
+  - 'direct_deposit': Requests or questions about direct deposit.
+  - 'freeze_account': Requests to freeze a bank account.
+  - 'lost_luggage': Issues with luggage during travel.
+  - 'meeting_schedule': Scheduling or inquiring about meetings.
+  - 'pay_bill': Requests or reminders to pay bills.
+  - 'payday': Inquiries about pay dates.
+  - 'pto_request': Requests for paid time off.
+  - 'recipe': Requests for or about recipes.
+  - 'report_fraud': Reporting fraudulent or unauthorized transactions.
+  - 'report_lost_card': Reporting a lost or stolen card.
+  - 'restaurant_reservation': Booking a restaurant.
+  - 'restaurant_reviews': Reviews or ratings of restaurants.
+  - 'rewards_balance': Questions about reward points or balances.
+  - 'taxes': Inquiries about taxes.
+  - 'timer': Setting or querying timers.
+  - 'transfer': Requests to transfer funds.
+  - 'travel_suggestion': Asking for travel recommendations.
+  - 'weather': Questions about weather or forecasts.
+
+- Consider the context and keywords in the user's text to best align it with the most relevant category.
+- Output only the category name, and do not include any additional text or explanation.
+Iteration 8: New subsample score 3.0 is better than old score 2.0. Continue to full eval and add to candidate pool.
+Iteration 8: Found a better program on the valset with score 0.99.
+Iteration 8: Valset score for new program: 0.99 (coverage 100 / 100)
+Iteration 8: Val aggregate for new program: 0.99
+Iteration 8: Individual valset scores for new program: {0: 1.0, 1: 1.0, 2: 1.0, 3: 1.0, 4: 1.0, 5: 1.0, 6: 1.0, 7: 1.0, 8: 1.0, 9: 1.0, 10: 1.0, 11: 0.0, 12: 1.0, 13: 1.0, 14: 1.0, 15: 1.0, 16: 1.0, 17: 1.0, 18: 1.0, 19: 1.0, 20: 1.0, 21: 1.0, 22: 1.0, 23: 1.0, 24: 1.0, 25: 1.0, 26: 1.0, 27: 1.0, 28: 1.0, 29: 1.0, 30: 1.0, 31: 1.0, 32: 1.0, 33: 1.0, 34: 1.0, 35: 1.0, 36: 1.0, 37: 1.0, 38: 1.0, 39: 1.0, 40: 1.0, 41: 1.0, 42: 1.0, 43: 1.0, 44: 1.0, 45: 1.0, 46: 1.0, 47: 1.0, 48: 1.0, 49: 1.0, 50: 1.0, 51: 1.0, 52: 1.0, 53: 1.0, 54: 1.0, 55: 1.0, 56: 1.0, 57: 1.0, 58: 1.0, 59: 1.0, 60: 1.0, 61: 1.0, 62: 1.0, 63: 1.0, 64: 1.0, 65: 1.0, 66: 1.0, 67: 1.0, 68: 1.0, 69: 1.0, 70: 1.0, 71: 1.0, 72: 1.0, 73: 1.0, 74: 1.0, 75: 1.0, 76: 1.0, 77: 1.0, 78: 1.0, 79: 1.0, 80: 1.0, 81: 1.0, 82: 1.0, 83: 1.0, 84: 1.0, 85: 1.0, 86: 1.0, 87: 1.0, 88: 1.0, 89: 1.0, 90: 1.0, 91: 1.0, 92: 1.0, 93: 1.0, 94: 1.0, 95: 1.0, 96: 1.0, 97: 1.0, 98: 1.0, 99: 1.0}
+Iteration 8: New valset pareto front scores: {0: 1.0, 1: 1.0, 2: 1.0, 3: 1.0, 4: 1.0, 5: 1.0, 6: 1.0, 7: 1.0, 8: 1.0, 9: 1.0, 10: 1.0, 11: 0.0, 12: 1.0, 13: 1.0, 14: 1.0, 15: 1.0, 16: 1.0, 17: 1.0, 18: 1.0, 19: 1.0, 20: 1.0, 21: 1.0, 22: 1.0, 23: 1.0, 24: 1.0, 25: 1.0, 26: 1.0, 27: 1.0, 28: 1.0, 29: 1.0, 30: 1.0, 31: 1.0, 32: 1.0, 33: 1.0, 34: 1.0, 35: 1.0, 36: 1.0, 37: 1.0, 38: 1.0, 39: 1.0, 40: 1.0, 41: 1.0, 42: 1.0, 43: 1.0, 44: 1.0, 45: 1.0, 46: 1.0, 47: 1.0, 48: 1.0, 49: 1.0, 50: 1.0, 51: 1.0, 52: 1.0, 53: 1.0, 54: 1.0, 55: 1.0, 56: 1.0, 57: 1.0, 58: 1.0, 59: 1.0, 60: 1.0, 61: 1.0, 62: 1.0, 63: 1.0, 64: 1.0, 65: 1.0, 66: 1.0, 67: 1.0, 68: 1.0, 69: 1.0, 70: 1.0, 71: 1.0, 72: 1.0, 73: 1.0, 74: 1.0, 75: 1.0, 76: 1.0, 77: 1.0, 78: 1.0, 79: 1.0, 80: 1.0, 81: 1.0, 82: 1.0, 83: 1.0, 84: 1.0, 85: 1.0, 86: 1.0, 87: 1.0, 88: 1.0, 89: 1.0, 90: 1.0, 91: 1.0, 92: 1.0, 93: 1.0, 94: 1.0, 95: 1.0, 96: 1.0, 97: 1.0, 98: 1.0, 99: 1.0}
+Iteration 8: Valset pareto front aggregate score: 0.99
+Iteration 8: Updated valset pareto front programs: {0: {0, 1}, 1: {0, 1}, 2: {0, 1}, 3: {0, 1}, 4: {0, 1}, 5: {0, 1}, 6: {0, 1}, 7: {0, 1}, 8: {0, 1}, 9: {0, 1}, 10: {0, 1}, 11: {0, 1}, 12: {0, 1}, 13: {0, 1}, 14: {0, 1}, 15: {0, 1}, 16: {0, 1}, 17: {0, 1}, 18: {0, 1}, 19: {0, 1}, 20: {0, 1}, 21: {0, 1}, 22: {0, 1}, 23: {0, 1}, 24: {0, 1}, 25: {0, 1}, 26: {0, 1}, 27: {0, 1}, 28: {0, 1}, 29: {0, 1}, 30: {0, 1}, 31: {0, 1}, 32: {0, 1}, 33: {0, 1}, 34: {0, 1}, 35: {0, 1}, 36: {0, 1}, 37: {0, 1}, 38: {0, 1}, 39: {0, 1}, 40: {1}, 41: {0, 1}, 42: {0, 1}, 43: {0, 1}, 44: {0, 1}, 45: {0, 1}, 46: {0, 1}, 47: {0, 1}, 48: {0, 1}, 49: {0, 1}, 50: {0, 1}, 51: {0, 1}, 52: {0, 1}, 53: {0, 1}, 54: {0, 1}, 55: {0, 1}, 56: {0, 1}, 57: {0, 1}, 58: {0, 1}, 59: {0, 1}, 60: {0, 1}, 61: {0, 1}, 62: {0, 1}, 63: {0, 1}, 64: {0, 1}, 65: {0, 1}, 66: {0, 1}, 67: {0, 1}, 68: {0, 1}, 69: {0, 1}, 70: {0, 1}, 71: {0, 1}, 72: {0, 1}, 73: {0, 1}, 74: {0, 1}, 75: {0, 1}, 76: {0, 1}, 77: {0, 1}, 78: {0, 1}, 79: {0, 1}, 80: {0, 1}, 81: {0, 1}, 82: {0, 1}, 83: {0, 1}, 84: {0, 1}, 85: {0, 1}, 86: {0, 1}, 87: {0, 1}, 88: {0, 1}, 89: {0, 1}, 90: {0, 1}, 91: {0, 1}, 92: {0, 1}, 93: {0, 1}, 94: {0, 1}, 95: {0, 1}, 96: {0, 1}, 97: {0, 1}, 98: {0, 1}, 99: {0, 1}}
+Iteration 8: Best valset aggregate score so far: 0.99
+Iteration 8: Best program as per aggregate score on valset: 1
+Iteration 8: Best score on valset: 0.99
+Iteration 8: Linear pareto front program index: 1
+Iteration 8: New program candidate index: 1
+Iteration 9: Selected program 1 score: 0.99
+Iteration 9: All subsample scores perfect. Skipping.
+Iteration 9: Reflective mutation did not propose a new candidate
+Iteration 10: Selected program 1 score: 0.99
+Iteration 10: All subsample scores perfect. Skipping.
+Iteration 10: Reflective mutation did not propose a new candidate
+Iteration 11: Selected program 1 score: 0.99
+Iteration 11: All subsample scores perfect. Skipping.
+Iteration 11: Reflective mutation did not propose a new candidate
+Iteration 12: Selected program 1 score: 0.99
+Iteration 12: All subsample scores perfect. Skipping.
+Iteration 12: Reflective mutation did not propose a new candidate
+Iteration 13: Selected program 1 score: 0.99
+Iteration 13: All subsample scores perfect. Skipping.
+Iteration 13: Reflective mutation did not propose a new candidate
+Iteration 14: Selected program 1 score: 0.99
+Iteration 14: All subsample scores perfect. Skipping.
+Iteration 14: Reflective mutation did not propose a new candidate
+Iteration 15: Selected program 1 score: 0.99
+Iteration 15: All subsample scores perfect. Skipping.
+Iteration 15: Reflective mutation did not propose a new candidate
+Iteration 16: Selected program 1 score: 0.99
+Iteration 16: All subsample scores perfect. Skipping.
+Iteration 16: Reflective mutation did not propose a new candidate
+Iteration 17: Selected program 1 score: 0.99
+Iteration 17: All subsample scores perfect. Skipping.
+Iteration 17: Reflective mutation did not propose a new candidate
+Iteration 18: Selected program 1 score: 0.99
+Iteration 18: All subsample scores perfect. Skipping.
+Iteration 18: Reflective mutation did not propose a new candidate
+Iteration 19: Selected program 1 score: 0.99
+Iteration 19: All subsample scores perfect. Skipping.
+Iteration 19: Reflective mutation did not propose a new candidate
+Iteration 20: Selected program 1 score: 0.99
+Iteration 20: All subsample scores perfect. Skipping.
+Iteration 20: Reflective mutation did not propose a new candidate
+Iteration 21: Selected program 1 score: 0.99
+Iteration 21: All subsample scores perfect. Skipping.
+Iteration 21: Reflective mutation did not propose a new candidate
+Iteration 22: Selected program 1 score: 0.99
+Iteration 22: All subsample scores perfect. Skipping.
+Iteration 22: Reflective mutation did not propose a new candidate
+Iteration 23: Selected program 1 score: 0.99
+Iteration 23: All subsample scores perfect. Skipping.
+Iteration 23: Reflective mutation did not propose a new candidate
+Iteration 24: Selected program 1 score: 0.99
+Iteration 24: All subsample scores perfect. Skipping.
+Iteration 24: Reflective mutation did not propose a new candidate
+Iteration 25: Selected program 1 score: 0.99
+Iteration 25: All subsample scores perfect. Skipping.
+Iteration 25: Reflective mutation did not propose a new candidate
+Iteration 26: Selected program 1 score: 0.99
+Iteration 26: All subsample scores perfect. Skipping.
+Iteration 26: Reflective mutation did not propose a new candidate
+Iteration 27: Selected program 1 score: 0.99
+Iteration 27: All subsample scores perfect. Skipping.
+Iteration 27: Reflective mutation did not propose a new candidate
+Iteration 28: Selected program 1 score: 0.99
+Iteration 28: All subsample scores perfect. Skipping.
+Iteration 28: Reflective mutation did not propose a new candidate
+Iteration 29: Selected program 1 score: 0.99
+Iteration 29: All subsample scores perfect. Skipping.
+Iteration 29: Reflective mutation did not propose a new candidate
+Iteration 30: Selected program 1 score: 0.99
+Iteration 30: All subsample scores perfect. Skipping.
+Iteration 30: Reflective mutation did not propose a new candidate
+Iteration 31: Selected program 1 score: 0.99
+Iteration 31: All subsample scores perfect. Skipping.
+Iteration 31: Reflective mutation did not propose a new candidate
+Iteration 32: Selected program 1 score: 0.99
+Iteration 32: All subsample scores perfect. Skipping.
+Iteration 32: Reflective mutation did not propose a new candidate
+Iteration 33: Selected program 1 score: 0.99
+Iteration 33: All subsample scores perfect. Skipping.
+Iteration 33: Reflective mutation did not propose a new candidate
+Iteration 34: Selected program 1 score: 0.99
+Iteration 34: All subsample scores perfect. Skipping.
+Iteration 34: Reflective mutation did not propose a new candidate
+Iteration 35: Selected program 1 score: 0.99
+Iteration 35: All subsample scores perfect. Skipping.
+Iteration 35: Reflective mutation did not propose a new candidate
+Iteration 36: Selected program 1 score: 0.99
+Iteration 36: All subsample scores perfect. Skipping.
+Iteration 36: Reflective mutation did not propose a new candidate
+Iteration 37: Selected program 1 score: 0.99
+Iteration 37: All subsample scores perfect. Skipping.
+Iteration 37: Reflective mutation did not propose a new candidate
+Iteration 38: Selected program 1 score: 0.99
+Iteration 38: All subsample scores perfect. Skipping.
+Iteration 38: Reflective mutation did not propose a new candidate
+Iteration 39: Selected program 1 score: 0.99
+Iteration 39: All subsample scores perfect. Skipping.
+Iteration 39: Reflective mutation did not propose a new candidate
+Iteration 40: Selected program 1 score: 0.99
+Iteration 40: All subsample scores perfect. Skipping.
+Iteration 40: Reflective mutation did not propose a new candidate
+Iteration 41: Selected program 1 score: 0.99
+Iteration 41: All subsample scores perfect. Skipping.
+Iteration 41: Reflective mutation did not propose a new candidate
+Iteration 42: Selected program 1 score: 0.99
+Iteration 42: All subsample scores perfect. Skipping.
+Iteration 42: Reflective mutation did not propose a new candidate
+Iteration 43: Selected program 1 score: 0.99
+Iteration 43: All subsample scores perfect. Skipping.
+Iteration 43: Reflective mutation did not propose a new candidate
+Iteration 44: Selected program 1 score: 0.99
+Iteration 44: All subsample scores perfect. Skipping.
+Iteration 44: Reflective mutation did not propose a new candidate
+Iteration 45: Selected program 1 score: 0.99
+Iteration 45: All subsample scores perfect. Skipping.
+Iteration 45: Reflective mutation did not propose a new candidate
+Iteration 46: Selected program 1 score: 0.99
+Iteration 46: All subsample scores perfect. Skipping.
+Iteration 46: Reflective mutation did not propose a new candidate
+Iteration 47: Selected program 1 score: 0.99
+Iteration 47: All subsample scores perfect. Skipping.
+Iteration 47: Reflective mutation did not propose a new candidate
+Iteration 48: Selected program 1 score: 0.99
+Iteration 48: All subsample scores perfect. Skipping.
+Iteration 48: Reflective mutation did not propose a new candidate
+Iteration 49: Selected program 1 score: 0.99
+Iteration 49: All subsample scores perfect. Skipping.
+Iteration 49: Reflective mutation did not propose a new candidate
+Iteration 50: Selected program 1 score: 0.99
+Iteration 50: All subsample scores perfect. Skipping.
+Iteration 50: Reflective mutation did not propose a new candidate
+Iteration 51: Selected program 1 score: 0.99
+Iteration 51: All subsample scores perfect. Skipping.
+Iteration 51: Reflective mutation did not propose a new candidate
+Iteration 52: Selected program 1 score: 0.99
+Iteration 52: All subsample scores perfect. Skipping.
+Iteration 52: Reflective mutation did not propose a new candidate
+Iteration 53: Selected program 1 score: 0.99
+Iteration 53: All subsample scores perfect. Skipping.
+Iteration 53: Reflective mutation did not propose a new candidate
+Iteration 54: Selected program 1 score: 0.99
+Iteration 54: All subsample scores perfect. Skipping.
+Iteration 54: Reflective mutation did not propose a new candidate
+Iteration 55: Selected program 1 score: 0.99
+Iteration 55: All subsample scores perfect. Skipping.
+Iteration 55: Reflective mutation did not propose a new candidate
+Iteration 56: Selected program 1 score: 0.99
+Iteration 56: All subsample scores perfect. Skipping.
+Iteration 56: Reflective mutation did not propose a new candidate
+Iteration 57: Selected program 1 score: 0.99
+Iteration 57: All subsample scores perfect. Skipping.
+Iteration 57: Reflective mutation did not propose a new candidate
+Iteration 58: Selected program 1 score: 0.99
+Iteration 58: All subsample scores perfect. Skipping.
+Iteration 58: Reflective mutation did not propose a new candidate
+Iteration 59: Selected program 1 score: 0.99
+Iteration 59: All subsample scores perfect. Skipping.
+Iteration 59: Reflective mutation did not propose a new candidate
+Iteration 60: Selected program 1 score: 0.99
+Iteration 60: All subsample scores perfect. Skipping.
+Iteration 60: Reflective mutation did not propose a new candidate
+Iteration 61: Selected program 1 score: 0.99
+Iteration 61: All subsample scores perfect. Skipping.
+Iteration 61: Reflective mutation did not propose a new candidate
+Iteration 62: Selected program 1 score: 0.99
+Iteration 62: All subsample scores perfect. Skipping.
+Iteration 62: Reflective mutation did not propose a new candidate
+Iteration 63: Selected program 1 score: 0.99
+Iteration 63: All subsample scores perfect. Skipping.
+Iteration 63: Reflective mutation did not propose a new candidate
+Iteration 64: Selected program 1 score: 0.99
+Iteration 64: All subsample scores perfect. Skipping.
+Iteration 64: Reflective mutation did not propose a new candidate
+Iteration 65: Selected program 1 score: 0.99
+Iteration 65: All subsample scores perfect. Skipping.
+Iteration 65: Reflective mutation did not propose a new candidate
+Iteration 66: Selected program 1 score: 0.99
+Iteration 66: All subsample scores perfect. Skipping.
+Iteration 66: Reflective mutation did not propose a new candidate
+Iteration 67: Selected program 1 score: 0.99
+Iteration 67: All subsample scores perfect. Skipping.
+Iteration 67: Reflective mutation did not propose a new candidate
+Iteration 68: Selected program 1 score: 0.99
+Iteration 68: All subsample scores perfect. Skipping.
+Iteration 68: Reflective mutation did not propose a new candidate
+Iteration 69: Selected program 1 score: 0.99
+Iteration 69: All subsample scores perfect. Skipping.
+Iteration 69: Reflective mutation did not propose a new candidate
+Iteration 70: Selected program 1 score: 0.99
+Iteration 70: All subsample scores perfect. Skipping.
+Iteration 70: Reflective mutation did not propose a new candidate
+Iteration 71: Selected program 1 score: 0.99
+Iteration 71: All subsample scores perfect. Skipping.
+Iteration 71: Reflective mutation did not propose a new candidate
+Iteration 72: Selected program 1 score: 0.99
+Iteration 72: All subsample scores perfect. Skipping.
+Iteration 72: Reflective mutation did not propose a new candidate
+Iteration 73: Selected program 1 score: 0.99
+Iteration 73: All subsample scores perfect. Skipping.
+Iteration 73: Reflective mutation did not propose a new candidate
+Iteration 74: Selected program 1 score: 0.99
+Iteration 74: All subsample scores perfect. Skipping.
+Iteration 74: Reflective mutation did not propose a new candidate
+Iteration 75: Selected program 1 score: 0.99
+Iteration 75: All subsample scores perfect. Skipping.
+Iteration 75: Reflective mutation did not propose a new candidate
+Iteration 76: Selected program 1 score: 0.99
+Iteration 76: All subsample scores perfect. Skipping.
+Iteration 76: Reflective mutation did not propose a new candidate
+Iteration 77: Selected program 1 score: 0.99
+Iteration 77: All subsample scores perfect. Skipping.
+Iteration 77: Reflective mutation did not propose a new candidate
+Iteration 78: Selected program 1 score: 0.99
+Iteration 78: All subsample scores perfect. Skipping.
+Iteration 78: Reflective mutation did not propose a new candidate
+Iteration 79: Selected program 1 score: 0.99
+Iteration 79: All subsample scores perfect. Skipping.
+Iteration 79: Reflective mutation did not propose a new candidate
+Iteration 80: Selected program 1 score: 0.99
+Iteration 80: All subsample scores perfect. Skipping.
+Iteration 80: Reflective mutation did not propose a new candidate
+Iteration 81: Selected program 1 score: 0.99
+Iteration 81: All subsample scores perfect. Skipping.
+Iteration 81: Reflective mutation did not propose a new candidate
+Iteration 82: Selected program 1 score: 0.99
+Iteration 82: All subsample scores perfect. Skipping.
+Iteration 82: Reflective mutation did not propose a new candidate
+Iteration 83: Selected program 1 score: 0.99
+Iteration 83: All subsample scores perfect. Skipping.
+Iteration 83: Reflective mutation did not propose a new candidate
+Iteration 84: Selected program 1 score: 0.99
+Iteration 84: All subsample scores perfect. Skipping.
+Iteration 84: Reflective mutation did not propose a new candidate
+Iteration 85: Selected program 1 score: 0.99
+Iteration 85: All subsample scores perfect. Skipping.
+Iteration 85: Reflective mutation did not propose a new candidate
+Iteration 86: Selected program 1 score: 0.99
+Iteration 86: All subsample scores perfect. Skipping.
+Iteration 86: Reflective mutation did not propose a new candidate
+Iteration 87: Selected program 1 score: 0.99
+Iteration 87: All subsample scores perfect. Skipping.
+Iteration 87: Reflective mutation did not propose a new candidate
+Iteration 88: Selected program 1 score: 0.99
+Iteration 88: All subsample scores perfect. Skipping.
+Iteration 88: Reflective mutation did not propose a new candidate
+Iteration 89: Selected program 1 score: 0.99
+Iteration 89: All subsample scores perfect. Skipping.
+Iteration 89: Reflective mutation did not propose a new candidate
+Iteration 90: Selected program 1 score: 0.99
+Iteration 90: All subsample scores perfect. Skipping.
+Iteration 90: Reflective mutation did not propose a new candidate
+Iteration 91: Selected program 1 score: 0.99
+Iteration 91: All subsample scores perfect. Skipping.
+Iteration 91: Reflective mutation did not propose a new candidate
+Iteration 92: Selected program 1 score: 0.99
+Iteration 92: All subsample scores perfect. Skipping.
+Iteration 92: Reflective mutation did not propose a new candidate
+Iteration 93: Selected program 1 score: 0.99
+Iteration 93: All subsample scores perfect. Skipping.
+Iteration 93: Reflective mutation did not propose a new candidate
+Iteration 94: Selected program 1 score: 0.99
+Iteration 94: All subsample scores perfect. Skipping.
+Iteration 94: Reflective mutation did not propose a new candidate
+Iteration 95: Selected program 1 score: 0.99
+Iteration 95: All subsample scores perfect. Skipping.
+Iteration 95: Reflective mutation did not propose a new candidate
+Iteration 96: Selected program 1 score: 0.99
+Iteration 96: All subsample scores perfect. Skipping.
+Iteration 96: Reflective mutation did not propose a new candidate
+Iteration 97: Selected program 1 score: 0.99
+Iteration 97: All subsample scores perfect. Skipping.
+Iteration 97: Reflective mutation did not propose a new candidate
+Iteration 98: Selected program 1 score: 0.99
+Iteration 98: All subsample scores perfect. Skipping.
+Iteration 98: Reflective mutation did not propose a new candidate
+Iteration 99: Selected program 1 score: 0.99
+Iteration 99: All subsample scores perfect. Skipping.
+Iteration 99: Reflective mutation did not propose a new candidate
+Iteration 100: Selected program 1 score: 0.99
+Iteration 100: All subsample scores perfect. Skipping.
+Iteration 100: Reflective mutation did not propose a new candidate
+Iteration 101: Selected program 1 score: 0.99
+Iteration 101: All subsample scores perfect. Skipping.
+Iteration 101: Reflective mutation did not propose a new candidate
+Iteration 102: Selected program 1 score: 0.99
+Iteration 102: All subsample scores perfect. Skipping.
+Iteration 102: Reflective mutation did not propose a new candidate
+Iteration 103: Selected program 1 score: 0.99
+Iteration 103: All subsample scores perfect. Skipping.
+Iteration 103: Reflective mutation did not propose a new candidate
+Iteration 104: Selected program 1 score: 0.99
+Iteration 104: All subsample scores perfect. Skipping.
+Iteration 104: Reflective mutation did not propose a new candidate
+Iteration 105: Selected program 1 score: 0.99
+Iteration 105: All subsample scores perfect. Skipping.
+Iteration 105: Reflective mutation did not propose a new candidate
+Iteration 106: Selected program 1 score: 0.99
+Iteration 106: All subsample scores perfect. Skipping.
+Iteration 106: Reflective mutation did not propose a new candidate
+Iteration 107: Selected program 1 score: 0.99
+Iteration 107: All subsample scores perfect. Skipping.
+Iteration 107: Reflective mutation did not propose a new candidate
+Iteration 108: Selected program 1 score: 0.99
+Iteration 108: All subsample scores perfect. Skipping.
+Iteration 108: Reflective mutation did not propose a new candidate
+Iteration 109: Selected program 1 score: 0.99
+Iteration 109: All subsample scores perfect. Skipping.
+Iteration 109: Reflective mutation did not propose a new candidate
+Iteration 110: Selected program 1 score: 0.99
+Iteration 110: All subsample scores perfect. Skipping.
+Iteration 110: Reflective mutation did not propose a new candidate
+Iteration 111: Selected program 1 score: 0.99
+Iteration 111: All subsample scores perfect. Skipping.
+Iteration 111: Reflective mutation did not propose a new candidate
+Iteration 112: Selected program 1 score: 0.99
+Iteration 112: All subsample scores perfect. Skipping.
+Iteration 112: Reflective mutation did not propose a new candidate
+Iteration 113: Selected program 1 score: 0.99
+Iteration 113: All subsample scores perfect. Skipping.
+Iteration 113: Reflective mutation did not propose a new candidate
+Iteration 114: Selected program 1 score: 0.99
+Iteration 114: All subsample scores perfect. Skipping.
+Iteration 114: Reflective mutation did not propose a new candidate
+Iteration 115: Selected program 1 score: 0.99
+Iteration 115: All subsample scores perfect. Skipping.
+Iteration 115: Reflective mutation did not propose a new candidate
+Iteration 116: Selected program 1 score: 0.99
+Iteration 116: All subsample scores perfect. Skipping.
+Iteration 116: Reflective mutation did not propose a new candidate
+Iteration 117: Selected program 1 score: 0.99
+Iteration 117: All subsample scores perfect. Skipping.
+Iteration 117: Reflective mutation did not propose a new candidate
+Iteration 118: Selected program 1 score: 0.99
+Iteration 118: All subsample scores perfect. Skipping.
+Iteration 118: Reflective mutation did not propose a new candidate
+Iteration 119: Selected program 1 score: 0.99
+Iteration 119: All subsample scores perfect. Skipping.
+Iteration 119: Reflective mutation did not propose a new candidate
+Iteration 120: Selected program 1 score: 0.99
+Iteration 120: All subsample scores perfect. Skipping.
+Iteration 120: Reflective mutation did not propose a new candidate
+Iteration 121: Selected program 1 score: 0.99
+Iteration 121: All subsample scores perfect. Skipping.
+Iteration 121: Reflective mutation did not propose a new candidate
+Iteration 122: Selected program 1 score: 0.99
+Iteration 122: All subsample scores perfect. Skipping.
+Iteration 122: Reflective mutation did not propose a new candidate
+Iteration 123: Selected program 1 score: 0.99
+Iteration 123: All subsample scores perfect. Skipping.
+Iteration 123: Reflective mutation did not propose a new candidate
+Iteration 124: Selected program 1 score: 0.99
+Iteration 124: All subsample scores perfect. Skipping.
+Iteration 124: Reflective mutation did not propose a new candidate
+Iteration 125: Selected program 1 score: 0.99
+Iteration 125: All subsample scores perfect. Skipping.
+Iteration 125: Reflective mutation did not propose a new candidate
+Iteration 126: Selected program 1 score: 0.99
+Iteration 126: All subsample scores perfect. Skipping.
+Iteration 126: Reflective mutation did not propose a new candidate
+Iteration 127: Selected program 1 score: 0.99
+Iteration 127: All subsample scores perfect. Skipping.
+Iteration 127: Reflective mutation did not propose a new candidate
+Iteration 128: Selected program 1 score: 0.99
+Iteration 128: All subsample scores perfect. Skipping.
+Iteration 128: Reflective mutation did not propose a new candidate
+Iteration 129: Selected program 1 score: 0.99
+Iteration 129: All subsample scores perfect. Skipping.
+Iteration 129: Reflective mutation did not propose a new candidate
+Iteration 130: Selected program 1 score: 0.99
+Iteration 130: All subsample scores perfect. Skipping.
+Iteration 130: Reflective mutation did not propose a new candidate
+Iteration 131: Selected program 1 score: 0.99
+Iteration 131: All subsample scores perfect. Skipping.
+Iteration 131: Reflective mutation did not propose a new candidate
+Iteration 132: Selected program 1 score: 0.99
+Iteration 132: All subsample scores perfect. Skipping.
+Iteration 132: Reflective mutation did not propose a new candidate
+Iteration 133: Selected program 1 score: 0.99
+Iteration 133: All subsample scores perfect. Skipping.
+Iteration 133: Reflective mutation did not propose a new candidate
+Iteration 134: Selected program 1 score: 0.99
+Iteration 134: All subsample scores perfect. Skipping.
+Iteration 134: Reflective mutation did not propose a new candidate
+Iteration 135: Selected program 1 score: 0.99
+Iteration 135: All subsample scores perfect. Skipping.
+Iteration 135: Reflective mutation did not propose a new candidate
+Iteration 136: Selected program 1 score: 0.99
+Iteration 136: All subsample scores perfect. Skipping.
+Iteration 136: Reflective mutation did not propose a new candidate
+Iteration 137: Selected program 1 score: 0.99
+Iteration 137: All subsample scores perfect. Skipping.
+Iteration 137: Reflective mutation did not propose a new candidate
+Iteration 138: Selected program 1 score: 0.99
+Iteration 138: All subsample scores perfect. Skipping.
+Iteration 138: Reflective mutation did not propose a new candidate
+Iteration 139: Selected program 1 score: 0.99
+Iteration 139: All subsample scores perfect. Skipping.
+Iteration 139: Reflective mutation did not propose a new candidate
+Iteration 140: Selected program 1 score: 0.99
+Iteration 140: All subsample scores perfect. Skipping.
+Iteration 140: Reflective mutation did not propose a new candidate
+Iteration 141: Selected program 1 score: 0.99
+Iteration 141: All subsample scores perfect. Skipping.
+Iteration 141: Reflective mutation did not propose a new candidate
+Iteration 142: Selected program 1 score: 0.99
+Iteration 142: All subsample scores perfect. Skipping.
+Iteration 142: Reflective mutation did not propose a new candidate
+Iteration 143: Selected program 1 score: 0.99
+Iteration 143: All subsample scores perfect. Skipping.
+Iteration 143: Reflective mutation did not propose a new candidate
+Iteration 144: Selected program 1 score: 0.99
+Iteration 144: All subsample scores perfect. Skipping.
+Iteration 144: Reflective mutation did not propose a new candidate
+Iteration 145: Selected program 1 score: 0.99
+Iteration 145: All subsample scores perfect. Skipping.
+Iteration 145: Reflective mutation did not propose a new candidate
+Iteration 146: Selected program 1 score: 0.99
+Iteration 146: All subsample scores perfect. Skipping.
+Iteration 146: Reflective mutation did not propose a new candidate
+Iteration 147: Selected program 1 score: 0.99
+Iteration 147: All subsample scores perfect. Skipping.
+Iteration 147: Reflective mutation did not propose a new candidate
+Iteration 148: Selected program 1 score: 0.99
+Iteration 148: All subsample scores perfect. Skipping.
+Iteration 148: Reflective mutation did not propose a new candidate
+Iteration 149: Selected program 1 score: 0.99
+Iteration 149: All subsample scores perfect. Skipping.
+Iteration 149: Reflective mutation did not propose a new candidate
+Iteration 150: Selected program 1 score: 0.99
+Iteration 150: All subsample scores perfect. Skipping.
+Iteration 150: Reflective mutation did not propose a new candidate
+Iteration 151: Selected program 1 score: 0.99
+Iteration 151: All subsample scores perfect. Skipping.
+Iteration 151: Reflective mutation did not propose a new candidate
+Iteration 152: Selected program 1 score: 0.99
+Iteration 152: All subsample scores perfect. Skipping.
+Iteration 152: Reflective mutation did not propose a new candidate
+Iteration 153: Selected program 1 score: 0.99
+Iteration 153: All subsample scores perfect. Skipping.
+Iteration 153: Reflective mutation did not propose a new candidate
+Iteration 154: Selected program 1 score: 0.99
+Iteration 154: All subsample scores perfect. Skipping.
+Iteration 154: Reflective mutation did not propose a new candidate
+Iteration 155: Selected program 1 score: 0.99
+Iteration 155: All subsample scores perfect. Skipping.
+Iteration 155: Reflective mutation did not propose a new candidate
+Iteration 156: Selected program 1 score: 0.99
+Iteration 156: All subsample scores perfect. Skipping.
+Iteration 156: Reflective mutation did not propose a new candidate
+Iteration 157: Selected program 1 score: 0.99
+Iteration 157: All subsample scores perfect. Skipping.
+Iteration 157: Reflective mutation did not propose a new candidate
+Iteration 158: Selected program 1 score: 0.99
+Iteration 158: All subsample scores perfect. Skipping.
+Iteration 158: Reflective mutation did not propose a new candidate
+Iteration 159: Selected program 1 score: 0.99
+Iteration 159: All subsample scores perfect. Skipping.
+Iteration 159: Reflective mutation did not propose a new candidate
+Iteration 160: Selected program 1 score: 0.99
+Iteration 160: All subsample scores perfect. Skipping.
+Iteration 160: Reflective mutation did not propose a new candidate
+Iteration 161: Selected program 1 score: 0.99
+Iteration 161: All subsample scores perfect. Skipping.
+Iteration 161: Reflective mutation did not propose a new candidate
+Iteration 162: Selected program 1 score: 0.99
+Iteration 162: All subsample scores perfect. Skipping.
+Iteration 162: Reflective mutation did not propose a new candidate
+Iteration 163: Selected program 1 score: 0.99
+Iteration 163: All subsample scores perfect. Skipping.
+Iteration 163: Reflective mutation did not propose a new candidate
+Iteration 164: Selected program 1 score: 0.99
+Iteration 164: All subsample scores perfect. Skipping.
+Iteration 164: Reflective mutation did not propose a new candidate
+Iteration 165: Selected program 1 score: 0.99
+Iteration 165: All subsample scores perfect. Skipping.
+Iteration 165: Reflective mutation did not propose a new candidate
+Iteration 166: Selected program 1 score: 0.99
+Iteration 166: All subsample scores perfect. Skipping.
+Iteration 166: Reflective mutation did not propose a new candidate
+Iteration 167: Selected program 1 score: 0.99
+Iteration 167: All subsample scores perfect. Skipping.
+Iteration 167: Reflective mutation did not propose a new candidate
+Iteration 168: Selected program 1 score: 0.99
+Iteration 168: All subsample scores perfect. Skipping.
+Iteration 168: Reflective mutation did not propose a new candidate
+Iteration 169: Selected program 1 score: 0.99
+Iteration 169: All subsample scores perfect. Skipping.
+Iteration 169: Reflective mutation did not propose a new candidate
+Iteration 170: Selected program 1 score: 0.99
+Iteration 170: All subsample scores perfect. Skipping.
+Iteration 170: Reflective mutation did not propose a new candidate
+Iteration 171: Selected program 1 score: 0.99
+Iteration 171: All subsample scores perfect. Skipping.
+Iteration 171: Reflective mutation did not propose a new candidate
+Iteration 172: Selected program 1 score: 0.99
+Iteration 172: All subsample scores perfect. Skipping.
+Iteration 172: Reflective mutation did not propose a new candidate
+Iteration 173: Selected program 1 score: 0.99
+Iteration 173: All subsample scores perfect. Skipping.
+Iteration 173: Reflective mutation did not propose a new candidate
+Iteration 174: Selected program 1 score: 0.99
+Iteration 174: All subsample scores perfect. Skipping.
+Iteration 174: Reflective mutation did not propose a new candidate
+Iteration 175: Selected program 1 score: 0.99
+Iteration 175: All subsample scores perfect. Skipping.
+Iteration 175: Reflective mutation did not propose a new candidate
+Iteration 176: Selected program 1 score: 0.99
+Iteration 176: All subsample scores perfect. Skipping.
+Iteration 176: Reflective mutation did not propose a new candidate
+Iteration 177: Selected program 1 score: 0.99
+Iteration 177: All subsample scores perfect. Skipping.
+Iteration 177: Reflective mutation did not propose a new candidate
+Iteration 178: Selected program 1 score: 0.99
+Iteration 178: All subsample scores perfect. Skipping.
+Iteration 178: Reflective mutation did not propose a new candidate
+Iteration 179: Selected program 1 score: 0.99
+Iteration 179: All subsample scores perfect. Skipping.
+Iteration 179: Reflective mutation did not propose a new candidate
+Iteration 180: Selected program 1 score: 0.99
+Iteration 180: All subsample scores perfect. Skipping.
+Iteration 180: Reflective mutation did not propose a new candidate
+Iteration 181: Selected program 1 score: 0.99
+Iteration 181: All subsample scores perfect. Skipping.
+Iteration 181: Reflective mutation did not propose a new candidate
+Iteration 182: Selected program 1 score: 0.99
+Iteration 182: All subsample scores perfect. Skipping.
+Iteration 182: Reflective mutation did not propose a new candidate
+Iteration 183: Selected program 1 score: 0.99
+Iteration 183: All subsample scores perfect. Skipping.
+Iteration 183: Reflective mutation did not propose a new candidate
+Iteration 184: Selected program 1 score: 0.99
+Iteration 184: All subsample scores perfect. Skipping.
+Iteration 184: Reflective mutation did not propose a new candidate
+Iteration 185: Selected program 1 score: 0.99
+Iteration 185: All subsample scores perfect. Skipping.
+Iteration 185: Reflective mutation did not propose a new candidate
+Iteration 186: Selected program 1 score: 0.99
+Iteration 186: All subsample scores perfect. Skipping.
+Iteration 186: Reflective mutation did not propose a new candidate
+Iteration 187: Selected program 1 score: 0.99
+Iteration 187: All subsample scores perfect. Skipping.
+Iteration 187: Reflective mutation did not propose a new candidate
+Iteration 188: Selected program 1 score: 0.99
+Iteration 188: All subsample scores perfect. Skipping.
+Iteration 188: Reflective mutation did not propose a new candidate
+Iteration 189: Selected program 1 score: 0.99
+Iteration 189: All subsample scores perfect. Skipping.
+Iteration 189: Reflective mutation did not propose a new candidate
+Iteration 190: Selected program 1 score: 0.99
+Iteration 190: All subsample scores perfect. Skipping.
+Iteration 190: Reflective mutation did not propose a new candidate
+Iteration 191: Selected program 1 score: 0.99
+Iteration 191: All subsample scores perfect. Skipping.
+Iteration 191: Reflective mutation did not propose a new candidate
+Iteration 192: Selected program 1 score: 0.99
+Iteration 192: All subsample scores perfect. Skipping.
+Iteration 192: Reflective mutation did not propose a new candidate
+Iteration 193: Selected program 1 score: 0.99
+Iteration 193: All subsample scores perfect. Skipping.
+Iteration 193: Reflective mutation did not propose a new candidate
+Iteration 194: Selected program 1 score: 0.99
+Iteration 194: All subsample scores perfect. Skipping.
+Iteration 194: Reflective mutation did not propose a new candidate
+Iteration 195: Selected program 1 score: 0.99
+Iteration 195: All subsample scores perfect. Skipping.
+Iteration 195: Reflective mutation did not propose a new candidate
+Iteration 196: Selected program 1 score: 0.99
+Iteration 196: All subsample scores perfect. Skipping.
+Iteration 196: Reflective mutation did not propose a new candidate
+Iteration 197: Selected program 1 score: 0.99
+Iteration 197: All subsample scores perfect. Skipping.
+Iteration 197: Reflective mutation did not propose a new candidate
+Iteration 198: Selected program 1 score: 0.99
+Iteration 198: All subsample scores perfect. Skipping.
+Iteration 198: Reflective mutation did not propose a new candidate
+Iteration 199: Selected program 1 score: 0.99
+Iteration 199: All subsample scores perfect. Skipping.
+Iteration 199: Reflective mutation did not propose a new candidate
+[done] a_clinc150_f1_s40.json: 0.983 ($0.15)
+f1: distilled 16 lessons

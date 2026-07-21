@@ -1,0 +1,38 @@
+{
+ "arm": "full",
+ "switch": null,
+ "task": "trec",
+ "seed": 30,
+ "budget": 800,
+ "test_accuracy": 0.9067,
+ "test_macro_f1": 0.8998,
+ "dev_accuracy": 0.84,
+ "notes": "rejected 3 exemplars (quarantined dev 0.856 <= 0.866 + noise floor 0.035)",
+ "curve": [
+  {
+   "metric_calls": 0,
+   "dev_score": 0.53
+  },
+  {
+   "metric_calls": 106,
+   "dev_score": 0.73
+  },
+  {
+   "metric_calls": 251,
+   "dev_score": 0.74
+  },
+  {
+   "metric_calls": 405,
+   "dev_score": 0.69
+  },
+  {
+   "metric_calls": 511,
+   "dev_score": 0.83
+  },
+  {
+   "metric_calls": 683,
+   "dev_score": 0.84
+  }
+ ],
+ "cost_usd": 0.2103
+}

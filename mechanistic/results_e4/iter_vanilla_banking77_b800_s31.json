@@ -1,0 +1,43 @@
+{
+ "arm": "vanilla",
+ "task": "banking77",
+ "seed": 31,
+ "budget": 800,
+ "test_accuracy": 0.83,
+ "cost_usd": 0.0,
+ "source": "reused-e1",
+ "curve": [
+  {
+   "metric_calls": 0,
+   "dev": 0.8
+  },
+  {
+   "metric_calls": 106,
+   "dev": 0.8
+  },
+  {
+   "metric_calls": 218,
+   "dev": 0.81
+  },
+  {
+   "metric_calls": 327,
+   "dev": 0.83
+  },
+  {
+   "metric_calls": 439,
+   "dev": 0.78
+  },
+  {
+   "metric_calls": 545,
+   "dev": 0.82
+  },
+  {
+   "metric_calls": 663,
+   "dev": 0.82
+  },
+  {
+   "metric_calls": 769,
+   "dev": 0.86
+  }
+ ]
+}

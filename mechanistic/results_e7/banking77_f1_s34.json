@@ -1,0 +1,50 @@
+{
+ "experiment": "e7",
+ "task": "banking77",
+ "family": "f1",
+ "seed": 34,
+ "screen_accs": [
+  0.72,
+  0.72,
+  0.68,
+  0.76
+ ],
+ "winner_k": 3,
+ "winner_screen_acc": 0.76,
+ "round1_dev_first_full": 0.81,
+ "best_dev": 0.88,
+ "test_accuracy": 0.83,
+ "budget_screen_spent": 124,
+ "budget_gepa": 676,
+ "cost_usd": 0.5353,
+ "curve": [
+  {
+   "metric_calls": 124,
+   "dev": 0.81
+  },
+  {
+   "metric_calls": 233,
+   "dev": 0.84
+  },
+  {
+   "metric_calls": 342,
+   "dev": 0.81
+  },
+  {
+   "metric_calls": 451,
+   "dev": 0.83
+  },
+  {
+   "metric_calls": 575,
+   "dev": 0.86
+  },
+  {
+   "metric_calls": 681,
+   "dev": 0.81
+  },
+  {
+   "metric_calls": 802,
+   "dev": 0.88
+  }
+ ]
+}

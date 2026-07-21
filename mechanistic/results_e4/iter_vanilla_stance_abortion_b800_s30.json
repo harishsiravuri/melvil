@@ -1,0 +1,42 @@
+{
+ "arm": "vanilla",
+ "switch": null,
+ "task": "stance_abortion",
+ "seed": 30,
+ "budget": 800,
+ "test_accuracy": 0.6214,
+ "test_macro_f1": 0.5975,
+ "dev_accuracy": 0.82,
+ "notes": "",
+ "curve": [
+  {
+   "metric_calls": 0,
+   "dev_score": 0.43
+  },
+  {
+   "metric_calls": 106,
+   "dev_score": 0.72
+  },
+  {
+   "metric_calls": 218,
+   "dev_score": 0.82
+  },
+  {
+   "metric_calls": 333,
+   "dev_score": 0.82
+  },
+  {
+   "metric_calls": 439,
+   "dev_score": 0.77
+  },
+  {
+   "metric_calls": 605,
+   "dev_score": 0.74
+  },
+  {
+   "metric_calls": 717,
+   "dev_score": 0.74
+  }
+ ],
+ "cost_usd": 0.2521
+}

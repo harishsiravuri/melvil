@@ -1,0 +1,33 @@
+{
+ "blob_dev": 0.86,
+ "decomposed_dev": 0.85,
+ "components": {
+  "task_instruction": "You are assigned to classify user queries related to digital banking into the most precise and technical single category label, chosen from a provided list.\n\nEach user query is received in the following format:\n\nInput Format:",
+  "label::automatic_top_up": "",
+  "label::balance_not_updated_after_bank_transfer": "For transfer and balance-related issues:\n- `balance_not_updated_after_bank_transfer`: Use when the issue is that a transfer is not yet reflected in the account balance, even if the transfer is pending or user is unsure if it's finalized. This is the default for \u201cI did a transfer, but don't see it.\u201d\n\n\u2018pending_transfer\u2019 is ONLY for queries explicitly focused on the pending status; balance update issues default to \u2018balance_not_updated_after_bank_transfer.\u2019",
+  "label::beneficiary_not_allowed": "",
+  "label::cancel_transfer": "",
+  "label::card_payment_fee_charged": "",
+  "label::card_payment_not_recognised": "",
+  "label::declined_cash_withdrawal": "",
+  "label::exchange_rate": "For exchange:\n- `exchange_rate`: Pick ONLY for questions about conversion rates or costs, not the process.",
+  "label::exchange_via_app": "For exchange:\n- `exchange_via_app`: Select if the user describes converting balance between currencies in the app.",
+  "label::failed_transfer": "",
+  "label::get_disposable_virtual_card": "",
+  "label::get_physical_card": "For PIN, debit/credit card, or access issues, distinguish between:\n- `get_physical_card` (queries about obtaining a pin number/physical card or card-related activation)\n\nRemember \u201cPIN\u201d or access queries are usually about \u2018get_physical_card\u2019 unless specifically about a forgotten password (then use \u2018passcode_forgotten\u2019).\nIncorrect classification (such as generically selecting \u2018passcode_forgotten\u2019 for a request about a physical card or PIN delivery) should be avoided by closely following the distinctions above.",
+  "label::passcode_forgotten": "For PIN, debit/credit card, or access issues, distinguish between:\n- `passcode_forgotten` (queries specifically about forgotten passcodes, not issues about getting new cards or pins)\n\nRemember \u201cPIN\u201d or access queries are usually about \u2018get_physical_card\u2019 unless specifically about a forgotten password (then use \u2018passcode_forgotten\u2019).\nIncorrect classification (such as generically selecting \u2018passcode_forgotten\u2019 for a request about a physical card or PIN delivery) should be avoided by closely following the distinctions above.",
+  "label::pending_top_up": "",
+  "label::pending_transfer": "For transfer and balance-related issues:\n- `pending_transfer`: ONLY if the user explicitly refers to the transfer being in process (\u201cpending\u201d) and is asking about the status during the waiting period\u2014not about the balance NOT updating. If in doubt, favor `balance_not_updated_after_bank_transfer`.\n\n\u2018pending_transfer\u2019 is ONLY for queries explicitly focused on the pending status; balance update issues default to \u2018balance_not_updated_after_bank_transfer.\u2019",
+  "label::receiving_money": "Only use `receiving_money` if the user clearly asks about receiving funds (no matter the currency or method); do not confuse with questions about exchanging, verifying, or sending money.\n\nIf the query is fundamentally about *receiving money*, select \u2018receiving_money\u2019\u2014never an exchange or verification label.",
+  "label::reverted_card_payment?": "",
+  "label::top_up_by_cash_or_cheque": "",
+  "label::top_up_reverted": "",
+  "label::topping_up_by_card": "",
+  "label::transfer_fee_charged": "",
+  "label::transfer_into_account": "",
+  "label::transfer_timing": "",
+  "label::verify_my_identity": "",
+  "label::verify_source_of_funds": "For verification, only select:\n- `verify_source_of_funds` if the main focus is proving the origin or legitimacy of funds being received.\n- Never use this for general \u201chow do I receive money?\u201d or transfer issues.",
+  "boundary_rules": "Critical Classification Guidance:\n- If multiple categories seem relevant, always pick the one which is more narrowly and technically correct based on domain-specific banking knowledge.\n\nSummary of Key Domain-Specific Rules:\n- Always be precise and narrowly technical in your label choice, anchoring to domain knowledge in digital banking."
+ }
+}

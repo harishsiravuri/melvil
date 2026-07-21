@@ -1,0 +1,60 @@
+{
+ "test_accuracy": 0.46,
+ "best_dev": 0.52,
+ "seed_dev": 0.1,
+ "curve": [
+  {
+   "metric_calls": 0,
+   "dev": 0.1
+  },
+  {
+   "metric_calls": 62,
+   "dev": 0.44
+  },
+  {
+   "metric_calls": 214,
+   "dev": 0.26
+  },
+  {
+   "metric_calls": 270,
+   "dev": 0.34
+  },
+  {
+   "metric_calls": 326,
+   "dev": 0.32
+  },
+  {
+   "metric_calls": 382,
+   "dev": 0.52
+  },
+  {
+   "metric_calls": 489,
+   "dev": 0.4
+  },
+  {
+   "metric_calls": 560,
+   "dev": 0.4
+  },
+  {
+   "metric_calls": 622,
+   "dev": 0.46
+  },
+  {
+   "metric_calls": 678,
+   "dev": 0.48
+  },
+  {
+   "metric_calls": 746,
+   "dev": 0.38
+  },
+  {
+   "metric_calls": 802,
+   "dev": 0.44
+  }
+ ],
+ "cost_usd": 1.8466,
+ "arm": "d",
+ "task": "bbh_geometric",
+ "family": "f2",
+ "seed": 40
+}

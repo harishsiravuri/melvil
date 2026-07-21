@@ -1,0 +1,11 @@
+{
+ "blob_dev": 0.82,
+ "decomposed_dev": 0.78,
+ "components": {
+  "task_instruction": "You are given a single input consisting of a short text. Your task is to classify the overall sentiment or stance expressed in the text toward a specified topic (such as abortion, or health insurance coverage for abortion).\nCarefully analyze both direct statements and implied attitudes. Consider subtle language cues, choice of words, tone, hashtags, and what is being prioritized or lamented by the speaker.\nDo not provide anything other than the chosen label: output exactly one of 'favor', 'against', or 'none'.",
+  "label::favor": "- 'favor': If the text expresses support for or a positive attitude toward the topic. This includes both explicit positive statements and implied support, such as lamenting obstacles or negative aspects of the lack of something (e.g., \u201cIt\u2019s sad that insurance doesn\u2019t cover abortions\u201d favors coverage for abortion).\nIf a text uses sarcasm, mockery, or song lyrics related to the topic, pay close attention to the probable intention or sentiment (e.g., \u201cI'm killing my baby tonight, I don't care if it's wrong or right!\u201d actually expresses support for abortion rights and should be labeled as 'favor', despite negative wording).",
+  "label::against": "- 'against': If the text expresses opposition to or a negative attitude toward the topic. This includes clear negative statements, as well as texts that mock, criticize, or imply negative consequences concerning the topic.",
+  "label::none": "- 'none': If the text does not clearly express either support or opposition, is ambiguous, neutral, or lacks enough context to determine sentiment.",
+  "boundary_rules": "Always base your decision on the stance or attitude, not just the surface-level semantic content."
+ }
+}

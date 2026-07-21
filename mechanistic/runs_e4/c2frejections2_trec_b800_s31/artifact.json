@@ -1,0 +1,171 @@
+{
+ "schema_version": 1,
+ "artifact_id": "edcff6ee2624",
+ "parent_id": null,
+ "task_name": "trec",
+ "created_at": "2026-07-21T11:11:11-0500",
+ "library": {
+  "name": "melvil",
+  "version": "0.3.0"
+ },
+ "models": {
+  "task": "openrouter/openai/gpt-4.1-mini",
+  "reflection": "openrouter/openai/gpt-4.1"
+ },
+ "budget": {
+  "metric_calls_budget": 800,
+  "cost_usd": 0.0297
+ },
+ "scores": {
+  "dev_accuracy": 0.83,
+  "dev_macro_f1": 0.83,
+  "seed_dev_accuracy": 0.5,
+  "phase1_dev": 0.83
+ },
+ "config_hash": "5735fb99b531",
+ "config": {
+  "task_model": "openrouter/openai/gpt-4.1-mini",
+  "reflection_model": "openrouter/openai/gpt-4.1",
+  "budget": 800,
+  "seed": 31,
+  "features": {
+   "codebook": false,
+   "confusion_reflection": false,
+   "hard_example_mining": false
+  },
+  "num_threads": 8,
+  "run_dir": "/Users/harish/Documents/Claude/Projects/6s/labelsmith/mechanistic/runs_e4/c2frejections2_trec_b800_s31",
+  "task_temperature": 0.0,
+  "task_max_tokens": 40,
+  "reflection_temperature": 1.0,
+  "reflection_max_tokens": 8000,
+  "reflection_minibatch_size": 3,
+  "max_exemplars": 6,
+  "mining_llm_screen": true,
+  "log_proposals": false,
+  "prices": {},
+  "metric_calls": 800
+ },
+ "label_names": [
+  "abbreviation",
+  "description",
+  "entity",
+  "human",
+  "location",
+  "numeric"
+ ],
+ "components": {
+  "instruction": "You are assigned the task of classifying a provided text string into one of six categories: abbreviation, description, entity, human, location, numeric.\n\n## Input Format:\nYou will receive a single input dictionary with the following field:\n- \"text\": a string, which may be a question or a factual phrase, intended for categorization.\n\n## Categories and Their Definitions:\n- abbreviation: The text defines, refers to, or asks about a shortened form or acronym for a word or phrase (e.g., \"What does NASA stand for?\").\n- description: The text asks for (or provides) an explanation, definition, or description of a concept, object, or process. This typically involves questions like \"What is...\" or \"Describe...\", where the answer is expected to explain what something is or how something works, rather than just naming it.\n- entity: The text is seeking the name or identification of a specific object, concept, or thing (excluding abbreviations, locations, humans, and numerics). For example, if the question is about naming something (e.g., \"What is a word whose letters can be rearranged to form a different word?\"), the answer is \"anagram\", which is an entity.\n- human: The text is about a specific person or group of people, or requests their name or identity (e.g., \"Who is the president of France?\").\n- location: The text refers to a geographic place, such as a city, country, landmark, or region (e.g., \"What is the capital of Japan?\").\n- numeric: The text is seeking a numerical answer, such as a number, measurement, date, quantity, or other value expressed in digits, or asks for such a value specifically.\n\n## Special Distinction — 'description' vs 'entity':\n- If the text is seeking the *name* or label of a specific thing, such as terminology, a type of item, or a unique concept (for example, \"What keeps clouds in the air?\"), the correct category is 'entity': the expected answer is the entity itself (\"updrafts\" or \"air currents\" in the example).\n- If the text is seeking an *explanation*, *definition*, or *description*—that is, more elaborate informational content about what something is or how it works—it is classified as 'description'.\n\n## Task:\nAnalyze the semantic intent of the \"text\" to determine what kind of answer it expects, and select the single most fitting category label based on the above definitions. Resist relying on surface cues (like \"What is...\") alone: instead, decide based on whether the answer should be a description, a name/label, a human, location, abbreviation, or numeric value.\n\nOutput only the category label that best fits the text."
+ },
+ "exemplars": [],
+ "confusion": {
+  "labels": [
+   "abbreviation",
+   "description",
+   "entity",
+   "human",
+   "location",
+   "numeric"
+  ],
+  "matrix": [
+   [
+    2,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    1,
+    18,
+    1,
+    1,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    1,
+    18,
+    3,
+    0,
+    1,
+    0
+   ],
+   [
+    0,
+    0,
+    3,
+    19,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    1,
+    3,
+    1,
+    10,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    1,
+    0,
+    0,
+    16,
+    0
+   ]
+  ],
+  "unparseable_column": true
+ },
+ "curve": [
+  {
+   "metric_calls": 0,
+   "dev_score": 0.5,
+   "phase": 1
+  },
+  {
+   "metric_calls": 106,
+   "dev_score": 0.79,
+   "phase": 1
+  },
+  {
+   "metric_calls": 212,
+   "dev_score": 0.71,
+   "phase": 1
+  },
+  {
+   "metric_calls": 318,
+   "dev_score": 0.76,
+   "phase": 1
+  },
+  {
+   "metric_calls": 424,
+   "dev_score": 0.83,
+   "phase": 1
+  },
+  {
+   "metric_calls": 530,
+   "dev_score": 0.8,
+   "phase": 1
+  },
+  {
+   "metric_calls": 636,
+   "dev_score": 0.8,
+   "phase": 1
+  },
+  {
+   "metric_calls": 751,
+   "dev_score": 0.82,
+   "phase": 1
+  }
+ ],
+ "notes": "c2f switch=('rejections', 2); skipped (decomposed dev 0.810 vs blob 0.830)"
+}

@@ -1,0 +1,218 @@
+{
+ "schema_version": 1,
+ "artifact_id": "c2f46293ab0d",
+ "parent_id": null,
+ "task_name": "trec",
+ "created_at": "2026-07-21T11:04:02-0500",
+ "library": {
+  "name": "melvil",
+  "version": "0.3.0"
+ },
+ "models": {
+  "task": "openrouter/openai/gpt-4.1-mini",
+  "reflection": "openrouter/openai/gpt-4.1"
+ },
+ "budget": {
+  "metric_calls_budget": 800,
+  "metric_calls_spent": 880,
+  "cost_usd": 0.1689,
+  "task_lm_usage": {
+   "model": "openrouter/openai/gpt-4.1-mini",
+   "prompt_tokens": 230641,
+   "completion_tokens": 1554,
+   "calls": 769,
+   "cache_hits": 211,
+   "cost_usd": 0.094743
+  },
+  "reflection_lm_usage": {
+   "model": "openrouter/openai/gpt-4.1",
+   "prompt_tokens": 21319,
+   "completion_tokens": 3938,
+   "calls": 23,
+   "cache_hits": 0,
+   "cost_usd": 0.074142
+  },
+  "opt_seconds": 338.5
+ },
+ "scores": {
+  "dev_accuracy": 0.84,
+  "dev_macro_f1": 0.866,
+  "per_label_dev": {
+   "abbreviation": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "support": 2
+   },
+   "description": {
+    "precision": 0.7407,
+    "recall": 0.9524,
+    "f1": 0.8333,
+    "support": 21
+   },
+   "entity": {
+    "precision": 0.875,
+    "recall": 0.6087,
+    "f1": 0.7179,
+    "support": 23
+   },
+   "human": {
+    "precision": 0.7778,
+    "recall": 0.9545,
+    "f1": 0.8571,
+    "support": 22
+   },
+   "location": {
+    "precision": 1.0,
+    "recall": 0.7333,
+    "f1": 0.8462,
+    "support": 15
+   },
+   "numeric": {
+    "precision": 0.9412,
+    "recall": 0.9412,
+    "f1": 0.9412,
+    "support": 17
+   }
+  },
+  "seed_dev_accuracy": 0.53,
+  "dev_accuracy_quarantined": null
+ },
+ "config_hash": "f2d9e74f4707",
+ "config": {
+  "task_model": "openrouter/openai/gpt-4.1-mini",
+  "reflection_model": "openrouter/openai/gpt-4.1",
+  "budget": 800,
+  "seed": 30,
+  "features": {
+   "codebook": true,
+   "confusion_reflection": true,
+   "hard_example_mining": true
+  },
+  "num_threads": 8,
+  "run_dir": "/Users/harish/Documents/Claude/Projects/6s/labelsmith/mechanistic/runs_e4/full_trec_b800_s30",
+  "task_temperature": 0.0,
+  "task_max_tokens": 40,
+  "reflection_temperature": 1.0,
+  "reflection_max_tokens": 8000,
+  "reflection_minibatch_size": 3,
+  "max_exemplars": 6,
+  "mining_llm_screen": true,
+  "log_proposals": false,
+  "prices": {},
+  "metric_calls": 800
+ },
+ "label_names": [
+  "abbreviation",
+  "description",
+  "entity",
+  "human",
+  "location",
+  "numeric"
+ ],
+ "components": {
+  "task_instruction": "You are a precise text classifier. Read the input text and assign it to exactly one of the categories defined below.",
+  "label::abbreviation": "",
+  "label::description": "description: Use this category only when the question expects an explanation, definition, or general information—not a specific name, person, place, or number. If the question asks \"what is it called?\" or expects a specific term (entity), \"who/whose?\" (human), \"where?\" (location), or \"how many/how much/when?\" (numeric), do not use 'description'. If it asks \"what does it mean?\" or for a summary, use 'description'.",
+  "label::entity": "entity: Use this category when the question expects the specific name or label of a non-human, non-location, non-numeric thing—such as an object, item, concept, or term. Deciding boundary: if the answer could not reasonably be a person, group, or organization, use 'entity'; if it is a human, team, company, or other organized group of people, use 'human'.",
+  "label::human": "human: Use this category when the question expects the answer to be a person, group of people, or organization (including teams, universities, companies, and other collective human entities). Deciding boundary: if the answer is fundamentally a human or group created by/mostly composed of humans, use 'human'; if it is a non-human thing (object, concept, item, title), use 'entity'.",
+  "label::location": "",
+  "label::numeric": "",
+  "boundary_rules": ""
+ },
+ "exemplars": [],
+ "confusion": {
+  "labels": [
+   "abbreviation",
+   "description",
+   "entity",
+   "human",
+   "location",
+   "numeric"
+  ],
+  "matrix": [
+   [
+    2,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    20,
+    0,
+    1,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    5,
+    14,
+    3,
+    0,
+    1,
+    0
+   ],
+   [
+    0,
+    0,
+    1,
+    21,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    1,
+    1,
+    2,
+    11,
+    0,
+    0
+   ],
+   [
+    0,
+    1,
+    0,
+    0,
+    0,
+    16,
+    0
+   ]
+  ],
+  "unparseable_column": true
+ },
+ "curve": [
+  {
+   "metric_calls": 0,
+   "dev_score": 0.53
+  },
+  {
+   "metric_calls": 106,
+   "dev_score": 0.73
+  },
+  {
+   "metric_calls": 251,
+   "dev_score": 0.74
+  },
+  {
+   "metric_calls": 405,
+   "dev_score": 0.69
+  },
+  {
+   "metric_calls": 511,
+   "dev_score": 0.83
+  },
+  {
+   "metric_calls": 683,
+   "dev_score": 0.84
+  }
+ ],
+ "notes": "rejected 3 exemplars (quarantined dev 0.856 <= 0.866 + noise floor 0.035)"
+}

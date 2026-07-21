@@ -1,0 +1,11 @@
+{
+ "blob_dev": 0.51,
+ "decomposed_dev": 0.44,
+ "components": {
+  "task_instruction": "You are given a single piece of text that expresses an opinion or statement on a potentially controversial or debatable topic, often related to politics, policy, or social issues (e.g., abortion, elections, etc.). Your task is to classify the provided text into one of three categories based on its stance regarding the implied issue:\nCarefully read the text for any implicit or explicit stance cues, such as agreement/disagreement, use of hashtags or statements expressing support or opposition, and overall sentiment in the context of the issue. Consider direct claims, rhetorical questions, and common expressions of stance used in debates (e.g., phrases like \"it's not ok\" can indicate opposition, while \"should be allowed\" can indicate support).\nAssign only one category per text.",
+  "label::favor": "The text shows support for or agreement with the topic, proposal, policy, or idea expressed or implied.",
+  "label::against": "The text shows opposition to or disagreement with the topic, proposal, policy, or idea expressed or implied.",
+  "label::none": "The text does not clearly express a stance, opinion, or sentiment for or against the topic, or is unrelated or neutral.",
+  "boundary_rules": "Assign only one category per text.\nOutput only the label: 'favor', 'against', or 'none'."
+ }
+}

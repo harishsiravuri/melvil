@@ -1,0 +1,171 @@
+{
+ "schema_version": 1,
+ "artifact_id": "32b556649064",
+ "parent_id": null,
+ "task_name": "trec",
+ "created_at": "2026-07-21T11:05:38-0500",
+ "library": {
+  "name": "melvil",
+  "version": "0.3.0"
+ },
+ "models": {
+  "task": "openrouter/openai/gpt-4.1-mini",
+  "reflection": "openrouter/openai/gpt-4.1"
+ },
+ "budget": {
+  "metric_calls_budget": 800,
+  "cost_usd": 0.0526
+ },
+ "scores": {
+  "dev_accuracy": 0.86,
+  "dev_macro_f1": 0.8881,
+  "seed_dev_accuracy": 0.5,
+  "phase1_dev": 0.86
+ },
+ "config_hash": "7b0195b07ec6",
+ "config": {
+  "task_model": "openrouter/openai/gpt-4.1-mini",
+  "reflection_model": "openrouter/openai/gpt-4.1",
+  "budget": 800,
+  "seed": 30,
+  "features": {
+   "codebook": false,
+   "confusion_reflection": false,
+   "hard_example_mining": false
+  },
+  "num_threads": 8,
+  "run_dir": "/Users/harish/Documents/Claude/Projects/6s/labelsmith/mechanistic/runs_e4/c2frejections2_trec_b800_s30",
+  "task_temperature": 0.0,
+  "task_max_tokens": 40,
+  "reflection_temperature": 1.0,
+  "reflection_max_tokens": 8000,
+  "reflection_minibatch_size": 3,
+  "max_exemplars": 6,
+  "mining_llm_screen": true,
+  "log_proposals": false,
+  "prices": {},
+  "metric_calls": 800
+ },
+ "label_names": [
+  "abbreviation",
+  "description",
+  "entity",
+  "human",
+  "location",
+  "numeric"
+ ],
+ "components": {
+  "instruction": "You are assigned the task of question classification. Your objective is to read a provided question and categorize it into one of six predefined categories, depending on what kind of answer the question specifically demands. You will receive the question in the 'text' field of an input object. Based on your reasoning, infer both the intent behind the question and the specific type of answer expected. The available CATEGORIES are:\n\n1. abbreviation -- Use this label ONLY for questions directly asking what a short form, acronym, or abbreviation stands for. Example: \"What does HBO stand for?\"\n\n2. description -- Use this label for questions that require an explanation, definition, or general description of an idea, concept, process, or term. Example: \"What is gravity?\"\n\n3. entity -- Use this only for questions that require the name or title of a specifically named thing or unique object, such as a book, ship, currency, organization, TV show, or a specific word. Example: \"What is the currency of India?\" Note: If the question is about an object or phenomenon and expects you to state what it IS (by name, not by explanation), this is usually 'entity'. \n\n4. human -- Use ONLY when the answer is a person’s or group's name or identity. Example: \"Who wrote Macbeth?\" Do NOT use for numeric questions about people (see 'numeric').\n\n5. location -- Use for questions expecting the answer to be a place, city, country, landmark, geographic entity, or anything geographically bound; also for the nationality or origin of people or things. Example: \"Where is the Taj Mahal?\", \"What is the capital of Italy?\", \"What nationality is Naomi Osaka?\" Note: Questions about superlatives pertaining to places (e.g., longest place name) must also be labeled 'location' (not 'entity').\n\n6. numeric -- Use for questions asking for a specific number, amount, year, date, or quantifiable value—this includes ages, population numbers, scores, or any numeric detail. If a question about a person expects a number (age, date, # of awards, etc.), use 'numeric' (NOT 'human'). Examples: \"How old is Malala Yousafzai?\", \"When was the telephone invented?\"\n\nESSENTIAL INSTRUCTIONS AND EDGE CASES:\n- Always focus on the form of the answer required, NOT just the topic or subject matter.\n- If a question is about a person but asks for a number or date, label as 'numeric'.\n- If a question asks for the nationality or geographic origin of a person or thing, label as 'location'.\n- For place names, cities, geographical locations, landmarks, or superlatives related to location, always choose 'location', NOT 'entity'.\n- If the question asks \"what is X?\" and X is a unique named thing (currency, specific TV show, etc), use 'entity'. If it is seeking an explanation or description of a generic concept or process, use 'description'.\n- For questions on abbreviations or acronyms, use 'abbreviation' only if the question is asking what the abbreviation stands for.\n- For questions that expect a person's name, use 'human', unless it wants some numeric attribute about that person.\n\n**PAY ATTENTION TO COMMON MISTAKES**:\n- Do NOT confuse 'description' with 'entity': If the answer is a named thing (e.g., \"What keeps clouds in the air?\" expected answer: 'updrafts'), use 'entity'; if it expects an explanation or concept (e.g., \"How do clouds form?\"), use 'description'.\n- Do NOT classify location-based superlatives or place-naming questions as 'entity'; always use 'location' for such.\n\nOUTPUT FORMAT:\nReturn ONE of these six category labels exactly: abbreviation, description, entity, human, location, numeric. \nDo NOT provide any explanation, qualifier, or extra text; output only the single category label.\n\nYour input will ALWAYS have a single field 'text' with the question as a string. \n\nBe meticulous with edge cases, following the above guidance precisely to avoid misclassification."
+ },
+ "exemplars": [],
+ "confusion": {
+  "labels": [
+   "abbreviation",
+   "description",
+   "entity",
+   "human",
+   "location",
+   "numeric"
+  ],
+  "matrix": [
+   [
+    2,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    20,
+    0,
+    1,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    6,
+    14,
+    2,
+    0,
+    1,
+    0
+   ],
+   [
+    0,
+    0,
+    2,
+    20,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    1,
+    0,
+    14,
+    0,
+    0
+   ],
+   [
+    0,
+    1,
+    0,
+    0,
+    0,
+    16,
+    0
+   ]
+  ],
+  "unparseable_column": true
+ },
+ "curve": [
+  {
+   "metric_calls": 0,
+   "dev_score": 0.5,
+   "phase": 1
+  },
+  {
+   "metric_calls": 106,
+   "dev_score": 0.73,
+   "phase": 1
+  },
+  {
+   "metric_calls": 212,
+   "dev_score": 0.77,
+   "phase": 1
+  },
+  {
+   "metric_calls": 321,
+   "dev_score": 0.78,
+   "phase": 1
+  },
+  {
+   "metric_calls": 442,
+   "dev_score": 0.85,
+   "phase": 1
+  },
+  {
+   "metric_calls": 551,
+   "dev_score": 0.8,
+   "phase": 1
+  },
+  {
+   "metric_calls": 675,
+   "dev_score": 0.79,
+   "phase": 1
+  },
+  {
+   "metric_calls": 781,
+   "dev_score": 0.86,
+   "phase": 1
+  }
+ ],
+ "notes": "c2f switch=('rejections', 2); skipped (decomposed dev 0.820 vs blob 0.860)"
+}

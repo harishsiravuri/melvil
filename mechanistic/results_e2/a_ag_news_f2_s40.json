@@ -1,0 +1,40 @@
+{
+ "test_accuracy": 0.8667,
+ "best_dev": 0.89,
+ "seed_dev": 0.89,
+ "curve": [
+  {
+   "metric_calls": 0,
+   "dev": 0.89
+  },
+  {
+   "metric_calls": 112,
+   "dev": 0.84
+  },
+  {
+   "metric_calls": 242,
+   "dev": 0.88
+  },
+  {
+   "metric_calls": 354,
+   "dev": 0.85
+  },
+  {
+   "metric_calls": 472,
+   "dev": 0.89
+  },
+  {
+   "metric_calls": 584,
+   "dev": 0.83
+  },
+  {
+   "metric_calls": 708,
+   "dev": 0.87
+  }
+ ],
+ "cost_usd": 0.4672,
+ "arm": "a",
+ "task": "ag_news",
+ "family": "f2",
+ "seed": 40
+}

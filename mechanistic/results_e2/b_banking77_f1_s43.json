@@ -1,0 +1,40 @@
+{
+ "test_accuracy": 0.76,
+ "best_dev": 0.8,
+ "seed_dev": 0.8,
+ "curve": [
+  {
+   "metric_calls": 0,
+   "dev": 0.8
+  },
+  {
+   "metric_calls": 118,
+   "dev": 0.75
+  },
+  {
+   "metric_calls": 242,
+   "dev": 0.79
+  },
+  {
+   "metric_calls": 357,
+   "dev": 0.78
+  },
+  {
+   "metric_calls": 478,
+   "dev": 0.8
+  },
+  {
+   "metric_calls": 605,
+   "dev": 0.76
+  },
+  {
+   "metric_calls": 714,
+   "dev": 0.78
+  }
+ ],
+ "cost_usd": 0.3125,
+ "arm": "b",
+ "task": "banking77",
+ "family": "f1",
+ "seed": 43
+}

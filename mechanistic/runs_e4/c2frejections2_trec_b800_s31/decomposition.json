@@ -1,0 +1,14 @@
+{
+ "blob_dev": 0.83,
+ "decomposed_dev": 0.81,
+ "components": {
+  "task_instruction": "You are assigned the task of classifying a provided text string into one of six categories: abbreviation, description, entity, human, location, numeric.\n\nYou will receive a single input dictionary with the following field:\n- \"text\": a string, which may be a question or a factual phrase, intended for categorization.\n\nAnalyze the semantic intent of the \"text\" to determine what kind of answer it expects, and select the single most fitting category label based on the above definitions. Resist relying on surface cues (like \"What is...\") alone: instead, decide based on whether the answer should be a description, a name/label, a human, location, abbreviation, or numeric value.\n\nOutput only the category label that best fits the text.",
+  "label::abbreviation": "The text defines, refers to, or asks about a shortened form or acronym for a word or phrase (e.g., \"What does NASA stand for?\").",
+  "label::description": "The text asks for (or provides) an explanation, definition, or description of a concept, object, or process. This typically involves questions like \"What is...\" or \"Describe...\", where the answer is expected to explain what something is or how something works, rather than just naming it.",
+  "label::entity": "The text is seeking the name or identification of a specific object, concept, or thing (excluding abbreviations, locations, humans, and numerics). For example, if the question is about naming something (e.g., \"What is a word whose letters can be rearranged to form a different word?\"), the answer is \"anagram\", which is an entity.",
+  "label::human": "The text is about a specific person or group of people, or requests their name or identity (e.g., \"Who is the president of France?\").",
+  "label::location": "The text refers to a geographic place, such as a city, country, landmark, or region (e.g., \"What is the capital of Japan?\").",
+  "label::numeric": "The text is seeking a numerical answer, such as a number, measurement, date, quantity, or other value expressed in digits, or asks for such a value specifically.",
+  "boundary_rules": "If the text is seeking the *name* or label of a specific thing, such as terminology, a type of item, or a unique concept (for example, \"What keeps clouds in the air?\"), the correct category is 'entity': the expected answer is the entity itself (\"updrafts\" or \"air currents\" in the example).\n\nIf the text is seeking an *explanation*, *definition*, or *description*\u2014that is, more elaborate informational content about what something is or how it works\u2014it is classified as 'description'."
+ }
+}

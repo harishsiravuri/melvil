@@ -1,0 +1,38 @@
+{
+ "arm": "full",
+ "switch": null,
+ "task": "banking77",
+ "seed": 32,
+ "budget": 800,
+ "test_accuracy": 0.8067,
+ "test_macro_f1": 0.7902,
+ "dev_accuracy": 0.82,
+ "notes": "rejected 6 exemplars (quarantined dev 0.851 <= 0.872 + noise floor 0.034)",
+ "curve": [
+  {
+   "metric_calls": 0,
+   "dev_score": 0.79
+  },
+  {
+   "metric_calls": 109,
+   "dev_score": 0.82
+  },
+  {
+   "metric_calls": 251,
+   "dev_score": 0.79
+  },
+  {
+   "metric_calls": 363,
+   "dev_score": 0.77
+  },
+  {
+   "metric_calls": 538,
+   "dev_score": 0.81
+  },
+  {
+   "metric_calls": 659,
+   "dev_score": 0.82
+  }
+ ],
+ "cost_usd": 0.2167
+}

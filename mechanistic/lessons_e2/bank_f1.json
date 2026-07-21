@@ -1,0 +1,206 @@
+[
+ {
+  "lesson": "Use precise, exhaustive category definitions and include nuanced distinctions between similar categories or labels to reduce ambiguity.",
+  "type": "strategy",
+  "evidence": [
+   {
+    "task": "ag_news",
+    "what_happened": "Prompts explicitly distinguish between technology that is business-relevant and technology as an innovation\u2014clarifying when to choose 'Business' vs. 'Sci/Tech' led to more correct label assignments."
+   },
+   {
+    "task": "clinc150",
+    "what_happened": "Prompt instructs to distinguish between reporting a lost/stolen card and reporting fraud to avoid misclassification."
+   },
+   {
+    "task": "emotion",
+    "what_happened": "Instructions clarify differences such as 'love' versus 'joy', or 'sadness' versus 'anger', providing detailed discriminators for edge cases."
+   }
+  ]
+ },
+ {
+  "lesson": "Require the model to output only the answer label or category\u2014explicitly prohibit extra text, commentary, or formatting.",
+  "type": "strategy",
+  "evidence": [
+   {
+    "task": "ag_news",
+    "what_happened": "Nearly all prompts conclude with directions like 'respond with only the label' or 'no explanation or extra text', which helps enforce strict output formatting."
+   },
+   {
+    "task": "emotion",
+    "what_happened": "Many prompts emphasize: 'your response should be the category name only, with no additional explanation or text', reducing irrelevance and downstream parsing failures."
+   }
+  ]
+ },
+ {
+  "lesson": "Direct the model to analyze the main topic or primary context of the input, not just the presence of keywords or superficial cues.",
+  "type": "strategy",
+  "evidence": [
+   {
+    "task": "ag_news",
+    "what_happened": "Repeatedly instructs to 'focus on the main topic', 'analyze the core context', and 'do not rely on keywords' to ensure categorization is substantive."
+   },
+   {
+    "task": "emotion",
+    "what_happened": "Guidance to 'consider subtle expressions', 'context', and 'implied emotional cues' over surface words."
+   }
+  ]
+ },
+ {
+  "lesson": "When possible, provide detailed guidelines or examples for difficult distinctions or edge cases, especially where ambiguity is frequent.",
+  "type": "strategy",
+  "evidence": [
+   {
+    "task": "emotion",
+    "what_happened": "Prompts explicitly explain how to handle irony or ambiguity (e.g., sarcastic positive statements that actually imply sadness)."
+   },
+   {
+    "task": "clinc150",
+    "what_happened": "Examples clarify the difference between 'report_lost_card' and 'report_fraud'."
+   }
+  ]
+ },
+ {
+  "lesson": "Explicitly instruct the model not to infer or default to positive/negative categories based on superficial tone\u2014base the assignment on actual context and intent.",
+  "type": "error-pattern",
+  "evidence": [
+   {
+    "task": "emotion",
+    "what_happened": "Several prompts guard against misclassification of sarcastic statements as 'joy', instructing evaluators not to assume positivity in ironic or negative contexts."
+   }
+  ]
+ },
+ {
+  "lesson": "Tell the model to select only a single label per input, even when multiple categories might seem applicable, and to prioritize the most dominant or contextually central one.",
+  "type": "strategy",
+  "evidence": [
+   {
+    "task": "ag_news",
+    "what_happened": "'Select only one label' appears repeatedly, emphasizing singular responses."
+   },
+   {
+    "task": "emotion",
+    "what_happened": "All prompts repeatedly reinforce 'only the most prominent emotion', guarding against multi-label output."
+   }
+  ]
+ },
+ {
+  "lesson": "Instruct the model to focus classification on the intent or perspective of the speaker/writer, not the reaction or feeling of the model/user.",
+  "type": "strategy",
+  "evidence": [
+   {
+    "task": "emotion",
+    "what_happened": "Guidelines repeatedly clarify that the detected emotion should reflect the speaker/writer's state, not the hypothetical reader's response."
+   }
+  ]
+ },
+ {
+  "lesson": "Add process reminders for handling ambiguity: instruct the model to choose the most likely or central category based on holistic context when the input could fit multiple labels.",
+  "type": "strategy",
+  "evidence": [
+   {
+    "task": "emotion",
+    "what_happened": "Several prompts specify what to do when multiple emotions are plausible\u2014'select the one most probable or central to the message.'"
+   },
+   {
+    "task": "clinc150",
+    "what_happened": "Clarifies distinctions between overlapping intents (e.g., lost card versus fraud) and how to resolve them."
+   }
+  ]
+ },
+ {
+  "lesson": "Treat special cases, such as irony, sarcasm, hyperbole, or domain-specific nonliteral language, with explicit instruction\u2014model should infer the underlying intent, not literal semantics.",
+  "type": "error-pattern",
+  "evidence": [
+   {
+    "task": "emotion",
+    "what_happened": "Prompts specify: detect underlying emotion when there is sarcasm or irony, to avoid literal misclassification."
+   }
+  ]
+ },
+ {
+  "lesson": "Structure the input format expectations clearly (e.g., input will appear as a 'text' field or inside a specific block); avoid ambiguity in task input structure.",
+  "type": "strategy",
+  "evidence": [
+   {
+    "task": "ag_news",
+    "what_happened": "Several prompt variants state 'text will be provided under a \"text\" key' or similar, to reduce confusion."
+   }
+  ]
+ },
+ {
+  "lesson": "Clearly enumerate all possible output categories and require that only categories from this explicit list are used (no synonyms, rephrasings, or inferred new categories).",
+  "type": "strategy",
+  "evidence": [
+   {
+    "task": "emotion",
+    "what_happened": "Prompts emphasize: 'choose only from anger, fear, joy, love, sadness, surprise'\u2014do not invent or substitute."
+   },
+   {
+    "task": "clinc150",
+    "what_happened": "Full category listing and a note that the output must be one from this set only."
+   }
+  ]
+ },
+ {
+  "lesson": "Prohibit the model from supplementing outputs with explanations, extra words, or justification; state this prohibition multiple times for clarity.",
+  "type": "error-pattern",
+  "evidence": [
+   {
+    "task": "ag_news",
+    "what_happened": "Each prompt repeats the restriction ('no extra commentary, formatting, or explanation') to avoid unexpected output."
+   },
+   {
+    "task": "emotion",
+    "what_happened": "Numerous prompts repeat prohibitions ('no justification, formatting, or additional words'), revealing that failure here is a common error if not strictly enforced."
+   }
+  ]
+ },
+ {
+  "lesson": "Preempt misclassification by advising the model to prioritize the intrinsic nature of the input's main subject, and not be misled by references to secondary topics or actors.",
+  "type": "strategy",
+  "evidence": [
+   {
+    "task": "ag_news",
+    "what_happened": "Instructions warn against classifying news as 'World' simply because it mentions countries\u2014focus on the actual subject."
+   },
+   {
+    "task": "clinc150",
+    "what_happened": "Fine-grained distinction required to avoid categorizing card-theft statements as 'fraud'."
+   }
+  ]
+ },
+ {
+  "lesson": "Provide strategies and reminders for resolving close-call categorizations: e.g., for domain-edge cases or complex/mixed inputs, pick the aspect that is most emphasized or most integral.",
+  "type": "strategy",
+  "evidence": [
+   {
+    "task": "ag_news",
+    "what_happened": "Prompt gives an example: decide 'Sci/Tech' vs 'Business' based on what is truly prioritized in the story."
+   },
+   {
+    "task": "emotion",
+    "what_happened": "If both 'fear' and 'sadness' seem plausible, select the most strongly implied category."
+   }
+  ]
+ },
+ {
+  "lesson": "Whenever a category depends on context broader than a single entity or word (e.g., 'World' covers incidents with multinational impact, not just locations), provide that scope in the prompt.",
+  "type": "strategy",
+  "evidence": [
+   {
+    "task": "ag_news",
+    "what_happened": "Category definitions elaborate on what counts as 'World'\u2014not just location, but the scope or impact."
+   }
+  ]
+ },
+ {
+  "lesson": "For inherently subjective or nuanced tasks, stress the importance of deep contextual analysis over literal or superficial interpretation.",
+  "type": "strategy",
+  "evidence": [
+   {
+    "task": "emotion",
+    "what_happened": "Many prompts require 'deep emotional analysis', considering implication and context, not just overt language."
+   }
+  ]
+ }
+]

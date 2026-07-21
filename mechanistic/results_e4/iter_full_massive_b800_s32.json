@@ -1,0 +1,38 @@
+{
+ "arm": "full",
+ "switch": null,
+ "task": "massive",
+ "seed": 32,
+ "budget": 800,
+ "test_accuracy": 0.8367,
+ "test_macro_f1": 0.8325,
+ "dev_accuracy": 0.87,
+ "notes": "no persistent hard examples survived screening",
+ "curve": [
+  {
+   "metric_calls": 0,
+   "dev_score": 0.84
+  },
+  {
+   "metric_calls": 106,
+   "dev_score": 0.84
+  },
+  {
+   "metric_calls": 218,
+   "dev_score": 0.84
+  },
+  {
+   "metric_calls": 339,
+   "dev_score": 0.87
+  },
+  {
+   "metric_calls": 445,
+   "dev_score": 0.84
+  },
+  {
+   "metric_calls": 662,
+   "dev_score": 0.83
+  }
+ ],
+ "cost_usd": 0.2127
+}
