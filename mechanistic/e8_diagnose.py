@@ -26,7 +26,6 @@ from prep_data import CONFIRM_EXTRA_TASKS, TASKS, load_task  # noqa: E402
 
 from melvil.artifact import OUTPUT_CONTRACT  # noqa: E402
 from melvil.costs import lm_usage, usage_cost_usd  # noqa: E402
-from melvil.data import Example  # noqa: E402
 from melvil.evaluate import accuracy, macro_f1, per_label_stats  # noqa: E402
 from melvil.features.confusion import top_confused_pairs  # noqa: E402
 from melvil.lmutil import make_lm, text_of  # noqa: E402

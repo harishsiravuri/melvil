@@ -47,6 +47,8 @@ ignore = ["SIM108"]  # ternary-vs-if is a style call we make per case
 # the proposal template is natural-language prose; hard-wrapping it would
 # change the prompt
 "melvil/proposer.py" = ["E501"]
+# experiment scripts embed natural-language prompt templates
+"mechanistic/*.py" = ["E501"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

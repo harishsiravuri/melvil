@@ -84,7 +84,7 @@ def main() -> None:
             feasible = t_matched >= f * T
             d_mean_m, d_mean_full, d_lucky_full, dt_mean, dt_lucky = [], [], [], [], []
             n_subsets = 0
-            for task, runs in pool.items():
+            for runs in pool.values():
                 if len(runs) < n:
                     continue
                 subsets = list(itertools.combinations(range(len(runs)), n))
