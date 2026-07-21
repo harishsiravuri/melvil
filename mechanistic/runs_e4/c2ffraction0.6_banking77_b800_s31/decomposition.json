@@ -1,0 +1,33 @@
+{
+ "blob_dev": 0.83,
+ "decomposed_dev": 0.81,
+ "components": {
+  "task_instruction": "You are provided with free-form user queries or statements related to digital banking issues, always under a 'text' key in a JSON-like input snippet, for example:\n\n### text\n[User's query here]\n\nYour task is to classify each user input into exactly one category from a fixed list that best matches the core problem, intent, or action described. Your response must be the single, most direct and specific label from the provided list (do not provide explanations, multiple labels, or any extra text). All queries are about digital banking topics such as payments, transfers, cards, top-ups, identity, or related fees/problems.\n\nAll inputs pertain to digital banking functionalities; never choose or invent a label outside the list.\n\nLabel based on the precise action or problem described, not the user's emotional state or background context.\n\nSingle label only: Output only the category label, nothing more, and never pick multiple labels.\n\nRemember to output only the most directly matching label for the provided user text.",
+  "label::automatic_top_up": "",
+  "label::balance_not_updated_after_bank_transfer": "If the main concern is that a user completed a bank transfer but their account balance does not show the new funds, select 'balance_not_updated_after_bank_transfer'.",
+  "label::beneficiary_not_allowed": "If the transfer is not going through due to the recipient being blocked or prohibited (e.g., \"transfer isn't possible\" and hinting restrictions on recipient), use 'beneficiary_not_allowed'.\n\nEdge-cases:\nIf a phrase suggests a transaction isn't possible and mentions past successes with the same recipient, consider if recipient/beneficiary restrictions might be the cause ('beneficiary_not_allowed').",
+  "label::cancel_transfer": "",
+  "label::card_payment_fee_charged": "Use 'card_payment_fee_charged' for complaints/queries about charges for card purchases.",
+  "label::card_payment_not_recognised": "",
+  "label::declined_cash_withdrawal": "",
+  "label::exchange_rate": "Use 'transfer_fee_charged' for queries on fees deducted during bank transfers (frequently when sending money and less is received on the other end), unless the text is exclusively about currency rate differences.",
+  "label::exchange_via_app": "",
+  "label::failed_transfer": "Use 'failed_transfer' for generic unsuccessful transfer attempts where no specific beneficiary restriction is stated.\n\nUse 'failed_transfer' for outright failed or not completed transfers not addressed by other pending or beneficiary-restriction labels.",
+  "label::get_disposable_virtual_card": "",
+  "label::get_physical_card": "",
+  "label::passcode_forgotten": "",
+  "label::pending_top_up": "Use 'pending_top_up' when a funds top-up is stuck or not yet credited.",
+  "label::pending_transfer": "Use a 'pending_*' label if the complaint is specifically about a particular transaction not yet completed (e.g., \"My payment has not processed.\").\n\nUse 'pending_transfer' for transfers that haven't yet been completed or received.",
+  "label::receiving_money": "",
+  "label::reverted_card_payment?": "",
+  "label::top_up_by_cash_or_cheque": "",
+  "label::top_up_reverted": "",
+  "label::topping_up_by_card": "",
+  "label::transfer_fee_charged": "Use 'transfer_fee_charged' for queries on fees deducted during bank transfers (frequently when sending money and less is received on the other end), unless the text is exclusively about currency rate differences.",
+  "label::transfer_into_account": "",
+  "label::transfer_timing": "Use 'transfer_timing' for general inquiries about how long a type of transaction usually takes, unless the user is referencing a specific, delayed transaction.",
+  "label::verify_my_identity": "",
+  "label::verify_source_of_funds": "",
+  "boundary_rules": "Analyze intent: Focus on the primary issue or request in the user's text. Choose the most precise and narrowest category from the list that applies.\n\nPending vs General Timings:\n- Use a 'pending_*' label if the complaint is specifically about a particular transaction not yet completed (e.g., \"My payment has not processed.\").\n- Use 'transfer_timing' for general inquiries about how long a type of transaction usually takes, unless the user is referencing a specific, delayed transaction.\n\nBank transfer delay vs. not reflected balance:\n- If the main concern is that a user completed a bank transfer but their account balance does not show the new funds, select 'balance_not_updated_after_bank_transfer'.\n\n'Failed' vs. 'Beneficiary not allowed':\n- If the transfer is not going through due to the recipient being blocked or prohibited (e.g., \"transfer isn't possible\" and hinting restrictions on recipient), use 'beneficiary_not_allowed'.\n- Use 'failed_transfer' for generic unsuccessful transfer attempts where no specific beneficiary restriction is stated.\n\nOther key distinctions:\n- Use 'pending_transfer' for transfers that haven't yet been completed or received.\n- Use 'pending_top_up' when a funds top-up is stuck or not yet credited.\n- Use 'failed_transfer' for outright failed or not completed transfers not addressed by other pending or beneficiary-restriction labels.\n\nEdge-cases:\n- If a phrase suggests a transaction isn't possible and mentions past successes with the same recipient, consider if recipient/beneficiary restrictions might be the cause ('beneficiary_not_allowed').\n- If the query is ambiguous between two labels, prefer the one that more specifically and narrowly fits the described technical banking event."
+ }
+}

@@ -1,0 +1,39 @@
+[done] iter_vanilla_banking77_b800_s30.json: 0.827 (reused E1)
+[done] iter_full_banking77_b800_s30.json: test 0.833 | rejected 6 exemplars (quarantined dev 0.883 <= 0.894 + noise
+[done] iter_c2frejections2_banking77_b800_s30.json: test 0.803 | c2f switch=('rejections', 2); skipped (decomposed dev 0.810 
+[done] iter_vanilla_banking77_b800_s31.json: 0.830 (reused E1)
+[done] iter_full_banking77_b800_s31.json: test 0.823 | rejected 4 exemplars (quarantined dev 0.885 <= 0.896 + noise
+[done] iter_c2frejections2_banking77_b800_s31.json: test 0.830 | c2f switch=('rejections', 2); skipped (decomposed dev 0.850 
+[done] iter_vanilla_banking77_b800_s32.json: 0.820 (reused E1)
+[done] iter_full_banking77_b800_s32.json: test 0.807 | rejected 6 exemplars (quarantined dev 0.851 <= 0.872 + noise
+[done] iter_c2frejections2_banking77_b800_s32.json: test 0.820 | c2f switch=('rejections', 2); skipped (decomposed dev 0.850 
+[done] iter_vanilla_trec_b800_s30.json: 0.887 (reused E1)
+[done] iter_full_trec_b800_s30.json: test 0.907 | rejected 3 exemplars (quarantined dev 0.856 <= 0.866 + noise
+[done] iter_c2frejections2_trec_b800_s30.json: test 0.887 | c2f switch=('rejections', 2); skipped (decomposed dev 0.820 
+[done] iter_vanilla_trec_b800_s31.json: 0.900 (reused E1)
+[done] iter_full_trec_b800_s31.json: test 0.827 | rejected 2 exemplars (quarantined dev 0.786 <= 0.765 + noise
+[done] iter_c2frejections2_trec_b800_s31.json: test 0.900 | c2f switch=('rejections', 2); skipped (decomposed dev 0.810 
+[done] iter_vanilla_trec_b800_s32.json: 0.890 (reused E1)
+[done] iter_full_trec_b800_s32.json: test 0.887 | kept 2 exemplars (quarantined dev 0.827 > 0.775 + noise floo
+[done] iter_c2frejections2_trec_b800_s32.json: test 0.890 | c2f switch=('rejections', 2); skipped (decomposed dev 0.810 
+[done] iter_vanilla_massive_b800_s30.json: 0.850 (reused E1)
+[done] iter_full_massive_b800_s30.json: test 0.853 | no persistent hard examples survived screening
+[done] iter_c2frejections2_massive_b800_s30.json: test 0.850 | c2f switch=('rejections', 2); skipped (decomposed dev 0.830 
+[done] iter_vanilla_massive_b800_s31.json: 0.850 (reused E1)
+[done] iter_full_massive_b800_s31.json: test 0.860 | no persistent hard examples survived screening
+[done] iter_c2frejections2_massive_b800_s31.json: test 0.850 | c2f switch=('rejections', 2); skipped (decomposed dev 0.810 
+[done] iter_vanilla_massive_b800_s32.json: 0.873 (reused E1)
+[done] iter_full_massive_b800_s32.json: test 0.837 | no persistent hard examples survived screening
+[done] iter_c2frejections2_massive_b800_s32.json: test 0.873 | c2f switch=('rejections', 2); skipped (decomposed dev 0.860 
+[done] iter_vanilla_stance_abortion_b800_s30.json: test 0.621 | 
+[done] iter_full_stance_abortion_b800_s30.json: test 0.611 | rejected 3 exemplars (quarantined dev 0.773 <= 0.753 + noise
+[done] iter_c2frejections2_stance_abortion_b800_s30.json: test 0.621 | c2f switch=('rejections', 2); skipped (decomposed dev 0.780 
+[done] iter_vanilla_stance_abortion_b800_s31.json: test 0.629 | 
+[done] iter_full_stance_abortion_b800_s31.json: test 0.504 | rejected 4 exemplars (quarantined dev 0.510 <= 0.500 + noise
+[done] iter_c2frejections2_stance_abortion_b800_s31.json: test 0.529 | c2f switch=('rejections', 2); phase2 won (dev 0.520 >= 0.510
+[done] iter_vanilla_stance_abortion_b800_s32.json: test 0.671 | 
+[done] iter_full_stance_abortion_b800_s32.json: test 0.496 | kept 4 exemplars (quarantined dev 0.625 > 0.542 + noise floo
+[done] iter_c2frejections2_stance_abortion_b800_s32.json: test 0.671 | c2f switch=('rejections', 2); skipped (decomposed dev 0.770 
+[done] iter_c2ffraction0.6_banking77_b800_s30.json: test 0.803 | c2f switch=('fraction', 0.6); skipped (decomposed dev 0.810 
+[done] iter_c2ffraction0.6_banking77_b800_s31.json: test 0.793 | c2f switch=('fraction', 0.6); skipped (decomposed dev 0.810 
+[done] iter_c2ffraction0.6_banking77_b800_s32.json: test 0.760 | c2f switch=('fraction', 0.6); skipped (decomposed dev 0.790 

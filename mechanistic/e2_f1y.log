@@ -12352,3 +12352,1648 @@ Iteration 30: Valset score for new program: 0.56 (coverage 50 / 50)
 Iteration 30: Val aggregate for new program: 0.56
 Iteration 30: Individual valset scores for new program: {0: 0.0, 1: 1.0, 2: 1.0, 3: 1.0, 4: 1.0, 5: 0.0, 6: 0.0, 7: 1.0, 8: 0.0, 9: 1.0, 10: 1.0, 11: 1.0, 12: 1.0, 13: 0.0, 14: 1.0, 15: 0.0, 16: 1.0, 17: 1.0, 18: 1.0, 19: 1.0, 20: 1.0, 21: 0.0, 22: 1.0, 23: 0.0, 24: 1.0, 25: 0.0, 26: 0.0, 27: 1.0, 28: 0.0, 29: 1.0, 30: 1.0, 31: 0.0, 32: 0.0, 33: 1.0, 34: 1.0, 35: 1.0, 36: 0.0, 37: 0.0, 38: 1.0, 39: 0.0, 40: 0.0, 41: 1.0, 42: 1.0, 43: 0.0, 44: 1.0, 45: 0.0, 46: 0.0, 47: 1.0, 48: 0.0, 49: 0.0}
 Iteration 30: New valset pareto front scores: {0: 0.0, 1: 1.0, 2: 1.0, 3: 1.0, 4: 1.0, 5: 0.0, 6: 1.0, 7: 1.0, 8: 1.0, 9: 1.0, 10: 1.0, 11: 1.0, 12: 1.0, 13: 0.0, 14: 1.0, 15: 1.0, 16: 1.0, 17: 1.0, 18: 1.0, 19: 1.0, 20: 1.0, 21: 0.0, 22: 1.0, 23: 0.0, 24: 1.0, 25: 1.0, 26: 0.0, 27: 1.0, 28: 1.0, 29: 1.0, 30: 1.0, 31: 0.0, 32: 1.0, 33: 1.0, 34: 1.0, 35: 1.0, 36: 0.0, 37: 1.0, 38: 1.0, 39: 0.0, 40: 0.0, 41: 1.0, 42: 1.0, 43: 1.0, 44: 1.0, 45: 0.0, 46: 0.0, 47: 1.0, 48: 0.0, 49: 0.0}
+Iteration 30: Valset pareto front aggregate score: 0.72
+Iteration 30: Updated valset pareto front programs: {0: {0, 1, 2, 3, 4, 5, 6}, 1: {6}, 2: {6}, 3: {0, 1, 2, 3, 4, 5, 6}, 4: {1, 2, 3, 4, 5, 6}, 5: {0, 1, 2, 3, 4, 5, 6}, 6: {5}, 7: {0, 1, 2, 3, 4, 5, 6}, 8: {4}, 9: {0, 2, 3, 4, 5, 6}, 10: {1, 3, 4, 5, 6}, 11: {0, 1, 2, 3, 4, 5, 6}, 12: {0, 1, 2, 3, 4, 5, 6}, 13: {0, 1, 2, 3, 4, 5, 6}, 14: {0, 5, 6}, 15: {3}, 16: {6}, 17: {1, 2, 4, 5, 6}, 18: {0, 1, 2, 5, 6}, 19: {0, 1, 2, 3, 4, 5, 6}, 20: {0, 1, 2, 3, 4, 5, 6}, 21: {0, 1, 2, 3, 4, 5, 6}, 22: {0, 1, 2, 3, 4, 5, 6}, 23: {0, 1, 2, 3, 4, 5, 6}, 24: {0, 1, 2, 3, 4, 5, 6}, 25: {1, 4, 5}, 26: {0, 1, 2, 3, 4, 5, 6}, 27: {6}, 28: {0, 1, 2, 3, 5}, 29: {0, 1, 4, 6}, 30: {0, 1, 2, 3, 4, 5, 6}, 31: {0, 1, 2, 3, 4, 5, 6}, 32: {2}, 33: {6}, 34: {6}, 35: {1, 2, 3, 4, 5, 6}, 36: {0, 1, 2, 3, 4, 5, 6}, 37: {1, 3, 4}, 38: {0, 1, 2, 3, 4, 5, 6}, 39: {0, 1, 2, 3, 4, 5, 6}, 40: {0, 1, 2, 3, 4, 5, 6}, 41: {0, 1, 5, 6}, 42: {0, 6}, 43: {1, 2, 3, 4}, 44: {0, 1, 2, 3, 4, 5, 6}, 45: {0, 1, 2, 3, 4, 5, 6}, 46: {0, 1, 2, 3, 4, 5, 6}, 47: {0, 1, 2, 3, 4, 5, 6}, 48: {0, 1, 2, 3, 4, 5, 6}, 49: {0, 1, 2, 3, 4, 5, 6}}
+Iteration 30: Best valset aggregate score so far: 0.56
+Iteration 30: Best program as per aggregate score on valset: 6
+Iteration 30: Best score on valset: 0.56
+Iteration 30: Linear pareto front program index: 6
+Iteration 30: New program candidate index: 6
+Iteration 31: Selected program 6 score: 0.56
+Iteration 31: Proposed new text for instruction: You are given a prompt containing an SVG <path> element (with its "d" attribute) and a multiple-choice list of geometric shape labels. Your task is to analyze the SVG path sequence and select the label (e.g., (A), (B), etc.) that corresponds to the geometric shape traced out by the path. Your response must be only the label, with no additional comments or text.
+
+Follow these detailed steps:
+
+1. **Extract the SVG Path Data:**
+   - Locate and read all the path drawing commands inside the d="..." attribute.
+   - Recognize and interpret the commands:
+     - 'M x,y': Move to point (x,y).
+     - 'L x,y': Draw a straight line to (x,y).
+     - 'Z' or 'z': Close the path by connecting the last point to the first.
+     - 'A': Draw an arc (part of a circle or ellipse).
+     - Curves: 'C', 'Q', 'S', 'T' indicate different kinds of curves.
+   - Ignore path attribute variable names, prompt text, or non-SVG-string context.
+
+2. **List and Count Unique Vertices:**
+   - Record the sequence of absolute points (from 'M', 'L', and any other endpoint-producing commands).
+   - Do not count a closing segment back to the starting point as a new point. Only unique, intentional vertices before closure should be counted.
+
+3. **Determine Shape Type by Vertices/Sides and Path Closure:**
+   - 2 unique points, connected once: "line"
+   - 3 unique points, closed: "triangle"
+   - 4 unique points, closed: quadrilateral types (rectangle, kite, trapezoid, or generic quadrilateral depending on properties and which labels are provided)
+   - 5 points: "pentagon"
+   - 6: "hexagon"
+   - 7: "heptagon"
+   - 8: "octagon"
+   - For more complex or irregular paths, count the number of segments defining the outer boundary (ignoring repeated/return points).
+
+4. **Classify Quadrilaterals and Special Geometric Forms:**
+   - For four vertices, analyze the arrangement if possible (using coordinates/order) to distinguish:
+     - Rectangle: All right angles (if the original SVG suggests such, or order/rough coordinates fit), use "rectangle".
+     - Kite: Two pairs of adjacent sides are equal, use "kite".
+     - Trapezoid: At least one pair of sides is parallel, use "trapezoid".
+     - Otherwise: Choose the closest available option, per the labels.
+   - If there is a single open line segment (two points, one 'L'), pick "line".
+   - If the path uses 'A' or curves in a way that constitutes a closed oval/ellipse/circle:
+     - If "ellipse" is a provided label, select it over "circle" unless the path only fits a perfect circle.
+     - If the path approximates a pie slice (with a move to center, line to perimeter, arc, and line back to center), choose "sector" if available.
+
+5. **Arcs and Curves:**
+   - Presence of 'A' or curve commands connecting multiple points in a closed shape may indicate "ellipse," "sector," or "circle" (choose the most precise provided label).
+   - If a path of arcs/ellipses is closed, pick "ellipse" or "circle";
+   - If combination line and arc (closing at the center), pick "sector" when provided.
+
+6. **Strict Option Selection:**
+   - Only select from the provided, lettered labels.
+   - Do NOT invent, interpret, or modify label terms.
+   - Do NOT base your answer solely on prompt language, variable names, or context outside the SVG path commands and shape options.
+   - DO NOT provide explanations, reasoning, or extra text—your complete response must be the single character label.
+
+7. **Tiebreaks and Ambiguity:**
+   - When shapes could conceivably match more than one label, pick the most specific and accurate label according to geometric definitions and the options list.
+   - For polygons with more than 4 sides and an appropriate label is present (e.g., pentagon, hexagon), select it even if irregular.
+   - For paths involving both lines and arcs that return to a starting center point (especially two lines with an arc between), favor "sector" if offered.
+
+This approach ensures domain-conforming accuracy in classifying SVG path-based geometric shapes using only provided options and precise SVG parsing.
+Iteration 31: New subsample score 0.0 is not better than old score 2.0, skipping
+Iteration 32: Selected program 3 score: 0.4
+Iteration 32: Proposed new text for instruction: You are given a text input describing an SVG path, as well as a list of single-letter-labeled shape options. Your task is to classify which shape is most accurately represented by the SVG path described, and output ONLY the single letter label corresponding to your answer (e.g., F) as it appears in the options. Do not output anything else—no explanation, description, or extra information.
+
+Here is what you must know about the input and how to classify:
+
+1. **Input Format:**
+   - The 'text' begins with `This SVG path element <path d="` and continues with SVG path data, then ends with `"/> draws a`.
+   - Shape options are listed below as a mapping from a single letter (such as A, B, C, etc.) to the name of the geometric shape (e.g., (F) octagon).
+   - The shape options list may sometimes include extra or unusual geometry names (as in 'ellipse')—always match your output precisely to the letter provided in the options.
+
+2. **SVG Path Anatomy:**
+   - Path uses commands such as:
+     - 'M' (move to): moves the "pen" to a coordinate without drawing a line.
+     - 'L' (line to): draws a straight line to the indicated coordinate.
+     - 'A' (arc to): draws an elliptical arc or part of a circle/ellipse.
+   - Paths are typically sequences like: M x1,y1 L x2,y2 L x3,y3 ... with possible curves (A).
+
+3. **Closed vs. Open Paths:**
+   - A closed path returns to its initial point. This can be:
+     - Explicit: the final 'L' command ends at the point where the initial 'M' began.
+     - Implicit: path commands ensure the shape connects back to its start, even if the closing is not explicit.
+   - An open path does not return to the starting point and is not a complete polygon.
+
+4. **Classification Rules:**
+   - **Circle & Ellipse**: Only select if there are arc ('A') or curve commands that define a continuous curved outline approximating a circle or ellipse. Do not select these for shapes constructed purely with 'L' (straight-line) commands.
+   - **Sector**: Select only if the figure is a wedge-shaped curved region, generally involving arcs and straight lines converging at a point (the center).
+   - **Line (E)**: Select this for a segment between two points, or for an open polyline that does not form an enclosed shape. If multiple 'L' commands exist but the path does not close, this is still a line.
+   - **Polygons**: 
+     - Triangle: 3 connected points, closed.
+     - Pentagon: 5 connected, closed.
+     - Hexagon: 6 connected, closed.
+     - Heptagon: 7 connected, closed.
+     - Octagon: 8 connected, closed.
+     - Rectangle: 4 vertices, all angles are right angles (90°). Sides should be opposite and equal, and joins perpendicular.
+     - Kite: 4 vertices, two distinct pairs of adjacent sides equal in length, but not necessarily with right angles. It should not meet the rectangle's requirements.
+   - **Multiple 'M' Commands**: Treat each segment that starts with 'M' independently. Most inputs only use a single path, but if more than one, check each for shape closure.
+
+5. **Important Edge Cases:**
+   - The correct answer must match the provided options: double-check for possible unusual categories (e.g., 'ellipse' as K).
+   - Sometimes, the assistant should ignore any shape not constructible from straight lines unless arcs or curves are explicitly present in the path (i.e., circle/ellipse/sector labels are only correct if 'A', 'Q', or 'C' path commands are involved).
+   - If the path consists of multiple open line segments (with interrupted sequences), and does not close, treat as lines (E).
+
+6. **Counting Distinct Points:**
+   - The number of distinct coordinate points (ignoring repetition except for closure) determines the side/vertex count. For polygons, verify that the last point is the same as the first (closed).
+   - When counting, follow the order in which points are visited.
+   
+7. **Selection Process:**
+   - Analyze the SVG path according to the above rules.
+   - Identify if the figure is open or closed, and count its distinct vertices.
+   - Match the vertex/point count and geometry to the polygon name (triangle, pentagon, etc.), or select from special categories as indicated.
+   - Output only the letter corresponding to the right shape, as specified in the task options.
+
+8. **General:**
+   - Do not default to shape categories only by the number of points—always confirm closure and geometry.
+   - For ambiguous or unusual paths, select the option that best matches the geometry as per the SVG commands.
+   - Never output anything but the single appropriate letter from the provided list of options.
+
+Example reminders:
+- Closed path with 8 distinct vertices: F (octagon).
+- Closed with 3: J (triangle).
+- Open path (not returning to start): E (line).
+- Path uses 'A' for curve/arc and defines a full or partial ellipse: output as per option (e.g., if 'K' is ellipse, use K).
+- Rectangle vs. kite for 4-point closed figures: only select rectangle if right angles are present.
+
+Your classification should be precise and based strictly on the above criteria.
+Iteration 32: New subsample score 3.0 is better than old score 1.0. Continue to full eval and add to candidate pool.
+Iteration 32: Valset score for new program: 0.5 (coverage 50 / 50)
+Iteration 32: Val aggregate for new program: 0.5
+Iteration 32: Individual valset scores for new program: {0: 0.0, 1: 1.0, 2: 1.0, 3: 1.0, 4: 1.0, 5: 0.0, 6: 0.0, 7: 1.0, 8: 0.0, 9: 1.0, 10: 1.0, 11: 1.0, 12: 1.0, 13: 0.0, 14: 0.0, 15: 0.0, 16: 1.0, 17: 0.0, 18: 1.0, 19: 1.0, 20: 1.0, 21: 0.0, 22: 1.0, 23: 0.0, 24: 1.0, 25: 0.0, 26: 0.0, 27: 1.0, 28: 1.0, 29: 0.0, 30: 1.0, 31: 0.0, 32: 0.0, 33: 0.0, 34: 0.0, 35: 1.0, 36: 0.0, 37: 1.0, 38: 1.0, 39: 0.0, 40: 0.0, 41: 0.0, 42: 1.0, 43: 1.0, 44: 1.0, 45: 0.0, 46: 0.0, 47: 1.0, 48: 0.0, 49: 0.0}
+Iteration 32: New valset pareto front scores: {0: 0.0, 1: 1.0, 2: 1.0, 3: 1.0, 4: 1.0, 5: 0.0, 6: 1.0, 7: 1.0, 8: 1.0, 9: 1.0, 10: 1.0, 11: 1.0, 12: 1.0, 13: 0.0, 14: 1.0, 15: 1.0, 16: 1.0, 17: 1.0, 18: 1.0, 19: 1.0, 20: 1.0, 21: 0.0, 22: 1.0, 23: 0.0, 24: 1.0, 25: 1.0, 26: 0.0, 27: 1.0, 28: 1.0, 29: 1.0, 30: 1.0, 31: 0.0, 32: 1.0, 33: 1.0, 34: 1.0, 35: 1.0, 36: 0.0, 37: 1.0, 38: 1.0, 39: 0.0, 40: 0.0, 41: 1.0, 42: 1.0, 43: 1.0, 44: 1.0, 45: 0.0, 46: 0.0, 47: 1.0, 48: 0.0, 49: 0.0}
+Iteration 32: Valset pareto front aggregate score: 0.72
+Iteration 32: Updated valset pareto front programs: {0: {0, 1, 2, 3, 4, 5, 6, 7}, 1: {6, 7}, 2: {6, 7}, 3: {0, 1, 2, 3, 4, 5, 6, 7}, 4: {1, 2, 3, 4, 5, 6, 7}, 5: {0, 1, 2, 3, 4, 5, 6, 7}, 6: {5}, 7: {0, 1, 2, 3, 4, 5, 6, 7}, 8: {4}, 9: {0, 2, 3, 4, 5, 6, 7}, 10: {1, 3, 4, 5, 6, 7}, 11: {0, 1, 2, 3, 4, 5, 6, 7}, 12: {0, 1, 2, 3, 4, 5, 6, 7}, 13: {0, 1, 2, 3, 4, 5, 6, 7}, 14: {0, 5, 6}, 15: {3}, 16: {6, 7}, 17: {1, 2, 4, 5, 6}, 18: {0, 1, 2, 5, 6, 7}, 19: {0, 1, 2, 3, 4, 5, 6, 7}, 20: {0, 1, 2, 3, 4, 5, 6, 7}, 21: {0, 1, 2, 3, 4, 5, 6, 7}, 22: {0, 1, 2, 3, 4, 5, 6, 7}, 23: {0, 1, 2, 3, 4, 5, 6, 7}, 24: {0, 1, 2, 3, 4, 5, 6, 7}, 25: {1, 4, 5}, 26: {0, 1, 2, 3, 4, 5, 6, 7}, 27: {6, 7}, 28: {0, 1, 2, 3, 5, 7}, 29: {0, 1, 4, 6}, 30: {0, 1, 2, 3, 4, 5, 6, 7}, 31: {0, 1, 2, 3, 4, 5, 6, 7}, 32: {2}, 33: {6}, 34: {6}, 35: {1, 2, 3, 4, 5, 6, 7}, 36: {0, 1, 2, 3, 4, 5, 6, 7}, 37: {1, 3, 4, 7}, 38: {0, 1, 2, 3, 4, 5, 6, 7}, 39: {0, 1, 2, 3, 4, 5, 6, 7}, 40: {0, 1, 2, 3, 4, 5, 6, 7}, 41: {0, 1, 5, 6}, 42: {0, 6, 7}, 43: {1, 2, 3, 4, 7}, 44: {0, 1, 2, 3, 4, 5, 6, 7}, 45: {0, 1, 2, 3, 4, 5, 6, 7}, 46: {0, 1, 2, 3, 4, 5, 6, 7}, 47: {0, 1, 2, 3, 4, 5, 6, 7}, 48: {0, 1, 2, 3, 4, 5, 6, 7}, 49: {0, 1, 2, 3, 4, 5, 6, 7}}
+Iteration 32: Best valset aggregate score so far: 0.56
+Iteration 32: Best program as per aggregate score on valset: 6
+Iteration 32: Best score on valset: 0.56
+Iteration 32: Linear pareto front program index: 6
+Iteration 32: New program candidate index: 7
+Iteration 33: Selected program 4 score: 0.44
+Iteration 33: Proposed new text for instruction: You are tasked with classifying a geometric figure based on an SVG path description. You will receive an input field named 'text' that presents an SVG <path> element (beginning with 'This SVG path element <path d="...') that details the figure through 'M' (move to) and 'L' (line to) commands, and sometimes may include multiple 'M' or 'L' sequences. The input always ends with 'draws a', followed by a fixed list of labels (A-J), mapping to possible geometric shapes (e.g., triangle, rectangle, pentagon, etc.).
+
+Your job is to analyze the SVG path commands to determine which geometric figure (from the provided options A-J) is depicted by the path. Output only the single uppercase letter (A-J) that matches the most accurate label. Do **not** include explanations or additional text—reply with the single letter answer only.
+
+Detailed task requirements:
+
+1. **Input Parsing:**
+   - The relevant path information will be inside the 'd' attribute (inside double quotes).
+   - The path will contain 'M' (move to) and 'L' (line to) commands, each followed by coordinates (e.g., 'M 30,30' or 'L 40,40').
+   - Multiple 'M' commands may indicate compound paths or disjoint subpaths; focus primarily on the first subpath unless geometry requires analyzing others.
+   - Ignore any text outside the <path d="..."> section for path data.
+   - The options list maps A-J to possible shape names.
+
+2. **Path Analysis and Figure Classification:**
+   - Collect the sequence of coordinates visited by all 'M' and 'L' commands, maintaining each as an (x, y) pair.
+   - Treat a 'M' as the start of a new subpath; focus on the main (usually first) subpath unless more are required for closure or context.
+   - **Closed Path:** The path is closed if the sequence of moves returns exactly to the initial 'M' point (or ends at that point), forming a polygon.
+      - Count the number of unique vertices in the main subpath. Remove duplicate sequential points, and treat points as the same if their coordinates exactly match.
+      - For polygons, ensure the path is closed; if the last point does not match the first point, it is NOT a closed polygon even if the count matches a polygon.
+   - **Open Path:** If the path does not return to its starting point, and no arc or curve commands are present, it should be classified as a line (E), regardless of the number of 'L' commands.
+   - **Special Path Types:**
+      - If the path contains curves ('A', 'C', or 'Q' commands), only then classify as a circle (A) or sector (I). For all-straight-line paths, only consider polygonal options or line.
+      - If not otherwise classifiable and only a straight open path is present, choose (E) line.
+
+3. **Classification by Vertices and Shape Properties:**
+   Match the number of unique (distinct, sequential, connected, and closed) vertices to these geometric types:
+   - 3 points (closed): (J) triangle
+   - 4 points (closed):
+      - **Rectangle** (H): when the four points form right angles (not always evident in the path, but use only if geometry and sequence suggest axis-aligned rectangle),
+      - **Kite** (D): quadrilaterals with two pairs of equal-length adjacent sides but not right angles; if ambiguous, prefer kite over rectangle unless explicit axis-alignment.
+      - If neither is clear, use the best-fitting quadrilateral option.
+   - 5 points (closed): (G) pentagon
+   - 6 points (closed): (C) hexagon
+   - 7 points (closed): (B) heptagon
+   - 8 points (closed): (F) octagon
+   - Any other (not matching above and closed): choose the option that best matches the vertex count and closure.
+   - If more than one closed shape is present, classify based on the primary/largest or first closed path.
+
+4. **Key Domain Details:**
+   - Do not count the number of 'L' commands; count genuine unique vertices as traced by the path coordinates.
+   - For a polygon, the path must start and end at the same coordinate (closed).
+   - Do not classify as (F) octagon unless there are 8 unique, closed vertices.
+   - Do not classify as (E) line if the path forms a closed polygon, even if the path is complex.
+   - Do not classify as (A) circle or (I) sector unless curve or arc commands are present (e.g., 'A', 'C', 'Q').
+   - Multiple 'M' s: usually only the first (or clearly closed) subpath needs to be classified.
+   - Strictly follow from the actual traced path and sequence; do not guess based on label names or shape expectations.
+
+5. **Output:**
+   - Return only the single letter (A-J) corresponding to the label for the identified shape. No extra explanation or text.
+
+6. **Common pitfalls to avoid:**
+   - Do not misclassify open paths with many segments as polygons.
+   - Do not assume closure unless the coordinates return to the starting point.
+   - When in doubt about the quadrilateral type, prefer kite over rectangle unless clear right angles are evident.
+   - Do not base the answer solely on the number of commands—always check geometry and closure.
+
+**In summary:** Identify the path’s unique vertices, check if the path is closed, and match to the correct geometric class from options A-J using the above rules. Output just the single corresponding letter.
+Iteration 33: New subsample score 2.0 is not better than old score 2.0, skipping
+Iteration 34: Selected program 2 score: 0.4
+Iteration 34: Proposed new text for instruction: You are an assistant designed to classify the geometric shape described by an SVG path string. Each input consists of a sentence describing an SVG path, e.g., "This SVG path element <path d='M ... L ... L ...'/> draws a", followed by a list of labeled shape options from (A) to (K). Your job is to analyze the path data and output the single letter label that best matches the geometric shape drawn. 
+
+#### Step-by-step Instructions:
+
+1. **Parse SVG Path Data:**
+   - The path is always in the format `<path d="..."/>`, with commands starting by 'M' (moveto) and followed by one or more 'L' (lineto), each specifying (x, y) coordinates.
+   - Path may start with an 'M', then have several 'L' commands forming a sequence of points. The path is closed if the last 'L' matches the starting 'M' coordinates, or a Z command (not shown in examples) would close the path.
+   - Only count unique vertices up to closure of the path; do not count the starting point again if the path closes.
+
+2. **Count Sides/Vertices:**
+   - Count the number of unique consecutive vertices defined before returning to the starting point.
+   - For example, `M A L B L C L D L A` describes a four-sided figure.
+
+3. **Identify Quadrilateral Type Using Factual Geometric Definitions:**
+   - **Rectangle (H):** 4 sides and all angles are 90 degrees.
+   - **Kite (D):** 4 sides, two pairs of adjacent sides are equal in length.
+   - **Trapezoid (K):** 4 sides, *at least one pair* of opposite sides are parallel, but does not fulfill the rectangle or kite definition.
+   - For other 4-sided polygons, choose according to the above hierarchy.
+   - Many mistakes occur by assuming all 4-sided shapes = rectangle or by not recognizing trapezoids. Trapezoid is the correct label for 4-sided closed polygons that are neither rectangles nor kites but *do* have at least one pair of parallel sides. Use the geometric layout of the coordinates to infer this when possible.
+   - **If option K is present and the path forms a general quadrilateral that isn't specifically a rectangle or kite, default to K (trapezoid).**
+
+4. **Other Shapes and Labels:**
+   - 3 unique vertices: J (triangle)
+   - 5 unique vertices: G (pentagon)
+   - 6 unique vertices: C (hexagon)
+   - 7 unique vertices: B (heptagon)
+   - 8 unique vertices: F (octagon)
+   - 2 unique vertices with one segment: E (line)
+   - Circle/Arc/Closed oval path: A (circle)
+   - "Pie slice" or wedge using arc commands: I (sector)
+
+5. **Use Only Shape, Not Appearance Keywords:**
+   - Do not choose based on the label list or associated keywords in the prompt. Rely entirely on the provided SVG path data.
+   - Never guess a shape based on the option list or prompt wording.
+
+6. **Final Output & Formatting:**
+   - Output only the single most appropriate label letter: e.g., `K`, with no explanation, extra text, or whitespace.
+   - If two labels seem possible, select the most specific geometric interpretation according to the above rules.
+
+#### Domain-specific Guidance (from feedback):
+
+- Example: A path `M ... L ... L ... L ... L ... M` with 4 vertices defines a quadrilateral. If not a rectangle or kite, and at least one pair of sides could be parallel, **label K (trapezoid)** is correct.
+- Do not label pentagons (G) for 4-vertex shapes even if they are irregular.
+- Always analyze the points, not the option list or prompt wording.
+
+Your output must strictly follow these rules.
+Iteration 34: New subsample score 3.0 is better than old score 1.0. Continue to full eval and add to candidate pool.
+Iteration 34: Valset score for new program: 0.5 (coverage 50 / 50)
+Iteration 34: Val aggregate for new program: 0.5
+Iteration 34: Individual valset scores for new program: {0: 0.0, 1: 0.0, 2: 0.0, 3: 1.0, 4: 1.0, 5: 0.0, 6: 0.0, 7: 1.0, 8: 0.0, 9: 1.0, 10: 1.0, 11: 1.0, 12: 1.0, 13: 0.0, 14: 0.0, 15: 0.0, 16: 0.0, 17: 1.0, 18: 0.0, 19: 1.0, 20: 1.0, 21: 1.0, 22: 1.0, 23: 1.0, 24: 1.0, 25: 1.0, 26: 0.0, 27: 0.0, 28: 1.0, 29: 0.0, 30: 1.0, 31: 0.0, 32: 1.0, 33: 0.0, 34: 1.0, 35: 1.0, 36: 0.0, 37: 1.0, 38: 1.0, 39: 0.0, 40: 0.0, 41: 0.0, 42: 0.0, 43: 1.0, 44: 1.0, 45: 0.0, 46: 0.0, 47: 1.0, 48: 0.0, 49: 0.0}
+Iteration 34: New valset pareto front scores: {0: 0.0, 1: 1.0, 2: 1.0, 3: 1.0, 4: 1.0, 5: 0.0, 6: 1.0, 7: 1.0, 8: 1.0, 9: 1.0, 10: 1.0, 11: 1.0, 12: 1.0, 13: 0.0, 14: 1.0, 15: 1.0, 16: 1.0, 17: 1.0, 18: 1.0, 19: 1.0, 20: 1.0, 21: 1.0, 22: 1.0, 23: 1.0, 24: 1.0, 25: 1.0, 26: 0.0, 27: 1.0, 28: 1.0, 29: 1.0, 30: 1.0, 31: 0.0, 32: 1.0, 33: 1.0, 34: 1.0, 35: 1.0, 36: 0.0, 37: 1.0, 38: 1.0, 39: 0.0, 40: 0.0, 41: 1.0, 42: 1.0, 43: 1.0, 44: 1.0, 45: 0.0, 46: 0.0, 47: 1.0, 48: 0.0, 49: 0.0}
+Iteration 34: Valset pareto front aggregate score: 0.76
+Iteration 34: Updated valset pareto front programs: {0: {0, 1, 2, 3, 4, 5, 6, 7, 8}, 1: {6, 7}, 2: {6, 7}, 3: {0, 1, 2, 3, 4, 5, 6, 7, 8}, 4: {1, 2, 3, 4, 5, 6, 7, 8}, 5: {0, 1, 2, 3, 4, 5, 6, 7, 8}, 6: {5}, 7: {0, 1, 2, 3, 4, 5, 6, 7, 8}, 8: {4}, 9: {0, 2, 3, 4, 5, 6, 7, 8}, 10: {1, 3, 4, 5, 6, 7, 8}, 11: {0, 1, 2, 3, 4, 5, 6, 7, 8}, 12: {0, 1, 2, 3, 4, 5, 6, 7, 8}, 13: {0, 1, 2, 3, 4, 5, 6, 7, 8}, 14: {0, 5, 6}, 15: {3}, 16: {6, 7}, 17: {1, 2, 4, 5, 6, 8}, 18: {0, 1, 2, 5, 6, 7}, 19: {0, 1, 2, 3, 4, 5, 6, 7, 8}, 20: {0, 1, 2, 3, 4, 5, 6, 7, 8}, 21: {8}, 22: {0, 1, 2, 3, 4, 5, 6, 7, 8}, 23: {8}, 24: {0, 1, 2, 3, 4, 5, 6, 7, 8}, 25: {8, 1, 4, 5}, 26: {0, 1, 2, 3, 4, 5, 6, 7, 8}, 27: {6, 7}, 28: {0, 1, 2, 3, 5, 7, 8}, 29: {0, 1, 4, 6}, 30: {0, 1, 2, 3, 4, 5, 6, 7, 8}, 31: {0, 1, 2, 3, 4, 5, 6, 7, 8}, 32: {8, 2}, 33: {6}, 34: {8, 6}, 35: {1, 2, 3, 4, 5, 6, 7, 8}, 36: {0, 1, 2, 3, 4, 5, 6, 7, 8}, 37: {1, 3, 4, 7, 8}, 38: {0, 1, 2, 3, 4, 5, 6, 7, 8}, 39: {0, 1, 2, 3, 4, 5, 6, 7, 8}, 40: {0, 1, 2, 3, 4, 5, 6, 7, 8}, 41: {0, 1, 5, 6}, 42: {0, 6, 7}, 43: {1, 2, 3, 4, 7, 8}, 44: {0, 1, 2, 3, 4, 5, 6, 7, 8}, 45: {0, 1, 2, 3, 4, 5, 6, 7, 8}, 46: {0, 1, 2, 3, 4, 5, 6, 7, 8}, 47: {0, 1, 2, 3, 4, 5, 6, 7, 8}, 48: {0, 1, 2, 3, 4, 5, 6, 7, 8}, 49: {0, 1, 2, 3, 4, 5, 6, 7, 8}}
+Iteration 34: Best valset aggregate score so far: 0.56
+Iteration 34: Best program as per aggregate score on valset: 6
+Iteration 34: Best score on valset: 0.56
+Iteration 34: Linear pareto front program index: 6
+Iteration 34: New program candidate index: 8
+Iteration 35: Selected program 5 score: 0.46
+Iteration 35: Proposed new text for instruction: You are given a classification task where you must identify geometric shapes based on SVG path descriptions. Your input will always be a text block containing:
+
+- An SVG path element, e.g., <path d="..."/>, describing the sequence of points and lines drawn.
+- The phrase "draws a" followed by a list of shape options, each with a letter label.
+
+Your instruction is:
+
+1. **Understand the SVG Path Format:**
+   - "M" means "move to" (starting a new sub-path at a point).
+   - "L" means "line to" (draws a straight line from the current point to a new point).
+   - Paths can include multiple "M" and "L" commands—be sure to track all points in the order given.
+   - Paths are often closed; sometimes this is by repeating a point, sometimes by an explicit "Z" (close path) command (though "Z" may not always appear).
+
+2. **Identify the Main Shape:**
+   - **Polygon sides:** Count the number of unique vertices or corner points (distinct coordinate pairs) in each sub-path.
+   - **5 unique points** forms a pentagon; **6** is a hexagon; **7** is a heptagon; **8** is an octagon; **3** is a triangle. 
+   - **4 unique points:** Analyze for quadrilateral type:
+     - **Rectangle:** Four points, where the sides are paired in length and all angles are right angles (90°). Often, rectangles retrace corners in classic sequence (e.g., bottom-left, top-left, top-right, bottom-right, back to bottom-left).
+     - **Trapezoid:** Four points; only one pair of parallel sides.
+     - **Kite:** Four points; two pairs of adjacent sides of equal length. Typically forms a diamond-like shape.
+   - **2 unique points:** This is a line (label E).
+   - **Curved paths** (including arcs or circle sectors): Look for commands not just "L" and "M" but also "A", "Q", "C", which indicate arcs or curves possibly describing sectors (label I), but these are rare in your task.
+
+3. **Critical Instructions for Quadrilaterals and Pitfalls:**
+   - Not every four-point shape is a rectangle. Confirm pairs of equal sides and right angles before labeling as rectangle.
+   - Pentagons can be drawn with five connected points (not necessarily regular).
+   - Do not confuse open paths (lines or polylines) with polygons. If the path does not close, and it contains only two commands, it is likely a line.
+   - Some shapes are described using multiple sub-paths (multiple 'M' commands). Treat each closed group separately, but the task usually focuses on a single main shape.
+
+4. **Shape-Option Mapping:**
+   - Only use one of these labels, based on your shape analysis:
+       (B) heptagon — 7 sides/vertices
+       (C) hexagon — 6 sides/vertices
+       (D) kite — 4 sides, two adjacent pairs of equal length
+       (E) line — two points, straight segment
+       (F) octagon — 8 sides
+       (G) pentagon — 5 sides
+       (I) sector — curved portion/arc of a circle
+       (J) triangle — 3 sides
+       (K) trapezoid — 4 sides, only one pair parallel
+
+5. **Output Rules:**
+   - Output ONLY the single letter label for your choice; do not provide any text, explanation, or formatting.
+   - Do not repeat or guess a shape name—just supply the correct letter from the options provided.
+
+6. **Specific Guidance:**
+   - For paths like "M x1,y1 L x2,y2 L x3,y3 ... L xN,yN" that return to the initial coordinate or re-close to form a polygon, count unique coordinate pairs to determine the sides/corners.
+   - If a path appears complex, focus on the sequence of unique points and how lines connect them.
+   - If a path has five unique points and each is connected, it is likely a pentagon (label G), not a kite (label D), unless two pairs of adjacent sides are equal and it obviously fits the kite definition.
+   - Do not confuse five-point paths with four-point (kite/rectangle/trapezoid) shapes.
+   - If in doubt, confirm shape type by the number of unique vertices and the way edges relate.
+
+7. **Apply the above knowledge to each input, and always double-check your chosen label with the underlying path structure. Your output must be a single character label only.**
+
+Failure to accurately parse the number of unique points and their relationships may lead to incorrect identification (e.g., confusing a pentagon for a kite). Always carefully check the vertices count and relationships for any edge cases.
+Iteration 35: New subsample score 2.0 is not better than old score 2.0, skipping
+Iteration 36: Selected program 8 score: 0.5
+Iteration 36: Proposed new text for instruction: You are an assistant designed for a precise SVG shape classification task. Given an input sentence that contains an SVG path string in the format `<path d="..."/>` (where the path is described using commands like 'M', 'L', and possibly 'A'), your job is to analyze the path data as geometry and select the single correct label from a provided option list, outputting only the letter label (A-K) that corresponds to the geometric figure drawn by the path.
+
+**Instructions:**
+
+1. **SVG Path Parsing:**
+   - Focus only on the path data within the `d="..."`, ignoring the rest of the sentence and options.
+   - Commands will always start with 'M' (move to point), may be followed by multiple 'L' (line to point) commands specifying coordinates, and occasionally include 'A' (arc to point).
+   - The path may end by returning to the starting point, indicating closure. Count only unique vertices used to define the shape (do not double-count the starting point).
+
+2. **Shape Side/Vertex Counting:**
+   - For a path using only 'M' and 'L' commands:
+     - Count all unique points in sequence until the shape closes.
+     - Recognize:
+       - 2 unique points: E (line)
+       - 3 unique points: J (triangle)
+       - 4 unique points: quadrilateral; the specific label depends on geometry (see below)
+       - 5 unique points: G (pentagon)
+       - 6 unique points: C (hexagon)
+       - 7 unique points: B (heptagon)
+       - 8 unique points: F (octagon)
+   - 'A' commands (arcs) are used to define curved segments and often indicate ellipses/circles/sectors; interpret these according to the command arguments and closure.
+
+3. **Special Shape Rules for Quadrilaterals:**
+   - For four-sided closed shapes (4 unique points):
+     - **H (rectangle):** Only select if all angles are 90 degrees and opposite sides are equal (classic rectangle).
+     - **D (kite):** Only select if there are 2 pairs of adjacent sides of equal length.
+     - **K (trapezoid):** Select if there is at least one pair of opposite sides that are parallel, but the shape does not fit the definition of a rectangle or kite. If none of the more specific cases above apply, and it's a generic, non-rectangular, non-kite quadrilateral, default to K (trapezoid) whenever K is an option.
+     - Never select G (pentagon) for any 4-sided shape, however irregular.
+
+4. **Curved/Circular Shapes:**
+   - If the path uses only 'A' (arc) commands or forms a closed path using arcs describing a full circle or ellipse:
+     - **A (circle):** Only if the arc is a full circle, and "circle" is an available option.
+     - **K (ellipse):** Only if the arc or series of arcs create a closed oval or ellipse, and "ellipse" is an available option.
+     - **I (sector):** If the path forms a "pie slice" (i.e., moves from the center to the circumference and back, creating a wedge shape with arcs), select I.
+   - Distinguish carefully between circle, ellipse, and sector based on the arc parameters and closure.
+
+5. **Option Selection:**
+   - Only consider the geometric content of the SVG path when classifying—ignore all keywords and hints in the prompt, other than the path commands themselves.
+   - Do not make assumptions based on the shape option list. Always trust the path data over the label wording.
+   - If two shape labels seem plausible, select the more specific geometric label when possible.
+
+6. **Formatting and Output:**
+   - Output only a single uppercase letter (from A to K) representing the chosen label, matching the provided option list.
+   - Do not output any additional explanation, whitespace, or commentary.
+
+**Domain Knowledge and Cautions:**
+- For cases where arc commands ('A') are present, do not default to circle (A) unless the arc parameters strictly describe a full, round circle. 
+- An ambiguous path with only arc commands forming an oval may describe an ellipse (K) rather than a circle.
+- For "trapezoid": Any quadrilateral that is not strictly a rectangle or kite, and has at least one pair of opposite sides that are parallel (or if the options and geometry indicate this is the category for generic quadrilaterals), should be labeled K.
+- Adhere to strict mathematical definitions of each polygon and curved shape; never infer based on appearance labels or keywords in the prompt.
+
+Remember: output only the correct single-letter label corresponding to the geometric interpretation of the provided SVG path data, according to these criteria.
+Iteration 36: New subsample score 3.0 is better than old score 2.0. Continue to full eval and add to candidate pool.
+Iteration 36: Found a better program on the valset with score 0.58.
+Iteration 36: Valset score for new program: 0.58 (coverage 50 / 50)
+Iteration 36: Val aggregate for new program: 0.58
+Iteration 36: Individual valset scores for new program: {0: 0.0, 1: 1.0, 2: 1.0, 3: 1.0, 4: 1.0, 5: 0.0, 6: 0.0, 7: 1.0, 8: 1.0, 9: 1.0, 10: 1.0, 11: 1.0, 12: 1.0, 13: 0.0, 14: 0.0, 15: 0.0, 16: 0.0, 17: 1.0, 18: 1.0, 19: 1.0, 20: 1.0, 21: 0.0, 22: 1.0, 23: 0.0, 24: 1.0, 25: 1.0, 26: 0.0, 27: 1.0, 28: 1.0, 29: 1.0, 30: 1.0, 31: 0.0, 32: 0.0, 33: 0.0, 34: 0.0, 35: 1.0, 36: 0.0, 37: 1.0, 38: 1.0, 39: 0.0, 40: 0.0, 41: 0.0, 42: 1.0, 43: 1.0, 44: 1.0, 45: 0.0, 46: 1.0, 47: 1.0, 48: 0.0, 49: 0.0}
+Iteration 36: New valset pareto front scores: {0: 0.0, 1: 1.0, 2: 1.0, 3: 1.0, 4: 1.0, 5: 0.0, 6: 1.0, 7: 1.0, 8: 1.0, 9: 1.0, 10: 1.0, 11: 1.0, 12: 1.0, 13: 0.0, 14: 1.0, 15: 1.0, 16: 1.0, 17: 1.0, 18: 1.0, 19: 1.0, 20: 1.0, 21: 1.0, 22: 1.0, 23: 1.0, 24: 1.0, 25: 1.0, 26: 0.0, 27: 1.0, 28: 1.0, 29: 1.0, 30: 1.0, 31: 0.0, 32: 1.0, 33: 1.0, 34: 1.0, 35: 1.0, 36: 0.0, 37: 1.0, 38: 1.0, 39: 0.0, 40: 0.0, 41: 1.0, 42: 1.0, 43: 1.0, 44: 1.0, 45: 0.0, 46: 1.0, 47: 1.0, 48: 0.0, 49: 0.0}
+Iteration 36: Valset pareto front aggregate score: 0.78
+Iteration 36: Updated valset pareto front programs: {0: {0, 1, 2, 3, 4, 5, 6, 7, 8, 9}, 1: {9, 6, 7}, 2: {9, 6, 7}, 3: {0, 1, 2, 3, 4, 5, 6, 7, 8, 9}, 4: {1, 2, 3, 4, 5, 6, 7, 8, 9}, 5: {0, 1, 2, 3, 4, 5, 6, 7, 8, 9}, 6: {5}, 7: {0, 1, 2, 3, 4, 5, 6, 7, 8, 9}, 8: {9, 4}, 9: {0, 2, 3, 4, 5, 6, 7, 8, 9}, 10: {1, 3, 4, 5, 6, 7, 8, 9}, 11: {0, 1, 2, 3, 4, 5, 6, 7, 8, 9}, 12: {0, 1, 2, 3, 4, 5, 6, 7, 8, 9}, 13: {0, 1, 2, 3, 4, 5, 6, 7, 8, 9}, 14: {0, 5, 6}, 15: {3}, 16: {6, 7}, 17: {1, 2, 4, 5, 6, 8, 9}, 18: {0, 1, 2, 5, 6, 7, 9}, 19: {0, 1, 2, 3, 4, 5, 6, 7, 8, 9}, 20: {0, 1, 2, 3, 4, 5, 6, 7, 8, 9}, 21: {8}, 22: {0, 1, 2, 3, 4, 5, 6, 7, 8, 9}, 23: {8}, 24: {0, 1, 2, 3, 4, 5, 6, 7, 8, 9}, 25: {1, 4, 5, 8, 9}, 26: {0, 1, 2, 3, 4, 5, 6, 7, 8, 9}, 27: {9, 6, 7}, 28: {0, 1, 2, 3, 5, 7, 8, 9}, 29: {0, 1, 4, 6, 9}, 30: {0, 1, 2, 3, 4, 5, 6, 7, 8, 9}, 31: {0, 1, 2, 3, 4, 5, 6, 7, 8, 9}, 32: {8, 2}, 33: {6}, 34: {8, 6}, 35: {1, 2, 3, 4, 5, 6, 7, 8, 9}, 36: {0, 1, 2, 3, 4, 5, 6, 7, 8, 9}, 37: {1, 3, 4, 7, 8, 9}, 38: {0, 1, 2, 3, 4, 5, 6, 7, 8, 9}, 39: {0, 1, 2, 3, 4, 5, 6, 7, 8, 9}, 40: {0, 1, 2, 3, 4, 5, 6, 7, 8, 9}, 41: {0, 1, 5, 6}, 42: {0, 9, 6, 7}, 43: {1, 2, 3, 4, 7, 8, 9}, 44: {0, 1, 2, 3, 4, 5, 6, 7, 8, 9}, 45: {0, 1, 2, 3, 4, 5, 6, 7, 8, 9}, 46: {9}, 47: {0, 1, 2, 3, 4, 5, 6, 7, 8, 9}, 48: {0, 1, 2, 3, 4, 5, 6, 7, 8, 9}, 49: {0, 1, 2, 3, 4, 5, 6, 7, 8, 9}}
+Iteration 36: Best valset aggregate score so far: 0.58
+Iteration 36: Best program as per aggregate score on valset: 9
+Iteration 36: Best score on valset: 0.58
+Iteration 36: Linear pareto front program index: 9
+Iteration 36: New program candidate index: 9
+Iteration 37: Selected program 3 score: 0.4
+Iteration 37: Proposed new text for instruction: You are to perform classification of SVG path descriptions according to the closed geometric shape formed by their coordinates and drawing commands. The input consists of a field called 'text' that includes a sentence beginning with "This SVG path element <path d=" followed by a standard SVG path string, and ending with 'draws a'. Below, you will find labeled options (A-J or A-K), mapping single-letter labels to shape names; you are to output ONLY the letter label (e.g., 'B'), never the name or any explanation.
+
+THE TASK:
+
+Your job is to closely analyze the SVG path segment and identify, based on its commands and coordinates, which of the listed shape types it most accurately represents. Your classification must adhere strictly to the actual geometry encoded in the path, including careful interpretation of closure, vertex count, and path structure. Follow these important rules and domain-specific points:
+
+RULES:
+
+1. SVG Commands and Structure:
+   - 'M x,y' is "move to" (begin a subpath or start drawing at this point, without drawing a line yet).
+   - 'L x,y' is "line to" (draws a straight line from the previous point to this point).
+   - The path is a series of these and can include multiple 'M' commands (i.e., disjoint/multiple subpaths). Treat each subpath independently unless their connectivity is essential for closure.
+   - The SVG path is only comprised of straight lines ('L') and 'M' moves unless specified otherwise.
+
+2. Vertices and Closure:
+   - The number of distinct coordinate points connected in a subpath forms the candidate vertices of a polygon IF the path is closed (i.e., returns to the starting point).
+   - The subpath is 'closed' if the path ends at the starting coordinate either through an explicit 'L' command or because the final listed point is equal to the initial one.
+   - If the subpath does NOT return to the start, it is an 'open' path, not a polygon; unless otherwise noted, classify such cases as (E) line.
+   - If there are multiple unconnected open subpaths, typically classify as (E) line unless one subpath is a closed polygon.
+
+3. Detailed shape mapping:
+   - (A) circle: Only choose if the path is a smooth closed curve involving curve commands, NOT just 'L' and 'M'.
+   - (B) heptagon: Closed polygon with exactly 7 vertices (distinct points).
+   - (C) hexagon: closed with 6 vertices.
+   - (D) kite: Closed quadrilateral (4 vertices), two pairs of adjacent sides equal, not all angles 90°. Only use D if figure is non-rectangular with two pairs of neighboring sides the same.
+   - (E) line: Any open path (not returning to starting point) or a single straight segment.
+   - (F) octagon: Closed polygon with 8 vertices.
+   - (G) pentagon: Closed polygon with 5 vertices.
+   - (H) rectangle: Closed polygon with 4 vertices and four right angles (perpendicular connections). Use only if the sequence is an axis-aligned rectangle or the coordinates correspond to four right angles.
+   - (I) sector: Curved wedge shape, only if curve commands (e.g., Arc) are present.
+   - (J) triangle: Exactly three distinct points, path is closed.
+   - (K) trapezoid: Four distinct points in a closed path, with exactly one pair of parallel sides, not a rectangle or kite. Note, only classify as (K) if the word 'trapezoid' is available among the options.
+
+4. Extra details and common pitfalls:
+   - For closed polygons with more than 8 points: select based on the closest match from the option list or leave out (usually not needed).
+   - For ambiguous 4-vertex closed polygons, distinguish between rectangle, kite, or trapezoid using the path of coordinates. Default to 'rectangle' only if all angles are right, 'kite' if two pairs of equal adjacent sides, otherwise 'trapezoid' if available.
+   - When multiple 'M' commands are present, each starts a new subpath. Closed loops should be identified per subpath. Multiple closed polygons in one path are rare; normally, the largest or most complex closed shape is intended for identification.
+   - If a subpath starts and ends at the same coordinate (whether explicitly or via overlapping Ls/Ms), it is closed.
+
+5. Special classification notes:
+   - Do NOT default to a polygon label just from count of points; always check for closure.
+   - If only lines (not returning to initial point) are drawn, regardless of number of points, answer (E) line.
+   - Only output the letter label corresponding to the detected shape. NO extra text or reasoning is allowed.
+   - Ignore the shape 'names' in the options when classifying; use only the specified SVG path geometry.
+
+STRATEGY:
+
+- For each path sequence (starting at 'M', followed by 'L's), collect the sequence of distinct point coordinates.
+- Check if the path returns to the starting coordinate to judge closure; if not, answer (E).
+- Count the number of distinct points in each closed sequence to classify among polygon options (triangle = 3, pentagon = 5, hexagon = 6, heptagon = 7, octagon = 8).
+- For quadrilaterals (4 points), use geometric arrangement (angles, sides) to decide among rectangle, kite, or trapezoid, using the definitions above.
+- Only choose sector or circle if curve commands are in the path.
+- If several subpaths are present, select the one that forms a valid closed polygon, according to the above.
+- If the path is ambiguous or unclassifiable by the above rules, choose the closest fitting type as defined.
+- Do not output more than one letter, or anything besides that single letter.
+
+CLASSIFICATION MUST BE BASED SOLELY ON THE LITERAL SVG PATH COMMANDS AND THE COORDINATES PROVIDED.
+
+Repeat: Output only the single correct letter label (e.g., 'C').
+Iteration 37: New subsample score 0.0 is not better than old score 0.0, skipping
+Iteration 38: Selected program 3 score: 0.4
+Iteration 38: Proposed new text for instruction: You are given a classification task based on SVG (Scalable Vector Graphics) path descriptions. Each task input consists of:
+
+- A 'text' field that describes an SVG path, with the following structure:
+  - The text starts with: 'This SVG path element <path d="'
+  - It contains one or more SVG path commands with coordinates.
+  - The path description always ends with '"/>'.
+  - The text then ends with 'draws a'.
+- Below the text, there is a list of labeled options, mapping single-letter labels (A, B, C, ...) to possible shape names.
+
+Your task is to classify the geometric shape most accurately represented by the SVG path described in the 'text', using only the information provided in the path data and the option list given.
+
+**Instructions:**
+
+1. **Interpret SVG Path Commands:**
+   - Path commands may include:
+     - 'M' (move to): Moves to a coordinate without drawing a line.
+     - 'L' (line to): Draws a straight line from the current point to the specified coordinate.
+     - 'A' (arc to): Draws an elliptical or circular arc to the specified coordinate.
+   - The path contains a sequence of coordinate pairs, generally using 'M', 'L', or 'A'. Multiple 'M' commands denote subpaths.
+   - There may also be other SVG commands, but typically you will only see 'M', 'L', and 'A'.
+
+2. **Count Distinct Points and Analyze Closure:**
+   - For polygonal shapes (triangle, rectangle, kite, pentagon, hexagon, heptagon, octagon, etc.), count the number of unique points connected in sequence within a closed figure. A closed path is one where the last point returns to the starting coordinate (or where the path logically connects back to the start).
+   - If the path does NOT return to the starting point and does NOT logically close, classify it as (E) line, regardless of how many points are present, unless it is clearly an arc or sector.
+   - If the path consists of two points only and connects them, it is also (E) line.
+
+3. **Shape Category Matching:**
+   - Use the number of vertices and SVG command types to determine the best match from the provided options:
+     - (A) circle: Only select if the path uses arc or curve commands that together create a full loop (the start and end employ arc commands forming a round shape).
+     - (K) ellipse: Select if 'A' commands form an ellipse (elliptical arc that closes back to the starting point), not a full symmetric circle.
+     - (I) sector: Select only if a wedge or pie-slice is described (usually 'A' commands plus straight lines from the center of a circle).
+     - (J) triangle: Closed path with three distinct points.
+     - (H) rectangle: Closed path with four right-angled turns; check distance and arrangement.
+     - (D) kite: Closed path with four points, two pairs of adjacent sides of equal length, not necessarily right angles.
+     - (K) trapezoid: Closed path with four points that appear to make a quadrilateral where only one pair of sides is parallel.
+     - (G) pentagon: Closed path with five sides.
+     - (C) hexagon: Closed path with six sides.
+     - (B) heptagon: Closed path with seven sides.
+     - (F) octagon: Closed path with eight sides.
+     - (E) line: Open path, or just two points connected.
+   - Match to the most specific/accurate shape based on the SVG data and the list of provided options.
+
+4. **Analysis Guidelines:**
+   - Use ALL the explicit path information—do not infer or assume beyond what's given. 
+   - When multiple 'M' commands are present, treat them as separate subpaths; focus on the most complex or closed one if one obviously represents a shape.
+   - If arc ('A') commands are present, distinguish between elliptical/circular arcs (for circles, ellipses, or sectors) and simple line-based polygons.
+   - Never label a figure as a polygon if it is an open shape.
+   - If a path ambiguously describes more than one shape, select the one that best fits the vertices and closure, and favor named polygons or well-defined geometric shapes.
+
+5. **Output Requirements:**
+   - Only output the single correct letter label (A, B, C, ..., K) corresponding to the option that best fits the shape described by the SVG path.
+   - Do not provide explanations, additional characters, or text—only the single letter.
+
+6. **Error Avoidance:**
+   - Do NOT default to geometric shape only based on the number of points; always check for closure, command type, and geometric relationships.
+   - Pay attention to whether shapes could be special quadrilaterals: rectangle, kite, or trapezoid.
+   - For circles and ellipses, do not classify as such unless arc/curve commands are used, and the closure condition for these shapes is met.
+   - Take care to use only the letter symbol as given in the option list, not the shape name or any other text.
+
+**Summary Table (for classification):**
+
+| Letter | Shape      | Criteria (based on path analysis)                                    |
+|--------|------------|----------------------------------------------------------------------|
+|   A    | circle     | Closed smooth arc path (circle, using arc/curve commands)            |
+|   B    | heptagon   | Closed polygon with 7 sides/vertices                                 |
+|   C    | hexagon    | Closed polygon with 6 sides/vertices                                 |
+|   D    | kite       | Closed 4-point polygon with adjacent equal sides (not right angles)  |
+|   E    | line       | Open path or two points only                                         |
+|   F    | octagon    | Closed polygon with 8 sides/vertices                                 |
+|   G    | pentagon   | Closed polygon with 5 sides/vertices                                 |
+|   H    | rectangle  | Closed 4-point polygon, all right angles                            |
+|   I    | sector     | Closed wedge shape, using arc and straight lines (pie or wedge)      |
+|   J    | triangle   | Closed polygon with 3 sides/vertices                                 |
+|   K    | trapezoid  | Closed quadrilateral, exactly one pair of parallel sides             |
+
+Use this analysis for every input, and strictly follow the output format.
+Iteration 38: New subsample score 1.0 is not better than old score 1.0, skipping
+Iteration 39: Selected program 5 score: 0.46
+Iteration 39: Proposed new text for instruction: You are given a shape classification task based on SVG path descriptions. The input consists of a block of text describing an SVG path, formatted as follows:
+
+### text
+This SVG path element <path d="..."/> draws a
+Options:
+(A) circle
+(B) heptagon
+(C) hexagon
+(D) kite
+(E) line
+(F) octagon
+(G) pentagon
+(H) rectangle
+(I) sector
+(J) triangle
+(K) trapezoid
+
+Your task is to analyze ONLY the SVG path (the 'd' attribute) and output the correct geometric label corresponding to the shape drawn, using only the letter from the provided options (from the subset: B, C, D, E, F, G, I, J, K – do not select A or H, as these are not valid outputs).
+
+Key Requirements and Domain-Specific Instructions:
+
+1. **Strict Output:** Output only ONE label corresponding to the correct shape (B, C, D, E, F, G, I, J, or K), with no extra text, explanation, formatting, or whitespace.
+
+2. **Input Analysis:**
+   - The SVG path consists of a sequence of commands (primarily M - moveto, and L - lineto; sometimes Z - closepath).
+   - Count **unique coordinate points** visited in the path to deduce the number of sides or vertices.
+   - Sequential L (lineto) commands draw direct lines between points, forming the edges of the shape.
+   - The path may return to the initial point to form a closed shape.
+
+3. **Shape Mapping:**
+   - **3 unique points (triangle):** Use label J
+   - **4 unique points:** Analyze further:
+     - If it forms a simple quadrilateral, consider kite (D), trapezoid (K), or disregard rectangle (H) as it is not a valid output.
+     - For trapezoid (K): expect a quadrilateral where only one pair of sides is parallel.
+     - For kite (D): expect two distinct pairs of adjacent sides of equal length but not parallel.
+     - Never output rectangle (H).
+   - **5 unique points:** G (pentagon)
+   - **6 unique points:** C (hexagon)
+   - **7 unique points:** B (heptagon)
+   - **8 unique points:** F (octagon)
+   - **2 unique points:** E (line)
+   - **Curved or arc commands (A or Q):** If the path includes arc/curved segments forming a central angle, use I (sector).
+   - **Circle (full curve):** Do NOT answer A (circle), as it is not a valid output.
+
+4. **Special Quadrilateral Handling:**
+   - Rectangle (right angles, opposite sides equal) is **not a valid answer**; never choose H.
+   - For four-sided figures, only choose D (kite) or K (trapezoid) based on the geometric relationships of the sides.
+   - If it looks like a parallelogram, rhombus, or irregular with only one parallel pair, choose trapezoid (K).
+   - If it has two pairs of adjacent equal-length sides but the pairs are not parallel, it's a kite (D).
+
+5. **Ambiguity Resolution:**
+   - If the SVG path could fit multiple four-sided shapes (trapezoid or kite), prioritize the definition that most closely fits the side length and angle relationships evident from coordinate progression.
+   - If you cannot make a clear distinction, choose the label (K or D) that best matches the side arrangement.
+
+6. **Prohibited Labels:** Never output options A (circle) or H (rectangle).
+
+7. **Common Pitfalls:**
+   - Four-point closed shapes are not always rectangles; verify the relation of sides for kite or trapezoid.
+   - Polygons with >4 vertices are usually regular and correspond directly to the number of unique L commands/points.
+   - Curved or arc paths only map to sector (I), never to circle for output.
+
+8. **Sample Approach:**
+   - Extract and count the distinct coordinates from the path to estimate the vertices/sides.
+   - For four-vertex cases, investigate side relationships for kite and trapezoid.
+   - Only output the single correct label, nothing else.
+
+Carefully parse and reason about each SVG path. Output **only** the single letter label for the correct geometric shape per the above rules.
+Iteration 39: New subsample score 1.0 is not better than old score 1.0, skipping
+Iteration 40: Selected program 8 score: 0.5
+Iteration 40: All subsample scores perfect. Skipping.
+Iteration 40: Reflective mutation did not propose a new candidate
+Iteration 41: Selected program 8 score: 0.5
+Iteration 41: All subsample scores perfect. Skipping.
+Iteration 41: Reflective mutation did not propose a new candidate
+Iteration 42: Selected program 3 score: 0.4
+Iteration 42: Proposed new text for instruction: You are given a classification problem involving SVG path elements describing 2D geometric shapes. For each task input:
+
+- There is a 'text' field containing an SVG path description in the format:  
+  "This SVG path element <path d="..." /> draws a"  
+  followed by a list of option labels mapping letters (A-J) to possible shape names.
+
+- The SVG path uses only 'M' (move to) and 'L' (line to) commands, occasionally with multiple 'M' commands, constructing either a single or multiple connected segments.
+
+Your goals and step-by-step method:
+
+1. **Extract All Coordinate Pairs**:  
+   Parse the string inside the SVG 'd' attribute to get all points touched by 'M' and 'L' commands. When multiple 'M' commands are present, treat each like the start of a new subpath and process each sequence individually.
+
+2. **Identify Distinct Points**:  
+   For each subpath, identify all distinct (x, y) coordinate pairs in drawing order. Ignore repeated coordinates that result from the path retracing to close the figure unless explicitly specified by the path.
+
+3. **Detect Path Closure**:  
+   * The path is CLOSED if the last point in the sequence is exactly the same as the first point (either by explicit 'L' command returning to the starting coordinate, or by an explicit 'Z' if present—but in your described inputs, this 'Z' will not appear).
+   * If the path does NOT return to its starting point (the last coordinate does not equal the first), or if the figure is apparently several unclosed segments, it is considered OPEN.
+
+4. **Classification by Number of Vertices (Points) and Closure**:  
+   - For a CLOSED path, classify the shape by the number of unique points (vertices), using these rules:
+     * 8 points: (F) octagon
+     * 7 points: (B) heptagon
+     * 6 points: (C) hexagon
+     * 5 points: (G) pentagon
+     * 4 points:
+        - If the shape's sides form right angles: (H) rectangle
+        - If two pairs of adjacent sides are equal and not rectangles: (D) kite
+     * 3 points: (J) triangle
+   - For an OPEN path (not returning to start), or for a path that only traverses two points, regardless of how many 'L' commands: (E) line
+
+5. **Special shapes**:
+   - Do NOT pick (A) circle, (I) sector, unless the path has smooth curves or arc commands, which your input format never uses (only straight lines).
+   - Always base your answer on the explicit path described, NOT the label names or guesses about possible interpretations.
+
+6. **Multiple Subpaths**:  
+   - For multiple 'M' commands, treat each independently. If one subpath is open, and no subpath is a closed polygon, classify as (E) line.
+   - If one of the subpaths is a closed polygon with one of the specified vertex counts, classify accordingly.
+
+7. **Output**:  
+   Only output the single letter (A-J) corresponding to the correct label from the options, with no explanation, reasoning, or extra characters.
+
+**KEY REMINDERS from Examples:**
+
+- Even if the path uses multiple 'M' commands, if the drawn sequence cycles through 6 unique points and the last point connects back to the first, classify as (C) hexagon (not as a line).
+- Open shapes or polyline figures that don't close are (E) line regardless of vertices.
+- Ignore the label names—determine shape solely by structure of the path as described by the point sequence.
+- Always verify closure by strict coordinate equality, not by approximate "visual" closure.
+- For 4-vertex closed shapes, only call it (H) rectangle if the points imply right angles. Otherwise, quadrilaterals should be (D) kite if they match that definition.
+
+Write each answer as a single letter (A-J); do not accompany your answer with any additional text or punctuation.
+Iteration 42: New subsample score 1.0 is not better than old score 1.0, skipping
+Iteration 43: Selected program 3 score: 0.4
+Iteration 43: Proposed new text for instruction: You are presented with a geometric shape classification task based on SVG (Scalable Vector Graphics) path 'd' attributes. Each task input consists of a text describing an SVG path, followed by a list of possible answer options, each labeled with a single capital letter corresponding to the name of a geometric shape.
+
+Your objectives and constraints are as follows:
+
+1. **Input Format:**
+   - Each input begins with natural language describing an SVG path, e.g., "This SVG path element <path d="M 24.83,20.51 L 28.55,24.10 ..."/>" draws a".
+   - Only the content inside the path's 'd' attribute (i.e., after the '<path d="' and before the closing '"/>') is relevant.
+   - After the sentence, a list of options is given, mapping a single uppercase letter (A-J, sometimes further to K, etc.) to a geometric shape (e.g., (A) circle, (B) heptagon, etc.).
+   - The model should only output the single character label matching the correct answer, with nothing else.
+
+2. **SVG Path Parsing and Interpretation:** 
+   - SVG path commands of interest are:
+     - 'M': Move to (starts a new subpath at given coordinates).
+     - 'L': Line to (draws a straight line to specified coordinates).
+     - 'A': Arc to (draws an elliptical/circular arc; used to define circles, ellipses, or sectors).
+     - Paths may have multiple 'M' commands (multiple subpaths/sub-sequences).
+   - Ignore any explanatory or non-path text; focus strictly on the SVG path commands and coordinates.
+
+3. **Shape Identification Logic:**
+   - **Polygon shapes:**
+     - Count the number of **distinct points (vertices)** in each single closed shape to decide the polygon:
+       - 3 points (closed): triangle (J)
+       - 4 points (closed): If right angles, rectangle (H); if two pairs of equal adjacent sides, kite (D); otherwise quadrilateral (if offered).
+       - 5 points (closed): pentagon (G)
+       - 6 points (closed): hexagon (C)
+       - 7 points (closed): heptagon (B)
+       - 8 points (closed): octagon (F)
+       - The closure of the path is determined if the last 'L' command returns to the initial 'M' point, or if the explicit coordinates wrap around.
+     - Treat each 'M...L...L...' run as its own sequence, unless path closure joins them.
+   - **Open paths:**
+     - If a path does **not** return to its starting point (unclosed), classify as line (E), even if there are multiple segments.
+   - **Curved shapes:**
+     - Paths with 'A' or 'C' (arc or curve) commands:
+       - If the path forms a closed curve with a single arc ('A'), and the options list includes ellipse, output ellipse (e.g., K).
+       - If the path describes a sector (arc connecting two points and a center), and option I is sector, select sector.
+       - If a true circle is formed (by a full large arc or 'C' commands), and 'A' or 'C' is present, select circle.
+   - **Avoid assumptions:** 
+     - Do not guess the shape merely by option names; rely only on structural features deduced from the actual path.
+     - For ambiguous polygons with 4 points, only pick rectangle if the sequence and angles strongly support that it is a rectangle (right angles).
+     - For quadrilaterals, if the proportions and angles align with a kite but not a rectangle, pick kite.
+
+4. **Advanced Considerations (from previous feedback/examples):**
+   - Some figures use arc commands ('A') to explicitly draw sections of circles or ellipses. When this occurs, and the option set includes "ellipse" (e.g., option K), prefer "ellipse" over "sector," unless the arc is a small slice (i.e., sector).
+   - If the polygon/figure is open, even if multi-segment, your default should be (E) line unless the arc/curve commands strongly imply a different shape.
+   - Multiple 'M' commands imply disjoint or sequential subpaths; classify each independently.
+   - Never infer shapes based solely on the number of commands – review the closure, specific usage of curve or arc instructions, and coordinate pattern for geometric structure.
+
+5. **Output Strictness:**
+   - Output exactly and only the correct single letter, based on the options list. Do not include explanations, whitespace, or commentary.
+
+6. **Summary of Key Classifications:**
+   - Circle: Only if a smoothly closed round arc/curve is formed—usually by 'A' or 'C' covering 360 degrees.
+   - Ellipse: Closed smooth curve, elliptical shape; 'A' command for a large arc, and the options include ellipse.
+   - Sector: Wedge formed with an arc and two straight lines meeting at a center or axis.
+   - Line: Any open sequence, regardless of number of segments, unless curves/arcs strongly indicate a different shape (sector).
+   - Polygonal: Closed, straight segments only, with exactly 3, 4, 5, 6, 7, or 8 vertices indicating triangle, rectangle, kite, pentagon, hexagon, heptagon, or octagon, respectively.
+
+If in doubt, favor a literal interpretation: only output a shape that is structurally and mathematically justified by the SVG path data.
+
+Your answer must be precisely a single letter, as matched to the relevant geometric shape option. No extra commentary.
+Iteration 43: New subsample score 2.0 is better than old score 1.0. Continue to full eval and add to candidate pool.
+Iteration 43: Valset score for new program: 0.52 (coverage 50 / 50)
+Iteration 43: Val aggregate for new program: 0.52
+Iteration 43: Individual valset scores for new program: {0: 0.0, 1: 1.0, 2: 1.0, 3: 1.0, 4: 1.0, 5: 0.0, 6: 0.0, 7: 1.0, 8: 0.0, 9: 1.0, 10: 1.0, 11: 1.0, 12: 1.0, 13: 0.0, 14: 1.0, 15: 0.0, 16: 1.0, 17: 1.0, 18: 0.0, 19: 1.0, 20: 1.0, 21: 0.0, 22: 1.0, 23: 0.0, 24: 1.0, 25: 0.0, 26: 0.0, 27: 1.0, 28: 1.0, 29: 1.0, 30: 1.0, 31: 0.0, 32: 0.0, 33: 0.0, 34: 0.0, 35: 1.0, 36: 0.0, 37: 0.0, 38: 1.0, 39: 0.0, 40: 0.0, 41: 1.0, 42: 1.0, 43: 0.0, 44: 1.0, 45: 0.0, 46: 0.0, 47: 1.0, 48: 0.0, 49: 0.0}
+Iteration 43: New valset pareto front scores: {0: 0.0, 1: 1.0, 2: 1.0, 3: 1.0, 4: 1.0, 5: 0.0, 6: 1.0, 7: 1.0, 8: 1.0, 9: 1.0, 10: 1.0, 11: 1.0, 12: 1.0, 13: 0.0, 14: 1.0, 15: 1.0, 16: 1.0, 17: 1.0, 18: 1.0, 19: 1.0, 20: 1.0, 21: 1.0, 22: 1.0, 23: 1.0, 24: 1.0, 25: 1.0, 26: 0.0, 27: 1.0, 28: 1.0, 29: 1.0, 30: 1.0, 31: 0.0, 32: 1.0, 33: 1.0, 34: 1.0, 35: 1.0, 36: 0.0, 37: 1.0, 38: 1.0, 39: 0.0, 40: 0.0, 41: 1.0, 42: 1.0, 43: 1.0, 44: 1.0, 45: 0.0, 46: 1.0, 47: 1.0, 48: 0.0, 49: 0.0}
+Iteration 43: Valset pareto front aggregate score: 0.78
+Iteration 43: Updated valset pareto front programs: {0: {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10}, 1: {9, 10, 6, 7}, 2: {9, 10, 6, 7}, 3: {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10}, 4: {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}, 5: {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10}, 6: {5}, 7: {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10}, 8: {9, 4}, 9: {0, 2, 3, 4, 5, 6, 7, 8, 9, 10}, 10: {1, 3, 4, 5, 6, 7, 8, 9, 10}, 11: {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10}, 12: {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10}, 13: {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10}, 14: {0, 10, 5, 6}, 15: {3}, 16: {10, 6, 7}, 17: {1, 2, 4, 5, 6, 8, 9, 10}, 18: {0, 1, 2, 5, 6, 7, 9}, 19: {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10}, 20: {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10}, 21: {8}, 22: {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10}, 23: {8}, 24: {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10}, 25: {1, 4, 5, 8, 9}, 26: {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10}, 27: {9, 10, 6, 7}, 28: {0, 1, 2, 3, 5, 7, 8, 9, 10}, 29: {0, 1, 4, 6, 9, 10}, 30: {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10}, 31: {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10}, 32: {8, 2}, 33: {6}, 34: {8, 6}, 35: {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}, 36: {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10}, 37: {1, 3, 4, 7, 8, 9}, 38: {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10}, 39: {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10}, 40: {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10}, 41: {0, 1, 5, 6, 10}, 42: {0, 6, 7, 9, 10}, 43: {1, 2, 3, 4, 7, 8, 9}, 44: {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10}, 45: {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10}, 46: {9}, 47: {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10}, 48: {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10}, 49: {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10}}
+Iteration 43: Best valset aggregate score so far: 0.58
+Iteration 43: Best program as per aggregate score on valset: 9
+Iteration 43: Best score on valset: 0.58
+Iteration 43: Linear pareto front program index: 9
+Iteration 43: New program candidate index: 10
+Iteration 44: Selected program 3 score: 0.4
+Iteration 44: Proposed new text for instruction: You are given a classification task where you analyze SVG path elements describing geometric figures and label them with the most accurate shape, choosing from a provided list of options.
+
+Input Format:
+- Each task input consists of:
+    - A 'text' field containing a description starting with 'This SVG path element <path d="...' and including SVG path commands (mainly 'M' for 'move to' and 'L' for 'line to') followed by coordinate pairs. The path description is always followed by '"/>'.
+    - The text ends with 'draws a'.
+    - Below the text, an explicit list of options is given as single-letter labels (A-J or more), each mapped to a specific geometric shape.
+
+Task Description:
+- Your goal is to determine which geometric shape is accurately represented by the SVG path commands, based strictly on the geometry implied by the path and mapping it to one of the provided options.
+
+Key domain-specific instructions:
+1. Path Analysis:
+    - Extract the sequence(s) of coordinates used by 'M' and 'L' commands in order.
+    - If the SVG path contains multiple 'M' commands, treat each initiated subpath separately.
+    - Only treat a figure as a closed shape if either:
+        - The sequence of 'L' commands brings the path back to the starting coordinate (i.e., last point equals first point).
+        - There is an explicit connection shown in the sequence that returns to the origin at the end of the path.
+    - An open path (not returning to the start) should be classified as a 'line' (option E), no matter how many points are in the sequence.
+    - The presence of just two points (regardless of closure) is also a line (option E).
+    - The precise count of unique point coordinates between a single move-to and the path's end (or explicit closure) reflects the number of shape vertices (“corners”).
+
+2. Shape Identification:
+    - Triangle: 3 distinct coordinates, closed path – option (J).
+    - Rectangle: 4 distinct coordinates, closed path, and right angles (verify implicitly via context, but if only 4 coordinates and no information on angles, only assign if option is sensible or if explicitly stated).
+    - Kite: 4 distinct coordinates, closed path, with two pairs of adjacent sides being equal length (usually not at right angles).
+    - Pentagon: 5 distinct points, closed path – option (G).
+    - Hexagon: 6 points, closed path – option (C).
+    - Heptagon: 7 points, closed path – option (B).
+    - Octagon: 8 points, closed path – option (F).
+    - For other 4-sided figures (e.g., if 'trapezoid' is a listed option), and the sequence matches such a shape, select accordingly.
+    - Circle or sector: Only choose these (A, I) if the path contains explicit curve commands (e.g., 'C', 'Q', 'A') which define curves—never if only 'L' and 'M' commands appear.
+    - If the points do not form any standardized polygon by count (e.g., more than 8, or with ambiguous closure), select the closest matching category according to the number of unique points and closure, favoring regular polygons if possible.
+
+3. Additional guidance:
+    - Do not infer shapes based on option names; rely solely on path structure and geometry.
+    - Never select a polygon label for an open path.
+    - For each figure, analyze only what is explicit in the path data; do not assume more than is encoded.
+
+4. Output Instructions:
+    - Output only the single correct letter (such as G), with nothing else and no explanation.
+    - Do not output shape names, commentary, or justification.
+    - Base every classification exclusively on the provided SVG path data and enumerated options.
+
+Test Case Reminders:
+- In Example 1, a path that forms a triangle (three unique, closed points) must be classified as J, not E.
+- In Example 2, a four-point, closed path that does not have right angles or equal adjacent sides typical of a kite or rectangle, but matches a 'trapezoid' option, should be labeled accordingly.
+
+Summary:
+Extract and interpret the SVG path instructions to count unique points and determine closure. Classify by shape according to the specific mapping of path structure to geometric type, using the above rules and only the geometry provided—never the context or assumptions outside the SVG path itself.
+Iteration 44: New subsample score 1.0 is not better than old score 1.0, skipping
+[done] d_bbh_geometric_f1_s40.json: 0.540 ($0.76)
+Iteration 0: Base program full valset score: 0.38 over 50 / 50 examples
+Iteration 1: Selected program 0 score: 0.38
+Iteration 1: Proposed new text for instruction: You are tasked with classifying the geometric shape described by an SVG path element. Your input will include:
+
+- A line of text that contains a single SVG path element, e.g., `<path d="..."/>`, containing several coordinate pairs and the SVG commands (usually only 'M' and 'L') defining a closed shape.
+- A fixed list of labeled options (A, B, C, ...), each corresponding to a geometric figure (e.g., pentagon, kite, hexagon, etc.).
+
+Your job is to analyze the path element to determine precisely what geometric shape is being described and output only the most appropriate option label from the list provided. You should not output any commentary, explanations, or formatting—only the single category letter (e.g., `G`).
+
+Here are domain-specific instructions to ensure high accuracy:
+
+- The SVG path uses commands where 'M' is "move to" (start), and each 'L' is a straight "line to" the specified coordinates. The list closed with the original point means the last 'L' brings you back to the starting coordinate, forming a closed polygon.
+- To determine the shape, count the unique vertices defined by the coordinates: the number of vertices corresponds directly to polygon type (3 = triangle, 4 = quadrilateral, 5 = pentagon, 6 = hexagon, 7 = heptagon, 8 = octagon).
+- For quadrilaterals (4 sides), select more specific shapes according to the labels available in the options:
+  - If the only plausible 4-sided label is "kite" (D), apply that if the vertices do not form a rectangle or trapezoid and follow the characteristic "kite" symmetry (two pairs of adjacent sides of equal length).
+  - If "trapezoid" (K) is available, use it for four-sided polygons with only one pair of parallel sides.
+  - Avoid defaulting to rectangle (H) unless the shape clearly matches (equal angles of 90 degrees).
+- Treat ambiguous polygons using these rules:
+  - Count vertices—repeat vertices only if closing the path (start equals end).
+  - Disregard segment length unless it is necessary to distinguish between shapes of the same vertex count (e.g., regular vs. irregular).
+  - Do not be misled by the drawing order; focus on how many distinct points are visited before returning to the start.
+- When presented options include both general (e.g., ‘quadrilateral’) and specific (e.g., ‘kite’, ‘trapezoid’) categories, always select the more specific applicable label according to the vertex arrangement.
+
+Critical process reminders:
+
+- Always analyze the path's unique vertex count and configuration to determine the shape.
+- Ignore self-intersection and order of points unless it affects shape identity (e.g., star polygons are not in the options; stick to listed categories).
+- Output only a single, most central label, even when ambiguity exists; never output more than one or supplement with explanation.
+- If unsure between multiple categories, prioritize the shape that matches the vertex count and best matches the nuanced distinctions given by typical geometric definitions (see above).
+Iteration 1: New subsample score 1.0 is not better than old score 1.0, skipping
+Iteration 2: Selected program 0 score: 0.38
+Iteration 2: Proposed new text for instruction: You are given a classification task that involves mapping a provided text input to one of a constrained set of single-letter category labels, specifically: B, C, D, E, F, G, I, J, or K. The classification must be based on detailed interpretation and domain-specific understanding as described below.
+
+Input Format:
+- Each input contains a field labeled "text" containing the content to be classified. 
+- Sometimes, explicit options are provided in the input, with each option labeled by a single uppercase letter and a corresponding descriptive term (e.g., (A) circle, (K) ellipse).
+
+Task-Specific Guidance:
+- The purpose of this task is to select which one of the given lettered option labels best characterizes or classifies the content, context, or subject matter of the provided text.
+- You must return ONLY the single uppercase letter corresponding to your classification result. Do not output the option description, extra text, explanation, or formatting.
+- If an option is given among the choices but is not one of the target letter labels (e.g., A or H in the sample), you must ignore these options and classify only among the allowed target labels (B, C, D, E, F, G, I, J, K).
+- Carefully read and precisely interpret any domain-specific or technical description within the input. For example, mathematical or geometrical objects, SVG path data, and technical terminology should be parsed accurately according to formal definitions.
+- Apply any domain knowledge as necessary to analyze the input's true meaning (for example, recognizing that an SVG arc command such as `<path d="M 90.00,36.00 A 25.00,25.00 0.00 1,0 40.00,36.00 A 25.00,25.00 0.00 1,0 90.00,36.00"/>` describes an ellipse, which corresponds to the option labeled 'K'). 
+- When terms or inputs could ambiguously refer to multiple categories, prioritize the most contextually accurate or central classification, based on a holistic understanding of the text.
+- If the input uses irony, nonliteral, or domain-specific language, infer the underlying intent or the most precise technical referent, not the literal words.
+- Absolutely never output a category label that is not among the list of accepted target labels (B, C, D, E, F, G, I, J, K).
+
+Output Format:
+- Output a single uppercase letter (the label), with no additional text, whitespace, or punctuation.
+
+Summary Process:
+1. Identify and deeply analyze the subject matter referenced or described in the text input.
+2. Map your understanding to the correct domain-specific term, and then select the corresponding letter label from the provided options according to the accepted labels.
+3. Output the single letter label as your final answer.
+
+Be meticulous and analytic in parsing, prioritizing domain accuracy, and strictly adhering to allowable output labels and formatting.
+Iteration 2: New subsample score 3.0 is better than old score 2.0. Continue to full eval and add to candidate pool.
+Iteration 2: Found a better program on the valset with score 0.42.
+Iteration 2: Valset score for new program: 0.42 (coverage 50 / 50)
+Iteration 2: Val aggregate for new program: 0.42
+Iteration 2: Individual valset scores for new program: {0: 0.0, 1: 1.0, 2: 1.0, 3: 1.0, 4: 0.0, 5: 0.0, 6: 1.0, 7: 1.0, 8: 0.0, 9: 1.0, 10: 0.0, 11: 1.0, 12: 0.0, 13: 0.0, 14: 1.0, 15: 0.0, 16: 1.0, 17: 0.0, 18: 1.0, 19: 0.0, 20: 1.0, 21: 0.0, 22: 1.0, 23: 0.0, 24: 1.0, 25: 0.0, 26: 0.0, 27: 1.0, 28: 1.0, 29: 1.0, 30: 1.0, 31: 0.0, 32: 0.0, 33: 0.0, 34: 0.0, 35: 0.0, 36: 0.0, 37: 0.0, 38: 1.0, 39: 0.0, 40: 0.0, 41: 1.0, 42: 1.0, 43: 0.0, 44: 1.0, 45: 0.0, 46: 0.0, 47: 0.0, 48: 0.0, 49: 0.0}
+Iteration 2: New valset pareto front scores: {0: 0.0, 1: 1.0, 2: 1.0, 3: 1.0, 4: 0.0, 5: 0.0, 6: 1.0, 7: 1.0, 8: 0.0, 9: 1.0, 10: 0.0, 11: 1.0, 12: 1.0, 13: 0.0, 14: 1.0, 15: 0.0, 16: 1.0, 17: 0.0, 18: 1.0, 19: 1.0, 20: 1.0, 21: 0.0, 22: 1.0, 23: 0.0, 24: 1.0, 25: 0.0, 26: 0.0, 27: 1.0, 28: 1.0, 29: 1.0, 30: 1.0, 31: 0.0, 32: 0.0, 33: 0.0, 34: 0.0, 35: 0.0, 36: 0.0, 37: 0.0, 38: 1.0, 39: 0.0, 40: 0.0, 41: 1.0, 42: 1.0, 43: 0.0, 44: 1.0, 45: 0.0, 46: 0.0, 47: 1.0, 48: 0.0, 49: 0.0}
+Iteration 2: Valset pareto front aggregate score: 0.48
+Iteration 2: Updated valset pareto front programs: {0: {0, 1}, 1: {1}, 2: {1}, 3: {0, 1}, 4: {0, 1}, 5: {0, 1}, 6: {1}, 7: {0, 1}, 8: {0, 1}, 9: {0, 1}, 10: {0, 1}, 11: {0, 1}, 12: {0}, 13: {0, 1}, 14: {0, 1}, 15: {0, 1}, 16: {1}, 17: {0, 1}, 18: {0, 1}, 19: {0}, 20: {0, 1}, 21: {0, 1}, 22: {0, 1}, 23: {0, 1}, 24: {0, 1}, 25: {0, 1}, 26: {0, 1}, 27: {1}, 28: {0, 1}, 29: {0, 1}, 30: {0, 1}, 31: {0, 1}, 32: {0, 1}, 33: {0, 1}, 34: {0, 1}, 35: {0, 1}, 36: {0, 1}, 37: {0, 1}, 38: {0, 1}, 39: {0, 1}, 40: {0, 1}, 41: {0, 1}, 42: {0, 1}, 43: {0, 1}, 44: {0, 1}, 45: {0, 1}, 46: {0, 1}, 47: {0}, 48: {0, 1}, 49: {0, 1}}
+Iteration 2: Best valset aggregate score so far: 0.42
+Iteration 2: Best program as per aggregate score on valset: 1
+Iteration 2: Best score on valset: 0.42
+Iteration 2: Linear pareto front program index: 1
+Iteration 2: New program candidate index: 1
+Iteration 3: Selected program 1 score: 0.42
+Iteration 3: All subsample scores perfect. Skipping.
+Iteration 3: Reflective mutation did not propose a new candidate
+Iteration 4: Selected program 1 score: 0.42
+Iteration 4: Proposed new text for instruction: You are to perform a precise text classification task involving geometry-related domain knowledge, specifically polygon and shape identification, grounded in detailed technical comprehension, including parsing SVG path data. Your aim is to analyze each provided input with an understanding of geometric terminology and conventions and output a single target label as described.
+
+Detailed Task Description:
+
+- **Input Format**:
+  - Each input consists of a "text" field describing a geometric object—this may be a natural-language description, technical phrase, or explicit SVG path data representing a particular planar geometric figure.
+  - An "Options" field is always included, presenting several possible answer choices, each labeled with a single uppercase letter (e.g., (B) heptagon, (K) trapezoid). The option descriptions are geometric shapes or object names.
+
+- **Valid Class Labels**: 
+  - You must ONLY use these labels when selecting your output: B, C, D, E, F, G, I, J, or K. Each corresponds to a particular geometric object as per the options list of the task (for example, K = trapezoid, B = heptagon, D = kite, etc.).
+  - DO NOT ever output a label not in this list, even if present among the options (e.g., A, H).
+
+- **Required Domain Knowledge**:
+  - You must accurately parse geometric shapes given either by description or SVG syntax.
+  - For SVG path data (e.g., a series of "M", "L", "A" commands), deduce the geometric shape by analyzing the number of line segments, the closed path nature, the arrangement of points, and any curve specifications.
+  - For polygon recognition:
+    - Heptagon: 7 sides/vertices (label B).
+    - Hexagon: 6 sides/vertices (label C).
+    - Kite: Quadrilateral with two pairs of adjacent sides equal; often drawn as a closed sequence of 4 lines in a certain symmetry (label D).
+    - Octagon: 8 sides/vertices (label F).
+    - Pentagon: 5 sides/vertices (label G).
+    - Triangle: 3 sides/vertices (label J).
+    - Trapezoid: Quadrilateral with one pair of opposing sides parallel, may appear as a 4-point path differing from a kite by shape/proportions (label K).
+  - You must be able to distinguish between non-literal and literal references and choose based on the formal geometric definition.
+  - If SVG arc commands (A) or curves are present, interpret their meaning—e.g., elliptical arcs may mean an ellipse or sector; straight lines forming a closed shape indicate a specific polygon.
+  - Pay close attention: errors arise when the assistant misidentifies the number of sides or confuses similar quadrilaterals (e.g., kite vs trapezoid).
+
+- **Classification Strategy**:
+  1. **Analyze geometric content**: Parse SVG syntax or text to extract the essential geometric features (number and order of lines, arc segments, closure, symmetry).
+  2. **Map to standard geometric definitions**: Rigorously count sides/vertices if a polygon, verify nature of lines (equal, parallel, length), recognize quadrilaterals, trapezoids, or specific polygons.
+  3. **Match to options, using ONLY the allowed labels**: Ignore all other labels among the options.
+  4. **Output Format**: Output only the single uppercase letter label (B, C, D, E, F, G, I, J, or K) which best matches your analysis. Do not output descriptions, rationale, or additional formatting.
+
+- **Important Specifics**:
+  - For SVG path with 7 consecutive "L" (line) commands to 7 coordinates before returning to start, select "B" (heptagon).
+  - For SVG path with 4 points where non-parallel sides are equal (shaped asymmetrically), prefer kite ("D") only if the sides fit a kite definition; otherwise, choose "K" (trapezoid) if applicable.
+  - DO NOT confuse simple quadrilaterals (rectangles, not an allowed label) with trapezoids or kites—focus on side-length, parallelism, and arrangement.
+  - Always prefer the most precise and technical match, not a superficial or approximate one.
+
+- **Do's and Don'ts**:
+  - DO always parse SVG polynomial/shape code accurately and count vertices, lines, or segments.
+  - DO NOT choose labels outside (B, C, D, E, F, G, I, J, K) under any circumstance, even if referenced.
+  - DO NOT output explanations, extra text, or formatting—just the correct single label.
+
+Your classification accuracy is evaluated especially strictly for correct geometric identification from both SVG notation and explicit geometric language; you must carefully distinguish between shapes with overlapping properties (e.g., different quadrilaterals) and employ domain knowledge to avoid common pitfalls.
+Iteration 4: New subsample score 2.0 is better than old score 1.0. Continue to full eval and add to candidate pool.
+Iteration 4: Found a better program on the valset with score 0.58.
+Iteration 4: Valset score for new program: 0.58 (coverage 50 / 50)
+Iteration 4: Val aggregate for new program: 0.58
+Iteration 4: Individual valset scores for new program: {0: 0.0, 1: 1.0, 2: 1.0, 3: 1.0, 4: 0.0, 5: 0.0, 6: 1.0, 7: 1.0, 8: 1.0, 9: 1.0, 10: 0.0, 11: 1.0, 12: 1.0, 13: 0.0, 14: 0.0, 15: 0.0, 16: 1.0, 17: 1.0, 18: 1.0, 19: 1.0, 20: 1.0, 21: 0.0, 22: 1.0, 23: 1.0, 24: 1.0, 25: 1.0, 26: 0.0, 27: 1.0, 28: 1.0, 29: 1.0, 30: 1.0, 31: 0.0, 32: 0.0, 33: 0.0, 34: 0.0, 35: 0.0, 36: 0.0, 37: 1.0, 38: 1.0, 39: 0.0, 40: 0.0, 41: 0.0, 42: 1.0, 43: 1.0, 44: 1.0, 45: 0.0, 46: 1.0, 47: 1.0, 48: 0.0, 49: 0.0}
+Iteration 4: New valset pareto front scores: {0: 0.0, 1: 1.0, 2: 1.0, 3: 1.0, 4: 0.0, 5: 0.0, 6: 1.0, 7: 1.0, 8: 1.0, 9: 1.0, 10: 0.0, 11: 1.0, 12: 1.0, 13: 0.0, 14: 1.0, 15: 0.0, 16: 1.0, 17: 1.0, 18: 1.0, 19: 1.0, 20: 1.0, 21: 0.0, 22: 1.0, 23: 1.0, 24: 1.0, 25: 1.0, 26: 0.0, 27: 1.0, 28: 1.0, 29: 1.0, 30: 1.0, 31: 0.0, 32: 0.0, 33: 0.0, 34: 0.0, 35: 0.0, 36: 0.0, 37: 1.0, 38: 1.0, 39: 0.0, 40: 0.0, 41: 1.0, 42: 1.0, 43: 1.0, 44: 1.0, 45: 0.0, 46: 1.0, 47: 1.0, 48: 0.0, 49: 0.0}
+Iteration 4: Valset pareto front aggregate score: 0.62
+Iteration 4: Updated valset pareto front programs: {0: {0, 1, 2}, 1: {1, 2}, 2: {1, 2}, 3: {0, 1, 2}, 4: {0, 1, 2}, 5: {0, 1, 2}, 6: {1, 2}, 7: {0, 1, 2}, 8: {2}, 9: {0, 1, 2}, 10: {0, 1, 2}, 11: {0, 1, 2}, 12: {0, 2}, 13: {0, 1, 2}, 14: {0, 1}, 15: {0, 1, 2}, 16: {1, 2}, 17: {2}, 18: {0, 1, 2}, 19: {0, 2}, 20: {0, 1, 2}, 21: {0, 1, 2}, 22: {0, 1, 2}, 23: {2}, 24: {0, 1, 2}, 25: {2}, 26: {0, 1, 2}, 27: {1, 2}, 28: {0, 1, 2}, 29: {0, 1, 2}, 30: {0, 1, 2}, 31: {0, 1, 2}, 32: {0, 1, 2}, 33: {0, 1, 2}, 34: {0, 1, 2}, 35: {0, 1, 2}, 36: {0, 1, 2}, 37: {2}, 38: {0, 1, 2}, 39: {0, 1, 2}, 40: {0, 1, 2}, 41: {0, 1}, 42: {0, 1, 2}, 43: {2}, 44: {0, 1, 2}, 45: {0, 1, 2}, 46: {2}, 47: {0, 2}, 48: {0, 1, 2}, 49: {0, 1, 2}}
+Iteration 4: Best valset aggregate score so far: 0.58
+Iteration 4: Best program as per aggregate score on valset: 2
+Iteration 4: Best score on valset: 0.58
+Iteration 4: Linear pareto front program index: 2
+Iteration 4: New program candidate index: 2
+Iteration 5: Selected program 1 score: 0.42
+Iteration 5: Proposed new text for instruction: You are tasked with a classification problem that involves mapping a provided text input—often containing an SVG path description and a set of labeled options—to a single uppercase letter from a constrained set: B, C, D, E, F, G, I, J, or K. Your output must always be exactly one of these single letters and nothing else; do not provide explanations, extra spaces, punctuation, or option descriptions.
+
+**Input Format and Patterns:**
+- Each input will have a field labeled "text" containing either an SVG path command or a domain-specific description of a geometric object or term.
+- A list of options will sometimes be provided, each option being labeled with a single uppercase letter and a descriptive term (such as (B) heptagon, (J) triangle, etc.).
+- Not all options may be relevant—only consider labels among the allowed output set: B, C, D, E, F, G, I, J, K.
+
+**Domain-Specific Knowledge:**
+- Geometrical understanding is required, specifically of polygons (pentagon, hexagon, heptagon, octagon, triangle), lines, kites, sectors, and ellipses.
+- SVG path data is used to describe shapes:
+  - Line segments are denoted by sequential "L" commands; polygons will have multiple "L" commands connecting points in a closed path.
+  - The count of unique points connected (not counting repeated closure points) determines the type of polygon:
+    - Pentagon: 5 sides/vertices (label G)
+    - Hexagon: 6 sides/vertices (label C)
+    - Heptagon: 7 sides/vertices (label B)
+    - Octagon: 8 sides/vertices (label F)
+    - Triangle: 3 sides/vertices (label J)
+    - Kite: 4 sides with two pairs of adjacent sides equal (label D)
+  - An SVG "A" command typically denotes an elliptical arc; a path implementing two "A" arcs back to its start likely describes an ellipse (label K).
+  - "Line" refers to a single straight connection between two points, not a closed figure, and is labeled E.
+  - "Sector" refers to a pie-slice shape, labeled I.
+- You must count sides and vertices accurately from the path commands, understanding repeated points for closure.
+- Sometimes, shape descriptions are indirect (e.g., "this figure has five equal sides and five equal angles" = pentagon = G). Use geometric reasoning at all times.
+
+**Classification and Output Requirements:**
+- Select the SINGLE most accurate and central classification based on geometric analysis, NOT superficial reading.
+- Always output ONLY one of: B, C, D, E, F, G, I, J, K.
+- If more than one label appears possible, choose the one most technically precise and appropriate in context.
+- Ignore any option labels not in the accepted set, even if they might otherwise make sense for the input.
+- Do NOT output an explanation, description, or formatting—just the single uppercase letter.
+
+**Common Mistakes to Avoid:**
+- Do not confuse polygons with similar numbers of segments—count carefully.
+- Do not misidentify "kites" (D) as polygons with more or fewer sides; a kite has four sides, but with a distinctive pattern (two adjacent pairs of equal sides).
+- Do not select option labels for shapes with the incorrect number of vertices given the SVG path data—even if option ordering is misleading.
+- Pay attention to closure in SVG; returning to the start point indicates a polygon.
+- Make sure to always map the domain concept to the option label, not the description (e.g., shape with 5 sides = 'G').
+
+**Stepwise guidance:**
+1. Read the "text" with attention to domain-specific language or SVG path data.
+2. If path data, analyze the sequence of line or arc commands to count vertices/sides and infer the shape type.
+3. Refer to the options, but ONLY consider the allowed letter labels.
+4. Match your inferred domain concept to the corresponding allowed letter.
+5. Output that letter ALONE.
+
+Be precise, analytic, and demonstrate domain understanding at every step.
+Iteration 5: New subsample score 1.0 is not better than old score 1.0, skipping
+Iteration 6: Selected program 2 score: 0.58
+Iteration 6: Proposed new text for instruction: You are tasked with performing a highly precise text classification task focused on recognizing geometric shapes—especially polygons and other planar figures—based on textual or SVG path data input. The crux of this task is accurate geometric identification grounded in stringent domain knowledge and technical parsing ability, particularly the ability to interpret SVG path elements and rigorously distinguish polygonal structures by side count and configuration. The reliability of your output is heavily dependent on faithfully following geometric definitions and carefully parsing the input.
+
+**Input Format:**
+- Each task input contains a "text" field, which either:
+  - Describes a geometric object in words (e.g., "a six-sided polygon") or
+  - Provides explicit SVG path data (e.g., `<path d="M ... L ... L ... L ... Z"/>`) representing a geometric figure.
+- An "Options" field provides multiple choice answers, each with a capital letter (e.g., (B) heptagon, (K) trapezoid, etc.), among which only a specified subset is valid for output.
+- The set of candidate labels to use in your answer is always: B, C, D, E, F, G, I, J, or K—**never output any label not in this set.** 
+
+**Shape Label Mapping:**
+Make sure you use the following mappings:
+- (B): Heptagon (7 sides)
+- (C): Hexagon (6 sides)
+- (D): Kite (quadrilateral with two pairs of adjacent sides equal, often symmetric)
+- (E): line (only for a single straight segment)
+- (F): Octagon (8 sides)
+- (G): Pentagon (5 sides)
+- (I): Sector (part of circular area defined by two radii and an arc, usually indicated by SVG arc commands)
+- (J): Triangle (3 sides)
+- (K): Trapezoid (quadrilateral with exactly one pair of parallel sides—not a rectangle or kite; may appear as an irregular 4-point polygon)
+
+**How to classify:**
+1. **If the text field describes an SVG path, precisely parse the commands:**
+    - Count the number of "L" (line-to) operations or logically trace the polygon by following segments and their end points. For closed polygons, the number of unique "L" commands (or vertex points, including the start point if the path is closed to it) defines the side count.
+    - Ensure paths that create closed shapes are interpreted as polygons. Ignore auxiliary moves (e.g., "M" commands) except as starting points.
+    - If the path uses "A" commands (arcs), interpret as curved edges—indicative of an arc, sector, or non-polygonal form.
+    - For paths with only two points joined by one line (single "L"), classify as "E" (line).
+2. **Map exactly to the polygon name per side count:**
+    - 3 sides: "J" (triangle)
+    - 4 sides: Examine the arrangement; if it is a quadrilateral and the description or side arrangement fits a kite or trapezoid, map as appropriate:
+        - "D" for kite: must have two pairs of adjacent equal-length sides (symmetrical), possibly with a "dart" or "kite" shape.
+        - "K" for trapezoid: four sides with only one pair of parallel sides; does not fit kite configuration.
+    - 5 sides: "G" (pentagon)
+    - 6 sides: "C" (hexagon)
+    - 7 sides: "B" (heptagon)
+    - 8 sides: "F" (octagon)
+3. **Apply rigorous geometric reasoning for quadrilaterals:**
+    - Avoid classifying rectangles or generic quadrilaterals unless they explicitly fit "kite" or "trapezoid" definitions.
+    - For kites: Only if the shape has two pairs of adjacent sides of equal length and lacks parallel sides—do not confuse with generic parallelograms or rectangles.
+    - For trapezoids: Must have exactly one pair of parallel sides. Do not label rectangles or parallelograms as "trapezoid" unless forced by options and definition.
+4. **If the text is a natural language description, parse it for clues regarding number of sides, symmetry, or polygon type.**
+    - Be wary of ambiguous or non-standard descriptions—default to standard definitions.
+    - Ignore distractor options (e.g., rectangle) not in the valid label set.
+5. **Never output any label outside the permitted set (B, C, D, E, F, G, I, J, K) even if it is present among the options.**
+6. **Do not output explanations, descriptions, or formatting—just the single capital letter of the selected label.**
+
+**Special notes, based on previous systematic errors:**
+- Always precisely enumerate sides/vertices when interpreting SVG path data. For example:
+    - If the path draws 6 joins between distinct coordinates, and the path closes, it is a hexagon (label "C"), even if lines cross or overlap.
+    - For five-sided closed paths, select pentagon ("G").
+    - Do **not** select triangle ("J") if more than three sides are present—even if the shape appears as a distorted triangle.
+    - Make sure to count the full chain of points, not just the number of visible "edges" or "lines" described.
+- For four-sided polygons:
+    - Thoroughly evaluate whether the side pattern fits a kite or trapezoid—this is a common source of error.
+    - Only if the shape's structure matches the kite's definition (two pairs of adjacent equal-length sides, symmetrical along a diagonal), should you select "D".
+    - If the polygon has one pair of parallel sides and does not fit other quadrilateral types, select "K".
+    - Do **not** select "K" or "D" for rectangles, unless the description specifically matches.
+- When SVG descriptions list vertices with “L”, always trace the number of unique points involved and assess if the path closes (returns to starting point).
+
+**Output format:**
+- Only respond with the single correct letter without any additional context. No rationale, no quotes or code formatting, just the label.
+
+In summary:
+- Parse geometric description or path data strictly and technically.
+- Match to standard geometry conventions—do not rely on informal shape/side visualizations.
+- Output the exact single letter from B, C, D, E, F, G, I, J, or K representing the technical match.
+Iteration 6: New subsample score 1.0 is not better than old score 1.0, skipping
+Iteration 7: Selected program 1 score: 0.42
+Iteration 7: Proposed new text for instruction: Your task is to classify a provided "text" input into a single-letter category, specifically choosing from these allowed labels: B, C, D, E, F, G, I, J, K. The content to classify may involve geometric, mathematical, or domain-specific technical information, and sometimes includes explicit label-to-shape option mappings (for example: (A) circle, (F) octagon). The "text" field may include SVG path data or descriptive terminology that refers to geometric figures or similar domain entities.
+
+Key requirements and guidance for this classification task:
+
+1. **Allowed Labels**: The only valid output options are single uppercase letters: B, C, D, E, F, G, I, J, or K. Never output a label outside this set, even if it is present among the provided options.
+
+2. **Input Format**: Each input has a "text" string, typically with a description, technical data (such as SVG path strings), and a set of labeled options. Each option is presented as a single letter in parentheses and a descriptive term.
+
+3. **Classification Criteria**:
+    - You must deeply analyze the text, especially SVG path data, geometric terms, or mathematical references.
+    - Determine precisely what geometric shape or object is being described or drawn.
+    - Map the actual object or concept identified to the correct label, using the mapping provided in the options, but restricting yourself to the allowed labels.
+
+4. **Examples of In-Depth Analysis**:
+    - Carefully count vertices, sides, or other defining features in SVG path elements to distinguish polygon types (e.g., a six-vertex polygon is a hexagon, not a heptagon or octagon).
+    - Recognize that a description such as an SVG arc with specific parameters (e.g., the 'A' command in SVG) often refers to an ellipse or circular arc, depending on the context and values.
+    - Do not rely on the first or most obvious matching word—apply domain-specific reasoning and analysis, especially if a shape is described only by coordinates or operations (lines, vertices, etc.).
+
+5. **Common Labels and Expected Mappings**:
+    - (B) heptagon — 7-sided polygon.
+    - (C) hexagon — 6-sided polygon.
+    - (D) kite — a quadrilateral with two pairs of adjacent sides of equal length.
+    - (E) line — a straight line segment.
+    - (F) octagon — 8-sided polygon.
+    - (G) pentagon — 5-sided polygon.
+    - (I) sector — a sector of a circle (pizza-slice shaped).
+    - (J) triangle — 3-sided polygon.
+    - (K) ellipse — an oval or ellipse.
+    - Other options like (A) circle, or (H) rectangle, are never valid outputs.
+
+6. **Strategy for SVG Paths**:
+    - Parse SVG path information: "L" means line to (vertex); "M" is move to (start of subpath).
+    - Count unique points it draws between move-to/line-to commands for polygons.
+    - Use the number of sides/vertices to determine which polygon it is.
+    - Focus on what is actually drawn, not just labels or distractors.
+
+7. **Output Formatting**:
+    - Output ONLY the single uppercase label (from the approved list) corresponding to the correct answer.
+    - Do NOT include any explanation, extra text, or punctuation.
+
+8. **Disambiguation**:
+    - If input contains potentially ambiguous terminology, resolve with accurate, domain-level reasoning based on path data or technical description.
+    - If the input has irony, non-literal, or figurative language, focus on the precise geometric or technical reality referenced.
+
+9. **Critical Examples (from prior errors to avoid)**:
+    - Do NOT confuse polygons differing by one side (e.g., do not label a 6-sided polygon as a heptagon).
+    - For SVG path elements, ensure correct interpretation of the sequence and closing of paths to accurately count sides/vertices.
+
+Summary:
+- Rigorously analyze the text or SVG path for what geometric or technical object is being described.
+- Map to the correct domain term using technical definitions (not just surface description).
+- Select ONLY the corresponding label from the allowed labels (B, C, D, E, F, G, I, J, or K), and output just that letter—no extra text.
+Iteration 7: New subsample score 2.0 is better than old score 1.0. Continue to full eval and add to candidate pool.
+Iteration 7: Found a better program on the valset with score 0.64.
+Iteration 7: Valset score for new program: 0.64 (coverage 50 / 50)
+Iteration 7: Val aggregate for new program: 0.64
+Iteration 7: Individual valset scores for new program: {0: 0.0, 1: 1.0, 2: 1.0, 3: 1.0, 4: 1.0, 5: 0.0, 6: 0.0, 7: 1.0, 8: 1.0, 9: 1.0, 10: 1.0, 11: 1.0, 12: 1.0, 13: 0.0, 14: 1.0, 15: 0.0, 16: 1.0, 17: 1.0, 18: 1.0, 19: 1.0, 20: 1.0, 21: 0.0, 22: 1.0, 23: 0.0, 24: 1.0, 25: 1.0, 26: 0.0, 27: 1.0, 28: 1.0, 29: 1.0, 30: 1.0, 31: 0.0, 32: 0.0, 33: 1.0, 34: 0.0, 35: 1.0, 36: 0.0, 37: 1.0, 38: 1.0, 39: 0.0, 40: 0.0, 41: 1.0, 42: 1.0, 43: 1.0, 44: 1.0, 45: 0.0, 46: 0.0, 47: 1.0, 48: 0.0, 49: 0.0}
+Iteration 7: New valset pareto front scores: {0: 0.0, 1: 1.0, 2: 1.0, 3: 1.0, 4: 1.0, 5: 0.0, 6: 1.0, 7: 1.0, 8: 1.0, 9: 1.0, 10: 1.0, 11: 1.0, 12: 1.0, 13: 0.0, 14: 1.0, 15: 0.0, 16: 1.0, 17: 1.0, 18: 1.0, 19: 1.0, 20: 1.0, 21: 0.0, 22: 1.0, 23: 1.0, 24: 1.0, 25: 1.0, 26: 0.0, 27: 1.0, 28: 1.0, 29: 1.0, 30: 1.0, 31: 0.0, 32: 0.0, 33: 1.0, 34: 0.0, 35: 1.0, 36: 0.0, 37: 1.0, 38: 1.0, 39: 0.0, 40: 0.0, 41: 1.0, 42: 1.0, 43: 1.0, 44: 1.0, 45: 0.0, 46: 1.0, 47: 1.0, 48: 0.0, 49: 0.0}
+Iteration 7: Valset pareto front aggregate score: 0.7
+Iteration 7: Updated valset pareto front programs: {0: {0, 1, 2, 3}, 1: {1, 2, 3}, 2: {1, 2, 3}, 3: {0, 1, 2, 3}, 4: {3}, 5: {0, 1, 2, 3}, 6: {1, 2}, 7: {0, 1, 2, 3}, 8: {2, 3}, 9: {0, 1, 2, 3}, 10: {3}, 11: {0, 1, 2, 3}, 12: {0, 2, 3}, 13: {0, 1, 2, 3}, 14: {0, 1, 3}, 15: {0, 1, 2, 3}, 16: {1, 2, 3}, 17: {2, 3}, 18: {0, 1, 2, 3}, 19: {0, 2, 3}, 20: {0, 1, 2, 3}, 21: {0, 1, 2, 3}, 22: {0, 1, 2, 3}, 23: {2}, 24: {0, 1, 2, 3}, 25: {2, 3}, 26: {0, 1, 2, 3}, 27: {1, 2, 3}, 28: {0, 1, 2, 3}, 29: {0, 1, 2, 3}, 30: {0, 1, 2, 3}, 31: {0, 1, 2, 3}, 32: {0, 1, 2, 3}, 33: {3}, 34: {0, 1, 2, 3}, 35: {3}, 36: {0, 1, 2, 3}, 37: {2, 3}, 38: {0, 1, 2, 3}, 39: {0, 1, 2, 3}, 40: {0, 1, 2, 3}, 41: {0, 1, 3}, 42: {0, 1, 2, 3}, 43: {2, 3}, 44: {0, 1, 2, 3}, 45: {0, 1, 2, 3}, 46: {2}, 47: {0, 2, 3}, 48: {0, 1, 2, 3}, 49: {0, 1, 2, 3}}
+Iteration 7: Best valset aggregate score so far: 0.64
+Iteration 7: Best program as per aggregate score on valset: 3
+Iteration 7: Best score on valset: 0.64
+Iteration 7: Linear pareto front program index: 3
+Iteration 7: New program candidate index: 3
+Iteration 8: Selected program 3 score: 0.64
+Iteration 8: Proposed new text for instruction: Your task is to classify the geometric object described in a provided "text" string into a single-letter category, selecting only from the following labels: B, C, D, E, F, G, I, J, or K.
+
+**Input Format and Description:**
+- Each input contains a "text" string, which may include SVG path element(s)—for example: `<path d="..."/>`—descriptive geometric or mathematical terminology, and a list of options. Each option is an uppercase letter in parentheses (e.g., (B)) followed by a geometric term (e.g., hexagon).
+- The options list may include some labels that are NOT valid outputs (such as (A) or (H)); you must only use the allowed set: B, C, D, E, F, G, I, J, K.
+
+**Allowed Output:**
+- Output ONLY the single uppercase letter corresponding to your classification (B, C, D, E, F, G, I, J, or K).
+- Never output any letter outside this set, and provide no other text, punctuation, or explanation.
+
+**Core Classification Strategy:**
+- Thoroughly analyze the content of the "text" field, placing priority on SVG path data and technical geometric descriptions.
+- If the input includes an SVG path:
+  - Parse the SVG command sequence. For polygons, count the unique points or vertices in the path (each 'L' after an 'M' typically indicates an additional vertex). Always consider how the shape is closed (final 'L' back to the starting 'M'), and carefully reconstruct the outline drawn.
+  - Use the number of unique vertices or sides to precisely identify polygon types:
+    - 3 vertices/sides: triangle (J)
+    - 4 vertices/sides: possible kite (D) or other quadrilateral; for kite, check that there are two pairs of adjacent sides of equal length.
+    - 5 vertices/sides: pentagon (G)
+    - 6 vertices/sides: hexagon (C)
+    - 7 vertices/sides: heptagon (B)
+    - 8 vertices/sides: octagon (F)
+  - If described or drawn, a line segment (one line drawn between two points) is (E) line.
+  - If there are curves and the segment forms a circular sector (pizza slice shape), classify as (I) sector.
+  - If the path forms an ellipse or oval shape, classify as (K) ellipse.
+
+- If the input is not SVG but descriptive, pay attention to domain technical terminology:
+  - Correctly match terms (e.g., "hexagon", "pentagon") to the polygons described above.
+  - For "kite," ensure the shape is a quadrilateral with two distinct pairs of adjacent sides that are equal.
+  - Disregard distractors or irrelevant options, and only map identified objects to one of the allowed labelled choices.
+
+**Critical Additional Rules:**
+- Carefully distinguish similar polygons; avoid mistaking, for example, a pentagon (5 sides) for a kite (quadrilateral), or a hexagon (6 sides) for a heptagon (7 sides).
+- Never guess based on option order; always base your answer firmly on the geometry described or depicted.
+- If SVG commands include several disconnected line segments or polygons, focus on the principal shape depicted (usually the first or most prominent path).
+- In ambiguous or compound paths, reconstruct the main shape from the ordered sequence of move ('M') and line-to ('L') instructions.
+- Do NOT classify based on labels present in the options list if the shape does not match—only use direct evidence from the description or SVG path.
+
+**Output Specification:**
+- Output exactly one uppercase letter (B, C, D, E, F, G, I, J, or K).
+- No extra text or explanation; no punctuation.
+
+Remember: Deep technical and domain analysis is required, particularly when reading SVG paths; avoid superficial pattern matching. Base your answer always on the explicit geometric realities in the input.
+Iteration 8: New subsample score 2.0 is better than old score 1.0. Continue to full eval and add to candidate pool.
+Iteration 8: Valset score for new program: 0.48 (coverage 50 / 50)
+Iteration 8: Val aggregate for new program: 0.48
+Iteration 8: Individual valset scores for new program: {0: 0.0, 1: 1.0, 2: 0.0, 3: 1.0, 4: 0.0, 5: 0.0, 6: 0.0, 7: 1.0, 8: 1.0, 9: 1.0, 10: 0.0, 11: 1.0, 12: 1.0, 13: 0.0, 14: 0.0, 15: 0.0, 16: 0.0, 17: 1.0, 18: 0.0, 19: 1.0, 20: 1.0, 21: 0.0, 22: 1.0, 23: 0.0, 24: 1.0, 25: 1.0, 26: 0.0, 27: 0.0, 28: 1.0, 29: 1.0, 30: 1.0, 31: 0.0, 32: 1.0, 33: 0.0, 34: 0.0, 35: 1.0, 36: 0.0, 37: 1.0, 38: 1.0, 39: 0.0, 40: 0.0, 41: 1.0, 42: 0.0, 43: 1.0, 44: 1.0, 45: 0.0, 46: 0.0, 47: 1.0, 48: 0.0, 49: 0.0}
+Iteration 8: New valset pareto front scores: {0: 0.0, 1: 1.0, 2: 1.0, 3: 1.0, 4: 1.0, 5: 0.0, 6: 1.0, 7: 1.0, 8: 1.0, 9: 1.0, 10: 1.0, 11: 1.0, 12: 1.0, 13: 0.0, 14: 1.0, 15: 0.0, 16: 1.0, 17: 1.0, 18: 1.0, 19: 1.0, 20: 1.0, 21: 0.0, 22: 1.0, 23: 1.0, 24: 1.0, 25: 1.0, 26: 0.0, 27: 1.0, 28: 1.0, 29: 1.0, 30: 1.0, 31: 0.0, 32: 1.0, 33: 1.0, 34: 0.0, 35: 1.0, 36: 0.0, 37: 1.0, 38: 1.0, 39: 0.0, 40: 0.0, 41: 1.0, 42: 1.0, 43: 1.0, 44: 1.0, 45: 0.0, 46: 1.0, 47: 1.0, 48: 0.0, 49: 0.0}
+Iteration 8: Valset pareto front aggregate score: 0.72
+Iteration 8: Updated valset pareto front programs: {0: {0, 1, 2, 3, 4}, 1: {1, 2, 3, 4}, 2: {1, 2, 3}, 3: {0, 1, 2, 3, 4}, 4: {3}, 5: {0, 1, 2, 3, 4}, 6: {1, 2}, 7: {0, 1, 2, 3, 4}, 8: {2, 3, 4}, 9: {0, 1, 2, 3, 4}, 10: {3}, 11: {0, 1, 2, 3, 4}, 12: {0, 2, 3, 4}, 13: {0, 1, 2, 3, 4}, 14: {0, 1, 3}, 15: {0, 1, 2, 3, 4}, 16: {1, 2, 3}, 17: {2, 3, 4}, 18: {0, 1, 2, 3}, 19: {0, 2, 3, 4}, 20: {0, 1, 2, 3, 4}, 21: {0, 1, 2, 3, 4}, 22: {0, 1, 2, 3, 4}, 23: {2}, 24: {0, 1, 2, 3, 4}, 25: {2, 3, 4}, 26: {0, 1, 2, 3, 4}, 27: {1, 2, 3}, 28: {0, 1, 2, 3, 4}, 29: {0, 1, 2, 3, 4}, 30: {0, 1, 2, 3, 4}, 31: {0, 1, 2, 3, 4}, 32: {4}, 33: {3}, 34: {0, 1, 2, 3, 4}, 35: {3, 4}, 36: {0, 1, 2, 3, 4}, 37: {2, 3, 4}, 38: {0, 1, 2, 3, 4}, 39: {0, 1, 2, 3, 4}, 40: {0, 1, 2, 3, 4}, 41: {0, 1, 3, 4}, 42: {0, 1, 2, 3}, 43: {2, 3, 4}, 44: {0, 1, 2, 3, 4}, 45: {0, 1, 2, 3, 4}, 46: {2}, 47: {0, 2, 3, 4}, 48: {0, 1, 2, 3, 4}, 49: {0, 1, 2, 3, 4}}
+Iteration 8: Best valset aggregate score so far: 0.64
+Iteration 8: Best program as per aggregate score on valset: 3
+Iteration 8: Best score on valset: 0.64
+Iteration 8: Linear pareto front program index: 3
+Iteration 8: New program candidate index: 4
+Iteration 9: Selected program 2 score: 0.58
+Iteration 9: Proposed new text for instruction: You are tasked with a highly precise text classification problem in the domain of geometry, specifically focused on identifying polygons and other shapes from both descriptive language and SVG path data. Your objective is to output a single, correct class label as per the rules below.
+
+Task Requirements:
+
+1. **Input Structure:**
+   - You will be provided with two fields:
+     - "text": This can be a natural language description of a geometric shape or a string of SVG path data depicting a geometric figure.
+     - "Options": A list of options, each a single uppercase letter followed by a geometric object name (e.g., (B) heptagon, (C) hexagon, etc.).
+   - Only a subset of these options correspond to labels that you are ever allowed to output.
+
+2. **Allowed Output Labels:**
+   - Your response must be one (and only one) of the following uppercase single-letter codes: B, C, D, E, F, G, I, J, or K. Each code corresponds to a geometric object (e.g., B = heptagon).
+   - Under no circumstance should you output any label not in this list, regardless of what appears in the options.
+
+3. **Domain and Technical Knowledge:**
+   - You must accurately parse both plain English descriptions and SVG path data.
+   - When SVG path data is given, you must:
+     - Identify the geometric shape by analyzing the sequence and count of commands (for polygons, count the distinct 'L'ine or vertex commands, not just the number of points written—ensure you count all unique vertices before returning/closing the path).
+     - Pay close attention to whether the path is closed (i.e., the path returns to the starting point, or uses the "Z" command).
+     - For closed figures, count how many unique points/vertices are sequentially connected.
+     - For polygons:
+       - Triangle: 3 sides (label J)
+       - Pentagon: 5 sides (label G)
+       - Hexagon: 6 sides (label C)
+       - Heptagon: 7 sides (label B)
+       - Octagon: 8 sides (label F)
+     - For quadrilaterals (four-sided): Use domain knowledge to distinguish:
+       - Kite (label D): 2 pairs of adjacent sides are equal in length; appears as an asymmetric, but symmetric with respect to a diagonal, quadrilateral.
+       - Trapezoid (label K): Has one pair of parallel sides.
+     - For curvilinear shapes:
+       - Elliptical arcs or full circles are not valid output labels if the required label is not in the allowed set, even if present in options.
+       - Sectors (label I) involve a "slice" bounded by two radii and an arc; analyze SVG arc commands accordingly.
+     - For polyline or open path (single segment not forming a shape): label E (line).
+   - Do not confuse the number of coordinate points in the SVG path with the actual number of polygon sides if the first and last points are repeated to close the path.
+
+4. **Precise Polygon Recognition:**
+   - Carefully count segments/vertices for polygons:
+     - E.g., For a path like M ... L ... L ... L ... Z (with 8 unique line draw commands before closure), it's an octagon (F), not a heptagon (B).
+   - For kites and trapezoids: Do not misassign rectangle-like quadrilaterals; only label kite if the adjacent sides are in pairs of equal length, and only label trapezoid if one pair of opposing sides are parallel.
+
+5. **Option Matching:**
+   - Always map your analysis to the provided options **subject to the allowed set**: B, C, D, E, F, G, I, J, K.
+   - Ignore any options with other letters, even if present.
+   - Output only the uppercase label (e.g., F), not the shape name or an explanation.
+
+6. **No Explanations or Formatting:**
+   - Do not output reasoning, extra formatting, or any form of explanation. Your response must be a single allowed uppercase code (B, C, D, E, F, G, I, J, K).
+
+Key Reminders and Failure Cases:
+- Carefully distinguish 7-sided (heptagon, B) vs. 8-sided (octagon, F) polygons; do not confuse by counting duplicate/repeat coordinates.
+- Rectangular or square shapes should not be output unless reinterpreted as kite or trapezoid, per the technical quadrilateral rules.
+- Always prefer the most precise technical match, not an approximate or superficial guess.
+- SVG path analysis is strict: count vertices properly, analyze shape properties (sides, symmetry, curvature), and interpret accordingly.
+
+Your goal is to perform with perfect accuracy, especially in counting sides/vertices from SVG data and distinguishing quadrilaterals by geometric definition, not appearance.
+
+Summary: Given a geometric description or SVG path and options, output only the one correct allowed label (from B, C, D, E, F, G, I, J, K) according to the actual geometric figure present—using both SVG parsing and precise geometric knowledge.
+Iteration 9: New subsample score 2.0 is not better than old score 2.0, skipping
+Iteration 10: Selected program 4 score: 0.48
+Iteration 10: All subsample scores perfect. Skipping.
+Iteration 10: Reflective mutation did not propose a new candidate
+Iteration 11: Selected program 3 score: 0.64
+Iteration 11: Proposed new text for instruction: Your task is to analyze a provided "text" input and classify it by outputting the correct single-letter label (from a specified allowed set) corresponding to the geometric object or concept actually described. The input "text" may contain SVG path data, geometric or domain-specific technical descriptions, and a list of labeled options mapping letter labels to geometric terms. Your output must be a single uppercase letter, corresponding to one of the allowed labels, and nothing else.
+
+Key instructions for performing this task:
+
+1. **Allowed Output Labels**: You must only respond with one of these uppercase letters:
+   - B, C, D, E, F, G, I, J, or K.
+   - No other letter (even if present in the input options) is a valid answer.
+
+2. **Input Format**:
+   - The "text" string includes a description, possibly containing SVG path data (commands like 'M', 'L'), and ends with a set of labeled options (e.g., (A) circle, (B) heptagon, ...).
+   - Your job is to determine what precise geometric object the text (especially the SVG path, if present) describes, and then map that object to the appropriate label using only the allowed output options.
+
+3. **Rules for Analysis**:
+   - Pay close and rigorous attention to SVG path syntax:
+     - 'M' begins a new subpath (move to point).
+     - Each 'L' command draws a straight line to a new vertex.
+     - A sequence of 'L' commands defines the contour of a polygon or shape; count all vertex points distinctly (including between consecutive 'L's and 'M's).
+   - Read all coordinates and count unique points to deduce:
+     - Number of sides/vertices for polygons.
+     - Path structure for lines, sectors, ellipses.
+   - Attend to non-SVG technical/geometric descriptions. Translate geometric terms into concrete shape properties (e.g., a "quadrilateral with two pairs of adjacent sides of equal length" = kite).
+   - Only classify according to the object actually drawn/defined, not surface labels.
+
+4. **Domain Knowledge for Mappings**:
+   - Use precise geometric definitions:
+     - (B) heptagon — 7-sided polygon.
+     - (C) hexagon — 6-sided polygon.
+     - (D) kite — quadrilateral with two pairs of adjacent sides the same length.
+     - (E) line — a single straight segment (just two unique points).
+     - (F) octagon — 8-sided polygon.
+     - (G) pentagon — 5-sided polygon.
+     - (I) sector — sector of a circle ("pizza slice").
+     - (J) triangle — 3-sided polygon.
+     - (K) ellipse — oval/ellipse (frequently appears as a closed path with specific SVG arc 'A' command or a geometric oval).
+   - Do not output other possible labels even if an option is present (e.g., A, H).
+
+5. **Special Note on Prior Mistakes to Avoid**:
+   - Do NOT automatically classify any 4-point closed path as a "kite"; analyze the coordinates/sides and consider if it could be another quadrilateral (such as a trapezoid).
+   - For SVG paths with four points (or four 'L's forming a closed shape): To distinguish between kite and trapezoid:
+     - Check for a pair of parallel sides (trapezoid), or two pairs of adjacent equal-length sides (kite). If insufficient info is available, default to the option labeled "K" (trapezoid) for generic 4-sided figures that are not explicitly described or constructed as kites.
+   - Always double-check side count and properties; for SVG input, carefully examine the closure of the path.
+   - Do NOT confuse polygons differing by a single side (e.g., don’t mistake a hexagon for a heptagon, or vice versa).
+   - Never assume a label just by process of elimination—use the actual geometric analysis.
+
+6. **Response Format**:
+   - Output only the correct single-letter label from the allowed set. 
+   - Do NOT output any reasoning, explanation, or extra text.
+
+7. **Disambiguation and Figurative Language**:
+   - Ignore figurative, ironic, or non-literal language; always classify based strictly on what geometric or technical reality is present in the description or path data.
+
+In summary:
+- Perform rigorous geometric analysis of the input.
+- Map the shape or object found to the correct label using the key above, and output only the letter from the allowed set.
+- Be careful to distinguish between similar polygons, and always prefer the most accurate, domain-informed classification.
+
+Example for reference:
+If an SVG path describes a closed figure with four points (not a line, not specifically a kite by side length), and both (D) kite and (K) trapezoid are listed, output "K" (trapezoid) unless there is evidence it is a kite.
+
+Never explain your reasoning or copy any part of the instructions or input in your response.
+Iteration 11: New subsample score 1.0 is not better than old score 1.0, skipping
+Iteration 12: Selected program 2 score: 0.58
+Iteration 12: Proposed new text for instruction: Your task is to classify geometric objects described via natural language or SVG path data, focusing specifically on precise polygon and shape identification. You must apply detailed technical knowledge of geometry and SVG path conventions to output a single target label as specified below.
+
+**Input Format:**
+- Each input contains:
+  - A "text" field: This may describe the geometric object in natural language, technical terminology, or SVG path notation (e.g., a sequence of "M", "L", "A" commands).
+  - An "Options" field: A list of choices, each in the format of a single uppercase letter (e.g., (B), (C), (D), etc.) followed by a geometric shape name.
+
+**Allowed Output Labels:**
+- You must select and output one of only the following labels: B, C, D, E, F, G, I, J, or K. These correspond to:
+  - B = heptagon (7 sides)
+  - C = hexagon (6 sides)
+  - D = kite (quadrilateral with two pairs of adjacent sides equal)
+  - E = line
+  - F = octagon (8 sides)
+  - G = pentagon (5 sides)
+  - I = sector
+  - J = triangle (3 sides)
+  - K = trapezoid (quadrilateral with exactly one pair of parallel sides)
+- Under no circumstances should you output any label other than B, C, D, E, F, G, I, J, or K, even if other letters are present in the options.
+
+**Required Steps and Domain Knowledge:**
+1. **Parse the geometric description:** For SVG paths, count vertices/points/line segments ("L" commands), verify if the path closes, and check for arcs or curves. For natural language, extract the relevant geometric features and parameters.
+2. **Polygon Side Counting and Shape Detection:**
+    - For polygons:
+      - Triangle: 3 sides/vertices → select "J"
+      - Pentagon: 5 sides/vertices → "G"
+      - Hexagon: 6 sides/vertices → "C"
+      - Heptagon: 7 sides/vertices → "B"
+      - Octagon: 8 sides/vertices → "F"
+    - For quadrilaterals, analyse the arrangement:
+      - Kite ("D"): Quadrilateral with two distinct pairs of adjacent sides of equal length, typically symmetrical along one diagonal.
+      - Trapezoid ("K"): Quadrilateral with exactly one pair of opposite sides parallel; distinguish from kites using geometric proportions and arrangement.
+      - Do not misclassify rectangles, parallelograms, or general quadrilaterals—choose kite or trapezoid only if formal geometric requirements are met.
+    - For 4-sided figures, if it's unclear whether it's a kite or trapezoid, analyse based on adjacent equal side pairs (kite) vs one pair of parallel sides (trapezoid).
+3. **Curve and Arc Recognition:**
+    - If SVG path includes arc commands (e.g., "A"), determine if the shape is an arc, ellipse, or sector of a circle.
+    - If the SVG path forms a closed figure out of straight lines, classify by polygon type; if it forms a curved sector, select "I" (sector).
+4. **Attention to Closure and Structure:** For shapes to be counted as polygons, path must return to its starting point or close seamlessly.
+5. **Exclude Ineligible Choices:** Ignore all options not among the allowed output labels, regardless of presence in options.
+6. **No explanations:** Only output the single, correct uppercase letter for your answer—no rationales, context, or extra formatting.
+
+**Common Pitfalls to Avoid:**
+- Do not confuse similar quadrilaterals (kites vs. trapezoids); always analyse side-lengths and parallelism.
+- Do not ignore explicit features in the SVG path—count path segments carefully.
+- Do not output disallowed labels (e.g., "A" for circle, "H" for rectangle).
+- Prefer the most specific, technically accurate category, not just approximate matches.
+
+**Special SVG Details:**
+- For an SVG path like "M ... L ... L ... L ... Z", count the distinct L segments and closure to determine polygon sides.
+- For seven "L" segments before closing: "B" (heptagon).
+- For five: "G" (pentagon), for six: "C" (hexagon), for eight: "F" (octagon).
+- For four L commands, closely inspect arrangement and length to distinguish between "D" (kite) and "K" (trapezoid).
+
+**Summary:**
+Use precise shape counting, geometric property analysis, and careful SVG path parsing to select the single valid label (B, C, D, E, F, G, I, J, or K), and output it—nothing else.
+Iteration 12: New subsample score 2.0 is not better than old score 2.0, skipping
+Iteration 13: Selected program 2 score: 0.58
+Iteration 13: Proposed new text for instruction: You are tasked with performing a highly precise text classification for the domain of geometric shape identification. Your task is to analyze a provided "text" input, which may be either (a) a description of a geometric shape, or (b) SVG path data (using commands such as M, L, etc.) representing a planar geometric figure, and select the correct geometric class label from a restricted set, based on close technical reasoning and rigorous geometric knowledge.
+
+### Task Details:
+
+#### 1. **Input Format and Fields**
+- Each task input will always contain:
+  - A "text" field: This may describe a geometric shape in natural language or, often, provide explicit SVG path data (e.g., `<path d="M ... L ... L ... Z"/>` or similar).
+  - An "Options" field: Several geometric shape choices, each assigned a label (e.g., (B) heptagon, (C) hexagon, etc.—case and spacing may vary).
+
+#### 2. **Allowed Outputs (Class Label Restrictions)**
+- You may ONLY output a single uppercase letter label from this restricted set: B, C, D, E, F, G, I, J, or K.
+  - These correspond to: B = heptagon, C = hexagon, D = kite, E = line, F = octagon, G = pentagon, I = sector, J = triangle, K = trapezoid.
+- Ignore any other provided option labels (e.g., A, H, etc.) during your label selection.
+- Do **not** output any explanations, justifications, punctuation, formatting, or text besides the raw, single-letter label.
+
+#### 3. **Geometric Analysis Requirements**
+- **Polygon side/vertex counting**: For SVG path data:
+  - Carefully count the number of unique, consecutive line commands ("L") or coordinate points.
+  - Do not double-count if the path returns to the starting point.
+  - SVG paths with _n_ distinct vertices and closing the path ("Z" or manual return to starting point) correspond to an n-sided polygon.
+- **Quadrilateral classification**:
+  - "Kite" (D): Quadrilateral with two pairs of adjacent sides equal in length (typically appears as a symmetric 'dart' or rhombic shape).
+  - "Trapezoid" (K): Quadrilateral with exactly one pair of parallel sides. If a quadrilateral does not fit the kite definition but could be a trapezoid, prefer "K."
+  - Avoid conflating rectangles or generic quadrilaterals unless the trapezoid or kite definition is clearly matched.
+- **Other polygons**:
+  - Triangle (J): 3 sides/vertices.
+  - Pentagon (G): 5 sides/vertices.
+  - Hexagon (C): 6 sides/vertices.
+  - Heptagon (B): 7 sides/vertices.
+  - Octagon (F): 8 sides/vertices.
+  - Sector (I): Typically indicated by an arc plus two radii, not by a closed polygonal path.
+- **SVG command parsing**:
+  - "L" indicates a straight line between coordinates.
+  - Arcs ("A") or curves suggest non-polygonal shapes (e.g., sectors, not eligible for polygon labels unless otherwise specified).
+  - Closed paths ("Z" or explicit return to the starting point) are crucial for correct side/vertex counting.
+
+#### 4. **Generalization and Error Avoidance**
+- Do _not_ infer polygon type solely from the number of "L" commands; closely track start and end points to avoid over- or under-counting.
+- Pay attention to point multiplicity in the SVG path: if the starting point is repeated at the end, do not count it twice.
+- If an SVG path draws multiple distinct subpaths, identify and classify the relevant geometric figure described by the context.
+- Match polygon type strictly to number of sides/vertices, not approximate appearance.
+- For quadrilaterals, refer to precise geometric definitions: do not default to "trapezoid" or "kite" unless the proportions or parallelism/adjoining equal sides are clear from context or coordinates.
+
+#### 5. **Strategy and Cautions**
+- If textually described, prioritize formal geometric definitions in mapping to the available labels.
+- When options include polygons not in the allowed list (e.g., (A) circle, (H) rectangle), always ignore these, even if they seem to be the best match for the content.
+- Your response must only be the correct uppercase SINGLE letter corresponding to the right label as per the above mappings.
+- If there is any ambiguity in quadrilaterals, analyze carefully using side lengths and arrangement inferred from coordinates.
+- Responses including any content besides the single, uppercase allowed label (B, C, D, E, F, G, I, J, K) will be considered incorrect.
+
+### Common pitfalls (to avoid based on prior task results):
+- Miscounting vertices or sides in SVG paths (e.g., confusing 7 with 8, or failing to recognize closing points are the same).
+- Confusing hexagon (6 sides) with heptagon (7 sides), or heptagon with octagon (8 sides).
+- Mislabeling polygons when the description or SVG path dictates a different number of sides.
+- Misidentifying quadrilaterals: Do not choose "kite" or "trapezoid" unless supported by adjacent side equality or parallelism as per classical definitions.
+
+**Summary**: On every input, parse or interpret the geometry accurately as per the description or SVG path, apply strict geometric definitions for classification, and return _EXACTLY_ the correct uppercase label (from: B, C, D, E, F, G, I, J, K) as a single character and nothing else.
+Iteration 13: New subsample score 1.0 is not better than old score 1.0, skipping
+Iteration 14: Selected program 3 score: 0.64
+Iteration 14: Proposed new text for instruction: Your task is to classify a provided "text" input that describes a geometric object—possibly using SVG path data, geometric terminology, or technical illustration—into one of a set of specifically allowed single-letter labels. This classification should be based on rigorous analysis of the input data, especially SVG path strings, and a precise mapping to geometric terms.
+
+## Input Format:
+- Each input consists of a "text" field containing a description of a geometric drawing, often including SVG path data (such as "M" for move to, "L" for line to, sequences of coordinate pairs), and a list of options. Each option is a single uppercase letter in parentheses followed by a geometric term (example: (A) circle, (B) heptagon, etc.).
+- The label options extend beyond the allowed outputs, but some options are not valid answer choices.
+
+## Allowed Output Labels:
+You may only output a single uppercase letter from this set:
+B, C, D, E, F, G, I, J, K
+
+**Never output any label outside of this set, even if a correct answer (by content) is paired to an option outside this list.**
+
+## Detailed Classification & Mapping Rules:
+
+### 1. SVG Path Parsing & Geometric Reasoning
+- If the SVG path is provided, interpret commands such as:
+  - "M" (move to): beginning of subpath,
+  - "L" (line to): draw a line to the coordinate,
+  - Sequences of "M" and "L" should be used to reconstruct the shape.
+- **Count the number of unique vertices/sides to identify polygons:**  
+  - 3 unique points (closed): triangle  
+  - 4 points: quadrilaterals or specific types (e.g., kite, trapezoid)  
+  - 5: pentagon  
+  - 6: hexagon  
+  - 7: heptagon  
+  - 8: octagon
+- If a path isn't closed, but consists of two points connected by a single "L," it describes a *line segment*.
+- If the path includes arc ("A") commands with two different radii, or other description suggests an elongated circle, this indicates an *ellipse*.
+- If the description mentions or draws a wedge of a circle, this means a *sector*.
+
+### 2. Geometric Term Definitions (for Mapping):
+- (B) heptagon: 7-sided polygon
+- (C) hexagon: 6-sided polygon
+- (D) kite: quadrilateral with two distinct pairs of adjacent sides equal
+- (E) line: straight line segment
+- (F) octagon: 8-sided polygon
+- (G) pentagon: 5-sided polygon
+- (I) sector: "pizza slice" or wedge of a circle
+- (J) triangle: 3-sided polygon
+- (K) ellipse: oval (circle stretched into an oval)
+
+**Note:** Other terms such as (A) circle, (H) rectangle, or extra distractors are not valid outputs.
+
+### 3. Output Format & Requirements:
+- Output **only** a single uppercase letter (from the allowed list above) matching the correct classification.
+- Do **not** output any explanation, commentary, or additional text—just the correct letter.
+
+### 4. Strategy & Disambiguation:
+- Thoroughly reconstruct the geometric shape based on all technical information provided, not simply the initial hints or order of options.
+- If provided SVG path data, do not estimate or guess—analyze for vertex count, path closure, and matching sides.
+- For quadrilaterals, use geometric reasoning (does it fit the definition of a kite? a trapezoid? etc.).
+- When technical geometric terms overlap or are ambiguous in the list, always resolve the ambiguity using precise mathematical/geometric definitions.
+- Even if the correct label is not present in the allowed list, select the best fit from the allowed letters based strictly on the geometric identity established.
+
+### 5. Examples & Mistakes to Avoid:
+- **Do not** conflate sidedness: e.g., do not call a 6-sided shape a heptagon.
+- When a quadrilateral does not fit the kite definition, consider trapezoid (if listed), but remember not to use options outside the allowed output list.
+- Do not be swayed by the order or distractor options—**always map technical description to the correct geometric label**.
+- Close analysis of SVG points and their sequence is required; a single missing or extra line can mean the difference between a pentagon and a hexagon.
+
+## Summary:
+- Analyze the technical description or SVG path data to determine the geometric object by its mathematical features (vertices, sides, path commands, etc.).
+- Map the identified geometric object to the correct option, constrained by the allowed output labels.
+- Output the single corresponding uppercase letter as your answer.
+
+**Never provide additional text, just the letter.**
+Iteration 14: New subsample score 1.0 is not better than old score 1.0, skipping
+Iteration 15: Selected program 4 score: 0.48
+Iteration 15: Proposed new text for instruction: Your task is to classify a geometric object described in a "text" string into the correct category, using the allowed single-letter labels: B, C, D, E, F, G, I, J, or K. Follow the rules and strategies outlined below exactly.
+
+### Input Format
+- Each input consists of a "text" string that may include:
+    - SVG path data, e.g., <path d="..."/>, potentially drawing polygons, lines, ellipses, or sectors.
+    - Geometric or mathematical terminology (e.g., "pentagon," "kite," "ellipse," "sector").
+    - A list of options, each formatted as (Letter) geometric-term, including both valid and distractor labels (letters outside the allowed set).
+- Only use the geometric evidence in the "text" (from SVG or description). Ignore the order or contents of the options except to map them to allowed output letters as relevant.
+
+### Allowed Output
+- Output exactly one uppercase LETTER from this set ONLY: B, C, D, E, F, G, I, J, K.
+- Do NOT output any other letter, word, explanation, punctuation, or formatting.
+
+### Classification Strategy—SVG Path Analysis
+1. **Polygon Detection**: Reconstruct the geometry using the SVG `M` (move) and `L` (line) commands to identify the number and connections of unique points:
+    - Count each unique coordinate after an 'M' or following 'L' commands, to determine the number of vertices.
+    - If the path returns to the starting point, confirm a closed shape.
+
+2. **Polygon Class Mapping (number of unique vertices/sides):**
+    - 3: triangle (J)
+    - 4: quadrilateral—identify if it's a kite (D), otherwise determine if another allowed quad applies.
+    - 5: pentagon (G)
+    - 6: hexagon (C)
+    - 7: heptagon (B)
+    - 8: octagon (F)
+
+3. **Kite Detection (D)**: For 4-vertex polygons, examine if the side lengths show two distinct pairs of adjacent sides that are equal in length. Kites are quadrilaterals with this property; do NOT confuse with generic quadrilaterals or rectangles.
+
+4. **Line Segment (E)**: If the SVG path contains exactly two points joined by a single line, and does not close into a shape, classify as (E).
+
+5. **Sector (I)**: If the SVG path combines straight and curved commands to draw a portion ("slice") of a circle, especially using arc commands, or if the wording mentions a "sector," classify as (I).
+
+6. **Ellipse (K)**: If the SVG path uses arc or ellipse commands that trace a closed oval or circle, or the description refers to "ellipse," classify as (K).
+
+7. **Descriptive (Non-SVG) Inputs**: Rely on the terminology ("pentagon," "kite," etc.) and precisely map to the shape using the above class mapping.
+
+### Important Domain-Specific Nuances:
+- Polygon type must be determined by the number of sides, not simply recognition of labels.
+- For quadrilaterals, confirm kite characteristics before choosing (D).
+- Never infer from options order or labels alone—always use geometric evidence.
+- For compound SVG paths, the principal or first path typically determines the classification.
+- Disregard distracting or irrelevant options/labels.
+
+### Output
+- Print only the single corresponding uppercase letter: B, C, D, E, F, G, I, J, or K.
+- Do not print any other characters, punctuation, or explanation.
+
+**In summary:** Parse SVG or geometric description carefully to reconstruct the shape and map it to one of the allowed categories based solely on explicit geometric evidence, following the mapping and rules above.
+Iteration 15: New subsample score 2.0 is not better than old score 2.0, skipping2026/07/21 12:21:30 WARNING dspy.clients.lm: LM response was truncated due to exceeding max_tokens=40. You can inspect the latest LM interactions with `dspy.inspect_history()`. To avoid truncation, consider passing a larger max_tokens when setting up dspy.LM. You may also consider increasing the temperature (currently 0.0)  if the reason for truncation is repetition.
+
+Iteration 16: Selected program 4 score: 0.48
+Iteration 16: All subsample scores perfect. Skipping.
+Iteration 16: Reflective mutation did not propose a new candidate
+Iteration 17: Selected program 2 score: 0.58
+Iteration 17: All subsample scores perfect. Skipping.
+Iteration 17: Reflective mutation did not propose a new candidate
+Iteration 18: Selected program 4 score: 0.48
+Iteration 18: Proposed new text for instruction: Your task is to classify a geometric object described in an input "text" string into a specific, single-letter category. The only valid output categories are: B, C, D, E, F, G, I, J, or K.
+
+**Input Format:**
+- Each input consists of a "text" field, which may include:
+  - An SVG path element (e.g., <path d="..."/>)
+  - Descriptive geometric or mathematical terminology
+  - A list of options: each option is an uppercase letter in parentheses (e.g., (B)) followed by a term (e.g., hexagon). Some options may be distractors (i.e., labels which are not valid outputs).
+
+**Classification and Output Rules:**
+1. **Output Only One Letter:** 
+   - Output MUST be exactly one uppercase letter from the set: B, C, D, E, F, G, I, J, or K.
+   - Do NOT output any text, numbers, labels, or punctuation—ONLY the letter.
+
+2. **How to Classify:**
+   - **SVG Path Analysis:**  
+     - Parse the path string deeply. For polygons, count the number of unique vertices (each 'L' command after an 'M' denotes an additional vertex). Ignore repeated vertices or closing commands which return to the starting point.
+     - Use the following mappings for polygons:
+       - 3 vertices/sides: triangle → J
+       - 4 vertices/sides: kite (if it has two pairs of adjacent sides equal and not all right angles/quadrilateral)—otherwise, treat as a generic quadrilateral and see options
+       - 5 vertices/sides: pentagon → G
+       - 6 vertices/sides: hexagon → C
+       - 7 vertices/sides: heptagon → B
+       - 8 vertices/sides: octagon → F
+     - For two distinct points connected by a straight line, classify as line → E.
+     - If the path traces a circular sector (i.e., an arc bounded by two radii and a curve), classify as sector → I.
+     - If the path draws an ellipse or an oval shape, classify as ellipse → K.
+     - If the path draws a rectangle, trapezoid or quadrilateral which is NOT a kite, consider the context and described labels in options, but use 'K' only for an ellipse.
+   - **Descriptive/Terminology Analysis:**  
+     - Directly map clear terms (e.g., "hexagon", "pentagon") to their letter mapping above.
+     - For "kite", confirm the property: a quadrilateral with two distinct pairs of adjacent sides of equal length.
+     - Do NOT rely on the order or presence of options for your decision; base classification strictly on the explicit description or the path data.
+   - **Domain Details & Error Avoidance:**  
+     - Carefully distinguish:
+       - A rectangle or square (quadrilaterals with all right angles) are not kites unless they fit the kite side length property.
+       - Do NOT confuse pentagons (5 sides) with heptagons (7 sides), etc.—count vertices carefully.
+       - Sectors must have at least some curve; straight segments connecting three points do NOT form a sector.
+       - K (ellipse): Only use if the description or path clearly describes an ellipse or oval shape.
+
+3. **Priority & Disambiguation:**
+   - Place highest priority on the SVG path for the geometric determination if present, otherwise use the descriptive terminology.
+   - If multiple polygons or objects are drawn, classify the principal or first drawn shape.
+   - In cases where the shape is ambiguous, carefully reconstruct the sequence of the SVG path, considering the full geometry before assigning a label.
+
+**Summary Table for Mapping:**
+| Shape/Sides/Type    | Label |
+|---------------------|-------|
+| Triangle (3 sides)  | J     |
+| Quadrilateral: kite | D     |
+| Pentagon (5 sides)  | G     |
+| Hexagon (6 sides)   | C     |
+| Heptagon (7 sides)  | B     |
+| Octagon (8 sides)   | F     |
+| Line                | E     |
+| Sector              | I     |
+| Ellipse/oval        | K     |
+
+**Output Specification:**
+- Output only the letter representing your classification (B, C, D, E, F, G, I, J, or K).
+- NO extra text, explanations, or punctuation.
+
+**Note:**  
+- Do not classify rectangles or generic quadrilaterals as kites unless the side length property for kites is met.
+- For ambiguous 4-vertex paths lacking clear kite properties, refrain from assigning 'D' and do not assign 'K' unless an ellipse/oval is present.
+- Do not be influenced by distractor options; only base your answer on explicit geometric evidence in the input.
+Iteration 18: New subsample score 1.0 is not better than old score 1.0, skipping
+Iteration 19: Selected program 4 score: 0.48
+Iteration 19: Proposed new text for instruction: Your task is to analyze a provided "text" string that describes a geometric figure—potentially via SVG path data, geometric terminology, and/or a list of possible classification options—and output a single-letter classification from a specific set of allowed labels.
+
+**Input Structure:**
+- The "text" field may contain:
+  - SVG path elements (e.g., `<path d="..."/>`)
+  - Technical geometric or mathematical terms describing a shape
+  - A list of options, where each consists of a letter in parentheses (e.g., (B), (C)) followed by a figure name.
+- The options list may include distractor choices with invalid labels; only certain specified labels may be used for the answer.
+
+**Permitted Output Labels:**
+- You must output exactly one uppercase letter, choosing only from: B, C, D, E, F, G, I, J, or K.
+- Output only the single letter—no additional text, punctuation, or explanation.
+
+**Classification Criteria:**
+
+1. **Parsing SVG Data:**
+   - For SVG path data:
+     - Focus on deciphering the "d" attribute:
+       - The 'M' command specifies the starting point.
+       - Each 'L' command that follows typically indicates another vertex. 'Z' or returning to the start indicates closure.
+       - Track each unique vertex; a polygon's number of vertices = number of unique points (i.e., distinct 'L' and/or 'M' coordinates).
+     - Use this count to classify:
+       - 3 vertices/sides: (J) triangle
+       - 4 vertices/sides: (D) kite (if the quadrilateral qualifies as a kite: two pairs of adjacent sides of equal length), or otherwise if not specified as a kite, do not classify as kite unless the description supports it
+       - 5 vertices/sides: (G) pentagon
+       - 6 vertices/sides: (C) hexagon
+       - 7 vertices/sides: (B) heptagon
+       - 8 vertices/sides: (F) octagon
+     - If the SVG path draws a shape with just two points connected (no closure), classify as (E) line.
+     - Curved SVG paths that form a "slice" of a circle—i.e., a sector—should be classified as (I) sector.
+     - SVG paths that describe a closed, rounded, elliptical shape or explicitly state an ellipse: (K) ellipse.
+
+2. **Analyzing Descriptive Text:**
+   - If geometric terms are provided:
+     - Match the terminology to the labels above. For example:
+       - "hexagon": (C)
+       - "pentagon": (G)
+       - "heptagon": (B)
+       - "triangle": (J)
+       - "octagon": (F)
+       - "ellipse" or "oval": (K)
+       - "sector": (I)
+     - If the term is "kite," confirm it matches the geometrical definition: a quadrilateral with two distinct, contiguous pairs of adjacent sides that are equal.
+     - For ambiguous terms ("quadrilateral"), do not default to (D) unless qualified as a kite.
+
+3. **Special SVG and Classification Rules:**
+   - In compound or multi-part SVG paths, or if multiple objects are present, focus on the principal or first fully described shape.
+   - Do not allow distractors or misleading options to influence your answer. Base your choice only on explicit, detailed evidence in the SVG and/or text.
+   - If the number of vertices given by the path data does not match the geometric classification of the options (e.g., five vertices for pentagon), always confirm via SVG data rather than the order of the options.
+
+4. **Output Rules:**
+   - Output only one of the specified letters: B, C, D, E, F, G, I, J, K.
+   - Do not output any labels not in this set, regardless of those present in the options list.
+   - Do not include any other information other than the letter.
+
+**Critical Reminders:**
+- Do NOT guess based on options. Always examine geometric evidence first.
+- Especially when using SVG path data, reconstruct and count the unique vertices logically: each 'L' after an 'M' = one side/vertex, unless revisiting the start for closure.
+- For polygons, accurate vertex counting is essential. For example, five unique points joined sequentially = pentagon (G).
+- If there is a mistake in vertex counting or interpretation, the classification will be wrong, so prefer methodical reconstruction over superficial matching.
+- The output must be precise, informed by both domain/geometric knowledge and explicit details from the input.
+
+**Example:**
+If the SVG path is `<path d="M 1,1 L 2,2 L 3,1 L 2,0 L 1,1"/>`, there are four unique points—suggesting a quadrilateral. Only classify as kite (D) if the sides fit the definition.
+
+If the path is `<path d="M 1,1 L 2,2 L 3,2 L 4,1 L 3,0 L 2,0 L 1,1"/>`, there are six unique points, making it a hexagon (C).
+
+Remember: Carefully reconstruct the figure from path data, match to geometric descriptors, and output only the correct single-letter label.

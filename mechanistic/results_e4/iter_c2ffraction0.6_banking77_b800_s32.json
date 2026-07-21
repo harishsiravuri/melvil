@@ -1,0 +1,42 @@
+{
+ "arm": "c2f",
+ "switch": [
+  "fraction",
+  0.6
+ ],
+ "task": "banking77",
+ "seed": 32,
+ "budget": 800,
+ "test_accuracy": 0.76,
+ "test_macro_f1": 0.7366,
+ "dev_accuracy": 0.8,
+ "notes": "c2f switch=('fraction', 0.6); skipped (decomposed dev 0.790 vs blob 0.800)",
+ "curve": [
+  {
+   "metric_calls": 0,
+   "dev_score": 0.8,
+   "phase": 1
+  },
+  {
+   "metric_calls": 109,
+   "dev_score": 0.8,
+   "phase": 1
+  },
+  {
+   "metric_calls": 227,
+   "dev_score": 0.8,
+   "phase": 1
+  },
+  {
+   "metric_calls": 336,
+   "dev_score": 0.8,
+   "phase": 1
+  },
+  {
+   "metric_calls": 442,
+   "dev_score": 0.77,
+   "phase": 1
+  }
+ ],
+ "cost_usd": 0.0122
+}

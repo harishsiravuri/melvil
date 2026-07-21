@@ -173,6 +173,32 @@ Together with E6 (racing dead) and E5 (modest stopping frontier), all three
 early-signal exploits fail for the same measured reason — a coherent negative
 triad grounded in the E1 result.
 
+## E4 — coarse-to-fine (C4) · iteration complete; **no confirmation warranted** ($4.58)
+
+Iteration (marked exploratory; seeds 30–32, B1, 4 tasks): vanilla / full-layer /
+c2f(rejections:2) / c2f(fraction:0.6, banking77 ablation).
+
+| task | vanilla | full | c2f(rej2) | c2f(frac60) |
+|---|---|---|---|---|
+| banking77 | 0.826 | 0.821 | 0.818 | 0.786 |
+| trec | 0.892 | 0.873 | 0.892 | — |
+| massive | 0.858 | 0.850 | 0.858 | — |
+| stance_abortion | 0.640 | 0.537 | 0.607 | — |
+
+**Verdict: C4 DIED in iteration; freezing and confirming it would confirm a
+non-method.** Mechanism, precisely: (i) the stall trigger (2 consecutive
+rejections) fires so late that 14/15 runs had no budget left for phase 2 —
+GEPA keeps accepting sporadically to the end (another face of the distributed-
+gains result E1); c2f then equals vanilla minus overhead. (ii) When phase 2 is
+forced early (fraction 0.6), refinement actively subtracts (−4.0 on banking77):
+decomposed per-label editing degrades a good blob rather than sharpening it.
+Paper sentence: *"Sequencing whole-prompt evolution before per-label refinement
+does not rescue structure: evolution rarely stalls early enough to fund a
+refinement phase, and when refinement is forced, it hurts."* The decomposition
+machinery (LLM split + verification gate) worked as designed — the gate
+correctly caught degraded decompositions — so the negative is attributable to
+the refinement phase itself, not implementation failure.
+
 ## Pending experiments
 - **E1 front-loading (C1)** — harness next; its runs also enrich this
   simulation pool.

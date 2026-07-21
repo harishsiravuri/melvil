@@ -1,0 +1,33 @@
+{
+ "blob_dev": 0.82,
+ "decomposed_dev": 0.81,
+ "components": {
+  "task_instruction": "You are assigned the task of categorizing user-submitted queries related to digital banking and finance functionalities. You will receive an input consisting of a \"text\" field; this field contains a user's message that describes a problem, question, or scenario encountered when using banking and finance services (such as within a banking app).\n\nYour goal is to correctly classify each input into exactly one category from the list below, using only the most relevant single category label (without extra characters, spaces, explanations, or punctuation):\n\nEach task consists of a single user \"text\" input. The input does not specify the category or highlight keywords. You must interpret the meaning of the text based on its content alone.\n\nAnalyze the input and identify the primary issue, activity, or request expressed by the user, focusing on details related to banking transactions, app functionality, card management, verification processes, or regulatory restrictions.\n\nWhen language is ambiguous or colloquial, infer the user\u2019s intent based on standard banking operations and policies.\n\nReturn only the most specifically matching single category label, never more than one. No additional formatting, explanations, or punctuation\u2014just the category name.\n\nYour performance is determined by correctly distinguishing subtle domain differences between issues such as regulatory restrictions, transaction failure stages, verification requests, fee versus decline situations, and similar banking-specific scenarios. Always use your banking and fintech knowledge to guide your choice.",
+  "label::automatic_top_up": "",
+  "label::balance_not_updated_after_bank_transfer": "",
+  "label::beneficiary_not_allowed": "If the user's issue involves not being able to send to a person, type of recipient, or certain asset (e.g., crypto), use \"beneficiary_not_allowed\", even if the term \"beneficiary\" is not used.\n\nIf the exchange is refused for compliance reasons (such as a regulatory block), use \"beneficiary_not_allowed\".\nIf a customer cannot buy crypto, it\u2019s likely due to a compliance block (\"beneficiary_not_allowed\"), not an app malfunction.",
+  "label::cancel_transfer": "",
+  "label::card_payment_fee_charged": "",
+  "label::card_payment_not_recognised": "",
+  "label::declined_cash_withdrawal": "",
+  "label::exchange_rate": "",
+  "label::exchange_via_app": "\"use 'exchange_via_app' strictly for cases where the user wants to perform a valid exchange or conversion;\"",
+  "label::failed_transfer": "",
+  "label::get_disposable_virtual_card": "",
+  "label::get_physical_card": "",
+  "label::passcode_forgotten": "",
+  "label::pending_top_up": "",
+  "label::pending_transfer": "",
+  "label::receiving_money": "\"receiving_money\" is for inquiries about getting paid, having a payment sent or received, or similar; even if a payment arrives in a different currency, the focus on 'receiving' makes this the right choice, not \"exchange_via_app\".",
+  "label::reverted_card_payment?": "",
+  "label::top_up_by_cash_or_cheque": "",
+  "label::top_up_reverted": "",
+  "label::topping_up_by_card": "",
+  "label::transfer_fee_charged": "",
+  "label::transfer_into_account": "",
+  "label::transfer_timing": "",
+  "label::verify_my_identity": "Use \"verify_my_identity\" for standard ID or KYC procedures.",
+  "label::verify_source_of_funds": "Use \"verify_source_of_funds\" only when the user is asked to explain where their money comes from.",
+  "boundary_rules": "Leverage explicit and subtle clues in the text to decide among very similar categories.\n\n\"exchange_via_app\" is strictly for cases where the user wants to perform a valid exchange or conversion; if the exchange is refused for compliance reasons (such as a regulatory block), use \"beneficiary_not_allowed\".\n\nDifferentiate between the states of transactions:\n- \"pending_top_up\" vs. \"top_up_reverted\" vs. \"failed_transfer\" vs. \"pending_transfer\" vs. \"reverted_card_payment?\": Always choose the state or result actually reported in the user's situation.\n\nUse \"verify_my_identity\" for standard ID or KYC procedures; use \"verify_source_of_funds\" only when the user is asked to explain where their money comes from.\n\n\"receiving_money\" is for inquiries about getting paid, having a payment sent or received, or similar; even if a payment arrives in a different currency, the focus on 'receiving' makes this the right choice, not \"exchange_via_app\".\n\nWhen language is ambiguous or colloquial, infer the user\u2019s intent based on standard banking operations and policies. Imagine practical edge-cases: if a customer cannot buy crypto, it\u2019s likely due to a compliance block (\"beneficiary_not_allowed\"), not an app malfunction."
+ }
+}

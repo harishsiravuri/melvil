@@ -6667,3 +6667,918 @@ Apply these rules systematically, with special attention to distinguishing betwe
 - Requests for the NAME/IDENTITY of something (entity) vs requests for MEASUREMENTS (numeric)
 - Requests for lists of concrete entities vs requests for explanatory information
 - Recognizing that causal "what" questions and superlative "what" questions typically seek specific entities as answers
+Iteration 7: New subsample score 2.0 is not better than old score 2.0, skipping
+Iteration 8: Selected program 2 score: 0.78
+Iteration 8: Proposed new text for instruction: Classify the given text into one of these categories: abbreviation, description, entity, human, location, numeric.
+
+Category Definitions:
+- **abbreviation**: Questions asking what an acronym or abbreviation stands for
+- **description**: Questions asking for definitions, explanations, reasons, or descriptions of how/why something works or what something means
+- **entity**: Questions asking for specific named things, objects, items, lists of concrete entities, properties/attributes of things, OR questions asking "What is a/an X?" where X is a type of thing/object/concept (e.g., "What is a fear of weakness?")
+- **human**: Questions about specific people or groups of people, OR questions about companies/organizations (companies are considered human entities in this classification system)
+- **location**: Questions about places, geographical locations, countries, or where something is located
+- **numeric**: Questions asking for numbers, quantities, dates, or measurements
+
+Key Classification Rules:
+
+1. **Human Category - Important Exception**:
+   - Questions about companies, corporations, and organizations should be classified as **human**
+   - Example: "What company's trademark was X?" → **human** (not entity)
+   - This includes questions about company ownership, trademarks, founders, etc.
+
+2. **Entity vs Description Distinction**: 
+   - If the question asks "What [items/things/products/colors/parts] have/contain/include/make up X?" → classify as **entity** (asking for a list of specific things or components)
+   - If the question asks "What is a/an [X]?" where X is a type of thing or concept → classify as **entity** (asking for the name of a specific entity, not an explanation)
+   - Example: "What is a fear of weakness?" → **entity** (asking for the specific name/term for this type of fear, like "asthenophobia")
+   - If the question asks "What is X?" or "What does X mean?" where X is already a specific term → classify as **description** (asking for an explanation of that term)
+   - Example: "What ice creams contain seaweed?" is asking for specific ice cream products/brands, so it's **entity**
+   - Example: "What colors make up a rainbow?" is asking for a list of specific colors (components), so it's **entity**, NOT description
+
+3. **Location vs Numeric Distinction**:
+   - Questions like "What country [does/has/boasts] X?" are asking for which country/place, so classify as **location** (even if the question mentions a quantity like "most dams")
+   - The key is whether the answer expected is a place/country name (location) or a number (numeric)
+   - Example: "What country boasts the most dams?" → **location** (answer is a country name, not a number)
+   - Example: "How many dams does the country have?" → **numeric** (answer is a number)
+
+4. **Question Word Analysis**:
+   - "What [noun] [verb]..." where noun is a concrete object type → likely **entity**
+   - "What is a/an [type]...?" → **entity** (asking for the specific name/term)
+   - "What [components/parts/elements] make up/compose..." → **entity**
+   - "What is/are/does [specific term]..." (asking for definition) → likely **description**
+   - "Who..." → **human**
+   - "What company/corporation/organization..." → **human**
+   - "Where..." or "What country/place/city..." → **location**
+   - "How many/much..." or "When..." → **numeric**
+
+5. **Primary Intent**: Focus on what the question is fundamentally requesting:
+   - A list of specific things/items/components → **entity**
+   - The specific name or term for something → **entity**
+   - An explanation or definition of an already-named term → **description**
+   - Information about a person or company/organization → **human**
+   - A place, country, or location → **location**
+   - A number or quantity → **numeric**
+
+6. Pay attention to the structure: "What [category] [has property]?" or "What [things] make up [object]?" is asking for members of that category or components, making it an **entity** question.
+
+Apply these rules systematically, with special attention to:
+- Distinguishing between requests for lists of concrete entities versus requests for explanatory information
+- Recognizing that "What is a/an X?" questions typically seek the specific name/term (entity), not an explanation
+- Recognizing that company/organization questions belong to the **human** category
+- Recognizing that questions about components, parts, or elements that make up something are **entity** questions
+- Distinguishing location questions (asking for place/country names) from numeric questions (asking for quantities)
+Iteration 8: New subsample score 3.0 is better than old score 1.0. Continue to full eval and add to candidate pool.
+Iteration 8: Found a better program on the valset with score 0.84.
+Iteration 8: Valset score for new program: 0.84 (coverage 100 / 100)
+Iteration 8: Val aggregate for new program: 0.84
+Iteration 8: Individual valset scores for new program: {0: 1.0, 1: 0.0, 2: 1.0, 3: 1.0, 4: 1.0, 5: 0.0, 6: 1.0, 7: 0.0, 8: 1.0, 9: 1.0, 10: 1.0, 11: 1.0, 12: 1.0, 13: 1.0, 14: 1.0, 15: 1.0, 16: 1.0, 17: 1.0, 18: 1.0, 19: 1.0, 20: 1.0, 21: 1.0, 22: 0.0, 23: 1.0, 24: 1.0, 25: 0.0, 26: 1.0, 27: 1.0, 28: 1.0, 29: 1.0, 30: 1.0, 31: 1.0, 32: 1.0, 33: 0.0, 34: 1.0, 35: 1.0, 36: 0.0, 37: 1.0, 38: 1.0, 39: 1.0, 40: 1.0, 41: 1.0, 42: 1.0, 43: 1.0, 44: 1.0, 45: 1.0, 46: 0.0, 47: 1.0, 48: 1.0, 49: 1.0, 50: 1.0, 51: 0.0, 52: 1.0, 53: 1.0, 54: 1.0, 55: 1.0, 56: 0.0, 57: 1.0, 58: 1.0, 59: 1.0, 60: 1.0, 61: 0.0, 62: 1.0, 63: 0.0, 64: 1.0, 65: 1.0, 66: 1.0, 67: 1.0, 68: 0.0, 69: 1.0, 70: 1.0, 71: 1.0, 72: 1.0, 73: 1.0, 74: 1.0, 75: 1.0, 76: 1.0, 77: 1.0, 78: 0.0, 79: 0.0, 80: 1.0, 81: 1.0, 82: 1.0, 83: 1.0, 84: 1.0, 85: 1.0, 86: 1.0, 87: 1.0, 88: 1.0, 89: 1.0, 90: 1.0, 91: 1.0, 92: 1.0, 93: 1.0, 94: 1.0, 95: 1.0, 96: 0.0, 97: 1.0, 98: 1.0, 99: 1.0}
+Iteration 8: New valset pareto front scores: {0: 1.0, 1: 1.0, 2: 1.0, 3: 1.0, 4: 1.0, 5: 0.0, 6: 1.0, 7: 1.0, 8: 1.0, 9: 1.0, 10: 1.0, 11: 1.0, 12: 1.0, 13: 1.0, 14: 1.0, 15: 1.0, 16: 1.0, 17: 1.0, 18: 1.0, 19: 1.0, 20: 1.0, 21: 1.0, 22: 1.0, 23: 1.0, 24: 1.0, 25: 0.0, 26: 1.0, 27: 1.0, 28: 1.0, 29: 1.0, 30: 1.0, 31: 1.0, 32: 1.0, 33: 0.0, 34: 1.0, 35: 1.0, 36: 0.0, 37: 1.0, 38: 1.0, 39: 1.0, 40: 1.0, 41: 1.0, 42: 1.0, 43: 1.0, 44: 1.0, 45: 1.0, 46: 1.0, 47: 1.0, 48: 1.0, 49: 1.0, 50: 1.0, 51: 0.0, 52: 1.0, 53: 1.0, 54: 1.0, 55: 1.0, 56: 1.0, 57: 1.0, 58: 1.0, 59: 1.0, 60: 1.0, 61: 0.0, 62: 1.0, 63: 0.0, 64: 1.0, 65: 1.0, 66: 1.0, 67: 1.0, 68: 0.0, 69: 1.0, 70: 1.0, 71: 1.0, 72: 1.0, 73: 1.0, 74: 1.0, 75: 1.0, 76: 1.0, 77: 1.0, 78: 0.0, 79: 0.0, 80: 1.0, 81: 1.0, 82: 1.0, 83: 1.0, 84: 1.0, 85: 1.0, 86: 1.0, 87: 1.0, 88: 1.0, 89: 1.0, 90: 1.0, 91: 1.0, 92: 1.0, 93: 1.0, 94: 1.0, 95: 1.0, 96: 0.0, 97: 1.0, 98: 1.0, 99: 1.0}
+Iteration 8: Valset pareto front aggregate score: 0.89
+Iteration 8: Updated valset pareto front programs: {0: {0, 1, 2, 3, 4}, 1: {1, 3}, 2: {0, 1, 2, 3, 4}, 3: {0, 1, 2, 3, 4}, 4: {0, 1, 2, 3, 4}, 5: {0, 1, 2, 3, 4}, 6: {1, 2, 3, 4}, 7: {0, 3}, 8: {1, 2, 3, 4}, 9: {1, 2, 3, 4}, 10: {0, 1, 2, 3, 4}, 11: {0, 1, 2, 3, 4}, 12: {0, 1, 2, 3, 4}, 13: {0, 1, 2, 3, 4}, 14: {0, 1, 2, 3, 4}, 15: {0, 1, 2, 3, 4}, 16: {0, 1, 2, 3, 4}, 17: {0, 1, 2, 3, 4}, 18: {0, 1, 2, 3, 4}, 19: {0, 1, 2, 3, 4}, 20: {0, 1, 2, 3, 4}, 21: {1, 2, 3, 4}, 22: {0, 1, 3}, 23: {1, 2, 3, 4}, 24: {0, 1, 2, 3, 4}, 25: {0, 1, 2, 3, 4}, 26: {0, 1, 2, 3, 4}, 27: {0, 1, 2, 3, 4}, 28: {0, 1, 2, 3, 4}, 29: {0, 1, 2, 3, 4}, 30: {2, 3, 4}, 31: {0, 1, 2, 3, 4}, 32: {0, 1, 2, 3, 4}, 33: {0, 1, 2, 3, 4}, 34: {0, 1, 2, 3, 4}, 35: {4}, 36: {0, 1, 2, 3, 4}, 37: {0, 1, 2, 3, 4}, 38: {4}, 39: {2, 3, 4}, 40: {0, 1, 2, 3, 4}, 41: {0, 1, 2, 3, 4}, 42: {0, 1, 2, 3, 4}, 43: {1, 2, 3, 4}, 44: {0, 1, 2, 3, 4}, 45: {0, 1, 2, 3, 4}, 46: {0, 2}, 47: {0, 1, 2, 3, 4}, 48: {0, 1, 2, 3, 4}, 49: {0, 1, 2, 3, 4}, 50: {0, 1, 3, 4}, 51: {0, 1, 2, 3, 4}, 52: {0, 2, 3, 4}, 53: {0, 1, 2, 3, 4}, 54: {0, 1, 2, 3, 4}, 55: {0, 1, 2, 3, 4}, 56: {3}, 57: {0, 1, 2, 3, 4}, 58: {0, 1, 2, 3, 4}, 59: {0, 1, 2, 3, 4}, 60: {1, 2, 3, 4}, 61: {0, 1, 2, 3, 4}, 62: {0, 1, 2, 3, 4}, 63: {0, 1, 2, 3, 4}, 64: {4}, 65: {0, 1, 2, 3, 4}, 66: {0, 1, 2, 3, 4}, 67: {0, 1, 2, 3, 4}, 68: {0, 1, 2, 3, 4}, 69: {0, 1, 2, 3, 4}, 70: {0, 1, 2, 3, 4}, 71: {0, 1, 2, 3, 4}, 72: {0, 1, 2, 3, 4}, 73: {0, 1, 2, 3, 4}, 74: {0, 1, 2, 3, 4}, 75: {4}, 76: {0, 1, 2, 3, 4}, 77: {0, 1, 2, 3, 4}, 78: {0, 1, 2, 3, 4}, 79: {0, 1, 2, 3, 4}, 80: {0, 1, 2, 3, 4}, 81: {0, 1, 2, 3, 4}, 82: {0, 1, 2, 3, 4}, 83: {0, 1, 2, 3, 4}, 84: {1, 2, 3, 4}, 85: {0, 2, 4}, 86: {1, 2, 3, 4}, 87: {1, 2, 3, 4}, 88: {0, 2, 3, 4}, 89: {3, 4}, 90: {0, 1, 2, 3, 4}, 91: {0, 1, 2, 3, 4}, 92: {1, 2, 3, 4}, 93: {0, 1, 2, 3, 4}, 94: {0, 1, 2, 3, 4}, 95: {0, 1, 2, 3, 4}, 96: {0, 1, 2, 3, 4}, 97: {3, 4}, 98: {1, 2, 4}, 99: {0, 1, 2, 3, 4}}
+Iteration 8: Best valset aggregate score so far: 0.84
+Iteration 8: Best program as per aggregate score on valset: 4
+Iteration 8: Best score on valset: 0.84
+Iteration 8: Linear pareto front program index: 4
+Iteration 8: New program candidate index: 4
+Iteration 9: Selected program 4 score: 0.84
+Iteration 9: All subsample scores perfect. Skipping.
+Iteration 9: Reflective mutation did not propose a new candidate
+Iteration 10: Selected program 3 score: 0.82
+Iteration 10: Proposed new text for instruction: Classify the given text into one of these categories: abbreviation, description, entity, human, location, numeric.
+
+Category Definitions:
+- **abbreviation**: Questions asking what an acronym or abbreviation stands for
+- **entity**: Questions asking for specific named things, objects, items, lists of concrete entities, physical things/substances/forces that cause or do something, OR questions asking about categories, types, or groups (including genders, species, models, brands, etc.)
+- **description**: Questions asking for definitions, explanations, reasons, or descriptions of how/why something works or what something means
+- **human**: Questions about specific named people or asking for the names of specific individuals
+- **location**: Questions about places, geographical locations, or where something is located (including cities, towns, states, countries, regions)
+- **numeric**: Questions asking for numbers, quantities, dates, or measurements
+
+Key Classification Rules:
+
+1. **Entity vs Description Distinction**: 
+   - If the question asks "What [items/things/products/types/categories] have/contain/include X?" → classify as **entity** (asking for a list of specific things)
+   - If the question asks "What is X?" or "What does X mean?" → classify as **description** (asking for an explanation)
+   - If the question asks "What keeps/causes/makes/does X?" → classify as **entity** (asking for a specific physical thing, substance, or force)
+   - If the question asks "Which [category/type/gender/species/model]..." → classify as **entity** (asking for which member(s) of a category)
+   - Example: "What ice creams contain seaweed?" is asking for specific ice cream products/brands, so it's **entity**, NOT description
+   - Example: "What keeps clouds in the air?" is asking for the specific physical force or substance, so it's **entity**, NOT description
+   - Example: "Which gender has bigger thighs?" is asking which category/type (male or female), so it's **entity**, NOT description
+
+2. **Location vs Human Distinction**:
+   - If the question asks about a place, city, town, state, country, or geographical location → classify as **location**
+   - If the question asks for a specific person's name or information about a named individual → classify as **human**
+   - Example: "What Georgia town did Scarlett O'Hara condemn?" is asking for a town/place, so it's **location**, NOT human (even though a person is mentioned in the question)
+   - The mere mention of a person in the question does NOT make it a human question; focus on what the question is asking FOR
+
+3. **Question Word Analysis**:
+   - "What [noun] [verb]..." where noun is a concrete object type → likely **entity**
+   - "What [verb] [noun]..." where asking about a causal agent or physical thing → likely **entity**
+   - "Which [category/type/gender/model]..." → **entity** (asking for which member of a category)
+   - "What is/are..." when followed by a definition request → likely **description**
+   - "What keeps/causes/makes/holds/does..." → likely **entity** (asking for a causal agent or mechanism)
+   - "Who..." → **human**
+   - "Where..." or asking for a place/town/city → **location**
+   - "How many/much..." or "When..." → **numeric**
+
+4. **Primary Intent**: Focus on what the question is fundamentally requesting:
+   - A list of specific things/items or which category/type → **entity**
+   - A specific causal agent, substance, force, or mechanism → **entity**
+   - An explanation or definition → **description**
+   - Information about a specific named person → **human**
+   - A place, town, city, or location → **location**
+   - A number or quantity → **numeric**
+
+5. **Comparative and Category Questions**: When a question asks "which" followed by a category (gender, type, model, species, brand, etc.), it's asking for a specific member or subset of that category, making it an **entity** question.
+
+6. **Context vs Target**: Don't be distracted by context mentioned in the question. Focus on what the question is asking for:
+   - If a person is mentioned but the question asks for a place → **location**
+   - If a place is mentioned but the question asks for a person → **human**
+   - The answer type determines the classification, not the supporting details in the question
+
+Apply these rules systematically, with special attention to:
+- Distinguishing between requests for lists of concrete entities versus requests for explanatory information
+- Recognizing that causal "what" questions typically seek specific entities as answers
+- Identifying location questions even when people are mentioned in the context
+- Recognizing "which [category]" questions as entity questions
+Iteration 10: New subsample score 3.0 is better than old score 1.0. Continue to full eval and add to candidate pool.
+Iteration 10: Valset score for new program: 0.79 (coverage 100 / 100)
+Iteration 10: Val aggregate for new program: 0.79
+Iteration 10: Individual valset scores for new program: {0: 1.0, 1: 0.0, 2: 1.0, 3: 1.0, 4: 1.0, 5: 0.0, 6: 1.0, 7: 0.0, 8: 1.0, 9: 1.0, 10: 1.0, 11: 1.0, 12: 1.0, 13: 1.0, 14: 1.0, 15: 1.0, 16: 1.0, 17: 1.0, 18: 1.0, 19: 1.0, 20: 1.0, 21: 1.0, 22: 1.0, 23: 1.0, 24: 1.0, 25: 0.0, 26: 1.0, 27: 1.0, 28: 1.0, 29: 1.0, 30: 0.0, 31: 1.0, 32: 1.0, 33: 0.0, 34: 1.0, 35: 0.0, 36: 0.0, 37: 1.0, 38: 0.0, 39: 1.0, 40: 1.0, 41: 1.0, 42: 1.0, 43: 0.0, 44: 1.0, 45: 1.0, 46: 1.0, 47: 1.0, 48: 1.0, 49: 1.0, 50: 1.0, 51: 1.0, 52: 1.0, 53: 1.0, 54: 1.0, 55: 1.0, 56: 0.0, 57: 1.0, 58: 1.0, 59: 1.0, 60: 1.0, 61: 0.0, 62: 1.0, 63: 0.0, 64: 0.0, 65: 1.0, 66: 1.0, 67: 0.0, 68: 0.0, 69: 1.0, 70: 1.0, 71: 1.0, 72: 1.0, 73: 1.0, 74: 1.0, 75: 1.0, 76: 1.0, 77: 1.0, 78: 1.0, 79: 0.0, 80: 1.0, 81: 1.0, 82: 1.0, 83: 1.0, 84: 1.0, 85: 0.0, 86: 1.0, 87: 0.0, 88: 1.0, 89: 1.0, 90: 1.0, 91: 1.0, 92: 1.0, 93: 1.0, 94: 1.0, 95: 1.0, 96: 0.0, 97: 1.0, 98: 0.0, 99: 1.0}
+Iteration 10: New valset pareto front scores: {0: 1.0, 1: 1.0, 2: 1.0, 3: 1.0, 4: 1.0, 5: 0.0, 6: 1.0, 7: 1.0, 8: 1.0, 9: 1.0, 10: 1.0, 11: 1.0, 12: 1.0, 13: 1.0, 14: 1.0, 15: 1.0, 16: 1.0, 17: 1.0, 18: 1.0, 19: 1.0, 20: 1.0, 21: 1.0, 22: 1.0, 23: 1.0, 24: 1.0, 25: 0.0, 26: 1.0, 27: 1.0, 28: 1.0, 29: 1.0, 30: 1.0, 31: 1.0, 32: 1.0, 33: 0.0, 34: 1.0, 35: 1.0, 36: 0.0, 37: 1.0, 38: 1.0, 39: 1.0, 40: 1.0, 41: 1.0, 42: 1.0, 43: 1.0, 44: 1.0, 45: 1.0, 46: 1.0, 47: 1.0, 48: 1.0, 49: 1.0, 50: 1.0, 51: 1.0, 52: 1.0, 53: 1.0, 54: 1.0, 55: 1.0, 56: 1.0, 57: 1.0, 58: 1.0, 59: 1.0, 60: 1.0, 61: 0.0, 62: 1.0, 63: 0.0, 64: 1.0, 65: 1.0, 66: 1.0, 67: 1.0, 68: 0.0, 69: 1.0, 70: 1.0, 71: 1.0, 72: 1.0, 73: 1.0, 74: 1.0, 75: 1.0, 76: 1.0, 77: 1.0, 78: 1.0, 79: 0.0, 80: 1.0, 81: 1.0, 82: 1.0, 83: 1.0, 84: 1.0, 85: 1.0, 86: 1.0, 87: 1.0, 88: 1.0, 89: 1.0, 90: 1.0, 91: 1.0, 92: 1.0, 93: 1.0, 94: 1.0, 95: 1.0, 96: 0.0, 97: 1.0, 98: 1.0, 99: 1.0}
+Iteration 10: Valset pareto front aggregate score: 0.91
+Iteration 10: Updated valset pareto front programs: {0: {0, 1, 2, 3, 4, 5}, 1: {1, 3}, 2: {0, 1, 2, 3, 4, 5}, 3: {0, 1, 2, 3, 4, 5}, 4: {0, 1, 2, 3, 4, 5}, 5: {0, 1, 2, 3, 4, 5}, 6: {1, 2, 3, 4, 5}, 7: {0, 3}, 8: {1, 2, 3, 4, 5}, 9: {1, 2, 3, 4, 5}, 10: {0, 1, 2, 3, 4, 5}, 11: {0, 1, 2, 3, 4, 5}, 12: {0, 1, 2, 3, 4, 5}, 13: {0, 1, 2, 3, 4, 5}, 14: {0, 1, 2, 3, 4, 5}, 15: {0, 1, 2, 3, 4, 5}, 16: {0, 1, 2, 3, 4, 5}, 17: {0, 1, 2, 3, 4, 5}, 18: {0, 1, 2, 3, 4, 5}, 19: {0, 1, 2, 3, 4, 5}, 20: {0, 1, 2, 3, 4, 5}, 21: {1, 2, 3, 4, 5}, 22: {0, 1, 3, 5}, 23: {1, 2, 3, 4, 5}, 24: {0, 1, 2, 3, 4, 5}, 25: {0, 1, 2, 3, 4, 5}, 26: {0, 1, 2, 3, 4, 5}, 27: {0, 1, 2, 3, 4, 5}, 28: {0, 1, 2, 3, 4, 5}, 29: {0, 1, 2, 3, 4, 5}, 30: {2, 3, 4}, 31: {0, 1, 2, 3, 4, 5}, 32: {0, 1, 2, 3, 4, 5}, 33: {0, 1, 2, 3, 4, 5}, 34: {0, 1, 2, 3, 4, 5}, 35: {4}, 36: {0, 1, 2, 3, 4, 5}, 37: {0, 1, 2, 3, 4, 5}, 38: {4}, 39: {2, 3, 4, 5}, 40: {0, 1, 2, 3, 4, 5}, 41: {0, 1, 2, 3, 4, 5}, 42: {0, 1, 2, 3, 4, 5}, 43: {1, 2, 3, 4}, 44: {0, 1, 2, 3, 4, 5}, 45: {0, 1, 2, 3, 4, 5}, 46: {0, 2, 5}, 47: {0, 1, 2, 3, 4, 5}, 48: {0, 1, 2, 3, 4, 5}, 49: {0, 1, 2, 3, 4, 5}, 50: {0, 1, 3, 4, 5}, 51: {5}, 52: {0, 2, 3, 4, 5}, 53: {0, 1, 2, 3, 4, 5}, 54: {0, 1, 2, 3, 4, 5}, 55: {0, 1, 2, 3, 4, 5}, 56: {3}, 57: {0, 1, 2, 3, 4, 5}, 58: {0, 1, 2, 3, 4, 5}, 59: {0, 1, 2, 3, 4, 5}, 60: {1, 2, 3, 4, 5}, 61: {0, 1, 2, 3, 4, 5}, 62: {0, 1, 2, 3, 4, 5}, 63: {0, 1, 2, 3, 4, 5}, 64: {4}, 65: {0, 1, 2, 3, 4, 5}, 66: {0, 1, 2, 3, 4, 5}, 67: {0, 1, 2, 3, 4}, 68: {0, 1, 2, 3, 4, 5}, 69: {0, 1, 2, 3, 4, 5}, 70: {0, 1, 2, 3, 4, 5}, 71: {0, 1, 2, 3, 4, 5}, 72: {0, 1, 2, 3, 4, 5}, 73: {0, 1, 2, 3, 4, 5}, 74: {0, 1, 2, 3, 4, 5}, 75: {4, 5}, 76: {0, 1, 2, 3, 4, 5}, 77: {0, 1, 2, 3, 4, 5}, 78: {5}, 79: {0, 1, 2, 3, 4, 5}, 80: {0, 1, 2, 3, 4, 5}, 81: {0, 1, 2, 3, 4, 5}, 82: {0, 1, 2, 3, 4, 5}, 83: {0, 1, 2, 3, 4, 5}, 84: {1, 2, 3, 4, 5}, 85: {0, 2, 4}, 86: {1, 2, 3, 4, 5}, 87: {1, 2, 3, 4}, 88: {0, 2, 3, 4, 5}, 89: {3, 4, 5}, 90: {0, 1, 2, 3, 4, 5}, 91: {0, 1, 2, 3, 4, 5}, 92: {1, 2, 3, 4, 5}, 93: {0, 1, 2, 3, 4, 5}, 94: {0, 1, 2, 3, 4, 5}, 95: {0, 1, 2, 3, 4, 5}, 96: {0, 1, 2, 3, 4, 5}, 97: {3, 4, 5}, 98: {1, 2, 4}, 99: {0, 1, 2, 3, 4, 5}}
+Iteration 10: Best valset aggregate score so far: 0.84
+Iteration 10: Best program as per aggregate score on valset: 4
+Iteration 10: Best score on valset: 0.84
+Iteration 10: Linear pareto front program index: 4
+Iteration 10: New program candidate index: 5
+Iteration 11: Selected program 3 score: 0.82
+Iteration 11: All subsample scores perfect. Skipping.
+Iteration 11: Reflective mutation did not propose a new candidate
+Iteration 12: Selected program 5 score: 0.79
+Iteration 12: Proposed new text for instruction: Classify the given text into one of these categories: abbreviation, description, entity, human, location, numeric.
+
+Category Definitions:
+- **abbreviation**: Questions asking what an acronym or abbreviation stands for
+- **entity**: Questions asking for specific named things, objects, items, lists of concrete entities, physical things/substances/forces that cause or do something, OR questions asking about categories, types, or groups (including genders, species, models, brands, etc.)
+- **description**: Questions asking for definitions, explanations, reasons, or descriptions of how/why something works or what something means
+- **human**: Questions about specific named people or asking for the names of specific individuals
+- **location**: Questions about places, geographical locations, or where something is located (including cities, towns, states, countries, regions)
+- **numeric**: Questions asking for numbers, quantities, dates, or measurements
+
+Key Classification Rules:
+
+1. **Entity vs Description Distinction**: 
+   - If the question asks "What [items/things/products/types/categories] have/contain/include X?" → classify as **entity** (asking for a list of specific things)
+   - If the question asks "What is X?" or "What does X mean?" → classify as **description** (asking for an explanation)
+   - If the question asks "What keeps/causes/makes/does X?" → classify as **entity** (asking for a specific physical thing, substance, or force)
+   - If the question asks "Which [category/type/gender/species/model]..." → classify as **entity** (asking for which member(s) of a category)
+   - Example: "What ice creams contain seaweed?" is asking for specific ice cream products/brands, so it's **entity**, NOT description
+   - Example: "What keeps clouds in the air?" is asking for the specific physical force or substance, so it's **entity**, NOT description
+   - Example: "Which gender has bigger thighs?" is asking which category/type (male or female), so it's **entity**, NOT description
+
+2. **Location vs Human Distinction**:
+   - If the question asks about a place, city, town, state, country, or geographical location → classify as **location**
+   - If the question asks for a specific person's name or information about a named individual → classify as **human**
+   - Example: "What Georgia town did Scarlett O'Hara condemn?" is asking for a town/place, so it's **location**, NOT human (even though a person is mentioned in the question)
+   - The mere mention of a person in the question does NOT make it a human question; focus on what the question is asking FOR
+
+3. **Location vs Numeric Distinction**:
+   - If the question asks "What [country/state/city/place]..." and expects a geographical location as the answer → classify as **location**
+   - If the question asks "How many countries..." or "How many places..." or for a count/quantity → classify as **numeric**
+   - Questions that ask for the NAME or IDENTITY of a country, state, city, or place are **location** questions, NOT numeric questions
+   - Example: "What European country abandoned postage stamps in 1923?" is asking for the name/identity of a country, so it's **location**, NOT numeric
+   - The presence of numbers or dates in the question (as context) does NOT make it a numeric question; focus on what type of answer is expected
+
+4. **Question Word Analysis**:
+   - "What [noun] [verb]..." where noun is a concrete object type → likely **entity**
+   - "What [verb] [noun]..." where asking about a causal agent or physical thing → likely **entity**
+   - "What [country/state/city/place]..." → **location** (asking which specific geographical location)
+   - "Which [category/type/gender/model]..." → **entity** (asking for which member of a category)
+   - "What is/are..." when followed by a definition request → likely **description**
+   - "What keeps/causes/makes/holds/does..." → likely **entity** (asking for a causal agent or mechanism)
+   - "Who..." → **human**
+   - "Where..." or asking for a place/town/city → **location**
+   - "How many/much..." or "When..." (asking for the count/quantity or date itself) → **numeric**
+
+5. **Primary Intent**: Focus on what the question is fundamentally requesting:
+   - A list of specific things/items or which category/type → **entity**
+   - A specific causal agent, substance, force, or mechanism → **entity**
+   - An explanation or definition → **description**
+   - Information about a specific named person → **human**
+   - A place, town, city, country, or location NAME/IDENTITY → **location**
+   - A number, quantity, count, or date (the actual numeric value) → **numeric**
+
+6. **Comparative and Category Questions**: When a question asks "which" followed by a category (gender, type, model, species, brand, etc.), it's asking for a specific member or subset of that category, making it an **entity** question.
+
+7. **Context vs Target**: Don't be distracted by context mentioned in the question. Focus on what the question is asking for:
+   - If a person is mentioned but the question asks for a place → **location**
+   - If a place is mentioned but the question asks for a person → **human**
+   - If numbers/dates are mentioned but the question asks for a country/city/place name → **location**
+   - If numbers/dates are mentioned but the question asks for an object/entity → **entity**
+   - The answer type determines the classification, not the supporting details in the question
+
+8. **Special Cases**:
+   - Questions like "What country..." are asking for the NAME of a country (a geographical location), so classify as **location**
+   - Questions like "How many countries..." are asking for a COUNT, so classify as **numeric**
+   - The word "country" or "state" or "city" appearing in the question does not automatically make it numeric; determine if the question wants the NAME (location) or a COUNT (numeric)
+
+Apply these rules systematically, with special attention to:
+- Distinguishing between requests for lists of concrete entities versus requests for explanatory information
+- Recognizing that causal "what" questions typically seek specific entities as answers
+- Identifying location questions even when people are mentioned in the context
+- Recognizing "which [category]" questions as entity questions
+- Distinguishing between location questions (asking for a place NAME) and numeric questions (asking for a COUNT or QUANTITY)
+- Not confusing contextual information (like dates or numbers mentioned in the question) with the type of answer being requested
+Iteration 12: New subsample score 3.0 is better than old score 2.0. Continue to full eval and add to candidate pool.
+Iteration 12: Valset score for new program: 0.8 (coverage 100 / 100)
+Iteration 12: Val aggregate for new program: 0.8
+Iteration 12: Individual valset scores for new program: {0: 1.0, 1: 1.0, 2: 1.0, 3: 1.0, 4: 1.0, 5: 0.0, 6: 1.0, 7: 0.0, 8: 1.0, 9: 1.0, 10: 1.0, 11: 1.0, 12: 1.0, 13: 1.0, 14: 1.0, 15: 1.0, 16: 1.0, 17: 1.0, 18: 1.0, 19: 1.0, 20: 1.0, 21: 1.0, 22: 1.0, 23: 1.0, 24: 1.0, 25: 0.0, 26: 1.0, 27: 1.0, 28: 1.0, 29: 1.0, 30: 1.0, 31: 1.0, 32: 1.0, 33: 0.0, 34: 1.0, 35: 0.0, 36: 0.0, 37: 1.0, 38: 0.0, 39: 1.0, 40: 1.0, 41: 1.0, 42: 1.0, 43: 1.0, 44: 1.0, 45: 1.0, 46: 0.0, 47: 1.0, 48: 1.0, 49: 1.0, 50: 1.0, 51: 1.0, 52: 1.0, 53: 1.0, 54: 1.0, 55: 1.0, 56: 0.0, 57: 1.0, 58: 1.0, 59: 1.0, 60: 1.0, 61: 0.0, 62: 1.0, 63: 0.0, 64: 0.0, 65: 1.0, 66: 1.0, 67: 0.0, 68: 0.0, 69: 1.0, 70: 1.0, 71: 1.0, 72: 1.0, 73: 1.0, 74: 1.0, 75: 1.0, 76: 1.0, 77: 1.0, 78: 1.0, 79: 0.0, 80: 1.0, 81: 1.0, 82: 1.0, 83: 1.0, 84: 1.0, 85: 0.0, 86: 1.0, 87: 0.0, 88: 1.0, 89: 1.0, 90: 1.0, 91: 1.0, 92: 0.0, 93: 1.0, 94: 1.0, 95: 1.0, 96: 0.0, 97: 1.0, 98: 0.0, 99: 1.0}
+Iteration 12: New valset pareto front scores: {0: 1.0, 1: 1.0, 2: 1.0, 3: 1.0, 4: 1.0, 5: 0.0, 6: 1.0, 7: 1.0, 8: 1.0, 9: 1.0, 10: 1.0, 11: 1.0, 12: 1.0, 13: 1.0, 14: 1.0, 15: 1.0, 16: 1.0, 17: 1.0, 18: 1.0, 19: 1.0, 20: 1.0, 21: 1.0, 22: 1.0, 23: 1.0, 24: 1.0, 25: 0.0, 26: 1.0, 27: 1.0, 28: 1.0, 29: 1.0, 30: 1.0, 31: 1.0, 32: 1.0, 33: 0.0, 34: 1.0, 35: 1.0, 36: 0.0, 37: 1.0, 38: 1.0, 39: 1.0, 40: 1.0, 41: 1.0, 42: 1.0, 43: 1.0, 44: 1.0, 45: 1.0, 46: 1.0, 47: 1.0, 48: 1.0, 49: 1.0, 50: 1.0, 51: 1.0, 52: 1.0, 53: 1.0, 54: 1.0, 55: 1.0, 56: 1.0, 57: 1.0, 58: 1.0, 59: 1.0, 60: 1.0, 61: 0.0, 62: 1.0, 63: 0.0, 64: 1.0, 65: 1.0, 66: 1.0, 67: 1.0, 68: 0.0, 69: 1.0, 70: 1.0, 71: 1.0, 72: 1.0, 73: 1.0, 74: 1.0, 75: 1.0, 76: 1.0, 77: 1.0, 78: 1.0, 79: 0.0, 80: 1.0, 81: 1.0, 82: 1.0, 83: 1.0, 84: 1.0, 85: 1.0, 86: 1.0, 87: 1.0, 88: 1.0, 89: 1.0, 90: 1.0, 91: 1.0, 92: 1.0, 93: 1.0, 94: 1.0, 95: 1.0, 96: 0.0, 97: 1.0, 98: 1.0, 99: 1.0}
+Iteration 12: Valset pareto front aggregate score: 0.91
+Iteration 12: Updated valset pareto front programs: {0: {0, 1, 2, 3, 4, 5, 6}, 1: {1, 3, 6}, 2: {0, 1, 2, 3, 4, 5, 6}, 3: {0, 1, 2, 3, 4, 5, 6}, 4: {0, 1, 2, 3, 4, 5, 6}, 5: {0, 1, 2, 3, 4, 5, 6}, 6: {1, 2, 3, 4, 5, 6}, 7: {0, 3}, 8: {1, 2, 3, 4, 5, 6}, 9: {1, 2, 3, 4, 5, 6}, 10: {0, 1, 2, 3, 4, 5, 6}, 11: {0, 1, 2, 3, 4, 5, 6}, 12: {0, 1, 2, 3, 4, 5, 6}, 13: {0, 1, 2, 3, 4, 5, 6}, 14: {0, 1, 2, 3, 4, 5, 6}, 15: {0, 1, 2, 3, 4, 5, 6}, 16: {0, 1, 2, 3, 4, 5, 6}, 17: {0, 1, 2, 3, 4, 5, 6}, 18: {0, 1, 2, 3, 4, 5, 6}, 19: {0, 1, 2, 3, 4, 5, 6}, 20: {0, 1, 2, 3, 4, 5, 6}, 21: {1, 2, 3, 4, 5, 6}, 22: {0, 1, 3, 5, 6}, 23: {1, 2, 3, 4, 5, 6}, 24: {0, 1, 2, 3, 4, 5, 6}, 25: {0, 1, 2, 3, 4, 5, 6}, 26: {0, 1, 2, 3, 4, 5, 6}, 27: {0, 1, 2, 3, 4, 5, 6}, 28: {0, 1, 2, 3, 4, 5, 6}, 29: {0, 1, 2, 3, 4, 5, 6}, 30: {2, 3, 4, 6}, 31: {0, 1, 2, 3, 4, 5, 6}, 32: {0, 1, 2, 3, 4, 5, 6}, 33: {0, 1, 2, 3, 4, 5, 6}, 34: {0, 1, 2, 3, 4, 5, 6}, 35: {4}, 36: {0, 1, 2, 3, 4, 5, 6}, 37: {0, 1, 2, 3, 4, 5, 6}, 38: {4}, 39: {2, 3, 4, 5, 6}, 40: {0, 1, 2, 3, 4, 5, 6}, 41: {0, 1, 2, 3, 4, 5, 6}, 42: {0, 1, 2, 3, 4, 5, 6}, 43: {1, 2, 3, 4, 6}, 44: {0, 1, 2, 3, 4, 5, 6}, 45: {0, 1, 2, 3, 4, 5, 6}, 46: {0, 2, 5}, 47: {0, 1, 2, 3, 4, 5, 6}, 48: {0, 1, 2, 3, 4, 5, 6}, 49: {0, 1, 2, 3, 4, 5, 6}, 50: {0, 1, 3, 4, 5, 6}, 51: {5, 6}, 52: {0, 2, 3, 4, 5, 6}, 53: {0, 1, 2, 3, 4, 5, 6}, 54: {0, 1, 2, 3, 4, 5, 6}, 55: {0, 1, 2, 3, 4, 5, 6}, 56: {3}, 57: {0, 1, 2, 3, 4, 5, 6}, 58: {0, 1, 2, 3, 4, 5, 6}, 59: {0, 1, 2, 3, 4, 5, 6}, 60: {1, 2, 3, 4, 5, 6}, 61: {0, 1, 2, 3, 4, 5, 6}, 62: {0, 1, 2, 3, 4, 5, 6}, 63: {0, 1, 2, 3, 4, 5, 6}, 64: {4}, 65: {0, 1, 2, 3, 4, 5, 6}, 66: {0, 1, 2, 3, 4, 5, 6}, 67: {0, 1, 2, 3, 4}, 68: {0, 1, 2, 3, 4, 5, 6}, 69: {0, 1, 2, 3, 4, 5, 6}, 70: {0, 1, 2, 3, 4, 5, 6}, 71: {0, 1, 2, 3, 4, 5, 6}, 72: {0, 1, 2, 3, 4, 5, 6}, 73: {0, 1, 2, 3, 4, 5, 6}, 74: {0, 1, 2, 3, 4, 5, 6}, 75: {4, 5, 6}, 76: {0, 1, 2, 3, 4, 5, 6}, 77: {0, 1, 2, 3, 4, 5, 6}, 78: {5, 6}, 79: {0, 1, 2, 3, 4, 5, 6}, 80: {0, 1, 2, 3, 4, 5, 6}, 81: {0, 1, 2, 3, 4, 5, 6}, 82: {0, 1, 2, 3, 4, 5, 6}, 83: {0, 1, 2, 3, 4, 5, 6}, 84: {1, 2, 3, 4, 5, 6}, 85: {0, 2, 4}, 86: {1, 2, 3, 4, 5, 6}, 87: {1, 2, 3, 4}, 88: {0, 2, 3, 4, 5, 6}, 89: {3, 4, 5, 6}, 90: {0, 1, 2, 3, 4, 5, 6}, 91: {0, 1, 2, 3, 4, 5, 6}, 92: {1, 2, 3, 4, 5}, 93: {0, 1, 2, 3, 4, 5, 6}, 94: {0, 1, 2, 3, 4, 5, 6}, 95: {0, 1, 2, 3, 4, 5, 6}, 96: {0, 1, 2, 3, 4, 5, 6}, 97: {3, 4, 5, 6}, 98: {1, 2, 4}, 99: {0, 1, 2, 3, 4, 5, 6}}
+Iteration 12: Best valset aggregate score so far: 0.84
+Iteration 12: Best program as per aggregate score on valset: 4
+Iteration 12: Best score on valset: 0.84
+Iteration 12: Linear pareto front program index: 4
+Iteration 12: New program candidate index: 6
+Iteration 13: Selected program 3 score: 0.82
+Iteration 13: All subsample scores perfect. Skipping.
+Iteration 13: Reflective mutation did not propose a new candidate
+Iteration 14: Selected program 5 score: 0.79
+Iteration 14: All subsample scores perfect. Skipping.
+Iteration 14: Reflective mutation did not propose a new candidate
+Iteration 15: Selected program 3 score: 0.82
+Iteration 15: Proposed new text for instruction: Classify the given text into one of these categories: abbreviation, description, entity, human, location, numeric.
+
+Category Definitions:
+- **abbreviation**: Questions asking what an acronym or abbreviation stands for
+- **description**: Questions asking for definitions, explanations, reasons, or descriptions of how/why something works or what something means
+- **entity**: Questions asking for specific named things, objects, items, lists of concrete entities (excluding people, places, and planets)
+- **human**: Questions about specific people or groups of people, INCLUDING fictional characters
+- **location**: Questions about places, geographical locations, planets, celestial bodies, or where something is located
+- **numeric**: Questions asking for numbers, quantities, dates, or measurements
+
+Key Classification Rules:
+
+1. **Human Category - Expanded Scope**:
+   - Questions asking about specific people (real or fictional) → **human**
+   - Questions asking "What person..." or "What [character/individual]..." → **human**
+   - This includes Batman characters, superheroes, fictional personas, etc.
+   - Example: "What Batman character tools around on a Batcycle?" → **human** (asking about a character/person)
+   - If the question is about who someone is or what someone does, classify as **human**
+
+2. **Location Category - Expanded Scope**:
+   - Questions about geographical locations on Earth → **location**
+   - Questions about planets, moons, stars, and other celestial bodies → **location**
+   - Questions asking "What planet..." → **location**
+   - Example: "What planet did Percival Lowell discover?" → **location** (planets are locations)
+   - Questions asking where something is located → **location**
+
+3. **Entity vs Description Distinction**: 
+   - If the question asks "What [items/things/products] have/contain/include X?" → classify as **entity** (asking for a list of specific things)
+   - If the question asks "What is X?" or "What does X mean?" → classify as **description** (asking for an explanation)
+   - If the question asks "What keeps/causes/makes/does X?" → classify as **entity** (asking for a specific physical thing, substance, or force)
+   - Example: "What ice creams contain seaweed?" is asking for specific ice cream products/brands, so it's **entity**
+   - Example: "What keeps clouds in the air?" is asking for the specific physical force or substance, so it's **entity**
+
+4. **Question Word Analysis**:
+   - "What [noun] [verb]..." where noun is a concrete object type → likely **entity** (unless it's a person/character → **human**, or planet/place → **location**)
+   - "What person/character/individual..." → **human**
+   - "What planet/country/city/place..." → **location**
+   - "What [verb] [noun]..." where asking about a causal agent or physical thing → likely **entity**
+   - "What is/are..." when followed by a definition request → likely **description**
+   - "What keeps/causes/makes/holds/does..." → likely **entity** (asking for a causal agent or mechanism)
+   - "Who..." → **human**
+   - "Where..." → **location**
+   - "How many/much..." or "When..." → **numeric**
+
+5. **Primary Intent - Priority Order**: 
+   - First check if it's about a person or character → **human**
+   - Then check if it's about a place, planet, or celestial body → **location**
+   - Then check if it's asking for a number → **numeric**
+   - Then check if it's about an abbreviation → **abbreviation**
+   - Then distinguish between **entity** (concrete things/lists) and **description** (explanations/definitions)
+
+6. **Causal Questions**: When a question asks "what" causes, keeps, makes, or does something, it's typically asking for a specific entity (thing, substance, or force) rather than an explanation, so classify as **entity** (unless the answer would be a person → **human** or place → **location**).
+
+Apply these rules systematically, with special attention to:
+- Recognizing that fictional characters are classified as **human**
+- Recognizing that planets and celestial bodies are classified as **location**
+- Distinguishing between requests for lists of concrete entities versus requests for explanatory information
+Iteration 15: New subsample score 3.0 is better than old score 1.0. Continue to full eval and add to candidate pool.
+Iteration 15: Valset score for new program: 0.75 (coverage 100 / 100)
+Iteration 15: Val aggregate for new program: 0.75
+Iteration 15: Individual valset scores for new program: {0: 1.0, 1: 1.0, 2: 1.0, 3: 1.0, 4: 1.0, 5: 0.0, 6: 0.0, 7: 0.0, 8: 1.0, 9: 1.0, 10: 1.0, 11: 1.0, 12: 1.0, 13: 1.0, 14: 1.0, 15: 1.0, 16: 1.0, 17: 1.0, 18: 1.0, 19: 1.0, 20: 1.0, 21: 1.0, 22: 1.0, 23: 1.0, 24: 1.0, 25: 0.0, 26: 1.0, 27: 1.0, 28: 1.0, 29: 1.0, 30: 1.0, 31: 1.0, 32: 1.0, 33: 0.0, 34: 1.0, 35: 0.0, 36: 0.0, 37: 1.0, 38: 0.0, 39: 1.0, 40: 1.0, 41: 1.0, 42: 1.0, 43: 1.0, 44: 1.0, 45: 1.0, 46: 0.0, 47: 1.0, 48: 1.0, 49: 1.0, 50: 1.0, 51: 0.0, 52: 0.0, 53: 1.0, 54: 1.0, 55: 1.0, 56: 0.0, 57: 1.0, 58: 1.0, 59: 1.0, 60: 1.0, 61: 0.0, 62: 1.0, 63: 0.0, 64: 0.0, 65: 1.0, 66: 1.0, 67: 1.0, 68: 0.0, 69: 1.0, 70: 0.0, 71: 1.0, 72: 1.0, 73: 1.0, 74: 1.0, 75: 1.0, 76: 1.0, 77: 1.0, 78: 0.0, 79: 0.0, 80: 0.0, 81: 1.0, 82: 1.0, 83: 1.0, 84: 1.0, 85: 0.0, 86: 1.0, 87: 1.0, 88: 0.0, 89: 0.0, 90: 1.0, 91: 1.0, 92: 1.0, 93: 1.0, 94: 1.0, 95: 1.0, 96: 0.0, 97: 1.0, 98: 0.0, 99: 1.0}
+Iteration 15: New valset pareto front scores: {0: 1.0, 1: 1.0, 2: 1.0, 3: 1.0, 4: 1.0, 5: 0.0, 6: 1.0, 7: 1.0, 8: 1.0, 9: 1.0, 10: 1.0, 11: 1.0, 12: 1.0, 13: 1.0, 14: 1.0, 15: 1.0, 16: 1.0, 17: 1.0, 18: 1.0, 19: 1.0, 20: 1.0, 21: 1.0, 22: 1.0, 23: 1.0, 24: 1.0, 25: 0.0, 26: 1.0, 27: 1.0, 28: 1.0, 29: 1.0, 30: 1.0, 31: 1.0, 32: 1.0, 33: 0.0, 34: 1.0, 35: 1.0, 36: 0.0, 37: 1.0, 38: 1.0, 39: 1.0, 40: 1.0, 41: 1.0, 42: 1.0, 43: 1.0, 44: 1.0, 45: 1.0, 46: 1.0, 47: 1.0, 48: 1.0, 49: 1.0, 50: 1.0, 51: 1.0, 52: 1.0, 53: 1.0, 54: 1.0, 55: 1.0, 56: 1.0, 57: 1.0, 58: 1.0, 59: 1.0, 60: 1.0, 61: 0.0, 62: 1.0, 63: 0.0, 64: 1.0, 65: 1.0, 66: 1.0, 67: 1.0, 68: 0.0, 69: 1.0, 70: 1.0, 71: 1.0, 72: 1.0, 73: 1.0, 74: 1.0, 75: 1.0, 76: 1.0, 77: 1.0, 78: 1.0, 79: 0.0, 80: 1.0, 81: 1.0, 82: 1.0, 83: 1.0, 84: 1.0, 85: 1.0, 86: 1.0, 87: 1.0, 88: 1.0, 89: 1.0, 90: 1.0, 91: 1.0, 92: 1.0, 93: 1.0, 94: 1.0, 95: 1.0, 96: 0.0, 97: 1.0, 98: 1.0, 99: 1.0}
+Iteration 15: Valset pareto front aggregate score: 0.91
+Iteration 15: Updated valset pareto front programs: {0: {0, 1, 2, 3, 4, 5, 6, 7}, 1: {1, 3, 6, 7}, 2: {0, 1, 2, 3, 4, 5, 6, 7}, 3: {0, 1, 2, 3, 4, 5, 6, 7}, 4: {0, 1, 2, 3, 4, 5, 6, 7}, 5: {0, 1, 2, 3, 4, 5, 6, 7}, 6: {1, 2, 3, 4, 5, 6}, 7: {0, 3}, 8: {1, 2, 3, 4, 5, 6, 7}, 9: {1, 2, 3, 4, 5, 6, 7}, 10: {0, 1, 2, 3, 4, 5, 6, 7}, 11: {0, 1, 2, 3, 4, 5, 6, 7}, 12: {0, 1, 2, 3, 4, 5, 6, 7}, 13: {0, 1, 2, 3, 4, 5, 6, 7}, 14: {0, 1, 2, 3, 4, 5, 6, 7}, 15: {0, 1, 2, 3, 4, 5, 6, 7}, 16: {0, 1, 2, 3, 4, 5, 6, 7}, 17: {0, 1, 2, 3, 4, 5, 6, 7}, 18: {0, 1, 2, 3, 4, 5, 6, 7}, 19: {0, 1, 2, 3, 4, 5, 6, 7}, 20: {0, 1, 2, 3, 4, 5, 6, 7}, 21: {1, 2, 3, 4, 5, 6, 7}, 22: {0, 1, 3, 5, 6, 7}, 23: {1, 2, 3, 4, 5, 6, 7}, 24: {0, 1, 2, 3, 4, 5, 6, 7}, 25: {0, 1, 2, 3, 4, 5, 6, 7}, 26: {0, 1, 2, 3, 4, 5, 6, 7}, 27: {0, 1, 2, 3, 4, 5, 6, 7}, 28: {0, 1, 2, 3, 4, 5, 6, 7}, 29: {0, 1, 2, 3, 4, 5, 6, 7}, 30: {2, 3, 4, 6, 7}, 31: {0, 1, 2, 3, 4, 5, 6, 7}, 32: {0, 1, 2, 3, 4, 5, 6, 7}, 33: {0, 1, 2, 3, 4, 5, 6, 7}, 34: {0, 1, 2, 3, 4, 5, 6, 7}, 35: {4}, 36: {0, 1, 2, 3, 4, 5, 6, 7}, 37: {0, 1, 2, 3, 4, 5, 6, 7}, 38: {4}, 39: {2, 3, 4, 5, 6, 7}, 40: {0, 1, 2, 3, 4, 5, 6, 7}, 41: {0, 1, 2, 3, 4, 5, 6, 7}, 42: {0, 1, 2, 3, 4, 5, 6, 7}, 43: {1, 2, 3, 4, 6, 7}, 44: {0, 1, 2, 3, 4, 5, 6, 7}, 45: {0, 1, 2, 3, 4, 5, 6, 7}, 46: {0, 2, 5}, 47: {0, 1, 2, 3, 4, 5, 6, 7}, 48: {0, 1, 2, 3, 4, 5, 6, 7}, 49: {0, 1, 2, 3, 4, 5, 6, 7}, 50: {0, 1, 3, 4, 5, 6, 7}, 51: {5, 6}, 52: {0, 2, 3, 4, 5, 6}, 53: {0, 1, 2, 3, 4, 5, 6, 7}, 54: {0, 1, 2, 3, 4, 5, 6, 7}, 55: {0, 1, 2, 3, 4, 5, 6, 7}, 56: {3}, 57: {0, 1, 2, 3, 4, 5, 6, 7}, 58: {0, 1, 2, 3, 4, 5, 6, 7}, 59: {0, 1, 2, 3, 4, 5, 6, 7}, 60: {1, 2, 3, 4, 5, 6, 7}, 61: {0, 1, 2, 3, 4, 5, 6, 7}, 62: {0, 1, 2, 3, 4, 5, 6, 7}, 63: {0, 1, 2, 3, 4, 5, 6, 7}, 64: {4}, 65: {0, 1, 2, 3, 4, 5, 6, 7}, 66: {0, 1, 2, 3, 4, 5, 6, 7}, 67: {0, 1, 2, 3, 4, 7}, 68: {0, 1, 2, 3, 4, 5, 6, 7}, 69: {0, 1, 2, 3, 4, 5, 6, 7}, 70: {0, 1, 2, 3, 4, 5, 6}, 71: {0, 1, 2, 3, 4, 5, 6, 7}, 72: {0, 1, 2, 3, 4, 5, 6, 7}, 73: {0, 1, 2, 3, 4, 5, 6, 7}, 74: {0, 1, 2, 3, 4, 5, 6, 7}, 75: {4, 5, 6, 7}, 76: {0, 1, 2, 3, 4, 5, 6, 7}, 77: {0, 1, 2, 3, 4, 5, 6, 7}, 78: {5, 6}, 79: {0, 1, 2, 3, 4, 5, 6, 7}, 80: {0, 1, 2, 3, 4, 5, 6}, 81: {0, 1, 2, 3, 4, 5, 6, 7}, 82: {0, 1, 2, 3, 4, 5, 6, 7}, 83: {0, 1, 2, 3, 4, 5, 6, 7}, 84: {1, 2, 3, 4, 5, 6, 7}, 85: {0, 2, 4}, 86: {1, 2, 3, 4, 5, 6, 7}, 87: {1, 2, 3, 4, 7}, 88: {0, 2, 3, 4, 5, 6}, 89: {3, 4, 5, 6}, 90: {0, 1, 2, 3, 4, 5, 6, 7}, 91: {0, 1, 2, 3, 4, 5, 6, 7}, 92: {1, 2, 3, 4, 5, 7}, 93: {0, 1, 2, 3, 4, 5, 6, 7}, 94: {0, 1, 2, 3, 4, 5, 6, 7}, 95: {0, 1, 2, 3, 4, 5, 6, 7}, 96: {0, 1, 2, 3, 4, 5, 6, 7}, 97: {3, 4, 5, 6, 7}, 98: {1, 2, 4}, 99: {0, 1, 2, 3, 4, 5, 6, 7}}
+Iteration 15: Best valset aggregate score so far: 0.84
+Iteration 15: Best program as per aggregate score on valset: 4
+Iteration 15: Best score on valset: 0.84
+Iteration 15: Linear pareto front program index: 4
+Iteration 15: New program candidate index: 7
+[done] d_trec_f2_s42.json: 0.893 ($1.25)
+Iteration 0: Base program full valset score: 0.67 over 100 / 100 examples
+Iteration 1: Selected program 0 score: 0.67
+Iteration 1: All subsample scores perfect. Skipping.
+Iteration 1: Reflective mutation did not propose a new candidate
+Iteration 2: Selected program 0 score: 0.67
+Iteration 2: Proposed new text for instruction: Classify the given text into one of these categories: abbreviation, description, entity, human, location, numeric.
+
+## Category Definitions and Classification Rules:
+
+**abbreviation**: Questions asking what an abbreviation or acronym stands for.
+
+**description**: Questions asking for explanations, definitions, reasons, or descriptions of how/why something works or what something means.
+
+**entity**: Questions asking about specific named things, objects, concepts, properties, colors, or other non-human, non-location entities. This includes:
+- Specific named objects or items (e.g., Monopoly properties, colors)
+- Abstract concepts or categories
+- Organizations, groups, or collective entities
+- Things that have proper names or specific identities
+
+**human**: Questions asking about specific people, individuals, or human beings by name or role.
+
+**location**: Questions asking about geographic places, countries, cities, regions, or spatial locations. When a question asks for countries or places (even if they contain entities like governments), classify as 'location' if the answer requires naming geographic locations.
+
+**numeric**: Questions asking for quantities, numbers, dates, measurements, or numerical values as the primary answer.
+
+## Key Decision Rules:
+
+1. **Location vs Entity for Countries**: When the question explicitly asks for countries or geographic places (e.g., "What two European countries..."), classify as 'location', not 'entity', even though countries are technically entities.
+
+2. **Entity vs Numeric for "What" Questions**: When a question asks "What [thing]..." and expects a named object, concept, or category as the answer (e.g., "What color..."), classify as 'entity', not 'numeric', even if the question contains numerical words like "most often."
+
+3. **Primary Answer Type**: Focus on what type of answer the question is seeking, not on secondary elements in the question. For example:
+   - "What color..." seeks an entity (the color/property name)
+   - "How many..." seeks a numeric value
+   - "Which country..." seeks a location
+
+4. Apply all the general guidance principles provided, paying attention to the primary framing and context of the question.
+Iteration 2: New subsample score 3.0 is better than old score 1.0. Continue to full eval and add to candidate pool.
+Iteration 2: Found a better program on the valset with score 0.81.
+Iteration 2: Valset score for new program: 0.81 (coverage 100 / 100)
+Iteration 2: Val aggregate for new program: 0.81
+Iteration 2: Individual valset scores for new program: {0: 1.0, 1: 1.0, 2: 1.0, 3: 1.0, 4: 1.0, 5: 0.0, 6: 1.0, 7: 1.0, 8: 1.0, 9: 1.0, 10: 1.0, 11: 1.0, 12: 1.0, 13: 1.0, 14: 1.0, 15: 1.0, 16: 1.0, 17: 1.0, 18: 1.0, 19: 1.0, 20: 1.0, 21: 1.0, 22: 0.0, 23: 1.0, 24: 1.0, 25: 0.0, 26: 1.0, 27: 1.0, 28: 1.0, 29: 1.0, 30: 1.0, 31: 1.0, 32: 1.0, 33: 0.0, 34: 1.0, 35: 0.0, 36: 0.0, 37: 1.0, 38: 0.0, 39: 1.0, 40: 1.0, 41: 1.0, 42: 1.0, 43: 0.0, 44: 1.0, 45: 1.0, 46: 1.0, 47: 1.0, 48: 1.0, 49: 1.0, 50: 1.0, 51: 0.0, 52: 1.0, 53: 1.0, 54: 1.0, 55: 1.0, 56: 0.0, 57: 1.0, 58: 1.0, 59: 1.0, 60: 1.0, 61: 0.0, 62: 1.0, 63: 0.0, 64: 0.0, 65: 1.0, 66: 1.0, 67: 0.0, 68: 0.0, 69: 1.0, 70: 1.0, 71: 1.0, 72: 1.0, 73: 1.0, 74: 1.0, 75: 1.0, 76: 1.0, 77: 1.0, 78: 1.0, 79: 0.0, 80: 1.0, 81: 1.0, 82: 1.0, 83: 1.0, 84: 1.0, 85: 1.0, 86: 1.0, 87: 1.0, 88: 1.0, 89: 1.0, 90: 1.0, 91: 1.0, 92: 0.0, 93: 1.0, 94: 1.0, 95: 1.0, 96: 0.0, 97: 1.0, 98: 0.0, 99: 1.0}
+Iteration 2: New valset pareto front scores: {0: 1.0, 1: 1.0, 2: 1.0, 3: 1.0, 4: 1.0, 5: 0.0, 6: 1.0, 7: 1.0, 8: 1.0, 9: 1.0, 10: 1.0, 11: 1.0, 12: 1.0, 13: 1.0, 14: 1.0, 15: 1.0, 16: 1.0, 17: 1.0, 18: 1.0, 19: 1.0, 20: 1.0, 21: 1.0, 22: 1.0, 23: 1.0, 24: 1.0, 25: 0.0, 26: 1.0, 27: 1.0, 28: 1.0, 29: 1.0, 30: 1.0, 31: 1.0, 32: 1.0, 33: 0.0, 34: 1.0, 35: 0.0, 36: 0.0, 37: 1.0, 38: 0.0, 39: 1.0, 40: 1.0, 41: 1.0, 42: 1.0, 43: 0.0, 44: 1.0, 45: 1.0, 46: 1.0, 47: 1.0, 48: 1.0, 49: 1.0, 50: 1.0, 51: 0.0, 52: 1.0, 53: 1.0, 54: 1.0, 55: 1.0, 56: 0.0, 57: 1.0, 58: 1.0, 59: 1.0, 60: 1.0, 61: 0.0, 62: 1.0, 63: 0.0, 64: 0.0, 65: 1.0, 66: 1.0, 67: 1.0, 68: 0.0, 69: 1.0, 70: 1.0, 71: 1.0, 72: 1.0, 73: 1.0, 74: 1.0, 75: 1.0, 76: 1.0, 77: 1.0, 78: 1.0, 79: 0.0, 80: 1.0, 81: 1.0, 82: 1.0, 83: 1.0, 84: 1.0, 85: 1.0, 86: 1.0, 87: 1.0, 88: 1.0, 89: 1.0, 90: 1.0, 91: 1.0, 92: 0.0, 93: 1.0, 94: 1.0, 95: 1.0, 96: 0.0, 97: 1.0, 98: 0.0, 99: 1.0}
+Iteration 2: Valset pareto front aggregate score: 0.83
+Iteration 2: Updated valset pareto front programs: {0: {0, 1}, 1: {1}, 2: {0, 1}, 3: {0, 1}, 4: {0, 1}, 5: {0, 1}, 6: {1}, 7: {0, 1}, 8: {1}, 9: {1}, 10: {0, 1}, 11: {0, 1}, 12: {0, 1}, 13: {0, 1}, 14: {0, 1}, 15: {0, 1}, 16: {0, 1}, 17: {0, 1}, 18: {0, 1}, 19: {0, 1}, 20: {0, 1}, 21: {1}, 22: {0}, 23: {1}, 24: {0, 1}, 25: {0, 1}, 26: {0, 1}, 27: {0, 1}, 28: {0, 1}, 29: {0, 1}, 30: {1}, 31: {0, 1}, 32: {0, 1}, 33: {0, 1}, 34: {0, 1}, 35: {0, 1}, 36: {0, 1}, 37: {0, 1}, 38: {0, 1}, 39: {1}, 40: {0, 1}, 41: {0, 1}, 42: {0, 1}, 43: {0, 1}, 44: {0, 1}, 45: {0, 1}, 46: {0, 1}, 47: {0, 1}, 48: {0, 1}, 49: {0, 1}, 50: {0, 1}, 51: {0, 1}, 52: {0, 1}, 53: {0, 1}, 54: {0, 1}, 55: {0, 1}, 56: {0, 1}, 57: {0, 1}, 58: {0, 1}, 59: {0, 1}, 60: {1}, 61: {0, 1}, 62: {0, 1}, 63: {0, 1}, 64: {0, 1}, 65: {0, 1}, 66: {0, 1}, 67: {0}, 68: {0, 1}, 69: {0, 1}, 70: {0, 1}, 71: {0, 1}, 72: {0, 1}, 73: {0, 1}, 74: {0, 1}, 75: {1}, 76: {0, 1}, 77: {0, 1}, 78: {1}, 79: {0, 1}, 80: {0, 1}, 81: {0, 1}, 82: {0, 1}, 83: {0, 1}, 84: {1}, 85: {0, 1}, 86: {1}, 87: {1}, 88: {0, 1}, 89: {1}, 90: {0, 1}, 91: {0, 1}, 92: {0, 1}, 93: {0, 1}, 94: {0, 1}, 95: {0, 1}, 96: {0, 1}, 97: {1}, 98: {0, 1}, 99: {0, 1}}
+Iteration 2: Best valset aggregate score so far: 0.81
+Iteration 2: Best program as per aggregate score on valset: 1
+Iteration 2: Best score on valset: 0.81
+Iteration 2: Linear pareto front program index: 1
+Iteration 2: New program candidate index: 1
+Iteration 3: Selected program 1 score: 0.81
+Iteration 3: Proposed new text for instruction: Classify the given text into one of these categories: abbreviation, description, entity, human, location, numeric.
+
+## Category Definitions and Classification Rules:
+
+**abbreviation**: Questions asking what an abbreviation or acronym stands for.
+
+**description**: Questions asking for explanations, definitions, reasons, or descriptions of how/why something works or what something means.
+
+**entity**: Questions asking about specific named things, objects, concepts, properties, colors, or other non-human, non-location entities. This includes:
+- Specific named objects or items (e.g., Monopoly properties, colors)
+- Abstract concepts or categories
+- Organizations, groups, or collective entities
+- Things that have proper names or specific identities
+- Events, wars, conflicts, or historical occurrences with specific names
+
+**human**: Questions asking about specific people, individuals, or human beings by name or role.
+
+**location**: Questions asking about geographic places, countries, cities, regions, or spatial locations. When a question asks for countries or places (even if they contain entities like governments), classify as 'location' if the answer requires naming geographic locations.
+
+**numeric**: Questions asking for quantities, numbers, dates, measurements, or numerical values as the primary answer. This includes questions like "How many...", "How much...", "What is the population of...", etc.
+
+## Key Decision Rules:
+
+1. **Location vs Entity for Countries**: When the question explicitly asks for countries or geographic places (e.g., "What two European countries..."), classify as 'location', not 'entity', even though countries are technically entities.
+
+2. **Entity vs Numeric for "What" Questions**: When a question asks "What [thing]..." and expects a named object, concept, or category as the answer (e.g., "What color..."), classify as 'entity', not 'numeric', even if the question contains numerical words like "most often."
+
+3. **Entity vs Numeric for Superlatives**: Questions with superlatives like "longest," "largest," "biggest," "oldest" that ask "What was/is the [superlative] [thing]" are asking for the NAME of that thing (an entity), not a numeric measurement. For example:
+   - "What was the longest war in U.S. history?" → entity (seeking the name of the war, e.g., "Afghanistan War")
+   - "How long was the longest war in U.S. history?" → numeric (seeking a duration/number)
+   - "What is the tallest building?" → entity (seeking the name of the building)
+   - "How tall is the tallest building?" → numeric (seeking a height measurement)
+
+4. **Primary Answer Type**: Focus on what type of answer the question is seeking, not on secondary elements in the question. Ask yourself: "What is the expected answer format?"
+   - If the answer is a name/title/label → entity
+   - If the answer is a number/quantity/measurement → numeric
+   - If the answer is a place/location → location
+   - If the answer is a person → human
+
+5. Apply all the general guidance principles provided, paying attention to the primary framing and context of the question.
+Iteration 3: New subsample score 3.0 is better than old score 2.0. Continue to full eval and add to candidate pool.
+Iteration 3: Found a better program on the valset with score 0.82.
+Iteration 3: Valset score for new program: 0.82 (coverage 100 / 100)
+Iteration 3: Val aggregate for new program: 0.82
+Iteration 3: Individual valset scores for new program: {0: 1.0, 1: 1.0, 2: 1.0, 3: 1.0, 4: 1.0, 5: 0.0, 6: 1.0, 7: 1.0, 8: 1.0, 9: 1.0, 10: 1.0, 11: 1.0, 12: 1.0, 13: 1.0, 14: 1.0, 15: 1.0, 16: 1.0, 17: 1.0, 18: 1.0, 19: 1.0, 20: 1.0, 21: 1.0, 22: 0.0, 23: 1.0, 24: 1.0, 25: 0.0, 26: 1.0, 27: 1.0, 28: 1.0, 29: 1.0, 30: 1.0, 31: 1.0, 32: 1.0, 33: 0.0, 34: 1.0, 35: 0.0, 36: 0.0, 37: 1.0, 38: 0.0, 39: 1.0, 40: 1.0, 41: 1.0, 42: 1.0, 43: 0.0, 44: 1.0, 45: 1.0, 46: 1.0, 47: 1.0, 48: 1.0, 49: 1.0, 50: 1.0, 51: 0.0, 52: 1.0, 53: 1.0, 54: 1.0, 55: 1.0, 56: 0.0, 57: 1.0, 58: 1.0, 59: 1.0, 60: 1.0, 61: 0.0, 62: 1.0, 63: 0.0, 64: 1.0, 65: 1.0, 66: 1.0, 67: 0.0, 68: 0.0, 69: 1.0, 70: 1.0, 71: 1.0, 72: 1.0, 73: 1.0, 74: 1.0, 75: 1.0, 76: 1.0, 77: 1.0, 78: 1.0, 79: 0.0, 80: 1.0, 81: 1.0, 82: 1.0, 83: 1.0, 84: 1.0, 85: 1.0, 86: 1.0, 87: 1.0, 88: 1.0, 89: 1.0, 90: 1.0, 91: 1.0, 92: 0.0, 93: 1.0, 94: 1.0, 95: 1.0, 96: 0.0, 97: 1.0, 98: 0.0, 99: 1.0}
+Iteration 3: New valset pareto front scores: {0: 1.0, 1: 1.0, 2: 1.0, 3: 1.0, 4: 1.0, 5: 0.0, 6: 1.0, 7: 1.0, 8: 1.0, 9: 1.0, 10: 1.0, 11: 1.0, 12: 1.0, 13: 1.0, 14: 1.0, 15: 1.0, 16: 1.0, 17: 1.0, 18: 1.0, 19: 1.0, 20: 1.0, 21: 1.0, 22: 1.0, 23: 1.0, 24: 1.0, 25: 0.0, 26: 1.0, 27: 1.0, 28: 1.0, 29: 1.0, 30: 1.0, 31: 1.0, 32: 1.0, 33: 0.0, 34: 1.0, 35: 0.0, 36: 0.0, 37: 1.0, 38: 0.0, 39: 1.0, 40: 1.0, 41: 1.0, 42: 1.0, 43: 0.0, 44: 1.0, 45: 1.0, 46: 1.0, 47: 1.0, 48: 1.0, 49: 1.0, 50: 1.0, 51: 0.0, 52: 1.0, 53: 1.0, 54: 1.0, 55: 1.0, 56: 0.0, 57: 1.0, 58: 1.0, 59: 1.0, 60: 1.0, 61: 0.0, 62: 1.0, 63: 0.0, 64: 1.0, 65: 1.0, 66: 1.0, 67: 1.0, 68: 0.0, 69: 1.0, 70: 1.0, 71: 1.0, 72: 1.0, 73: 1.0, 74: 1.0, 75: 1.0, 76: 1.0, 77: 1.0, 78: 1.0, 79: 0.0, 80: 1.0, 81: 1.0, 82: 1.0, 83: 1.0, 84: 1.0, 85: 1.0, 86: 1.0, 87: 1.0, 88: 1.0, 89: 1.0, 90: 1.0, 91: 1.0, 92: 0.0, 93: 1.0, 94: 1.0, 95: 1.0, 96: 0.0, 97: 1.0, 98: 0.0, 99: 1.0}
+Iteration 3: Valset pareto front aggregate score: 0.84
+Iteration 3: Updated valset pareto front programs: {0: {0, 1, 2}, 1: {1, 2}, 2: {0, 1, 2}, 3: {0, 1, 2}, 4: {0, 1, 2}, 5: {0, 1, 2}, 6: {1, 2}, 7: {0, 1, 2}, 8: {1, 2}, 9: {1, 2}, 10: {0, 1, 2}, 11: {0, 1, 2}, 12: {0, 1, 2}, 13: {0, 1, 2}, 14: {0, 1, 2}, 15: {0, 1, 2}, 16: {0, 1, 2}, 17: {0, 1, 2}, 18: {0, 1, 2}, 19: {0, 1, 2}, 20: {0, 1, 2}, 21: {1, 2}, 22: {0}, 23: {1, 2}, 24: {0, 1, 2}, 25: {0, 1, 2}, 26: {0, 1, 2}, 27: {0, 1, 2}, 28: {0, 1, 2}, 29: {0, 1, 2}, 30: {1, 2}, 31: {0, 1, 2}, 32: {0, 1, 2}, 33: {0, 1, 2}, 34: {0, 1, 2}, 35: {0, 1, 2}, 36: {0, 1, 2}, 37: {0, 1, 2}, 38: {0, 1, 2}, 39: {1, 2}, 40: {0, 1, 2}, 41: {0, 1, 2}, 42: {0, 1, 2}, 43: {0, 1, 2}, 44: {0, 1, 2}, 45: {0, 1, 2}, 46: {0, 1, 2}, 47: {0, 1, 2}, 48: {0, 1, 2}, 49: {0, 1, 2}, 50: {0, 1, 2}, 51: {0, 1, 2}, 52: {0, 1, 2}, 53: {0, 1, 2}, 54: {0, 1, 2}, 55: {0, 1, 2}, 56: {0, 1, 2}, 57: {0, 1, 2}, 58: {0, 1, 2}, 59: {0, 1, 2}, 60: {1, 2}, 61: {0, 1, 2}, 62: {0, 1, 2}, 63: {0, 1, 2}, 64: {2}, 65: {0, 1, 2}, 66: {0, 1, 2}, 67: {0}, 68: {0, 1, 2}, 69: {0, 1, 2}, 70: {0, 1, 2}, 71: {0, 1, 2}, 72: {0, 1, 2}, 73: {0, 1, 2}, 74: {0, 1, 2}, 75: {1, 2}, 76: {0, 1, 2}, 77: {0, 1, 2}, 78: {1, 2}, 79: {0, 1, 2}, 80: {0, 1, 2}, 81: {0, 1, 2}, 82: {0, 1, 2}, 83: {0, 1, 2}, 84: {1, 2}, 85: {0, 1, 2}, 86: {1, 2}, 87: {1, 2}, 88: {0, 1, 2}, 89: {1, 2}, 90: {0, 1, 2}, 91: {0, 1, 2}, 92: {0, 1, 2}, 93: {0, 1, 2}, 94: {0, 1, 2}, 95: {0, 1, 2}, 96: {0, 1, 2}, 97: {1, 2}, 98: {0, 1, 2}, 99: {0, 1, 2}}
+Iteration 3: Best valset aggregate score so far: 0.82
+Iteration 3: Best program as per aggregate score on valset: 2
+Iteration 3: Best score on valset: 0.82
+Iteration 3: Linear pareto front program index: 2
+Iteration 3: New program candidate index: 2
+Iteration 4: Selected program 2 score: 0.82
+Iteration 4: All subsample scores perfect. Skipping.
+Iteration 4: Reflective mutation did not propose a new candidate
+Iteration 5: Selected program 2 score: 0.82
+Iteration 5: All subsample scores perfect. Skipping.
+Iteration 5: Reflective mutation did not propose a new candidate
+Iteration 6: Selected program 2 score: 0.82
+Iteration 6: All subsample scores perfect. Skipping.
+Iteration 6: Reflective mutation did not propose a new candidate
+Iteration 7: Selected program 0 score: 0.67
+Iteration 7: Proposed new text for instruction: Classify the given text into one of these categories: abbreviation, description, entity, human, location, numeric.
+
+Category Definitions:
+- abbreviation: Questions asking what an abbreviation or acronym stands for
+- description: Questions asking for explanations, definitions, reasons, or descriptions of how/why something works
+- entity: Questions asking about specific organizations, products, concepts, or general entities
+- human: Questions asking about specific people or groups of people
+- location: Questions asking about places, countries, cities, geographic areas, or asking "where" questions
+- numeric: Questions asking for quantities, counts, dates, measurements, or asking "how many/much" or "when" questions
+
+Key Classification Rules:
+
+1. LOCATION vs ENTITY distinction:
+   - When a question asks about "countries" or other geographic places (cities, states, regions), classify as LOCATION, even if it's asking about entities within those locations
+   - Example: "What countries have the best math students?" → LOCATION (asking about countries)
+   - Questions about non-geographic entities (companies, organizations, concepts) → ENTITY
+
+2. Priority hierarchy for overlapping cases:
+   - Geographic references (countries, cities, places, "where") → LOCATION
+   - Quantities, numbers, dates, "how many/much", "when" → NUMERIC
+   - Specific named people or groups of people → HUMAN
+   - Definitions, explanations, "what is", "how does", "why" → DESCRIPTION
+   - Specific organizations, products, concepts → ENTITY
+   - "What does [acronym] stand for" → ABBREVIATION
+
+3. Question word indicators:
+   - "What countries/cities/places" or "Where" → LOCATION
+   - "How many/much" or "When" → NUMERIC
+   - "Who" → HUMAN
+   - "What is/does" (seeking definition) → DESCRIPTION
+   - "What [acronym] stand for" → ABBREVIATION
+
+4. Focus on what is being asked for, not just what is mentioned:
+   - If countries/locations are the answer being sought → LOCATION
+   - If the question mentions a location but asks about something else, classify based on what's being asked
+
+Apply these rules systematically, paying special attention to the primary focus of the question.
+Iteration 7: New subsample score 3.0 is better than old score 2.0. Continue to full eval and add to candidate pool.
+Iteration 7: Valset score for new program: 0.71 (coverage 100 / 100)
+Iteration 7: Val aggregate for new program: 0.71
+Iteration 7: Individual valset scores for new program: {0: 1.0, 1: 0.0, 2: 1.0, 3: 1.0, 4: 1.0, 5: 0.0, 6: 1.0, 7: 0.0, 8: 1.0, 9: 1.0, 10: 1.0, 11: 1.0, 12: 1.0, 13: 1.0, 14: 1.0, 15: 1.0, 16: 1.0, 17: 1.0, 18: 1.0, 19: 1.0, 20: 1.0, 21: 1.0, 22: 0.0, 23: 1.0, 24: 1.0, 25: 0.0, 26: 1.0, 27: 1.0, 28: 1.0, 29: 1.0, 30: 1.0, 31: 1.0, 32: 1.0, 33: 0.0, 34: 1.0, 35: 0.0, 36: 0.0, 37: 0.0, 38: 0.0, 39: 0.0, 40: 1.0, 41: 1.0, 42: 1.0, 43: 0.0, 44: 1.0, 45: 0.0, 46: 0.0, 47: 1.0, 48: 1.0, 49: 1.0, 50: 1.0, 51: 0.0, 52: 0.0, 53: 1.0, 54: 1.0, 55: 1.0, 56: 0.0, 57: 1.0, 58: 1.0, 59: 1.0, 60: 1.0, 61: 0.0, 62: 1.0, 63: 0.0, 64: 0.0, 65: 1.0, 66: 1.0, 67: 1.0, 68: 0.0, 69: 1.0, 70: 1.0, 71: 0.0, 72: 1.0, 73: 1.0, 74: 1.0, 75: 1.0, 76: 1.0, 77: 1.0, 78: 0.0, 79: 0.0, 80: 1.0, 81: 1.0, 82: 1.0, 83: 1.0, 84: 1.0, 85: 0.0, 86: 1.0, 87: 0.0, 88: 1.0, 89: 1.0, 90: 1.0, 91: 1.0, 92: 1.0, 93: 1.0, 94: 1.0, 95: 1.0, 96: 0.0, 97: 0.0, 98: 0.0, 99: 1.0}
+Iteration 7: New valset pareto front scores: {0: 1.0, 1: 1.0, 2: 1.0, 3: 1.0, 4: 1.0, 5: 0.0, 6: 1.0, 7: 1.0, 8: 1.0, 9: 1.0, 10: 1.0, 11: 1.0, 12: 1.0, 13: 1.0, 14: 1.0, 15: 1.0, 16: 1.0, 17: 1.0, 18: 1.0, 19: 1.0, 20: 1.0, 21: 1.0, 22: 1.0, 23: 1.0, 24: 1.0, 25: 0.0, 26: 1.0, 27: 1.0, 28: 1.0, 29: 1.0, 30: 1.0, 31: 1.0, 32: 1.0, 33: 0.0, 34: 1.0, 35: 0.0, 36: 0.0, 37: 1.0, 38: 0.0, 39: 1.0, 40: 1.0, 41: 1.0, 42: 1.0, 43: 0.0, 44: 1.0, 45: 1.0, 46: 1.0, 47: 1.0, 48: 1.0, 49: 1.0, 50: 1.0, 51: 0.0, 52: 1.0, 53: 1.0, 54: 1.0, 55: 1.0, 56: 0.0, 57: 1.0, 58: 1.0, 59: 1.0, 60: 1.0, 61: 0.0, 62: 1.0, 63: 0.0, 64: 1.0, 65: 1.0, 66: 1.0, 67: 1.0, 68: 0.0, 69: 1.0, 70: 1.0, 71: 1.0, 72: 1.0, 73: 1.0, 74: 1.0, 75: 1.0, 76: 1.0, 77: 1.0, 78: 1.0, 79: 0.0, 80: 1.0, 81: 1.0, 82: 1.0, 83: 1.0, 84: 1.0, 85: 1.0, 86: 1.0, 87: 1.0, 88: 1.0, 89: 1.0, 90: 1.0, 91: 1.0, 92: 1.0, 93: 1.0, 94: 1.0, 95: 1.0, 96: 0.0, 97: 1.0, 98: 0.0, 99: 1.0}
+Iteration 7: Valset pareto front aggregate score: 0.85
+Iteration 7: Updated valset pareto front programs: {0: {0, 1, 2, 3}, 1: {1, 2}, 2: {0, 1, 2, 3}, 3: {0, 1, 2, 3}, 4: {0, 1, 2, 3}, 5: {0, 1, 2, 3}, 6: {1, 2, 3}, 7: {0, 1, 2}, 8: {1, 2, 3}, 9: {1, 2, 3}, 10: {0, 1, 2, 3}, 11: {0, 1, 2, 3}, 12: {0, 1, 2, 3}, 13: {0, 1, 2, 3}, 14: {0, 1, 2, 3}, 15: {0, 1, 2, 3}, 16: {0, 1, 2, 3}, 17: {0, 1, 2, 3}, 18: {0, 1, 2, 3}, 19: {0, 1, 2, 3}, 20: {0, 1, 2, 3}, 21: {1, 2, 3}, 22: {0}, 23: {1, 2, 3}, 24: {0, 1, 2, 3}, 25: {0, 1, 2, 3}, 26: {0, 1, 2, 3}, 27: {0, 1, 2, 3}, 28: {0, 1, 2, 3}, 29: {0, 1, 2, 3}, 30: {1, 2, 3}, 31: {0, 1, 2, 3}, 32: {0, 1, 2, 3}, 33: {0, 1, 2, 3}, 34: {0, 1, 2, 3}, 35: {0, 1, 2, 3}, 36: {0, 1, 2, 3}, 37: {0, 1, 2}, 38: {0, 1, 2, 3}, 39: {1, 2}, 40: {0, 1, 2, 3}, 41: {0, 1, 2, 3}, 42: {0, 1, 2, 3}, 43: {0, 1, 2, 3}, 44: {0, 1, 2, 3}, 45: {0, 1, 2}, 46: {0, 1, 2}, 47: {0, 1, 2, 3}, 48: {0, 1, 2, 3}, 49: {0, 1, 2, 3}, 50: {0, 1, 2, 3}, 51: {0, 1, 2, 3}, 52: {0, 1, 2}, 53: {0, 1, 2, 3}, 54: {0, 1, 2, 3}, 55: {0, 1, 2, 3}, 56: {0, 1, 2, 3}, 57: {0, 1, 2, 3}, 58: {0, 1, 2, 3}, 59: {0, 1, 2, 3}, 60: {1, 2, 3}, 61: {0, 1, 2, 3}, 62: {0, 1, 2, 3}, 63: {0, 1, 2, 3}, 64: {2}, 65: {0, 1, 2, 3}, 66: {0, 1, 2, 3}, 67: {0, 3}, 68: {0, 1, 2, 3}, 69: {0, 1, 2, 3}, 70: {0, 1, 2, 3}, 71: {0, 1, 2}, 72: {0, 1, 2, 3}, 73: {0, 1, 2, 3}, 74: {0, 1, 2, 3}, 75: {1, 2, 3}, 76: {0, 1, 2, 3}, 77: {0, 1, 2, 3}, 78: {1, 2}, 79: {0, 1, 2, 3}, 80: {0, 1, 2, 3}, 81: {0, 1, 2, 3}, 82: {0, 1, 2, 3}, 83: {0, 1, 2, 3}, 84: {1, 2, 3}, 85: {0, 1, 2}, 86: {1, 2, 3}, 87: {1, 2}, 88: {0, 1, 2, 3}, 89: {1, 2, 3}, 90: {0, 1, 2, 3}, 91: {0, 1, 2, 3}, 92: {3}, 93: {0, 1, 2, 3}, 94: {0, 1, 2, 3}, 95: {0, 1, 2, 3}, 96: {0, 1, 2, 3}, 97: {1, 2}, 98: {0, 1, 2, 3}, 99: {0, 1, 2, 3}}
+Iteration 7: Best valset aggregate score so far: 0.82
+Iteration 7: Best program as per aggregate score on valset: 2
+Iteration 7: Best score on valset: 0.82
+Iteration 7: Linear pareto front program index: 2
+Iteration 7: New program candidate index: 3
+Iteration 8: Selected program 2 score: 0.82
+Iteration 8: Proposed new text for instruction: Classify the given text into one of these categories: abbreviation, description, entity, human, location, numeric.
+
+## Category Definitions and Classification Rules:
+
+**abbreviation**: Questions asking what an abbreviation or acronym stands for.
+
+**description**: Questions asking for explanations, definitions, reasons, or descriptions of how/why something works or what something means. This typically includes questions like "How does...", "Why does...", "What causes...", or "Explain...". However, if a question asks "What is [a/an] [noun/noun phrase]?" and expects a specific name, term, or label as an answer (rather than an explanation), it should be classified as 'entity', not 'description'.
+
+**entity**: Questions asking about specific named things, objects, concepts, properties, colors, or other non-human, non-location entities. This includes:
+- Specific named objects or items (e.g., Monopoly properties, colors)
+- Abstract concepts or categories
+- Organizations, groups, or collective entities
+- Things that have proper names or specific identities
+- Events, wars, conflicts, or historical occurrences with specific names
+- Phobias, fears, and medical/psychological terms when asking for the specific name or term (e.g., "What is a fear of weakness?" expects a specific phobia name like "asthenophobia" → entity)
+- Questions in the form "What is [a/an] [concept/thing]?" when seeking a specific term or name rather than an explanation
+
+**human**: Questions asking about specific people, individuals, or human beings by name or role.
+
+**location**: Questions asking about geographic places, countries, cities, regions, or spatial locations. When a question asks for countries or places (even if they contain entities like governments), classify as 'location' if the answer requires naming geographic locations.
+
+**numeric**: Questions asking for quantities, numbers, dates, measurements, or numerical values as the primary answer. This includes questions like "How many...", "How much...", "What is the population of...", etc.
+
+## Key Decision Rules:
+
+1. **Location vs Entity for Countries**: When the question explicitly asks for countries or geographic places (e.g., "What two European countries..."), classify as 'location', not 'entity', even though countries are technically entities.
+
+2. **Entity vs Numeric for "What" Questions**: When a question asks "What [thing]..." and expects a named object, concept, or category as the answer (e.g., "What color..."), classify as 'entity', not 'numeric', even if the question contains numerical words like "most often."
+
+3. **Entity vs Numeric for Superlatives**: Questions with superlatives like "longest," "largest," "biggest," "oldest" that ask "What was/is the [superlative] [thing]" are asking for the NAME of that thing (an entity), not a numeric measurement. For example:
+   - "What was the longest war in U.S. history?" → entity (seeking the name of the war, e.g., "Afghanistan War")
+   - "How long was the longest war in U.S. history?" → numeric (seeking a duration/number)
+   - "What is the tallest building?" → entity (seeking the name of the building)
+   - "How tall is the tallest building?" → numeric (seeking a height measurement)
+
+4. **Entity vs Description for "What is" Questions**: When a question asks "What is [a/an] [noun phrase]?", determine whether it's seeking:
+   - A specific term, name, or label → entity (e.g., "What is a fear of weakness?" seeks the phobia name "asthenophobia")
+   - An explanation or definition of how something works or what it means in general terms → description (e.g., "What is photosynthesis?" when expecting a process explanation)
+   
+   The key distinction: if there's a specific technical term, proper name, or single-word/phrase answer expected, classify as 'entity'. If the question expects a sentence or paragraph explaining a concept, classify as 'description'.
+
+5. **Primary Answer Type**: Focus on what type of answer the question is seeking, not on secondary elements in the question. Ask yourself: "What is the expected answer format?"
+   - If the answer is a name/title/label/term → entity
+   - If the answer is a number/quantity/measurement → numeric
+   - If the answer is a place/location → location
+   - If the answer is a person → human
+   - If the answer is an explanation/process description → description
+
+6. Apply all the general guidance principles provided, paying attention to the primary framing and context of the question.
+Iteration 8: New subsample score 3.0 is better than old score 2.0. Continue to full eval and add to candidate pool.
+Iteration 8: Valset score for new program: 0.8 (coverage 100 / 100)
+Iteration 8: Val aggregate for new program: 0.8
+Iteration 8: Individual valset scores for new program: {0: 1.0, 1: 1.0, 2: 1.0, 3: 1.0, 4: 1.0, 5: 0.0, 6: 0.0, 7: 1.0, 8: 1.0, 9: 1.0, 10: 1.0, 11: 1.0, 12: 1.0, 13: 1.0, 14: 1.0, 15: 1.0, 16: 1.0, 17: 1.0, 18: 1.0, 19: 1.0, 20: 1.0, 21: 1.0, 22: 0.0, 23: 1.0, 24: 1.0, 25: 0.0, 26: 1.0, 27: 1.0, 28: 1.0, 29: 1.0, 30: 1.0, 31: 1.0, 32: 1.0, 33: 0.0, 34: 1.0, 35: 0.0, 36: 0.0, 37: 1.0, 38: 1.0, 39: 0.0, 40: 1.0, 41: 1.0, 42: 1.0, 43: 0.0, 44: 1.0, 45: 1.0, 46: 1.0, 47: 1.0, 48: 1.0, 49: 1.0, 50: 1.0, 51: 0.0, 52: 1.0, 53: 1.0, 54: 1.0, 55: 1.0, 56: 0.0, 57: 1.0, 58: 1.0, 59: 1.0, 60: 0.0, 61: 0.0, 62: 1.0, 63: 0.0, 64: 1.0, 65: 1.0, 66: 1.0, 67: 0.0, 68: 0.0, 69: 1.0, 70: 1.0, 71: 1.0, 72: 1.0, 73: 1.0, 74: 1.0, 75: 1.0, 76: 1.0, 77: 1.0, 78: 1.0, 79: 0.0, 80: 1.0, 81: 1.0, 82: 1.0, 83: 1.0, 84: 1.0, 85: 1.0, 86: 1.0, 87: 1.0, 88: 1.0, 89: 1.0, 90: 1.0, 91: 1.0, 92: 0.0, 93: 1.0, 94: 1.0, 95: 1.0, 96: 0.0, 97: 1.0, 98: 0.0, 99: 1.0}
+Iteration 8: New valset pareto front scores: {0: 1.0, 1: 1.0, 2: 1.0, 3: 1.0, 4: 1.0, 5: 0.0, 6: 1.0, 7: 1.0, 8: 1.0, 9: 1.0, 10: 1.0, 11: 1.0, 12: 1.0, 13: 1.0, 14: 1.0, 15: 1.0, 16: 1.0, 17: 1.0, 18: 1.0, 19: 1.0, 20: 1.0, 21: 1.0, 22: 1.0, 23: 1.0, 24: 1.0, 25: 0.0, 26: 1.0, 27: 1.0, 28: 1.0, 29: 1.0, 30: 1.0, 31: 1.0, 32: 1.0, 33: 0.0, 34: 1.0, 35: 0.0, 36: 0.0, 37: 1.0, 38: 1.0, 39: 1.0, 40: 1.0, 41: 1.0, 42: 1.0, 43: 0.0, 44: 1.0, 45: 1.0, 46: 1.0, 47: 1.0, 48: 1.0, 49: 1.0, 50: 1.0, 51: 0.0, 52: 1.0, 53: 1.0, 54: 1.0, 55: 1.0, 56: 0.0, 57: 1.0, 58: 1.0, 59: 1.0, 60: 1.0, 61: 0.0, 62: 1.0, 63: 0.0, 64: 1.0, 65: 1.0, 66: 1.0, 67: 1.0, 68: 0.0, 69: 1.0, 70: 1.0, 71: 1.0, 72: 1.0, 73: 1.0, 74: 1.0, 75: 1.0, 76: 1.0, 77: 1.0, 78: 1.0, 79: 0.0, 80: 1.0, 81: 1.0, 82: 1.0, 83: 1.0, 84: 1.0, 85: 1.0, 86: 1.0, 87: 1.0, 88: 1.0, 89: 1.0, 90: 1.0, 91: 1.0, 92: 1.0, 93: 1.0, 94: 1.0, 95: 1.0, 96: 0.0, 97: 1.0, 98: 0.0, 99: 1.0}
+Iteration 8: Valset pareto front aggregate score: 0.86
+Iteration 8: Updated valset pareto front programs: {0: {0, 1, 2, 3, 4}, 1: {1, 2, 4}, 2: {0, 1, 2, 3, 4}, 3: {0, 1, 2, 3, 4}, 4: {0, 1, 2, 3, 4}, 5: {0, 1, 2, 3, 4}, 6: {1, 2, 3}, 7: {0, 1, 2, 4}, 8: {1, 2, 3, 4}, 9: {1, 2, 3, 4}, 10: {0, 1, 2, 3, 4}, 11: {0, 1, 2, 3, 4}, 12: {0, 1, 2, 3, 4}, 13: {0, 1, 2, 3, 4}, 14: {0, 1, 2, 3, 4}, 15: {0, 1, 2, 3, 4}, 16: {0, 1, 2, 3, 4}, 17: {0, 1, 2, 3, 4}, 18: {0, 1, 2, 3, 4}, 19: {0, 1, 2, 3, 4}, 20: {0, 1, 2, 3, 4}, 21: {1, 2, 3, 4}, 22: {0}, 23: {1, 2, 3, 4}, 24: {0, 1, 2, 3, 4}, 25: {0, 1, 2, 3, 4}, 26: {0, 1, 2, 3, 4}, 27: {0, 1, 2, 3, 4}, 28: {0, 1, 2, 3, 4}, 29: {0, 1, 2, 3, 4}, 30: {1, 2, 3, 4}, 31: {0, 1, 2, 3, 4}, 32: {0, 1, 2, 3, 4}, 33: {0, 1, 2, 3, 4}, 34: {0, 1, 2, 3, 4}, 35: {0, 1, 2, 3, 4}, 36: {0, 1, 2, 3, 4}, 37: {0, 1, 2, 4}, 38: {4}, 39: {1, 2}, 40: {0, 1, 2, 3, 4}, 41: {0, 1, 2, 3, 4}, 42: {0, 1, 2, 3, 4}, 43: {0, 1, 2, 3, 4}, 44: {0, 1, 2, 3, 4}, 45: {0, 1, 2, 4}, 46: {0, 1, 2, 4}, 47: {0, 1, 2, 3, 4}, 48: {0, 1, 2, 3, 4}, 49: {0, 1, 2, 3, 4}, 50: {0, 1, 2, 3, 4}, 51: {0, 1, 2, 3, 4}, 52: {0, 1, 2, 4}, 53: {0, 1, 2, 3, 4}, 54: {0, 1, 2, 3, 4}, 55: {0, 1, 2, 3, 4}, 56: {0, 1, 2, 3, 4}, 57: {0, 1, 2, 3, 4}, 58: {0, 1, 2, 3, 4}, 59: {0, 1, 2, 3, 4}, 60: {1, 2, 3}, 61: {0, 1, 2, 3, 4}, 62: {0, 1, 2, 3, 4}, 63: {0, 1, 2, 3, 4}, 64: {2, 4}, 65: {0, 1, 2, 3, 4}, 66: {0, 1, 2, 3, 4}, 67: {0, 3}, 68: {0, 1, 2, 3, 4}, 69: {0, 1, 2, 3, 4}, 70: {0, 1, 2, 3, 4}, 71: {0, 1, 2, 4}, 72: {0, 1, 2, 3, 4}, 73: {0, 1, 2, 3, 4}, 74: {0, 1, 2, 3, 4}, 75: {1, 2, 3, 4}, 76: {0, 1, 2, 3, 4}, 77: {0, 1, 2, 3, 4}, 78: {1, 2, 4}, 79: {0, 1, 2, 3, 4}, 80: {0, 1, 2, 3, 4}, 81: {0, 1, 2, 3, 4}, 82: {0, 1, 2, 3, 4}, 83: {0, 1, 2, 3, 4}, 84: {1, 2, 3, 4}, 85: {0, 1, 2, 4}, 86: {1, 2, 3, 4}, 87: {1, 2, 4}, 88: {0, 1, 2, 3, 4}, 89: {1, 2, 3, 4}, 90: {0, 1, 2, 3, 4}, 91: {0, 1, 2, 3, 4}, 92: {3}, 93: {0, 1, 2, 3, 4}, 94: {0, 1, 2, 3, 4}, 95: {0, 1, 2, 3, 4}, 96: {0, 1, 2, 3, 4}, 97: {1, 2, 4}, 98: {0, 1, 2, 3, 4}, 99: {0, 1, 2, 3, 4}}
+Iteration 8: Best valset aggregate score so far: 0.82
+Iteration 8: Best program as per aggregate score on valset: 2
+Iteration 8: Best score on valset: 0.82
+Iteration 8: Linear pareto front program index: 2
+Iteration 8: New program candidate index: 4
+Iteration 9: Selected program 2 score: 0.82
+Iteration 9: Proposed new text for instruction: Classify the given text into one of these categories: abbreviation, description, entity, human, location, numeric.
+
+## Category Definitions and Classification Rules:
+
+**abbreviation**: Questions asking what an abbreviation or acronym stands for.
+
+**description**: Questions asking for explanations, definitions, reasons, or descriptions of how/why something works or what something means.
+
+**entity**: Questions asking about specific named things, objects, concepts, properties, colors, or other non-human, non-location entities. This includes:
+- Specific named objects or items (e.g., Monopoly properties, colors)
+- Abstract concepts or categories
+- Organizations, groups, or collective entities
+- Things that have proper names or specific identities
+- Events, wars, conflicts, or historical occurrences with specific names
+
+**human**: Questions asking about specific people, individuals, or human beings by name or role.
+
+**location**: Questions asking about geographic places, countries, cities, regions, or spatial locations. When a question asks for countries or places (even if they contain entities like governments), classify as 'location' if the answer requires naming geographic locations. This includes:
+- Planets, celestial bodies, and astronomical locations (e.g., Mars, Jupiter, the Moon)
+- Countries, states, cities, regions
+- Geographic features (mountains, rivers, etc.)
+- Any place or location that can be visited or exists in physical/astronomical space
+
+**numeric**: Questions asking for quantities, numbers, dates, measurements, or numerical values as the primary answer. This includes questions like "How many...", "How much...", "What is the population of...", etc.
+
+## Key Decision Rules:
+
+1. **Location vs Entity for Countries**: When the question explicitly asks for countries or geographic places (e.g., "What two European countries..."), classify as 'location', not 'entity', even though countries are technically entities.
+
+2. **Planets and Celestial Bodies are Locations**: Planets (e.g., Mars, Venus, Jupiter, Pluto) and other celestial bodies (the Moon, asteroids, etc.) should be classified as 'location', not 'entity'. They are astronomical locations in space. For example:
+   - "What planet did Percival Lowell discover?" → location (seeking a planet name)
+   - "What moon orbits Jupiter?" → location (seeking a celestial body)
+
+3. **Entity vs Numeric for "What" Questions**: When a question asks "What [thing]..." and expects a named object, concept, or category as the answer (e.g., "What color..."), classify as 'entity', not 'numeric', even if the question contains numerical words like "most often."
+
+4. **Entity vs Numeric for Superlatives**: Questions with superlatives like "longest," "largest," "biggest," "oldest" that ask "What was/is the [superlative] [thing]" are asking for the NAME of that thing (an entity), not a numeric measurement. For example:
+   - "What was the longest war in U.S. history?" → entity (seeking the name of the war, e.g., "Afghanistan War")
+   - "How long was the longest war in U.S. history?" → numeric (seeking a duration/number)
+   - "What is the tallest building?" → entity (seeking the name of the building)
+   - "How tall is the tallest building?" → numeric (seeking a height measurement)
+
+5. **Primary Answer Type**: Focus on what type of answer the question is seeking, not on secondary elements in the question. Ask yourself: "What is the expected answer format?"
+   - If the answer is a name/title/label → entity
+   - If the answer is a number/quantity/measurement → numeric
+   - If the answer is a place/location/planet/celestial body → location
+   - If the answer is a person → human
+
+6. Apply all the general guidance principles provided, paying attention to the primary framing and context of the question.
+Iteration 9: New subsample score 3.0 is better than old score 2.0. Continue to full eval and add to candidate pool.
+Iteration 9: Valset score for new program: 0.81 (coverage 100 / 100)
+Iteration 9: Val aggregate for new program: 0.81
+Iteration 9: Individual valset scores for new program: {0: 1.0, 1: 1.0, 2: 1.0, 3: 1.0, 4: 1.0, 5: 0.0, 6: 0.0, 7: 1.0, 8: 1.0, 9: 1.0, 10: 1.0, 11: 1.0, 12: 1.0, 13: 1.0, 14: 1.0, 15: 1.0, 16: 1.0, 17: 1.0, 18: 1.0, 19: 1.0, 20: 1.0, 21: 1.0, 22: 0.0, 23: 1.0, 24: 1.0, 25: 0.0, 26: 1.0, 27: 1.0, 28: 1.0, 29: 1.0, 30: 1.0, 31: 1.0, 32: 1.0, 33: 0.0, 34: 1.0, 35: 0.0, 36: 0.0, 37: 1.0, 38: 0.0, 39: 1.0, 40: 1.0, 41: 1.0, 42: 1.0, 43: 1.0, 44: 1.0, 45: 1.0, 46: 1.0, 47: 1.0, 48: 1.0, 49: 1.0, 50: 1.0, 51: 0.0, 52: 1.0, 53: 1.0, 54: 1.0, 55: 1.0, 56: 0.0, 57: 1.0, 58: 1.0, 59: 1.0, 60: 1.0, 61: 0.0, 62: 1.0, 63: 0.0, 64: 0.0, 65: 1.0, 66: 1.0, 67: 0.0, 68: 0.0, 69: 1.0, 70: 1.0, 71: 1.0, 72: 1.0, 73: 1.0, 74: 1.0, 75: 1.0, 76: 1.0, 77: 1.0, 78: 1.0, 79: 0.0, 80: 1.0, 81: 1.0, 82: 1.0, 83: 1.0, 84: 1.0, 85: 1.0, 86: 1.0, 87: 1.0, 88: 1.0, 89: 1.0, 90: 1.0, 91: 1.0, 92: 0.0, 93: 1.0, 94: 1.0, 95: 1.0, 96: 0.0, 97: 1.0, 98: 0.0, 99: 1.0}
+Iteration 9: New valset pareto front scores: {0: 1.0, 1: 1.0, 2: 1.0, 3: 1.0, 4: 1.0, 5: 0.0, 6: 1.0, 7: 1.0, 8: 1.0, 9: 1.0, 10: 1.0, 11: 1.0, 12: 1.0, 13: 1.0, 14: 1.0, 15: 1.0, 16: 1.0, 17: 1.0, 18: 1.0, 19: 1.0, 20: 1.0, 21: 1.0, 22: 1.0, 23: 1.0, 24: 1.0, 25: 0.0, 26: 1.0, 27: 1.0, 28: 1.0, 29: 1.0, 30: 1.0, 31: 1.0, 32: 1.0, 33: 0.0, 34: 1.0, 35: 0.0, 36: 0.0, 37: 1.0, 38: 1.0, 39: 1.0, 40: 1.0, 41: 1.0, 42: 1.0, 43: 1.0, 44: 1.0, 45: 1.0, 46: 1.0, 47: 1.0, 48: 1.0, 49: 1.0, 50: 1.0, 51: 0.0, 52: 1.0, 53: 1.0, 54: 1.0, 55: 1.0, 56: 0.0, 57: 1.0, 58: 1.0, 59: 1.0, 60: 1.0, 61: 0.0, 62: 1.0, 63: 0.0, 64: 1.0, 65: 1.0, 66: 1.0, 67: 1.0, 68: 0.0, 69: 1.0, 70: 1.0, 71: 1.0, 72: 1.0, 73: 1.0, 74: 1.0, 75: 1.0, 76: 1.0, 77: 1.0, 78: 1.0, 79: 0.0, 80: 1.0, 81: 1.0, 82: 1.0, 83: 1.0, 84: 1.0, 85: 1.0, 86: 1.0, 87: 1.0, 88: 1.0, 89: 1.0, 90: 1.0, 91: 1.0, 92: 1.0, 93: 1.0, 94: 1.0, 95: 1.0, 96: 0.0, 97: 1.0, 98: 0.0, 99: 1.0}
+Iteration 9: Valset pareto front aggregate score: 0.87
+Iteration 9: Updated valset pareto front programs: {0: {0, 1, 2, 3, 4, 5}, 1: {1, 2, 4, 5}, 2: {0, 1, 2, 3, 4, 5}, 3: {0, 1, 2, 3, 4, 5}, 4: {0, 1, 2, 3, 4, 5}, 5: {0, 1, 2, 3, 4, 5}, 6: {1, 2, 3}, 7: {0, 1, 2, 4, 5}, 8: {1, 2, 3, 4, 5}, 9: {1, 2, 3, 4, 5}, 10: {0, 1, 2, 3, 4, 5}, 11: {0, 1, 2, 3, 4, 5}, 12: {0, 1, 2, 3, 4, 5}, 13: {0, 1, 2, 3, 4, 5}, 14: {0, 1, 2, 3, 4, 5}, 15: {0, 1, 2, 3, 4, 5}, 16: {0, 1, 2, 3, 4, 5}, 17: {0, 1, 2, 3, 4, 5}, 18: {0, 1, 2, 3, 4, 5}, 19: {0, 1, 2, 3, 4, 5}, 20: {0, 1, 2, 3, 4, 5}, 21: {1, 2, 3, 4, 5}, 22: {0}, 23: {1, 2, 3, 4, 5}, 24: {0, 1, 2, 3, 4, 5}, 25: {0, 1, 2, 3, 4, 5}, 26: {0, 1, 2, 3, 4, 5}, 27: {0, 1, 2, 3, 4, 5}, 28: {0, 1, 2, 3, 4, 5}, 29: {0, 1, 2, 3, 4, 5}, 30: {1, 2, 3, 4, 5}, 31: {0, 1, 2, 3, 4, 5}, 32: {0, 1, 2, 3, 4, 5}, 33: {0, 1, 2, 3, 4, 5}, 34: {0, 1, 2, 3, 4, 5}, 35: {0, 1, 2, 3, 4, 5}, 36: {0, 1, 2, 3, 4, 5}, 37: {0, 1, 2, 4, 5}, 38: {4}, 39: {1, 2, 5}, 40: {0, 1, 2, 3, 4, 5}, 41: {0, 1, 2, 3, 4, 5}, 42: {0, 1, 2, 3, 4, 5}, 43: {5}, 44: {0, 1, 2, 3, 4, 5}, 45: {0, 1, 2, 4, 5}, 46: {0, 1, 2, 4, 5}, 47: {0, 1, 2, 3, 4, 5}, 48: {0, 1, 2, 3, 4, 5}, 49: {0, 1, 2, 3, 4, 5}, 50: {0, 1, 2, 3, 4, 5}, 51: {0, 1, 2, 3, 4, 5}, 52: {0, 1, 2, 4, 5}, 53: {0, 1, 2, 3, 4, 5}, 54: {0, 1, 2, 3, 4, 5}, 55: {0, 1, 2, 3, 4, 5}, 56: {0, 1, 2, 3, 4, 5}, 57: {0, 1, 2, 3, 4, 5}, 58: {0, 1, 2, 3, 4, 5}, 59: {0, 1, 2, 3, 4, 5}, 60: {1, 2, 3, 5}, 61: {0, 1, 2, 3, 4, 5}, 62: {0, 1, 2, 3, 4, 5}, 63: {0, 1, 2, 3, 4, 5}, 64: {2, 4}, 65: {0, 1, 2, 3, 4, 5}, 66: {0, 1, 2, 3, 4, 5}, 67: {0, 3}, 68: {0, 1, 2, 3, 4, 5}, 69: {0, 1, 2, 3, 4, 5}, 70: {0, 1, 2, 3, 4, 5}, 71: {0, 1, 2, 4, 5}, 72: {0, 1, 2, 3, 4, 5}, 73: {0, 1, 2, 3, 4, 5}, 74: {0, 1, 2, 3, 4, 5}, 75: {1, 2, 3, 4, 5}, 76: {0, 1, 2, 3, 4, 5}, 77: {0, 1, 2, 3, 4, 5}, 78: {1, 2, 4, 5}, 79: {0, 1, 2, 3, 4, 5}, 80: {0, 1, 2, 3, 4, 5}, 81: {0, 1, 2, 3, 4, 5}, 82: {0, 1, 2, 3, 4, 5}, 83: {0, 1, 2, 3, 4, 5}, 84: {1, 2, 3, 4, 5}, 85: {0, 1, 2, 4, 5}, 86: {1, 2, 3, 4, 5}, 87: {1, 2, 4, 5}, 88: {0, 1, 2, 3, 4, 5}, 89: {1, 2, 3, 4, 5}, 90: {0, 1, 2, 3, 4, 5}, 91: {0, 1, 2, 3, 4, 5}, 92: {3}, 93: {0, 1, 2, 3, 4, 5}, 94: {0, 1, 2, 3, 4, 5}, 95: {0, 1, 2, 3, 4, 5}, 96: {0, 1, 2, 3, 4, 5}, 97: {1, 2, 4, 5}, 98: {0, 1, 2, 3, 4, 5}, 99: {0, 1, 2, 3, 4, 5}}
+Iteration 9: Best valset aggregate score so far: 0.82
+Iteration 9: Best program as per aggregate score on valset: 2
+Iteration 9: Best score on valset: 0.82
+Iteration 9: Linear pareto front program index: 2
+Iteration 9: New program candidate index: 5
+Iteration 10: Selected program 3 score: 0.71
+Iteration 10: All subsample scores perfect. Skipping.
+Iteration 10: Reflective mutation did not propose a new candidate
+Iteration 11: Selected program 0 score: 0.67
+Iteration 11: Proposed new text for instruction: Classify the given text into one of these categories: abbreviation, description, entity, human, location, numeric.
+
+CRITICAL CLASSIFICATION PRINCIPLE:
+When the input is a QUESTION, classify it based on what TYPE OF ANSWER is being requested, not based on what entities are mentioned in the question itself.
+
+CATEGORY DEFINITIONS AND ANSWER-TYPE RULES:
+
+**human**: Use when the question asks for a person, people, or human role/occupation as the answer.
+- Keywords indicating human answers: "who", "what person", "which author/painter/scientist/leader", etc.
+- Example: "What pillar of the Dutch Renaissance painted Aristotle Contemplating the Bust of Homer?" → The answer is a person (Rembrandt), so classify as 'human', even though entities (Aristotle, Homer) are mentioned.
+- Includes: individuals, groups of people, professions, historical figures, artists, scientists, leaders
+
+**entity**: Use when the question asks for a non-human concrete thing, organization, concept, or abstract entity as the answer.
+- Includes: companies, products, artworks, books, organizations, animals, objects, concepts
+- NOT used when a person/human is the expected answer, even if entities are discussed
+
+**location**: Use when the question asks for a place, geographical location, or spatial position as the answer.
+- Keywords: "where", "what place", "what city/country/state"
+
+**numeric**: Use when the question asks for a number, quantity, date, time, or measurement as the answer.
+- Keywords: "how many", "how much", "when", "what year", "how long"
+
+**abbreviation**: Use when the question asks what an acronym or abbreviation stands for.
+- Keywords: "what does [acronym] stand for"
+
+**description**: Use when the question asks for an explanation, definition, process, or descriptive answer.
+- Keywords: "what is", "how does", "why", "what happens when", "explain"
+- Use when seeking clarification or explanation of concepts rather than specific entities
+
+DISAMBIGUATION RULES:
+- Mentions of famous people/entities IN the question do not determine the category - only what type of answer is expected
+- "What [profession]..." questions → classify as 'human' (the answer is a person)
+- "What [thing/concept]..." questions → classify as 'entity' or 'description' depending on whether a specific thing or explanation is sought
+- Questions about governance/policy of a subject → often 'description' rather than the subject's category
+
+Apply the guidance from experience (negations, domain prioritization, contextual disambiguation, etc.) but always prioritize the answer-type principle for questions.
+Iteration 11: New subsample score 3.0 is better than old score 2.0. Continue to full eval and add to candidate pool.
+Iteration 11: Valset score for new program: 0.79 (coverage 100 / 100)
+Iteration 11: Val aggregate for new program: 0.79
+Iteration 11: Individual valset scores for new program: {0: 1.0, 1: 1.0, 2: 1.0, 3: 1.0, 4: 1.0, 5: 0.0, 6: 1.0, 7: 1.0, 8: 1.0, 9: 0.0, 10: 1.0, 11: 1.0, 12: 1.0, 13: 1.0, 14: 1.0, 15: 1.0, 16: 1.0, 17: 1.0, 18: 1.0, 19: 1.0, 20: 1.0, 21: 1.0, 22: 1.0, 23: 1.0, 24: 1.0, 25: 1.0, 26: 1.0, 27: 1.0, 28: 1.0, 29: 1.0, 30: 1.0, 31: 1.0, 32: 1.0, 33: 0.0, 34: 1.0, 35: 0.0, 36: 0.0, 37: 1.0, 38: 0.0, 39: 0.0, 40: 1.0, 41: 1.0, 42: 1.0, 43: 1.0, 44: 1.0, 45: 1.0, 46: 0.0, 47: 1.0, 48: 1.0, 49: 1.0, 50: 1.0, 51: 0.0, 52: 0.0, 53: 1.0, 54: 1.0, 55: 1.0, 56: 0.0, 57: 1.0, 58: 1.0, 59: 1.0, 60: 1.0, 61: 0.0, 62: 1.0, 63: 0.0, 64: 0.0, 65: 1.0, 66: 1.0, 67: 1.0, 68: 0.0, 69: 1.0, 70: 1.0, 71: 1.0, 72: 1.0, 73: 1.0, 74: 1.0, 75: 0.0, 76: 1.0, 77: 1.0, 78: 0.0, 79: 0.0, 80: 1.0, 81: 1.0, 82: 1.0, 83: 1.0, 84: 1.0, 85: 0.0, 86: 1.0, 87: 1.0, 88: 1.0, 89: 1.0, 90: 1.0, 91: 1.0, 92: 1.0, 93: 1.0, 94: 1.0, 95: 1.0, 96: 0.0, 97: 1.0, 98: 0.0, 99: 1.0}
+Iteration 11: New valset pareto front scores: {0: 1.0, 1: 1.0, 2: 1.0, 3: 1.0, 4: 1.0, 5: 0.0, 6: 1.0, 7: 1.0, 8: 1.0, 9: 1.0, 10: 1.0, 11: 1.0, 12: 1.0, 13: 1.0, 14: 1.0, 15: 1.0, 16: 1.0, 17: 1.0, 18: 1.0, 19: 1.0, 20: 1.0, 21: 1.0, 22: 1.0, 23: 1.0, 24: 1.0, 25: 1.0, 26: 1.0, 27: 1.0, 28: 1.0, 29: 1.0, 30: 1.0, 31: 1.0, 32: 1.0, 33: 0.0, 34: 1.0, 35: 0.0, 36: 0.0, 37: 1.0, 38: 1.0, 39: 1.0, 40: 1.0, 41: 1.0, 42: 1.0, 43: 1.0, 44: 1.0, 45: 1.0, 46: 1.0, 47: 1.0, 48: 1.0, 49: 1.0, 50: 1.0, 51: 0.0, 52: 1.0, 53: 1.0, 54: 1.0, 55: 1.0, 56: 0.0, 57: 1.0, 58: 1.0, 59: 1.0, 60: 1.0, 61: 0.0, 62: 1.0, 63: 0.0, 64: 1.0, 65: 1.0, 66: 1.0, 67: 1.0, 68: 0.0, 69: 1.0, 70: 1.0, 71: 1.0, 72: 1.0, 73: 1.0, 74: 1.0, 75: 1.0, 76: 1.0, 77: 1.0, 78: 1.0, 79: 0.0, 80: 1.0, 81: 1.0, 82: 1.0, 83: 1.0, 84: 1.0, 85: 1.0, 86: 1.0, 87: 1.0, 88: 1.0, 89: 1.0, 90: 1.0, 91: 1.0, 92: 1.0, 93: 1.0, 94: 1.0, 95: 1.0, 96: 0.0, 97: 1.0, 98: 0.0, 99: 1.0}
+Iteration 11: Valset pareto front aggregate score: 0.88
+Iteration 11: Updated valset pareto front programs: {0: {0, 1, 2, 3, 4, 5, 6}, 1: {1, 2, 4, 5, 6}, 2: {0, 1, 2, 3, 4, 5, 6}, 3: {0, 1, 2, 3, 4, 5, 6}, 4: {0, 1, 2, 3, 4, 5, 6}, 5: {0, 1, 2, 3, 4, 5, 6}, 6: {1, 2, 3, 6}, 7: {0, 1, 2, 4, 5, 6}, 8: {1, 2, 3, 4, 5, 6}, 9: {1, 2, 3, 4, 5}, 10: {0, 1, 2, 3, 4, 5, 6}, 11: {0, 1, 2, 3, 4, 5, 6}, 12: {0, 1, 2, 3, 4, 5, 6}, 13: {0, 1, 2, 3, 4, 5, 6}, 14: {0, 1, 2, 3, 4, 5, 6}, 15: {0, 1, 2, 3, 4, 5, 6}, 16: {0, 1, 2, 3, 4, 5, 6}, 17: {0, 1, 2, 3, 4, 5, 6}, 18: {0, 1, 2, 3, 4, 5, 6}, 19: {0, 1, 2, 3, 4, 5, 6}, 20: {0, 1, 2, 3, 4, 5, 6}, 21: {1, 2, 3, 4, 5, 6}, 22: {0, 6}, 23: {1, 2, 3, 4, 5, 6}, 24: {0, 1, 2, 3, 4, 5, 6}, 25: {6}, 26: {0, 1, 2, 3, 4, 5, 6}, 27: {0, 1, 2, 3, 4, 5, 6}, 28: {0, 1, 2, 3, 4, 5, 6}, 29: {0, 1, 2, 3, 4, 5, 6}, 30: {1, 2, 3, 4, 5, 6}, 31: {0, 1, 2, 3, 4, 5, 6}, 32: {0, 1, 2, 3, 4, 5, 6}, 33: {0, 1, 2, 3, 4, 5, 6}, 34: {0, 1, 2, 3, 4, 5, 6}, 35: {0, 1, 2, 3, 4, 5, 6}, 36: {0, 1, 2, 3, 4, 5, 6}, 37: {0, 1, 2, 4, 5, 6}, 38: {4}, 39: {1, 2, 5}, 40: {0, 1, 2, 3, 4, 5, 6}, 41: {0, 1, 2, 3, 4, 5, 6}, 42: {0, 1, 2, 3, 4, 5, 6}, 43: {5, 6}, 44: {0, 1, 2, 3, 4, 5, 6}, 45: {0, 1, 2, 4, 5, 6}, 46: {0, 1, 2, 4, 5}, 47: {0, 1, 2, 3, 4, 5, 6}, 48: {0, 1, 2, 3, 4, 5, 6}, 49: {0, 1, 2, 3, 4, 5, 6}, 50: {0, 1, 2, 3, 4, 5, 6}, 51: {0, 1, 2, 3, 4, 5, 6}, 52: {0, 1, 2, 4, 5}, 53: {0, 1, 2, 3, 4, 5, 6}, 54: {0, 1, 2, 3, 4, 5, 6}, 55: {0, 1, 2, 3, 4, 5, 6}, 56: {0, 1, 2, 3, 4, 5, 6}, 57: {0, 1, 2, 3, 4, 5, 6}, 58: {0, 1, 2, 3, 4, 5, 6}, 59: {0, 1, 2, 3, 4, 5, 6}, 60: {1, 2, 3, 5, 6}, 61: {0, 1, 2, 3, 4, 5, 6}, 62: {0, 1, 2, 3, 4, 5, 6}, 63: {0, 1, 2, 3, 4, 5, 6}, 64: {2, 4}, 65: {0, 1, 2, 3, 4, 5, 6}, 66: {0, 1, 2, 3, 4, 5, 6}, 67: {0, 3, 6}, 68: {0, 1, 2, 3, 4, 5, 6}, 69: {0, 1, 2, 3, 4, 5, 6}, 70: {0, 1, 2, 3, 4, 5, 6}, 71: {0, 1, 2, 4, 5, 6}, 72: {0, 1, 2, 3, 4, 5, 6}, 73: {0, 1, 2, 3, 4, 5, 6}, 74: {0, 1, 2, 3, 4, 5, 6}, 75: {1, 2, 3, 4, 5}, 76: {0, 1, 2, 3, 4, 5, 6}, 77: {0, 1, 2, 3, 4, 5, 6}, 78: {1, 2, 4, 5}, 79: {0, 1, 2, 3, 4, 5, 6}, 80: {0, 1, 2, 3, 4, 5, 6}, 81: {0, 1, 2, 3, 4, 5, 6}, 82: {0, 1, 2, 3, 4, 5, 6}, 83: {0, 1, 2, 3, 4, 5, 6}, 84: {1, 2, 3, 4, 5, 6}, 85: {0, 1, 2, 4, 5}, 86: {1, 2, 3, 4, 5, 6}, 87: {1, 2, 4, 5, 6}, 88: {0, 1, 2, 3, 4, 5, 6}, 89: {1, 2, 3, 4, 5, 6}, 90: {0, 1, 2, 3, 4, 5, 6}, 91: {0, 1, 2, 3, 4, 5, 6}, 92: {3, 6}, 93: {0, 1, 2, 3, 4, 5, 6}, 94: {0, 1, 2, 3, 4, 5, 6}, 95: {0, 1, 2, 3, 4, 5, 6}, 96: {0, 1, 2, 3, 4, 5, 6}, 97: {1, 2, 4, 5, 6}, 98: {0, 1, 2, 3, 4, 5, 6}, 99: {0, 1, 2, 3, 4, 5, 6}}
+Iteration 11: Best valset aggregate score so far: 0.82
+Iteration 11: Best program as per aggregate score on valset: 2
+Iteration 11: Best score on valset: 0.82
+Iteration 11: Linear pareto front program index: 2
+Iteration 11: New program candidate index: 6
+Iteration 12: Selected program 6 score: 0.79
+Iteration 12: Proposed new text for instruction: Classify the given text into one of these categories: abbreviation, description, entity, human, location, numeric.
+
+CRITICAL CLASSIFICATION PRINCIPLE:
+When the input is a QUESTION, classify it based on what TYPE OF ANSWER is being requested, not based on what entities are mentioned in the question itself.
+
+CATEGORY DEFINITIONS AND ANSWER-TYPE RULES:
+
+**human**: Use when the question asks for a person, people, or human role/occupation as the answer.
+- Keywords indicating human answers: "who", "what person", "which author/painter/scientist/leader", etc.
+- Example: "What pillar of the Dutch Renaissance painted Aristotle Contemplating the Bust of Homer?" → The answer is a person (Rembrandt), so classify as 'human', even though entities (Aristotle, Homer) are mentioned.
+- Includes: individuals, groups of people, professions, historical figures, artists, scientists, leaders
+
+**entity**: Use when the question asks for a non-human concrete thing, organization, concept, or abstract entity as the answer.
+- Includes: companies, products, artworks, books, organizations, animals, objects, concepts
+- NOT used when a person/human is the expected answer, even if entities are discussed
+
+**location**: Use when the question asks for a place, geographical location, or spatial position as the answer.
+- Keywords: "where", "what place", "what city/country/state"
+- **IMPORTANT**: Questions asking "what country" expect a country name as the answer → classify as 'location'
+- Questions asking about which nation, state, region, territory, or geographical area → classify as 'location'
+- Example: "What country was first to use the airplane as a weapon of war, against the Turks in Libya?" → The answer is a country (Italy), so classify as 'location'
+
+**numeric**: Use when the question asks for a number, quantity, date, time, or measurement as the answer.
+- Keywords: "how many", "how much", "when", "what year", "how long"
+- Note: "What country" is NOT numeric even if asking about "first" - the answer is still a country name (location), not a number
+
+**abbreviation**: Use when the question asks what an acronym or abbreviation stands for.
+- Keywords: "what does [acronym] stand for"
+
+**description**: Use when the question asks for an explanation, definition, process, or descriptive answer.
+- Keywords: "what is", "how does", "why", "what happens when", "explain"
+- Use when seeking clarification or explanation of concepts rather than specific entities
+
+DISAMBIGUATION RULES:
+- Mentions of famous people/entities IN the question do not determine the category - only what type of answer is expected
+- "What [profession]..." questions → classify as 'human' (the answer is a person)
+- "What [thing/concept]..." questions → classify as 'entity' or 'description' depending on whether a specific thing or explanation is sought
+- "What country/nation/state..." questions → classify as 'location' (the answer is a place)
+- Questions about governance/policy of a subject → often 'description' rather than the subject's category
+- Ordinal qualifiers like "first", "last", "earliest" modify the answer but don't change its fundamental type:
+  - "What country was first..." → still expects a country (location)
+  - "Who was first..." → still expects a person (human)
+  - "What year was first..." → expects a year (numeric)
+
+Apply these rules consistently, always focusing on what type of answer the question is seeking.
+Iteration 12: New subsample score 3.0 is better than old score 2.0. Continue to full eval and add to candidate pool.
+Iteration 12: Valset score for new program: 0.79 (coverage 100 / 100)
+Iteration 12: Val aggregate for new program: 0.79
+Iteration 12: Individual valset scores for new program: {0: 1.0, 1: 1.0, 2: 1.0, 3: 1.0, 4: 1.0, 5: 0.0, 6: 0.0, 7: 1.0, 8: 1.0, 9: 0.0, 10: 1.0, 11: 1.0, 12: 1.0, 13: 1.0, 14: 1.0, 15: 1.0, 16: 1.0, 17: 1.0, 18: 1.0, 19: 1.0, 20: 1.0, 21: 1.0, 22: 1.0, 23: 1.0, 24: 1.0, 25: 1.0, 26: 1.0, 27: 1.0, 28: 1.0, 29: 1.0, 30: 1.0, 31: 1.0, 32: 1.0, 33: 0.0, 34: 1.0, 35: 0.0, 36: 0.0, 37: 1.0, 38: 0.0, 39: 0.0, 40: 1.0, 41: 1.0, 42: 1.0, 43: 1.0, 44: 1.0, 45: 1.0, 46: 0.0, 47: 1.0, 48: 1.0, 49: 1.0, 50: 1.0, 51: 0.0, 52: 1.0, 53: 1.0, 54: 1.0, 55: 1.0, 56: 0.0, 57: 1.0, 58: 1.0, 59: 1.0, 60: 1.0, 61: 1.0, 62: 1.0, 63: 0.0, 64: 0.0, 65: 1.0, 66: 1.0, 67: 0.0, 68: 0.0, 69: 1.0, 70: 1.0, 71: 1.0, 72: 1.0, 73: 1.0, 74: 1.0, 75: 1.0, 76: 1.0, 77: 1.0, 78: 0.0, 79: 0.0, 80: 1.0, 81: 1.0, 82: 1.0, 83: 1.0, 84: 1.0, 85: 0.0, 86: 1.0, 87: 1.0, 88: 1.0, 89: 1.0, 90: 1.0, 91: 1.0, 92: 0.0, 93: 1.0, 94: 1.0, 95: 1.0, 96: 0.0, 97: 1.0, 98: 0.0, 99: 1.0}
+Iteration 12: New valset pareto front scores: {0: 1.0, 1: 1.0, 2: 1.0, 3: 1.0, 4: 1.0, 5: 0.0, 6: 1.0, 7: 1.0, 8: 1.0, 9: 1.0, 10: 1.0, 11: 1.0, 12: 1.0, 13: 1.0, 14: 1.0, 15: 1.0, 16: 1.0, 17: 1.0, 18: 1.0, 19: 1.0, 20: 1.0, 21: 1.0, 22: 1.0, 23: 1.0, 24: 1.0, 25: 1.0, 26: 1.0, 27: 1.0, 28: 1.0, 29: 1.0, 30: 1.0, 31: 1.0, 32: 1.0, 33: 0.0, 34: 1.0, 35: 0.0, 36: 0.0, 37: 1.0, 38: 1.0, 39: 1.0, 40: 1.0, 41: 1.0, 42: 1.0, 43: 1.0, 44: 1.0, 45: 1.0, 46: 1.0, 47: 1.0, 48: 1.0, 49: 1.0, 50: 1.0, 51: 0.0, 52: 1.0, 53: 1.0, 54: 1.0, 55: 1.0, 56: 0.0, 57: 1.0, 58: 1.0, 59: 1.0, 60: 1.0, 61: 1.0, 62: 1.0, 63: 0.0, 64: 1.0, 65: 1.0, 66: 1.0, 67: 1.0, 68: 0.0, 69: 1.0, 70: 1.0, 71: 1.0, 72: 1.0, 73: 1.0, 74: 1.0, 75: 1.0, 76: 1.0, 77: 1.0, 78: 1.0, 79: 0.0, 80: 1.0, 81: 1.0, 82: 1.0, 83: 1.0, 84: 1.0, 85: 1.0, 86: 1.0, 87: 1.0, 88: 1.0, 89: 1.0, 90: 1.0, 91: 1.0, 92: 1.0, 93: 1.0, 94: 1.0, 95: 1.0, 96: 0.0, 97: 1.0, 98: 0.0, 99: 1.0}
+Iteration 12: Valset pareto front aggregate score: 0.89
+Iteration 12: Updated valset pareto front programs: {0: {0, 1, 2, 3, 4, 5, 6, 7}, 1: {1, 2, 4, 5, 6, 7}, 2: {0, 1, 2, 3, 4, 5, 6, 7}, 3: {0, 1, 2, 3, 4, 5, 6, 7}, 4: {0, 1, 2, 3, 4, 5, 6, 7}, 5: {0, 1, 2, 3, 4, 5, 6, 7}, 6: {1, 2, 3, 6}, 7: {0, 1, 2, 4, 5, 6, 7}, 8: {1, 2, 3, 4, 5, 6, 7}, 9: {1, 2, 3, 4, 5}, 10: {0, 1, 2, 3, 4, 5, 6, 7}, 11: {0, 1, 2, 3, 4, 5, 6, 7}, 12: {0, 1, 2, 3, 4, 5, 6, 7}, 13: {0, 1, 2, 3, 4, 5, 6, 7}, 14: {0, 1, 2, 3, 4, 5, 6, 7}, 15: {0, 1, 2, 3, 4, 5, 6, 7}, 16: {0, 1, 2, 3, 4, 5, 6, 7}, 17: {0, 1, 2, 3, 4, 5, 6, 7}, 18: {0, 1, 2, 3, 4, 5, 6, 7}, 19: {0, 1, 2, 3, 4, 5, 6, 7}, 20: {0, 1, 2, 3, 4, 5, 6, 7}, 21: {1, 2, 3, 4, 5, 6, 7}, 22: {0, 6, 7}, 23: {1, 2, 3, 4, 5, 6, 7}, 24: {0, 1, 2, 3, 4, 5, 6, 7}, 25: {6, 7}, 26: {0, 1, 2, 3, 4, 5, 6, 7}, 27: {0, 1, 2, 3, 4, 5, 6, 7}, 28: {0, 1, 2, 3, 4, 5, 6, 7}, 29: {0, 1, 2, 3, 4, 5, 6, 7}, 30: {1, 2, 3, 4, 5, 6, 7}, 31: {0, 1, 2, 3, 4, 5, 6, 7}, 32: {0, 1, 2, 3, 4, 5, 6, 7}, 33: {0, 1, 2, 3, 4, 5, 6, 7}, 34: {0, 1, 2, 3, 4, 5, 6, 7}, 35: {0, 1, 2, 3, 4, 5, 6, 7}, 36: {0, 1, 2, 3, 4, 5, 6, 7}, 37: {0, 1, 2, 4, 5, 6, 7}, 38: {4}, 39: {1, 2, 5}, 40: {0, 1, 2, 3, 4, 5, 6, 7}, 41: {0, 1, 2, 3, 4, 5, 6, 7}, 42: {0, 1, 2, 3, 4, 5, 6, 7}, 43: {5, 6, 7}, 44: {0, 1, 2, 3, 4, 5, 6, 7}, 45: {0, 1, 2, 4, 5, 6, 7}, 46: {0, 1, 2, 4, 5}, 47: {0, 1, 2, 3, 4, 5, 6, 7}, 48: {0, 1, 2, 3, 4, 5, 6, 7}, 49: {0, 1, 2, 3, 4, 5, 6, 7}, 50: {0, 1, 2, 3, 4, 5, 6, 7}, 51: {0, 1, 2, 3, 4, 5, 6, 7}, 52: {0, 1, 2, 4, 5, 7}, 53: {0, 1, 2, 3, 4, 5, 6, 7}, 54: {0, 1, 2, 3, 4, 5, 6, 7}, 55: {0, 1, 2, 3, 4, 5, 6, 7}, 56: {0, 1, 2, 3, 4, 5, 6, 7}, 57: {0, 1, 2, 3, 4, 5, 6, 7}, 58: {0, 1, 2, 3, 4, 5, 6, 7}, 59: {0, 1, 2, 3, 4, 5, 6, 7}, 60: {1, 2, 3, 5, 6, 7}, 61: {7}, 62: {0, 1, 2, 3, 4, 5, 6, 7}, 63: {0, 1, 2, 3, 4, 5, 6, 7}, 64: {2, 4}, 65: {0, 1, 2, 3, 4, 5, 6, 7}, 66: {0, 1, 2, 3, 4, 5, 6, 7}, 67: {0, 3, 6}, 68: {0, 1, 2, 3, 4, 5, 6, 7}, 69: {0, 1, 2, 3, 4, 5, 6, 7}, 70: {0, 1, 2, 3, 4, 5, 6, 7}, 71: {0, 1, 2, 4, 5, 6, 7}, 72: {0, 1, 2, 3, 4, 5, 6, 7}, 73: {0, 1, 2, 3, 4, 5, 6, 7}, 74: {0, 1, 2, 3, 4, 5, 6, 7}, 75: {1, 2, 3, 4, 5, 7}, 76: {0, 1, 2, 3, 4, 5, 6, 7}, 77: {0, 1, 2, 3, 4, 5, 6, 7}, 78: {1, 2, 4, 5}, 79: {0, 1, 2, 3, 4, 5, 6, 7}, 80: {0, 1, 2, 3, 4, 5, 6, 7}, 81: {0, 1, 2, 3, 4, 5, 6, 7}, 82: {0, 1, 2, 3, 4, 5, 6, 7}, 83: {0, 1, 2, 3, 4, 5, 6, 7}, 84: {1, 2, 3, 4, 5, 6, 7}, 85: {0, 1, 2, 4, 5}, 86: {1, 2, 3, 4, 5, 6, 7}, 87: {1, 2, 4, 5, 6, 7}, 88: {0, 1, 2, 3, 4, 5, 6, 7}, 89: {1, 2, 3, 4, 5, 6, 7}, 90: {0, 1, 2, 3, 4, 5, 6, 7}, 91: {0, 1, 2, 3, 4, 5, 6, 7}, 92: {3, 6}, 93: {0, 1, 2, 3, 4, 5, 6, 7}, 94: {0, 1, 2, 3, 4, 5, 6, 7}, 95: {0, 1, 2, 3, 4, 5, 6, 7}, 96: {0, 1, 2, 3, 4, 5, 6, 7}, 97: {1, 2, 4, 5, 6, 7}, 98: {0, 1, 2, 3, 4, 5, 6, 7}, 99: {0, 1, 2, 3, 4, 5, 6, 7}}
+Iteration 12: Best valset aggregate score so far: 0.82
+Iteration 12: Best program as per aggregate score on valset: 2
+Iteration 12: Best score on valset: 0.82
+Iteration 12: Linear pareto front program index: 2
+Iteration 12: New program candidate index: 7
+[done] d_trec_f2_s43.json: 0.890 ($0.90)
+Iteration 0: Base program full valset score: 0.67 over 100 / 100 examples
+Iteration 1: Selected program 0 score: 0.67
+Iteration 1: All subsample scores perfect. Skipping.
+Iteration 1: Reflective mutation did not propose a new candidate
+Iteration 2: Selected program 0 score: 0.67
+Iteration 2: Proposed new text for instruction: Classify the given text into one of these categories: abbreviation, description, entity, human, location, numeric.
+
+Category Definitions:
+- **abbreviation**: Questions asking what an acronym or abbreviation stands for
+- **description**: Questions asking for definitions, explanations, or descriptions of how/why something works or what something means
+- **entity**: Questions asking about specific things, objects, concepts, or attributes (e.g., "What instrument...", "What color...", "What type of...")
+- **human**: Questions asking about specific people or groups of people by name or role (e.g., "Who is...", "Who was the first...")
+- **location**: Questions asking about places, geographical locations, or where something is/happened
+- **numeric**: Questions asking for quantities, dates, numbers, counts, or measurements
+
+Classification Rules:
+1. **"What" questions require careful analysis**: Not all "what" questions are about entities. Distinguish between:
+   - "What is X?" (asking for definition/description) → description
+   - "What [noun] did/does Y...?" (asking about a specific thing/object) → entity
+   - "What color/type/kind..." → entity
+
+2. **Entity vs. Human distinction**: 
+   - Questions about objects, instruments, concepts, or things that can be owned/used by humans → entity
+   - Questions directly asking about a person's identity or name → human
+   - Example: "What musical instrument did Sherlock Holmes play?" is asking about the instrument (entity), not about Sherlock Holmes (human)
+
+3. **Subject vs. Object of the question**: Focus on what information is being requested, not who/what is mentioned in the context
+   - The question subject (e.g., Sherlock Holmes) may be human, but if the question seeks information about an object or thing, classify as entity
+
+4. Pay attention to the question word:
+   - "Who" → typically human
+   - "Where" → typically location
+   - "When/How many/How much" → typically numeric
+   - "What" → analyze the full context (could be entity, description, or abbreviation)
+   - "How/Why" → typically description
+
+5. Apply the guidance from experience, particularly:
+   - Classify based on what is being asked for, not what is mentioned in the question
+   - The primary intent of the question determines the category
+Iteration 2: New subsample score 3.0 is better than old score 2.0. Continue to full eval and add to candidate pool.
+Iteration 2: Found a better program on the valset with score 0.79.
+Iteration 2: Valset score for new program: 0.79 (coverage 100 / 100)
+Iteration 2: Val aggregate for new program: 0.79
+Iteration 2: Individual valset scores for new program: {0: 1.0, 1: 1.0, 2: 1.0, 3: 1.0, 4: 1.0, 5: 0.0, 6: 1.0, 7: 1.0, 8: 1.0, 9: 1.0, 10: 1.0, 11: 1.0, 12: 1.0, 13: 1.0, 14: 1.0, 15: 1.0, 16: 1.0, 17: 1.0, 18: 1.0, 19: 1.0, 20: 1.0, 21: 1.0, 22: 1.0, 23: 1.0, 24: 1.0, 25: 0.0, 26: 1.0, 27: 1.0, 28: 1.0, 29: 1.0, 30: 1.0, 31: 1.0, 32: 1.0, 33: 0.0, 34: 1.0, 35: 0.0, 36: 0.0, 37: 1.0, 38: 0.0, 39: 0.0, 40: 1.0, 41: 1.0, 42: 1.0, 43: 0.0, 44: 1.0, 45: 1.0, 46: 1.0, 47: 1.0, 48: 1.0, 49: 1.0, 50: 1.0, 51: 0.0, 52: 1.0, 53: 1.0, 54: 1.0, 55: 1.0, 56: 0.0, 57: 1.0, 58: 1.0, 59: 1.0, 60: 1.0, 61: 0.0, 62: 1.0, 63: 0.0, 64: 0.0, 65: 1.0, 66: 1.0, 67: 0.0, 68: 0.0, 69: 1.0, 70: 1.0, 71: 1.0, 72: 1.0, 73: 1.0, 74: 1.0, 75: 0.0, 76: 1.0, 77: 1.0, 78: 0.0, 79: 0.0, 80: 1.0, 81: 1.0, 82: 1.0, 83: 1.0, 84: 1.0, 85: 0.0, 86: 1.0, 87: 1.0, 88: 1.0, 89: 1.0, 90: 1.0, 91: 1.0, 92: 1.0, 93: 1.0, 94: 1.0, 95: 1.0, 96: 0.0, 97: 1.0, 98: 0.0, 99: 1.0}
+Iteration 2: New valset pareto front scores: {0: 1.0, 1: 1.0, 2: 1.0, 3: 1.0, 4: 1.0, 5: 0.0, 6: 1.0, 7: 1.0, 8: 1.0, 9: 1.0, 10: 1.0, 11: 1.0, 12: 1.0, 13: 1.0, 14: 1.0, 15: 1.0, 16: 1.0, 17: 1.0, 18: 1.0, 19: 1.0, 20: 1.0, 21: 1.0, 22: 1.0, 23: 1.0, 24: 1.0, 25: 0.0, 26: 1.0, 27: 1.0, 28: 1.0, 29: 1.0, 30: 1.0, 31: 1.0, 32: 1.0, 33: 0.0, 34: 1.0, 35: 0.0, 36: 0.0, 37: 1.0, 38: 0.0, 39: 0.0, 40: 1.0, 41: 1.0, 42: 1.0, 43: 0.0, 44: 1.0, 45: 1.0, 46: 1.0, 47: 1.0, 48: 1.0, 49: 1.0, 50: 1.0, 51: 0.0, 52: 1.0, 53: 1.0, 54: 1.0, 55: 1.0, 56: 0.0, 57: 1.0, 58: 1.0, 59: 1.0, 60: 1.0, 61: 0.0, 62: 1.0, 63: 0.0, 64: 0.0, 65: 1.0, 66: 1.0, 67: 1.0, 68: 0.0, 69: 1.0, 70: 1.0, 71: 1.0, 72: 1.0, 73: 1.0, 74: 1.0, 75: 0.0, 76: 1.0, 77: 1.0, 78: 0.0, 79: 0.0, 80: 1.0, 81: 1.0, 82: 1.0, 83: 1.0, 84: 1.0, 85: 1.0, 86: 1.0, 87: 1.0, 88: 1.0, 89: 1.0, 90: 1.0, 91: 1.0, 92: 1.0, 93: 1.0, 94: 1.0, 95: 1.0, 96: 0.0, 97: 1.0, 98: 0.0, 99: 1.0}
+Iteration 2: Valset pareto front aggregate score: 0.81
+Iteration 2: Updated valset pareto front programs: {0: {0, 1}, 1: {1}, 2: {0, 1}, 3: {0, 1}, 4: {0, 1}, 5: {0, 1}, 6: {1}, 7: {0, 1}, 8: {1}, 9: {1}, 10: {0, 1}, 11: {0, 1}, 12: {0, 1}, 13: {0, 1}, 14: {0, 1}, 15: {0, 1}, 16: {0, 1}, 17: {0, 1}, 18: {0, 1}, 19: {0, 1}, 20: {0, 1}, 21: {1}, 22: {0, 1}, 23: {1}, 24: {0, 1}, 25: {0, 1}, 26: {0, 1}, 27: {0, 1}, 28: {0, 1}, 29: {0, 1}, 30: {1}, 31: {0, 1}, 32: {0, 1}, 33: {0, 1}, 34: {0, 1}, 35: {0, 1}, 36: {0, 1}, 37: {0, 1}, 38: {0, 1}, 39: {0, 1}, 40: {0, 1}, 41: {0, 1}, 42: {0, 1}, 43: {0, 1}, 44: {0, 1}, 45: {0, 1}, 46: {0, 1}, 47: {0, 1}, 48: {0, 1}, 49: {0, 1}, 50: {0, 1}, 51: {0, 1}, 52: {0, 1}, 53: {0, 1}, 54: {0, 1}, 55: {0, 1}, 56: {0, 1}, 57: {0, 1}, 58: {0, 1}, 59: {0, 1}, 60: {1}, 61: {0, 1}, 62: {0, 1}, 63: {0, 1}, 64: {0, 1}, 65: {0, 1}, 66: {0, 1}, 67: {0}, 68: {0, 1}, 69: {0, 1}, 70: {0, 1}, 71: {0, 1}, 72: {0, 1}, 73: {0, 1}, 74: {0, 1}, 75: {0, 1}, 76: {0, 1}, 77: {0, 1}, 78: {0, 1}, 79: {0, 1}, 80: {0, 1}, 81: {0, 1}, 82: {0, 1}, 83: {0, 1}, 84: {1}, 85: {0}, 86: {1}, 87: {1}, 88: {0, 1}, 89: {1}, 90: {0, 1}, 91: {0, 1}, 92: {1}, 93: {0, 1}, 94: {0, 1}, 95: {0, 1}, 96: {0, 1}, 97: {1}, 98: {0, 1}, 99: {0, 1}}
+Iteration 2: Best valset aggregate score so far: 0.79
+Iteration 2: Best program as per aggregate score on valset: 1
+Iteration 2: Best score on valset: 0.79
+Iteration 2: Linear pareto front program index: 1
+Iteration 2: New program candidate index: 1
+Iteration 3: Selected program 0 score: 0.67
+Iteration 3: Proposed new text for instruction: Classify the given text into one of these categories: abbreviation, description, entity, human, location, numeric.
+
+## Classification Guidelines:
+
+### Core Principles:
+- Classify based on the primary framing and context of the content, not just superficial keywords or subject matter.
+- Pay special attention to negations and negative constructions, as they often reverse the apparent sentiment or meaning of a statement.
+- When entities belong to a specific domain, prioritize domain classification over generic activity classification, even when the content describes generic activities.
+- Distinguish between the subject matter itself and news about governance/policy/regulation of that subject matter, assigning them to different categories.
+- Create explicit decision rules for overlapping categories by defining what type of content each category should prioritize.
+- When the same word or phrase can indicate different categories depending on context, provide specific contextual disambiguation rules.
+- Identify and document counterintuitive labeling patterns in the dataset rather than imposing conventional interpretations.
+- Distinguish between transactional framing and technical/substantive framing of the same event, assigning each to different categories.
+- Create specific rules for differentiating closely related categories that share similar vocabulary but serve different intents.
+- When dealing with emotional or subjective content, distinguish between the target of the emotion and the type of emotion to avoid misclassification.
+
+### Category Definitions:
+
+**human**: Questions asking about people, including:
+- Questions asking "Who is/was..." or "What person..."
+- Questions that refer to people by their roles, titles, or professions (e.g., "What pillar of the Dutch Renaissance", "What painter", "What artist", "What president")
+- Questions seeking names of individuals, even when they're described by their accomplishments or works
+- When the expected answer is a person's name or identity, classify as 'human' regardless of how they are described in the question
+
+**entity**: Questions about organizations, companies, brands, artworks, publications, events, or other non-human named entities
+
+**location**: Questions about places, geographic locations, countries, cities, regions
+
+**abbreviation**: Questions asking what an acronym or abbreviation stands for
+
+**description**: Questions asking for definitions, explanations, or descriptions of concepts, processes, or phenomena
+
+**numeric**: Questions asking for numbers, dates, quantities, measurements, or countable information
+
+### Key Disambiguation Rules:
+
+- **Human vs Entity distinction**: When a question uses descriptive phrases like "What [role/profession]..." or "Who [description]...", the expected answer type determines the category. If the answer should be a person's name, classify as 'human', not 'entity'. Examples: "What pillar of the Dutch Renaissance painted..." expects a person's name → 'human'.
+
+- References to people by their titles, roles, or achievements should be classified as 'human' when the question seeks to identify the individual.
+Iteration 3: New subsample score 3.0 is better than old score 2.0. Continue to full eval and add to candidate pool.
+Iteration 3: Valset score for new program: 0.72 (coverage 100 / 100)
+Iteration 3: Val aggregate for new program: 0.72
+Iteration 3: Individual valset scores for new program: {0: 1.0, 1: 1.0, 2: 1.0, 3: 1.0, 4: 1.0, 5: 0.0, 6: 1.0, 7: 1.0, 8: 1.0, 9: 1.0, 10: 1.0, 11: 1.0, 12: 1.0, 13: 1.0, 14: 1.0, 15: 1.0, 16: 1.0, 17: 1.0, 18: 1.0, 19: 1.0, 20: 1.0, 21: 1.0, 22: 1.0, 23: 1.0, 24: 1.0, 25: 1.0, 26: 1.0, 27: 1.0, 28: 1.0, 29: 1.0, 30: 1.0, 31: 1.0, 32: 1.0, 33: 0.0, 34: 1.0, 35: 0.0, 36: 0.0, 37: 0.0, 38: 0.0, 39: 0.0, 40: 1.0, 41: 1.0, 42: 1.0, 43: 0.0, 44: 1.0, 45: 0.0, 46: 0.0, 47: 1.0, 48: 1.0, 49: 0.0, 50: 1.0, 51: 0.0, 52: 0.0, 53: 1.0, 54: 1.0, 55: 1.0, 56: 0.0, 57: 1.0, 58: 1.0, 59: 1.0, 60: 1.0, 61: 0.0, 62: 1.0, 63: 0.0, 64: 0.0, 65: 1.0, 66: 1.0, 67: 0.0, 68: 0.0, 69: 1.0, 70: 1.0, 71: 1.0, 72: 1.0, 73: 1.0, 74: 1.0, 75: 1.0, 76: 1.0, 77: 1.0, 78: 0.0, 79: 0.0, 80: 1.0, 81: 1.0, 82: 1.0, 83: 1.0, 84: 1.0, 85: 0.0, 86: 1.0, 87: 0.0, 88: 1.0, 89: 0.0, 90: 1.0, 91: 1.0, 92: 0.0, 93: 1.0, 94: 1.0, 95: 1.0, 96: 0.0, 97: 0.0, 98: 0.0, 99: 1.0}
+Iteration 3: New valset pareto front scores: {0: 1.0, 1: 1.0, 2: 1.0, 3: 1.0, 4: 1.0, 5: 0.0, 6: 1.0, 7: 1.0, 8: 1.0, 9: 1.0, 10: 1.0, 11: 1.0, 12: 1.0, 13: 1.0, 14: 1.0, 15: 1.0, 16: 1.0, 17: 1.0, 18: 1.0, 19: 1.0, 20: 1.0, 21: 1.0, 22: 1.0, 23: 1.0, 24: 1.0, 25: 1.0, 26: 1.0, 27: 1.0, 28: 1.0, 29: 1.0, 30: 1.0, 31: 1.0, 32: 1.0, 33: 0.0, 34: 1.0, 35: 0.0, 36: 0.0, 37: 1.0, 38: 0.0, 39: 0.0, 40: 1.0, 41: 1.0, 42: 1.0, 43: 0.0, 44: 1.0, 45: 1.0, 46: 1.0, 47: 1.0, 48: 1.0, 49: 1.0, 50: 1.0, 51: 0.0, 52: 1.0, 53: 1.0, 54: 1.0, 55: 1.0, 56: 0.0, 57: 1.0, 58: 1.0, 59: 1.0, 60: 1.0, 61: 0.0, 62: 1.0, 63: 0.0, 64: 0.0, 65: 1.0, 66: 1.0, 67: 1.0, 68: 0.0, 69: 1.0, 70: 1.0, 71: 1.0, 72: 1.0, 73: 1.0, 74: 1.0, 75: 1.0, 76: 1.0, 77: 1.0, 78: 0.0, 79: 0.0, 80: 1.0, 81: 1.0, 82: 1.0, 83: 1.0, 84: 1.0, 85: 1.0, 86: 1.0, 87: 1.0, 88: 1.0, 89: 1.0, 90: 1.0, 91: 1.0, 92: 1.0, 93: 1.0, 94: 1.0, 95: 1.0, 96: 0.0, 97: 1.0, 98: 0.0, 99: 1.0}
+Iteration 3: Valset pareto front aggregate score: 0.83
+Iteration 3: Updated valset pareto front programs: {0: {0, 1, 2}, 1: {1, 2}, 2: {0, 1, 2}, 3: {0, 1, 2}, 4: {0, 1, 2}, 5: {0, 1, 2}, 6: {1, 2}, 7: {0, 1, 2}, 8: {1, 2}, 9: {1, 2}, 10: {0, 1, 2}, 11: {0, 1, 2}, 12: {0, 1, 2}, 13: {0, 1, 2}, 14: {0, 1, 2}, 15: {0, 1, 2}, 16: {0, 1, 2}, 17: {0, 1, 2}, 18: {0, 1, 2}, 19: {0, 1, 2}, 20: {0, 1, 2}, 21: {1, 2}, 22: {0, 1, 2}, 23: {1, 2}, 24: {0, 1, 2}, 25: {2}, 26: {0, 1, 2}, 27: {0, 1, 2}, 28: {0, 1, 2}, 29: {0, 1, 2}, 30: {1, 2}, 31: {0, 1, 2}, 32: {0, 1, 2}, 33: {0, 1, 2}, 34: {0, 1, 2}, 35: {0, 1, 2}, 36: {0, 1, 2}, 37: {0, 1}, 38: {0, 1, 2}, 39: {0, 1, 2}, 40: {0, 1, 2}, 41: {0, 1, 2}, 42: {0, 1, 2}, 43: {0, 1, 2}, 44: {0, 1, 2}, 45: {0, 1}, 46: {0, 1}, 47: {0, 1, 2}, 48: {0, 1, 2}, 49: {0, 1}, 50: {0, 1, 2}, 51: {0, 1, 2}, 52: {0, 1}, 53: {0, 1, 2}, 54: {0, 1, 2}, 55: {0, 1, 2}, 56: {0, 1, 2}, 57: {0, 1, 2}, 58: {0, 1, 2}, 59: {0, 1, 2}, 60: {1, 2}, 61: {0, 1, 2}, 62: {0, 1, 2}, 63: {0, 1, 2}, 64: {0, 1, 2}, 65: {0, 1, 2}, 66: {0, 1, 2}, 67: {0}, 68: {0, 1, 2}, 69: {0, 1, 2}, 70: {0, 1, 2}, 71: {0, 1, 2}, 72: {0, 1, 2}, 73: {0, 1, 2}, 74: {0, 1, 2}, 75: {2}, 76: {0, 1, 2}, 77: {0, 1, 2}, 78: {0, 1, 2}, 79: {0, 1, 2}, 80: {0, 1, 2}, 81: {0, 1, 2}, 82: {0, 1, 2}, 83: {0, 1, 2}, 84: {1, 2}, 85: {0}, 86: {1, 2}, 87: {1}, 88: {0, 1, 2}, 89: {1}, 90: {0, 1, 2}, 91: {0, 1, 2}, 92: {1}, 93: {0, 1, 2}, 94: {0, 1, 2}, 95: {0, 1, 2}, 96: {0, 1, 2}, 97: {1}, 98: {0, 1, 2}, 99: {0, 1, 2}}
+Iteration 3: Best valset aggregate score so far: 0.79
+Iteration 3: Best program as per aggregate score on valset: 1
+Iteration 3: Best score on valset: 0.79
+Iteration 3: Linear pareto front program index: 1
+Iteration 3: New program candidate index: 2
+Iteration 4: Selected program 1 score: 0.79
+Iteration 4: Proposed new text for instruction: Classify the given text into one of these categories: abbreviation, description, entity, human, location, numeric.
+
+Category Definitions:
+- **abbreviation**: Questions asking what an acronym or abbreviation stands for
+- **description**: Questions asking for definitions, explanations, or descriptions of how/why something works or what something means
+- **entity**: Questions asking about specific things, objects, concepts, or attributes (e.g., "What instrument...", "What color...", "What type of...")
+- **human**: Questions asking about specific people or groups of people by name or role (e.g., "Who is...", "Who was the first...")
+- **location**: Questions asking about places, geographical locations, or where something is/happened
+- **numeric**: Questions asking for quantities, dates, numbers, counts, or measurements
+
+Classification Rules:
+1. **"What" questions require careful analysis**: Not all "what" questions are about entities. Distinguish between:
+   - "What is X?" (asking for definition/description) → description
+   - "What [noun] did/does Y...?" (asking about a specific thing/object) → entity
+   - "What color/type/kind..." → entity
+
+2. **Entity vs. Human distinction**: 
+   - Questions about objects, instruments, concepts, or things that can be owned/used by humans → entity
+   - Questions directly asking about a person's identity or name → human
+   - Example: "What musical instrument did Sherlock Holmes play?" is asking about the instrument (entity), not about Sherlock Holmes (human)
+
+3. **Subject vs. Object of the question**: Focus on what information is being requested, not who/what is mentioned in the context
+   - The question subject (e.g., Sherlock Holmes) may be human, but if the question seeks information about an object or thing, classify as entity
+
+4. **Nationality questions are location questions**: When a question asks about someone's nationality (e.g., "What nationality is X?"), classify it as **location**, not human. Nationality refers to a geographical/political origin, which falls under the location category. The answer would be a place or country (e.g., "Romanian", "American"), not a person's identity.
+
+5. Pay attention to the question word:
+   - "Who" → typically human
+   - "Where" → typically location
+   - "When/How many/How much" → typically numeric
+   - "What" → analyze the full context (could be entity, description, location, or abbreviation)
+   - "How/Why" → typically description
+
+6. Apply the guidance from experience, particularly:
+   - Classify based on what is being asked for, not what is mentioned in the question
+   - The primary intent of the question determines the category
+   - Even if a person is mentioned in the question, if the answer is about a place/country (nationality, origin, birthplace), classify as location
+Iteration 4: New subsample score 3.0 is better than old score 2.0. Continue to full eval and add to candidate pool.
+Iteration 4: Found a better program on the valset with score 0.81.
+Iteration 4: Valset score for new program: 0.81 (coverage 100 / 100)
+Iteration 4: Val aggregate for new program: 0.81
+Iteration 4: Individual valset scores for new program: {0: 1.0, 1: 1.0, 2: 1.0, 3: 1.0, 4: 1.0, 5: 0.0, 6: 1.0, 7: 1.0, 8: 1.0, 9: 1.0, 10: 1.0, 11: 1.0, 12: 1.0, 13: 1.0, 14: 1.0, 15: 1.0, 16: 1.0, 17: 1.0, 18: 1.0, 19: 1.0, 20: 1.0, 21: 1.0, 22: 1.0, 23: 1.0, 24: 1.0, 25: 0.0, 26: 1.0, 27: 1.0, 28: 1.0, 29: 1.0, 30: 1.0, 31: 1.0, 32: 1.0, 33: 0.0, 34: 1.0, 35: 0.0, 36: 0.0, 37: 1.0, 38: 0.0, 39: 0.0, 40: 1.0, 41: 1.0, 42: 1.0, 43: 1.0, 44: 1.0, 45: 1.0, 46: 1.0, 47: 1.0, 48: 1.0, 49: 1.0, 50: 1.0, 51: 0.0, 52: 1.0, 53: 1.0, 54: 1.0, 55: 1.0, 56: 0.0, 57: 1.0, 58: 1.0, 59: 1.0, 60: 1.0, 61: 1.0, 62: 1.0, 63: 0.0, 64: 0.0, 65: 1.0, 66: 1.0, 67: 0.0, 68: 0.0, 69: 1.0, 70: 1.0, 71: 1.0, 72: 1.0, 73: 1.0, 74: 1.0, 75: 1.0, 76: 1.0, 77: 1.0, 78: 0.0, 79: 0.0, 80: 1.0, 81: 1.0, 82: 1.0, 83: 1.0, 84: 1.0, 85: 0.0, 86: 1.0, 87: 1.0, 88: 1.0, 89: 1.0, 90: 1.0, 91: 1.0, 92: 0.0, 93: 1.0, 94: 1.0, 95: 1.0, 96: 0.0, 97: 1.0, 98: 0.0, 99: 1.0}
+Iteration 4: New valset pareto front scores: {0: 1.0, 1: 1.0, 2: 1.0, 3: 1.0, 4: 1.0, 5: 0.0, 6: 1.0, 7: 1.0, 8: 1.0, 9: 1.0, 10: 1.0, 11: 1.0, 12: 1.0, 13: 1.0, 14: 1.0, 15: 1.0, 16: 1.0, 17: 1.0, 18: 1.0, 19: 1.0, 20: 1.0, 21: 1.0, 22: 1.0, 23: 1.0, 24: 1.0, 25: 1.0, 26: 1.0, 27: 1.0, 28: 1.0, 29: 1.0, 30: 1.0, 31: 1.0, 32: 1.0, 33: 0.0, 34: 1.0, 35: 0.0, 36: 0.0, 37: 1.0, 38: 0.0, 39: 0.0, 40: 1.0, 41: 1.0, 42: 1.0, 43: 1.0, 44: 1.0, 45: 1.0, 46: 1.0, 47: 1.0, 48: 1.0, 49: 1.0, 50: 1.0, 51: 0.0, 52: 1.0, 53: 1.0, 54: 1.0, 55: 1.0, 56: 0.0, 57: 1.0, 58: 1.0, 59: 1.0, 60: 1.0, 61: 1.0, 62: 1.0, 63: 0.0, 64: 0.0, 65: 1.0, 66: 1.0, 67: 1.0, 68: 0.0, 69: 1.0, 70: 1.0, 71: 1.0, 72: 1.0, 73: 1.0, 74: 1.0, 75: 1.0, 76: 1.0, 77: 1.0, 78: 0.0, 79: 0.0, 80: 1.0, 81: 1.0, 82: 1.0, 83: 1.0, 84: 1.0, 85: 1.0, 86: 1.0, 87: 1.0, 88: 1.0, 89: 1.0, 90: 1.0, 91: 1.0, 92: 1.0, 93: 1.0, 94: 1.0, 95: 1.0, 96: 0.0, 97: 1.0, 98: 0.0, 99: 1.0}
+Iteration 4: Valset pareto front aggregate score: 0.85
+Iteration 4: Updated valset pareto front programs: {0: {0, 1, 2, 3}, 1: {1, 2, 3}, 2: {0, 1, 2, 3}, 3: {0, 1, 2, 3}, 4: {0, 1, 2, 3}, 5: {0, 1, 2, 3}, 6: {1, 2, 3}, 7: {0, 1, 2, 3}, 8: {1, 2, 3}, 9: {1, 2, 3}, 10: {0, 1, 2, 3}, 11: {0, 1, 2, 3}, 12: {0, 1, 2, 3}, 13: {0, 1, 2, 3}, 14: {0, 1, 2, 3}, 15: {0, 1, 2, 3}, 16: {0, 1, 2, 3}, 17: {0, 1, 2, 3}, 18: {0, 1, 2, 3}, 19: {0, 1, 2, 3}, 20: {0, 1, 2, 3}, 21: {1, 2, 3}, 22: {0, 1, 2, 3}, 23: {1, 2, 3}, 24: {0, 1, 2, 3}, 25: {2}, 26: {0, 1, 2, 3}, 27: {0, 1, 2, 3}, 28: {0, 1, 2, 3}, 29: {0, 1, 2, 3}, 30: {1, 2, 3}, 31: {0, 1, 2, 3}, 32: {0, 1, 2, 3}, 33: {0, 1, 2, 3}, 34: {0, 1, 2, 3}, 35: {0, 1, 2, 3}, 36: {0, 1, 2, 3}, 37: {0, 1, 3}, 38: {0, 1, 2, 3}, 39: {0, 1, 2, 3}, 40: {0, 1, 2, 3}, 41: {0, 1, 2, 3}, 42: {0, 1, 2, 3}, 43: {3}, 44: {0, 1, 2, 3}, 45: {0, 1, 3}, 46: {0, 1, 3}, 47: {0, 1, 2, 3}, 48: {0, 1, 2, 3}, 49: {0, 1, 3}, 50: {0, 1, 2, 3}, 51: {0, 1, 2, 3}, 52: {0, 1, 3}, 53: {0, 1, 2, 3}, 54: {0, 1, 2, 3}, 55: {0, 1, 2, 3}, 56: {0, 1, 2, 3}, 57: {0, 1, 2, 3}, 58: {0, 1, 2, 3}, 59: {0, 1, 2, 3}, 60: {1, 2, 3}, 61: {3}, 62: {0, 1, 2, 3}, 63: {0, 1, 2, 3}, 64: {0, 1, 2, 3}, 65: {0, 1, 2, 3}, 66: {0, 1, 2, 3}, 67: {0}, 68: {0, 1, 2, 3}, 69: {0, 1, 2, 3}, 70: {0, 1, 2, 3}, 71: {0, 1, 2, 3}, 72: {0, 1, 2, 3}, 73: {0, 1, 2, 3}, 74: {0, 1, 2, 3}, 75: {2, 3}, 76: {0, 1, 2, 3}, 77: {0, 1, 2, 3}, 78: {0, 1, 2, 3}, 79: {0, 1, 2, 3}, 80: {0, 1, 2, 3}, 81: {0, 1, 2, 3}, 82: {0, 1, 2, 3}, 83: {0, 1, 2, 3}, 84: {1, 2, 3}, 85: {0}, 86: {1, 2, 3}, 87: {1, 3}, 88: {0, 1, 2, 3}, 89: {1, 3}, 90: {0, 1, 2, 3}, 91: {0, 1, 2, 3}, 92: {1}, 93: {0, 1, 2, 3}, 94: {0, 1, 2, 3}, 95: {0, 1, 2, 3}, 96: {0, 1, 2, 3}, 97: {1, 3}, 98: {0, 1, 2, 3}, 99: {0, 1, 2, 3}}
+Iteration 4: Best valset aggregate score so far: 0.81
+Iteration 4: Best program as per aggregate score on valset: 3
+Iteration 4: Best score on valset: 0.81
+Iteration 4: Linear pareto front program index: 3
+Iteration 4: New program candidate index: 3
+Iteration 5: Selected program 3 score: 0.81
+Iteration 5: All subsample scores perfect. Skipping.
+Iteration 5: Reflective mutation did not propose a new candidate
+Iteration 6: Selected program 0 score: 0.67
+Iteration 6: All subsample scores perfect. Skipping.
+Iteration 6: Reflective mutation did not propose a new candidate
+Iteration 7: Selected program 1 score: 0.79
+Iteration 7: Proposed new text for instruction: Classify the given text into one of these categories: abbreviation, description, entity, human, location, numeric.
+
+Category Definitions:
+- **abbreviation**: Questions asking what an acronym or abbreviation stands for
+- **description**: Questions asking for definitions, explanations, or descriptions of how/why something works or what something means
+- **entity**: Questions asking about specific things, objects, concepts, or attributes (e.g., "What instrument...", "What color...", "What type of...")
+- **human**: Questions asking about specific people or groups of people by name or role (e.g., "Who is...", "Who was the first...")
+- **location**: Questions asking about places, geographical locations, or where something is/happened
+- **numeric**: Questions asking for quantities, dates, numbers, counts, or measurements
+
+Classification Rules:
+1. **"What" questions require careful analysis**: Not all "what" questions are about entities. Distinguish between:
+   - "What is X?" (asking for definition/description) → description
+   - "What [noun] did/does Y...?" (asking about a specific thing/object) → entity
+   - "What color/type/kind..." → entity
+
+2. **Entity vs. Human distinction**: 
+   - Questions about objects, instruments, concepts, or things that can be owned/used by humans → entity
+   - Questions directly asking about a person's identity or name → human
+   - Example: "What musical instrument did Sherlock Holmes play?" is asking about the instrument (entity), not about Sherlock Holmes (human)
+
+3. **Subject vs. Object of the question**: Focus on what information is being requested, not who/what is mentioned in the context
+   - The question subject (e.g., Sherlock Holmes) may be human, but if the question seeks information about an object or thing, classify as entity
+
+4. Pay attention to the question word:
+   - "Who" → typically human
+   - "Where" → typically location
+   - "When/How many/How much" → typically numeric
+   - "What" → analyze the full context (could be entity, description, or abbreviation)
+   - "How/Why" → typically description
+
+5. **Location questions - Special Cases**:
+   - Questions asking "What countries..." or "What cities..." should be classified as **location**, not description or entity
+   - Questions asking about comparative attributes of locations (e.g., "What countries have the best X?") are still location questions because the answer requires identifying specific geographical places
+   - Even when the question involves qualities or rankings (best, worst, most, etc.), if countries, cities, states, or other geographical entities are being asked for, classify as location
+   - Examples:
+     - "What countries have the best math students?" → location (asking which countries)
+     - "What cities are the largest?" → location (asking which cities)
+     - "What states have the highest taxes?" → location (asking which states)
+
+6. Apply the guidance from experience:
+   - Classify based on what is being asked for, not what is mentioned in the question
+   - The primary intent of the question determines the category
+   - If the answer to the question would be a list of places/countries/cities, classify as location

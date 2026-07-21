@@ -1,0 +1,57 @@
+{
+ "arm": "c2f",
+ "switch": [
+  "rejections",
+  2
+ ],
+ "task": "stance_abortion",
+ "seed": 32,
+ "budget": 800,
+ "test_accuracy": 0.6714,
+ "test_macro_f1": 0.6586,
+ "dev_accuracy": 0.82,
+ "notes": "c2f switch=('rejections', 2); skipped (decomposed dev 0.770 vs blob 0.820)",
+ "curve": [
+  {
+   "metric_calls": 0,
+   "dev_score": 0.43,
+   "phase": 1
+  },
+  {
+   "metric_calls": 106,
+   "dev_score": 0.79,
+   "phase": 1
+  },
+  {
+   "metric_calls": 212,
+   "dev_score": 0.75,
+   "phase": 1
+  },
+  {
+   "metric_calls": 330,
+   "dev_score": 0.79,
+   "phase": 1
+  },
+  {
+   "metric_calls": 448,
+   "dev_score": 0.75,
+   "phase": 1
+  },
+  {
+   "metric_calls": 563,
+   "dev_score": 0.79,
+   "phase": 1
+  },
+  {
+   "metric_calls": 696,
+   "dev_score": 0.79,
+   "phase": 1
+  },
+  {
+   "metric_calls": 805,
+   "dev_score": 0.82,
+   "phase": 1
+  }
+ ],
+ "cost_usd": 0.0344
+}

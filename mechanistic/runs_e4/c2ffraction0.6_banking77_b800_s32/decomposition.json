@@ -1,0 +1,33 @@
+{
+ "blob_dev": 0.8,
+ "decomposed_dev": 0.79,
+ "components": {
+  "task_instruction": "Classify the given text into one of these categories.",
+  "label::automatic_top_up": "",
+  "label::balance_not_updated_after_bank_transfer": "",
+  "label::beneficiary_not_allowed": "",
+  "label::cancel_transfer": "",
+  "label::card_payment_fee_charged": "",
+  "label::card_payment_not_recognised": "",
+  "label::declined_cash_withdrawal": "",
+  "label::exchange_rate": "",
+  "label::exchange_via_app": "",
+  "label::failed_transfer": "",
+  "label::get_disposable_virtual_card": "",
+  "label::get_physical_card": "",
+  "label::passcode_forgotten": "",
+  "label::pending_top_up": "",
+  "label::pending_transfer": "",
+  "label::receiving_money": "",
+  "label::reverted_card_payment?": "",
+  "label::top_up_by_cash_or_cheque": "",
+  "label::top_up_reverted": "",
+  "label::topping_up_by_card": "",
+  "label::transfer_fee_charged": "",
+  "label::transfer_into_account": "",
+  "label::transfer_timing": "",
+  "label::verify_my_identity": "",
+  "label::verify_source_of_funds": "",
+  "boundary_rules": ""
+ }
+}
