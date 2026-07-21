@@ -1,0 +1,8 @@
+{
+ "test_accuracy": 0.8033,
+ "cost_usd": 0.1026,
+ "arm": "c",
+ "task": "trec",
+ "family": "f2",
+ "seed": 0
+}

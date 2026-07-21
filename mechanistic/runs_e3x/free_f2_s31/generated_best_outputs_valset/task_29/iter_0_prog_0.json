@@ -1,0 +1,1 @@
+"```json\n{}\n```\n\nThis query is about finding a Macy's store, which is a department store, not a restaurant. None of the restaurant-search slot types (Rating, Amenity, Location, Restaurant_Name, Price, Hours, Dish, Cuisine) apply to this query."

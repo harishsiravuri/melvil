@@ -1,0 +1,1 @@
+"\n```\n\nThe query does not contain any specific restaurant-search slots. While \"fantastic\" is a positive sentiment, it doesn't map to any of the defined slot types (Rating, Amenity, Location, Restaurant_Name, Price, Hours, Dish, Cuisine). The query is too vague to extract structured search parameters."

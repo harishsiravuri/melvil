@@ -1,0 +1,8 @@
+{
+ "test_accuracy": 0.84,
+ "cost_usd": 0.1424,
+ "arm": "c",
+ "task": "massive",
+ "family": "f2",
+ "seed": 0
+}

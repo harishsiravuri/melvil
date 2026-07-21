@@ -1,0 +1,36 @@
+{
+ "test_accuracy": 0.9533,
+ "best_dev": 0.95,
+ "seed_dev": 0.94,
+ "curve": [
+  {
+   "metric_calls": 0,
+   "dev": 0.94
+  },
+  {
+   "metric_calls": 109,
+   "dev": 0.95
+  },
+  {
+   "metric_calls": 269,
+   "dev": 0.95
+  },
+  {
+   "metric_calls": 375,
+   "dev": 0.95
+  },
+  {
+   "metric_calls": 490,
+   "dev": 0.92
+  },
+  {
+   "metric_calls": 644,
+   "dev": 0.95
+  }
+ ],
+ "cost_usd": 1.5206,
+ "arm": "b",
+ "task": "gsm8k",
+ "family": "f2",
+ "seed": 43
+}

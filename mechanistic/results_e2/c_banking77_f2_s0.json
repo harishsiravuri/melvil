@@ -1,0 +1,8 @@
+{
+ "test_accuracy": 0.7533,
+ "cost_usd": 0.0,
+ "arm": "c",
+ "task": "banking77",
+ "family": "f2",
+ "seed": 0
+}

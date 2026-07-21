@@ -1,0 +1,10 @@
+{
+ "arm": "codebook",
+ "family": "f2",
+ "seed": 30,
+ "test_slot_f1": 0.7488,
+ "seed_dev": 0.6622,
+ "best_dev": 0.707,
+ "n_components": 10,
+ "cost_usd": 1.5984
+}

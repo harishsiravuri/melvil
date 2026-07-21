@@ -216,6 +216,31 @@ Paper sentence: *"Early stopping is a dial, not a free lunch: halving the
 budget costs ~3 test points, because reflective evolution's later accepts are
 not noise."* C5 survives only as that explicit trade-off table row.
 
+## E3 — structure, extraction family (C3) · **COMPLETE** ($13.78)
+
+MIT Restaurant slot filling (tner parquet; text-in/JSON-out; micro slot-F1 on
+type-sensitive normalized-span multisets), GEPA B1, free-text vs per-field
+codebook, both families, seeds 30–34 (paired).
+
+| family | free-text | per-field codebook | paired Δ |
+|---|---|---|---|
+| F1 | 0.636 ± 0.018 | 0.674 ± 0.030 | +0.037 ± 0.039 |
+| F2 | 0.685 ± 0.029 | 0.727 ± 0.029 | **+0.042 ± 0.019** |
+
+**Verdict: C3 RESOLVED as shape-match — the campaign's first positive
+structure result.** Per-field structure wins on extraction (+4 slot-F1 points,
+CI-separated on F2, same direction on F1) while per-label structure loses on
+classification (benchmark confirmation + E4). The classification budget cells
+(from E1) complete the other half of C3: structure does not recover at 2–4×
+budget either (vanilla itself gains only +1.4 at 4×). Paper sentence:
+*"Prompt structure pays when it mirrors the task's output structure — per-field
+prompts beat free text on slot filling in both model families — and costs when
+it merely mirrors the label space, as in classification."* Caveat, stated: the
+codebook arm's seed includes per-field definitions the free seed lacks (seed
+dev 0.65 vs 0.62), so the +4 bundles structured seeding with structured
+evolution; we treat the bundle as the method, and note the free arm had the
+full budget to absorb definitions and did not close the gap.
+
 ## Pending experiments
 - **E1 front-loading (C1)** — harness next; its runs also enrich this
   simulation pool.
