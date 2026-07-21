@@ -1,0 +1,710 @@
+{
+ "sensitivity": {
+  "per_cell": {
+   "bbh_geometric|800|f1": {
+    "v1": {
+     "median": 0.5,
+     "mean": 0.551,
+     "ci95": 0.189,
+     "n": 5
+    },
+    "v2": {
+     "median": 0.12,
+     "mean": 0.12,
+     "ci95": 0.037,
+     "n": 5
+    },
+    "v3": {
+     "median": 0.5,
+     "mean": 0.551,
+     "ci95": 0.189,
+     "n": 5
+    }
+   },
+   "trec|800|f1": {
+    "v1": {
+     "median": 0.639,
+     "mean": 0.551,
+     "ci95": 0.319,
+     "n": 5
+    },
+    "v2": {
+     "median": 0.23,
+     "mean": 0.184,
+     "ci95": 0.105,
+     "n": 5
+    },
+    "v3": {
+     "median": 0.639,
+     "mean": 0.606,
+     "ci95": 0.235,
+     "n": 5
+    }
+   },
+   "gsm8k|3200|f1": {
+    "v1": {
+     "median": 0.0,
+     "mean": 0.117,
+     "ci95": 0.142,
+     "n": 5
+    },
+    "v2": {
+     "median": 0.0,
+     "mean": 0.004,
+     "ci95": 0.005,
+     "n": 5
+    },
+    "v3": {
+     "median": 0.333,
+     "mean": 0.517,
+     "ci95": 0.275,
+     "n": 5
+    }
+   },
+   "banking77|1600|f1": {
+    "v1": {
+     "median": 0.0,
+     "mean": 0.067,
+     "ci95": 0.131,
+     "n": 5
+    },
+    "v2": {
+     "median": 0.0,
+     "mean": 0.002,
+     "ci95": 0.004,
+     "n": 5
+    },
+    "v3": {
+     "median": 0.4,
+     "mean": 0.5,
+     "ci95": 0.28,
+     "n": 5
+    }
+   },
+   "bbh_geometric|1600|f1": {
+    "v1": {
+     "median": 0.462,
+     "mean": 0.487,
+     "ci95": 0.139,
+     "n": 5
+    },
+    "v2": {
+     "median": 0.12,
+     "mean": 0.12,
+     "ci95": 0.037,
+     "n": 5
+    },
+    "v3": {
+     "median": 0.462,
+     "mean": 0.487,
+     "ci95": 0.139,
+     "n": 5
+    }
+   },
+   "massive|3200|f1": {
+    "v1": {
+     "median": 0.286,
+     "mean": 0.275,
+     "ci95": 0.095,
+     "n": 5
+    },
+    "v2": {
+     "median": 0.02,
+     "mean": 0.02,
+     "ci95": 0.006,
+     "n": 5
+    },
+    "v3": {
+     "median": 0.286,
+     "mean": 0.275,
+     "ci95": 0.095,
+     "n": 5
+    }
+   },
+   "gsm8k|800|f2": {
+    "v1": {
+     "median": 1.0,
+     "mean": 0.833,
+     "ci95": 0.327,
+     "n": 3
+    },
+    "v2": {
+     "median": 0.03,
+     "mean": 0.023,
+     "ci95": 0.013,
+     "n": 3
+    },
+    "v3": {
+     "median": 1.0,
+     "mean": 0.833,
+     "ci95": 0.327,
+     "n": 3
+    }
+   },
+   "trec|1600|f1": {
+    "v1": {
+     "median": 0.639,
+     "mean": 0.522,
+     "ci95": 0.307,
+     "n": 5
+    },
+    "v2": {
+     "median": 0.23,
+     "mean": 0.184,
+     "ci95": 0.105,
+     "n": 5
+    },
+    "v3": {
+     "median": 0.639,
+     "mean": 0.575,
+     "ci95": 0.228,
+     "n": 5
+    }
+   },
+   "gsm8k|800|f1": {
+    "v1": {
+     "median": 0.25,
+     "mean": 0.25,
+     "ci95": 0.283,
+     "n": 4
+    },
+    "v2": {
+     "median": 0.005,
+     "mean": 0.005,
+     "ci95": 0.006,
+     "n": 4
+    },
+    "v3": {
+     "median": 0.5,
+     "mean": 0.583,
+     "ci95": 0.283,
+     "n": 4
+    }
+   },
+   "banking77|800|f2": {
+    "v1": {
+     "median": 0.0,
+     "mean": 0.03,
+     "ci95": 0.059,
+     "n": 3
+    },
+    "v2": {
+     "median": 0.0,
+     "mean": 0.003,
+     "ci95": 0.007,
+     "n": 3
+    },
+    "v3": {
+     "median": 0.333,
+     "mean": 0.475,
+     "ci95": 0.533,
+     "n": 3
+    }
+   },
+   "bbh_geometric|3200|f1": {
+    "v1": {
+     "median": 0.462,
+     "mean": 0.45,
+     "ci95": 0.123,
+     "n": 5
+    },
+    "v2": {
+     "median": 0.12,
+     "mean": 0.12,
+     "ci95": 0.037,
+     "n": 5
+    },
+    "v3": {
+     "median": 0.462,
+     "mean": 0.45,
+     "ci95": 0.123,
+     "n": 5
+    }
+   },
+   "banking77|3200|f1": {
+    "v1": {
+     "median": 0.0,
+     "mean": 0.04,
+     "ci95": 0.078,
+     "n": 5
+    },
+    "v2": {
+     "median": 0.0,
+     "mean": 0.002,
+     "ci95": 0.004,
+     "n": 5
+    },
+    "v3": {
+     "median": 0.4,
+     "mean": 0.412,
+     "ci95": 0.245,
+     "n": 5
+    }
+   },
+   "massive|1600|f2": {
+    "v1": {
+     "median": 0.333,
+     "mean": 0.292,
+     "ci95": 0.125,
+     "n": 3
+    },
+    "v2": {
+     "median": 0.01,
+     "mean": 0.017,
+     "ci95": 0.013,
+     "n": 3
+    },
+    "v3": {
+     "median": 0.333,
+     "mean": 0.292,
+     "ci95": 0.125,
+     "n": 3
+    }
+   },
+   "gsm8k|1600|f2": {
+    "v1": {
+     "median": 1.0,
+     "mean": 0.833,
+     "ci95": 0.327,
+     "n": 3
+    },
+    "v2": {
+     "median": 0.03,
+     "mean": 0.023,
+     "ci95": 0.013,
+     "n": 3
+    },
+    "v3": {
+     "median": 1.0,
+     "mean": 0.833,
+     "ci95": 0.327,
+     "n": 3
+    }
+   },
+   "massive|800|f2": {
+    "v1": {
+     "median": 0.5,
+     "mean": 0.5,
+     "ci95": 0.0,
+     "n": 3
+    },
+    "v2": {
+     "median": 0.01,
+     "mean": 0.017,
+     "ci95": 0.013,
+     "n": 3
+    },
+    "v3": {
+     "median": 0.5,
+     "mean": 0.5,
+     "ci95": 0.0,
+     "n": 3
+    }
+   },
+   "massive|800|f1": {
+    "v1": {
+     "median": 0.333,
+     "mean": 0.412,
+     "ci95": 0.199,
+     "n": 5
+    },
+    "v2": {
+     "median": 0.02,
+     "mean": 0.02,
+     "ci95": 0.006,
+     "n": 5
+    },
+    "v3": {
+     "median": 0.333,
+     "mean": 0.412,
+     "ci95": 0.199,
+     "n": 5
+    }
+   },
+   "bbh_geometric|800|f2": {
+    "v1": {
+     "median": 0.438,
+     "mean": 0.459,
+     "ci95": 0.262,
+     "n": 3
+    },
+    "v2": {
+     "median": 0.14,
+     "mean": 0.173,
+     "ci95": 0.107,
+     "n": 3
+    },
+    "v3": {
+     "median": 0.438,
+     "mean": 0.459,
+     "ci95": 0.262,
+     "n": 3
+    }
+   },
+   "banking77|1600|f2": {
+    "v1": {
+     "median": 0.0,
+     "mean": 0.03,
+     "ci95": 0.059,
+     "n": 3
+    },
+    "v2": {
+     "median": 0.0,
+     "mean": 0.003,
+     "ci95": 0.007,
+     "n": 3
+    },
+    "v3": {
+     "median": 0.25,
+     "mean": 0.28,
+     "ci95": 0.233,
+     "n": 3
+    }
+   },
+   "gsm8k|1600|f1": {
+    "v1": {
+     "median": 0.125,
+     "mean": 0.187,
+     "ci95": 0.235,
+     "n": 4
+    },
+    "v2": {
+     "median": 0.005,
+     "mean": 0.005,
+     "ci95": 0.006,
+     "n": 4
+    },
+    "v3": {
+     "median": 0.417,
+     "mean": 0.437,
+     "ci95": 0.181,
+     "n": 4
+    }
+   },
+   "massive|1600|f1": {
+    "v1": {
+     "median": 0.333,
+     "mean": 0.314,
+     "ci95": 0.091,
+     "n": 5
+    },
+    "v2": {
+     "median": 0.02,
+     "mean": 0.02,
+     "ci95": 0.006,
+     "n": 5
+    },
+    "v3": {
+     "median": 0.333,
+     "mean": 0.314,
+     "ci95": 0.091,
+     "n": 5
+    }
+   },
+   "bbh_geometric|1600|f2": {
+    "v1": {
+     "median": 0.318,
+     "mean": 0.415,
+     "ci95": 0.284,
+     "n": 3
+    },
+    "v2": {
+     "median": 0.14,
+     "mean": 0.173,
+     "ci95": 0.107,
+     "n": 3
+    },
+    "v3": {
+     "median": 0.318,
+     "mean": 0.415,
+     "ci95": 0.284,
+     "n": 3
+    }
+   },
+   "trec|3200|f1": {
+    "v1": {
+     "median": 0.622,
+     "mean": 0.492,
+     "ci95": 0.282,
+     "n": 5
+    },
+    "v2": {
+     "median": 0.23,
+     "mean": 0.184,
+     "ci95": 0.105,
+     "n": 5
+    },
+    "v3": {
+     "median": 0.622,
+     "mean": 0.539,
+     "ci95": 0.208,
+     "n": 5
+    }
+   },
+   "trec|1600|f2": {
+    "v1": {
+     "median": 0.4,
+     "mean": 0.471,
+     "ci95": 0.353,
+     "n": 3
+    },
+    "v2": {
+     "median": 0.06,
+     "mean": 0.073,
+     "ci95": 0.058,
+     "n": 3
+    },
+    "v3": {
+     "median": 0.4,
+     "mean": 0.471,
+     "ci95": 0.353,
+     "n": 3
+    }
+   },
+   "banking77|800|f1": {
+    "v1": {
+     "median": 0.0,
+     "mean": 0.2,
+     "ci95": 0.392,
+     "n": 5
+    },
+    "v2": {
+     "median": 0.0,
+     "mean": 0.002,
+     "ci95": 0.004,
+     "n": 5
+    },
+    "v3": {
+     "median": 1.0,
+     "mean": 0.713,
+     "ci95": 0.352,
+     "n": 5
+    }
+   },
+   "trec|800|f2": {
+    "v1": {
+     "median": 0.6,
+     "mean": 0.6,
+     "ci95": 0.453,
+     "n": 3
+    },
+    "v2": {
+     "median": 0.06,
+     "mean": 0.073,
+     "ci95": 0.058,
+     "n": 3
+    },
+    "v3": {
+     "median": 0.6,
+     "mean": 0.6,
+     "ci95": 0.453,
+     "n": 3
+    }
+   }
+  },
+  "pooled": {
+   "v1": {
+    "median": 0.333,
+    "mean": 0.331,
+    "ci95": 0.065,
+    "n": 73
+   },
+   "v2": {
+    "median": 0.02,
+    "mean": 0.068,
+    "ci95": 0.021,
+    "n": 73
+   },
+   "v3": {
+    "median": 0.417,
+    "mean": 0.491,
+    "ci95": 0.057,
+    "n": 73
+   }
+  },
+  "by_task_type": {
+   "bbh-reasoning": {
+    "v1": {
+     "median": 0.462,
+     "mean": 0.479,
+     "ci95": 0.077,
+     "n": 21
+    },
+    "v2": {
+     "median": 0.12,
+     "mean": 0.135,
+     "ci95": 0.025,
+     "n": 21
+    },
+    "v3": {
+     "median": 0.462,
+     "mean": 0.479,
+     "ci95": 0.077,
+     "n": 21
+    }
+   },
+   "classification": {
+    "v1": {
+     "median": 0.333,
+     "mean": 0.32,
+     "ci95": 0.074,
+     "n": 63
+    },
+    "v2": {
+     "median": 0.02,
+     "mean": 0.058,
+     "ci95": 0.023,
+     "n": 63
+    },
+    "v3": {
+     "median": 0.4,
+     "mean": 0.47,
+     "ci95": 0.067,
+     "n": 63
+    }
+   },
+   "math-qa": {
+    "v1": {
+     "median": 0.333,
+     "mean": 0.386,
+     "ci95": 0.173,
+     "n": 19
+    },
+    "v2": {
+     "median": 0.01,
+     "mean": 0.011,
+     "ci95": 0.005,
+     "n": 19
+    },
+    "v3": {
+     "median": 0.5,
+     "mean": 0.614,
+     "ci95": 0.132,
+     "n": 19
+    }
+   }
+  },
+  "exclusions": {
+   "bbh_geometric|800|f1": {
+    "total": 5,
+    "excluded_flat": 0
+   },
+   "trec|800|f1": {
+    "total": 5,
+    "excluded_flat": 0
+   },
+   "gsm8k|3200|f1": {
+    "total": 5,
+    "excluded_flat": 0
+   },
+   "banking77|1600|f1": {
+    "total": 5,
+    "excluded_flat": 0
+   },
+   "bbh_geometric|1600|f1": {
+    "total": 5,
+    "excluded_flat": 0
+   },
+   "massive|3200|f1": {
+    "total": 5,
+    "excluded_flat": 0
+   },
+   "gsm8k|800|f2": {
+    "total": 3,
+    "excluded_flat": 0
+   },
+   "trec|1600|f1": {
+    "total": 5,
+    "excluded_flat": 0
+   },
+   "gsm8k|800|f1": {
+    "total": 5,
+    "excluded_flat": 1
+   },
+   "banking77|800|f2": {
+    "total": 3,
+    "excluded_flat": 0
+   },
+   "bbh_geometric|3200|f1": {
+    "total": 5,
+    "excluded_flat": 0
+   },
+   "banking77|3200|f1": {
+    "total": 5,
+    "excluded_flat": 0
+   },
+   "massive|1600|f2": {
+    "total": 3,
+    "excluded_flat": 0
+   },
+   "gsm8k|1600|f2": {
+    "total": 3,
+    "excluded_flat": 0
+   },
+   "massive|800|f2": {
+    "total": 3,
+    "excluded_flat": 0
+   },
+   "massive|800|f1": {
+    "total": 5,
+    "excluded_flat": 0
+   },
+   "bbh_geometric|800|f2": {
+    "total": 3,
+    "excluded_flat": 0
+   },
+   "banking77|1600|f2": {
+    "total": 3,
+    "excluded_flat": 0
+   },
+   "gsm8k|1600|f1": {
+    "total": 5,
+    "excluded_flat": 1
+   },
+   "massive|1600|f1": {
+    "total": 5,
+    "excluded_flat": 0
+   },
+   "bbh_geometric|1600|f2": {
+    "total": 3,
+    "excluded_flat": 0
+   },
+   "trec|3200|f1": {
+    "total": 5,
+    "excluded_flat": 0
+   },
+   "trec|1600|f2": {
+    "total": 3,
+    "excluded_flat": 0
+   },
+   "banking77|800|f1": {
+    "total": 5,
+    "excluded_flat": 0
+   },
+   "trec|800|f2": {
+    "total": 3,
+    "excluded_flat": 0
+   }
+  }
+ },
+ "rank_correlation": {
+  "per_F": {
+   "0.15": {
+    "mean_spearman": 0.419,
+    "ci95": 0.276,
+    "n_tasks": 8
+   },
+   "0.25": {
+    "mean_spearman": 0.314,
+    "ci95": 0.258,
+    "n_tasks": 9
+   },
+   "0.4": {
+    "mean_spearman": 0.535,
+    "ci95": 0.255,
+    "n_tasks": 9
+   }
+  },
+  "note": "Spearman(dev@F*T, dev@T) across seeds, per task, mean"
+ }
+}

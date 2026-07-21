@@ -66,6 +66,18 @@ FREE_SEED = (
     "Use exact substrings of the query; omit slot types that do not occur."
 )
 
+# Factorial control: the SAME slot definitions as the codebook, but delivered
+# as one free-text blob (not fielded components). Isolates DEFINITIONS from
+# STRUCTURE in the 2x2 (structure: blob|fielded) x (definitions: absent|present).
+FREE_SEED_WITH_DEFS = (
+    "Extract restaurant-search slots from the user query. The slot types, with "
+    "what each covers:\n"
+    + "\n".join(f"- {name}: {d}" for name, d in FIELD_DEFS.items())
+    + "\nReturn ONLY a JSON object mapping each slot type that occurs to a list of "
+    'the exact text spans, e.g. {"Cuisine": ["italian"], "Price": ["cheap"]}. '
+    "Use exact substrings of the query; omit slot types that do not occur."
+)
+
 
 def spans_from_bio(tokens: list[str], tags: list[int]) -> dict[str, list[str]]:
     out: dict[str, list[str]] = {}
@@ -215,6 +227,17 @@ def codebook_seed() -> dict[str, str]:
     return cand
 
 
+def codebook_seed_nodefs() -> dict[str, str]:
+    """Fielded structure with EMPTY per-field definitions (names only) — the
+    structure-without-definitions cell of the factorial."""
+    cand = {"task_instruction":
+            "Extract restaurant-search slots from the user query as exact text spans."}
+    for s2 in SLOTS:
+        cand[f"field::{s2}"] = ""
+    cand["boundary_rules"] = ""
+    return cand
+
+
 def run_cell(arm: str, family: str, seed: int) -> dict:
     out_path = RESULTS_DIR / f"{arm}_{family}_s{seed}.json"
     if out_path.exists():
@@ -228,7 +251,12 @@ def run_cell(arm: str, family: str, seed: int) -> dict:
     refl_lm = make_lm(fam["reflection"], 1.0, 8000, rollout_id=seed)
     t0, r0 = len(task_lm.history), len(refl_lm.history)
     adapter = ExtractionAdapter(task_lm, data["dev"])
-    seed_cand = {"instruction": FREE_SEED} if arm == "free" else codebook_seed()
+    seed_cand = {
+        "free": {"instruction": FREE_SEED},
+        "free_defs": {"instruction": FREE_SEED_WITH_DEFS},
+        "codebook": codebook_seed(),
+        "codebook_nodefs": codebook_seed_nodefs(),
+    }[arm]
     run_dir = RUNS_DIR / f"{arm}_{family}_s{seed}"
     run_dir.mkdir(parents=True, exist_ok=True)
     result = gepa.optimize(
@@ -274,6 +302,7 @@ def main() -> None:
     ap.add_argument("--prep", action="store_true")
     ap.add_argument("--run")  # arm:family:seed
     ap.add_argument("--stream", choices=("f1", "f2"))
+    ap.add_argument("--factorial", choices=("f1", "f2"))
     ap.add_argument("--analyze", action="store_true")
     args = ap.parse_args()
     if args.prep:
@@ -285,6 +314,11 @@ def main() -> None:
         for arm in ("free", "codebook"):
             for s in SEEDS:
                 run_cell(arm, args.stream, s)
+    elif args.factorial:
+        # the 2 NEW cells; existing free/codebook complete the 2x2
+        for arm in ("free_defs", "codebook_nodefs"):
+            for s in SEEDS:
+                run_cell(arm, args.factorial, s)
     elif args.analyze:
         analyze()
     else:

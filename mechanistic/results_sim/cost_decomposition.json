@@ -1,0 +1,163 @@
+{
+ "representative_task": "banking77",
+ "draft": {
+  "f1": {
+   "arms": {
+    "seed": {
+     "task_calls": 100,
+     "writer_calls": 0,
+     "task_tokens": [
+      16030,
+      300
+     ],
+     "writer_tokens": [
+      0,
+      0
+     ],
+     "opt_usd": 0.0069
+    },
+    "draft_x1": {
+     "task_calls": 200,
+     "writer_calls": 1,
+     "task_tokens": [
+      105980,
+      600
+     ],
+     "writer_tokens": [
+      911,
+      886
+     ],
+     "opt_usd": 0.0523
+    },
+    "draft_x2": {
+     "task_calls": 300,
+     "writer_calls": 2,
+     "task_tokens": [
+      222690,
+      900
+     ],
+     "writer_tokens": [
+      2561,
+      2040
+     ],
+     "opt_usd": 0.1119
+    }
+   },
+   "diagnosis_ctx_tokens_mean": [
+    600,
+    600
+   ]
+  },
+  "f2": {
+   "arms": {
+    "seed": {
+     "task_calls": 100,
+     "writer_calls": 0,
+     "task_tokens": [
+      16030,
+      300
+     ],
+     "writer_tokens": [
+      0,
+      0
+     ],
+     "opt_usd": 0.0175
+    },
+    "draft_x1": {
+     "task_calls": 200,
+     "writer_calls": 1,
+     "task_tokens": [
+      59420,
+      600
+     ],
+     "writer_tokens": [
+      911,
+      421
+     ],
+     "opt_usd": 0.0714
+    },
+    "draft_x2": {
+     "task_calls": 300,
+     "writer_calls": 2,
+     "task_tokens": [
+      128270,
+      900
+     ],
+     "writer_tokens": [
+      2096,
+      1096
+     ],
+     "opt_usd": 0.1555
+    }
+   },
+   "diagnosis_ctx_tokens_mean": [
+    600,
+    600
+   ]
+  }
+ },
+ "gepa": {
+  "f1": {
+   "task_calls_metric": 890,
+   "writer_calls": 11,
+   "task_tokens": [
+    509226,
+    3792
+   ],
+   "writer_tokens": [
+    6379,
+    6761
+   ],
+   "cost_usd": 0.2766,
+   "wall_clock_s": 235.3
+  },
+  "f2": {
+   "task_calls_metric": 851,
+   "writer_calls": 7,
+   "task_tokens": [
+    543413,
+    6181
+   ],
+   "writer_tokens": [
+    5222,
+    4914
+   ],
+   "cost_usd": 0.6637,
+   "wall_clock_s": 183.3
+  }
+ },
+ "diagnosis_sizes": {
+  "banking77": {
+   "n_labels": 25,
+   "diagnosis_tokens": 589
+  },
+  "ag_news": {
+   "n_labels": 4,
+   "diagnosis_tokens": 528
+  },
+  "emotion": {
+   "n_labels": 6,
+   "diagnosis_tokens": 465
+  },
+  "trec": {
+   "n_labels": 6,
+   "diagnosis_tokens": 313
+  },
+  "clinc150": {
+   "n_labels": 30,
+   "diagnosis_tokens": 433
+  },
+  "massive": {
+   "n_labels": 30,
+   "diagnosis_tokens": 572
+  },
+  "stance_abortion": {
+   "n_labels": 3,
+   "diagnosis_tokens": 436
+  },
+  "sst5": {
+   "n_labels": 5,
+   "diagnosis_tokens": 482
+  }
+ }
+}
