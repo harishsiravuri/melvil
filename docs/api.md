@@ -63,16 +63,20 @@ Error-grounded prompt writing, no evolutionary search: one dev evaluation of
 the seed prompt → structured diagnosis (per-label accuracy, confusion, top
 confused pairs with concrete examples) → one reflection-model call writes the
 complete replacement prompt; repeated `iterations` times (2 = the benchmarked
-arm: 60–91% of full GEPA's gain at ~1/10 its cost; see mechanistic/RESULTS.md).
-Returns the same `PromptArtifact` type as `optimize()`; the run directory gets
-`diagnosis_x<i>.txt` reports; diagnoses are also stored in the artifact
+arm: recovers 60% (GPT) / 91% (Claude) of full GEPA's gain at ~1/4–1/3 its
+optimization cost — ~40% GPT / ~23% Claude; `iterations=1` is ~1/10. Against
+seed-matched GEPA: one CI-separated win (Banking77), ties on most, losses on
+the hardest few. See mechanistic/RESULTS.md). `iterations` is a cost-quality
+dial. Returns the same `PromptArtifact` type as `optimize()`; the run directory
+gets `diagnosis_x<i>.txt` reports; diagnoses are also stored in the artifact
 (`artifact.config["draft_diagnoses"]`). Only `dev` drives the procedure.
 
 ### `estimate_draft_cost(spec, dev, config, iterations=2) -> CostEstimate`
 Dry-run upper bound for one `draft()` call.
 
 Recommended workflow: `draft` → `screen(artifact, dev, cfg)` → escalate to
-`optimize()` only if headroom remains and it's worth ~10× the spend.
+`optimize()` only if headroom remains and it's worth the extra spend (full GEPA
+costs ~2–4× a two-round draft).
 
 ## optimize
 

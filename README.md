@@ -2,11 +2,11 @@
 
 **Labeled examples + a label taxonomy in → an optimized, versioned classifier prompt out.**
 
-One error-grounded rewrite captures most of what full prompt evolution delivers, at
-about a tenth of the cost — 60–91% of GEPA's gain in our frozen-protocol benchmarks
-(model-family dependent), beating full GEPA outright on 2 of 8 tasks
-([the numbers](mechanistic/RESULTS.md)). That is what `mv.draft()` does, and it is
-where melvil starts:
+An error-grounded rewrite is a competitive, roughly 2–4× cheaper alternative to full
+prompt evolution. `mv.draft()` recovers 60% (GPT family) to 91% (Claude family) of
+GEPA's gain in our frozen-protocol benchmarks; against **seed-matched** GEPA it is one
+CI-separated win (Banking77), a statistical tie on most datasets, and behind only on
+the hardest few ([the numbers](mechanistic/RESULTS.md)). It is where melvil starts:
 
 ```python
 import melvil as mv
@@ -26,6 +26,11 @@ artifact.save("ticket_intents.v1.json")
 model write a complete replacement prompt, and repeats once (`iterations=2`, the
 benchmarked arm). The diagnosis reports are saved in the run directory. Full GEPA
 evolution (`mv.optimize()`) remains fully supported — as the escalation path.
+
+`iterations` is a cost-quality dial. The two-round default costs ~1/4 to 1/3 of a
+full light-budget `optimize()` run (measured 40% on the GPT family, 23% on Claude);
+the single-round variant (`iterations=1`) costs ~1/10 (11–19%) and recovers a bit
+less of the gain.
 
 *Named for [Melvil Dewey](https://en.wikipedia.org/wiki/Melvil_Dewey), who gave
 libraries a system for putting things in the right category.*
@@ -59,11 +64,12 @@ if check.verdict == "headroom":
 ```
 
 Decision rule: draft first. If `screen()` says meaningful headroom remains AND the
-extra accuracy is worth roughly 10× the spend, run `optimize()` — full GEPA at full
-budget still wins most tasks on absolute accuracy (it beat `draft` on 6 of 8 tasks
-in the frozen pass; `draft` recovered 60–91% of its gain and won the other 2).
-Honest caveat on `start_from`: draft-then-evolve is an UNTESTED combination — our
-measured results cover draft alone and optimize alone.
+extra accuracy is worth the extra spend (full GEPA costs ~2–4× a two-round draft),
+run `optimize()`. On absolute accuracy the two are close: against seed-matched GEPA,
+draft is a CI-separated win on one dataset (Banking77), a statistical tie on most, and
+behind only on the hardest few — so escalate when those hardest cases are the ones you
+care about. Honest caveat on `start_from`: draft-then-evolve is an UNTESTED
+combination — our measured results cover draft alone and optimize alone.
 
 ## What the benchmarks say (read this before choosing features)
 

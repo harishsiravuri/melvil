@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "pymelvil"
-version = "0.4.0"
+version = "0.4.1"
 description = "Optimized, versioned classifier prompts from labeled examples — GEPA prompt evolution with a classification-specific layer."
 readme = "README.md"
 license = { file = "LICENSE" }

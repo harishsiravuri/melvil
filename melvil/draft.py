@@ -5,9 +5,12 @@ accuracy, confusion matrix, top confused pairs with concrete misclassified
 examples, aggregate error patterns) -> ONE reflection-model call writes the
 complete replacement prompt. A second diagnose+rewrite iteration runs by
 default (``iterations=2`` — the arm confirmed in our frozen-protocol
-benchmarks: 60% (gpt-4.1 family) to 91% (claude-4.5 family) of full GEPA's
-gain at roughly a tenth of its optimization cost, beating full GEPA outright
-on 2 of 8 tasks; see benchmarks and mechanistic/RESULTS.md).
+benchmarks: recovers 60% (gpt-4.1 family) to 91% (claude-4.5 family) of full
+GEPA's gain at roughly a quarter-to-third of its optimization cost (~40% GPT,
+~23% Claude; the single-round ``iterations=1`` variant is ~1/10). Against
+seed-matched GEPA it is one CI-separated win (banking77), a statistical tie on
+most datasets, and behind on the hardest few — a competitive, ~2-4x cheaper
+alternative, not a clean win; see benchmarks and mechanistic/RESULTS.md).
 
 The procedure and prompts are ported verbatim from the campaign's E8 runner
 (mechanistic/e8_diagnose.py) — the code that produced the frozen numbers.
@@ -95,12 +98,14 @@ def draft(
     parent: PromptArtifact | None = None,
 ) -> PromptArtifact:
     """Write an optimized classifier prompt from an error diagnosis — no
-    evolutionary search. Cost: ``iterations`` dev evaluations + reflection
-    calls (roughly a tenth of a light-budget ``optimize()`` run).
+    evolutionary search. Cost: ``iterations``+1 dev evaluations + ``iterations``
+    reflection calls. The two-round default costs ~1/4 to 1/3 of a light-budget
+    ``optimize()`` run (measured ~40% GPT family / ~23% Claude family);
+    ``iterations=1`` costs ~1/10. Treat ``iterations`` as a cost-quality dial.
 
     The recommended workflow is draft -> ``screen(artifact, ...)`` -> escalate
     to ``optimize()`` only if meaningful headroom remains and the extra
-    accuracy is worth ~10x the spend.
+    accuracy is worth the extra spend (full GEPA costs ~2-4x a two-round draft).
 
     ``train`` is accepted for signature parity and label validation but the
     procedure only uses ``dev`` (as in the benchmarked arm). The run directory
