@@ -300,6 +300,30 @@ reflections already exhibit every behavior the lessons prescribe, explaining
 why injection changes nothing (Δ ≤ 1.4 points, both families) while the same
 text at inference costs 11–17 points."*
 
+## E9 — is it the aggregated diagnosis, or removing the loop? · **COMPLETE** ($8.24)
+
+`draft()` differs from vanilla GEPA in two ways at once: it sees an **aggregated diagnosis** (per-label accuracy + top confused pairs with concrete examples, over the whole dev set) where GEPA sees raw failing examples from a 3-example reflection minibatch; and it **writes once or twice with no propose-and-rescore loop** where GEPA re-scores every proposal. This ablation adds the arm that separates them.
+
+**Arm B (new): GEPA + diagnosis-augmented reflection.** Vanilla free-text-blob GEPA (`Features.none()` — not the codebook layer, no per-component targeting) whose reflection prompt is gepa's DEFAULT template plus the same aggregated diagnosis text `draft()` computes (literally `melvil.draft.build_diagnosis`, so the information is identical by construction). The diagnosis is rebuilt at each reflection from the full-dev predictions GEPA has **already** computed, so arm B spends **zero extra metric calls**: measured 856 mean metric calls vs vanilla's 861 — budget-matched at B1=800. Diagnosis present in 20/20 runs, 9.2 reflections/run. F1 family, 5 paired seeds (20–24); A and C reuse the seed-matched runs from the E8/paper-support set.
+
+| task | A vanilla | B diag-in-loop | C draft ×2 | B − A [95% CI] | C − A [95% CI] |
+|---|---|---|---|---|---|
+| banking77 | 0.811 | **0.848** | 0.843 | +0.037 [+0.021, +0.053]* | +0.031 [+0.010, +0.052]* |
+| trec | 0.877 | **0.877** | 0.852 | -0.000 [-0.010, +0.010] | -0.025 [-0.064, +0.013] |
+| massive | 0.862 | **0.883** | 0.867 | +0.021 [+0.012, +0.031]* | +0.005 [-0.011, +0.020] |
+| stance_abortion | 0.636 | **0.640** | 0.473 | +0.004 [-0.044, +0.053] | -0.163 [-0.201, -0.124]* |
+| **pooled (n=20)** | | | | **+0.0156 ± 0.0138** | **-0.0381 ± 0.0364** |
+
+`*` = 95% CI excludes 0; CIs are seed-paired (n=5 per task, the unit at which the arms differ). Also B − C pooled = **+0.054 ± 0.033** (CI excludes 0).
+
+**Verdict: the aggregated diagnosis is the active ingredient; removing the loop is a cost lever that costs accuracy.** Giving GEPA the same aggregated diagnosis improves it at matched budget (+1.6 ± 1.4 points pooled, CI-separated wins on banking77 +3.7 and massive +2.1, no task worse), and diagnosis-in-loop beats the loop-free draft everywhere (B − C = +5.4 ± 3.3). Draft itself sits *below* vanilla GEPA on these four tasks (C − A = −3.8 ± 3.6), almost entirely because of stance_abortion. That task is the cleanest single reading: B (0.640) ≈ A (0.636) ≫ C (0.473) — the diagnosis in the loop neither rescues nor harms it, so draft's collapse there is attributable to **loop removal**, not to missing information. Per the pre-registered branches, this is the second one ("B moves toward C → the active ingredient is the aggregated diagnosis"), except B moved *past* C.
+
+**Sentence for the paper:** *"Ablating the two differences apart, the aggregated error diagnosis — not the removal of the propose-and-rescore loop — is what carries the benefit: injecting the same diagnosis into GEPA's reflection prompt improves it by 1.6 ± 1.4 points at matched budget and beats the loop-free variant by 5.4 ± 3.3, while one-shot writing is best understood as a 2–4× cost reduction that trades accuracy on tasks needing global restructuring."*
+
+**Consequences for the contribution.** (i) The transferable insight is *aggregate the error structure before asking for a rewrite* — this is ours and it is nearly free: ~600 diagnosis tokens per reflection buys +1.6 points on an unmodified optimizer. (ii) `draft()`'s claim narrows cleanly to economics: competitive accuracy at a fraction of the cost, not an accuracy win. (iii) A diagnosis-augmented `optimize()` is the accuracy-optimal configuration we have measured and is a natural v0.5 candidate (not shipped — this is 4 tasks, one family).
+
+**Scope caveats for the manuscript.** The four tasks were chosen to span draft's outcomes in the frozen 8-task pass (a win, a loss, a tie, its worst loss), so the pooled C − A here is *not* the 8-task figure (that was −2.9 points, 0.747 vs 0.776); this set deliberately over-weights stance_abortion. GPT family only, B1=800 only, n=5 seeds. Whether the diagnosis helps GEPA on the Claude family, at larger budgets, or on non-classification tasks is untested.
+
 ## Paper-support computations (added post-campaign; free/cache-backed except items 2 & 5)
 
 Five follow-ups requested for the paper's central table and appendices. Two of them **corrected earlier claims** — flagged inline. Total new spend $14.5 (seed-matched GPT GEPA $11.0 + extraction factorial $3.4; all bootstrap/cost/sensitivity work was cache-backed at $0).

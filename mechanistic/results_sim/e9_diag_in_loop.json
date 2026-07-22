@@ -1,0 +1,68 @@
+{
+ "seeds": [
+  20,
+  21,
+  22,
+  23,
+  24
+ ],
+ "budget": 800,
+ "family": "f1",
+ "per_task": {
+  "banking77": {
+   "n_seeds": 5,
+   "A_mean": 0.8113,
+   "B_mean": 0.848,
+   "C_mean": 0.8427,
+   "B_minus_A": 0.0367,
+   "B_minus_A_ci95": 0.0162,
+   "C_minus_A": 0.0313,
+   "C_minus_A_ci95": 0.0211,
+   "B_minus_A_significant": true,
+   "C_minus_A_significant": true
+  },
+  "trec": {
+   "n_seeds": 5,
+   "A_mean": 0.8773,
+   "B_mean": 0.8773,
+   "C_mean": 0.852,
+   "B_minus_A": -0.0,
+   "B_minus_A_ci95": 0.0103,
+   "C_minus_A": -0.0254,
+   "C_minus_A_ci95": 0.0384,
+   "B_minus_A_significant": false,
+   "C_minus_A_significant": false
+  },
+  "massive": {
+   "n_seeds": 5,
+   "A_mean": 0.862,
+   "B_mean": 0.8833,
+   "C_mean": 0.8667,
+   "B_minus_A": 0.0213,
+   "B_minus_A_ci95": 0.0094,
+   "C_minus_A": 0.0047,
+   "C_minus_A_ci95": 0.0156,
+   "B_minus_A_significant": true,
+   "C_minus_A_significant": false
+  },
+  "stance_abortion": {
+   "n_seeds": 5,
+   "A_mean": 0.6357,
+   "B_mean": 0.64,
+   "C_mean": 0.4728,
+   "B_minus_A": 0.0043,
+   "B_minus_A_ci95": 0.0485,
+   "C_minus_A": -0.1629,
+   "C_minus_A_ci95": 0.0384,
+   "B_minus_A_significant": false,
+   "C_minus_A_significant": true
+  }
+ },
+ "pooled": {
+  "B_minus_A": 0.0156,
+  "B_minus_A_ci95": 0.0138,
+  "C_minus_A": -0.0381,
+  "C_minus_A_ci95": 0.0364,
+  "n": 20
+ }
+}
