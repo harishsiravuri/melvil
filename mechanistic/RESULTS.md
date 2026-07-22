@@ -84,6 +84,8 @@ $42.62). Mean test accuracy across the 8 tasks:
 | F1 gpt-4.1-mini/4.1 | 0.703 | 0.740 | 0.747 | 0.776 | **60%** | ~10–15% of GEPA's |
 | F2 haiku-4.5/sonnet-4.5 | 0.742 | 0.761 | 0.771 | 0.774 | **91%** | ~10–15% of GEPA's |
 
+> **Cost note (corrected post-freeze, see Paper-support §4):** the "~10–15% of GEPA" figure is loose. Token-exact, draft-×2 *optimization* is ~40% (F1) / ~23% (F2) of GEPA-B1; the ~1/10 figure holds only for the single-rewrite ×1 variant on F2. The frozen accuracy numbers above are unchanged.
+
 Per-task recovery is strongly heterogeneous (F1: banking77 155%, massive 112%,
 trec 94% — but stance_abortion **−18%**, ag_news 24%, sst5 30%; F2: stance 86%,
 massive 82%, trec 47%, with banking77/emotion exceeding GEPA outright).
@@ -96,7 +98,8 @@ The ≥80–90%-recovery-at-≤15%-cost bar is met on F2 (91%) but not on F1's m
 discovers global strategies a one-shot diagnosis can't (stance_abortion, the
 same task that broke the per-label codebook). Paper sentence: *"A single
 error-grounded rewrite recovers 60–91% of GEPA's gain (family-dependent) at
-about a tenth of its cost — supporting a screen → diagnose-then-write →
+roughly a quarter-to-third of its optimization cost (a tenth for the single
+rewrite variant on cheaper reflection) — supporting a screen → diagnose-then-write →
 evolve-if-headroom pipeline — but on tasks requiring globally restructured
 prompts, iterative evolution remains necessary."* Iteration-pass numbers held
 under fresh seeds (banking77 0.849→0.843, trec 0.856→0.852). **Significance (paired bootstrap, added post-freeze; does NOT alter the frozen
@@ -112,7 +115,7 @@ F2: ag_news, trec, stance_abortion). This tightens the verdict rather than
 overturning it: draft matches full evolution wherever the task is easy or
 mid-difficulty, wins outright on the one large-taxonomy intent task, and is
 beaten only where global prompt restructuring matters — precisely the
-escalation boundary the library encodes (draft → screen → optimize).
+escalation boundary the library encodes (draft → screen → optimize). (The loss/tie split above uses the frozen unpaired pool; the seed-matched re-analysis in Paper-support §1–2 is the version to cite — it moves ag_news to a tie and trec to a loss, headline win on banking77 unchanged.)
 
 ### Iteration-phase record (pre-freeze)
 
@@ -238,6 +241,8 @@ codebook, both families, seeds 30–34 (paired).
 | F1 | 0.636 ± 0.018 | 0.674 ± 0.030 | +0.037 ± 0.039 |
 | F2 | 0.685 ± 0.029 | 0.727 ± 0.029 | **+0.042 ± 0.019** |
 
+**⚠ SUPERSEDED IN PART by the extraction factorial (Paper-support §5): the extraction advantage is mostly field *definitions*, not fielded *structure*; the shape-match claim does not survive the 2×2. Read that section with this one.**
+
 **Verdict: C3 RESOLVED as shape-match — the campaign's first positive
 structure result.** Per-field structure wins on extraction (+4 slot-F1 points,
 CI-separated on F2, same direction on F1) while per-label structure loses on
@@ -295,6 +300,89 @@ reflections already exhibit every behavior the lessons prescribe, explaining
 why injection changes nothing (Δ ≤ 1.4 points, both families) while the same
 text at inference costs 11–17 points."*
 
+## Paper-support computations (added post-campaign; free/cache-backed except items 2 & 5)
+
+Five follow-ups requested for the paper's central table and appendices. Two of them **corrected earlier claims** — flagged inline. Total new spend $14.5 (seed-matched GPT GEPA $11.0 + extraction factorial $3.4; all bootstrap/cost/sensitivity work was cache-backed at $0).
+
+### 1–2. E8 CIs with seed-matched GEPA (closes the unpaired gap)
+
+The frozen F1 GEPA reference reused the v0.1/confirmation vanilla pool (seeds 0–2, 10–12) — not seed-matched to the draft arm (seeds 20–24). We ran fresh F1 vanilla-GEPA at seeds 20–24 on all 8 tasks ($11.0) so both families now have a **true per-seed paired** bootstrap (draft seed *s* vs GEPA seed *s* on the identical test set, B=10,000). Δ = draft-×2 − GEPA, `*` = 95% CI excludes 0.
+
+| task | F1 seed-matched Δ | F1 (unpaired pool) Δ | F2 seed-matched Δ |
+|---|---|---|---|
+| banking77 | +0.031 [+0.009,+0.054]* | +0.029* | +0.034 [+0.011,+0.057]* |
+| ag_news | -0.008 [-0.024,+0.008] | -0.025* | -0.027 [-0.051,-0.005]* |
+| emotion | -0.009 [-0.030,+0.011] | -0.007 | +0.024 [-0.001,+0.051] |
+| trec | -0.025 [-0.045,-0.005]* | -0.015 | -0.029 [-0.051,-0.008]* |
+| clinc150 | +0.005 [-0.003,+0.015] | +0.006 | +0.002 [-0.003,+0.009] |
+| massive | +0.005 [-0.015,+0.024] | +0.003 | -0.006 [-0.029,+0.017] |
+| stance_abortion | -0.163 [-0.209,-0.116]* | -0.177* | -0.022 [-0.036,-0.008]* |
+| sst5 | -0.036 [-0.067,-0.005]* | -0.050* | -0.005 [-0.037,+0.027] |
+
+F1 seed-matched: WIN ['banking77']; tie ['ag_news', 'emotion', 'clinc150', 'massive']; loss ['trec', 'stance_abortion', 'sst5'].
+
+F2 seed-matched: WIN ['banking77']; tie ['emotion', 'clinc150', 'massive', 'sst5']; loss ['ag_news', 'trec', 'stance_abortion'].
+
+**Headline unchanged** (one CI-separated win per family — banking77). Seed-matching shifts two F1 cells honestly vs the pool: ag_news goes loss→**tie** (−0.008, ns) and trec goes tie→**loss** (−0.025*); the pool had slightly mis-estimated both. The seed-matched numbers are the ones to print.
+
+### 3. First-accept-share sensitivity + early-to-final rank correlation
+
+First-accept gain share (GEPA F1, all budgets/tasks) under three definitions — the front-loading-is-dead result is robust:
+
+| definition | median | mean ± 95% CI | n |
+|---|---|---|---|
+| V1 running-max share | 0.333 | 0.331 ± 0.065 | 73 |
+| V2 absolute gain (acc. pts) | 0.020 | 0.068 ± 0.021 | 73 |
+| V3 first-*improver* share | 0.417 | 0.491 ± 0.057 | 73 |
+
+By task type (V1): bbh-reasoning 0.46 (n=21); classification 0.33 (n=63); math-qa 0.33 (n=19)
+ · exclusions: 2/105 runs flat (total gain <0.005).
+
+Even the most generous variant (V3, counting only value-improving accepts) puts the first improver at a median 0.42 — still far from a majority. Early-to-final dev **rank correlation** (Spearman across seeds, racing pool), the mechanism behind E6's death:
+
+| checkpoint F | mean Spearman | n_tasks |
+|---|---|---|
+| 0.15 | +0.419 ± 0.276 | 8 |
+| 0.25 | +0.314 ± 0.258 | 9 |
+| 0.40 | +0.535 ± 0.255 | 9 |
+
+Early standing is a weak-to-moderate predictor (ρ ≈ 0.3–0.5, CIs nearly spanning 0) — positive but far too noisy for early selection to pay for parallel starts at matched budget.
+
+### 4. Cost decomposition — **corrects the "~1/10" framing**
+
+Token-exact optimization cost (producing the prompt; deploy/test eval excluded), representative task banking77, from saved prompts via tiktoken ($0):
+
+| method | task calls | writer calls | task tok (in/out) | writer tok (in/out) | opt $ |
+|---|---|---|---|---|---|
+| seed (f1) | 100 | 0 | 16,030/300 | 0/0 | $0.007 |
+| draft_x1 (f1) | 200 | 1 | 105,980/600 | 911/886 | $0.052 |
+| draft_x2 (f1) | 300 | 2 | 222,690/900 | 2,561/2,040 | $0.112 |
+| **GEPA-B1 (f1)** | 890 | 11 | 509,226/3,792 | 6,379/6,761 | **$0.277** (235s) |
+| seed (f2) | 100 | 0 | 16,030/300 | 0/0 | $0.018 |
+| draft_x1 (f2) | 200 | 1 | 59,420/600 | 911/421 | $0.071 |
+| draft_x2 (f2) | 300 | 2 | 128,270/900 | 2,096/1,096 | $0.155 |
+| **GEPA-B1 (f2)** | 851 | 7 | 543,413/6,181 | 5,222/4,914 | **$0.664** (183s) |
+
+**CORRECTION.** The earlier "~1/10 cost" / "~10–15% of GEPA" framing was loose. Token-exact, draft-×2 optimization is **40% (F1) / 23% (F2)** of GEPA-B1 — closer to a quarter–third, not a tenth. The ~1/10 figure only holds for the single-rewrite ×1 variant on the cheaper-reflection family (×1 = 19% F1 / 11% F2). Draft's cost is dominated by re-evaluating the dev set (iterations+1) times; GEPA's by its ~9× more task calls and ~5× more writer calls. The README/docstring "~1/10" wording should be corrected to "~1/4–1/3 (×2), ~1/10 (×1)" in a v0.4.1.
+
+Diagnosis context size scales with label count, not linearly: banking77 589tok/25lab, ag_news 528tok/4lab, emotion 465tok/6lab, trec 313tok/6lab, … (313–589 tokens across the 8 datasets).
+
+### 5. Extraction 2×2 factorial — **demotes the E3 shape-match claim**
+
+The E3 verdict credited a +4 slot-F1 extraction win to per-field *structure*, with a caveat that the codebook arm also carried field *definitions* the free arm lacked. The 2×2 factorial (structure: blob|fielded × definitions: absent|present; F1, 5 seeds, $3.4) resolves it:
+
+| | definitions absent | definitions present |
+|---|---|---|
+| **blob** | 0.636 ± 0.018 | 0.673 ± 0.018 |
+| **fielded** | 0.659 ± 0.048 | 0.674 ± 0.030 |
+
+Main effects (paired by seed, n=5):
+- **structure** (fielded − blob): **+0.012 ± 0.032** — not CI-separated
+- **definitions** (present − absent): **+0.026 ± 0.034** — larger, marginal
+- interaction: -0.022 ± 0.070
+
+**CORRECTION.** The extraction advantage is carried more by the field **definitions** (+0.026) than by fielded **structure** (+0.012), and at n=5 neither main effect is individually CI-separated from zero. The original E3 free-vs-codebook +0.038 bundled both factors; decomposed, ~2/3 is semantic content (definitions), ~1/3 is layout (structure). **The shape-match hypothesis is NOT confirmed by the factorial** — 'structure wins on extraction' overstated it. The honest claim: *adding field definitions helps extraction modestly; fielded structure per se does not measurably help at this power.* This weakens C3's positive half; the classification half (structure loses) stands.
+
 ## Campaign closeout
 
 **No further confirmation pass is needed, by design audit:** E8 already ran
@@ -326,18 +414,24 @@ optimization/evaluation runs; every result checkpointed and committed.
 **Ranking by confirmed effect size × cost × story:**
 
 1. **E8 / `draft()` — LEAD.** Only surviving positive method. Frozen numbers:
-   60–91% of GEPA's gain at ~1/10 cost, 2/8 outright wins, both families,
-   fresh seeds. It is also now the library's primary API (v0.4.0), so the
-   paper and the artifact tell one story. Frame: error-grounded direct
-   writing, not evolution-acceleration (C1's death is what makes this framing
-   correct).
+   60–91% of GEPA's gain at ~1/4–1/3 the optimization cost (~1/10 for the
+   single-rewrite ×1 variant), seed-matched CI-separated win on banking77 in
+   both families + statistical ties across the mid range (Paper-support §1–2,4).
+   It is also now the library's primary API (v0.4.0), so the paper and the
+   artifact tell one story. Frame: error-grounded direct writing, not
+   evolution-acceleration (C1's death is what makes this framing correct).
 2. **E1 distributed-gains — the SPINE.** Not a method but the paper's central
-   measurement: median first-accept share 0.33, flat across budgets/families.
-   It explains every negative (E5/E6/E7) and motivates E8's framing. Lead
-   section after the intro.
-3. **E3 shape-match — the nuance contribution.** Structure pays on extraction
-   (+4 slot-F1, CI-separated on F2) and costs on classification; first
-   evidence the structure question is about prompt-shape/task-shape match.
+   measurement: median first-accept share 0.33 (robust across three definitions,
+   Paper-support §3), flat across budgets/families. It explains every negative
+   (E5/E6/E7 — the weak +0.3–0.5 early-to-final rank correlation is the
+   mechanism) and motivates E8's framing. Lead section after the intro.
+3. **E2 redundancy / E3 structure — the negative-nuance pair.** E2: lessons are
+   redundant with default reflection (failed-control uptake finding — a methods
+   contribution about LLM-judged "uptake"). E3: structure LOSES on classification
+   and, per the 2×2 factorial (Paper-support §5), its apparent extraction win is
+   mostly field *definitions*, not layout — the shape-match hypothesis did not
+   survive. Together: "prompt structure rarely pays; when it seems to, check
+   whether it is the content."
 4. **E2 redundancy — the dissociation, sharpened.** Strong negative with a
    novel measurement twist (the failed-control uptake finding is itself a
    methods contribution about LLM-judged "uptake" metrics).

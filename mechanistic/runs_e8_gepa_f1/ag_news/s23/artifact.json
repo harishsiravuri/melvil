@@ -1,0 +1,177 @@
+{
+ "schema_version": 1,
+ "artifact_id": "ed32871a86e4",
+ "parent_id": null,
+ "task_name": "ag_news",
+ "created_at": "2026-07-21T19:11:19-0500",
+ "library": {
+  "name": "melvil",
+  "version": "0.4.0"
+ },
+ "models": {
+  "task": "openrouter/openai/gpt-4.1-mini",
+  "reflection": "openrouter/openai/gpt-4.1"
+ },
+ "budget": {
+  "metric_calls_budget": 800,
+  "metric_calls_spent": 899,
+  "cost_usd": 0.2076,
+  "task_lm_usage": {
+   "model": "openrouter/openai/gpt-4.1-mini",
+   "prompt_tokens": 419497,
+   "completion_tokens": 1784,
+   "calls": 772,
+   "cache_hits": 227,
+   "cost_usd": 0.170653
+  },
+  "reflection_lm_usage": {
+   "model": "openrouter/openai/gpt-4.1",
+   "prompt_tokens": 4206,
+   "completion_tokens": 3567,
+   "calls": 8,
+   "cache_hits": 0,
+   "cost_usd": 0.036948
+  },
+  "opt_seconds": 155.5
+ },
+ "scores": {
+  "dev_accuracy": 0.91,
+  "dev_macro_f1": 0.9079,
+  "per_label_dev": {
+   "Business": {
+    "precision": 0.8846,
+    "recall": 0.92,
+    "f1": 0.902,
+    "support": 25
+   },
+   "Sci/Tech": {
+    "precision": 0.9048,
+    "recall": 0.76,
+    "f1": 0.8261,
+    "support": 25
+   },
+   "Sports": {
+    "precision": 0.96,
+    "recall": 0.96,
+    "f1": 0.96,
+    "support": 25
+   },
+   "World": {
+    "precision": 0.8929,
+    "recall": 1.0,
+    "f1": 0.9434,
+    "support": 25
+   }
+  },
+  "seed_dev_accuracy": 0.84,
+  "dev_accuracy_quarantined": null
+ },
+ "config_hash": "abec91fd8e56",
+ "config": {
+  "task_model": "openrouter/openai/gpt-4.1-mini",
+  "reflection_model": "openrouter/openai/gpt-4.1",
+  "budget": "light",
+  "seed": 23,
+  "features": {
+   "codebook": false,
+   "confusion_reflection": false,
+   "hard_example_mining": false
+  },
+  "num_threads": 8,
+  "run_dir": "/Users/harish/Documents/Claude/Projects/6s/labelsmith/mechanistic/runs_e8_gepa_f1/ag_news/s23",
+  "task_temperature": 0.0,
+  "task_max_tokens": 40,
+  "reflection_temperature": 1.0,
+  "reflection_max_tokens": 8000,
+  "reflection_minibatch_size": 3,
+  "max_exemplars": 6,
+  "mining_llm_screen": true,
+  "log_proposals": false,
+  "prices": {},
+  "metric_calls": 800
+ },
+ "label_names": [
+  "Business",
+  "Sci/Tech",
+  "Sports",
+  "World"
+ ],
+ "components": {
+  "instruction": "You are given the task of classifying short news excerpts into one of the following four topic categories: Business, Sci/Tech, Sports, or World. \n\nYour input will consist of a single news excerpt as plain text. Your response must be one of the following four category names exactly—Business, Sci/Tech, Sports, or World—without any explanation, extra text, or commentary.\n\nApply these detailed guidelines to determine the category:\n\n**Business:**  \n- Excerpts mainly about financial markets, corporate finances, earnings announcements, stock prices, mergers/acquisitions, trade deals, economic forecasts, or executive actions related to commerce.\n- Look for cues such as reports on profit/loss, market entries, business mergers, fiscal policy, or economic forecasts.\n- **Do NOT label as \"Business\" if the main focus is technology, innovation, scientific research, or new product launches, even if a company's financials are mentioned.**\n\n**Sci/Tech:**  \n- Excerpts focused on science, technology, research, product launches in tech, hardware/software developments, engineering, mathematical breakthroughs, or scientific discovery.\n- Example cues: Tech acquisitions where the focus is on technology integration, scientific studies, new technological products, news about digital piracy or file sharing, software/hardware releases, or lawsuits regarding technology.\n- **For news about acquisition or company activity, label as \"Sci/Tech\" if the primary focus is on the acquired technology, product, or scientific innovation rather than on financial terms.**\n- Legal stories about digital piracy, copyright infringement in tech, or file-sharing should be labeled as \"Sci/Tech\".\n- Classify polls or surveys as \"Sci/Tech\" only if the text emphasizes methodology, technological advancement, or new scientific findings.\n\n**Sports:**  \n- Excerpts about sports events, athlete news, competition results, tournaments, records, doping scandals, or happenings with sports organizations.\n- Cues include match updates, athlete transfers, summaries of competitions, or sports-related scandals.\n\n**World:**  \n- Stories primarily about international events, diplomacy, politics, wars, global crises, elections (international context), or news relevant across countries.\n- Cues include peace negotiations, international summits, global crises, geopolitical conflicts, or governance.\n\n**Special guidelines:**\n- For stories centered on legal action related to technology (such as online/digital piracy or lawsuits against file-sharing), always choose \"Sci/Tech\".\n- For news about public opinion, economic forecasting, or analysis of leaders' handling of the economy, default to \"Business\" unless the excerpt is centered on scientific or technological methodology.\n- For scientific polls, surveys, or research, only use \"Sci/Tech\" if scientific/technical innovation or methodology is the focus; otherwise, use \"Business\" or \"World\" based on whether the context is economic or international.\n- Always determine the label by identifying the main subject matter or emphasis of the excerpt, not secondary or tangential themes.\n\n**Formatting Requirements:**\n- Only respond with a single word: \"Business\", \"Sci/Tech\", \"Sports\", or \"World\".\n- Do not include any explanation, extra formatting, or commentary in your response.\n\n**Example Consideration:**  \n- If the news excerpt states a tech company is making an acquisition and primarily discusses the technology or integration details (e.g., details about how the acquired company’s technology will enhance the acquirer's offerings), choose \"Sci/Tech\", even if a financial figure is mentioned.\n- If the news is about a regular business acquisition or market performance without any reference to technological innovations or product development, choose \"Business\".\n\nBe particularly careful with acquisitions and lawsuits—scrutinize if the story is mainly about technology/innovation (then \"Sci/Tech\") or about business/finance (then \"Business\")."
+ },
+ "exemplars": [],
+ "confusion": {
+  "labels": [
+   "Business",
+   "Sci/Tech",
+   "Sports",
+   "World"
+  ],
+  "matrix": [
+   [
+    23,
+    2,
+    0,
+    0,
+    0
+   ],
+   [
+    3,
+    19,
+    1,
+    2,
+    0
+   ],
+   [
+    0,
+    0,
+    24,
+    1,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    25,
+    0
+   ]
+  ],
+  "unparseable_column": true
+ },
+ "curve": [
+  {
+   "metric_calls": 0,
+   "dev_score": 0.84
+  },
+  {
+   "metric_calls": 109,
+   "dev_score": 0.87
+  },
+  {
+   "metric_calls": 227,
+   "dev_score": 0.87
+  },
+  {
+   "metric_calls": 333,
+   "dev_score": 0.79
+  },
+  {
+   "metric_calls": 457,
+   "dev_score": 0.87
+  },
+  {
+   "metric_calls": 563,
+   "dev_score": 0.87
+  },
+  {
+   "metric_calls": 687,
+   "dev_score": 0.87
+  },
+  {
+   "metric_calls": 799,
+   "dev_score": 0.91
+  }
+ ],
+ "notes": ""
+}

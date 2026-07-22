@@ -1,0 +1,16 @@
+2026/07/21 18:43:31 WARNING dspy.clients.lm: LM response was truncated due to exceeding max_tokens=40. You can inspect the latest LM interactions with `dspy.inspect_history()`. To avoid truncation, consider passing a larger max_tokens when setting up dspy.LM. You may also consider increasing the temperature (currently 0.0)  if the reason for truncation is repetition.
+2026/07/21 18:43:36 WARNING dspy.clients.lm: LM response was truncated due to exceeding max_tokens=40. You can inspect the latest LM interactions with `dspy.inspect_history()`. To avoid truncation, consider passing a larger max_tokens when setting up dspy.LM. You may also consider increasing the temperature (currently 0.0)  if the reason for truncation is repetition.
+2026/07/21 18:43:36 WARNING dspy.clients.lm: LM response was truncated due to exceeding max_tokens=40. You can inspect the latest LM interactions with `dspy.inspect_history()`. To avoid truncation, consider passing a larger max_tokens when setting up dspy.LM. You may also consider increasing the temperature (currently 0.0)  if the reason for truncation is repetition.
+2026/07/21 18:43:56 WARNING dspy.clients.lm: LM response was truncated due to exceeding max_tokens=40. You can inspect the latest LM interactions with `dspy.inspect_history()`. To avoid truncation, consider passing a larger max_tokens when setting up dspy.LM. You may also consider increasing the temperature (currently 0.0)  if the reason for truncation is repetition.
+[done] gepa_banking77_f1_s20.json: 0.783 ($0.38)
+[done] gepa_banking77_f1_s21.json: 0.800 ($0.31)
+[done] gepa_banking77_f1_s22.json: 0.817 ($0.43)
+[done] gepa_banking77_f1_s23.json: 0.827 ($0.40)
+[done] gepa_banking77_f1_s24.json: 0.830 ($0.25)
+F1 GEPA baseline spend so far: $1.77
+[done] gepa_ag_news_f1_s20.json: 0.843 ($0.32)
+[done] gepa_ag_news_f1_s21.json: 0.850 ($0.25)
+[done] gepa_ag_news_f1_s22.json: 0.823 ($0.33)
+[done] gepa_ag_news_f1_s23.json: 0.870 ($0.31)
+[done] gepa_ag_news_f1_s24.json: 0.843 ($0.23)
+F1 GEPA baseline spend so far: $1.44

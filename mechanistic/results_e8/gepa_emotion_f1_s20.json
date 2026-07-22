@@ -1,0 +1,9 @@
+{
+ "experiment": "e8_gepa_baseline",
+ "task": "emotion",
+ "family": "f1",
+ "seed": 20,
+ "test_accuracy": 0.5567,
+ "test_macro_f1": 0.4598,
+ "cost_usd": 0.191
+}

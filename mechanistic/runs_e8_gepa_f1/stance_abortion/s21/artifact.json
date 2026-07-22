@@ -1,0 +1,159 @@
+{
+ "schema_version": 1,
+ "artifact_id": "f91eb9148116",
+ "parent_id": null,
+ "task_name": "stance_abortion",
+ "created_at": "2026-07-21T18:44:16-0500",
+ "library": {
+  "name": "melvil",
+  "version": "0.4.0"
+ },
+ "models": {
+  "task": "openrouter/openai/gpt-4.1-mini",
+  "reflection": "openrouter/openai/gpt-4.1"
+ },
+ "budget": {
+  "metric_calls_budget": 800,
+  "metric_calls_spent": 881,
+  "cost_usd": 0.2977,
+  "task_lm_usage": {
+   "model": "openrouter/openai/gpt-4.1-mini",
+   "prompt_tokens": 552956,
+   "completion_tokens": 1552,
+   "calls": 776,
+   "cache_hits": 205,
+   "cost_usd": 0.223666
+  },
+  "reflection_lm_usage": {
+   "model": "openrouter/openai/gpt-4.1",
+   "prompt_tokens": 7833,
+   "completion_tokens": 7294,
+   "calls": 12,
+   "cache_hits": 0,
+   "cost_usd": 0.074018
+  },
+  "opt_seconds": 201.8
+ },
+ "scores": {
+  "dev_accuracy": 0.66,
+  "dev_macro_f1": 0.638,
+  "per_label_dev": {
+   "against": {
+    "precision": 0.7551,
+    "recall": 0.6852,
+    "f1": 0.7184,
+    "support": 54
+   },
+   "favor": {
+    "precision": 0.4839,
+    "recall": 0.7895,
+    "f1": 0.6,
+    "support": 19
+   },
+   "none": {
+    "precision": 0.7,
+    "recall": 0.5185,
+    "f1": 0.5957,
+    "support": 27
+   }
+  },
+  "seed_dev_accuracy": 0.43,
+  "dev_accuracy_quarantined": null
+ },
+ "config_hash": "e5057a7081d2",
+ "config": {
+  "task_model": "openrouter/openai/gpt-4.1-mini",
+  "reflection_model": "openrouter/openai/gpt-4.1",
+  "budget": "light",
+  "seed": 21,
+  "features": {
+   "codebook": false,
+   "confusion_reflection": false,
+   "hard_example_mining": false
+  },
+  "num_threads": 8,
+  "run_dir": "/Users/harish/Documents/Claude/Projects/6s/labelsmith/mechanistic/runs_e8_gepa_f1/stance_abortion/s21",
+  "task_temperature": 0.0,
+  "task_max_tokens": 40,
+  "reflection_temperature": 1.0,
+  "reflection_max_tokens": 8000,
+  "reflection_minibatch_size": 3,
+  "max_exemplars": 6,
+  "mining_llm_screen": true,
+  "log_proposals": false,
+  "prices": {},
+  "metric_calls": 800
+ },
+ "label_names": [
+  "against",
+  "favor",
+  "none"
+ ],
+ "components": {
+  "instruction": "You are tasked with performing stance classification on a provided text regarding a particular topic. Your job is to assign the text to one of three categories based on its attitude or stance: \"against\", \"favor\", or \"none\". Please carefully adhere to the following requirements, incorporating both general instructions and detailed, domain-specific guidance:\n\n1. **Output Format:**  \n   - Respond **only** with a single word: either \"against\", \"favor\", or \"none\".  \n   - Do **not** include any additional explanations, justifications, or formatting in your response.\n\n2. **Stance Categories and Criteria:**  \n   - **\"favor\"**: Select this label if the text clearly expresses support, agreement, or a positive sentiment toward a given subject, action, event, or ideology. Support may be explicit or implicit.\n   - **\"against\"**: Select this if the text expresses opposition, criticism, or a negative stance toward the subject, action, event, or ideology. Opposition may also be explicit or implicit.\n   - **\"none\"**: Use this label if the text is neutral, merely factual, ambiguous, or does not clearly indicate any stance for or against the subject.\n\n3. **Detailed Analysis Guidelines:**  \n   - Consider both overt and subtle indicators of stance: \n     - Explicit evaluative statements, negative/positive language, or opinions.\n     - Sarcastic, ironic, or rhetorical phrasing that reverses expected sentiment.\n     - Use of hashtags, slogans, or campaign language that may signal stance.\n     - Contextual cues (e.g., religious references, moral arguments) that may reflect stance indirectly, especially when contrasted with the main topic.\n   - Be alert to **domain-specific language**:\n     - Phrases such as \"all babies are a blessing\" can serve as coded expressions or slogans in debates about topics like abortion, indirectly indicating opposition to abortion rights (i.e., \"against\" in a pro-choice/pro-life context).\n     - Hashtags or references to social/protest movements may serve as strong stance indicators.\n     - If a text states something like \"I'm pro choice for... if you want to kill living babies, go right ahead,\" this **favors** pro-choice as a principle, even if phrased provocatively.\n   - When referencing religious, ethical, or ideological arguments, consider their role as stance signals, especially if there's an implicit contrast with the topic at hand.\n\n4. **General Strategy:**  \n   - Focus **strictly** on how the stance is presented in the input text itself—do not infer based on presumed author intent or outside knowledge.\n   - If the text presents more than one stance or is ambiguous, select \"none\" unless the stance is clearly dominant.\n   - Remember that seemingly positive language (e.g., \"All babies are a blessing\") can express opposition to abortion rights (thus, \"against\" pro-choice), depending on wording and topic. Always match your judgment to the **actual function of the text in discourse**, using domain knowledge as necessary.\n\n5. **Special Note:**  \n   - It is important to distinguish between sentiment toward entities or events and stance on the main debated topic. For example, positive statements about \"babies\" may implicitly communicate a stance \"against\" abortion.\n\n**Summary:** Apply both general and topic-specific understanding to classify the stance shown in the text. Always output only \"against\", \"favor\", or \"none\", based solely on the content and cues present in the provided input."
+ },
+ "exemplars": [],
+ "confusion": {
+  "labels": [
+   "against",
+   "favor",
+   "none"
+  ],
+  "matrix": [
+   [
+    37,
+    12,
+    5,
+    0
+   ],
+   [
+    3,
+    15,
+    1,
+    0
+   ],
+   [
+    9,
+    4,
+    14,
+    0
+   ]
+  ],
+  "unparseable_column": true
+ },
+ "curve": [
+  {
+   "metric_calls": 0,
+   "dev_score": 0.43
+  },
+  {
+   "metric_calls": 112,
+   "dev_score": 0.49
+  },
+  {
+   "metric_calls": 218,
+   "dev_score": 0.64
+  },
+  {
+   "metric_calls": 336,
+   "dev_score": 0.49
+  },
+  {
+   "metric_calls": 454,
+   "dev_score": 0.42
+  },
+  {
+   "metric_calls": 563,
+   "dev_score": 0.66
+  },
+  {
+   "metric_calls": 675,
+   "dev_score": 0.45
+  },
+  {
+   "metric_calls": 781,
+   "dev_score": 0.52
+  }
+ ],
+ "notes": ""
+}

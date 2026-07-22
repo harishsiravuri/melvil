@@ -1,0 +1,12 @@
+[done] gepa_emotion_f1_s20.json: 0.557 ($0.19)
+[done] gepa_emotion_f1_s21.json: 0.563 ($0.29)
+[done] gepa_emotion_f1_s22.json: 0.577 ($0.16)
+[done] gepa_emotion_f1_s23.json: 0.527 ($0.27)
+[done] gepa_emotion_f1_s24.json: 0.553 ($0.15)
+F1 GEPA baseline spend so far: $1.06
+[done] gepa_trec_f1_s20.json: 0.907 ($0.31)
+[done] gepa_trec_f1_s21.json: 0.897 ($0.39)
+[done] gepa_trec_f1_s22.json: 0.877 ($0.29)
+[done] gepa_trec_f1_s23.json: 0.903 ($0.35)
+[done] gepa_trec_f1_s24.json: 0.803 ($0.42)
+F1 GEPA baseline spend so far: $1.77

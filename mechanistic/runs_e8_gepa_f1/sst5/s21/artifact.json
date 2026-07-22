@@ -1,0 +1,193 @@
+{
+ "schema_version": 1,
+ "artifact_id": "ea2926cdbdf3",
+ "parent_id": null,
+ "task_name": "sst5",
+ "created_at": "2026-07-21T19:04:11-0500",
+ "library": {
+  "name": "melvil",
+  "version": "0.4.0"
+ },
+ "models": {
+  "task": "openrouter/openai/gpt-4.1-mini",
+  "reflection": "openrouter/openai/gpt-4.1"
+ },
+ "budget": {
+  "metric_calls_budget": 800,
+  "metric_calls_spent": 805,
+  "cost_usd": 0.2129,
+  "task_lm_usage": {
+   "model": "openrouter/openai/gpt-4.1-mini",
+   "prompt_tokens": 362917,
+   "completion_tokens": 1510,
+   "calls": 693,
+   "cache_hits": 212,
+   "cost_usd": 0.147583
+  },
+  "reflection_lm_usage": {
+   "model": "openrouter/openai/gpt-4.1",
+   "prompt_tokens": 7107,
+   "completion_tokens": 6383,
+   "calls": 16,
+   "cache_hits": 0,
+   "cost_usd": 0.065278
+  },
+  "opt_seconds": 247.2
+ },
+ "scores": {
+  "dev_accuracy": 0.64,
+  "dev_macro_f1": 0.6239,
+  "per_label_dev": {
+   "negative": {
+    "precision": 0.5758,
+    "recall": 0.7308,
+    "f1": 0.6441,
+    "support": 26
+   },
+   "neutral": {
+    "precision": 0.6154,
+    "recall": 0.4211,
+    "f1": 0.5,
+    "support": 19
+   },
+   "positive": {
+    "precision": 0.7,
+    "recall": 0.7778,
+    "f1": 0.7368,
+    "support": 27
+   },
+   "very negative": {
+    "precision": 0.5,
+    "recall": 0.5385,
+    "f1": 0.5185,
+    "support": 13
+   },
+   "very positive": {
+    "precision": 0.9,
+    "recall": 0.6,
+    "f1": 0.72,
+    "support": 15
+   }
+  },
+  "seed_dev_accuracy": 0.55,
+  "dev_accuracy_quarantined": null
+ },
+ "config_hash": "e5057a7081d2",
+ "config": {
+  "task_model": "openrouter/openai/gpt-4.1-mini",
+  "reflection_model": "openrouter/openai/gpt-4.1",
+  "budget": "light",
+  "seed": 21,
+  "features": {
+   "codebook": false,
+   "confusion_reflection": false,
+   "hard_example_mining": false
+  },
+  "num_threads": 8,
+  "run_dir": "/Users/harish/Documents/Claude/Projects/6s/labelsmith/mechanistic/runs_e8_gepa_f1/sst5/s21",
+  "task_temperature": 0.0,
+  "task_max_tokens": 40,
+  "reflection_temperature": 1.0,
+  "reflection_max_tokens": 8000,
+  "reflection_minibatch_size": 3,
+  "max_exemplars": 6,
+  "mining_llm_screen": true,
+  "log_proposals": false,
+  "prices": {},
+  "metric_calls": 800
+ },
+ "label_names": [
+  "negative",
+  "neutral",
+  "positive",
+  "very negative",
+  "very positive"
+ ],
+ "components": {
+  "instruction": "You are given a classification task where you must determine the overall sentiment of a provided piece of text. The text is expected to express an evaluative or emotional stance, commonly found in reviews, opinions, or commentary.\n\nYour goal is to classify the text into one of the following five sentiment categories:\n- very negative\n- negative\n- neutral\n- positive\n- very positive\n\nFollow these detailed steps and guidelines for accurate classification:\n\n1. **Input format:**  \n   - Each task provides a text snippet as input, presented under a section labeled '### text'.\n   - Your response should be a single word or phrase, matching exactly one of the five sentiment categories provided.\n\n2. **Category definitions:**  \n   - **Very negative:** The text uses extremely strong negative sentiment. Look for harsh, intense, or critical language that conveys strong disapproval, dislike, or emotional negativity. This includes use of superlatives, emphatic negative adjectives, or sarcasm that intensifies negativity.\n   - **Negative:** The text expresses negative sentiment, criticism, or dissatisfaction, but in a milder, more regular manner compared to 'very negative'. The criticism may be more measured, and the language less emphatic.\n   - **Neutral:** The text is fact-based or lacks significant emotional or evaluative language. It may also present a balanced or mixed point of view without clear positive or negative leaning.\n   - **Positive:** The text conveys a positive sentiment such as appreciation or praise, but without extreme enthusiasm or superlative praise. Positive statements are present but are measured and not exuberant.\n   - **Very positive:** The text demonstrates extremely strong positive sentiment. Look for superlative, enthusiastic, or emotionally intense praise that signals strong approval, enjoyment, or satisfaction.\n\n3. **Distinguishing intensity:**  \n   - Reserve 'very negative' and 'very positive' for texts that use language going beyond standard criticism or praise. These categories require especially emphatic or powerful wording, not just ordinary negative or positive expressions.\n   - For instance, 'merely crassly flamboyant and comedically labored' indicates a strong negative judgement, meriting 'very negative' rather than just 'negative'.\n\n4. **Response requirements:**  \n   - Output only the single most appropriate label for each input, using exactly one of the five categories listed above.\n   - Do not provide explanations or additional commentary—your response should be the label only.\n\n5. **General strategy:**  \n   - Carefully assess the emotional intensity and evaluative content of the entire text, taking into account nuanced word choices and tone.\n   - When in doubt between a regular and an intense category, refer back to the explicitness and intensity of the sentiment expressed.\n\nUse this protocol for each task input to always select the most accurate sentiment label from the provided options."
+ },
+ "exemplars": [],
+ "confusion": {
+  "labels": [
+   "negative",
+   "neutral",
+   "positive",
+   "very negative",
+   "very positive"
+  ],
+  "matrix": [
+   [
+    19,
+    1,
+    0,
+    6,
+    0,
+    0
+   ],
+   [
+    6,
+    8,
+    3,
+    1,
+    1,
+    0
+   ],
+   [
+    2,
+    4,
+    21,
+    0,
+    0,
+    0
+   ],
+   [
+    6,
+    0,
+    0,
+    7,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    6,
+    0,
+    9,
+    0
+   ]
+  ],
+  "unparseable_column": true
+ },
+ "curve": [
+  {
+   "metric_calls": 0,
+   "dev_score": 0.55
+  },
+  {
+   "metric_calls": 136,
+   "dev_score": 0.57
+  },
+  {
+   "metric_calls": 254,
+   "dev_score": 0.61
+  },
+  {
+   "metric_calls": 372,
+   "dev_score": 0.58
+  },
+  {
+   "metric_calls": 493,
+   "dev_score": 0.61
+  },
+  {
+   "metric_calls": 599,
+   "dev_score": 0.64
+  },
+  {
+   "metric_calls": 705,
+   "dev_score": 0.62
+  }
+ ],
+ "notes": ""
+}

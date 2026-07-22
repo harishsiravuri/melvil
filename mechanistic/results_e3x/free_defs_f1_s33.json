@@ -1,0 +1,10 @@
+{
+ "arm": "free_defs",
+ "family": "f1",
+ "seed": 33,
+ "test_slot_f1": 0.6431,
+ "seed_dev": 0.6604,
+ "best_dev": 0.6619,
+ "n_components": 1,
+ "cost_usd": 0.4099
+}

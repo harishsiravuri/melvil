@@ -1,0 +1,9 @@
+{
+ "experiment": "e8_gepa_baseline",
+ "task": "clinc150",
+ "family": "f1",
+ "seed": 23,
+ "test_accuracy": 0.9867,
+ "test_macro_f1": 0.9866,
+ "cost_usd": 0.121
+}

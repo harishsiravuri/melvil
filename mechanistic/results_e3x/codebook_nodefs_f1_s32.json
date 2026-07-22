@@ -1,0 +1,10 @@
+{
+ "arm": "codebook_nodefs",
+ "family": "f1",
+ "seed": 32,
+ "test_slot_f1": 0.6707,
+ "seed_dev": 0.599,
+ "best_dev": 0.668,
+ "n_components": 10,
+ "cost_usd": 0.3161
+}

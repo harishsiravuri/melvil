@@ -1,0 +1,159 @@
+{
+ "schema_version": 1,
+ "artifact_id": "4fc118b67dd8",
+ "parent_id": null,
+ "task_name": "stance_abortion",
+ "created_at": "2026-07-21T18:51:51-0500",
+ "library": {
+  "name": "melvil",
+  "version": "0.4.0"
+ },
+ "models": {
+  "task": "openrouter/openai/gpt-4.1-mini",
+  "reflection": "openrouter/openai/gpt-4.1"
+ },
+ "budget": {
+  "metric_calls_budget": 800,
+  "metric_calls_spent": 887,
+  "cost_usd": 0.2025,
+  "task_lm_usage": {
+   "model": "openrouter/openai/gpt-4.1-mini",
+   "prompt_tokens": 373760,
+   "completion_tokens": 1560,
+   "calls": 777,
+   "cache_hits": 210,
+   "cost_usd": 0.152
+  },
+  "reflection_lm_usage": {
+   "model": "openrouter/openai/gpt-4.1",
+   "prompt_tokens": 5988,
+   "completion_tokens": 4813,
+   "calls": 12,
+   "cache_hits": 0,
+   "cost_usd": 0.05048
+  },
+  "opt_seconds": 216.8
+ },
+ "scores": {
+  "dev_accuracy": 0.81,
+  "dev_macro_f1": 0.7962,
+  "per_label_dev": {
+   "against": {
+    "precision": 0.913,
+    "recall": 0.7778,
+    "f1": 0.84,
+    "support": 54
+   },
+   "favor": {
+    "precision": 0.64,
+    "recall": 0.8421,
+    "f1": 0.7273,
+    "support": 19
+   },
+   "none": {
+    "precision": 0.7931,
+    "recall": 0.8519,
+    "f1": 0.8214,
+    "support": 27
+   }
+  },
+  "seed_dev_accuracy": 0.43,
+  "dev_accuracy_quarantined": null
+ },
+ "config_hash": "abec91fd8e56",
+ "config": {
+  "task_model": "openrouter/openai/gpt-4.1-mini",
+  "reflection_model": "openrouter/openai/gpt-4.1",
+  "budget": "light",
+  "seed": 23,
+  "features": {
+   "codebook": false,
+   "confusion_reflection": false,
+   "hard_example_mining": false
+  },
+  "num_threads": 8,
+  "run_dir": "/Users/harish/Documents/Claude/Projects/6s/labelsmith/mechanistic/runs_e8_gepa_f1/stance_abortion/s23",
+  "task_temperature": 0.0,
+  "task_max_tokens": 40,
+  "reflection_temperature": 1.0,
+  "reflection_max_tokens": 8000,
+  "reflection_minibatch_size": 3,
+  "max_exemplars": 6,
+  "mining_llm_screen": true,
+  "log_proposals": false,
+  "prices": {},
+  "metric_calls": 800
+ },
+ "label_names": [
+  "against",
+  "favor",
+  "none"
+ ],
+ "components": {
+  "instruction": "You are provided with brief texts, such as tweets or social media posts, and your task is to classify each text into one of three specific stance categories with respect to a contentious issue or topic—most commonly abortion, but potentially other similar debates—based on evidence from the text. Your output must strictly be \"against\", \"favor\", or \"none\", without any explanation or additional text.\n\nDetailed task instructions:\n- Classify each text as:\n  - 'against': The text expresses opposition to, or disagreement with, a topic, issue, or viewpoint. Specifically, for abortion-related content, 'against' must be used for anti-abortion (i.e., pro-life) stances. This includes affirmations of \"protecting unborn children\", religious or conservative talking points, and hashtags like #ProLife, #ProLifeYouth, or recognized ideological tags (e.g., #SemST, #ccot, #gop) in a context that aligns with anti-abortion advocacy. Religious allusions or quotes that commonly advance anti-abortion perspectives should also be marked as 'against'.\n  - 'favor': The text expresses support for, or agreement with, a contentious issue or viewpoint. In the context of abortion, this means supporting abortion rights (i.e., pro-choice). This also applies to hashtags, references, or positive affirmations related to pro-choice advocacy.\n  - 'none': The text does not clearly express any stance for or against the issue. This category covers neutral statements, rhetorical questions, vague commentary, or posts lacking clear context or explicit evidence of stance. If there is ambiguity, or if the stance is not directly or strongly implied, assign 'none'.\n\nAdditional guidance:\n- Carefully consider the presence of hashtags, religious language, or indirect references as cues for inferring stance, even when the specific wording is subtle or coded. \n- When public figures or ideological content is quoted or referenced, interpret according to the stance implied in context, especially if accompanied by stance-indicating hashtags.\n- For anti-abortion (pro-life) content, *always* use 'against', even if the post uses positive terms like \"blessing\", \"life\", or \"protecting children\". The categories 'favor' and 'against' refer specifically to positions on the contentious issue, not to general positivity or negativity.\n- Do NOT guess in ambiguous cases; select 'none' unless there is clear stance evidence.\n- Your response must be *only* the correct label: \"against\", \"favor\", or \"none\", and nothing else.\n\nInput format:\nInput: [text]\nOutput: [against|favor|none]"
+ },
+ "exemplars": [],
+ "confusion": {
+  "labels": [
+   "against",
+   "favor",
+   "none"
+  ],
+  "matrix": [
+   [
+    42,
+    8,
+    4,
+    0
+   ],
+   [
+    1,
+    16,
+    2,
+    0
+   ],
+   [
+    3,
+    1,
+    23,
+    0
+   ]
+  ],
+  "unparseable_column": true
+ },
+ "curve": [
+  {
+   "metric_calls": 0,
+   "dev_score": 0.43
+  },
+  {
+   "metric_calls": 112,
+   "dev_score": 0.52
+  },
+  {
+   "metric_calls": 218,
+   "dev_score": 0.77
+  },
+  {
+   "metric_calls": 345,
+   "dev_score": 0.74
+  },
+  {
+   "metric_calls": 451,
+   "dev_score": 0.75
+  },
+  {
+   "metric_calls": 560,
+   "dev_score": 0.81
+  },
+  {
+   "metric_calls": 666,
+   "dev_score": 0.77
+  },
+  {
+   "metric_calls": 787,
+   "dev_score": 0.5
+  }
+ ],
+ "notes": ""
+}

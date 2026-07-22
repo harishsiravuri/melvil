@@ -1,0 +1,9 @@
+{
+ "experiment": "e8_gepa_baseline",
+ "task": "stance_abortion",
+ "family": "f1",
+ "seed": 23,
+ "test_accuracy": 0.7036,
+ "test_macro_f1": 0.6717,
+ "cost_usd": 0.2685
+}

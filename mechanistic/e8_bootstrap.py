@@ -43,6 +43,7 @@ RESULTS_E8 = HERE / "results_e8"
 SNAPSHOT = Path("/tmp/melvil_snap/labelsmith/benchmarks/runs_confirm")
 BENCH_RUNS = HERE.parent / "benchmarks" / "runs"
 GEPA_F2 = HERE / "runs_e8_gepa_f2"
+GEPA_F1 = HERE / "runs_e8_gepa_f1"
 TASKS = ["banking77", "ag_news", "emotion", "trec", "clinc150", "massive",
          "stance_abortion", "sst5"]
 FAMILIES = {"f1": "openrouter/openai/gpt-4.1-mini",
@@ -70,6 +71,34 @@ def gepa_prompts(task: str, family: str) -> list[str]:
             if p.exists():
                 out.append(PromptArtifact.load(p).render())
     return out
+
+
+def gepa_prompts_seedmatched(task: str, family: str) -> list[tuple[int, str]]:
+    """(seed, rendered prompt) for the seed-matched GEPA runs (seeds 20-24),
+    enabling a true per-seed paired comparison against the draft arm."""
+    base = GEPA_F1 if family == "f1" else GEPA_F2
+    out = []
+    for sd in DRAFT_SEEDS:
+        p = base / task / f"s{sd}" / "artifact.json"
+        if p.exists():
+            out.append((sd, PromptArtifact.load(p).render()))
+    return out
+
+
+def paired_seed_diff(draft_by_seed, gepa_by_seed, rng):
+    """Per-example paired diff averaged over matched seeds, then bootstrap over
+    examples. draft_by_seed/gepa_by_seed: {seed: correctness-vector}."""
+    seeds = sorted(set(draft_by_seed) & set(gepa_by_seed))
+    n = len(next(iter(draft_by_seed.values())))
+    per_ex = [statistics.mean(draft_by_seed[s][i] - gepa_by_seed[s][i] for s in seeds)
+              for i in range(n)]
+    point = statistics.mean(per_ex)
+    boots = []
+    for _ in range(B):
+        idx = [rng.randrange(n) for _ in range(n)]
+        boots.append(sum(per_ex[i] for i in idx) / n)
+    boots.sort()
+    return point, boots[int(0.025 * B)], boots[int(0.975 * B)], len(seeds)
 
 
 def correctness(lm, prompt: str, test, labels, n_threads=8) -> list[int]:
@@ -126,8 +155,12 @@ def main() -> None:
                 continue
             since = len(lm.history)
             seed_vec = correctness(lm, frozen[0]["prompts"]["seed"], test, labels)
-            x2_vecs = [correctness(lm, f["prompts"]["x2"], test, labels) for f in frozen]
-            gepa_vecs = [correctness(lm, p, test, labels) for p in gepa_prompts(task, family)]
+            x2_by_seed = {f["seed"]: correctness(lm, f["prompts"]["x2"], test, labels)
+                          for f in frozen}
+            x2_vecs = list(x2_by_seed.values())
+            gepa_vecs = [correctness(lm, pr, test, labels) for pr in gepa_prompts(task, family)]
+            gepa_sm = {sd: correctness(lm, pr, test, labels)
+                       for sd, pr in gepa_prompts_seedmatched(task, family)}
             u = lm_usage(lm, since)
             if u["calls"] > LIVE_CALL_ABORT:
                 raise RuntimeError(
@@ -146,6 +179,12 @@ def main() -> None:
                          if abs(gepa_gain) > 0.02 else None)
             rec_lo, rec_hi = (recovery_bootstrap(x2_a, seed_a, gepa_a, rng)
                               if rec_point is not None else (None, None))
+            sm = None
+            if gepa_sm:
+                pt, lo, hi, nseed = paired_seed_diff(x2_by_seed, gepa_sm, rng)
+                sm = {"delta": round(pt, 4), "ci95": [round(lo, 4), round(hi, 4)],
+                      "significant": not (lo <= 0 <= hi), "n_matched_seeds": nseed,
+                      "gepa_acc": round(statistics.mean(seed_avg(list(gepa_sm.values()))), 4)}
             key = f"{task}/{family}"
             out["tasks"][key] = {
                 "task": task, "family": family,
@@ -160,6 +199,9 @@ def main() -> None:
                                   if rec_lo is not None else None),
                 "saturated": rec_point is None,
                 "cache_hits": u["cache_hits"], "live_calls": u["calls"],
+                "seed_matched": sm,
+                "gepa_reference": ("seed-pool (0-2,10-12)" if family == "f1"
+                                   else "seed-matched (20-24)"),
             }
             r = out["tasks"][key]
             print(f"{key:<24} seed {r['seed_acc']:.3f} x2 {r['x2_acc']:.3f} "
@@ -168,7 +210,10 @@ def main() -> None:
                   f"{'*' if r['delta_significant'] else ''} | "
                   f"recov {r['recovery'] if r['recovery'] is not None else 'sat'}"
                   f"{r['recovery_ci95'] if r['recovery_ci95'] else ''} "
-                  f"| live={r['live_calls']}")
+                  f"| sm dx2 {r['seed_matched']['delta']:+.3f}"
+                  f"[{r['seed_matched']['ci95'][0]:+.3f},{r['seed_matched']['ci95'][1]:+.3f}]"
+                  f"{'*' if r['seed_matched']['significant'] else ''}"
+                  if r.get('seed_matched') else f"| live={r['live_calls']}")
 
     (HERE / "results_sim").mkdir(exist_ok=True)
     (HERE / "results_sim" / "e8_bootstrap.json").write_text(json.dumps(out, indent=1))

@@ -1,0 +1,219 @@
+{
+ "schema_version": 1,
+ "artifact_id": "8dd47dbf30f7",
+ "parent_id": null,
+ "task_name": "emotion",
+ "created_at": "2026-07-21T18:49:41-0500",
+ "library": {
+  "name": "melvil",
+  "version": "0.4.0"
+ },
+ "models": {
+  "task": "openrouter/openai/gpt-4.1-mini",
+  "reflection": "openrouter/openai/gpt-4.1"
+ },
+ "budget": {
+  "metric_calls_budget": 800,
+  "metric_calls_spent": 878,
+  "cost_usd": 0.2041,
+  "task_lm_usage": {
+   "model": "openrouter/openai/gpt-4.1-mini",
+   "prompt_tokens": 387710,
+   "completion_tokens": 1767,
+   "calls": 760,
+   "cache_hits": 218,
+   "cost_usd": 0.157911
+  },
+  "reflection_lm_usage": {
+   "model": "openrouter/openai/gpt-4.1",
+   "prompt_tokens": 5099,
+   "completion_tokens": 4501,
+   "calls": 11,
+   "cache_hits": 0,
+   "cost_usd": 0.046206
+  },
+  "opt_seconds": 168.3
+ },
+ "scores": {
+  "dev_accuracy": 0.69,
+  "dev_macro_f1": 0.6208,
+  "per_label_dev": {
+   "anger": {
+    "precision": 0.5882,
+    "recall": 0.7692,
+    "f1": 0.6667,
+    "support": 13
+   },
+   "fear": {
+    "precision": 0.5625,
+    "recall": 0.75,
+    "f1": 0.6429,
+    "support": 12
+   },
+   "joy": {
+    "precision": 0.8889,
+    "recall": 0.7059,
+    "f1": 0.7869,
+    "support": 34
+   },
+   "love": {
+    "precision": 0.4545,
+    "recall": 0.625,
+    "f1": 0.5263,
+    "support": 8
+   },
+   "sadness": {
+    "precision": 0.7143,
+    "recall": 0.6897,
+    "f1": 0.7018,
+    "support": 29
+   },
+   "surprise": {
+    "precision": 1.0,
+    "recall": 0.25,
+    "f1": 0.4,
+    "support": 4
+   }
+  },
+  "seed_dev_accuracy": 0.68,
+  "dev_accuracy_quarantined": null
+ },
+ "config_hash": "abec91fd8e56",
+ "config": {
+  "task_model": "openrouter/openai/gpt-4.1-mini",
+  "reflection_model": "openrouter/openai/gpt-4.1",
+  "budget": "light",
+  "seed": 23,
+  "features": {
+   "codebook": false,
+   "confusion_reflection": false,
+   "hard_example_mining": false
+  },
+  "num_threads": 8,
+  "run_dir": "/Users/harish/Documents/Claude/Projects/6s/labelsmith/mechanistic/runs_e8_gepa_f1/emotion/s23",
+  "task_temperature": 0.0,
+  "task_max_tokens": 40,
+  "reflection_temperature": 1.0,
+  "reflection_max_tokens": 8000,
+  "reflection_minibatch_size": 3,
+  "max_exemplars": 6,
+  "mining_llm_screen": true,
+  "log_proposals": false,
+  "prices": {},
+  "metric_calls": 800
+ },
+ "label_names": [
+  "anger",
+  "fear",
+  "joy",
+  "love",
+  "sadness",
+  "surprise"
+ ],
+ "components": {
+  "instruction": "You are tasked with classifying the predominant emotion expressed in a provided sentence or phrase. The emotion must be identified as one of the following six categories: anger, fear, joy, love, sadness, or surprise.\n\nInput Format:\n- The input will be a prompt containing a single field named 'text', which holds the sentence or phrase to be analyzed.\n\nTask Instructions:\n1. **Carefully read and interpret** the 'text' field to understand the emotional nuance it presents.\n2. **Identify the most prominent emotion** in the text, selecting *one* from the following categories:\n   - anger: Includes any expression of frustration, irritation, inner turmoil, or rage—even when described metaphorically or through vivid physical imagery (e.g., \"a violent war in my stomach\" should be classified as 'anger').\n   - fear: Any expression of anxiety, feeling scared, insecurity, or sense of danger.\n   - joy: Any expression of happiness, pleasure, excitement, positivity, or elation—even if it involves pride in someone's potential or future accomplishments (e.g., \"I have a feeling she is going to be an amazing artist like her daddy and uncles\" should be classified as 'joy', not 'love').\n   - love: Any expression of affection, care, attachment, or deep emotional bonding.\n   - sadness: Any expression of loss, grief, disappointment, or unhappiness.\n   - surprise: Any indication of shock, disbelief, or unexpectedness.\n3. **Base your decision only on the emotional content** that is explicitly or implicitly present in the input text, without adding personal interpretation or context external to the input.\n4. **Choose the single category** that best matches the main emotion conveyed in the text, even if multiple emotions are present.\n\nResponse Format:\n- Your output should be the *one-word* name of the selected emotion category: either anger, fear, joy, love, sadness, or surprise.\n- Do not provide explanations, justifications, or any other commentary—submit only the emotion label.\n\nAdditional Guidance:\n- Prioritize classification of words or phrases describing anticipation of positive outcomes, pride, or positive predictions about others (such as a child’s future success) as 'joy' rather than 'love', unless there is an explicit mention or clear context of affection or emotional bonding.\n- When multiple emotions are present, choose the emotion category that is *most prominent* or central to the message.\n\nExample:\nInput: \n    text: i have a feeling she is going to be an amazing artist like her daddy and uncles\nCorrect Output: \n    joy"
+ },
+ "exemplars": [],
+ "confusion": {
+  "labels": [
+   "anger",
+   "fear",
+   "joy",
+   "love",
+   "sadness",
+   "surprise"
+  ],
+  "matrix": [
+   [
+    10,
+    1,
+    1,
+    0,
+    1,
+    0,
+    0
+   ],
+   [
+    0,
+    9,
+    1,
+    0,
+    2,
+    0,
+    0
+   ],
+   [
+    1,
+    3,
+    24,
+    2,
+    4,
+    0,
+    0
+   ],
+   [
+    2,
+    0,
+    0,
+    5,
+    1,
+    0,
+    0
+   ],
+   [
+    3,
+    2,
+    1,
+    3,
+    20,
+    0,
+    0
+   ],
+   [
+    1,
+    1,
+    0,
+    1,
+    0,
+    1,
+    0
+   ]
+  ],
+  "unparseable_column": true
+ },
+ "curve": [
+  {
+   "metric_calls": 0,
+   "dev_score": 0.68
+  },
+  {
+   "metric_calls": 106,
+   "dev_score": 0.67
+  },
+  {
+   "metric_calls": 218,
+   "dev_score": 0.66
+  },
+  {
+   "metric_calls": 324,
+   "dev_score": 0.69
+  },
+  {
+   "metric_calls": 445,
+   "dev_score": 0.67
+  },
+  {
+   "metric_calls": 566,
+   "dev_score": 0.65
+  },
+  {
+   "metric_calls": 672,
+   "dev_score": 0.67
+  },
+  {
+   "metric_calls": 778,
+   "dev_score": 0.65
+  }
+ ],
+ "notes": ""
+}

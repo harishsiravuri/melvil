@@ -1,0 +1,219 @@
+{
+ "schema_version": 1,
+ "artifact_id": "c4c7c9928b6f",
+ "parent_id": null,
+ "task_name": "trec",
+ "created_at": "2026-07-21T19:00:39-0500",
+ "library": {
+  "name": "melvil",
+  "version": "0.4.0"
+ },
+ "models": {
+  "task": "openrouter/openai/gpt-4.1-mini",
+  "reflection": "openrouter/openai/gpt-4.1"
+ },
+ "budget": {
+  "metric_calls_budget": 800,
+  "metric_calls_spent": 902,
+  "cost_usd": 0.2708,
+  "task_lm_usage": {
+   "model": "openrouter/openai/gpt-4.1-mini",
+   "prompt_tokens": 500121,
+   "completion_tokens": 1575,
+   "calls": 778,
+   "cache_hits": 224,
+   "cost_usd": 0.202568
+  },
+  "reflection_lm_usage": {
+   "model": "openrouter/openai/gpt-4.1",
+   "prompt_tokens": 6311,
+   "completion_tokens": 6951,
+   "calls": 12,
+   "cache_hits": 0,
+   "cost_usd": 0.06823
+  },
+  "opt_seconds": 200.5
+ },
+ "scores": {
+  "dev_accuracy": 0.83,
+  "dev_macro_f1": 0.8375,
+  "per_label_dev": {
+   "abbreviation": {
+    "precision": 0.6667,
+    "recall": 1.0,
+    "f1": 0.8,
+    "support": 2
+   },
+   "description": {
+    "precision": 0.7826,
+    "recall": 0.8571,
+    "f1": 0.8182,
+    "support": 21
+   },
+   "entity": {
+    "precision": 0.7143,
+    "recall": 0.6522,
+    "f1": 0.6818,
+    "support": 23
+   },
+   "human": {
+    "precision": 0.8182,
+    "recall": 0.8182,
+    "f1": 0.8182,
+    "support": 22
+   },
+   "location": {
+    "precision": 1.0,
+    "recall": 0.9333,
+    "f1": 0.9655,
+    "support": 15
+   },
+   "numeric": {
+    "precision": 0.9412,
+    "recall": 0.9412,
+    "f1": 0.9412,
+    "support": 17
+   }
+  },
+  "seed_dev_accuracy": 0.5,
+  "dev_accuracy_quarantined": null
+ },
+ "config_hash": "e5057a7081d2",
+ "config": {
+  "task_model": "openrouter/openai/gpt-4.1-mini",
+  "reflection_model": "openrouter/openai/gpt-4.1",
+  "budget": "light",
+  "seed": 21,
+  "features": {
+   "codebook": false,
+   "confusion_reflection": false,
+   "hard_example_mining": false
+  },
+  "num_threads": 8,
+  "run_dir": "/Users/harish/Documents/Claude/Projects/6s/labelsmith/mechanistic/runs_e8_gepa_f1/trec/s21",
+  "task_temperature": 0.0,
+  "task_max_tokens": 40,
+  "reflection_temperature": 1.0,
+  "reflection_max_tokens": 8000,
+  "reflection_minibatch_size": 3,
+  "max_exemplars": 6,
+  "mining_llm_screen": true,
+  "log_proposals": false,
+  "prices": {},
+  "metric_calls": 800
+ },
+ "label_names": [
+  "abbreviation",
+  "description",
+  "entity",
+  "human",
+  "location",
+  "numeric"
+ ],
+ "components": {
+  "instruction": "Task: Semantic Classification of Questions\n\nYou are to classify a given input text, typically phrased as a question, into one of the following six semantic categories: abbreviation, description, entity, human, location, or numeric.\n\nInput Format:\n- You will receive an object with a single field 'text', containing the question as a string.\n\nCategories and Definitions:\n1. abbreviation: The question is about the meaning, expansion, or identification of an abbreviation, acronym, or initialism. Example: \"What does NASA stand for?\"\n2. description: The question is seeking a definition, explanation, or elaboration about a process, concept, property, or abstract idea. Examples: \"Explain photosynthesis\", \"What is gravity?\" Use this when the question explicitly seeks an explanation or definition rather than a specific name.\n3. entity: The question is seeking the name of a specific object, group, organization, product, event, thing, or word, excluding people or specific places. Example: \"What is the largest animal?\", \"Name a programming language...\", \"What is a word whose letters can be rearranged to form a different word?\". If the answer is the name of an object, event, organization, or a non-human/non-place entity, use this category.\n4. human: The question is seeking the identity, name, or occupation of a person or people and will often begin with \"Who\" or otherwise explicitly refer to people. Do not use this category for questions about nationality or geographic origin.\n5. location: The question is requesting the name of a place, country, geographic origin, or asks about nationality. Example: \"Where is the Eiffel Tower?\", \"What nationality is Picasso?\", \"From which country is sushi?\", \"Where was Einstein born?\" Note: For questions involving geographic origin or nationality, even if the question involves a person, use 'location' instead of 'human'.\n6. numeric: The question asks for a quantity, date, numeric value, count, age, measurement, etc. Examples: \"How many continents are there?\", \"When was the Declaration of Independence signed?\", \"What is the population of India?\"\n\nImportant Instructions and Domain-Specific Details:\n- If the question asks for the name of a place or for the geographic or national origin of something or someone, the correct label is 'location', even if a person is mentioned (e.g., \"Where was Einstein born?\", \"What nationality is Picasso?\").\n- For questions asking what specific word fits a description, use 'entity', not 'description'.\n- If the question asks about something discovered or first done by a person, and expects a place as the answer, use 'location'. For example, \"What planet did Percival Lovell discover?\" should be classified as 'location' because the expected answer is the name of a place (a planet, in this context, is treated as a 'location').\n- If the question requires an explanation or a general definition, select 'description'. But if it expects the name of a specific item, even if somewhat abstract (such as types of objects or words), select 'entity'.\n- For anything referring to a person's identity, use 'human', unless the question is clearly about their place of birth or nationality (see above).\n- Always select exactly one category based on what type of answer is required by the question, not just the wording of the question.\n\nOutput Format:\n- Respond with only one of: abbreviation, description, entity, human, location, or numeric.\n- Do not provide any elaboration, description, or additional text—only output the category label.\n\nGeneralizable Strategies:\n- Identify what kind of answer the question is asking for (a person, a place/nationality, an entity/object/word/event, a definition/explanation, an abbreviation, or a number/date/quantity).\n- When the question involves specific individuals and asks about identity or occupation, choose 'human'.\n- When the question is about a place, nationality, or geographic origin, use 'location'.\n- For object, event, word or other non-person/non-place items, use 'entity'.\n- For all other definitions/explanations, use 'description'.\n- Reserve 'abbreviation' for acronym-related questions and 'numeric' for quantities and dates.\n\nExamples:\n- \"What planet did Percival Lovell discover?\" → location\n- \"Who invented the telephone?\" → human\n- \"What does FIFO stand for?\" → abbreviation\n- \"How many moons does Mars have?\" → numeric\n- \"Explain Newton's third law.\" → description\n- \"What is the largest animal?\" → entity\n\nRead the input text carefully to determine what *type* of answer is being sought and select the most appropriate category according to the detailed definitions and instructions above."
+ },
+ "exemplars": [],
+ "confusion": {
+  "labels": [
+   "abbreviation",
+   "description",
+   "entity",
+   "human",
+   "location",
+   "numeric"
+  ],
+  "matrix": [
+   [
+    2,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    1,
+    18,
+    1,
+    1,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    4,
+    15,
+    3,
+    0,
+    1,
+    0
+   ],
+   [
+    0,
+    0,
+    4,
+    18,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    1,
+    0,
+    14,
+    0,
+    0
+   ],
+   [
+    0,
+    1,
+    0,
+    0,
+    0,
+    16,
+    0
+   ]
+  ],
+  "unparseable_column": true
+ },
+ "curve": [
+  {
+   "metric_calls": 0,
+   "dev_score": 0.5
+  },
+  {
+   "metric_calls": 124,
+   "dev_score": 0.76
+  },
+  {
+   "metric_calls": 230,
+   "dev_score": 0.76
+  },
+  {
+   "metric_calls": 348,
+   "dev_score": 0.76
+  },
+  {
+   "metric_calls": 469,
+   "dev_score": 0.77
+  },
+  {
+   "metric_calls": 575,
+   "dev_score": 0.81
+  },
+  {
+   "metric_calls": 681,
+   "dev_score": 0.83
+  },
+  {
+   "metric_calls": 802,
+   "dev_score": 0.7
+  }
+ ],
+ "notes": ""
+}

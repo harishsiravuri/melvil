@@ -1,0 +1,219 @@
+{
+ "schema_version": 1,
+ "artifact_id": "e1c4c4a26698",
+ "parent_id": null,
+ "task_name": "trec",
+ "created_at": "2026-07-21T19:07:45-0500",
+ "library": {
+  "name": "melvil",
+  "version": "0.4.0"
+ },
+ "models": {
+  "task": "openrouter/openai/gpt-4.1-mini",
+  "reflection": "openrouter/openai/gpt-4.1"
+ },
+ "budget": {
+  "metric_calls_budget": 800,
+  "metric_calls_spent": 866,
+  "cost_usd": 0.2426,
+  "task_lm_usage": {
+   "model": "openrouter/openai/gpt-4.1-mini",
+   "prompt_tokens": 491310,
+   "completion_tokens": 1542,
+   "calls": 760,
+   "cache_hits": 206,
+   "cost_usd": 0.198991
+  },
+  "reflection_lm_usage": {
+   "model": "openrouter/openai/gpt-4.1",
+   "prompt_tokens": 4474,
+   "completion_tokens": 4330,
+   "calls": 7,
+   "cache_hits": 0,
+   "cost_usd": 0.043588
+  },
+  "opt_seconds": 176.6
+ },
+ "scores": {
+  "dev_accuracy": 0.83,
+  "dev_macro_f1": 0.8126,
+  "per_label_dev": {
+   "abbreviation": {
+    "precision": 0.5,
+    "recall": 1.0,
+    "f1": 0.6667,
+    "support": 2
+   },
+   "description": {
+    "precision": 0.7826,
+    "recall": 0.8571,
+    "f1": 0.8182,
+    "support": 21
+   },
+   "entity": {
+    "precision": 0.75,
+    "recall": 0.7826,
+    "f1": 0.766,
+    "support": 23
+   },
+   "human": {
+    "precision": 0.8571,
+    "recall": 0.8182,
+    "f1": 0.8372,
+    "support": 22
+   },
+   "location": {
+    "precision": 1.0,
+    "recall": 0.7333,
+    "f1": 0.8462,
+    "support": 15
+   },
+   "numeric": {
+    "precision": 0.9412,
+    "recall": 0.9412,
+    "f1": 0.9412,
+    "support": 17
+   }
+  },
+  "seed_dev_accuracy": 0.5,
+  "dev_accuracy_quarantined": null
+ },
+ "config_hash": "abec91fd8e56",
+ "config": {
+  "task_model": "openrouter/openai/gpt-4.1-mini",
+  "reflection_model": "openrouter/openai/gpt-4.1",
+  "budget": "light",
+  "seed": 23,
+  "features": {
+   "codebook": false,
+   "confusion_reflection": false,
+   "hard_example_mining": false
+  },
+  "num_threads": 8,
+  "run_dir": "/Users/harish/Documents/Claude/Projects/6s/labelsmith/mechanistic/runs_e8_gepa_f1/trec/s23",
+  "task_temperature": 0.0,
+  "task_max_tokens": 40,
+  "reflection_temperature": 1.0,
+  "reflection_max_tokens": 8000,
+  "reflection_minibatch_size": 3,
+  "max_exemplars": 6,
+  "mining_llm_screen": true,
+  "log_proposals": false,
+  "prices": {},
+  "metric_calls": 800
+ },
+ "label_names": [
+  "abbreviation",
+  "description",
+  "entity",
+  "human",
+  "location",
+  "numeric"
+ ],
+ "components": {
+  "instruction": "You are given a classification task where you must categorize natural-language questions according to the type of answer they are seeking. Each input will include only the question or query, under a header like \"### text\".\n\nYour job is to output a single, most appropriate category label chosen from the following six options: abbreviation, description, entity, human, location, numeric.\n\nHere are the precise instructions, with comprehensive definitions, rules, and examples:\n\nCategory Definitions and Guidance:\n\n- abbreviation: Use this category when the question asks about the meaning, expansion, or definition of an acronym or abbreviation. The correct answer is a word or phrase that represents an abbreviated form.\n  Example: \"What does NASA stand for?\" → abbreviation\n\n- description: Use this category for questions that require a general explanation, definition, or background information—when the answer is explanatory rather than the name of any specific thing, person, place, or numeric value.\n  Example: \"What is quantum theory?\" → description\n\n- entity: Use this when the answer is the name of a specific object, thing, animal, invention, product, title of a work, organization, group, or concept/class (unless it's specifically a person or a place). This includes answers like artworks, play or book titles, inventions, product names, animals, and so on.\n  Example: \n    - \"Which planet is closest to the Sun?\" → \"Mercury\" → entity\n    - \"What is a research expedition in mountain climbing?\" (where the expected answer is the name of a type or class of expedition) → entity\n    - \"What was Edward Albee's first full-length play?\" → \"The Zoo Story\" → entity\n\n- human: Use this category when the answer is a specific person or group of people (either by name or descriptive class). This applies even if the question is about something the person did, invented, or achieved.\n  Example: \"Who wrote Hamlet?\" → \"William Shakespeare\" → human\n\n- location: Use this for questions where the answer is a geographic place, such as a city, country, landmark, address, or any physical/geographical feature.\n  Example: \"Where is the Eiffel Tower?\" → \"Paris\" → location\n    - Questions about a place related to a non-person will often be location (e.g., \"What is the capital of Japan?\").\n\n- numeric: Use this whenever the answer is fundamentally a number, date, year, age, price, measurement, frequency, or quantity, including times and durations.\n  Example: \"How many states are there in the US?\" → \"50\" → numeric\n\nDisambiguation and Decision Strategies:\n- Always focus on the *type of answer expected*, not simply the wording of the question.\n- If the expected answer is a title of a work (book, movie, play, song, etc.), invention, organization, or product name, use entity—unless the expected answer is a person (then human) or a location (then location).\n- If a question could plausibly have more than one answer type, pick the most restrictive and specific label. For instance, if the answer is a person, use human (not entity), even if that person's name also refers to an invention or work.\n- For questions that ask about the definition or process or for general background/explanation, select description.\n- For types, classes, or categories of things (that are not people or places), use entity.\n- If the question is about expanding or defining an abbreviated form, choose abbreviation.\n\nOutput Standard:\n- Output ONLY the exact category name: \"abbreviation\", \"description\", \"entity\", \"human\", \"location\", or \"numeric\".\n- Do NOT output any explanation, reasoning, or extra text. Only the single category label, in lower case, no punctuation.\n\nFormatting:\n- Each input will only have the \"# text\" field and a natural language question. Output only the single category label as explained above.\n\nRemember:\n- The definition of \"entity\" includes: objects, animals, products, organizations, inventions, titles of creative works, and general class/category names (excluding people and locations).\n- Be precise—misclassifying (e.g., labeling a specific type or class entity as description) is an error.\n- Read each question and consider what answer is most likely expected, using the definitions above, and select only the single most appropriate label."
+ },
+ "exemplars": [],
+ "confusion": {
+  "labels": [
+   "abbreviation",
+   "description",
+   "entity",
+   "human",
+   "location",
+   "numeric"
+  ],
+  "matrix": [
+   [
+    2,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    2,
+    18,
+    0,
+    1,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    3,
+    18,
+    1,
+    0,
+    1,
+    0
+   ],
+   [
+    0,
+    0,
+    4,
+    18,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    1,
+    2,
+    1,
+    11,
+    0,
+    0
+   ],
+   [
+    0,
+    1,
+    0,
+    0,
+    0,
+    16,
+    0
+   ]
+  ],
+  "unparseable_column": true
+ },
+ "curve": [
+  {
+   "metric_calls": 0,
+   "dev_score": 0.5
+  },
+  {
+   "metric_calls": 106,
+   "dev_score": 0.68
+  },
+  {
+   "metric_calls": 215,
+   "dev_score": 0.81
+  },
+  {
+   "metric_calls": 321,
+   "dev_score": 0.78
+  },
+  {
+   "metric_calls": 427,
+   "dev_score": 0.8
+  },
+  {
+   "metric_calls": 536,
+   "dev_score": 0.79
+  },
+  {
+   "metric_calls": 657,
+   "dev_score": 0.82
+  },
+  {
+   "metric_calls": 766,
+   "dev_score": 0.83
+  }
+ ],
+ "notes": ""
+}

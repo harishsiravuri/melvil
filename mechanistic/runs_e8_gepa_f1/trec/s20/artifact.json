@@ -1,0 +1,219 @@
+{
+ "schema_version": 1,
+ "artifact_id": "026a46c134c2",
+ "parent_id": null,
+ "task_name": "trec",
+ "created_at": "2026-07-21T18:56:34-0500",
+ "library": {
+  "name": "melvil",
+  "version": "0.4.0"
+ },
+ "models": {
+  "task": "openrouter/openai/gpt-4.1-mini",
+  "reflection": "openrouter/openai/gpt-4.1"
+ },
+ "budget": {
+  "metric_calls_budget": 800,
+  "metric_calls_spent": 881,
+  "cost_usd": 0.2156,
+  "task_lm_usage": {
+   "model": "openrouter/openai/gpt-4.1-mini",
+   "prompt_tokens": 419902,
+   "completion_tokens": 1569,
+   "calls": 772,
+   "cache_hits": 209,
+   "cost_usd": 0.170471
+  },
+  "reflection_lm_usage": {
+   "model": "openrouter/openai/gpt-4.1",
+   "prompt_tokens": 4299,
+   "completion_tokens": 4568,
+   "calls": 9,
+   "cache_hits": 0,
+   "cost_usd": 0.045142
+  },
+  "opt_seconds": 166.9
+ },
+ "scores": {
+  "dev_accuracy": 0.82,
+  "dev_macro_f1": 0.8245,
+  "per_label_dev": {
+   "abbreviation": {
+    "precision": 0.6667,
+    "recall": 1.0,
+    "f1": 0.8,
+    "support": 2
+   },
+   "description": {
+    "precision": 0.8333,
+    "recall": 0.9524,
+    "f1": 0.8889,
+    "support": 21
+   },
+   "entity": {
+    "precision": 0.6522,
+    "recall": 0.6522,
+    "f1": 0.6522,
+    "support": 23
+   },
+   "human": {
+    "precision": 0.8182,
+    "recall": 0.8182,
+    "f1": 0.8182,
+    "support": 22
+   },
+   "location": {
+    "precision": 1.0,
+    "recall": 0.7333,
+    "f1": 0.8462,
+    "support": 15
+   },
+   "numeric": {
+    "precision": 0.9412,
+    "recall": 0.9412,
+    "f1": 0.9412,
+    "support": 17
+   }
+  },
+  "seed_dev_accuracy": 0.5,
+  "dev_accuracy_quarantined": null
+ },
+ "config_hash": "00a4a071a6ce",
+ "config": {
+  "task_model": "openrouter/openai/gpt-4.1-mini",
+  "reflection_model": "openrouter/openai/gpt-4.1",
+  "budget": "light",
+  "seed": 20,
+  "features": {
+   "codebook": false,
+   "confusion_reflection": false,
+   "hard_example_mining": false
+  },
+  "num_threads": 8,
+  "run_dir": "/Users/harish/Documents/Claude/Projects/6s/labelsmith/mechanistic/runs_e8_gepa_f1/trec/s20",
+  "task_temperature": 0.0,
+  "task_max_tokens": 40,
+  "reflection_temperature": 1.0,
+  "reflection_max_tokens": 8000,
+  "reflection_minibatch_size": 3,
+  "max_exemplars": 6,
+  "mining_llm_screen": true,
+  "log_proposals": false,
+  "prices": {},
+  "metric_calls": 800
+ },
+ "label_names": [
+  "abbreviation",
+  "description",
+  "entity",
+  "human",
+  "location",
+  "numeric"
+ ],
+ "components": {
+  "instruction": "You are given a text input, usually a question or a phrase, and your task is to classify it into exactly one of the following predefined categories: abbreviation, description, entity, human, location, or numeric. Your classification should be based on the primary type of information or answer that the text is seeking. This task is intended to support question classification similar to the TREC question classification scheme.\n\nHere are the **strict definitions and distinctions** of each category you must use:\n\n- **abbreviation:** The text is asking for or referencing an abbreviation, acronym, or initialism. The answer expected will simply be an abbreviation or its full form.\n- **description:** The text requires an explanation, definition, or other descriptive information about a concept, process, quality, or object (i.e., 'what is', 'define', or 'describe' queries). Do NOT use this for questions seeking a fact about an object, entity, or group (e.g., “Which gender has bigger thighs?” is NOT a description, but “What is gender?” is).\n- **entity:** The text is asking about a concrete object, thing, event, physical item, product, or organization that is not specifically a human or a location. This includes animals, substances, inanimate objects, or natural phenomena. Use 'entity' for factual or comparative queries about things, kinds, or types (e.g., “Which gender has bigger thighs?” expects a category/type as an answer).\n- **human:** The text seeks information specifically about a person or group of people, or asks for a profession, nationality, title, or any human role. Use this even if organizations or professions could be inferred—choose ‘human’ if the question is about people.\n- **location:** The text is seeking the name of a place, city, country, continent, region, or geographical feature (e.g., “Where is the Eiffel Tower?”).\n- **numeric:** The text expects a number as the primary answer—this includes questions about quantities, dates, values, amounts, times, ages, sizes, weights, or countable properties (“How many…”, “What is the height…”, “When was…”).\n\n**Key distinctions:**\n- If the question is seeking a fact or a category among things/entity (e.g., types, kinds, properties—\"Which gender…\", \"Which type…\"), classify as ‘entity’, not ‘description’.\n- Use 'description' only if a general explanation or definition is directly requested.\n- 'Entity' is NOT for people/humans or locations; 'human' and 'location' should override if those are explicitly mentioned or implied.\n- Classify strictly according to what the question is actually seeking as an answer, not just its phrasing.\n- Output only the single category name and nothing else—no explanations or other text.\n\n**Input/Output format:**\n- Input: \n  - Section named `text` containing the question or phrase to classify.\n- Output:\n  - A single word: one of the six category names.\n\n**Examples:**\n- “Which gender has bigger thighs?” → entity\n- “What is the capital of France?” → location\n- “What does NASA stand for?” → abbreviation\n- “Who invented the lightbulb?” → human\n- “How many continents are there?” → numeric\n- “What is photosynthesis?” → description\n\nAdhere strictly to these definitions and distinctions, especially between ‘description’ and ‘entity’. Review the intent and what the question is ultimately seeking as an answer before classifying.\n\nOutput only the category name."
+ },
+ "exemplars": [],
+ "confusion": {
+  "labels": [
+   "abbreviation",
+   "description",
+   "entity",
+   "human",
+   "location",
+   "numeric"
+  ],
+  "matrix": [
+   [
+    2,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    20,
+    0,
+    1,
+    0,
+    0,
+    0
+   ],
+   [
+    1,
+    4,
+    15,
+    2,
+    0,
+    1,
+    0
+   ],
+   [
+    0,
+    0,
+    4,
+    18,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    3,
+    1,
+    11,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    1,
+    0,
+    0,
+    16,
+    0
+   ]
+  ],
+  "unparseable_column": true
+ },
+ "curve": [
+  {
+   "metric_calls": 0,
+   "dev_score": 0.5
+  },
+  {
+   "metric_calls": 112,
+   "dev_score": 0.71
+  },
+  {
+   "metric_calls": 218,
+   "dev_score": 0.78
+  },
+  {
+   "metric_calls": 327,
+   "dev_score": 0.75
+  },
+  {
+   "metric_calls": 460,
+   "dev_score": 0.79
+  },
+  {
+   "metric_calls": 569,
+   "dev_score": 0.76
+  },
+  {
+   "metric_calls": 675,
+   "dev_score": 0.78
+  },
+  {
+   "metric_calls": 781,
+   "dev_score": 0.82
+  }
+ ],
+ "notes": ""
+}
