@@ -437,13 +437,17 @@ optimization/evaluation runs; every result checkpointed and committed.
 
 **Ranking by confirmed effect size × cost × story:**
 
-1. **E8 / `draft()` — LEAD.** Only surviving positive method. Frozen numbers:
-   60–91% of GEPA's gain at ~1/4–1/3 the optimization cost (~1/10 for the
-   single-rewrite ×1 variant), seed-matched CI-separated win on banking77 in
-   both families + statistical ties across the mid range (Paper-support §1–2,4).
-   It is also now the library's primary API (v0.4.0), so the paper and the
-   artifact tell one story. Frame: error-grounded direct writing, not
-   evolution-acceleration (C1's death is what makes this framing correct).
+1. **"Aggregate the error structure" — LEAD (reframed by E9).** The positive
+   contribution is the aggregated diagnosis, which has two instantiations:
+   (a) **diagnosis-in-loop** — the accuracy-optimal one: injecting it into an
+   unmodified GEPA's reflection prompt is +1.6 ± 1.4 points at matched budget
+   for ~600 tokens per reflection (E9); (b) **`draft()`** — the cheap one:
+   60–91% of GEPA's gain at ~1/4–1/3 the optimization cost (~1/10 for ×1), a
+   seed-matched CI-separated win on banking77 in both families and ties across
+   the mid range (Paper-support §1–2,4), and the library's primary API (v0.4).
+   E9 is what licenses this framing: removing the loop is a cost lever, not the
+   source of the benefit. Frame the paper around the diagnosis; present draft as
+   the economics corollary.
 2. **E1 distributed-gains — the SPINE.** Not a method but the paper's central
    measurement: median first-accept share 0.33 (robust across three definitions,
    Paper-support §3), flat across budgets/families. It explains every negative
