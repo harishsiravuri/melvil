@@ -1,0 +1,354 @@
+{
+ "seeds": [
+  20,
+  21,
+  22,
+  23,
+  24
+ ],
+ "budget": 800,
+ "per_family": {
+  "f1": {
+   "per_task": {
+    "banking77": {
+     "n_seeds": 5,
+     "A": 0.8113,
+     "B": 0.848,
+     "C": 0.8427,
+     "B_minus_A": {
+      "mean": 0.0367,
+      "ci95": 0.0162,
+      "lo": 0.0204,
+      "hi": 0.0529,
+      "verdict": "W",
+      "degenerate": false
+     },
+     "B_minus_C": {
+      "mean": 0.0053,
+      "ci95": 0.0309,
+      "lo": -0.0256,
+      "hi": 0.0363,
+      "verdict": "T",
+      "degenerate": false
+     }
+    },
+    "ag_news": {
+     "n_seeds": 5,
+     "A": 0.846,
+     "B": 0.838,
+     "C": 0.838,
+     "B_minus_A": {
+      "mean": -0.008,
+      "ci95": 0.0187,
+      "lo": -0.0267,
+      "hi": 0.0107,
+      "verdict": "T",
+      "degenerate": false
+     },
+     "B_minus_C": {
+      "mean": 0.0,
+      "ci95": 0.009,
+      "lo": -0.009,
+      "hi": 0.009,
+      "verdict": "T",
+      "degenerate": false
+     }
+    },
+    "emotion": {
+     "n_seeds": 5,
+     "A": 0.5553,
+     "B": 0.5547,
+     "C": 0.5467,
+     "B_minus_A": {
+      "mean": -0.0007,
+      "ci95": 0.0159,
+      "lo": -0.0166,
+      "hi": 0.0152,
+      "verdict": "T",
+      "degenerate": false
+     },
+     "B_minus_C": {
+      "mean": 0.008,
+      "ci95": 0.0161,
+      "lo": -0.0081,
+      "hi": 0.0241,
+      "verdict": "T",
+      "degenerate": false
+     }
+    },
+    "trec": {
+     "n_seeds": 5,
+     "A": 0.8773,
+     "B": 0.8773,
+     "C": 0.852,
+     "B_minus_A": {
+      "mean": -0.0,
+      "ci95": 0.0103,
+      "lo": -0.0104,
+      "hi": 0.0103,
+      "verdict": "T",
+      "degenerate": false
+     },
+     "B_minus_C": {
+      "mean": 0.0253,
+      "ci95": 0.0315,
+      "lo": -0.0062,
+      "hi": 0.0568,
+      "verdict": "T",
+      "degenerate": false
+     }
+    },
+    "clinc150": {
+     "n_seeds": 5,
+     "A": 0.9813,
+     "B": 0.9867,
+     "C": 0.986,
+     "B_minus_A": {
+      "mean": 0.0053,
+      "ci95": 0.0044,
+      "lo": 0.0009,
+      "hi": 0.0098,
+      "verdict": "W",
+      "degenerate": false
+     },
+     "B_minus_C": {
+      "mean": 0.0007,
+      "ci95": 0.0043,
+      "lo": -0.0037,
+      "hi": 0.005,
+      "verdict": "T",
+      "degenerate": false
+     }
+    },
+    "massive": {
+     "n_seeds": 5,
+     "A": 0.862,
+     "B": 0.8833,
+     "C": 0.8667,
+     "B_minus_A": {
+      "mean": 0.0213,
+      "ci95": 0.0094,
+      "lo": 0.012,
+      "hi": 0.0307,
+      "verdict": "W",
+      "degenerate": false
+     },
+     "B_minus_C": {
+      "mean": 0.0167,
+      "ci95": 0.0226,
+      "lo": -0.006,
+      "hi": 0.0393,
+      "verdict": "T",
+      "degenerate": false
+     }
+    },
+    "stance_abortion": {
+     "n_seeds": 5,
+     "A": 0.6357,
+     "B": 0.64,
+     "C": 0.4728,
+     "B_minus_A": {
+      "mean": 0.0043,
+      "ci95": 0.0485,
+      "lo": -0.0442,
+      "hi": 0.0528,
+      "verdict": "T",
+      "degenerate": false
+     },
+     "B_minus_C": {
+      "mean": 0.1672,
+      "ci95": 0.0407,
+      "lo": 0.1265,
+      "hi": 0.2079,
+      "verdict": "W",
+      "degenerate": false
+     }
+    },
+    "sst5": {
+     "n_seeds": 5,
+     "A": 0.6047,
+     "B": 0.6167,
+     "C": 0.5687,
+     "B_minus_A": {
+      "mean": 0.012,
+      "ci95": 0.0232,
+      "lo": -0.0112,
+      "hi": 0.0353,
+      "verdict": "T",
+      "degenerate": false
+     },
+     "B_minus_C": {
+      "mean": 0.048,
+      "ci95": 0.032,
+      "lo": 0.016,
+      "hi": 0.0801,
+      "verdict": "W",
+      "degenerate": false
+     }
+    }
+   },
+   "pooled_B_minus_A": {
+    "mean": 0.0089,
+    "ci95": 0.0083,
+    "lo": 0.0006,
+    "hi": 0.0171,
+    "verdict": "W",
+    "degenerate": false
+   },
+   "pooled_B_minus_C": {
+    "mean": 0.0339,
+    "ci95": 0.0185,
+    "lo": 0.0154,
+    "hi": 0.0524,
+    "verdict": "W",
+    "degenerate": false
+   },
+   "n_pooled": 40,
+   "wtl_B_vs_A": {
+    "W": [
+     "banking77",
+     "clinc150",
+     "massive"
+    ],
+    "T": [
+     "ag_news",
+     "emotion",
+     "trec",
+     "stance_abortion",
+     "sst5"
+    ],
+    "L": []
+   },
+   "n_tasks": 8,
+   "original_4task_B_minus_A": {
+    "mean": 0.0156,
+    "ci95": 0.0138,
+    "lo": 0.0018,
+    "hi": 0.0294,
+    "verdict": "W",
+    "degenerate": false
+   }
+  },
+  "f2": {
+   "per_task": {
+    "banking77": {
+     "n_seeds": 5,
+     "A": 0.776,
+     "B": 0.8547,
+     "C": 0.81,
+     "B_minus_A": {
+      "mean": 0.0787,
+      "ci95": 0.0167,
+      "lo": 0.062,
+      "hi": 0.0954,
+      "verdict": "W",
+      "degenerate": false
+     },
+     "B_minus_C": {
+      "mean": 0.0447,
+      "ci95": 0.0202,
+      "lo": 0.0245,
+      "hi": 0.0649,
+      "verdict": "W",
+      "degenerate": false
+     }
+    },
+    "ag_news": {
+     "n_seeds": 5,
+     "A": 0.88,
+     "B": 0.8773,
+     "C": 0.8527,
+     "B_minus_A": {
+      "mean": -0.0027,
+      "ci95": 0.0214,
+      "lo": -0.0241,
+      "hi": 0.0187,
+      "verdict": "T",
+      "degenerate": false
+     },
+     "B_minus_C": {
+      "mean": 0.0247,
+      "ci95": 0.0281,
+      "lo": -0.0035,
+      "hi": 0.0528,
+      "verdict": "T",
+      "degenerate": false
+     }
+    },
+    "emotion": {
+     "n_seeds": 5,
+     "A": 0.544,
+     "B": 0.5733,
+     "C": 0.568,
+     "B_minus_A": {
+      "mean": 0.0293,
+      "ci95": 0.0275,
+      "lo": 0.0018,
+      "hi": 0.0569,
+      "verdict": "W",
+      "degenerate": false
+     },
+     "B_minus_C": {
+      "mean": 0.0053,
+      "ci95": 0.0245,
+      "lo": -0.0192,
+      "hi": 0.0298,
+      "verdict": "T",
+      "degenerate": false
+     }
+    },
+    "trec": {
+     "n_seeds": 3,
+     "A": 0.8789,
+     "B": 0.9022,
+     "C": 0.8522,
+     "B_minus_A": {
+      "mean": 0.0234,
+      "ci95": 0.0563,
+      "lo": -0.033,
+      "hi": 0.0797,
+      "verdict": "T",
+      "degenerate": false
+     },
+     "B_minus_C": {
+      "mean": 0.05,
+      "ci95": 0.021,
+      "lo": 0.029,
+      "hi": 0.071,
+      "verdict": "W",
+      "degenerate": false
+     }
+    }
+   },
+   "pooled_B_minus_A": {
+    "mean": 0.0332,
+    "ci95": 0.0194,
+    "lo": 0.0138,
+    "hi": 0.0525,
+    "verdict": "W",
+    "degenerate": false
+   },
+   "pooled_B_minus_C": {
+    "mean": 0.0291,
+    "ci95": 0.0139,
+    "lo": 0.0151,
+    "hi": 0.043,
+    "verdict": "W",
+    "degenerate": false
+   },
+   "n_pooled": 18,
+   "wtl_B_vs_A": {
+    "W": [
+     "banking77",
+     "emotion"
+    ],
+    "T": [
+     "ag_news",
+     "trec"
+    ],
+    "L": []
+   },
+   "n_tasks": 4
+  }
+ }
+}

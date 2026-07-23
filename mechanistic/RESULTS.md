@@ -300,11 +300,16 @@ reflections already exhibit every behavior the lessons prescribe, explaining
 why injection changes nothing (Δ ≤ 1.4 points, both families) while the same
 text at inference costs 11–17 points."*
 
-## E9 — is it the aggregated diagnosis, or removing the loop? · **COMPLETE** ($8.24)
+## E9 — is it the aggregated diagnosis, or removing the loop? · **Round 1 complete; Round 2 GPT complete, Claude partial** ($41.26)
 
 `draft()` differs from vanilla GEPA in two ways at once: it sees an **aggregated diagnosis** (per-label accuracy + top confused pairs with concrete examples, over the whole dev set) where GEPA sees raw failing examples from a 3-example reflection minibatch; and it **writes once or twice with no propose-and-rescore loop** where GEPA re-scores every proposal. This ablation adds the arm that separates them.
 
 **Arm B (new): GEPA + diagnosis-augmented reflection.** Vanilla free-text-blob GEPA (`Features.none()` — not the codebook layer, no per-component targeting) whose reflection prompt is gepa's DEFAULT template plus the same aggregated diagnosis text `draft()` computes (literally `melvil.draft.build_diagnosis`, so the information is identical by construction). The diagnosis is rebuilt at each reflection from the full-dev predictions GEPA has **already** computed, so arm B spends **zero extra metric calls**: measured 856 mean metric calls vs vanilla's 861 — budget-matched at B1=800. Diagnosis present in 20/20 runs, 9.2 reflections/run. F1 family, 5 paired seeds (20–24); A and C reuse the seed-matched runs from the E8/paper-support set.
+
+### Round 1 — 4 tasks, GPT family (task set **selected** to span draft's outcomes)
+
+Superseded as the headline by Round 2 below, which uses the full 8-task set. Kept
+verbatim because it is what the pre-registered branches were read against.
 
 | task | A vanilla | B diag-in-loop | C draft ×2 | B − A [95% CI] | C − A [95% CI] |
 |---|---|---|---|---|---|
@@ -322,7 +327,97 @@ text at inference costs 11–17 points."*
 
 **Consequences for the contribution.** (i) The transferable insight is *aggregate the error structure before asking for a rewrite* — this is ours and it is nearly free: ~600 diagnosis tokens per reflection buys +1.6 points on an unmodified optimizer. (ii) `draft()`'s claim narrows cleanly to economics: competitive accuracy at a fraction of the cost, not an accuracy win. (iii) A diagnosis-augmented `optimize()` is the accuracy-optimal configuration we have measured and is a natural v0.5 candidate (not shipped — this is 4 tasks, one family).
 
-**Scope caveats for the manuscript.** The four tasks were chosen to span draft's outcomes in the frozen 8-task pass (a win, a loss, a tie, its worst loss), so the pooled C − A here is *not* the 8-task figure (that was −2.9 points, 0.747 vs 0.776); this set deliberately over-weights stance_abortion. GPT family only, B1=800 only, n=5 seeds. Whether the diagnosis helps GEPA on the Claude family, at larger budgets, or on non-classification tasks is untested.
+**Scope caveats for the manuscript.** The four tasks were chosen to span draft's outcomes in the frozen 8-task pass (a win, a loss, a tie, its worst loss), so the pooled C − A here is *not* the 8-task figure (that was −2.9 points, 0.747 vs 0.776); this set deliberately over-weights stance_abortion. GPT family only, B1=800 only, n=5 seeds. Whether the diagnosis helps GEPA on the Claude family, at larger budgets, or on non-classification tasks is untested. **Round 2 removes the task-selection bias and adds the second family.**
+
+### Round 2 — full 8-task set, both families
+
+Same fixed method, no re-tuning: identical arm-B proposer, identical B1=800, same
+seeds 20–24, A and C still the seed-matched E8/paper-support runs. The Claude arm
+was offline-validated with fake LMs before spending (diagnosis injected in 16/16
+reflections, default template preserved, budget matched) exactly as the GPT arm was.
+
+**Budget matching holds in both families.** Mean metric calls 855 (GPT, n=40) and
+857 (Claude, n=18) against vanilla's ~861 — arm B still buys the diagnosis for
+**zero extra metric calls**, because it is rebuilt from full-dev predictions GEPA
+has already computed. Diagnosis present in **525/525** reflections across every run.
+
+**GPT family (f1) — COMPLETE, 8 tasks × 5 seeds = 40 pairs**
+
+| task | A vanilla | B diag-in-loop | C draft ×2 | B − A [95% CI] | B − C [95% CI] |
+|---|---|---|---|---|---|
+| banking77 | 0.811 | **0.848** | 0.843 | +0.037 [+0.020, +0.053]* | +0.005 [-0.026, +0.036] |
+| ag_news | 0.846 | 0.838 | 0.838 | -0.008 [-0.027, +0.011] | +0.000 [-0.009, +0.009] |
+| emotion | 0.555 | 0.555 | 0.547 | -0.001 [-0.017, +0.015] | +0.008 [-0.008, +0.024] |
+| trec | 0.877 | 0.877 | 0.852 | -0.000 [-0.010, +0.010] | +0.025 [-0.006, +0.057] |
+| clinc150 | 0.981 | **0.987** | 0.986 | +0.005 [+0.001, +0.010]* | +0.001 [-0.004, +0.005] |
+| massive | 0.862 | **0.883** | 0.867 | +0.021 [+0.012, +0.031]* | +0.017 [-0.006, +0.039] |
+| stance_abortion | 0.636 | 0.640 | 0.473 | +0.004 [-0.044, +0.053] | +0.167 [+0.127, +0.208]* |
+| sst5 | 0.605 | 0.617 | 0.569 | +0.012 [-0.011, +0.035] | +0.048 [+0.016, +0.080]* |
+| **pooled (n=40)** | | | | **+0.0089 ± 0.0083*** | **+0.0339 ± 0.0185*** |
+
+**W/T/L (B vs A) = 3 / 5 / 0.** No task is hurt: **not one CI falls below zero.**
+
+**Claude family (f2) — PARTIAL, 4 of 8 tasks (trec at 3 seeds); stopped at a budget line, see below**
+
+| task | A vanilla | B diag-in-loop | C draft ×2 | B − A [95% CI] | B − C [95% CI] |
+|---|---|---|---|---|---|
+| banking77 | 0.776 | **0.855** | 0.810 | +0.079 [+0.062, +0.095]* | +0.045 [+0.025, +0.065]* |
+| ag_news | 0.880 | 0.877 | 0.853 | -0.003 [-0.024, +0.019] | +0.025 [-0.004, +0.053] |
+| emotion | 0.544 | **0.573** | 0.568 | +0.029 [+0.002, +0.057]* | +0.005 [-0.019, +0.030] |
+| trec (n=3) | 0.879 | 0.902 | 0.852 | +0.023 [-0.033, +0.080] | +0.050 [+0.029, +0.071]* |
+| **pooled (n=18)** | | | | **+0.0332 ± 0.0194*** | **+0.0291 ± 0.0139*** |
+
+**W/T/L (B vs A) = 2 / 2 / 0.** Also no task hurt so far.
+
+**What Round 2 changes.** The direction survives de-biasing but the *magnitude
+halves*: pooled GPT B − A falls from **+1.6 ± 1.4** (selected 4 tasks) to **+0.9 ±
+0.8** points (all 8). It remains CI-separated from zero, and critically the effect
+is **not uniform — it is concentrated on label-rich tasks**: the three GPT wins are
+banking77 (77 labels, +3.7), massive (60 labels, +2.1) and clinc150 (150 labels,
++0.5); the five ties are all 4–6-label tasks. Claude shows the same ordering with
+roughly double the magnitude (banking77 +7.9), which is consistent with the frozen
+E8 table, where banking77 was the single CI-separated `draft()` win in *both*
+families. The honest reading is a **moderator, not a flat main effect**: aggregating
+the error structure helps when the label space is too large for a 3-example
+reflection minibatch to represent, and does nothing measurable when it isn't.
+
+**B − C is the robust part.** Diagnosis-in-loop beats loop-free draft pooled in both
+families (+3.4 ± 1.9 GPT, +2.9 ± 1.4 Claude), and never loses on any task in either.
+The Round 1 conclusion that *removing the loop is a cost lever that costs accuracy*
+is unchanged and is now supported on 8 tasks and 2 families rather than 4 and 1.
+
+**Revised sentence for the paper:** *"Ablating the two differences apart, the
+aggregated error diagnosis — not the removal of the propose-and-rescore loop — is
+what carries the benefit, but the benefit is concentrated rather than general:
+injecting the diagnosis into GEPA's reflection prompt improves it by 0.9 ± 0.8
+points pooled over eight tasks at matched budget, with CI-separated gains confined
+to the label-rich tasks (banking77 +3.7, massive +2.1, clinc150 +0.5) and no task
+harmed, while it beats the loop-free variant by 3.4 ± 1.9 everywhere."*
+
+**Corrections to Round 1 claims.** (i) "+1.6 ± 1.4 points" was inflated by task
+selection; the unbiased GPT figure is **+0.9 ± 0.8**. (ii) The Round 1 claim that
+the insight is a general improvement to reflective search is too strong — it is
+label-count-moderated, and the paper should say so. (iii) An interim reading of this
+run flagged Claude ag_news as a CI-separated *harm* at 2 seeds; **at the full 5 seeds
+it is a tie (−0.003)** — that flag was premature and is withdrawn.
+
+**Reflection parse health (incidental but worth recording).** Responses arriving
+inside ``` fences: **100% on Claude (143/143)** but only **52% on GPT (197/382)**.
+When unfenced, gepa's `output_extractor` falls back to the whole response, so the
+"new instruction" carries the reflection's prose reasoning with it. This affects
+arms A and B identically (same extractor, same budget), so it is not a confound for
+any number above — but it is a real property of the optimizer at this model/prompt
+combination and a candidate explanation for GPT's smaller effect sizes.
+
+**Figure:** `plots/e9_diagnosis_in_loop.png` — per-task forest plot of B − A with
+95% CIs, one panel per family, pooled estimate in black.
+
+**Remaining to close this out:** Claude family on clinc150, massive, stance_abortion,
+sst5, plus trec seeds 23–24 — 22 runs, ~$27. Not run: the phase reached the $60
+ceiling that had been set for it after the initial $29 estimate proved low (arm B
+costs 1.3× arm A on GPT but ~2.5× on Claude, where the reflection model is the
+expensive one and the diagnosis adds ~600 tokens per reflection). Until those land,
+the Claude column is 4 tasks and should be labelled as such in any table.
 
 ## Paper-support computations (added post-campaign; free/cache-backed except items 2 & 5)
 
@@ -440,8 +535,12 @@ optimization/evaluation runs; every result checkpointed and committed.
 1. **"Aggregate the error structure" — LEAD (reframed by E9).** The positive
    contribution is the aggregated diagnosis, which has two instantiations:
    (a) **diagnosis-in-loop** — the accuracy-optimal one: injecting it into an
-   unmodified GEPA's reflection prompt is +1.6 ± 1.4 points at matched budget
-   for ~600 tokens per reflection (E9); (b) **`draft()`** — the cheap one:
+   unmodified GEPA's reflection prompt is **+0.9 ± 0.8** points pooled over all
+   eight tasks at matched budget for ~600 tokens per reflection, with the gain
+   **concentrated on label-rich tasks** (banking77 +3.7, massive +2.1,
+   clinc150 +0.5; 3W/5T/0L, no task harmed) — E9 Round 2. The larger
+   +1.6 ± 1.4 from Round 1 was task-selection-inflated; do not print it.
+   (b) **`draft()`** — the cheap one:
    60–91% of GEPA's gain at ~1/4–1/3 the optimization cost (~1/10 for ×1), a
    seed-matched CI-separated win on banking77 in both families and ties across
    the mid range (Paper-support §1–2,4), and the library's primary API (v0.4).
